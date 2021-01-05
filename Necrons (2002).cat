@@ -168,6 +168,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4acb-39f7-7cc9-d463" type="max"/>
           </constraints>
+          <rules>
+            <rule id="2002-6206-2b98-855f" name="Disruption Field" hidden="false">
+              <description>Disruption Fields are used in assaults against vehicles. Any hit inflicted on a target by a unit equipped with disruption fields will score a glancing hit on a D6 roll of 6 regardless of the vehicles Armor value in exactly the same manner as gauss weapons.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
@@ -215,6 +220,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aecc-a701-b4ae-1b98" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d1e3-4ad9-c7e3-0f39" name="Disruption Field" hidden="false">
+              <description>Disruption Fields are used in assaults against vehicles. Any hit inflicted on a target by a unit equipped with disruption fields will score a glancing hit on a D6 roll of 6 regardless of the vehicles Armor value in exactly the same manner as gauss weapons.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
@@ -263,6 +273,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2288-b4e3-7aea-f154" type="max"/>
           </constraints>
+          <rules>
+            <rule id="e631-3c16-eaea-de57" name="Disruption Field" hidden="false">
+              <description>Disruption Fields are used in assaults against vehicles. Any hit inflicted on a target by a unit equipped with disruption fields will score a glancing hit on a D6 roll of 6 regardless of the vehicles Armor value in exactly the same manner as gauss weapons.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
@@ -552,7 +567,165 @@
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="6938-e3f0-977a-35ce" name="Necron Wargear" hidden="false" collective="false" import="true"/>
+    <selectionEntryGroup id="6938-e3f0-977a-35ce" name="Necron Wargear" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b89-ab0e-ea99-780d" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="e819-5723-2c66-7fd1" name="Chromonetron" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a98-504d-f1ab-b664" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="71b2-3bce-dcad-6ae2" name="Chromonetron" hidden="false">
+              <description>A Necron Lord with a Chronometron, and any unit he has joined, rolls an extra dice (and discards the lowest) when determining how far they can make a sweeping advance and fall back.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="67ca-1ade-85db-e69c" name="Disruption Field" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2744-f6a6-4aa6-9516" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="cb27-0aae-b9bb-15a3" name="Disruption Field" hidden="false" targetId="c7a0-c570-c859-6963" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fd24-f6d1-9082-70a5" name="Destroyer Body" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba51-d557-1c86-b6f6" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="2280-3ba9-ca6d-4290" name="Destroyer Body" hidden="false">
+              <description>The Necron Lord is mounted on an otherwise unarmed Destroyer platform. He moves as if mounted on a jetbike and gets +1 Toughness. As a result he can&apos;t be instantly killed by weapons with Strength 10.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="df50-7685-ea5e-08fb" name="Jetbikes" hidden="false" targetId="4556-3c66-6ed4-87a0" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b27a-9ba4-1a3f-2991" name="Gaze of Flame" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a27f-09cc-dfe8-c3f8" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="99f2-908c-7213-2c24" name="Gaze of Flame" hidden="false">
+              <description>Models beloning to units which charge into combat wtih a Necron Lord gain no bonus to their Attacks for charging as they are inexplicably slowed at the last instant. Note that only the normal +1 Attack for charging is lost. Any additional advantages are unaffected. Enemy models fighting in close combat involving a Necron Lord with Gaze of Flame suffer a -1 Leadership penalty, in addition to any other modifiers.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7479-1975-8cf7-518d" name="Lightning Field" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bda5-6132-2934-0c53" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="6cbd-1e08-9768-769d" name="Lightning Field" hidden="false">
+              <description>For every wound inflicted in close combat on the Necron Lord and any unit that he has joined by an enemy or independent character, a single Strength 3 hit (with no AP) will be struck back. The return blows are calculated after all other attacks are resolved and will hit the enemy that triggered them. </description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ce79-16f7-9a89-4ed0" name="Nightmare Shroud" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7600-d9a0-bd51-faa8" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="61fc-50d7-0dd3-5817" name="Nightmare Shroud" hidden="false">
+              <description>The Nightmare Shroud may be activated in the Shooting phase instead of firing a weapon. Every enemy unit with a model within 12&quot; of the Necron Lord must take a Morale check as though they had taken 25% casualties. All the normal exceptions apply.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ad5a-d152-4c17-6108" name="Phase Shifter" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d57d-d0ee-3764-5f7f" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="4dc2-662b-3028-3991" name="Phase Shifter" hidden="false">
+              <description>A Necron Lord with a Phase Shifter gains a 4+ Invulnerable Saving throw.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="3a34-948e-ac43-3d8d" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7d86-f6a2-b75e-e78d" name="Phylactery" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0969-625d-c2ba-c7f3" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="97b7-006c-9e48-ff11" name="Phylactery" hidden="false">
+              <description>When a Necron Lord is reduced to 0 Wounds and attempts his self-repair roll at the start of the Necron turn, instead of using the normal rules, use the following table to see what happens. Roll a D6:
+1 - 3: The model is removed as a casualty as normal
+4: The Necron Lord stands up with 1 Wound
+5: The Necron Lord stands up with 2 Wound
+6: The Necron Lord stands up with 3 Wound</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a799-fd20-79d8-82f8" name="Resurrection Orb" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17be-7215-06dd-8213" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="cdea-951c-2c6e-ed45" name="Resurrection Orb" hidden="false">
+              <description>The Necron Lord is able to augment the self-repair systems of Necrons within 6&quot; of him. All Necron units with a model within 6&quot; (including the Lord himself) may attempt &apos;We&apos;ll be back&apos; rolls even if they were damaged by weaponry that causes instant death or close combat weapons that allow no Armor Save.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="217f-3ad8-855e-57e1" name="Solar Pulse" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c994-a53c-066f-9053" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="20f2-2464-6de1-4cee" name="Solar Pulse" hidden="false">
+              <description>One Use Only
+The Solar Pulse is used at the beginning of the Necron turn. If the Night Fighting rules are in effect, they will cease to apply during the Necron turn in which the Solar Pulse is used. If the Night Fighting rules are not in effect then for the following enemy turn the Night Fighting rules will apply to any unit firing at the Necron Lord and any unit he has joined. If a unit cannot see the Necron Lord as a result they may redirect their fire at another target.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b17c-94be-a2fc-3d71" name="Veil of Darkness" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd2d-88f0-31a5-944a" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="ee53-95c2-7417-94d5" name="Veil of Darkness" hidden="false">
+              <description>The Necron Lord can use the Veil of Darkness at the start of its Movement Phase instead of moving normally. The Necron Lord and up to one unit of Necrons within 6&quot; of it are removed from the tabletop and both are then immediately placed back together anywhere on the tabletop using the Deep Strike rules. The Veil may be used even if enemy models are in base contact with the Necron Lord or any of the Necrons that move with him.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="e957-8c69-1203-279c" name="We&apos;ll Be Back!" hidden="false"/>
@@ -578,6 +751,9 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
     </rule>
     <rule id="05c1-c9ef-2f06-46e7" name="Above All Others" hidden="false">
       <description>C&apos;tan may not join friendly units and may be picked out by enemy shooters even if within 6&quot; of other targets. </description>
+    </rule>
+    <rule id="c7a0-c570-c859-6963" name="Disruption Field" hidden="false">
+      <description>Disruption Fields are used in assaults against vehicles. Any hit inflicted on a target by a unit equipped with disruption fields will score a glancing hit on a D6 roll of 6 regardless of the vehicles Armor value in exactly the same manner as gauss weapons.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
