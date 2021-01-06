@@ -1541,9 +1541,9 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds a victom on a D6 roll of 2+. If the target is killed place a Blast marker centered on the exploding model and roll to hit other models using the rules for blast weapons. The attacks have a Strength equal to the exploding model&apos;s Toughness and AP value equal to the victom&apos;s saving throw. Stingers count as having a Strength of 1 if fired at a vehicle.</characteristic>
       </characteristics>
     </profile>
-    <profile id="9311-d17f-a81d-d04b" name="Terrofex" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9311-d17f-a81d-d04b" name="Horrorfex" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">-</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1 Blast</characteristic>
@@ -1576,6 +1576,24 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
     <profile id="a1a0-7026-df47-1b84" name="Plasma Grenades" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
         <characteristic name="Capacity" typeId="4b03-2db8-5ba0-e5fd"/>
+      </characteristics>
+    </profile>
+    <profile id="21df-8acc-050f-0e90" name="Terrofex" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">-</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1 Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Roll to hit as normal, but don&apos;t roll to wound or save. Instead, if one or more models are hit then the unit they belong to must pass a Leadership test or become pinned. Apply a -1 modifier if the unit is under half its starting strength and -1 per model hit if the grenade hits more than one model.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="5774-7187-2616-dd8a" name="Power Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
   </sharedProfiles>

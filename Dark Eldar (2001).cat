@@ -8,6 +8,16 @@
     <entryLink id="64f3-d216-9ab3-dc49" name="Wyches" hidden="false" collective="false" import="true" targetId="0486-b755-c746-6b1d" type="selectionEntry"/>
     <entryLink id="21b6-bfa9-7f66-f766" name="Grotesques" hidden="false" collective="false" import="true" targetId="e8cb-12c6-d071-65aa" type="selectionEntry"/>
     <entryLink id="6701-99c5-27ae-4eaa" name="Warp Beast Pack" hidden="false" collective="false" import="true" targetId="9d23-3c32-3e72-68bf" type="selectionEntry"/>
+    <entryLink id="d65a-a544-3efd-623d" name="Dark Eldar Scourges" hidden="false" collective="false" import="true" targetId="3609-d55b-7004-f5b7" type="selectionEntry"/>
+    <entryLink id="b4ba-d72b-c4fe-ea2f" name="Haemonculus" hidden="false" collective="false" import="true" targetId="ee01-17f7-2e54-3f2e" type="selectionEntry"/>
+    <entryLink id="b6aa-b3e8-dd6f-dfce" name="Hellions" hidden="false" collective="false" import="true" targetId="f73e-f2f6-1774-94ca" type="selectionEntry"/>
+    <entryLink id="5085-42cd-90df-9255" name="Mandrakes" hidden="false" collective="false" import="true" targetId="2aaa-5105-fcf0-2282" type="selectionEntry"/>
+    <entryLink id="f5d6-d3d0-4020-cdaf" name="Raider Squad" hidden="false" collective="false" import="true" targetId="db69-fd2e-b675-38ce" type="selectionEntry"/>
+    <entryLink id="e94b-73eb-bdc7-d6f8" name="Ravager" hidden="false" collective="false" import="true" targetId="349f-55e3-aa81-cbce" type="selectionEntry"/>
+    <entryLink id="f6f7-7b7d-977c-9ee5" name="Reaver Jetbike Squad" hidden="false" collective="false" import="true" targetId="89d0-b76f-819a-ffc8" type="selectionEntry"/>
+    <entryLink id="fa25-c24f-b800-04ea" name="Talos" hidden="false" collective="false" import="true" targetId="2755-50a2-cad5-37ea" type="selectionEntry"/>
+    <entryLink id="feaf-3332-0ef7-0e43" name="Warp Beast Pack" hidden="false" collective="false" import="true" targetId="9d23-3c32-3e72-68bf" type="selectionEntry"/>
+    <entryLink id="be8b-4d5c-1e22-e2a9" name="Warrior Squad" hidden="false" collective="false" import="true" targetId="90b0-c1c3-0eb5-5751" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7a61-a52d-11c2-0a92" name="Archon Lord" hidden="false" collective="false" import="true" type="unit">
@@ -176,6 +186,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4019-75d7-f02b-eba0" type="max"/>
           </constraints>
+          <rules>
+            <rule id="ee9d-12af-0f0f-af14" name="Plasma Grenades" hidden="false">
+              <description>These grenades negate the effect of cover in close combat, so that models strike in Initiative order.</description>
+            </rule>
+          </rules>
           <infoLinks>
             <infoLink id="fc5d-b7df-97d5-7150" name="Plasma Grenades" hidden="false" targetId="a1a0-7026-df47-1b84" type="profile"/>
           </infoLinks>
@@ -212,6 +227,15 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7ed-38e3-c1a7-bde3" type="max"/>
           </constraints>
+          <rules>
+            <rule id="faa7-1072-d2c6-755a" name="Haywire Grenades" hidden="false">
+              <description>When making close combat attacks against a vehicle, models with Haywire Grenades may choose to make only one attack using the grenade instead of their normal attacks. If they hit, roll on the following table to see the effect.
+1 - No effect
+2-5 -  Glancing Hit
+6 - Penetrating Hit
+Haywire grenades may only be used against Dreadnoughts if the Dreadnought is immobilised.</description>
+            </rule>
+          </rules>
           <infoLinks>
             <infoLink id="e483-3f32-499e-10fe" name="Haywire Grenades" hidden="false" targetId="b01a-6da1-2166-d3e6" type="profile"/>
           </infoLinks>
@@ -334,9 +358,17 @@
         <selectionEntryGroup id="5a88-6efe-158f-2a66" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="cb7b-8fa1-89a5-7ba4">
           <selectionEntries>
             <selectionEntry id="cb7b-8fa1-89a5-7ba4" name="Dark Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="6431-067b-3efd-7238" name="Lance" hidden="false">
+                  <description>A lance weapons counts Armor values higher than 12 as 12.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="3833-1489-3d48-4385" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="4aa5-8ea9-9558-9117" name="Disintegrator" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
@@ -357,6 +389,7 @@
               </constraints>
               <infoLinks>
                 <infoLink id="09a1-7550-6371-1dfc" name="Horrorfex" hidden="false" targetId="ea96-e125-5656-1812" type="rule"/>
+                <infoLink id="a913-962f-bd83-55ec" name="Horrorfex" hidden="false" targetId="9311-d17f-a81d-d04b" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
@@ -374,6 +407,18 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="c1f3-f0d1-aa57-da1a" name="Scaling Nets" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="363c-4052-26ce-6bcb" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9b5-7689-d84e-21d8" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="788d-68c8-f564-b0bf" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="363c-4052-26ce-6bcb" type="max"/>
               </constraints>
@@ -390,6 +435,7 @@
               </constraints>
               <infoLinks>
                 <infoLink id="824a-9628-1da2-36cb" name="Screaming Jets" hidden="false" targetId="ec39-aa1f-18b4-5e7a" type="rule"/>
+                <infoLink id="588e-8896-45ba-9b3e" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
@@ -485,6 +531,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e8cb-12c6-d071-65aa" name="Grotesques" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -540,6 +589,9 @@
           </costs>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="2aaa-5105-fcf0-2282" name="Mandrakes" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -564,6 +616,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="9d23-3c32-3e72-68bf" name="Warp Beast Pack" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -628,6 +683,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="90b0-c1c3-0eb5-5751" name="Warrior Squad" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
@@ -680,12 +738,18 @@
                       <infoLinks>
                         <infoLink id="652d-9faa-1e23-5d1f" name="Splinter Rifle" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
                       </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="489c-741a-d9c0-661a" name="Splinter Pistol and Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
                         <infoLink id="b13c-072c-4293-696d" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
                         <infoLink id="9743-b67e-9844-d38e" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                       </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -728,6 +792,11 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="75a7-9b9e-1598-b075" name="Dark Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="c742-60b4-e65d-d1c8" name="Lance" hidden="false">
+                  <description>A lance weapons counts Armor values higher than 12 as 12.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="e889-6ac1-2131-de1f" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
               </infoLinks>
@@ -746,6 +815,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="db69-fd2e-b675-38ce" name="Raider Squad" hidden="false" collective="false" import="true" type="unit">
       <modifierGroups>
@@ -798,12 +870,18 @@
                       <infoLinks>
                         <infoLink id="62ec-6357-e16d-0944" name="Splinter Rifle" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
                       </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="31b1-82e1-7244-6e9b" name="Splinter Pistol and Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
                         <infoLink id="a5ea-1865-9348-883b" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
                         <infoLink id="d92c-6dee-f43a-2c01" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                       </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -846,6 +924,11 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="c7f0-3679-7559-23b0" name="Dark Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="6b9d-e992-73eb-6c74" name="Lance" hidden="false">
+                  <description>A lance weapons counts Armor values higher than 12 as 12.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="a5d9-4688-e683-19bb" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
               </infoLinks>
@@ -875,6 +958,9 @@
           </costs>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="89d0-b76f-819a-ffc8" name="Reaver Jetbike Squad" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -943,6 +1029,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="f73e-f2f6-1774-94ca" name="Hellions" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -1012,6 +1101,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3609-d55b-7004-f5b7" name="Dark Eldar Scourges" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -1051,12 +1143,18 @@
                       <infoLinks>
                         <infoLink id="5b4c-a817-bb36-126e" name="Splinter Rifle" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
                       </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry id="e3ad-66ef-52ab-4747" name="Splinter Pistol and Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
                         <infoLink id="e07b-18e3-a790-cd5d" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
                         <infoLink id="ecc9-e5a3-163c-2f7f" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                       </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -1076,11 +1174,22 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="8afb-1515-457e-c6f4" name="Splinter Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="51c1-a887-4da6-6296" name="Splinter Cannon" hidden="false" targetId="dc54-e209-b701-3881" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f5b3-5b99-20ff-e641" name="Dark Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="51dc-4c13-f31e-094d" name="Lance" hidden="false">
+                  <description>A lance weapons counts Armor values higher than 12 as 12.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="a943-82c3-2bb0-6b01" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
               </costs>
@@ -1088,6 +1197,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="349f-55e3-aa81-cbce" name="Ravager" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -1107,9 +1219,17 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="c379-22cc-e2ba-4a7a" name="Dark Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="5d83-e99c-5a51-992d" name="Lance" hidden="false">
+                  <description>A lance weapons counts Armor values higher than 12 as 12.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="b677-cc40-a55e-be38" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="cddf-40f3-77d1-55ef" name="Disintegrator" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
@@ -1130,6 +1250,7 @@
               </constraints>
               <infoLinks>
                 <infoLink id="b29c-8bf3-aea8-fbda" name="Horrorfex" hidden="false" targetId="ea96-e125-5656-1812" type="rule"/>
+                <infoLink id="e09f-d893-e879-664d" name="Horrorfex" hidden="false" targetId="9311-d17f-a81d-d04b" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
@@ -1152,6 +1273,7 @@
               </constraints>
               <infoLinks>
                 <infoLink id="dd6b-a81f-80ed-e76c" name="Screaming Jets" hidden="false" targetId="ec39-aa1f-18b4-5e7a" type="rule"/>
+                <infoLink id="b443-fffd-e769-d2da" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
@@ -1220,6 +1342,13 @@
           <entryLinks>
             <entryLink id="84c1-1c3b-b3b4-8241" name="Single-Handed Weapons" hidden="false" collective="false" import="true" targetId="3361-400d-2c53-b3fc" type="selectionEntryGroup"/>
             <entryLink id="b9a1-f3e0-7f17-7519" name="Two-Handed Weapons" hidden="false" collective="false" import="true" targetId="6dc3-6ce9-a524-4577" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" field="3996-80e5-31c1-0c94" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0f3-0f88-583d-94ae" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3996-80e5-31c1-0c94" type="max"/>
               </constraints>
@@ -1234,41 +1363,65 @@
     <selectionEntryGroup id="3361-400d-2c53-b3fc" name="Single-Handed Weapons" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="3906-4473-fbae-90fa" name="Agoniser" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="b315-7c6a-51e3-351e" name="Agoniser" hidden="false" targetId="1dce-9521-0810-0df1" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="17da-5b57-7467-d70b" name="Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="94e4-cbea-2b2d-218a" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3125-ba6c-d395-d90f" name="Destructor" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="06e6-fdf2-876d-ebd7" name="Destructor" hidden="false" targetId="471b-0158-fba8-ed84" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2b7b-509a-be4b-97e4" name="Poisoned Blades" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="b0aa-7546-ec68-7b8b" name="Poisoned Blade" hidden="false" targetId="c04e-5394-eec7-116c" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a3fe-b733-77f3-4cab" name="Power Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="1da5-16f0-0a20-e1c2" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e602-b109-4e8a-9b18" name="Scissorhand" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="f419-60f5-b435-e460" name="Scissorhands" hidden="false" targetId="6b4d-c602-8f66-3478" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9e18-1d57-6c38-00e9" name="Splinter Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="f2f2-721c-f45e-5767" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0345-72a2-6887-cfe0" name="Stinger" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="f495-8470-cb15-c14d" name="Stinger" hidden="false" targetId="cbf4-a511-e9f6-e8e5" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1278,16 +1431,25 @@
     <selectionEntryGroup id="6dc3-6ce9-a524-4577" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="1a70-2062-9988-e85a" name="Hellglaive" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="2822-6c11-abaf-3998" name="Hellglaive" hidden="false" targetId="8307-de36-e7d3-16c0" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7142-01ab-1dc0-7214" name="Punisher" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="407b-34c0-fed0-6a3f" name="Punisher" hidden="false" targetId="f63e-81a8-5be7-636e" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="cc63-109b-4294-72a7" name="Splinter Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="7fb0-1463-a13f-afcc" name="Splinter Rifle" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
@@ -1300,6 +1462,13 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f274-824a-8f8b-70d3" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6f74-36a7-0c6a-1a5e" name="Crucible of Malediction" hidden="false">
+              <description>Once per battle.
+A character carrying a crucible may use it in the Shooting Phase instead of moving or shooting. When the crucible is used the enarest enemy psyker must pass a Leadership test. Subtract 1 from the psyker&apos;s Ld if he is within 12&quot; of the model with the crucible, and add +1 to his Ld if he is over 24&quot; away.
+If the test if ailed the psyker is removed from play with no saves of any kind allowed. If the nearest psyker passes his Leadership test then the next nearest must pass, and so on until either all psykers have passed, or one has failed.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -1308,6 +1477,17 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ce8-052c-b9b7-84d8" type="max"/>
           </constraints>
+          <rules>
+            <rule id="66a8-55b5-20d7-86a9" name="Combat Drugs" hidden="false">
+              <description>Combat Drugs are taken at the start of any assault phase, and allow the character to choose any number of the options below. Roll 1D6 per option chosen. If a double is rolled on the dice then the model suffers 1 wound. If a triple is rolled then the model is killed outright. No saves of any kind are allowed against this wound. All effects last for one assault phase.
+a) May make 12&quot; assault move and 3D6 pursuit/fall back move.
+b) +1 WS
+c) +1 S
+d) Always Strikes FIrst, regardless of cover or weapons
+e) Re-roll any misses in close combat
+f) +1 Attack</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -1316,6 +1496,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a91a-195b-2a8a-5325" type="max"/>
           </constraints>
+          <rules>
+            <rule id="09f7-b707-c793-4e31" name="Gruesome Talisman" hidden="false">
+              <description>Models with gruesome talismans count as two models when working out if one side outnumbers the other in close combat. Not that this works against any foe, including Daemons!</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
@@ -1324,6 +1509,15 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2663-e628-0dd2-83ed" type="max"/>
           </constraints>
+          <rules>
+            <rule id="4afe-0a0a-e29e-be4b" name="Haywire Grenades" hidden="false">
+              <description>When making close combat attacks against a vehicle, models with Haywire Grenades may choose to make only one attack using the grenade instead of their normal attacks. If they hit, roll on the following table to see the effect.
+1 - No effect
+2-5 -  Glancing Hit
+6 - Penetrating Hit
+Haywire grenades may only be used against Dreadnoughts if the Dreadnought is immobilised.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="4.0"/>
           </costs>
@@ -1332,6 +1526,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87c9-3034-6083-0551" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5802-dac7-b682-4c46" name="Hell Mask" hidden="false">
+              <description>Close combat opponents of the model with a Hell Mask must pass a Leadership test in every round of combat. Any that fail will need 6s to hit the mask&apos;s wearer.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1340,6 +1539,12 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59a2-5320-161c-e3da" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="d3eb-8ad5-2017-b39e" name="Hellion Skyboard" hidden="false" targetId="ba1d-89bb-15ba-84f6" type="rule"/>
+            <infoLink id="848a-f8c3-fbcb-f33a" name="Jump Packs" hidden="false" targetId="2563-092a-a5bc-992f" type="rule"/>
+            <infoLink id="6ac5-f061-6136-f3e7" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
+            <infoLink id="a5fc-d9ea-ee54-bbdd" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -1348,6 +1553,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a953-746b-9dfa-c3a7" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6e18-928f-8c03-b237" name="Reaver Jetbike" hidden="false">
+              <description>Treated in the same manner as a normal jetbike, apart from an added turbo-booster. This may be activated in any movement phase, and increases the jetbike&apos;s move to 24&quot;. However, the model may not shot or assault on the same turn the booster is used. When a Reaver uses its jetbike&apos;s turbo-booster then its saving throw becomes invulnerable for that turn and the opposing player&apos;s following turn. If one model in a unit uses its booster than so must all the others. Characters riding a Reaver jetbike may only be armed with single-hand weapons and may only use one at  a time.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
           </costs>
@@ -1356,6 +1566,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fb7-66fd-7c6a-1884" type="max"/>
           </constraints>
+          <rules>
+            <rule id="4e27-04b2-6aba-6697" name="Plasma Grenades" hidden="false">
+              <description>These grenades negate the effect of cover in close combat, so that models strike in Initiative order.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
@@ -1364,6 +1579,14 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c60a-d92b-d9d5-fe9d" type="max"/>
           </constraints>
+          <rules>
+            <rule id="1d48-9294-e342-02b5" name="Shadow Field" hidden="false">
+              <description>A shadow field provides a 2+ Invulnerable save, but if the save is ever failed then the field is destroyed. Despite having a 2+ save, the model is still considered as being fleet of foot.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="2c47-48e4-b65b-b5b2" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -1372,6 +1595,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d5e-7756-db00-a6e0" type="max"/>
           </constraints>
+          <rules>
+            <rule id="46c6-7e30-14b2-e56d" name="Soul Seeker Ammunition" hidden="false">
+              <description>Models using Soul Seeker Aummunition may re-roll any missed to hit rolls, and any cover saves that would normally be taken by the target are ignored. Soul Seeker Ammunition may only be used in conjunction with a splinter rifle, splinter pistol. tormentor helm or a hellglaive.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -1380,6 +1608,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14e5-d7db-6a8a-db9f" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="1c6a-fc8e-3c57-186d" name="Terrofex" hidden="false" targetId="21df-8acc-050f-0e90" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -1388,6 +1619,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9131-129b-3ee3-61d8" type="max"/>
           </constraints>
+          <rules>
+            <rule id="2af9-a1d4-8b7b-0549" name="Tormentor Helm" hidden="false">
+              <description>The Tormentor Helm incorporates a neurally activated splint pistol that can fired by thought alone. This allows the model to use the pistol even if he is carrying something in both hands. This means that the model gainst +1 Attack for an additional close combat weapon even if using a double-handed weapon!</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1396,14 +1632,36 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1145-b623-1441-e91f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6efb-5dca-8e82-e2aa" name="Trophy Rack" hidden="false">
+              <description>If a model wtih a trophy rack slays an enemy in close combat, he may chop off their head and stick it onto the trophy rack! This adds +1 to the model&apos;s Leadership for the rest of the battle. Chopping off additional heads has no effect.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d673-a3bb-fb40-86e6" name="Webway Portal" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="8809-cc2a-a071-4bff" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9682-daa3-4a00-5a7c" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0f3-0f88-583d-94ae" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8809-cc2a-a071-4bff" type="max"/>
           </constraints>
+          <rules>
+            <rule id="104b-7242-a40d-29dd" name="Webway Portal" hidden="false">
+              <description>This is a mobile form of the portal used by the Dark Eldar to link together places via the webmay. It may be activiated by the model carrying it in the shooting phase, instead of moving or shooting that turn. Place a space Blast marker is base contact with the model. From that point forward units entering play as reserves may be placed on the portal template instead of entering the table edge. There is no risk of scattering or being killed when travelling in this way, and the portal cannot be destroyed. Once activated the model that was carrying the portal may move away and does not need to remain in contact with it. If you have a webway portal in your army, you may keep units in reserve, even if you are not normally allowed to do so by the mission. If you do this, then the troops may only enter through the webway.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
           </costs>
@@ -1412,6 +1670,11 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33a2-40f0-998d-0113" type="max"/>
           </constraints>
+          <rules>
+            <rule id="610f-124c-2e9a-6485" name="Animus Vitae" hidden="false">
+              <description>Any models captured by a unit including a model equipped with the Animus Vitae count for five victory points each instead of the usual one. Once one or more models have been captured by the character with the Animus, he benefits from +1 WS and +1 S for the rest of the game.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -1420,6 +1683,11 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e341-81e5-d69b-05c8" type="max"/>
           </constraints>
+          <rules>
+            <rule id="3e03-f2d3-b951-9043" name="Archangel of Pain" hidden="false">
+              <description>A Dark Eldar model with an Archangle of Pain can release the Archangel in the Shooting phase instead of firing a weapon. Place the Flamer template touching the models base. Any unit with a model at least partially underneith the template must make an immediate Pinning test at -2 Leadership. Any unit with a model in close combat is immune to the Archangel&apos;s effects. The weapon may only be used once per battle.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1428,6 +1696,11 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1124-7cc1-a79f-bfc4" type="max"/>
           </constraints>
+          <rules>
+            <rule id="3157-0e6b-6546-5fb4" name="Goblit of Spite" hidden="false">
+              <description>A Succubus that carries the Goblet of Spite, any models in the same unit as the Succubus, and any units with a model in base-to-base contact with the Succubus and/or their unit will always hit on a 3+ in hand-to-hand combat, regardless of other factors.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1436,6 +1709,11 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c2e-a8d6-7a73-c0b4" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6b38-b329-a994-95d8" name="Mask of the Damned" hidden="false">
+              <description>Any enemy unit that wishes to assault a model wearing a Mark of the Damned or a unit of which it is part of must take a standard Leadership test. On a failure the unit succumbs to sheer horror and may not make an assault this turn.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -1444,6 +1722,11 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cae-9b72-7884-0535" type="max"/>
           </constraints>
+          <rules>
+            <rule id="897f-25f9-7e5c-61f4" name="Nightmare Doll" hidden="false">
+              <description>A Dark Eldar model equipped with a Nightmare Doll may force his opponent to re-roll the dice when ascertaining who may choose table edge or quarter. If the Dark Eldar player opts to do this, the model with the Nightmare Doll takes a Strength 3 hit at the beginning of the first Dark Eldar turn with no saves of any kind allowed.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -1452,6 +1735,11 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0f1-7a55-b450-ecd6" type="max"/>
           </constraints>
+          <rules>
+            <rule id="3baa-b135-76c4-122b" name="Vexantrope" hidden="false">
+              <description>Models wishing to attack a model with a Vexantrope in any round of combat must first pass a Leadership test or direct its attacks against a different model with 2&quot; as per the normal rules for a supporting attack. The Vexantrope cannot affect unliving models, daemons, vehicles, Tyranids or Walkers.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -1460,6 +1748,9 @@
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e8b-ae86-3867-4eca" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="62a6-7ab8-7e9c-314f" name="Xenospasm" hidden="false" targetId="9a29-5f62-d37c-c042" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -1470,7 +1761,7 @@
       <infoLinks>
         <infoLink id="c802-7743-e50f-c673" name="Splinter Rifle" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
         <infoLink id="3317-be5b-687f-0b53" name="Tormentor Helm" hidden="false" targetId="c9f2-b82c-69fe-a365" type="rule"/>
-        <infoLink id="baa3-a174-d29a-fcdf" name="Punisher" hidden="false" targetId="9d57-833b-b0c7-edb0" type="profile"/>
+        <infoLink id="baa3-a174-d29a-fcdf" name="Punisher" hidden="false" targetId="f63e-81a8-5be7-636e" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5ead-6d5b-a799-e87c" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
@@ -1855,20 +2146,38 @@
     <rule id="a3e6-e049-06af-8e6a" name="Beastmaster" hidden="false"/>
     <rule id="1538-3ab7-af24-eccb" name="Wych Cult" hidden="false"/>
     <rule id="b2f3-6c38-4d90-ecd9" name="Reaver Jetbike" hidden="false"/>
-    <rule id="ba1d-89bb-15ba-84f6" name="Hellion Skyboard" hidden="false"/>
+    <rule id="ba1d-89bb-15ba-84f6" name="Hellion Skyboard" hidden="false">
+      <description>Hellions are treated as Jump Packs. A model riding a skyboad benefits from +1 to its Armor Save, and a 5+ Invulnerable &apos;junk&apos; save against shooting attacks if they moved in the previous turn. A model riding a skuboard may use the Deep Strike rule if allowed by the scenario being played. A skyboard rider may not use a webway portal, and characters may not use the Hellions&apos; Hit and Run rule.</description>
+    </rule>
     <rule id="d834-3e7c-3fa1-95d9" name="Hellglaive" hidden="false"/>
     <rule id="283a-130f-b6fc-6fc0" name="Hit &amp; Run" hidden="false"/>
     <rule id="31e5-e4cc-4d50-895e" name="Wilffire" hidden="false"/>
     <rule id="ee7e-3f02-5109-ab22" name="Talos Claws" hidden="false"/>
     <rule id="c9f2-b82c-69fe-a365" name="Tormentor Helm" hidden="false"/>
-    <rule id="ea96-e125-5656-1812" name="Horrorfex" hidden="false"/>
-    <rule id="68af-27a8-ee25-f9c7" name="Night Shield" hidden="false"/>
-    <rule id="43d3-5452-4de8-08b0" name="Scaling Nets" hidden="false"/>
-    <rule id="ec39-aa1f-18b4-5e7a" name="Screaming Jets" hidden="false"/>
-    <rule id="bd24-a5b8-76ff-8e1a" name="Scythes" hidden="false"/>
-    <rule id="8d54-90f8-6fd1-c844" name="Slave Snares" hidden="false"/>
-    <rule id="1049-d869-68ff-2876" name="Torture Amp" hidden="false"/>
-    <rule id="50cc-9180-be3d-2d8f" name="Trophy Racks" hidden="false"/>
+    <rule id="ea96-e125-5656-1812" name="Horrorfex" hidden="false">
+      <description>As the vehicle falls upon its foes, arcane grenades made from captured Eldar wraithbone sow discord and terror within the enemy&apos;s ranks. The vehicle is fitted with a larger version of a Terrorfex, which can be fired instead of another of the vehicle&apos;s weapons in the Dark Eldar shooting phase. It has the same effect as a Terrorfex except it has an 18&quot; range.</description>
+    </rule>
+    <rule id="68af-27a8-ee25-f9c7" name="Night Shield" hidden="false">
+      <description>The vehicle&apos;s open deck is covered by a wide-area shadow field. This has the effect of adding 6&quot; to the range from enemy units wishing to fire at a vehicle with a Night Shield. This may put the vehicle out of range, in which case the shooting automatically misses. The extra distance is also counted for working out if the vehicle is within Rapid Fire range. It has no effect on template, ordnance or barrage weapons.</description>
+    </rule>
+    <rule id="43d3-5452-4de8-08b0" name="Scaling Nets" hidden="false">
+      <description>A web of neeting hangs to the ground from the Raider, allowing its passengers to get on and off more swiftly. A unit may embark of disembark onto or from the Raider at any point during its move, rather than just at the beginning or end. They may not do this if it will be moving over 12&quot; in total that turn, and they cannot move before embarking or continue to move after disembarking as it is a moving vehicle. However, the nets also provide easier access for foes, and any enemy unit attacking the Raider in close combat hits on a 4+ rather than the 6+ usually needed for skimmers. </description>
+    </rule>
+    <rule id="ec39-aa1f-18b4-5e7a" name="Screaming Jets" hidden="false">
+      <description>The vehicle is fitted with additional high-powered jet engines, which allow it to drop from the skies with a characteristic screaming wail. A vehicle fitted with Screaming Jets can Deep Strike if the scenario normally allows Deep Strike to be used. The vehicle counts as moving over 6&quot; on the turn it arrives and troops on board may not disembark that turn.</description>
+    </rule>
+    <rule id="bd24-a5b8-76ff-8e1a" name="Scythes" hidden="false">
+      <description>The vehicle has been fitted with blades along is hull, making it a risky prospect to attack in an assault. Any enemy model that rolls a 1 to hit when attacking the vehicle in an assault suffers a Strength 5 hit, with normal armor saves allowed.</description>
+    </rule>
+    <rule id="8d54-90f8-6fd1-c844" name="Slave Snares" hidden="false">
+      <description>If the Raider passes over an enemy unit during the movement phase, and it does not move more than 12&quot; in total, the unit takes D6 Strength 4 hits, with normal armor saves allowed. Casualties are treated as prisoners for Victory Point purposes. Slave Snares have no effect on vehicles. Any casualties lost by a unit in the Movement phase are added to casualties from the next Shooting phase for the purposes of working out of the have lost 25% casualties.</description>
+    </rule>
+    <rule id="1049-d869-68ff-2876" name="Torture Amp" hidden="false">
+      <description>During battle a Haemoncolus tortures captured slaves and traps their screams in special voiceboxes. These cries of agony are filtered through complex projectors to create a wave of terrifying sonic energy around the vehicle. A vehicle with a Torture Amp is able to Tank Shock even though it is not a Tank.</description>
+    </rule>
+    <rule id="50cc-9180-be3d-2d8f" name="Trophy Racks" hidden="false">
+      <description>The Raider is adorned with sketetons and skulls impaled on staves. The enemy troops find this immensely disturbing and threatening, so any enemy unit with a model with 6&quot; of the Raider must subtract 1 from its Leadership value. This effect does not stack with other vehicles&apos; Trophy Racks.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="8e42-7c3e-a1aa-df2f" name="Archon" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -2259,11 +2568,6 @@
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="9d57-833b-b0c7-edb0" name="Punisher" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
-      <characteristics>
-        <characteristic name="Capacity" typeId="4b03-2db8-5ba0-e5fd"/>
-      </characteristics>
-    </profile>
     <profile id="1dce-9521-0810-0df1" name="Agoniser" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
         <characteristic name="Capacity" typeId="4b03-2db8-5ba0-e5fd"/>
@@ -2277,6 +2581,33 @@
     <profile id="85c9-6f3a-9cc3-cb24" name="Talos Claws" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
         <characteristic name="Capacity" typeId="4b03-2db8-5ba0-e5fd"/>
+      </characteristics>
+    </profile>
+    <profile id="f63e-81a8-5be7-636e" name="Punisher" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">The punisher is a two-handed power weapon used by Dark Eldar Incubi. It also adds +1 to the user&apos;s Strength.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="c04e-5394-eec7-116c" name="Poisoned Blade" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Poisoned Blased always wound on a 2+ regardless of the victim&apos;s Toughtness. However, this ability may not be combined with the ability of any other weapon in close combat.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6b4d-c602-8f66-3478" name="Scissorhands" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
   </sharedProfiles>
