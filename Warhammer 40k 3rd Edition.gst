@@ -1573,5 +1573,10 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
+    <profile id="a1a0-7026-df47-1b84" name="Plasma Grenades" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+      <characteristics>
+        <characteristic name="Capacity" typeId="4b03-2db8-5ba0-e5fd"/>
+      </characteristics>
+    </profile>
   </sharedProfiles>
 </gameSystem>
