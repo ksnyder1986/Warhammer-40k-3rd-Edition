@@ -1561,7 +1561,11 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
     </profile>
     <profile id="b01a-6da1-2166-d3e6" name="Haywire Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">When making close combat attacks against a vehicle, models with Haywire Grenades may choose to make only one attack using the grenade instead of their normal attacks. If they hit, roll on the following table to see the effect.
+1 - No effect
+2-5 -  Glancing Hit
+6 - Penetrating Hit
+Haywire grenades may only be used against Dreadnoughts if the Dreadnought is immobilised.</characteristic>
       </characteristics>
     </profile>
     <profile id="88fe-1339-3496-78f5" name="Damnation Grenades" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">

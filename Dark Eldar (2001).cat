@@ -18,14 +18,25 @@
     <entryLink id="fa25-c24f-b800-04ea" name="Talos" hidden="false" collective="false" import="true" targetId="2755-50a2-cad5-37ea" type="selectionEntry"/>
     <entryLink id="feaf-3332-0ef7-0e43" name="Warp Beast Pack" hidden="false" collective="false" import="true" targetId="9d23-3c32-3e72-68bf" type="selectionEntry"/>
     <entryLink id="be8b-4d5c-1e22-e2a9" name="Warrior Squad" hidden="false" collective="false" import="true" targetId="90b0-c1c3-0eb5-5751" type="selectionEntry"/>
+    <entryLink id="c943-6e8a-531f-ce72" name="Decapitator" hidden="false" collective="false" import="true" targetId="1e2f-7759-ebec-f774" type="selectionEntry"/>
+    <entryLink id="dc8c-cfac-30f7-e22a" name="Urien Rakarth" hidden="false" collective="false" import="true" targetId="f65f-1eb2-82e4-a947" type="selectionEntry"/>
+    <entryLink id="5658-fd7e-3d05-2c9c" name="Lelith Hesperax" hidden="false" collective="false" import="true" targetId="9af5-2fc3-2b24-d02c" type="selectionEntry"/>
+    <entryLink id="0102-e582-22a1-e581" name="Kruellagh" hidden="false" collective="false" import="true" targetId="28bb-2ff2-0f7f-da5b" type="selectionEntry"/>
+    <entryLink id="32d6-5fd0-c6b1-0d50" name="Asdrubael Vect" hidden="false" collective="false" import="true" targetId="e8e8-6964-113f-e463" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7a61-a52d-11c2-0a92" name="Archon Lord" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="6547-45ba-ff55-98ab" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5f66-3ec8-dd9d-0c06" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5f66-3ec8-dd9d-0c06" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -51,9 +62,15 @@
     <selectionEntry id="5f66-3ec8-dd9d-0c06" name="Wych Archite" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="6235-6afa-2e1b-2354" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a61-a52d-11c2-0a92" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a61-a52d-11c2-0a92" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -157,6 +174,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="98ef-3486-383b-7eff" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18bb-1ffe-f10e-1a5d" type="greaterThan"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f99c-4e50-c876-44dd" type="greaterThan"/>
               </conditions>
             </conditionGroup>
@@ -594,6 +612,16 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
       </costs>
     </selectionEntry>
     <selectionEntry id="2aaa-5105-fcf0-2282" name="Mandrakes" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="a4e9-dcfd-1271-3537" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e2f-7759-ebec-f774" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4e9-dcfd-1271-3537" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="109f-176a-1cbe-93b2" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
         <categoryLink id="196b-4b27-0210-c9b7" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
@@ -695,6 +723,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="98ef-3486-383b-7eff" type="greaterThan"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f99c-4e50-c876-44dd" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18bb-1ffe-f10e-1a5d" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -827,6 +856,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="98ef-3486-383b-7eff" type="greaterThan"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f99c-4e50-c876-44dd" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="18bb-1ffe-f10e-1a5d" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1331,6 +1361,239 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="e8e8-6964-113f-e463" name="Asdrubael Vect" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="6d07-74cb-3876-7799" value="0.0">
+          <conditions>
+            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="any" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d07-74cb-3876-7799" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="15e0-d147-8417-adbe" name="Dais of Destruction" hidden="false">
+          <description>Asdrubael rides upton a Ravager that has been heavily modified to create a suitable ornate form of transportation for such an important personage. Asdrubael, Dais, and his bodyguard have all been given a single profile that reflects their overall combat ability. Opponents may not target individual members of the Dais, but by the same token Asdrubael, the Dais, and the rest of his entourage cannot dismount. </description>
+        </rule>
+        <rule id="6b5c-6510-8c30-cb6c" name="Energy Field" hidden="false">
+          <description>The Dais is protected by a unique energy field that gives it an Armor Value of 14 in all directions against shooting attacks. Close Combat Attacks are made against the Dais&apos; ordinary Armor values of 11 to the from and sides, and 10 to the rear.</description>
+        </rule>
+        <rule id="aa93-0329-d6ed-e60c" name="Firepower" hidden="false">
+          <description>The Dais has two disintegrators and a dark lance. In addition, Asdrubael and his two bodyguards are armed with splinter pistols and they shoot in the same manner as models mounted on an open-topped skimmer. All weapons have a BS of 6.</description>
+        </rule>
+        <rule id="f021-e287-546b-8d94" name="Close Combat" hidden="false">
+          <description>If the Dais moved 12&quot; or less in the movement phase, it may make an assault move up to 6&quot; if it is within 6&quot; of an enemy model. The Dais fights in close combat in the same way as a Dreadnought. Extra attacks for models equipped with two close combat weapons are included in the profile and should not be taken again. However, as Asdrubael and his bodyguard are armed with power weapons, no armor saves are allowed against wounds inflicted by them in close combat. Note that because Asdrubael and the Dais are treated as the vehicle they will never fall back, even if defeated in close combat.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="38d5-aa4a-4a26-43a9" name="Asdrubael Vect" hidden="false" targetId="f583-5096-3773-c353" type="profile"/>
+        <infoLink id="9847-9b4e-f556-5130" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="3191-e827-c9e7-9832" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+        <infoLink id="ecdf-fcc0-ebf4-c5c2" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink id="cd0f-9119-2171-8709" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
+        <infoLink id="add0-1093-798c-4f5a" name="Disintegrator (Max)" hidden="false" targetId="8f79-d821-9c93-4ed3" type="profile"/>
+        <infoLink id="3d85-3afe-c550-75d5" name="Disintegrator (Sustained)" hidden="false" targetId="706d-137b-28d9-702d" type="profile"/>
+        <infoLink id="073e-b93c-27bc-68d7" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2785-b3d6-4627-b62c" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="03c4-d043-62c3-cbc5" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
+        <categoryLink id="3592-5b42-1334-c3a7" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="277.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="28bb-2ff2-0f7f-da5b" name="Kruellagh" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="b363-b833-f588-9041" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9af5-2fc3-2b24-d02c" type="equalTo"/>
+                <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="any" type="lessThan"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b363-b833-f588-9041" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="267a-937f-a956-c6e7" name="Damnation Grenades" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">6&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1/Blast</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Instead of firing the Terrorfex Kruellagh can fire a Damnation Grenade instead.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="0ea5-9995-c39d-8cb2" name="Hell Mask" hidden="false">
+          <description>Close combat opponents of the model with a Hell Mask must pass a Leadership test in every round of combat. Any that fail will need 6s to hit the mask&apos;s wearer.</description>
+        </rule>
+        <rule id="25af-5962-1179-b0c6" name="Soul Flayer" hidden="false">
+          <description>Kruellagh is armed with a unique weapon called the Soul Flayer. From her hands extend two lethal spikes that can be used to impale a victim and extract their vital juices. The Soul Flayer counts as two sets of poisoned blades, so Kruellagh receives a +1 Attack bonus and always wounds on a 2+ (the +1 Attack bonus is already included in her profile). Any living model slain in close combat by Kruellagh, whilst in base contact with her, has his vital jices dwarn off, adding +1 to Kruellagh&apos;s Attacks characterstic for the next player&apos;s turn only.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="d301-859c-2296-89f3" name="Terrofex" hidden="false" targetId="21df-8acc-050f-0e90" type="profile"/>
+        <infoLink id="073f-26b4-5ddb-d004" name="Kruellagh The Vile" hidden="false" targetId="826d-603d-3c58-4f79" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="028b-9e12-08f4-1cb2" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="1c06-246d-22a8-76cf" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="abf0-3c24-90de-28b7" name="Retinue" hidden="false" collective="false" import="true" targetId="8b7d-371a-db60-f06f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="125.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9af5-2fc3-2b24-d02c" name="Lelith Hesperax" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="cb66-1c6c-aa2c-2f79" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
+                <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="any" type="lessThan"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb66-1c6c-aa2c-2f79" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="da5a-7a9d-0326-8127" name="Shadow Field" hidden="false">
+          <description>A shadow field provides a 2+ Invulnerable save, but if the save is ever failed then the field is destroyed. Despite having a 2+ save, the model is still considered as being fleet of foot.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="1d4b-8fef-7184-4d3b" name="Lelith Hesperax" hidden="false" targetId="1e78-9eef-0503-ef12" type="profile"/>
+        <infoLink id="d10c-998a-de17-bbeb" name="Wych Weapons" hidden="false" targetId="3aeb-238c-16c3-8ffe" type="rule"/>
+        <infoLink id="20aa-5582-a8cd-fa62" name="Agoniser" hidden="false" targetId="1dce-9521-0810-0df1" type="profile"/>
+        <infoLink id="6800-93bc-8242-c283" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
+        <infoLink id="02a7-edf1-5c88-a375" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6ddf-7945-97b3-feee" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="26d2-1d7a-9039-eeab" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="580d-dd15-1700-5081" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="18bb-1ffe-f10e-1a5d" name="Wych Cult" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0886-f900-ebf3-08d1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f970-89a7-ee84-17b3" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="90.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f65f-1eb2-82e4-a947" name="Urien Rakarth" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="0425-b888-7046-f4d5" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a61-a52d-11c2-0a92" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0425-b888-7046-f4d5" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="7310-3afa-1d43-2c4d" name="Crucible of Malediction" hidden="false">
+          <description>Once per battle.
+A character carrying a crucible may use it in the Shooting Phase instead of moving or shooting. When the crucible is used the enarest enemy psyker must pass a Leadership test. Subtract 1 from the psyker&apos;s Ld if he is within 12&quot; of the model with the crucible, and add +1 to his Ld if he is over 24&quot; away.
+If the test if ailed the psyker is removed from play with no saves of any kind allowed. If the nearest psyker passes his Leadership test then the next nearest must pass, and so on until either all psykers have passed, or one has failed.</description>
+        </rule>
+        <rule id="a1b9-7bd9-c272-4226" name="Master Haemonculus" hidden="false">
+          <description>Urien is a master of his craft, and the weapons he uses are amongst the finest examples of their kind. To reflect their superior quality Urien&apos;s weapons automatically wound if they hit - no &apos;to wound&apos; roll is required. Armor Saves are taken normally.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="d3a8-1354-0e4b-c1f4" name="Urien Rakarth" hidden="false" targetId="307d-d44c-9a4d-551c" type="profile"/>
+        <infoLink id="942a-ba69-ad44-cff7" name="Destructor" hidden="false" targetId="471b-0158-fba8-ed84" type="profile"/>
+        <infoLink id="7e34-8760-84d8-fe85" name="Stinger" hidden="false" targetId="cbf4-a511-e9f6-e8e5" type="profile"/>
+        <infoLink id="88c4-bf39-9e1a-6f56" name="Poisoned Blade" hidden="false" targetId="c04e-5394-eec7-116c" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="af92-f68e-4c27-268b" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="1aa9-5bab-52c6-e222" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
+        <categoryLink id="70f7-68fd-65dc-3065" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="dac9-2144-2969-6831" name="Uber Grotesques" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1795-c4d9-4052-6a8c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8815-089d-0e7c-f9ae" name="Uber Grotesque" hidden="false" targetId="da72-b1ae-3c7e-2ff3" type="profile"/>
+            <infoLink id="6f19-aa11-9aa0-13fc" name="Feel No Pain" hidden="false" targetId="aaa1-7514-608a-4fa3" type="rule"/>
+            <infoLink id="3836-6f69-e40d-ab49" name="Stupid" hidden="false" targetId="9911-daf4-a508-a8ec" type="rule"/>
+            <infoLink id="34d1-4399-e32f-193d" name="Terrifying Opponent" hidden="false" targetId="2ceb-4429-33da-7e07" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1e2f-7759-ebec-f774" name="Decapitator" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db9f-174e-f516-db05" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="c4cd-0378-baba-f74e" name="Gruesome Talisman" hidden="false">
+          <description>Models with gruesome talismans count as two models when working out if one side outnumbers the other in close combat. Not that this works against any foe, including Daemons!</description>
+        </rule>
+        <rule id="9894-88f6-7b77-5b8c" name="Trophy Rack" hidden="false">
+          <description>If a model wtih a trophy rack slays an enemy in close combat, he may chop off their head and stick it onto the trophy rack! This adds +1 to the model&apos;s Leadership for the rest of the battle. Chopping off additional heads has no effect.</description>
+        </rule>
+        <rule id="ded0-3551-ca69-5820" name="Additional Limbs" hidden="false">
+          <description>Two additional arms have been grafted onto Decapitator&apos;s body. These ass +2 to his Attacks characters and +1 to his Weapon Skill, both of which have already been included in his profile.</description>
+        </rule>
+        <rule id="d2a3-27d3-f5e3-747a" name="Decapitator" hidden="false">
+          <description>This is the weapon that has given Decapitator his name. It counts as a power weapon, but if Decapitator rolls a 6 on any of his to hit rolls then that hit is counted as being at double Strength.</description>
+        </rule>
+        <rule id="307c-d391-d183-c23f" name="Shadow-Skinned" hidden="false">
+          <description>The special chameleon-like qualities of Mandrakes allow them to blend into the background, even when they are standing in open terrain. Mandrakes always count as being in cover, giving them a 5+ saving throw against most attakcs. This also applied in assaults, so unless the attackers are armed with frag grenades. Mandrakes will always strike first. If attacked by something that ignores cover then their normal save of 5+ applied.</description>
+        </rule>
+        <rule id="1827-6a02-8bbb-c0c1" name="Master Infiltrator" hidden="false">
+          <description>Decapitator is a supreme master at infiltrating an enemy army. Do not deploy him using the normal rules, even in scenarios that don&apos;t normally allow infiltration to be used. Instead write down where on the table Decapitator is hiding (this must be outside both sides&apos; deployment zones). You may reveal his location at any time by simply showing your opponent Decapitator&apos;s hidden set-up instructions. You must, however, reveal his location on your third turn if you have not done so already.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="d694-9642-f9ed-596a" name="Decapitator" hidden="false" targetId="203c-c6b0-242a-6678" type="profile"/>
+        <infoLink id="d409-071d-6972-ac1b" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6a62-b989-599f-6992" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="5e53-7406-d75b-13fc" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="71f3-a8de-2abb-d02e" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="112.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="cc28-fd8b-3aad-f42f" name="Dark Eldar Armory" hidden="false" collective="false" import="true">
@@ -1459,6 +1722,13 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     <selectionEntryGroup id="8e92-2231-0e1e-d634" name="Wargear" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="c441-d739-6c9b-4c53" name="Crucible of Malediction" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="f274-824a-8f8b-70d3" value="0.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f65f-1eb2-82e4-a947" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f274-824a-8f8b-70d3" type="max"/>
           </constraints>
@@ -1477,17 +1747,9 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ce8-052c-b9b7-84d8" type="max"/>
           </constraints>
-          <rules>
-            <rule id="66a8-55b5-20d7-86a9" name="Combat Drugs" hidden="false">
-              <description>Combat Drugs are taken at the start of any assault phase, and allow the character to choose any number of the options below. Roll 1D6 per option chosen. If a double is rolled on the dice then the model suffers 1 wound. If a triple is rolled then the model is killed outright. No saves of any kind are allowed against this wound. All effects last for one assault phase.
-a) May make 12&quot; assault move and 3D6 pursuit/fall back move.
-b) +1 WS
-c) +1 S
-d) Always Strikes FIrst, regardless of cover or weapons
-e) Re-roll any misses in close combat
-f) +1 Attack</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="198e-8868-6746-a80c" name="Combat Drugs" hidden="false" targetId="e622-df34-cea1-5528" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -1536,8 +1798,16 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           </costs>
         </selectionEntry>
         <selectionEntry id="9682-daa3-4a00-5a7c" name="Hellion Skyboard" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="a897-e740-53f0-a1e1" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a70-2062-9988-e85a" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59a2-5320-161c-e3da" type="max"/>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a897-e740-53f0-a1e1" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="d3eb-8ad5-2017-b39e" name="Hellion Skyboard" hidden="false" targetId="ba1d-89bb-15ba-84f6" type="rule"/>
@@ -1912,6 +2182,28 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="68d4-2d67-cb68-2094" name="Drazhar" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f883-dc90-59a5-0421" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="573c-f1b8-d460-cb5b" name="Tormentor Helm" hidden="false">
+                  <description>The Tormentor Helm incorporates a neurally activated splint pistol that can fired by thought alone. This allows the model to use the pistol even if he is carrying something in both hands. This means that the model gainst +1 Attack for an additional close combat weapon even if using a double-handed weapon!</description>
+                </rule>
+                <rule id="65fc-d9df-1544-57e6" name="Disemboweller Blades" hidden="false">
+                  <description>Drazhar is armed with a unique pair of weapons called Disemboweller Blades. These are treated as a power weapon that can cause 2 wounds for each hit inflicted (this means that 2 wound rolls are made for each successful hit). Drazhar&apos;s extra attack for being armed with an additional close combat weapon is included in his profile above.</description>
+                </rule>
+                <rule id="95a5-b749-38bd-346c" name="Bodyguard" hidden="false">
+                  <description>In the assault phase Drazhar may change places with Dark Eldar Lord whose Retinue he belongs to. This represents Drazhar stepping foward to protect the Lord against an enemy attack. This takes place after models have charged into combat, but before any of the close combats have been resolved. </description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="30bd-f0d0-a749-bca3" name="Drazhar" hidden="false" targetId="5d18-e858-927b-76a0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="90.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2131,25 +2423,45 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="9c47-d53c-1a35-a0f4" name="Fleet of Foot" hidden="false"/>
+    <rule id="9c47-d53c-1a35-a0f4" name="Fleet of Foot" hidden="false">
+      <description>Dark Eldar are a lithe and agile race, noted for their fleetness of foot. In the shooting phase you may declare that a Dark Eldar unit is going to run instead of shoot. Roll a D6. The result is the distance the unit may move in that shooting phase. This move is not affected by difficult terrain or any other movement restrictions.</description>
+    </rule>
     <rule id="5646-21d2-ece5-f7d3" name="Piratical Raiders" hidden="false"/>
-    <rule id="c2aa-5dc2-24fb-f475" name="Capturing Prisoners" hidden="false"/>
-    <rule id="e9cd-e2b7-a40a-a0a0" name="Dodge" hidden="false"/>
+    <rule id="c2aa-5dc2-24fb-f475" name="Capturing Prisoners" hidden="false">
+      <description>The Dark Eldar almost always take prisoners during their raids. What happens to them is best not even comtemplated. So, if the Dark Eldar win a close combat and forece their opponents to fall back, roll a D6 for each enemy casualty in the assault. On a 4+, the model is taken as a prisoner. In addition, if the Dark Eldar advance and destroy their opponents by moving further then them, and enemy models removed are captured rather than killed. Place all captured models to one side. At the end of the mission each captured model is 1 victory point to the Dark Eldar player.</description>
+    </rule>
+    <rule id="e9cd-e2b7-a40a-a0a0" name="Dodge" hidden="false">
+      <description>Wych lords benefit from a 4+ Invulnerable save in close combat. This save may not be used if riding a Jetbike or Hellion Skyboard.</description>
+    </rule>
     <rule id="3aeb-238c-16c3-8ffe" name="Wych Weapons" hidden="false"/>
     <rule id="9911-daf4-a508-a8ec" name="Stupid" hidden="false"/>
-    <rule id="aaa1-7514-608a-4fa3" name="Feel No Pain" hidden="false"/>
+    <rule id="aaa1-7514-608a-4fa3" name="Feel No Pain" hidden="false">
+      <description>Grotesques ignore shooting hits from weapons whose Strength is not at least twice the Grotesque&apos;s Toughness. This means that ranged attacks that can affect Grotesques will always get an outright kill. Note that hits in close combat affect the Grotesque normally.</description>
+    </rule>
     <rule id="2ceb-4429-33da-7e07" name="Terrifying Opponent" hidden="false"/>
     <rule id="382d-cc2a-0ce2-9041" name="Shadow-skinned" hidden="false"/>
     <rule id="4bc7-2263-7a50-cc39" name="Hidden Deployment" hidden="false"/>
-    <rule id="e622-df34-cea1-5528" name="Combat Drugs" hidden="false"/>
+    <rule id="e622-df34-cea1-5528" name="Combat Drugs" hidden="false">
+      <description>Combat Drugs are taken at the start of any assault phase, and allow the character to choose any number of the options below. Roll 1D6 per option chosen. If a double is rolled on the dice then the model suffers 1 wound. If a triple is rolled then the model is killed outright. No saves of any kind are allowed against this wound. All effects last for one assault phase.
+a) May make 12&quot; assault move and 3D6 pursuit/fall back move.
+b) +1 WS
+c) +1 S
+d) Always Strikes FIrst, regardless of cover or weapons
+e) Re-roll any misses in close combat
+f) +1 Attack</description>
+    </rule>
     <rule id="5c6d-c0b2-528b-566d" name="Warp Beasts" hidden="false"/>
-    <rule id="a3e6-e049-06af-8e6a" name="Beastmaster" hidden="false"/>
+    <rule id="a3e6-e049-06af-8e6a" name="Beastmaster" hidden="false">
+      <description>Beastmasters are a subsect to the Wych cult that fight against wild creatures in the arenas of Commorragh. A Beastmaster uses combat drugs like Wyches, but always receives the 12&quot; assault move result, in order to allow him to keep up with his pack. If the Beastmaster is slain then the pack will move towards the nearest unit (friend of foe) in the Dark Eldar turn, and assault them if they can.</description>
+    </rule>
     <rule id="1538-3ab7-af24-eccb" name="Wych Cult" hidden="false"/>
     <rule id="b2f3-6c38-4d90-ecd9" name="Reaver Jetbike" hidden="false"/>
     <rule id="ba1d-89bb-15ba-84f6" name="Hellion Skyboard" hidden="false">
       <description>Hellions are treated as Jump Packs. A model riding a skyboad benefits from +1 to its Armor Save, and a 5+ Invulnerable &apos;junk&apos; save against shooting attacks if they moved in the previous turn. A model riding a skuboard may use the Deep Strike rule if allowed by the scenario being played. A skyboard rider may not use a webway portal, and characters may not use the Hellions&apos; Hit and Run rule.</description>
     </rule>
-    <rule id="d834-3e7c-3fa1-95d9" name="Hellglaive" hidden="false"/>
+    <rule id="d834-3e7c-3fa1-95d9" name="Hellglaive" hidden="false">
+      <description>Hellions are armed with a unique weapon called a hellglaive. It incorporates a splinter rifle and a set of vicious cutting blades that are capable of slicing a man in half. The hellglaive can be used as a splinter rifle or a close combat weapon, and may be used as both in the same turn. If the user charges into close combat then the hellglaive also adds +1 to their Strength in the first round of combat. The hellglaive requires two hands to use, so can&apos;t be combined with any other weapon. Characters taking a hellglaive must also take a Hellion Skyboard.</description>
+    </rule>
     <rule id="283a-130f-b6fc-6fc0" name="Hit &amp; Run" hidden="false"/>
     <rule id="31e5-e4cc-4d50-895e" name="Wilffire" hidden="false"/>
     <rule id="ee7e-3f02-5109-ab22" name="Talos Claws" hidden="false"/>
