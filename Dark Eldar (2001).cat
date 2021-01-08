@@ -1823,11 +1823,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a953-746b-9dfa-c3a7" type="max"/>
           </constraints>
-          <rules>
-            <rule id="6e18-928f-8c03-b237" name="Reaver Jetbike" hidden="false">
-              <description>Treated in the same manner as a normal jetbike, apart from an added turbo-booster. This may be activated in any movement phase, and increases the jetbike&apos;s move to 24&quot;. However, the model may not shot or assault on the same turn the booster is used. When a Reaver uses its jetbike&apos;s turbo-booster then its saving throw becomes invulnerable for that turn and the opposing player&apos;s following turn. If one model in a unit uses its booster than so must all the others. Characters riding a Reaver jetbike may only be armed with single-hand weapons and may only use one at  a time.</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="25e6-7355-d550-7af9" name="Reaver Jetbike" hidden="false" targetId="b2f3-6c38-4d90-ecd9" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
           </costs>
@@ -1889,11 +1887,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9131-129b-3ee3-61d8" type="max"/>
           </constraints>
-          <rules>
-            <rule id="2af9-a1d4-8b7b-0549" name="Tormentor Helm" hidden="false">
-              <description>The Tormentor Helm incorporates a neurally activated splint pistol that can fired by thought alone. This allows the model to use the pistol even if he is carrying something in both hands. This means that the model gainst +1 Attack for an additional close combat weapon even if using a double-handed weapon!</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="3552-a2ae-ad73-8f5f" name="Tormentor Helm" hidden="false" targetId="c9f2-b82c-69fe-a365" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -2148,6 +2144,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
             <selectionEntry id="22c6-dcd7-b819-94e4" name="Incubi" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="6b83-677a-174f-4873" name="Incubi" hidden="false" targetId="44b4-4b39-b02c-5613" type="profile"/>
+                <infoLink id="5ddc-ebcb-d3f3-5a29" name="Tormentor Helm" hidden="false" targetId="c9f2-b82c-69fe-a365" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
@@ -2166,6 +2163,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               </constraints>
               <infoLinks>
                 <infoLink id="c1bb-8be4-9119-91c8" name="Incubi Master" hidden="false" targetId="61e4-7d62-487f-972f" type="profile"/>
+                <infoLink id="d177-f78b-67fb-ddf6" name="Tormentor Helm" hidden="false" targetId="c9f2-b82c-69fe-a365" type="rule"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="797e-5b5f-5991-a875" name="Dark Eldar Armory" hidden="false" collective="false" import="true" targetId="cc28-fd8b-3aad-f42f" type="selectionEntryGroup"/>
@@ -2426,21 +2424,36 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     <rule id="9c47-d53c-1a35-a0f4" name="Fleet of Foot" hidden="false">
       <description>Dark Eldar are a lithe and agile race, noted for their fleetness of foot. In the shooting phase you may declare that a Dark Eldar unit is going to run instead of shoot. Roll a D6. The result is the distance the unit may move in that shooting phase. This move is not affected by difficult terrain or any other movement restrictions.</description>
     </rule>
-    <rule id="5646-21d2-ece5-f7d3" name="Piratical Raiders" hidden="false"/>
+    <rule id="5646-21d2-ece5-f7d3" name="Piratical Raiders" hidden="false">
+      <description>In any mission where there is an attacker and a defender, the Dark Eldar are always the attackers.</description>
+    </rule>
     <rule id="c2aa-5dc2-24fb-f475" name="Capturing Prisoners" hidden="false">
       <description>The Dark Eldar almost always take prisoners during their raids. What happens to them is best not even comtemplated. So, if the Dark Eldar win a close combat and forece their opponents to fall back, roll a D6 for each enemy casualty in the assault. On a 4+, the model is taken as a prisoner. In addition, if the Dark Eldar advance and destroy their opponents by moving further then them, and enemy models removed are captured rather than killed. Place all captured models to one side. At the end of the mission each captured model is 1 victory point to the Dark Eldar player.</description>
     </rule>
     <rule id="e9cd-e2b7-a40a-a0a0" name="Dodge" hidden="false">
       <description>Wych lords benefit from a 4+ Invulnerable save in close combat. This save may not be used if riding a Jetbike or Hellion Skyboard.</description>
     </rule>
-    <rule id="3aeb-238c-16c3-8ffe" name="Wych Weapons" hidden="false"/>
-    <rule id="9911-daf4-a508-a8ec" name="Stupid" hidden="false"/>
+    <rule id="3aeb-238c-16c3-8ffe" name="Wych Weapons" hidden="false">
+      <description>No member of a unit fighting the Wych in close combat counts as being equipped with an additional close combat weapon
+All enemies with an unmodified Strength below 6 halve their WS characteristics for attacks made against the Wych.</description>
+    </rule>
+    <rule id="9911-daf4-a508-a8ec" name="Stupid" hidden="false">
+      <description>Unless accompanied by an independent character Grotesques must pass a leadership test in order to move in the movement phase. They do not need to test in order to make an assault move.</description>
+    </rule>
     <rule id="aaa1-7514-608a-4fa3" name="Feel No Pain" hidden="false">
       <description>Grotesques ignore shooting hits from weapons whose Strength is not at least twice the Grotesque&apos;s Toughness. This means that ranged attacks that can affect Grotesques will always get an outright kill. Note that hits in close combat affect the Grotesque normally.</description>
     </rule>
-    <rule id="2ceb-4429-33da-7e07" name="Terrifying Opponent" hidden="false"/>
-    <rule id="382d-cc2a-0ce2-9041" name="Shadow-skinned" hidden="false"/>
-    <rule id="4bc7-2263-7a50-cc39" name="Hidden Deployment" hidden="false"/>
+    <rule id="2ceb-4429-33da-7e07" name="Terrifying Opponent" hidden="false">
+      <description>Any opponent beaten by the Grotesques in close combat automatically falls back without a Leadership test being taken.</description>
+    </rule>
+    <rule id="382d-cc2a-0ce2-9041" name="Shadow-skinned" hidden="false">
+      <description>The special chameleon-like qualities of the Mandrakes allow them to blend into the background, even when standing in open terrain. Mandrakes always count as being in cover, giving them a 5+ cover save. This counts as an assault as well, so unless the attackers are armed with frag grenades, the Mandrakes will always strike first. If they are in cover, they gain a +2 bonus to the normal cover save. If attacked by something that ignores cover their normal armor save of 5+ applied.</description>
+    </rule>
+    <rule id="4bc7-2263-7a50-cc39" name="Hidden Deployment" hidden="false">
+      <description>Mandrakes are not deployed like other troops. They are always deployed at the start of the battle, even if the mission&apos;s special rules say they must be held in reserve. However, instead of placing the unit on the table as normal, take three Mandrak models, and deploy them separately in any place allowed by the deployment rules for the mission. Any one of these models can represent the actual location of the Mandrake squad, though you don&apos;t have to decide which one until the squad is revealed.
+Until the squad&apos;s location is revealed your opponent may not shoot, assault, or otherwise attack the Mandrakes in any way, but, by the same token, the Mandrakes do not affect the enemy, and can&apos;t be used for crossfire purposes, to block lines of sight, etc. All that the individual models may do is move up to 6&quot; in the movement phase. They can do nothing else, and may not make a fleet of foot move during teh Shooting Phase.
+You may reveal the true location of the squad at the start of any phase during your own turn. However, you must have revealed their location by the end of the third turn. Pick one of the Mandrake models, and remove all the others from the table. Then deploy the rest of the squad within 4&quot; of the model you picked. Once revealed, the Mandrakes follow the normal rules and may not return to hidden status again.</description>
+    </rule>
     <rule id="e622-df34-cea1-5528" name="Combat Drugs" hidden="false">
       <description>Combat Drugs are taken at the start of any assault phase, and allow the character to choose any number of the options below. Roll 1D6 per option chosen. If a double is rolled on the dice then the model suffers 1 wound. If a triple is rolled then the model is killed outright. No saves of any kind are allowed against this wound. All effects last for one assault phase.
 a) May make 12&quot; assault move and 3D6 pursuit/fall back move.
@@ -2450,22 +2463,40 @@ d) Always Strikes FIrst, regardless of cover or weapons
 e) Re-roll any misses in close combat
 f) +1 Attack</description>
     </rule>
-    <rule id="5c6d-c0b2-528b-566d" name="Warp Beasts" hidden="false"/>
+    <rule id="5c6d-c0b2-528b-566d" name="Warp Beasts" hidden="false">
+      <description>Warp Beats are incredibly fast, even by Dark Eldar standards. They count as being fleet of foot, and may charge up to 12&quot; in the assault phase in the same manner as cavalry. Warp Beasts move through difficult terrain just like infantry. If they move through difficult terrain while they are assaulting they move equal to double the highest dice rolled. If the Beastermaster is slain and the pack are forced to fall back, they will instead be removed from play as they retreat into the warp.</description>
+    </rule>
     <rule id="a3e6-e049-06af-8e6a" name="Beastmaster" hidden="false">
       <description>Beastmasters are a subsect to the Wych cult that fight against wild creatures in the arenas of Commorragh. A Beastmaster uses combat drugs like Wyches, but always receives the 12&quot; assault move result, in order to allow him to keep up with his pack. If the Beastmaster is slain then the pack will move towards the nearest unit (friend of foe) in the Dark Eldar turn, and assault them if they can.</description>
     </rule>
-    <rule id="1538-3ab7-af24-eccb" name="Wych Cult" hidden="false"/>
-    <rule id="b2f3-6c38-4d90-ecd9" name="Reaver Jetbike" hidden="false"/>
+    <rule id="1538-3ab7-af24-eccb" name="Wych Cult" hidden="false">
+      <description>In an army led by a Wych Lord, the following changes to the Dark Eldar list occur.
+- Wych squads are Troops choices
+- Warrior and Raider squads are Elite choices
+- Dark Eldar LOrds, Haemonculi, Grotesques and Talos units cannot be choosen
+- You may buy as many Warp Beast Packs as Wych Squads are in the army instead of the normal 0 - 1 limit.</description>
+    </rule>
+    <rule id="b2f3-6c38-4d90-ecd9" name="Reaver Jetbike" hidden="false">
+      <description>Treated in the same manner as a normal jetbike, apart from an added turbo-booster. This may be activated in any movement phase, and increases the jetbike&apos;s move to 24&quot;. However, the model may not shot or assault on the same turn the booster is used. When a Reaver uses its jetbike&apos;s turbo-booster then its saving throw becomes invulnerable for that turn and the opposing player&apos;s following turn. If one model in a unit uses its booster than so must all the others. Characters riding a Reaver jetbike may only be armed with single-hand weapons and may only use one at  a time.</description>
+    </rule>
     <rule id="ba1d-89bb-15ba-84f6" name="Hellion Skyboard" hidden="false">
       <description>Hellions are treated as Jump Packs. A model riding a skyboad benefits from +1 to its Armor Save, and a 5+ Invulnerable &apos;junk&apos; save against shooting attacks if they moved in the previous turn. A model riding a skuboard may use the Deep Strike rule if allowed by the scenario being played. A skyboard rider may not use a webway portal, and characters may not use the Hellions&apos; Hit and Run rule.</description>
     </rule>
     <rule id="d834-3e7c-3fa1-95d9" name="Hellglaive" hidden="false">
       <description>Hellions are armed with a unique weapon called a hellglaive. It incorporates a splinter rifle and a set of vicious cutting blades that are capable of slicing a man in half. The hellglaive can be used as a splinter rifle or a close combat weapon, and may be used as both in the same turn. If the user charges into close combat then the hellglaive also adds +1 to their Strength in the first round of combat. The hellglaive requires two hands to use, so can&apos;t be combined with any other weapon. Characters taking a hellglaive must also take a Hellion Skyboard.</description>
     </rule>
-    <rule id="283a-130f-b6fc-6fc0" name="Hit &amp; Run" hidden="false"/>
-    <rule id="31e5-e4cc-4d50-895e" name="Wilffire" hidden="false"/>
-    <rule id="ee7e-3f02-5109-ab22" name="Talos Claws" hidden="false"/>
-    <rule id="c9f2-b82c-69fe-a365" name="Tormentor Helm" hidden="false"/>
+    <rule id="283a-130f-b6fc-6fc0" name="Hit &amp; Run" hidden="false">
+      <description>Hellions utilise a Hit &amp; Run fighting style. At the nd of a round of close combat the Hellions may choose to break off of it and at least some of its close combat oppoenents do not have to fall back. The unit falls back 3d6&quot; in any direction and automatically regroups at the end of the move (regardless of enemy within 6&quot; or being below half strength). Enemy models that were in close combat with them before the break-off may only consolidate.</description>
+    </rule>
+    <rule id="31e5-e4cc-4d50-895e" name="Wildfire" hidden="false">
+      <description>A Talos fires wild volleys of shots rather than aiming at specific targets. When it shoots, roll to hit as normal, but allocate the first hit to the nearest enemy model to the Talos, the second hit to the second closest model, and so on until all the hits have been used up. Note that only models within the range of the weapon and in its line of sight are eligble. If all potential targets have been assigned one hit and additional hits were rolled, those additional hits are lost.</description>
+    </rule>
+    <rule id="ee7e-3f02-5109-ab22" name="Talos Claws" hidden="false">
+      <description>The Talos gets D6 attacks with its claws (D6+1 if charging) when it fights in close combat. Roll to hit and wound normally. No armor saves are allowed against the claws. Against a vehicle roll only once for Armor Penetration, but add +1 to the Armor Penetration dice roll for each hit scored by the Talos after the first.</description>
+    </rule>
+    <rule id="c9f2-b82c-69fe-a365" name="Tormentor Helm" hidden="false">
+      <description>The Tormentor Helm incorporates a neurally activated splint pistol that can fired by thought alone. This allows the model to use the pistol even if he is carrying something in both hands. This means that the model gainst +1 Attack for an additional close combat weapon even if using a double-handed weapon!</description>
+    </rule>
     <rule id="ea96-e125-5656-1812" name="Horrorfex" hidden="false">
       <description>As the vehicle falls upon its foes, arcane grenades made from captured Eldar wraithbone sow discord and terror within the enemy&apos;s ranks. The vehicle is fitted with a larger version of a Terrorfex, which can be fired instead of another of the vehicle&apos;s weapons in the Dark Eldar shooting phase. It has the same effect as a Terrorfex except it has an 18&quot; range.</description>
     </rule>
