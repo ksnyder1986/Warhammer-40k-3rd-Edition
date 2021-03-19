@@ -13,30 +13,8 @@
       </constraints>
     </entryLink>
     <entryLink id="7b30-eaed-55cc-943a" name="Scarab Swarms" hidden="false" collective="false" import="true" targetId="d450-12e3-bb56-1724" type="selectionEntry"/>
-    <entryLink id="1e51-062d-18ab-2342" name="The Deceiver" hidden="false" collective="false" import="true" targetId="7a63-eaa2-fd49-2b4e" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="e0b5-8e10-33f2-c85d" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a39-7513-c366-af02" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0b5-8e10-33f2-c85d" type="max"/>
-      </constraints>
-    </entryLink>
-    <entryLink id="1a39-7513-c366-af02" name="The Nightbringer" hidden="false" collective="false" import="true" targetId="06be-7c68-43af-b0c4" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="e0a3-4d17-7d1a-b1c0" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e51-062d-18ab-2342" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0a3-4d17-7d1a-b1c0" type="max"/>
-      </constraints>
-    </entryLink>
+    <entryLink id="1e51-062d-18ab-2342" name="The Deceiver" hidden="false" collective="false" import="true" targetId="7a63-eaa2-fd49-2b4e" type="selectionEntry"/>
+    <entryLink id="1a39-7513-c366-af02" name="The Nightbringer" hidden="false" collective="false" import="true" targetId="06be-7c68-43af-b0c4" type="selectionEntry"/>
     <entryLink id="1b85-ea5c-f41f-a842" name="Tomb Spyders" hidden="false" collective="false" import="true" targetId="0164-f47e-2789-9154" type="selectionEntry"/>
     <entryLink id="3580-4b5a-f18e-93b0" name="Warriors" hidden="false" collective="false" import="true" targetId="7fdf-5e14-4871-22ad" type="selectionEntry"/>
     <entryLink id="5e1f-85c5-a346-18f0" name="Wraiths" hidden="false" collective="false" import="true" targetId="9605-3b01-4680-5ca1" type="selectionEntry"/>
@@ -55,7 +33,7 @@
         <categoryLink id="f5bc-ff98-50e6-5ab8" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d19d-ae5d-5d68-5408" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="d19d-ae5d-5d68-5408" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7327-199c-1bb7-3b0b">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d920-980b-4921-ebbf" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7d3-d226-bdaa-0b9a" type="min"/>
@@ -341,7 +319,7 @@
         <selectionEntry id="8b66-1dc8-0223-646c" name="Destroyer" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75ac-0899-0cac-cacf" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f578-09b0-84de-b195" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f578-09b0-84de-b195" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="5683-fd81-72de-da53" name="Destroyer" hidden="false" targetId="5bc1-6d9c-2fa0-c5cd" type="profile"/>
@@ -373,7 +351,7 @@
         <infoLink id="bae3-7952-bd71-955e" name="Jetbikes" hidden="false" targetId="4556-3c66-6ed4-87a0" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6a13-0ac0-1b3d-44cf" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false"/>
+        <categoryLink id="6a13-0ac0-1b3d-44cf" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7f23-0035-68df-1e55" name="Scarab Swarm" hidden="false" collective="false" import="true" type="model">
@@ -386,6 +364,26 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dbd4-1244-c728-1393" name="Disruption Fields" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="4.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f23-0035-68df-1e55" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f33f-4b9a-1a94-2c23" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="1372-db27-cbea-a7b0" name="Disruption Field" hidden="false">
+              <description>Disruption Fields are used in assaults against vehicles. Any hit inflicted on a target by a unit equipped with disruption fields will score a glancing hit on a D6 roll of 6 regardless of the vehicles Armor value in exactly the same manner as gauss weapons.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -419,6 +417,7 @@
           <infoLinks>
             <infoLink id="58a2-aabc-da02-de4c" name="Monstorous Creature" hidden="false" targetId="445e-e873-2a3f-776f" type="rule"/>
             <infoLink id="1d4d-427c-b715-8e9b" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
+            <infoLink id="3f50-b136-89ce-34d9" name="Tomb Spyder" hidden="false" targetId="f746-4c0b-3966-cd99" type="profile"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="e532-e868-af02-96f3" name="Particle Projector" hidden="false" collective="false" import="true" type="upgrade">
@@ -471,6 +470,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="dc9f-b5be-d617-3729" name="Monolith" hidden="false" collective="false" import="true" type="unit">
       <rules>
@@ -503,8 +505,21 @@
         <categoryLink id="5af4-5894-b718-5556" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
         <categoryLink id="7978-ca0c-484c-8dac" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="235.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="7a63-eaa2-fd49-2b4e" name="The Deceiver" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="d46d-f5cf-1648-f7dd" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="06be-7c68-43af-b0c4" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d46d-f5cf-1648-f7dd" type="max"/>
+      </constraints>
       <rules>
         <rule id="4ed9-d586-94e9-c548" name="Deceive" hidden="false">
           <description>In the Shooting Phase, the Deceiver can visit an enemy unit with visions of their destruction realistic enough to shake the bravest. The power has a range of 24&quot;, requires a line of sight and cannot be used on a unit that is in close combat. The unit must take a either a Moral test or a Pinning test at the whim of the C&apos;tan using the power, even if they would normally pass such a test automatically. This does not extend to vehicles.</description>
@@ -538,6 +553,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="06be-7c68-43af-b0c4" name="The Nightbringer" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="4d99-7daa-b467-798a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a63-eaa2-fd49-2b4e" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d99-7daa-b467-798a" type="max"/>
+      </constraints>
       <rules>
         <rule id="6f28-cb4c-cd42-6143" name="Gaze of Death" hidden="false">
           <description>The Nightbringer may choose to use the Gaze of Death instead of attacking normally in close combat. Place the Ordnance template over the C&apos;tan. Any enemy models entirely beneath it are hit automatically. models partially beneath it are hit on a D6 roll of 4+. Every model hit takes a Strength 4 hit with no Armor Saving throw permitted.</description>
@@ -640,7 +665,8 @@
         </selectionEntry>
         <selectionEntry id="ce79-16f7-9a89-4ed0" name="Nightmare Shroud" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7600-d9a0-bd51-faa8" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7600-d9a0-bd51-faa8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb38-1ba0-a6c4-399f" type="max"/>
           </constraints>
           <rules>
             <rule id="61fc-50d7-0dd3-5817" name="Nightmare Shroud" hidden="false">
@@ -653,7 +679,8 @@
         </selectionEntry>
         <selectionEntry id="ad5a-d152-4c17-6108" name="Phase Shifter" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d57d-d0ee-3764-5f7f" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d57d-d0ee-3764-5f7f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ee2-d59d-3b21-e08b" type="max"/>
           </constraints>
           <rules>
             <rule id="4dc2-662b-3028-3991" name="Phase Shifter" hidden="false">
@@ -699,7 +726,8 @@
         </selectionEntry>
         <selectionEntry id="217f-3ad8-855e-57e1" name="Solar Pulse" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c994-a53c-066f-9053" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c994-a53c-066f-9053" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6b6-d43f-d798-fbf7" type="max"/>
           </constraints>
           <rules>
             <rule id="20f2-2464-6de1-4cee" name="Solar Pulse" hidden="false">
@@ -713,7 +741,8 @@ The Solar Pulse is used at the beginning of the Necron turn. If the Night Fighti
         </selectionEntry>
         <selectionEntry id="b17c-94be-a2fc-3d71" name="Veil of Darkness" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd2d-88f0-31a5-944a" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bd2d-88f0-31a5-944a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd09-0d40-20e3-2eba" type="max"/>
           </constraints>
           <rules>
             <rule id="ee53-95c2-7417-94d5" name="Veil of Darkness" hidden="false">
