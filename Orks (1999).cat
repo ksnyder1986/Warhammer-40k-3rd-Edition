@@ -210,16 +210,14 @@
         <categoryLink id="1456-a2db-837b-0d66" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="4bc2-4fa6-1d93-d99d" name="Mega Armor Warboss" hidden="false" collective="false" import="true" targetId="b2e2-8ed5-f6ab-66fd" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink id="1869-556a-101c-da24" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
-        <categoryLink id="eb81-45fe-6a17-278b" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
-        <categoryLink id="2551-ac86-06f3-47f9" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
-      </categoryLinks>
-    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b32d-5cad-2d37-2401" name="Warboss" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0d8-472e-4c7d-c038" type="max">
+          <comment>Per Q&amp;A Chapter Approved 2001</comment>
+        </constraint>
+      </constraints>
       <infoLinks>
         <infoLink id="94fa-790d-be20-7c4e" name="Warboss" hidden="false" targetId="ff24-2716-f53f-8b78" type="profile"/>
         <infoLink id="c838-78d0-d296-f4e9" name="The Power of the WAAAGH!" hidden="false" targetId="7bb4-34ca-51f3-bb8c" type="rule"/>
@@ -239,7 +237,7 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4104-b3d8-d273-af9e" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4104-b3d8-d273-af9e" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ece-9eb9-c164-cf78" type="greaterThan"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -261,6 +259,32 @@
         <infoLink id="419c-2f69-25ac-b7d5" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
         <infoLink id="91cc-4913-01c9-87ea" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
       </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="59fb-f5b2-f3c1-6ca0" name="Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b478-4310-f34e-d896" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e124-d306-b0a8-e2c8" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="15ee-b901-5bca-da96" name="Big Shoota" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="45d7-4cd0-e884-92a9" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d86d-3f56-b049-3d77" name="Rokkit Launcha" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="d564-0d02-cbea-8a55" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="41f1-5d02-25fd-3edf" name="Ork Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="7ab0-3a69-56f8-540b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -386,10 +410,9 @@
               </constraints>
               <infoLinks>
                 <infoLink id="f3ed-025a-6d04-f686" name="Nobz" hidden="false" targetId="cf8b-0d62-1066-d16e" type="profile"/>
+                <infoLink id="afd6-0378-05d7-2f0f" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
+                <infoLink id="d5e1-fa3d-d187-2221" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="2fbc-2e53-d867-59cf" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="26.0"/>
               </costs>
@@ -494,10 +517,9 @@
                     <modifier type="set" field="b309-5233-122f-82bb" value="-"/>
                   </modifiers>
                 </infoLink>
+                <infoLink id="8284-6928-21c6-6cf7" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+                <infoLink id="3776-c7da-139a-52da" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="8bba-8105-c682-937b" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="21.0"/>
               </costs>
@@ -563,15 +585,6 @@
           <description>Tankbusta Bombz are used like krak stikkbombz to attack vehicles and bunkers, however Tankbusta Bombz have an armor penetration roll of 6+(D6x2).</description>
         </rule>
       </rules>
-      <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2f47-4b43-eae2-ced7" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="6ab0-4b9d-2143-12be" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
-        <infoLink id="8855-acff-eed7-8894" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
@@ -642,10 +655,9 @@
                     <modifier type="set" field="b309-5233-122f-82bb" value="4+"/>
                   </modifiers>
                 </infoLink>
+                <infoLink id="2fa5-8576-9ec0-c707" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
+                <infoLink id="242a-bac9-1829-484e" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="b7d7-4f5b-b3b0-06cc" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="28.0"/>
               </costs>
@@ -744,10 +756,9 @@
               </constraints>
               <infoLinks>
                 <infoLink id="09d3-cdb3-0230-9d72" name="Nobz" hidden="false" targetId="cf8b-0d62-1066-d16e" type="profile"/>
+                <infoLink id="9e17-d423-235f-968e" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+                <infoLink id="7efa-6d1b-d49d-1e96" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="2f02-7d97-eaf3-21b0" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
               </costs>
@@ -839,10 +850,9 @@
               </constraints>
               <infoLinks>
                 <infoLink id="b8c4-32ef-1461-aee3" name="Nobz" hidden="false" targetId="cf8b-0d62-1066-d16e" type="profile"/>
+                <infoLink id="2886-1738-43c9-279b" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+                <infoLink id="bea2-e4ff-05e2-7720" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="0e28-fddb-0f04-6e2c" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="22.0"/>
               </costs>
@@ -958,10 +968,9 @@
               </constraints>
               <infoLinks>
                 <infoLink id="9e0d-d178-93e3-1670" name="Nobz" hidden="false" targetId="cf8b-0d62-1066-d16e" type="profile"/>
+                <infoLink id="f19a-9dec-5732-e625" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+                <infoLink id="daf3-6866-bcd9-fd87" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="dce3-ec8f-1860-e6dd" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
               </costs>
@@ -1009,8 +1018,7 @@
           <selectionEntries>
             <selectionEntry id="6ac6-8129-26fc-20d1" name="Shoota Boy" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="c2ce-d6b4-a437-3cc8" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
-                <infoLink id="bb5f-500a-fde3-6efd" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+                <infoLink id="bb5f-500a-fde3-6efd" name="Shoota" hidden="false" targetId="894f-1760-04e4-77c4" type="profile"/>
                 <infoLink id="98b3-3843-108d-1c7a" name="Shoota Boyz" hidden="false" targetId="1fb6-64e8-a037-dbd9" type="profile"/>
               </infoLinks>
               <costs>
@@ -1025,10 +1033,8 @@
               </constraints>
               <infoLinks>
                 <infoLink id="a30d-3c92-5b76-013b" name="Nobz" hidden="false" targetId="cf8b-0d62-1066-d16e" type="profile"/>
+                <infoLink id="d7a7-6ed3-e11e-8224" name="Shoota" hidden="false" targetId="894f-1760-04e4-77c4" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="df90-83cd-13f6-2f52" name="Shoota" hidden="false" collective="false" import="true" targetId="e6e6-057c-7db8-cd7a" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
               </costs>
@@ -1097,10 +1103,9 @@
               <infoLinks>
                 <infoLink id="97bf-3353-4ddd-3b0f" name="Nobz" hidden="false" targetId="cf8b-0d62-1066-d16e" type="profile"/>
                 <infoLink id="810e-5998-09b4-ddad" name="Frag Stikk Bombs" hidden="false" targetId="4f55-452f-b785-4bb4" type="profile"/>
+                <infoLink id="2034-8969-4c6b-1f33" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
+                <infoLink id="ba64-d32e-c104-9efc" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="bc89-5819-8a79-e47c" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="21.0"/>
               </costs>
@@ -1111,7 +1116,7 @@
       <entryLinks>
         <entryLink id="f35b-f642-8ce6-bdda" name="Tankbusta Bombz" hidden="false" collective="false" import="true" targetId="3ae6-c359-c118-9e84" type="selectionEntry">
           <modifiers>
-            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7815-df46-c196-736a" repeats="1" roundUp="false"/>
               </repeats>
@@ -1244,10 +1249,9 @@
                 <infoLink id="01e6-b49f-3bb5-3375" name="Frag Stikk Bombs" hidden="false" targetId="4f55-452f-b785-4bb4" type="profile"/>
                 <infoLink id="c0ee-8c96-e424-c3b4" name="Tankbusta Bombz" hidden="false" targetId="d652-3dc5-266e-637c" type="profile"/>
                 <infoLink id="77dd-5b82-92d9-98c3" name="Nobz" hidden="false" targetId="cf8b-0d62-1066-d16e" type="profile"/>
+                <infoLink id="e4bb-3570-8c30-488b" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
+                <infoLink id="38ec-9bb6-4826-28de" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="a119-d1a3-1ec1-a6c4" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="22.0"/>
               </costs>
@@ -1308,7 +1312,7 @@
         <entryLink id="63a7-0301-62ee-0b8d" name="Slaver" hidden="false" collective="false" import="true" targetId="b1a1-9b18-ccb8-4302" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daea-59e8-bb8b-846c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b27-80a1-9a8e-00c9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b27-80a1-9a8e-00c9" type="min"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="9.0"/>
@@ -1388,11 +1392,10 @@
                     <modifier type="set" field="abbf-0d11-fd86-d938" value="3"/>
                   </modifiers>
                 </infoLink>
+                <infoLink id="50bb-e49d-a783-4711" name="Shoota" hidden="false" targetId="894f-1760-04e4-77c4" type="profile"/>
+                <infoLink id="6457-48be-37f1-2c25" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
+                <infoLink id="209c-4c98-0089-7244" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="ecee-656a-0ef4-5acf" name="Shoota" hidden="false" collective="false" import="true" targetId="e6e6-057c-7db8-cd7a" type="selectionEntry"/>
-                <entryLink id="6a58-10ff-4371-1c4f" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
               </costs>
@@ -1522,18 +1525,9 @@
               </constraints>
               <infoLinks>
                 <infoLink id="6f73-b3e9-b117-f305" name="Warbike Nob" hidden="false" targetId="43cb-5180-9280-9962" type="profile"/>
+                <infoLink id="da83-0ab9-a879-97e9" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
+                <infoLink id="7a7d-79a0-6467-6548" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="438f-56c7-13be-125e" name="Twin-linked Big Shoota" hidden="false" collective="false" import="true" type="upgrade">
-                  <infoLinks>
-                    <infoLink id="6ff6-e712-b0cb-37b9" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
-                    <infoLink id="f496-52e9-c8e8-5d47" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="52.0"/>
               </costs>
@@ -1580,14 +1574,14 @@
         </selectionEntry>
         <selectionEntry id="eb26-fe19-0a9e-558e" name="Addition Crew" hidden="false" collective="false" import="true" type="model">
           <modifiers>
-            <modifier type="increment" field="a6ea-b629-20c4-b338" value="3.0">
+            <modifier type="increment" field="e4f8-9e26-97b7-a9c5" value="3.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a8e-a003-44b3-16e3" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6ea-b629-20c4-b338" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4f8-9e26-97b7-a9c5" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="f620-d2c3-2942-ce36" name="Gretchin" hidden="false" targetId="a9e7-02cc-7c37-8345" type="profile"/>
@@ -1635,7 +1629,7 @@
       <entryLinks>
         <entryLink id="7993-254e-9a37-96bd" name="Slaver" hidden="false" collective="false" import="true" targetId="b1a1-9b18-ccb8-4302" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3112-5622-de71-4c08" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3112-5622-de71-4c08" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="1da9-ffd5-b3f4-b2bd" name="Ork Armoury" hidden="false" collective="false" import="true" targetId="3fb8-65fc-3904-2e54" type="selectionEntryGroup"/>
@@ -1703,6 +1697,7 @@
                 <selectionEntryGroup id="cfe5-8ed2-e4e0-f9d3" name="Imperial Guard Anti-tank Squad" hidden="false" collective="false" import="true">
                   <constraints>
                     <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="159e-3cac-f9d5-8a5f" type="max"/>
+                    <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d48d-8333-5320-9ec7" type="min"/>
                   </constraints>
                   <selectionEntries>
                     <selectionEntry id="c310-f326-3b43-7211" name="Lascannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1732,6 +1727,10 @@
             <selectionEntry id="57ba-43eb-d67a-4866" name="Imperial Guard Fire Support Squad" hidden="false" collective="false" import="true" type="upgrade">
               <selectionEntryGroups>
                 <selectionEntryGroup id="dc89-1980-f7d4-00be" name="Imperial Guard Fire Support Squad" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f987-a789-54ed-8165" type="max"/>
+                    <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="634b-4686-0bbd-6163" type="min"/>
+                  </constraints>
                   <selectionEntries>
                     <selectionEntry id="9cd4-d374-3246-3694" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
                       <infoLinks>
@@ -2112,25 +2111,72 @@
         <infoLink id="d0f9-a5dc-7221-17b2" name="Ork Dreadnought" hidden="false" targetId="4e62-97d5-655f-66b9" type="profile">
           <modifiers>
             <modifier type="set" field="bb33-7ddf-2296-174e" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b1c-2111-cb19-63e9" type="notEqualTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="22d2-3410-bcf2-5476" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b1c-2111-cb19-63e9" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="2870-c64f-81e5-a118" value="5">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b1c-2111-cb19-63e9" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="22d2-3410-bcf2-5476" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b1c-2111-cb19-63e9" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4a3a-4397-aaaf-1fae" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="7b1c-2111-cb19-63e9">
+        <selectionEntryGroup id="4a3a-4397-aaaf-1fae" name="Left Arm Weapons" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0be8-1eae-4b2a-e41b" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b776-c6d6-46f1-d288" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82df-d6c3-6746-2ced" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f80-de4f-ef94-2163" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="set" field="957d-9514-4ad5-da9b" value="1.0"/>
+                <modifier type="set" field="20cf-1322-095e-78bd" value="1.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="957d-9514-4ad5-da9b" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20cf-1322-095e-78bd" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="7b1c-2111-cb19-63e9" name="Dreadnought Close Combat Weapons" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="8ef4-2c34-27c5-cf24" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0be8-1eae-4b2a-e41b" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b776-c6d6-46f1-d288" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="82df-d6c3-6746-2ced" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f80-de4f-ef94-2163" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed3f-5040-7cfe-8de1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ef4-2c34-27c5-cf24" type="min"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="858a-4968-d2d3-c533" name="Dreadnought Close Combat Weapons" hidden="false" targetId="c7f7-e5ab-17a7-1cf9" type="profile"/>
               </infoLinks>
@@ -2139,6 +2185,9 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="1e77-1200-30bb-1960" name="Rokkit Launcha" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc88-07be-5a2a-2878" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="0073-877c-96d0-6314" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile"/>
               </infoLinks>
@@ -2147,6 +2196,9 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="f630-dd18-c569-af06" name="Big Shootas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8268-a174-f784-3195" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="d67a-0c2e-3338-8fa2" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
               </infoLinks>
@@ -2155,6 +2207,9 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="ec0c-6fa7-cb6c-29d8" name="Mega Blastas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12f8-bc30-752c-12c2" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="cca7-14e2-6cb3-1c17" name="Mega Blasta" hidden="false" targetId="a945-4569-4e36-f2b2" type="profile"/>
               </infoLinks>
@@ -2163,11 +2218,204 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="ff94-ce59-655d-5b85" name="Skorchas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a190-4cb0-4a8a-288b" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="af8e-5f03-9bc3-3bf3" name="Skorcha" hidden="false" targetId="a162-3683-bca7-8f2c" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6f80-de4f-ef94-2163" name="Twin-Linked Big Shootas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4338-2816-ea6e-5498" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="43a2-dc49-6ca0-e917" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
+                <infoLink id="1b25-afca-4219-7068" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="82df-d6c3-6746-2ced" name="Twin-Linked Mega Blastas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="745a-edcc-ecb9-7dd0" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="aa16-2eaa-7ba3-0b2b" name="Mega Blasta" hidden="false" targetId="a945-4569-4e36-f2b2" type="profile"/>
+                <infoLink id="69a1-ca43-1c02-b8c0" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0be8-1eae-4b2a-e41b" name="Twin-Linked Skorchas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ba3-160f-2da8-1694" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1010-3079-aea0-c7fd" name="Skorcha" hidden="false" targetId="a162-3683-bca7-8f2c" type="profile"/>
+                <infoLink id="b135-0429-fd17-83f6" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b776-c6d6-46f1-d288" name="Twin-Linked Rokkit Launcha" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c0b-b12c-2fac-c8e7" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="50a7-4f69-e9fb-3f23" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e915-2035-1672-5da0" name="Right Arm Weapons" hidden="false" collective="false" import="true">
+          <modifierGroups>
+            <modifierGroup>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30af-e900-2405-d236" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4185-6dc6-3218-f004" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="970e-e952-5198-2763" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cacd-a8e0-a742-c254" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="set" field="be46-1e16-adaa-1373" value="1.0"/>
+                <modifier type="set" field="373d-58a8-f78f-4393" value="1.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="373d-58a8-f78f-4393" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be46-1e16-adaa-1373" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="22d2-3410-bcf2-5476" name="Dreadnought Close Combat Weapons" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="c357-241b-dbeb-dff6" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30af-e900-2405-d236" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4185-6dc6-3218-f004" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="970e-e952-5198-2763" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cacd-a8e0-a742-c254" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1472-db34-7681-e2b1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c357-241b-dbeb-dff6" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="037f-67b1-4872-8d17" name="Dreadnought Close Combat Weapons" hidden="false" targetId="c7f7-e5ab-17a7-1cf9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b595-7a20-38f2-9c6b" name="Rokkit Launcha" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db84-0201-a5e4-8fe2" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="9ba8-9576-7497-af99" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="be93-0eab-4ca6-07d1" name="Big Shootas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da3b-28e5-10a3-38d4" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="26f2-637b-bb73-2ed4" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c031-6077-12f0-ad94" name="Mega Blastas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="022e-3e1b-8aa4-f982" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8ef2-8cbf-9a9c-70e0" name="Mega Blasta" hidden="false" targetId="a945-4569-4e36-f2b2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dec9-8a34-6d45-20f4" name="Skorchas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c29e-c8dc-0788-f820" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="e77c-afa3-4f1e-33b8" name="Skorcha" hidden="false" targetId="a162-3683-bca7-8f2c" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cacd-a8e0-a742-c254" name="Twin-Linked Big Shootas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c4c-fd5b-4b84-1ee5" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1daf-5e54-55d2-60b4" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
+                <infoLink id="c6e1-e9f7-27e6-fe8c" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="30af-e900-2405-d236" name="Twin-Linked Mega Blastas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ce4-cf29-9477-eb12" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6ae8-da38-e035-7d87" name="Mega Blasta" hidden="false" targetId="a945-4569-4e36-f2b2" type="profile"/>
+                <infoLink id="6055-7970-b46e-e726" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="970e-e952-5198-2763" name="Twin-Linked Skorchas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="731c-e1d5-56b4-0864" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="b3a0-1803-11a4-5d74" name="Skorcha" hidden="false" targetId="a162-3683-bca7-8f2c" type="profile"/>
+                <infoLink id="0046-ab9a-d6fb-72e0" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4185-6dc6-3218-f004" name="Twin-Linked Rokkit Launcha" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2b0-8c06-d696-c616" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="5a60-6193-499d-3f44" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2241,9 +2489,10 @@
         <categoryLink id="f5ec-eff4-3b41-71c2" name="Dedicated Transport" hidden="false" targetId="a090-a855-c7de-f5c3" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9dc3-924b-a0d1-2d94" name="Turret Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="9dc3-924b-a0d1-2d94" name="Turret Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="e808-8aeb-775f-df7c">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ef8-b9f0-6a79-b0cc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f13d-f7b4-6019-0dc8" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="bbfe-8a1b-db82-5a6c" name="Twin-linked Lascannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -2556,7 +2805,7 @@
         <infoLink id="baf1-4719-f235-3b8f" name="Looted Leman Russ Battle Tank" hidden="false" targetId="88f8-8410-8638-6623" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="697f-3684-6b4f-07bf" name="Hull Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="697f-3684-6b4f-07bf" name="Hull Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="e3d9-e0a2-acbb-ec51">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1649-172b-35d1-548d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c32-b031-bfba-5079" type="min"/>
@@ -2610,7 +2859,7 @@
         <infoLink id="5775-5a2d-b1c0-c16f" name="Looted Leman Russ Demolisher" hidden="false" targetId="5d1b-43a5-a92c-67dc" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="427c-5255-5ae6-fb40" name="Hull Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="427c-5255-5ae6-fb40" name="Hull Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="810a-aa04-9494-754d">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ddf-cabf-a679-e494" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3934-4d1e-cbb3-45b2" type="min"/>
@@ -2673,10 +2922,10 @@
       <infoLinks>
         <infoLink id="2b1f-97a9-d476-cdf0" name="Looted Basilisk" hidden="false" targetId="af1a-2e82-6c41-8e6e" type="profile"/>
         <infoLink id="bf82-c234-7b0d-b5e6" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink id="5992-8829-8fa1-ed5a" name="Earthshaker" hidden="false" targetId="0d02-965c-b2d8-eab5" type="profile"/>
+        <infoLink id="b126-76dc-698a-9d7d" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
       </infoLinks>
       <entryLinks>
-        <entryLink id="cad8-a567-3d79-7dbc" name="Earthshaker" hidden="false" collective="false" import="true" targetId="6b0e-a3aa-782c-de97" type="selectionEntry"/>
-        <entryLink id="0b5a-c807-48de-fcad" name="Heavy Bolter" hidden="false" collective="false" import="true" targetId="2097-7ea8-cb10-65bf" type="selectionEntry"/>
         <entryLink id="55aa-c00c-38b5-8337" name="Ork Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="7ab0-3a69-56f8-540b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -2710,6 +2959,7 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e15-c9fe-21d1-7f61" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74b6-85d0-6bdb-31b4" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="7c13-70e1-7749-ad5c" name="Looted Basilisk" hidden="false" collective="false" import="true" targetId="f7e4-fcb1-7a5a-3d14" type="selectionEntry"/>
@@ -2748,9 +2998,10 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="32d7-39a3-6237-4333" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="32d7-39a3-6237-4333" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="cf07-dfa1-d972-0b75">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b7f-a2e8-1272-33ed" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b7f-a2e8-1272-33ed" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee14-96d1-db90-2811" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="cf07-dfa1-d972-0b75" name="Twin-linked Big Shoota" hidden="false" collective="false" import="true" type="upgrade">
@@ -3050,11 +3301,18 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4805-3831-715e-f40a" name="Boss Zagstruk and Da Vulcha Boyz" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="663d-fc2b-56a1-3b5e" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="3ca8-f090-86fa-37d4" name="The Power of the WAAAGH!" hidden="false" targetId="7bb4-34ca-51f3-bb8c" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="c49c-7b71-0660-5a32" name="Boss Zagstruk" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="689e-4106-f9b9-bf55" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37ec-8dd1-3cd6-7eba" type="min"/>
+          </constraints>
           <infoLinks>
             <infoLink id="f0d3-9e96-d24b-7a65" name="Boss Zagstruk" hidden="false" targetId="ffea-0656-c558-15a6" type="profile"/>
             <infoLink id="c791-e4f2-1d50-7e40" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
@@ -3098,6 +3356,10 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="c5c5-e217-5ed6-065a" name="Da Vulcha Boyz" hidden="false" collective="false" import="true" type="unit">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3922-c653-a46c-c93f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9304-f57e-5a92-8c8c" type="min"/>
+          </constraints>
           <infoLinks>
             <infoLink id="ccc2-3cde-436c-2008" name="Jump Packs" hidden="false" targetId="2563-092a-a5bc-992f" type="rule"/>
           </infoLinks>
@@ -3126,10 +3388,9 @@
                   </constraints>
                   <infoLinks>
                     <infoLink id="2589-d6d4-2093-6b72" name="Nobz" hidden="false" targetId="cf8b-0d62-1066-d16e" type="profile"/>
+                    <infoLink id="4111-2760-5d13-fc0b" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+                    <infoLink id="948d-f49b-146c-39ae" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
                   </infoLinks>
-                  <entryLinks>
-                    <entryLink id="b680-931e-eb9d-dbaa" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-                  </entryLinks>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="26.0"/>
                   </costs>
@@ -3142,7 +3403,7 @@
               <modifiers>
                 <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f2ba-60ed-2378-5de2" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c66e-a4c0-a550-351c" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -3154,7 +3415,7 @@
               <modifiers>
                 <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f2ba-60ed-2378-5de2" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c66e-a4c0-a550-351c" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -3225,6 +3486,7 @@
         <selectionEntry id="9683-c025-4671-f49c" name="Bionic Bonce" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96af-9786-606c-17c1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1d5-99b0-4452-dfd4" type="min"/>
           </constraints>
           <rules>
             <rule id="dd6f-15f8-bdca-16fe" name="Bionik Bonce" hidden="false">
@@ -3269,6 +3531,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c174-d709-9cb9-c386" name="Boss Snikrot and Da Redskull Kommandos" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a8f-c40b-6120-7b0c" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="6ea4-d1a6-284a-9524" name="Ork Mob Rule!" hidden="false" targetId="1586-dbe5-3b2e-7590" type="rule"/>
         <infoLink id="abd4-3f7a-23ea-077f" name="The Power of the WAAAGH!" hidden="false" targetId="7bb4-34ca-51f3-bb8c" type="rule"/>
@@ -3301,6 +3566,10 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="05fc-48b0-591e-34a1" name="Da Redskull Kommandos" hidden="false" collective="false" import="true" type="unit">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="837c-d806-ce98-5711" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd01-55fa-1cfe-6a2c" type="min"/>
+          </constraints>
           <rules>
             <rule id="98ea-7359-c44a-d4e3" name="Unseen, Unheard" hidden="false">
               <description>The Redskull Kommandos are such experts at sneaking that any enemy unit which wants to fire at them must check to see if they can spot them first using the scenario special rules for Night Fighting. If Snikrot and his Kommandos are not within this distance in inches the enemy unit&apos;s firing is wasted - they blast away at half-seen shapes to no effect. If the battle is actually taking place at night, then the normal spotting distance is halved against Da Redskull Kommandos.</description>
@@ -3336,7 +3605,7 @@
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup id="70e2-e154-b463-a4f6" name="Kommandos" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="70e2-e154-b463-a4f6" name="Kommandos" hidden="false" collective="false" import="true" defaultSelectionEntryId="5bfc-fa02-a1b2-b114">
               <constraints>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4f8-8521-b1bf-68d4" type="min"/>
                 <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ad5-a60c-9d12-2725" type="max"/>
@@ -3373,10 +3642,9 @@
                         <modifier type="set" field="b309-5233-122f-82bb" value="-"/>
                       </modifiers>
                     </infoLink>
+                    <infoLink id="ca0f-a8b0-dcbe-f6e0" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+                    <infoLink id="5abf-74fc-940a-6741" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
                   </infoLinks>
-                  <entryLinks>
-                    <entryLink id="49fc-8dc7-09e9-9523" name="Slugga &amp; Choppa" hidden="false" collective="false" import="true" targetId="2f47-4b43-eae2-ced7" type="selectionEntry"/>
-                  </entryLinks>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="21.0"/>
                   </costs>
@@ -3389,7 +3657,7 @@
               <modifiers>
                 <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c66-3fe8-e9fa-9b83" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="70e2-e154-b463-a4f6" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -3401,7 +3669,7 @@
               <modifiers>
                 <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c66-3fe8-e9fa-9b83" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="70e2-e154-b463-a4f6" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -3413,7 +3681,7 @@
               <modifiers>
                 <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c66-3fe8-e9fa-9b83" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="70e2-e154-b463-a4f6" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -3511,42 +3779,6 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b2e2-8ed5-f6ab-66fd" name="Mega Armor Warboss" hidden="false" collective="false" import="true" type="unit">
-      <infoLinks>
-        <infoLink id="f843-aa36-e906-396e" name="Warboss" hidden="false" targetId="ff24-2716-f53f-8b78" type="profile"/>
-        <infoLink id="a9e8-5081-4495-52b2" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
-        <infoLink id="cb47-a905-5a5a-8241" name="The Power of the WAAAGH!" hidden="false" targetId="7bb4-34ca-51f3-bb8c" type="rule"/>
-        <infoLink id="8a82-f1d5-dabd-a155" name="Ork Mob Rule!" hidden="false" targetId="1586-dbe5-3b2e-7590" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="5b94-4ff6-ed65-2ec8" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false"/>
-        <categoryLink id="1eaa-ec11-ec5c-6377" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="657c-39e5-ec6a-3344" name="Ork Armoury" hidden="false" collective="false" import="true" targetId="3fb8-65fc-3904-2e54" type="selectionEntryGroup"/>
-        <entryLink id="3954-64e6-69f0-ea75" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="b470-6b32-f628-ea3d" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4104-b3d8-d273-af9e" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4104-b3d8-d273-af9e" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b470-6b32-f628-ea3d" type="max"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="c102-879f-23f2-80ae" name="Warboss&apos;s Bodyguard" hidden="false" collective="false" import="true" targetId="3ece-9eb9-c164-cf78" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4097,7 +4329,6 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b2e2-8ed5-f6ab-66fd" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="instanceOf"/>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
               </conditions>
@@ -4109,7 +4340,6 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b32d-5cad-2d37-2401" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b2e2-8ed5-f6ab-66fd" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4461,22 +4691,16 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b2e2-8ed5-f6ab-66fd" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b32d-5cad-2d37-2401" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="34a7-e4b7-874b-c74a" value="1.0">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b2e2-8ed5-f6ab-66fd" type="instanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34a7-e4b7-874b-c74a" type="min"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c6a-7f24-4946-085e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c6a-7f24-4946-085e" type="max"/>
           </constraints>
           <rules>
             <rule id="3226-941b-8308-0566" name="Mega Armor" hidden="false">
