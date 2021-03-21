@@ -38,6 +38,9 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="6701-99c5-27ae-4eaa" name="Warp Beast Pack" hidden="false" collective="false" import="true" targetId="9d23-3c32-3e72-68bf" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c2b-f4c8-4bbe-d7b1" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="5c4d-58f3-d625-d39e" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false"/>
         <categoryLink id="2aaa-23f2-2e2d-b307" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
@@ -108,6 +111,16 @@
         <categoryLink id="b2ee-9333-a2f7-5430" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="0665-7ae1-dd05-2467" name="Razorwing (IA)" hidden="false" collective="false" import="true" targetId="de47-545a-8669-8f10" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="23e2-185e-0818-6f42" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="fc29-36de-1527-594e" name="Raven (IA)" hidden="false" collective="false" import="true" targetId="9e22-6546-2603-ccc1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="621e-787b-6036-c20d" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7a61-a52d-11c2-0a92" name="Archon Lord" hidden="false" collective="false" import="true" type="unit">
@@ -152,6 +165,7 @@
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a61-a52d-11c2-0a92" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9af5-2fc3-2b24-d02c" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -234,7 +248,6 @@
         <infoLink id="5deb-522e-1077-6a33" name="Combat Drugs" hidden="false" targetId="e622-df34-cea1-5528" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="d1bc-5a2f-c21c-edf4" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
         <categoryLink id="befc-afb6-8549-d794" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
       </categoryLinks>
       <selectionEntries>
@@ -419,6 +432,10 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="5a88-6efe-158f-2a66" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="cb7b-8fa1-89a5-7ba4">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1f9-3703-2ab6-414f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78d4-9e48-1ef6-20d1" type="min"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="cb7b-8fa1-89a5-7ba4" name="Dark Lance" hidden="false" collective="false" import="true" type="upgrade">
               <rules>
@@ -583,9 +600,6 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
       </costs>
     </selectionEntry>
     <selectionEntry id="e8cb-12c6-d071-65aa" name="Grotesques" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93fb-ec1d-4cba-5294" type="max"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="3869-3adf-dbe7-c3d2" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
       </categoryLinks>
@@ -664,9 +678,6 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
       </costs>
     </selectionEntry>
     <selectionEntry id="9d23-3c32-3e72-68bf" name="Warp Beast Pack" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ddf-09f2-8044-f5ee" type="max"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="73b7-a2a6-2520-dde5" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
       </categoryLinks>
@@ -742,6 +753,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               </costs>
             </selectionEntry>
             <selectionEntry id="5989-4306-bb53-c0b6" name="Sybarite" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bedf-b4c7-f619-f59a" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="7a9e-3b6d-1d33-a798" name="Sybarite" hidden="false" targetId="d1a1-d128-0860-a03b" type="profile"/>
               </infoLinks>
@@ -841,7 +855,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <categoryLink id="eabc-5560-7b95-c814" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="8080-8f21-13b1-d8a7" name="Warriors" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="8080-8f21-13b1-d8a7" name="Warriors" hidden="false" collective="false" import="true" defaultSelectionEntryId="3b83-136e-1445-c7e0">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29b5-4dad-9c66-714e" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="579e-0d17-c55c-60c1" type="min"/>
@@ -857,6 +871,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               </costs>
             </selectionEntry>
             <selectionEntry id="9ea8-032e-a95e-356e" name="Sybarite" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f19a-aebf-2f12-7e18" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="749f-bf8f-9485-55c9" name="Sybarite" hidden="false" targetId="d1a1-d128-0860-a03b" type="profile"/>
               </infoLinks>
@@ -986,6 +1003,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               </costs>
             </selectionEntry>
             <selectionEntry id="5ebd-28f6-d6be-b958" name="Succubus" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d599-04fc-11d7-947e" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="7b85-6643-67ea-88b5" name="Reaver Succubus" hidden="false" targetId="761a-fce2-39f3-4e9f" type="profile"/>
                 <infoLink id="cf8f-04d3-f7bf-ba5b" name="Reaver Jetbike" hidden="false" targetId="b2f3-6c38-4d90-ecd9" type="rule"/>
@@ -1066,7 +1086,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
                 <entryLink id="1a37-1279-c9c7-99ec" name="Dark Eldar Armory" hidden="false" collective="false" import="true" targetId="cc28-fd8b-3aad-f42f" type="selectionEntryGroup"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="32.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="34.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1104,7 +1124,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <infoLink id="f794-24b3-0561-12b0" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="49d8-c6a9-fb73-15d3" name="Scourges" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="49d8-c6a9-fb73-15d3" name="Scourges" hidden="false" collective="false" import="true" defaultSelectionEntryId="09b1-7f07-c923-592d">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ba5-6371-1d2a-8228" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ef1-17d8-8f25-81a3" type="min"/>
@@ -1121,6 +1141,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               </costs>
             </selectionEntry>
             <selectionEntry id="f193-6faa-5298-ba62" name="Sybarite" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9695-0e03-2696-966a" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="8d69-b824-7000-47ea" name="Sybarite" hidden="false" targetId="d1a1-d128-0860-a03b" type="profile"/>
               </infoLinks>
@@ -1286,9 +1309,6 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
       </costs>
     </selectionEntry>
     <selectionEntry id="2755-50a2-cad5-37ea" name="Talos" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac3f-4a82-2c7b-044d" type="max"/>
-      </constraints>
       <rules>
         <rule id="3fb1-9cd3-e116-19c4" name="Skimmer" hidden="false">
           <description>The Talos can move over difficult terrain without penalty. However if it starts or finishes its move in difficult terrain it will suffer a wound with no save on a D6 roll of 1.</description>
@@ -1307,9 +1327,14 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     <selectionEntry id="e8e8-6964-113f-e463" name="Asdrubael Vect" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="6d07-74cb-3876-7799" value="0.0">
-          <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="any" type="lessThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
+                <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1354,7 +1379,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9af5-2fc3-2b24-d02c" type="equalTo"/>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="any" type="lessThan"/>
+                <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -1404,7 +1429,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="any" type="lessThan"/>
+                <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
                 <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -1448,9 +1473,15 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     <selectionEntry id="f65f-1eb2-82e4-a947" name="Urien Rakarth" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="0425-b888-7046-f4d5" value="0.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a61-a52d-11c2-0a92" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a61-a52d-11c2-0a92" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1478,8 +1509,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dac9-2144-2969-6831" name="Uber Grotesques" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="065f-b3a3-34db-c407" value="3.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dac9-2144-2969-6831" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1795-c4d9-4052-6a8c" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="065f-b3a3-34db-c407" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="8815-089d-0e7c-f9ae" name="Uber Grotesque" hidden="false" targetId="da72-b1ae-3c7e-2ff3" type="profile"/>
@@ -1532,11 +1571,50 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="112.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="9e22-6546-2603-ccc1" name="Raven (IA)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Imperial Armour 2 page 22</comment>
+      <infoLinks>
+        <infoLink id="e06a-9985-75ff-43ac" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="ac29-abbb-9d28-caba" name="Raven" hidden="false" targetId="5fff-2923-d074-518e" type="profile"/>
+        <infoLink id="98a0-fc60-940c-a422" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="25dc-6009-4d69-4744" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
+        <infoLink id="31ee-12e7-73b0-da2d" name="Long Barrelled Splinter Cannon" hidden="false" targetId="00a4-4505-389c-3723" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="223.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="de47-545a-8669-8f10" name="Razorwing (IA)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Imperial Armour 2 page 22</comment>
+      <infoLinks>
+        <infoLink id="9e1d-b909-095c-820c" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="dd3b-d4c8-21f9-3ef5" name="Razorwing" hidden="false" targetId="185e-342c-0724-2f24" type="profile"/>
+        <infoLink id="a249-abc9-bc3d-1452" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="1f2c-94fc-d925-0065" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
+        <infoLink id="7b26-a2f1-0d42-5528" name="Long Barrelled Splinter Cannon" hidden="false" targetId="00a4-4505-389c-3723" type="profile"/>
+        <infoLink id="05ef-0cd8-38fa-cade" name="Terrofex" hidden="false" targetId="21df-8acc-050f-0e90" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="258.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="cc28-fd8b-3aad-f42f" name="Dark Eldar Armory" hidden="false" collective="false" import="true">
       <selectionEntryGroups>
         <selectionEntryGroup id="2295-6d80-3f9c-d80d" name="Weapons" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="a26d-c8c1-2434-0ba9" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7142-01ab-1dc0-7214" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a70-2062-9988-e85a" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a26d-c8c1-2434-0ba9" type="max"/>
           </constraints>
@@ -1558,12 +1636,26 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d8a8-4b0a-af44-4c1f" name="Wargear" hidden="false" collective="false" import="true" targetId="8e92-2231-0e1e-d634" type="selectionEntryGroup"/>
+        <entryLink id="d8a8-4b0a-af44-4c1f" name="Wargear" hidden="false" collective="false" import="true" targetId="8e92-2231-0e1e-d634" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="100.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a38d-e363-896d-a592" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3361-400d-2c53-b3fc" name="Single-Handed Weapons" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="3906-4473-fbae-90fa" name="Agoniser" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="8e05-fdf7-3f20-89a0" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e05-fdf7-3f20-89a0" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="b315-7c6a-51e3-351e" name="Agoniser" hidden="false" targetId="1dce-9521-0810-0df1" type="profile"/>
           </infoLinks>
@@ -1572,6 +1664,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           </costs>
         </selectionEntry>
         <selectionEntry id="17da-5b57-7467-d70b" name="Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="20e5-7682-6437-5320" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20e5-7682-6437-5320" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="94e4-cbea-2b2d-218a" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
           </infoLinks>
@@ -1580,6 +1682,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           </costs>
         </selectionEntry>
         <selectionEntry id="3125-ba6c-d395-d90f" name="Destructor" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="e5aa-2a4f-eaa7-9641" value="2.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5aa-2a4f-eaa7-9641" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="06e6-fdf2-876d-ebd7" name="Destructor" hidden="false" targetId="471b-0158-fba8-ed84" type="profile"/>
           </infoLinks>
@@ -1588,6 +1700,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           </costs>
         </selectionEntry>
         <selectionEntry id="2b7b-509a-be4b-97e4" name="Poisoned Blades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="0c49-8b94-844f-70ea" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c49-8b94-844f-70ea" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="b0aa-7546-ec68-7b8b" name="Poisoned Blade" hidden="false" targetId="c04e-5394-eec7-116c" type="profile"/>
           </infoLinks>
@@ -1596,6 +1718,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           </costs>
         </selectionEntry>
         <selectionEntry id="a3fe-b733-77f3-4cab" name="Power Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="6d7b-9745-8a07-c814" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d7b-9745-8a07-c814" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="1da5-16f0-0a20-e1c2" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
           </infoLinks>
@@ -1604,6 +1736,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           </costs>
         </selectionEntry>
         <selectionEntry id="e602-b109-4e8a-9b18" name="Scissorhand" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="e83e-9d46-c97d-408d" value="2.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e83e-9d46-c97d-408d" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="f419-60f5-b435-e460" name="Scissorhands" hidden="false" targetId="6b4d-c602-8f66-3478" type="profile"/>
           </infoLinks>
@@ -1612,6 +1754,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           </costs>
         </selectionEntry>
         <selectionEntry id="9e18-1d57-6c38-00e9" name="Splinter Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="f3d1-c915-7f41-dd13" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3d1-c915-7f41-dd13" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="f2f2-721c-f45e-5767" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
           </infoLinks>
@@ -1620,6 +1772,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           </costs>
         </selectionEntry>
         <selectionEntry id="0345-72a2-6887-cfe0" name="Stinger" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="e172-9f8e-9f23-6a62" value="2.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e172-9f8e-9f23-6a62" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="f495-8470-cb15-c14d" name="Stinger" hidden="false" targetId="cbf4-a511-e9f6-e8e5" type="profile"/>
           </infoLinks>
@@ -1630,8 +1792,28 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="6dc3-6ce9-a524-4577" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="8486-6f3b-2db2-a1d5" value="0.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0f3-0f88-583d-94ae" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8486-6f3b-2db2-a1d5" type="max"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="1a70-2062-9988-e85a" name="Hellglaive" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="f951-a56d-4e36-e82e" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f951-a56d-4e36-e82e" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="2822-6c11-abaf-3998" name="Hellglaive" hidden="false" targetId="8307-de36-e7d3-16c0" type="profile"/>
           </infoLinks>
@@ -1646,7 +1828,15 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
                 <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c9c-756d-9c3c-030e" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="d7cc-9920-db0d-913c" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7cc-9920-db0d-913c" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="407b-34c0-fed0-6a3f" name="Punisher" hidden="false" targetId="f63e-81a8-5be7-636e" type="profile"/>
           </infoLinks>
@@ -1655,6 +1845,16 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           </costs>
         </selectionEntry>
         <selectionEntry id="cc63-109b-4294-72a7" name="Splinter Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="014e-fcdc-c861-fdf7" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e5c-1be1-d304-a112" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="014e-fcdc-c861-fdf7" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="7fb0-1463-a13f-afcc" name="Splinter Rifle" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
           </infoLinks>
@@ -1670,12 +1870,13 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
           <modifiers>
             <modifier type="set" field="f274-824a-8f8b-70d3" value="0.0">
               <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f65f-1eb2-82e4-a947" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f65f-1eb2-82e4-a947" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f274-824a-8f8b-70d3" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f274-824a-8f8b-70d3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de67-f3cd-83c7-fe51" type="max"/>
           </constraints>
           <rules>
             <rule id="6f74-36a7-0c6a-1a5e" name="Crucible of Malediction" hidden="false">
@@ -1730,6 +1931,18 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           </costs>
         </selectionEntry>
         <selectionEntry id="dddc-ad3b-6ade-79fe" name="Hell Mask" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="87c9-3034-6083-0551" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f2b5-a17b-0bc2-8068" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c06a-75a6-cc68-a8bb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87c9-3034-6083-0551" type="max"/>
           </constraints>
@@ -1746,7 +1959,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           <modifiers>
             <modifier type="set" field="a897-e740-53f0-a1e1" value="1.0">
               <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a70-2062-9988-e85a" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a70-2062-9988-e85a" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1790,7 +2003,8 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         </selectionEntry>
         <selectionEntry id="75d7-6719-ea3f-5260" name="Shadow Field" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c60a-d92b-d9d5-fe9d" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c60a-d92b-d9d5-fe9d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de9d-8023-834d-427f" type="max"/>
           </constraints>
           <rules>
             <rule id="1d48-9294-e342-02b5" name="Shadow Field" hidden="false">
@@ -1805,6 +2019,20 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           </costs>
         </selectionEntry>
         <selectionEntry id="04cd-25ce-dfd7-69b6" name="Soul Seeker Ammunition" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="5d5e-7756-db00-a6e0" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cc63-109b-4294-72a7" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a70-2062-9988-e85a" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0516-2aef-99f5-4c0c" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9e18-1d57-6c38-00e9" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d5e-7756-db00-a6e0" type="max"/>
           </constraints>
@@ -1865,8 +2093,8 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9682-daa3-4a00-5a7c" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0f3-0f88-583d-94ae" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9682-daa3-4a00-5a7c" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0f3-0f88-583d-94ae" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1886,7 +2114,8 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         </selectionEntry>
         <selectionEntry id="f7ee-0a8b-2441-172b" name="Animus Vitae" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33a2-40f0-998d-0113" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="33a2-40f0-998d-0113" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a5e-3af6-612e-f572" type="max"/>
           </constraints>
           <rules>
             <rule id="610f-124c-2e9a-6485" name="Animus Vitae" hidden="false">
@@ -1899,7 +2128,8 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         </selectionEntry>
         <selectionEntry id="61dc-8cd4-51de-5209" name="Archangel of Pain" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e341-81e5-d69b-05c8" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e341-81e5-d69b-05c8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce59-5798-f6e9-15a0" type="max"/>
           </constraints>
           <rules>
             <rule id="3e03-f2d3-b951-9043" name="Archangel of Pain" hidden="false">
@@ -1911,8 +2141,22 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           </costs>
         </selectionEntry>
         <selectionEntry id="298e-4bf7-8086-e07e" name="Goblit of Spite" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="0807-26a7-b58f-bcb8" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5ebd-28f6-d6be-b958" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="35b3-fdf9-f105-0821" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="309f-54ac-1d33-adf0" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1124-7cc1-a79f-bfc4" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1124-7cc1-a79f-bfc4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0807-26a7-b58f-bcb8" type="max"/>
           </constraints>
           <rules>
             <rule id="3157-0e6b-6546-5fb4" name="Goblit of Spite" hidden="false">
@@ -1924,8 +2168,21 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           </costs>
         </selectionEntry>
         <selectionEntry id="f2b5-a17b-0bc2-8068" name="Mask of the Damned" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="5623-9b63-a9a4-6409" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dddc-ad3b-6ade-79fe" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c06a-75a6-cc68-a8bb" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c2e-a8d6-7a73-c0b4" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c2e-a8d6-7a73-c0b4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5623-9b63-a9a4-6409" type="max"/>
           </constraints>
           <rules>
             <rule id="6b38-b329-a994-95d8" name="Mask of the Damned" hidden="false">
@@ -1938,7 +2195,8 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         </selectionEntry>
         <selectionEntry id="9816-38ea-c956-a821" name="Nightmare Doll" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cae-9b72-7884-0535" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3cae-9b72-7884-0535" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ff8-f43f-f545-d2a9" type="max"/>
           </constraints>
           <rules>
             <rule id="897f-25f9-7e5c-61f4" name="Nightmare Doll" hidden="false">
@@ -1950,8 +2208,21 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
           </costs>
         </selectionEntry>
         <selectionEntry id="c06a-75a6-cc68-a8bb" name="Vexantrope" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="37e4-f930-b991-b4ca" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dddc-ad3b-6ade-79fe" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f2b5-a17b-0bc2-8068" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0f1-7a55-b450-ecd6" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f0f1-7a55-b450-ecd6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37e4-f930-b991-b4ca" type="max"/>
           </constraints>
           <rules>
             <rule id="3baa-b135-76c4-122b" name="Vexantrope" hidden="false">
@@ -1964,7 +2235,8 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         </selectionEntry>
         <selectionEntry id="c9c4-6696-f1f9-24a6" name="Xenospasm" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e8b-ae86-3867-4eca" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e8b-ae86-3867-4eca" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8189-6eb4-903b-a984" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="62a6-7ab8-7e9c-314f" name="Xenospasm" hidden="false" targetId="9a29-5f62-d37c-c042" type="profile"/>
@@ -2134,7 +2406,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
             </selectionEntry>
             <selectionEntry id="68d4-2d67-cb68-2094" name="Drazhar" hidden="false" collective="false" import="true" type="model">
               <constraints>
-                <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f883-dc90-59a5-0421" type="max"/>
+                <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f883-dc90-59a5-0421" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de4b-982a-87ae-9eac" type="max"/>
               </constraints>
               <rules>
@@ -2433,7 +2705,7 @@ f) +1 Attack</description>
       <description>Treated in the same manner as a normal jetbike, apart from an added turbo-booster. This may be activated in any movement phase, and increases the jetbike&apos;s move to 24&quot;. However, the model may not shot or assault on the same turn the booster is used. When a Reaver uses its jetbike&apos;s turbo-booster then its saving throw becomes invulnerable for that turn and the opposing player&apos;s following turn. If one model in a unit uses its booster than so must all the others. Characters riding a Reaver jetbike may only be armed with single-hand weapons and may only use one at  a time.</description>
     </rule>
     <rule id="ba1d-89bb-15ba-84f6" name="Hellion Skyboard" hidden="false">
-      <description>Hellions are treated as Jump Packs. A model riding a skyboad benefits from +1 to its Armor Save, and a 5+ Invulnerable &apos;junk&apos; save against shooting attacks if they moved in the previous turn. A model riding a skuboard may use the Deep Strike rule if allowed by the scenario being played. A skyboard rider may not use a webway portal, and characters may not use the Hellions&apos; Hit and Run rule.</description>
+      <description>Hellions are treated as Jump Packs. A model riding a skyboad benefits from +1 to its Armor Save, and a 5+ Invulnerable &apos;jink&apos; save against shooting attacks if they moved in the previous turn. A model riding a skuboard may use the Deep Strike rule if allowed by the scenario being played. A skyboard rider may not use a webway portal, and characters may not use the Hellions&apos; Hit and Run rule.</description>
     </rule>
     <rule id="d834-3e7c-3fa1-95d9" name="Hellglaive" hidden="false">
       <description>Hellions are armed with a unique weapon called a hellglaive. It incorporates a splinter rifle and a set of vicious cutting blades that are capable of slicing a man in half. The hellglaive can be used as a splinter rifle or a close combat weapon, and may be used as both in the same turn. If the user charges into close combat then the hellglaive also adds +1 to their Strength in the first round of combat. The hellglaive requires two hands to use, so can&apos;t be combined with any other weapon. Characters taking a hellglaive must also take a Hellion Skyboard.</description>
@@ -2904,6 +3176,22 @@ f) +1 Attack</description>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="5fff-2923-d074-518e" name="Raven" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="185e-342c-0724-2f24" name="Razorwing" hidden="true" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
