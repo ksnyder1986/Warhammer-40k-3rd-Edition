@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="1369-4fc1-fe31-48dd" name="Eldar (2000)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="e9f4-cd71-21e7-19f2" name="Jet Bike Farseer" hidden="false"/>
+  </categoryEntries>
   <entryLinks>
     <entryLink id="7e16-88e2-6207-9eb6" name="Asurmen" hidden="false" collective="false" import="true" targetId="7f19-b30b-de19-562f" type="selectionEntry"/>
     <entryLink id="e79f-57c8-3c7d-496d" name="Avatar of the Bloody-Handed God" hidden="false" collective="false" import="true" targetId="a4ef-a5f7-1009-a021" type="selectionEntry"/>
@@ -16,11 +19,14 @@
     <entryLink id="66dc-df07-ae20-fa5d" name="Guardian Jetbike Squadron" hidden="false" collective="false" import="true" targetId="9a65-700b-d909-e56a" type="selectionEntry"/>
     <entryLink id="0e9e-0893-e371-f994" name="Guardian Storm Squad" hidden="false" collective="false" import="true" targetId="165b-56e9-5ba9-0a7e" type="selectionEntry"/>
     <entryLink id="549f-fbe3-2f42-8278" name="Howling Banshees" hidden="false" collective="false" import="true" targetId="31ab-d862-386d-b35c" type="selectionEntry"/>
-    <entryLink id="45b1-efc6-4f49-9364" name="Iyanna Arienal, Spiritseer of Iyandan" hidden="false" collective="false" import="true" targetId="89c0-c22f-a947-63e0" type="selectionEntry"/>
     <entryLink id="063f-e44e-b85f-1ae7" name="Jain Zar" hidden="false" collective="false" import="true" targetId="389c-d69a-9e4c-4613" type="selectionEntry"/>
     <entryLink id="723b-3e2a-fc3b-2de6" name="Karandras" hidden="false" collective="false" import="true" targetId="ffca-c633-331c-db01" type="selectionEntry"/>
     <entryLink id="0904-35cc-db2a-505a" name="Maugan Ra" hidden="false" collective="false" import="true" targetId="120a-242e-a90d-4bfe" type="selectionEntry"/>
-    <entryLink id="0510-3df2-e3ba-1f2a" name="Nuadha &apos;Fireheart&apos;, Wild Rider of Saim Hann" hidden="false" collective="false" import="true" targetId="a194-de6c-6011-05e1" type="selectionEntry"/>
+    <entryLink id="0510-3df2-e3ba-1f2a" name="Nuadha &apos;Fireheart&apos;, Wild Rider of Saim Hann" hidden="false" collective="false" import="true" targetId="a194-de6c-6011-05e1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="5d6f-0972-0529-90ec" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="ac03-cdfe-9c12-4163" name="Rangers" hidden="false" collective="false" import="true" targetId="9217-1abc-0930-901a" type="selectionEntry"/>
     <entryLink id="a12f-6369-780b-e3ba" name="Shining Spears" hidden="false" collective="false" import="true" targetId="ac77-965d-6973-5c3a" type="selectionEntry"/>
     <entryLink id="a0eb-50f1-54e5-2ab5" name="Striking Scorpions" hidden="false" collective="false" import="true" targetId="73e4-d8c2-e526-c837" type="selectionEntry"/>
@@ -34,6 +40,9 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a4ef-a5f7-1009-a021" name="Avatar of the Bloody-Handed God" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9250-0161-fd1e-6909" type="max"/>
+      </constraints>
       <rules>
         <rule id="581d-27f6-4d65-dd02" name="The Wailing Doom" hidden="false"/>
         <rule id="d069-fa96-bd87-fbb1" name="Inspiring" hidden="false"/>
@@ -68,6 +77,13 @@
         <entryLink id="b8d9-faaf-f08e-627d" name="Farseer Psychic Powers" hidden="false" collective="false" import="true" targetId="6f8b-71e8-4378-aba2" type="selectionEntryGroup"/>
         <entryLink id="b79d-6b65-676c-76d4" name="Warlock Bodyguard" hidden="false" collective="false" import="true" targetId="8461-d2e6-c311-fe84" type="selectionEntryGroup"/>
         <entryLink id="ad02-cf73-6c98-783e" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="8041-82ea-8c83-5111" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23d1-28cb-2144-81fc" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8041-82ea-8c83-5111" type="max"/>
           </constraints>
@@ -82,8 +98,6 @@
         <infoLink id="172d-535f-b184-ed01" name="Wave Serpent" hidden="false" targetId="a5d5-34df-b92d-a247" type="profile"/>
         <infoLink id="42f7-66af-9ea9-1d8c" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
         <infoLink id="10bf-c085-9153-70fb" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
-        <infoLink id="3cfc-fe78-490b-9a16" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
-        <infoLink id="2bbf-7160-3bb0-e7b1" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
         <infoLink id="a19e-ac94-c1ac-d2d7" name="Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -98,10 +112,18 @@
           <selectionEntries>
             <selectionEntry id="7c5d-a5bc-e50e-d90f" name="Twin-Linked Shuriken Catapults" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="60d1-9e9c-a66d-d839" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+                <infoLink id="60d1-9e9c-a66d-d839" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="0be3-a363-2b83-700f" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
             </selectionEntry>
-            <selectionEntry id="6408-2328-b900-7291" name="Twin-Linked Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6408-2328-b900-7291" name="Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="3a53-a605-13cc-8dca" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile"/>
               </infoLinks>
@@ -111,7 +133,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="46dc-b34a-1680-edae" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="46dc-b34a-1680-edae" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7fca-e3e3-26a1-e550">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f5b-1227-b9f0-3208" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5dab-fc61-16ac-c45f" type="min"/>
@@ -119,7 +141,12 @@
           <selectionEntries>
             <selectionEntry id="87d1-d8d6-3c26-5740" name="Twin-Linked Bright Lance" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="84e5-1a70-b6d5-3b5c" name="Bright Lance" hidden="false" targetId="6f4e-bc15-c01c-501a" type="profile"/>
+                <infoLink id="84e5-1a70-b6d5-3b5c" name="Bright Lance" hidden="false" targetId="6f4e-bc15-c01c-501a" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Bright Lance"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="46d9-6a22-ebba-fd49" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
@@ -127,8 +154,17 @@
             </selectionEntry>
             <selectionEntry id="96f3-1f79-e395-2753" name="Twin-Linked Missile Launcher" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="9b9d-64e0-2e28-cbc2" name="Missle Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
-                <infoLink id="d92b-81c7-44b2-ea17" name="Missle Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
+                <infoLink id="9b9d-64e0-2e28-cbc2" name="Missle Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Missle Launcher (frag)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="d92b-81c7-44b2-ea17" name="Missle Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Missle Launcher (krak)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="1796-17a4-b43a-0629" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
@@ -136,7 +172,12 @@
             </selectionEntry>
             <selectionEntry id="e3c1-0175-488b-ed73" name="Twin-Linked Scatter Laser" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="8299-1431-7c23-d2c4" name="Scatter Laser" hidden="false" targetId="0ea6-3b92-6129-8731" type="profile"/>
+                <infoLink id="8299-1431-7c23-d2c4" name="Scatter Laser" hidden="false" targetId="0ea6-3b92-6129-8731" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Scatter Laser"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="34a4-0162-259f-f26b" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
@@ -144,7 +185,11 @@
             </selectionEntry>
             <selectionEntry id="3a39-dd8a-db96-d576" name="Twin-Linked Starcannon" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="ae63-ed59-02d5-2fa7" name="Starcannon" hidden="false" targetId="841e-28f9-4e25-68ca" type="profile"/>
+                <infoLink id="ae63-ed59-02d5-2fa7" name="Starcannon" hidden="false" targetId="841e-28f9-4e25-68ca" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Starcannon"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
@@ -152,11 +197,13 @@
             </selectionEntry>
             <selectionEntry id="7fca-e3e3-26a1-e550" name="Twin-Linked Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="a610-f5e2-2db7-283b" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile"/>
+                <infoLink id="a610-f5e2-2db7-283b" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Shuriken Cannon"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="ab03-ba9b-4d0c-8d8c" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
-              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -201,6 +248,14 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f715-1411-3e26-8708" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="0284-1a66-5849-8141" name="Death Spinner" hidden="false" targetId="9f22-d580-4178-b2a4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="d3f6-19e8-ac9e-ae13" value="Assault 2"/>
+                    <modifier type="set" field="name" value="Exarch Death Spinner"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
               </costs>
@@ -499,18 +554,24 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4ee2-c6e6-a03f-7e1a" name="Firepike" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c318-8a42-4e80-a556" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="8813-305a-4aa8-2060" name="Firepike" hidden="false" targetId="8815-ec91-4a67-c21b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18.0"/>
-              </costs>
-            </selectionEntry>
           </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="952a-d0fc-96f9-368d" name="Replace Fusion Gun" hidden="false" collective="false" import="true">
+              <selectionEntries>
+                <selectionEntry id="efd3-4cbf-fb65-1ef5" name="Firepike" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a8a-a857-6a56-5081" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="4fd7-d674-06ed-d61c" name="Firepike" hidden="false" targetId="8815-ec91-4a67-c21b" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11.0"/>
           </costs>
@@ -578,6 +639,20 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca1b-a3df-9d5b-2015" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="cf16-775c-054d-e03c" name="Iyanna Arienal, Spiritseer of Iyandan" hidden="false" collective="false" import="true" targetId="89c0-c22f-a947-63e0" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="f7d6-dfe5-2e67-4132" value="0.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e80d-5a31-a1ec-f90d" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a194-de6c-6011-05e1" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c53-5189-c1a3-9dc6" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7d6-dfe5-2e67-4132" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -720,7 +795,6 @@
         <infoLink id="1489-c800-7eb6-b8c4" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="3add-d161-63a5-bc3b" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="false"/>
         <categoryLink id="9416-4fba-3932-2b23" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
@@ -949,7 +1023,11 @@
         <infoLink id="cec8-7f98-4ce4-cdf3" name="Jetbike" hidden="false" targetId="a54d-acab-6119-cd5e" type="profile"/>
         <infoLink id="030c-6337-5f0b-e200" name="Jetbikes" hidden="false" targetId="4556-3c66-6ed4-87a0" type="rule"/>
         <infoLink id="e351-b164-eaba-420d" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-        <infoLink id="6190-0472-42df-eac1" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+        <infoLink id="6190-0472-42df-eac1" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
+          </modifiers>
+        </infoLink>
         <infoLink id="e5ca-9971-2877-61fa" name="Shuriken Pistol" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
       </infoLinks>
       <categoryLinks>
@@ -967,20 +1045,30 @@
         </selectionEntry>
         <selectionEntry id="88ed-1826-abe9-6065" name="Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
+            <modifier type="set" field="3102-a623-c393-560d" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ef1-ed2b-a6ba-09f2" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ef1-ed2b-a6ba-09f2" type="atMost"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
             <modifier type="set" field="3102-a623-c393-560d" value="3.0">
               <conditions>
                 <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ef1-ed2b-a6ba-09f2" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="set" field="3102-a623-c393-560d" value="2.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ef1-ed2b-a6ba-09f2" type="atLeast"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="3102-a623-c393-560d" value="1.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ef1-ed2b-a6ba-09f2" type="atLeast"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ef1-ed2b-a6ba-09f2" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ef1-ed2b-a6ba-09f2" type="atMost"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -994,13 +1082,24 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="28ec-aaf5-cd5b-6294" name="Nuadha &apos;Fireheart&apos;, Wild Rider of Saim Hann" hidden="false" collective="false" import="true" targetId="a194-de6c-6011-05e1" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd18-e0ca-d2ea-b150" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ac77-965d-6973-5c3a" name="Shining Spears" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="70f2-c85f-eab2-c75e" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+        <infoLink id="70f2-c85f-eab2-c75e" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
+          </modifiers>
+        </infoLink>
         <infoLink id="474b-437f-bbba-2476" name="Jetbike" hidden="false" targetId="a54d-acab-6119-cd5e" type="profile"/>
         <infoLink id="8a47-6ecd-6d08-af6a" name="Jetbikes" hidden="false" targetId="4556-3c66-6ed4-87a0" type="rule"/>
         <infoLink id="896e-6e12-c2af-6131" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
@@ -1021,14 +1120,14 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="ce4b-5a63-182f-41f2" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="363d-1175-0064-895c" type="max"/>
-          </constraints>
           <infoLinks>
             <infoLink id="1aa5-9c03-c2a6-e11f" name="Shining Spear Exarch" hidden="false" targetId="5e3d-1a59-4e17-bb2a" type="profile"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="f05c-a0e1-9be3-1077" name="Skillful Rider" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0ed-fa2b-c7a6-dbcc" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="dc6e-bc05-4c9d-0624" name="Skillful Rider" hidden="false" targetId="62c2-695f-6a13-1167" type="rule"/>
               </infoLinks>
@@ -1037,6 +1136,9 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="242b-faef-37a3-461b" name="Evade" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f18f-6633-900c-183e" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="5625-67c6-da65-9be7" name="Evade" hidden="false" targetId="be4c-fcc1-62c1-694b" type="rule"/>
               </infoLinks>
@@ -1093,9 +1195,34 @@
             <infoLink id="88fb-5290-14bb-1ccb" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
             <infoLink id="71b8-f652-edb9-4522" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
             <infoLink id="0e3c-f358-704e-cd15" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
-            <infoLink id="e12b-3150-dfcb-dd35" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
-            <infoLink id="0013-a884-4593-007b" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile"/>
-            <infoLink id="1a6c-ad93-fd30-b53f" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+            <infoLink id="0013-a884-4593-007b" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="eff5-fe68-ef74-45db" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="4e7d-a702-b985-8180" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="1592-9b80-09c6-98a3" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="eff5-fe68-ef74-45db" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="6d8e-38b0-a1d2-d847" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="6d30-5c65-30c0-7157" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="eff5-fe68-ef74-45db" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="6d8e-38b0-a1d2-d847" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup id="4e7d-a702-b985-8180" name="Replace Shuriken Cannon" hidden="false" collective="false" import="true">
@@ -1134,6 +1261,21 @@
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="561a-8245-0314-9b8e" name="Replace Twin-linked Shuriken Catapult" hidden="false" collective="false" import="true">
+              <selectionEntries>
+                <selectionEntry id="6d8e-38b0-a1d2-d847" name="Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b936-f5ef-21fc-2c3b" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="17a3-c2b4-f788-6a25" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -1316,7 +1458,11 @@
             <selectionEntry id="9325-7c2c-a5fd-0fc3" name="Twin-Linked Shuriken Catapults" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="a7aa-466f-28af-e224" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-                <infoLink id="3e95-885f-448b-bbe1" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+                <infoLink id="3e95-885f-448b-bbe1" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Shuriken Catapult"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -1351,7 +1497,7 @@
         <categoryLink id="72d1-ecea-dff2-edcb" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="14fe-18e2-35f7-d49e" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="14fe-18e2-35f7-d49e" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="83e1-074f-fe1b-fada">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be09-2eac-9c88-d460" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4f9-7047-6504-9b57" type="min"/>
@@ -1360,7 +1506,11 @@
             <selectionEntry id="83e1-074f-fe1b-fada" name="Twin-Linked Shuriken Catapults" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="650f-7064-000e-0b63" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-                <infoLink id="f883-4745-b238-bb61" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+                <infoLink id="f883-4745-b238-bb61" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Shuriken Catapult"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -1571,6 +1721,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="bd5c-e29b-e6c4-9757" name="Support Weapon Battery" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -1617,6 +1770,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="5fe4-0c62-cde4-77c4" name="Dark Reapers" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -1707,13 +1863,22 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e80d-5a31-a1ec-f90d" name="Eldrad Ulthran, Farseer of Ulthwe" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="a4ce-8a2f-473c-3dca" value="0.0">
-          <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="any" type="lessThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a194-de6c-6011-05e1" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf16-775c-054d-e03c" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1750,7 +1915,7 @@
     </selectionEntry>
     <selectionEntry id="89c0-c22f-a947-63e0" name="Iyanna Arienal, Spiritseer of Iyandan" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ee-53d0-979b-88be" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64ee-53d0-979b-88be" type="max"/>
       </constraints>
       <rules>
         <rule id="d750-cb29-05e9-c934" name="Spiritseer" page="" hidden="false"/>
@@ -1767,8 +1932,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a194-de6c-6011-05e1" name="Nuadha &apos;Fireheart&apos;, Wild Rider of Saim Hann" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="dc32-67e8-b9f5-9290" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e80d-5a31-a1ec-f90d" type="greaterThan"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf16-775c-054d-e03c" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc32-67e8-b9f5-9290" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc32-67e8-b9f5-9290" type="max"/>
       </constraints>
       <rules>
         <rule id="b99c-ac2a-8169-2fb9" name="Reckless" hidden="false"/>
@@ -1782,9 +1955,6 @@
         <infoLink id="973c-ee03-e9c6-68cf" name="Alean - The Steed of Khaine" hidden="false" targetId="8ab9-b5a4-c3e8-20d3" type="rule"/>
         <infoLink id="88af-feec-640e-1e76" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile"/>
       </infoLinks>
-      <categoryLinks>
-        <categoryLink id="9f6d-8652-8c61-4ca2" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
-      </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
       </costs>
@@ -2045,28 +2215,34 @@
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="9df7-06ad-936b-6b1c" name="Wargear" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="9d47-b26e-3591-8711" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a421-09aa-6c08-ebe2" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a5-16a6-7525-aa8e" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d47-b26e-3591-8711" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="23d1-28cb-2144-81fc" name="Eldar Jetbike" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="add" field="category" value="e9f4-cd71-21e7-19f2"/>
+                <modifier type="set" field="1432-55e2-6ff8-fb55" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a421-09aa-6c08-ebe2" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a5-16a6-7525-aa8e" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1432-55e2-6ff8-fb55" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="a501-7e66-2c4e-277e" name="Jetbikes" hidden="false" targetId="4556-3c66-6ed4-87a0" type="rule"/>
+                <infoLink id="7616-095f-6db8-2928" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
@@ -2126,6 +2302,16 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="98a5-16a6-7525-aa8e" name="Warlock" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="c641-7a39-1122-6435" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23d1-28cb-2144-81fc" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c641-7a39-1122-6435" type="max"/>
+          </constraints>
           <entryLinks>
             <entryLink id="8f72-9849-8c6f-90de" name="Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
             <entryLink id="304c-824b-027d-3b05" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup"/>
@@ -2135,12 +2321,26 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="a421-09aa-6c08-ebe2" name="Jetbike Warlock" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="83d9-1882-1c33-592b" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23d1-28cb-2144-81fc" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="83d9-1882-1c33-592b" type="max"/>
+          </constraints>
           <infoLinks>
-            <infoLink id="b931-bd8e-8f9a-ec09" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile"/>
+            <infoLink id="b931-bd8e-8f9a-ec09" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
+              </modifiers>
+            </infoLink>
             <infoLink id="620a-c883-c860-f01a" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
           </infoLinks>
           <entryLinks>
-            <entryLink id="4794-cc47-86a9-6552" name="Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
+            <entryLink id="4794-cc47-86a9-6552" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
             <entryLink id="f8e7-4ec9-e5da-2689" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
