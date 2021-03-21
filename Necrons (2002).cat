@@ -300,9 +300,9 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="410f-93e6-a768-471f" name="Destroyers" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="410f-93e6-a768-471f" name="Destroyers" publicationId="263c-b15e-84a3-a711" page="19" hidden="false" collective="false" import="true" type="unit">
       <rules>
-        <rule id="934a-76fb-8bac-7103" name="Destroyers" hidden="false">
+        <rule id="934a-76fb-8bac-7103" name="Destroyers" publicationId="263c-b15e-84a3-a711" page="19" hidden="false">
           <description>Destroyers may move and fire thieir gauss cannons.</description>
         </rule>
       </rules>
@@ -322,7 +322,7 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f578-09b0-84de-b195" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="5683-fd81-72de-da53" name="Destroyer" hidden="false" targetId="5bc1-6d9c-2fa0-c5cd" type="profile"/>
+            <infoLink id="5683-fd81-72de-da53" name="Destroyer" publicationId="263c-b15e-84a3-a711" page="19" hidden="false" targetId="5bc1-6d9c-2fa0-c5cd" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
@@ -411,7 +411,10 @@
               <description>Tomb Spyders move by gravitic propulsion but far more ponderously than airborne Necrons like Destroyers. They move and assault in the same manner as models on foot, even though they hover low above the ground.</description>
             </rule>
             <rule id="e3fb-750e-878d-14c4" name="Artificier" hidden="false">
-              <description>Each Necron turn, a Tomb Spyder that is not in close combat can expend energy to create a Scarab Swarm, The swarm is placed in contact with the Spuder at the start of the Assault phase. Roll D6 for each swarm produced. On a 1, the Spyder takes a wound. Each swarm produced will form a unit with the Tomb Spyder that created it and must retain coherency with it for the remainder of the game.</description>
+              <description>Each Necron turn, at the start of the Assault phase, a Tomb Spyder that is not in close combat can expend energy to create a Scarab Swarm, The swarm is placed in contact with the Spuder at the start of the Assault phase. Roll D6 for each swarm produced. On a 1, the Spyder takes a wound. Each swarm produced will form a unit with the Tomb Spyder that created it and must retain coherency with it for the remainder of the game. Swarms produced this way are not worth any victory points and are removed if the Tomb Sypder is destroyed.</description>
+            </rule>
+            <rule id="a83f-3790-e563-b412" name="Necron Repair" hidden="false">
+              <description>A Necron model may still self-repair if they would not normally be able due to distance to a similar model if they are within 12&quot; of a Tomb Spyder and a unit they would be able to join is anywhere on the table. If the Necron repairs it will immediately join that model&apos;s unit.</description>
             </rule>
           </rules>
           <infoLinks>
@@ -757,13 +760,20 @@ The Solar Pulse is used at the beginning of the Necron turn. If the Night Fighti
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="e957-8c69-1203-279c" name="We&apos;ll Be Back!" hidden="false"/>
-    <rule id="d2b0-ba08-4fb1-d9f3" name="Phase Out" hidden="false"/>
+    <rule id="e957-8c69-1203-279c" name="We&apos;ll Be Back!" hidden="false">
+      <comment>Updated rule in Chapture Approved 2004</comment>
+      <description>Any model with the Necron special rule that is reduced to 0 wounds, or would otherwise be removed as a casualty, is instead laid on its side to show that it&apos;s damaged. At the start of every Necron turn, damaged Necrons with 6&quot; of a model of the same type may self-repair. On a roll of 1-3, remove the model as normal. On a 4-6, the Necron is repaired and stands back up with 1 Wound remaining and joins the closest unit of the same type. 
+A model cannot self-repair if it was destroyed by a close combat weapon that allows no Armour saves or any weapon whose Strength is twice the Toughness of the Necron. Models destroyed due to a failed &apos;Death or Glory&apos; attack may not be repaired by any means.
+Necron Lords do have need to have another model with 6&quot; in order to self-repair.</description>
+    </rule>
+    <rule id="d2b0-ba08-4fb1-d9f3" name="Phase Out" hidden="false">
+      <description>If a Necron army is reduced to 25% or less of its original number of models with the Necron special ability. it will disappear in an eerie fasion, leaving behind nothing of its presence. This gives an automatic victory to the enemy, regardless of the victory conditions of the scenario being played. Do not include C&apos;tan, Pariahs, Scarab Swarms, Monoliths and Tomb Spiders towards the number of destroyed models or the total original size of the army.</description>
+    </rule>
     <rule id="671a-44a9-6e39-0b7b" name="Warscythe" hidden="false">
       <description>There are no saving throws of any sort (including invulnerable saves) allowed against Warscythes, and when attacking vehicles 2D6 + Strength is rolled for armor penetration.</description>
     </rule>
     <rule id="3dd1-2c47-6416-fd3e" name="Terrifying Visage" hidden="false">
-      <description>Units in close combat with this unit must take a Leadership test at the start of each round of combat. If they fail then for that round they may only hit this unit on a roll of 6 regardless of WS.</description>
+      <description>Units in close combat with this unit must take a Leadership test at the start of each round of combat. If they fail then for that round they may only hit this unit on a roll of 6 regardless of WS. Models that either need not take model tests or which are assumed to automatically pass them are unaffected by this rule.</description>
     </rule>
     <rule id="dd4a-0561-881b-06c7" name="Immune to Natural Law" hidden="false">
       <description>C&apos;tan are able to warp reality around them to varying degrees. C&apos;tan ignore terrain when moving, will tend to float above impassable terrain and cannot claim to be &quot;inside&quot; objects to avoid being shot at. When attacking models in or behind cover, C&apos;tan count as having frag grenades so will strike simultaneously.</description>
@@ -783,6 +793,9 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
     </rule>
     <rule id="c7a0-c570-c859-6963" name="Disruption Field" hidden="false">
       <description>Disruption Fields are used in assaults against vehicles. Any hit inflicted on a target by a unit equipped with disruption fields will score a glancing hit on a D6 roll of 6 regardless of the vehicles Armor value in exactly the same manner as gauss weapons.</description>
+    </rule>
+    <rule id="ec1e-b09d-90d9-bba3" name="Gauss Weapons" hidden="false">
+      <description>Against troops, any roll to would of a 6 automatically causes a would regardless of Toughness. Agaisnt vehicles, any roll of 6 will cause a glancing hit if it does not already cause a penetrating hit.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
