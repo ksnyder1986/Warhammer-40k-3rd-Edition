@@ -3,6 +3,7 @@
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <publications>
     <publication id="263c-b15e-84a3-a711" name="Codex Necrons 3rd Edition" shortName="Codex Necrons 2002" publisher="Codex Necrons" publicationDate="2002"/>
+    <publication id="aca0-89fc-f496-a111" name="Chapter Approved 2004"/>
   </publications>
   <costTypes>
     <costType id="4ed5-2f92-9abc-2870" name="pts" defaultCostLimit="-1.0" hidden="false"/>
@@ -1803,7 +1804,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1 Ord Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"></characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
     <profile id="a4f0-b81e-bb02-06fe" name="Spore Mine (Poison)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
