@@ -1114,11 +1114,11 @@
     </profile>
     <profile id="46d5-85f2-d932-f0a2" name="Close Combat Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">+1 A if model is equiped with a second CCW or Pistol</characteristic>
       </characteristics>
     </profile>
     <profile id="a162-3683-bca7-8f2c" name="Skorcha" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1582,9 +1582,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="a1a0-7026-df47-1b84" name="Plasma Grenades" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+    <profile id="a1a0-7026-df47-1b84" name="Plasma Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Capacity" typeId="4b03-2db8-5ba0-e5fd"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">These grenades negate the effect of cover in close combat, so that models strike in Initiative order.</characteristic>
       </characteristics>
     </profile>
     <profile id="21df-8acc-050f-0e90" name="Terrofex" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1598,11 +1598,11 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     </profile>
     <profile id="5774-7187-2616-dd8a" name="Power Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores all Armor Saves</characteristic>
       </characteristics>
     </profile>
     <profile id="9f22-d580-4178-b2a4" name="Death Spinner" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
