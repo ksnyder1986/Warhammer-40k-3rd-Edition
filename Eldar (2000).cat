@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="1369-4fc1-fe31-48dd" name="Eldar (2000)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <categoryEntries>
-    <categoryEntry id="e9f4-cd71-21e7-19f2" name="Jet Bike Farseer" hidden="false"/>
-  </categoryEntries>
   <entryLinks>
     <entryLink id="7e16-88e2-6207-9eb6" name="Asurmen" hidden="false" collective="false" import="true" targetId="7f19-b30b-de19-562f" type="selectionEntry"/>
     <entryLink id="e79f-57c8-3c7d-496d" name="Avatar of the Bloody-Handed God" hidden="false" collective="false" import="true" targetId="a4ef-a5f7-1009-a021" type="selectionEntry"/>
@@ -37,6 +34,11 @@
     <entryLink id="9ecf-3713-1df5-ed7e" name="Warp Spiders" hidden="false" collective="false" import="true" targetId="b4c8-4720-f8da-ea8f" type="selectionEntry"/>
     <entryLink id="cb49-873e-c96b-92a0" name="Wraithguard" hidden="false" collective="false" import="true" targetId="28b2-329c-ceb4-2957" type="selectionEntry"/>
     <entryLink id="f43c-5012-a983-6496" name="Wraithlord" hidden="false" collective="false" import="true" targetId="8f01-0d76-2aa6-7fea" type="selectionEntry"/>
+    <entryLink id="e72a-4d71-dbc1-8f46" name="Night Spinner (IA)" hidden="false" collective="false" import="true" targetId="a3c7-1513-ecb5-1cb2" type="selectionEntry"/>
+    <entryLink id="67e5-79dc-b9fc-83e7" name="Cobra (IA)" hidden="false" collective="false" import="true" targetId="8b22-5a58-01b5-dab3" type="selectionEntry"/>
+    <entryLink id="e679-533d-7333-3f00" name="Nightwing (IA)" hidden="false" collective="false" import="true" targetId="4071-07cc-a2b7-d555" type="selectionEntry"/>
+    <entryLink id="05c5-8c67-c102-8bb7" name="Scorpion (IA)" hidden="false" collective="false" import="true" targetId="d431-bb95-c1e1-fe66" type="selectionEntry"/>
+    <entryLink id="452c-049f-d267-fe25" name="Vampire (IA)" hidden="false" collective="false" import="true" targetId="15be-6f70-5785-eec5" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a4ef-a5f7-1009-a021" name="Avatar of the Bloody-Handed God" hidden="false" collective="false" import="true" type="unit">
@@ -44,9 +46,12 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9250-0161-fd1e-6909" type="max"/>
       </constraints>
       <rules>
-        <rule id="581d-27f6-4d65-dd02" name="The Wailing Doom" hidden="false"/>
-        <rule id="d069-fa96-bd87-fbb1" name="Inspiring" hidden="false"/>
-        <rule id="4557-3d8c-7f0f-7f4e" name="Daemon" hidden="false"/>
+        <rule id="d069-fa96-bd87-fbb1" name="Inspiring" hidden="false">
+          <description>Any Eldar unit with a model within 12&quot; of the Avatar become fearless in close combat. Also, if the Avatar is in close combat, all Eldar units with a model within 12&quot; add +1 to their score when determing who won a round of close combat.</description>
+        </rule>
+        <rule id="4557-3d8c-7f0f-7f4e" name="Daemon" hidden="false">
+          <description>An Avatar is affected by weapons or abilites that use special rules against Daemons.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="1608-42e0-ae3f-3b75" name="Avatar" hidden="false" targetId="500a-7b19-a01d-3d88" type="profile"/>
@@ -204,6 +209,9 @@
                 </infoLink>
                 <infoLink id="ab03-ba9b-4d0c-8d8c" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -360,11 +368,18 @@
               </constraints>
               <selectionEntries>
                 <selectionEntry id="fb29-66a8-11fa-d0c5" name="Biting Blade" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="fe27-5b49-a70e-e282" name="Biting Blade" hidden="false" targetId="4b51-8a9d-385e-7e4e" type="profile"/>
+                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="7310-0105-c59c-c2cc" name="Scorpion&apos;s Claw" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="4efa-fd47-30da-c94a" name="Scorpion&apos;s Claw" hidden="false" targetId="8d1a-5346-93c4-7353" type="profile"/>
+                    <infoLink id="0789-6ccd-e1ff-eb71" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
                   </costs>
@@ -859,7 +874,7 @@
                 <selectionEntry id="fa99-e4c1-e6e0-097d" name="Suriken Pistol and Diresword" hidden="false" collective="false" import="true" type="upgrade">
                   <infoLinks>
                     <infoLink id="49f6-479c-f35d-daaf" name="Shuriken Pistol" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
-                    <infoLink id="4721-07bf-b392-10a7" name="Diresword" hidden="false" targetId="7dd6-86e7-a632-2773" type="profile"/>
+                    <infoLink id="4721-07bf-b392-10a7" name="Diresword" hidden="false" targetId="bcd4-96c8-0ff6-eafd" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
@@ -1885,7 +1900,9 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4ce-8a2f-473c-3dca" type="max"/>
       </constraints>
       <rules>
-        <rule id="4e87-7ad5-f7e3-7efc" name="Divination" hidden="false"/>
+        <rule id="4e87-7ad5-f7e3-7efc" name="Divination" hidden="false">
+          <description>After both sides have deployed at the start of the game, the Eldar player my reposition D3 units in his army up to 6&quot; from its original position within the normal deploment zone. Additionally, when using reserves the Elday player may add +1 to a single reserve roll each turn.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="d8c8-1902-494d-ae3f" name="Eldrad Ulthran" hidden="false" targetId="7fd7-3e86-ba07-a1f5" type="profile"/>
@@ -1918,7 +1935,9 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64ee-53d0-979b-88be" type="max"/>
       </constraints>
       <rules>
-        <rule id="d750-cb29-05e9-c934" name="Spiritseer" page="" hidden="false"/>
+        <rule id="d750-cb29-05e9-c934" name="Spiritseer" page="" hidden="false">
+          <description>Any Wraithguard unit with a model within 12&quot; of Arienal does not need to test for its Wraithsight, just as if the unit was accompanied by a Warlock.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="e912-7a56-a3d7-d6bf" name="Shuriken Pistol" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
@@ -1944,9 +1963,15 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc32-67e8-b9f5-9290" type="max"/>
       </constraints>
       <rules>
-        <rule id="b99c-ac2a-8169-2fb9" name="Reckless" hidden="false"/>
-        <rule id="98d8-35f1-e2bb-618d" name="Hit and Run" hidden="false"/>
-        <rule id="a5ce-5c76-f901-8b0a" name="Chief of the Wild Riders" hidden="false"/>
+        <rule id="b99c-ac2a-8169-2fb9" name="Reckless" hidden="false">
+          <description>Nuadhu ignores all &apos;crew stunned&apos; and &apos;crew shaken&apos; results on the Damage tables.</description>
+        </rule>
+        <rule id="98d8-35f1-e2bb-618d" name="Hit and Run" hidden="false">
+          <description>Naudhu can make hit=and-run attacks just like an Eldar jetbike. This means he can always move 6&quot; in the assault phase, as long as he did not move more than 12&quot; in the movement phase.</description>
+        </rule>
+        <rule id="a5ce-5c76-f901-8b0a" name="Chief of the Wild Riders" hidden="false">
+          <description>Any unit lead by Nuagha will never fall back and cannot be pinned.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="bf24-12ae-dcbf-8837" name="Nuadhu" hidden="false" targetId="4102-d410-7311-5616" type="profile"/>
@@ -1954,6 +1979,9 @@
         <infoLink id="a8ae-e720-818e-c801" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
         <infoLink id="973c-ee03-e9c6-68cf" name="Alean - The Steed of Khaine" hidden="false" targetId="8ab9-b5a4-c3e8-20d3" type="rule"/>
         <infoLink id="88af-feec-640e-1e76" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile"/>
+        <infoLink id="c452-3522-96d0-f69d" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+        <infoLink id="1495-ff1b-3633-0b4d" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink id="90fb-8116-f0b3-6047" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
@@ -1967,7 +1995,6 @@
         <rule id="d607-8fa8-d256-9ff8" name="The Harvester of Souls" hidden="false">
           <description>If Maugan Ra is attached to a unit of Dark Reapers they gain fearless.</description>
         </rule>
-        <rule id="4567-c8fa-7df6-dcf4" name="Maugotar" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="9f6e-3685-d9ac-8662" name="Phoenix Lord" hidden="false" targetId="2002-f6e1-4d9c-f66a" type="profile"/>
@@ -1976,6 +2003,8 @@
         <infoLink id="477f-f4b4-de58-2467" name="Crack Shot" hidden="false" targetId="f2fd-294c-434c-acdb" type="rule"/>
         <infoLink id="acbe-2eb1-25aa-d978" name="Fast Shot" hidden="false" targetId="f63e-9b57-1074-ef2a" type="rule"/>
         <infoLink id="ac1b-91b8-eebd-1169" name="Crushing Blow" hidden="false" targetId="6570-8481-1f30-3414" type="rule"/>
+        <infoLink id="da56-ee68-aee0-c725" name="Maugotar" hidden="false" targetId="4fee-e008-dce1-0d9b" type="profile"/>
+        <infoLink id="413e-62dd-17ed-f715" name="Executioner" hidden="false" targetId="ca79-8127-4045-b637" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e57f-1b9f-9458-ed35" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
@@ -1992,7 +2021,6 @@
         <rule id="cf9f-4fc5-21e2-bd7a" name="The Storm of Silence" hidden="false">
           <description>If Jain Zar is attached to a unit of Howling Banshees they gain fearless.</description>
         </rule>
-        <rule id="078b-0c1f-5c61-1c78" name="Silent Death" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="c389-b0e4-181e-60d3" name="Phoenix Lord" hidden="false" targetId="2002-f6e1-4d9c-f66a" type="profile"/>
@@ -2003,6 +2031,7 @@
         <infoLink id="e6e1-c536-eaed-09e9" name="Executioner" hidden="false" targetId="ca79-8127-4045-b637" type="profile"/>
         <infoLink id="c5f9-f7b0-1033-7360" name="War Shout" hidden="false" targetId="ed74-db03-79f2-e033" type="rule"/>
         <infoLink id="7190-6c87-2de0-9871" name="Bounding Leap" hidden="false" targetId="43a2-6d53-eb4a-3729" type="rule"/>
+        <infoLink id="c240-69ec-745b-7f37" name="Silent Death" hidden="false" targetId="c32e-30c0-02a6-afe3" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4d45-7e6b-c493-f6c9" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
@@ -2019,7 +2048,6 @@
         <rule id="a1bd-630d-c947-2e90" name="The Shadow Hunter" hidden="false">
           <description>If Karandras is attached to a unit of Striking Scorpions they gain fearless.</description>
         </rule>
-        <rule id="abc6-74f4-f62d-05f4" name="Scorpion&apos;s Bite" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="bfa5-6903-ff3b-b590" name="Phoenix Lord" hidden="false" targetId="2002-f6e1-4d9c-f66a" type="profile"/>
@@ -2030,6 +2058,7 @@
         <infoLink id="38cf-d381-2a19-0af9" name="Crushing Blow" hidden="false" targetId="6570-8481-1f30-3414" type="rule"/>
         <infoLink id="32dc-226d-f8c3-c8af" name="Stealth" hidden="false" targetId="cdd4-2891-a528-932c" type="rule"/>
         <infoLink id="9b5e-8497-ea12-7024" name="Surprise Assault" hidden="false" targetId="88b7-c132-ffed-9f07" type="rule"/>
+        <infoLink id="6355-3d90-cc94-2351" name="Scorpion&apos;s Bite" hidden="false" targetId="f79c-daaf-0041-c5a0" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="56e6-7d6b-71a1-b391" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
@@ -2070,11 +2099,21 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca4f-7132-7a86-97af" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="5a97-2e25-a803-bea5" name="Fire Axe" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">User +1</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignore all armour saves</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules>
         <rule id="9898-3338-2e1f-d781" name="The Burning Lance" hidden="false">
           <description>If Fuegan is attached to a unit of Fire Dragons they gain fearless.</description>
         </rule>
-        <rule id="c013-808e-645b-cc00" name="Fire Axe" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="5e43-bb18-2681-838f" name="Phoenix Lord" hidden="false" targetId="2002-f6e1-4d9c-f66a" type="profile"/>
@@ -2101,23 +2140,151 @@
         <rule id="b2df-afbd-ce4f-f790" name="The Hand of Asuryan" hidden="false">
           <description>If Asurmen is attached to a unit of Dire Avengers they gain fearless.</description>
         </rule>
-        <rule id="593f-aed1-c15c-6fd9" name="Sword of Asur" hidden="false"/>
       </rules>
       <infoLinks>
         <infoLink id="cb2a-0ba5-db02-c66c" name="Phoenix Lord" hidden="false" targetId="2002-f6e1-4d9c-f66a" type="profile"/>
         <infoLink id="5bf6-b9be-3cee-a426" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
         <infoLink id="ecaa-0849-642b-b918" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
         <infoLink id="9520-a1fc-c49f-8ec6" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-        <infoLink id="c88b-5a3f-4431-91a5" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+        <infoLink id="c88b-5a3f-4431-91a5" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
+          </modifiers>
+        </infoLink>
         <infoLink id="00f7-8d1b-2ebe-0370" name="Defend" hidden="false" targetId="3186-1d76-fabf-38c4" type="rule"/>
         <infoLink id="920f-ed01-98fa-cff3" name="Distract" hidden="false" targetId="ab65-4fb9-465e-a84e" type="rule"/>
         <infoLink id="794f-a968-3b83-469e" name="Battle Fate" hidden="false" targetId="3e45-82de-f527-4b3c" type="rule"/>
+        <infoLink id="4bbc-58a0-d70b-a442" name="Sword of Asur" hidden="false" targetId="0d3c-c54b-2d98-d764" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6fd5-ee11-dc8b-ec6c" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="137.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a3c7-1513-ecb5-1cb2" name="Night Spinner (IA)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Imperial Armour 2 Page 13</comment>
+      <infoLinks>
+        <infoLink id="cbfb-9ace-9474-a34b" name="Night Spinner" hidden="false" targetId="ca15-9f69-17e0-19f7" type="profile"/>
+        <infoLink id="c65d-b2b9-e5b7-c358" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="d07f-8020-73c2-b1aa" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+        <infoLink id="f807-c791-901d-cf6c" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Shuriken Catapult"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="1e52-af44-2d7c-9a0c" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="a0f9-ac66-0d35-0470" name="Night Spinner" hidden="false" targetId="3b3c-98aa-3295-96bd" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Two Night Spinners"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b812-ba70-4325-bf55" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4a4c-1e56-0956-8865" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="156.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d431-bb95-c1e1-fe66" name="Scorpion (IA)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Imperial Armour 2 Page 15</comment>
+      <rules>
+        <rule id="70c0-336b-3960-0c57" name="Agile Vehicle" hidden="false">
+          <description>Unlike other super heavy vehicles, the Scorpion can move up to 6&quot; and fire all weapons or up to 12&quot; and fire one weapon. It may not move more than 12&quot;</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="9e96-b737-6fe4-94a7" name="Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
+        <infoLink id="ee9c-1c7a-ea25-6ec9" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="e0fc-f35e-2f08-3b50" name="Bright Lance" hidden="false" targetId="6f4e-bc15-c01c-501a" type="profile"/>
+        <infoLink id="18d5-a7f5-45c0-1226" name="Pulsar" hidden="false" targetId="5820-b09c-720c-4e2a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Pulsar"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="c8fe-891c-ef20-00d2" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="5ea0-ef34-cb2b-bc84" name="Super Heavy Tank" hidden="false" targetId="d831-af9c-0b53-6da3" type="rule"/>
+        <infoLink id="8474-f742-7bed-6a0e" name="Scorpion1" hidden="false" targetId="8445-5f8a-5b5f-5f2e" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3d85-117a-8f1b-80a8" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="650.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8b22-5a58-01b5-dab3" name="Cobra (IA)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Imperial Armour 2 Page 17</comment>
+      <rules>
+        <rule id="6722-72bb-1112-d563" name="Agile Vehicle" hidden="false">
+          <description>Unlike other super heavy vehicles, the Scorpion can move up to 6&quot; and fire all weapons or up to 12&quot; and fire one weapon. It may not move more than 12&quot;</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="86bd-6827-e8da-9d20" name="Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
+        <infoLink id="ca2a-cdb8-cde8-d650" name="Distort Cannon" hidden="false" targetId="1167-5f76-35ab-9e44" type="profile"/>
+        <infoLink id="58ee-97f9-8b9b-f1f2" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="fa69-9d5f-e314-7b6a" name="Super Heavy Tank" hidden="false" targetId="d831-af9c-0b53-6da3" type="rule"/>
+        <infoLink id="e3df-2af8-6d52-b31a" name="Cobra" hidden="false" targetId="2559-f852-024e-7f5a" type="profile"/>
+        <infoLink id="0011-a616-a5f9-72bd" name="Titan Killer" hidden="false" targetId="b333-4165-9b69-fc6a" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="bcf9-0870-2a97-a006" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="575.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4071-07cc-a2b7-d555" name="Nightwing (IA)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Imperial Armour 2 Page 18</comment>
+      <infoLinks>
+        <infoLink id="348b-2cb1-e4c5-08ad" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="b8b8-5cf3-4cdb-7e38" name="Nightwing" hidden="false" targetId="b378-cb72-01aa-867a" type="profile"/>
+        <infoLink id="d510-8f75-fe65-0915" name="Long Barrelled Shuriken Cannon" hidden="false" targetId="8055-389a-dae3-488b" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Long Barrelled Shuriken Cannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="9ef4-9cac-594e-0bcf" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="82df-7108-2ee1-9eac" name="Bright Lance" hidden="false" targetId="6f4e-bc15-c01c-501a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Bright Lance"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="bcd5-9814-79d6-0440" name="Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="75f8-7d21-4c21-07f4" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="287.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="15be-6f70-5785-eec5" name="Vampire (IA)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Imperial Armour 2 Page 21</comment>
+      <infoLinks>
+        <infoLink id="2a7e-e0b6-1b2f-e816" name="Super-Heavy Flyer" hidden="false" targetId="7ca6-da5f-a87c-f49b" type="rule"/>
+        <infoLink id="575b-0982-229d-0c14" name="Vampire" hidden="false" targetId="02f9-7f32-18ab-13b3" type="profile"/>
+        <infoLink id="5229-5601-b62b-2627" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="72bf-0f7c-77bc-1e89" name="Orbital Lander" hidden="false" targetId="7b1f-05c8-5a14-f539" type="rule"/>
+        <infoLink id="1a41-6b68-1040-766c" name="Pulse Laser" hidden="false" targetId="b726-76b7-0d78-59d9" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Two Twin-Linked Pulse Lasers"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="29dc-13eb-94aa-1a49" name="Scatter Laser" hidden="false" targetId="0ea6-3b92-6129-8731" type="profile"/>
+        <infoLink id="8e25-1401-e843-d354" name="Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0a4d-7374-d078-8cd5" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="780.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2355,6 +2522,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78a4-fd0c-54ca-b61c" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6022-e12a-7589-6c95" name="Crystal Targeting Matrix" hidden="false">
+              <description>The vehicle may shoot during the movement phase rather than the shooting phase. Moving, shooting, and then completing its move. All the normal restrictions apply to the number of weapons that can be fired due to the total distance moved (both before and after shooting).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
           </costs>
@@ -2370,6 +2542,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fd2-b6a5-ad24-557f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="f987-2a20-f54e-5a6e" name="Holo-field" hidden="false">
+              <description>When rolling on the Damage table against this vehicle, the enemy must roll two dice and apply the lowest result.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -2378,6 +2555,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3e0-5228-6b87-7746" type="max"/>
           </constraints>
+          <rules>
+            <rule id="a08b-1217-d6cb-fda6" name="Scythes" hidden="false">
+              <description>Any enemy model that rolls a 1 to hit the vehicle in close combat suffers a Strength 5 hit.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -2386,6 +2568,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcda-2e22-4042-df00" type="max"/>
           </constraints>
+          <rules>
+            <rule id="69c7-f5a5-853a-87b9" name="Spirit Stone" hidden="false">
+              <description>If the vehicle suffers a &apos;crew shaken&apos; result, roll a D6. On a 4+ the vehicle is instead un affected. If the vehicle suffers a &apos;crew stunned&apos; result, roll a D6. On a 4 or 5 treat the result as a &apos;crew shaken&apos; result instead, and on a 6 the result is ignored.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -2394,6 +2581,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f3c-0890-655f-ffbc" type="max"/>
           </constraints>
+          <rules>
+            <rule id="8a45-e3f3-f12a-c1cd" name="Star Engines" hidden="false">
+              <description>Instead of firing any weapons the vehicle may move 2D6&quot; in a straight line during the shooting phase. A vehicle may not use its star engines in the same turn that it embarks or disembarks units.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -2402,6 +2594,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9262-09e2-ec6b-146c" type="max"/>
           </constraints>
+          <rules>
+            <rule id="47f6-a168-6c97-80df" name="Vectored Engines" hidden="false">
+              <description>The vehicle may re-roll any failed Difficult Terrain tests.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -2462,40 +2659,115 @@
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="96ee-79a8-217a-28a7" name="Rune Armour" hidden="false"/>
-    <rule id="0943-8bb7-8cc4-65f6" name="Warp Jump Generators" hidden="false"/>
-    <rule id="88b7-c132-ffed-9f07" name="Surprise Assault" hidden="false"/>
-    <rule id="881b-e3fe-4cf9-4cb7" name="Withdraw" hidden="false"/>
-    <rule id="6570-8481-1f30-3414" name="Crushing Blow" hidden="false"/>
-    <rule id="cdd4-2891-a528-932c" name="Stealth" hidden="false"/>
-    <rule id="63bf-dd8b-7daf-793f" name="Acrobatic" hidden="false"/>
-    <rule id="ed74-db03-79f2-e033" name="War Shout" hidden="false"/>
-    <rule id="5e2c-19ac-6764-63d6" name="Banshee Masks" hidden="false"/>
-    <rule id="ee49-4aa5-13d1-3530" name="Burning Fist" hidden="false"/>
-    <rule id="a907-15db-1615-4b1b" name="Tank Hunter" hidden="false"/>
-    <rule id="59d1-dec4-4d80-b9cc" name="Wraithsight" hidden="false"/>
-    <rule id="61b3-599d-af54-c39c" name="Difficult Terrain" hidden="false"/>
-    <rule id="6755-7b76-b6aa-3214" name="Cameleoline Cloaks" hidden="false"/>
-    <rule id="ab65-4fb9-465e-a84e" name="Distract" hidden="false"/>
-    <rule id="3186-1d76-fabf-38c4" name="Defend" hidden="false"/>
-    <rule id="62c2-695f-6a13-1167" name="Skillful Rider" hidden="false"/>
-    <rule id="be4c-fcc1-62c1-694b" name="Evade" hidden="false"/>
-    <rule id="6006-f98b-12ab-f1d5" name="Swooping Hawk Wings" hidden="false"/>
-    <rule id="43a2-6d53-eb4a-3729" name="Bounding Leap" hidden="false"/>
-    <rule id="79e6-8a77-2a4b-16a4" name="Sustained Assault" hidden="false"/>
-    <rule id="d468-2107-0e7e-86e1" name="Implacable Advance" hidden="false"/>
-    <rule id="7c2f-b369-5f7f-da26" name="Energy Field" hidden="false"/>
-    <rule id="33f8-141c-6263-dfc6" name="Weapons Platform" hidden="false"/>
-    <rule id="f63e-9b57-1074-ef2a" name="Fast Shot" hidden="false"/>
-    <rule id="f2fd-294c-434c-acdb" name="Crack Shot" hidden="false"/>
-    <rule id="b5d1-5696-e960-ab8c" name="Runes of Warding" hidden="false"/>
-    <rule id="06eb-6b01-a486-9121" name="Runes of Witnessing" hidden="false"/>
-    <rule id="0fa3-a6b7-33c2-32a4" name="Ghosthelm" hidden="false"/>
-    <rule id="b0a6-57c6-99c8-7a34" name="Spirit Stones" hidden="false"/>
-    <rule id="b544-c18c-b0cb-90a5" name="Armour of Vaul" hidden="false"/>
-    <rule id="8ab9-b5a4-c3e8-20d3" name="Alean - The Steed of Khaine" hidden="false"/>
-    <rule id="7a77-8498-1878-5086" name="Fleet of Foot" hidden="false"/>
+    <rule id="96ee-79a8-217a-28a7" name="Rune Armour" hidden="false">
+      <description>A model wearing rune armour has a 4+ invulnerable saving throw. If the move is mounted on a jetbike it may take either the normal 3+ armour saving throw or a 4+ rune armour invulnerable save.</description>
+    </rule>
+    <rule id="0943-8bb7-8cc4-65f6" name="Warp Jump Generators" hidden="false">
+      <description>A model with a Warp Jump Generator may moves up to 12&quot; in the movement phase, ignoring all terrain during the move, but may not finish the move in impassable terrain. 
+The unit may make a second jump at the start of the assault phase. They cannot use this jump and charge into combat in the same turn. This second jump moves 2D6&quot; in a nominated direction, and if a double is rolled one member of the squad is removed as a casualty.
+The unit also advanced and falls back 3D6&quot; after close combat, ignoring terrain as normal.</description>
+    </rule>
+    <rule id="88b7-c132-ffed-9f07" name="Surprise Assault" hidden="false">
+      <description>When the Exarch and his squad charge, they gain +2 Attacks instead of the normal +1.</description>
+    </rule>
+    <rule id="881b-e3fe-4cf9-4cb7" name="Withdraw" hidden="false">
+      <description>If the Exarch&apos;s squad is in close combat at the end of the assault phase, they may fall back to take them out of combat if they wish. All normal rules for a fall back move apply, but the enemy squad may only make a 3&quot; move to consolidate. The Exarch&apos;s unit automatically regroups after the fall back move.</description>
+    </rule>
+    <rule id="6570-8481-1f30-3414" name="Crushing Blow" hidden="false">
+      <description>The Exarch works out all close combat attacks at +1 Strength.</description>
+    </rule>
+    <rule id="cdd4-2891-a528-932c" name="Stealth" hidden="false">
+      <description>A squad led by this Exarch may infiltrate if allowed by the mission.</description>
+    </rule>
+    <rule id="63bf-dd8b-7daf-793f" name="Acrobatic" hidden="false">
+      <description>Before the Exarch makes her close combat attacks, she may be repositioned in contact with any model of your choice in the enemy unit.</description>
+    </rule>
+    <rule id="ed74-db03-79f2-e033" name="War Shout" hidden="false">
+      <description>When the Exarch charges into combat, during the first round of combat the enemy unit must pass a Leadership test or reduce its WS by -1 for the rest of the assault phase.</description>
+    </rule>
+    <rule id="5e2c-19ac-6764-63d6" name="Banshee Masks" hidden="false">
+      <description>Models wearing a Banshee Mask always strikes first in hand-to-hand combat in the first round of any assault, regardless of Initiative or other factors. This applies even if they are not in base contact with the enemy. The mask has no effect in additional rounds of combat. In the case of other effects that would allow their enemy to also strike first, both units strike simultaneously.</description>
+    </rule>
+    <rule id="ee49-4aa5-13d1-3530" name="Burning Fist" hidden="false">
+      <description>In close combat the Exarch may re-roll any failed wound rolls and ignores all armour saves.</description>
+    </rule>
+    <rule id="a907-15db-1615-4b1b" name="Tank Hunter" hidden="false">
+      <description>The Exarch may re-roll any armour penetration rolls he makes for shooting or in close combat against targets with an armour value.</description>
+    </rule>
+    <rule id="59d1-dec4-4d80-b9cc" name="Wraithsight" hidden="false">
+      <description>At the start of every Eldar turn, roll a D6 for each Wraithguard unit that is not joined by a Farseer or Warlock. On a roll of a 1, the Wraithguard may do nothing that turn.</description>
+    </rule>
+    <rule id="61b3-599d-af54-c39c" name="Difficult Terrain" hidden="false">
+      <description>Rangers moving through difficult terrain can roll one additional dice when determing their movement distance.</description>
+    </rule>
+    <rule id="6755-7b76-b6aa-3214" name="Cameleoline Cloaks" hidden="false">
+      <description>Rangers add +1 to any cover saves it is allowed (e.g. a 5+ cover save becomes a 4+ cover save). If not cover, they are granted a 6+ cover save.</description>
+    </rule>
+    <rule id="ab65-4fb9-465e-a84e" name="Distract" hidden="false">
+      <description>One model in base contact with the Exarch, chosen by the Eldar player, is at -1 Attacks. This can reduce the model to 0 Attacks.</description>
+    </rule>
+    <rule id="3186-1d76-fabf-38c4" name="Defend" hidden="false">
+      <description>If the Exarch chooses, he may force enemy models to only hit him on a roll of 6 in close combat, but by doing so he must strike last.</description>
+    </rule>
+    <rule id="62c2-695f-6a13-1167" name="Skillful Rider" hidden="false">
+      <description>The Exarch and his squad do not roll for difficult terrain.</description>
+    </rule>
+    <rule id="be4c-fcc1-62c1-694b" name="Evade" hidden="false">
+      <description>The Exarch&apos;s armour saving throw becomes an invulnerable saving throw.</description>
+    </rule>
+    <rule id="6006-f98b-12ab-f1d5" name="Swooping Hawk Wings" hidden="false">
+      <description>A model with Swooping Hawk Wings moves as if equipped wtih a jump pack. Additionally, a squad with Swooping Hawk Wings may always Deep Strike even if the mission does not normally allow.</description>
+    </rule>
+    <rule id="43a2-6d53-eb4a-3729" name="Bounding Leap" hidden="false">
+      <description>When making an assault move, the Exarch may add +D6&quot; to the distance he charges. The Exarch may only charge if he is within 6&quot; of the enemy in the assault phase, but he does not have to engage the first model in his path if this extra distance would allow him to reach another model.</description>
+    </rule>
+    <rule id="79e6-8a77-2a4b-16a4" name="Sustained Assault" hidden="false">
+      <description>For each close combat hit the Exarch makes, he may make an extra attack. These extra attacks, if they hit, allow him to make additional extra attacks.</description>
+    </rule>
+    <rule id="d468-2107-0e7e-86e1" name="Implacable Advance" hidden="false">
+      <description>Wraithlords can shoot up to two weapons if it moves, and all of its weapons if it stays stationary. It can even fire heavy weapons whilst moving.</description>
+    </rule>
+    <rule id="7c2f-b369-5f7f-da26" name="Eldar Energy Field" hidden="false">
+      <description>Any ranged attacks against the vehicle&apos;s front and side armour with a Strength greated than 8 counts as Strength 8. Additionally, all front and side attacks may only ever roll +1d6 for their armour penetration (for example, negating the Melta and Ordnance rules). Attacks in close combat or in the rear armour ignore this rule.</description>
+    </rule>
+    <rule id="33f8-141c-6263-dfc6" name="Weapons Platform" hidden="false">
+      <description>The support weapon has two Guardians as crew. One crewman fires the support weapon and the other is free to fire his own weapon. If both crew are killed the platform is useless (the platform itself can&apos;t be hit). Unlike other anti-grav platforms, the support weapon may not fire if it was moved in the movement phase.</description>
+    </rule>
+    <rule id="f63e-9b57-1074-ef2a" name="Fast Shot" hidden="false">
+      <description>If the Exarch is firing an assault or heavy weapon, add +1 to the number of shots fired. If instead firing a pistol or rapid fire weapon, then they do not count as moving. Fast Shot may not be used by the Exarch in the same turn as Crack Shot.</description>
+    </rule>
+    <rule id="f2fd-294c-434c-acdb" name="Crack Shot" hidden="false">
+      <description>The enemy may not making cover saves against shots from the Exarch, and the Exarch may re-roll any failed wound rolls when shooting. Crack Shot may not be used in the same turn the Exarch uses Fast Shot.</description>
+    </rule>
+    <rule id="b5d1-5696-e960-ab8c" name="Runes of Warding" hidden="false">
+      <description>If an enemy psyker attempts to use a psychic power and the psyker or the target is with 6&quot; of the Farseer, the enemy must take the Psychic test on a 3D6 and discard the lowest roll. Psykers who not normally need to make a Psyhich test are unaffected.</description>
+    </rule>
+    <rule id="06eb-6b01-a486-9121" name="Runes of Witnessing" hidden="false">
+      <description>A Farseer with runes of witnessing rolls 3D6 and discards the highest when taking a Psychic test. Note, you must use the two lowest dice, even in the case of two ones.</description>
+    </rule>
+    <rule id="0fa3-a6b7-33c2-32a4" name="Ghosthelm" hidden="false">
+      <description>If the model suffers an attack from the Perils of the Warp he may ignore the attack on a D6 roll of 4+. In addition, any Daemon that is fighting the model in close combat halves (rounding up) its WS.</description>
+    </rule>
+    <rule id="b0a6-57c6-99c8-7a34" name="Spirit Stones" hidden="false">
+      <description>A psyker with a spirit stone can use two powers each turn instead of one, but they must be different powers.</description>
+    </rule>
+    <rule id="b544-c18c-b0cb-90a5" name="Armour of Vaul" hidden="false">
+      <description>Instead of an armour save, Arienal must pass an unmodified Leadership test in order to save against any hits she suffers. If the test is failed she loses a wound as normal. The Armour of Vaul is an invulnerable save.</description>
+    </rule>
+    <rule id="8ab9-b5a4-c3e8-20d3" name="Alean - The Steed of Khaine" hidden="false">
+      <description>Naudhu rides upon a Viper that has been built to allow him to fight from its back, much as Khaine rode to war on the legendary steed Alean. He fights in close combat in the same way as a Dreadnought. He may make a 6&quot; assault move in the assault phase, providing he moved no more than 12&quot; in the movement phase, otherwise he may only fight if assaulted.</description>
+    </rule>
+    <rule id="7a77-8498-1878-5086" name="Fleet of Foot" hidden="false">
+      <description>Eldar units with this rule may run instead of shooting in the shooting phase. Roll a D6. The score is the distance in inches the unit may move in the shooting phase. This move is not affected by difficult terrain.
+The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (with the exception of Dire Avengers, Howling Banshees; Fire Dragon Exarchs and Phoenix Lords); units contain anti-grav/support weapons; and Dark Reapers may never run.</description>
+    </rule>
     <rule id="3e45-82de-f527-4b3c" name="Battle Fate" hidden="false"/>
+    <rule id="14a9-0694-d982-b67d" name="Star Engines" hidden="false">
+      <description>This vehicle may move 2D6&quot; in a straight line during the shooting phase, instead of firing weapons. It may not use the Star Engines in the same turn that it embarks or disembarks transported units.</description>
+    </rule>
+    <rule id="fd4f-e837-e39f-53b7" name="Vectored Engines" hidden="false">
+      <description>The vehicle may re-roll any failed Difficult Terrain test.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="500a-7b19-a01d-3d88" name="Avatar" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -2719,12 +2991,13 @@
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="a5d5-34df-b92d-a247" name="Wave Serpent" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+    <profile id="a5d5-34df-b92d-a247" name="Wave Serpent" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
-        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
-        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">12</characteristic>
-        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
-        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">12</characteristic>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204">3</characteristic>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">10 infantry or 5 Waithguard and a Warlock.</characteristic>
       </characteristics>
     </profile>
     <profile id="a54d-acab-6119-cd5e" name="Jetbike" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -2920,117 +3193,108 @@
     </profile>
     <profile id="9e7b-1795-0925-caca" name="Mandiblaster" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
-      </characteristics>
-    </profile>
-    <profile id="7dd6-86e7-a632-2773" name="Diresword" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Special attack made at +2 I in addition to the bearer&apos;s other attacks. Make one attack hitting on a 4+. </characteristic>
       </characteristics>
     </profile>
     <profile id="27f9-3c84-52b4-04c7" name="Laser Lance" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Fired during the assault phase when the Shining Spears charge into combat and resolved before any close combat attacks are made. Any models killed by these attacks are included in combat resolution. Additionally, the weilder counts as Strength 5 in hand-to-hand combat.</characteristic>
       </characteristics>
     </profile>
     <profile id="39f3-5cae-9dad-1d5b" name="Swooping Hawk Grenade Pack" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">n/a</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Large Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">When a Swooping Hawk unit uses Deep Strike to deploy, it may also use its grenades. Place the Large Blast marker anywhere on the table and roll a Scatter dice. If the arrow is rollwed, the marker still moves D6&quot; in the indicated direction.</characteristic>
       </characteristics>
     </profile>
     <profile id="406d-fd46-0418-e383" name="Web of Skulls" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If the Web of Skulls hits, roll to hit the unit again. Continue rolling until the Web of Skulls misses or 4 hits were inflicted. No model in the target unit may ever be hit twice by this weapon. Additionally, in close combat the Web of Skulls is treated as a power weapon.</characteristic>
       </characteristics>
     </profile>
     <profile id="edd9-682e-28b9-e212" name="Staff of Ulthamar" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">2+</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Allows Eldrad to cast an additional psychic power (including one he already cast this turn), or can be used in an assault, wounding on 2+ and ignoring armour saves. It cannot be used in both manners in the same turn.</characteristic>
       </characteristics>
     </profile>
-    <profile id="50a4-ee3b-91ec-3363" name="Eldritch Storm" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="50a4-ee3b-91ec-3363" name="Eldritch Storm" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Instead of firing a weapon, place the large Ordnance Blast template on an enemy unit with 18&quot;. Each move touched by the templaces takes a Strength 3 hit. The target unit also takes a Pinning test. A vehicle touched by the template suffers a hit with 2D6 armour peneraton and are spun around to face a random direction.</characteristic>
       </characteristics>
     </profile>
     <profile id="3df8-941a-8012-811d" name="Fortune" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Nominate one Eldar unit with a model within 6&quot; of the Farseer (which may be the Farseer&apos;s own unit). This unit may re-rolled any failed armour saves or cover saves unitl the start of the next Eldar turn.</characteristic>
       </characteristics>
     </profile>
     <profile id="d383-eb64-5ab7-c167" name="Guide" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">At the start of the Eldar turn, nominate one Eldar unit with a model with 6&quot; of the Farseer (which may be the Farseer&apos;s own unit). This unit may re-roll any missed shooting to hit rolls until the start of the next Eldar turn. If the unit is using a guess range weapon, you may re-roll the scatter dice if a &apos;hit&apos; is not the result of the first roll.</characteristic>
       </characteristics>
     </profile>
     <profile id="83b2-29ce-9d18-02b5" name="Mind War" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Instead of firing a weapon, the Eldar player may choose any enemy model within 18&quot; of the Farseer and within line of sight. Both players roll a D6 and add the Leadership test of the respective models. For each point the Farseer wins by the target loses a wound with no normal armour saves allowed. If the scores are tied, or the Farseer scores less, then there is no effect.</characteristic>
       </characteristics>
     </profile>
     <profile id="b5de-e63c-de80-a7fe" name="Spear of Teuthias" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;/Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">2+</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds on a 2+. Versus vehicles the armour penetration value is 2xS+1d6. A model may not use this weapon in both the shooting and assault phase of the same turn.</characteristic>
       </characteristics>
     </profile>
-    <profile id="8cc5-9daf-3100-4784" name="Destructor" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
+    <profile id="8cc5-9daf-3100-4784" name="Destructor" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Flame</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
     <profile id="4d75-e148-e135-7ceb" name="Enhance" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">All models in the Warlock&apos;s squad, including the Warlock, add +1 WS and +1 I. Additional Enhance have no effect.</characteristic>
       </characteristics>
     </profile>
     <profile id="ca79-8127-4045-b637" name="Executioner" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User +2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">May not be used to gain +1 A with a pistol or additional CCW. Ignores armour saves.</characteristic>
       </characteristics>
     </profile>
     <profile id="183d-c848-8cc2-2f0f" name="Powerblades" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Models equiped with powerblades gets +1 Attack. This can be in addition to the +1 Attack for being armoed with an additional close combat weapon or pistol for a total of +2 attacks. Ignores all armour saves.</characteristic>
       </characteristics>
     </profile>
     <profile id="4b51-8a9d-385e-7e4e" name="Biting Blade" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -3044,20 +3308,20 @@
     </profile>
     <profile id="8d1a-5346-93c4-7353" name="Scorpion&apos;s Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User x 2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Built in Shuriken Catapult. Ignores all armour saves.</characteristic>
       </characteristics>
     </profile>
     <profile id="7ade-f891-a783-1696" name="Singing Spear" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;/Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">2+</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds on a 2+. Versus vehicles the armour penetration value is 2xS+1d6. A model may not use this weapon in both the shooting and assault phase of the same turn.</characteristic>
       </characteristics>
     </profile>
     <profile id="b4fb-8975-b230-edd1" name="Witch Blade" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -3071,12 +3335,104 @@
     </profile>
     <profile id="955a-7c85-e355-2bfd" name="Conceal" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">The Warlock and their squad recieves a 5+ cover save.</characteristic>
       </characteristics>
     </profile>
     <profile id="a4c6-0d5a-46cf-8fed" name="Embolden" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">The Warlock and their squad may re-roll any failed Morale checks or Pinning tests they need to take.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="ca15-9f69-17e0-19f7" name="Night Spinner" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">12</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8445-5f8a-5b5f-5f2e" name="Scorpion" hidden="false" typeId="36b6-ef06-48e4-cd45" typeName="Super Heavy Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="85f4-de3e-abeb-67f7">12</characteristic>
+        <characteristic name="Side Armor" typeId="8ec2-d2f2-3bed-35ef">12</characteristic>
+        <characteristic name="Rear Armor" typeId="b276-1b4e-26d8-0a08">11</characteristic>
+        <characteristic name="BS" typeId="de63-2aba-c18c-6d47">4</characteristic>
+        <characteristic name="Structure Points" typeId="a817-7301-451c-20c9">3</characteristic>
+        <characteristic name="Capacity" typeId="e1d2-e9ec-26d6-1f11"/>
+      </characteristics>
+    </profile>
+    <profile id="2559-f852-024e-7f5a" name="Cobra" hidden="false" typeId="36b6-ef06-48e4-cd45" typeName="Super Heavy Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="85f4-de3e-abeb-67f7">12</characteristic>
+        <characteristic name="Side Armor" typeId="8ec2-d2f2-3bed-35ef">12</characteristic>
+        <characteristic name="Rear Armor" typeId="b276-1b4e-26d8-0a08">11</characteristic>
+        <characteristic name="BS" typeId="de63-2aba-c18c-6d47">4</characteristic>
+        <characteristic name="Structure Points" typeId="a817-7301-451c-20c9">3</characteristic>
+        <characteristic name="Capacity" typeId="e1d2-e9ec-26d6-1f11"/>
+      </characteristics>
+    </profile>
+    <profile id="b378-cb72-01aa-867a" name="Nightwing" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="02f9-7f32-18ab-13b3" name="Vampire" hidden="false" typeId="36b6-ef06-48e4-cd45" typeName="Super Heavy Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="85f4-de3e-abeb-67f7">10</characteristic>
+        <characteristic name="Side Armor" typeId="8ec2-d2f2-3bed-35ef">10</characteristic>
+        <characteristic name="Rear Armor" typeId="b276-1b4e-26d8-0a08">10</characteristic>
+        <characteristic name="BS" typeId="de63-2aba-c18c-6d47">4</characteristic>
+        <characteristic name="Structure Points" typeId="a817-7301-451c-20c9">5</characteristic>
+        <characteristic name="Capacity" typeId="e1d2-e9ec-26d6-1f11">30 infantry. It mat carry Wraithguard, which count as two models each. It may carry support platforms, which count as two models in addition to the crew.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="bcd4-96c8-0ff6-eafd" name="Diresword" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores Armour Saves. A multi-wound model that suffers a wound from a diresword must pass a Leadership test or die automatically.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="0d3c-c54b-2d98-d764" name="Sword of Asur" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Re-roll misses to hit.
+Ignores Armour Saves. A multi-wound model that suffers a wound from a diresword must pass a Leadership test or die automatically.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="c32e-30c0-02a6-afe3" name="Silent Death" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="f79c-daaf-0041-c5a0" name="Scorpion&apos;s Bite" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Special attack made at +2 I in addition to the bearer&apos;s other attacks. Make one attack hitting on a 4+. </characteristic>
+      </characteristics>
+    </profile>
+    <profile id="4fee-e008-dce1-0d9b" name="Maugotar" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
   </sharedProfiles>
