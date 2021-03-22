@@ -29,7 +29,6 @@
     <entryLink id="332b-99f1-217d-71a7" name="Predator Destructor" hidden="false" collective="false" import="true" targetId="156e-b697-5422-38ff" type="selectionEntry"/>
     <entryLink id="8c44-eada-0c18-0c0d" name="Vindicator" hidden="false" collective="false" import="true" targetId="86f9-0db1-c67b-3442" type="selectionEntry"/>
     <entryLink id="20b9-27b7-52e9-1cd0" name="Whirlwind" hidden="false" collective="false" import="true" targetId="d13e-3fe7-b445-511c" type="selectionEntry"/>
-    <entryLink id="ddff-d2c0-2b77-76e2" name="Veteran Sergeant Lysander" hidden="false" collective="false" import="true" targetId="bdd0-e9d7-b9ca-cd36" type="selectionEntry"/>
     <entryLink id="3cbf-5a47-6b22-2d2b" name="Chaplain Xavier" hidden="false" collective="false" import="true" targetId="0196-c398-93e6-94d7" type="selectionEntry"/>
     <entryLink id="39b1-f5f1-6830-4623" name="Emperor&apos;s Champion" hidden="false" collective="false" import="true" targetId="ad23-c512-3d63-c3a4" type="selectionEntry"/>
     <entryLink id="0410-9d0a-3e42-7786" name="Captain Cortez" hidden="false" collective="false" import="true" targetId="095c-81d6-2cb9-777e" type="selectionEntry"/>
@@ -152,7 +151,7 @@
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
               <repeats>
-                <repeat field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="faa2-3c85-df57-e7e5" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="faa2-3c85-df57-e7e5" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -178,6 +177,11 @@
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c545-9053-5ca2-1d68" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" field="ead8-0394-0c57-876a" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c545-9053-5ca2-1d68" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ead8-0394-0c57-876a" type="max"/>
@@ -198,6 +202,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="3ede-eda4-5278-e957" name="Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="9bbe-0f34-67e7-53b3" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c545-9053-5ca2-1d68" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <modifierGroups>
                 <modifierGroup>
                   <conditions>
@@ -205,19 +216,18 @@
                   </conditions>
                   <modifiers>
                     <modifier type="set" field="fff2-070a-8246-668d" value="0.0"/>
-                    <modifier type="set" field="9bbe-0f34-67e7-53b3" value="0.0"/>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fff2-070a-8246-668d" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bbe-0f34-67e7-53b3" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bbe-0f34-67e7-53b3" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="9668-fb89-21f0-cbf7" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="5afb-372f-d63b-c43a" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="bb24-16e6-0743-54df">
+                <selectionEntryGroup id="5afb-372f-d63b-c43a" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="e86b-ca7c-4658-1db5">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1fd-2253-bd50-55ff" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9f8-5913-bf4f-095e" type="min"/>
@@ -263,22 +273,32 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="8b40-4c4b-126e-ec94" name="Bodyguard" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="2c9d-77a7-7d91-8a37" value="4.0"/>
+              </modifiers>
               <modifierGroups>
                 <modifierGroup>
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4d79-06bc-7daf-0aa0" repeats="1" roundUp="false"/>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="63f7-a02b-edf8-fde2" repeats="1" roundUp="false"/>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aa72-2b72-a70f-7283" repeats="1" roundUp="false"/>
-                  </repeats>
                   <modifiers>
-                    <modifier type="increment" field="27f2-ead6-f9e5-e271" value="-1.0"/>
-                    <modifier type="increment" field="2c9d-77a7-7d91-8a37" value="-1.0"/>
+                    <modifier type="decrement" field="27f2-ead6-f9e5-e271" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="63f7-a02b-edf8-fde2" repeats="1" roundUp="false"/>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4d79-06bc-7daf-0aa0" repeats="1" roundUp="false"/>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aa72-2b72-a70f-7283" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="decrement" field="2c9d-77a7-7d91-8a37" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="63f7-a02b-edf8-fde2" repeats="1" roundUp="false"/>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4d79-06bc-7daf-0aa0" repeats="1" roundUp="false"/>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aa72-2b72-a70f-7283" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
               <constraints>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27f2-ead6-f9e5-e271" type="max"/>
-                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c9d-77a7-7d91-8a37" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c9d-77a7-7d91-8a37" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="a2ed-d00b-26e3-d704" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
@@ -342,7 +362,7 @@
               <modifiers>
                 <modifier type="set" field="cab5-edde-396b-2b93" value="0.0">
                   <conditions>
-                    <condition field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="faa2-3c85-df57-e7e5" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="faa2-3c85-df57-e7e5" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -431,7 +451,6 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="bc72-feb4-8705-5742" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="93a4-c4f2-3183-a640" type="selectionEntryGroup"/>
-        <entryLink id="9e4c-e0b2-dbc5-71bc" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="93a4-c4f2-3183-a640" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
@@ -454,7 +473,11 @@
             <selectionEntry id="576e-e4ec-9094-337d" name="Twin-linked Lascannon" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="0739-a5a1-374f-19e1" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-                <infoLink id="46e7-8159-a622-6a9a" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
+                <infoLink id="46e7-8159-a622-6a9a" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Lascannon"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
@@ -464,7 +487,11 @@
               <infoLinks>
                 <infoLink id="d870-2866-bc4f-1f0e" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
                 <infoLink id="1a0d-c760-efe5-3fc3" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
-                <infoLink id="0ada-b2a6-9e76-5b9b" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
+                <infoLink id="0ada-b2a6-9e76-5b9b" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Plasma Guns"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
@@ -481,7 +508,11 @@
             <selectionEntry id="4b83-9224-7169-5955" name="Twin-linked Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="c7a7-2587-1658-d6c8" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-                <infoLink id="1202-e47c-a781-06ef" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                <infoLink id="1202-e47c-a781-06ef" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Heavy Bolter"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -498,8 +529,16 @@
       <infoLinks>
         <infoLink id="b97b-1c40-5515-fb81" name="Land Raider" hidden="false" targetId="ad60-6998-8da3-8149" type="profile"/>
         <infoLink id="9005-4c88-8672-2f18" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-        <infoLink id="a493-d075-fa8d-2860" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
-        <infoLink id="eea8-ae99-b8a1-6e5e" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+        <infoLink id="a493-d075-fa8d-2860" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Twin-Linked Lascannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="eea8-ae99-b8a1-6e5e" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Heavy Bolter"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink id="3a57-41b7-49bc-d51f" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="93a4-c4f2-3183-a640" type="selectionEntryGroup"/>
@@ -524,6 +563,11 @@
             <modifier type="increment" field="d559-cd8d-8e30-5cc4" value="1.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e50-b7e3-a2a6-7df6" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="d559-cd8d-8e30-5cc4" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a5e-442f-5d4c-c283" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -784,7 +828,11 @@
             <selectionEntry id="c26c-b913-a7e4-7293" name="Twin-linked Lascannon" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="b4d7-7e86-6035-62d2" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-                <infoLink id="51ec-fc58-c0c7-cc99" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
+                <infoLink id="51ec-fc58-c0c7-cc99" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Lascannon"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
@@ -809,7 +857,11 @@
             <selectionEntry id="2053-459c-9321-8c92" name="Twin-linked Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="208b-2733-3137-80ef" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-                <infoLink id="1df1-24d9-a90f-2a1b" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                <infoLink id="1df1-24d9-a90f-2a1b" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Heavy Bolter"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
@@ -818,7 +870,11 @@
             <selectionEntry id="b4fc-a9a5-0341-edba" name="Twin-linked Autocannon" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="4ddd-8c33-ad5b-72a4" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-                <infoLink id="1202-310c-ab87-87ac" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
+                <infoLink id="1202-310c-ab87-87ac" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Autocannon"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
@@ -864,7 +920,7 @@
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
               <repeats>
-                <repeat field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8883-c7bf-4824-77b0" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8883-c7bf-4824-77b0" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -903,62 +959,12 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="8883-c7bf-4824-77b0" name="Space Marines" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="8883-c7bf-4824-77b0" name="Space Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="6a66-8e4b-a91f-5440">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7cd-15c9-b4b7-f3c7" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a87f-0c2d-cd26-4a95" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="6fd2-f89b-7d6f-bc6e" name="Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6818-ade4-abe2-aa63" type="equalTo"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="set" field="31fe-5a07-a715-4fc3" value="0.0"/>
-                    <modifier type="set" field="85d2-b451-0944-b332" value="0.0"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85d2-b451-0944-b332" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31fe-5a07-a715-4fc3" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="5b95-9889-a29c-2efc" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
-              </infoLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="9399-fb79-2cbf-3bca" name="Weapons" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b63-82d6-ff07-b933" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebb9-97fb-b01d-ef69" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="b04c-e5a2-e289-c779" name="Bolter" hidden="false" collective="false" import="true" type="upgrade">
-                      <infoLinks>
-                        <infoLink id="fa1e-3f42-c824-d940" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="ebac-abf9-10c0-fc02" name="Bolt Pistol and Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                      <infoLinks>
-                        <infoLink id="fabe-c974-9ac4-cb01" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                        <infoLink id="9159-2d4a-cdd5-093b" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="6818-ade4-abe2-aa63" name="Veteran Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bc5-b126-70a9-0f33" type="max"/>
@@ -975,9 +981,21 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="6a66-8e4b-a91f-5440" name="Veteran Space Marine" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="decrement" field="4cf5-0104-4603-30b2" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6818-ade4-abe2-aa63" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="decrement" field="2d4d-bc7b-a359-6da6" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6818-ade4-abe2-aa63" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d4d-bc7b-a359-6da6" type="max"/>
-                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cf5-0104-4603-30b2" type="min"/>
+                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d4d-bc7b-a359-6da6" type="max"/>
+                <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cf5-0104-4603-30b2" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="6cd2-f0b3-6b90-213d" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
@@ -1107,7 +1125,7 @@
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
               <repeats>
-                <repeat field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a296-6672-d1c4-153c" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a296-6672-d1c4-153c" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1130,26 +1148,37 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="bbac-c944-cd48-3f39" name="Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b453-5412-0a3e-5414" type="equalTo"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="set" field="ca4b-61be-f158-cbab" value="0.0"/>
-                    <modifier type="set" field="71cf-a7bb-cfce-4b4e" value="0.0"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
+              <modifiers>
+                <modifier type="set" field="71cf-a7bb-cfce-4b4e" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="2a63-ef79-7e7a-03aa" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9a0e-5b16-a6b4-3ed7" type="equalTo"/>
+                        <condition field="selections" scope="2a63-ef79-7e7a-03aa" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b453-5412-0a3e-5414" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" field="ca4b-61be-f158-cbab" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="2a63-ef79-7e7a-03aa" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9a0e-5b16-a6b4-3ed7" type="equalTo"/>
+                        <condition field="selections" scope="2a63-ef79-7e7a-03aa" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b453-5412-0a3e-5414" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca4b-61be-f158-cbab" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71cf-a7bb-cfce-4b4e" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71cf-a7bb-cfce-4b4e" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="e0a0-e79b-f5c7-3496" name="Space Marine" hidden="false" targetId="9514-67fd-b082-445f" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="6672-2b35-efa3-f0fc" name="Weapons" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="6672-2b35-efa3-f0fc" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="1773-363b-af80-0ae8">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae4d-924b-0ecc-c8d6" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4132-efc9-01e8-99d2" type="min"/>
@@ -1180,6 +1209,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="b453-5412-0a3e-5414" name="Veteran Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="3918-844b-ffb5-b595" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="2a63-ef79-7e7a-03aa" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9a0e-5b16-a6b4-3ed7" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3918-844b-ffb5-b595" type="max"/>
               </constraints>
@@ -1208,6 +1244,9 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink id="9a0e-5b16-a6b4-3ed7" name="Veteran Sergeant Lysander" hidden="false" collective="false" import="true" targetId="bdd0-e9d7-b9ca-cd36" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="f11b-beb5-0047-9424" name="Heavy Weapons" hidden="false" collective="false" import="true">
           <constraints>
@@ -1329,7 +1368,7 @@
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
               <repeats>
-                <repeat field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d2a3-16b3-3f73-5cd3" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d2a3-16b3-3f73-5cd3" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1345,27 +1384,28 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d2a3-16b3-3f73-5cd3" name="Scouts" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="d2a3-16b3-3f73-5cd3" name="Scouts" hidden="false" collective="false" import="true" defaultSelectionEntryId="bc46-544f-c92d-394f">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bdc-52c6-5985-cd55" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eca8-1bef-9226-a6a7" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="bc46-544f-c92d-394f" name="Scout Sergeant" hidden="false" collective="false" import="true" type="model">
-              <modifierGroups>
-                <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="ac1c-7509-e7c6-0bd0" value="0.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7345-3cc8-9bfd-852f" type="equalTo"/>
                   </conditions>
-                  <modifiers>
-                    <modifier type="set" field="ac1c-7509-e7c6-0bd0" value="0.0"/>
-                    <modifier type="set" field="1754-39c3-7810-3f0d" value="0.0"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
+                </modifier>
+                <modifier type="set" field="1754-39c3-7810-3f0d" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7345-3cc8-9bfd-852f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac1c-7509-e7c6-0bd0" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1754-39c3-7810-3f0d" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1754-39c3-7810-3f0d" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="886d-e727-8a92-8d3d" name="Scout" hidden="false" targetId="a6b9-9e6b-e5f6-16e4" type="profile"/>
@@ -1496,7 +1536,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c15d-07b7-90a0-af85" type="equalTo"/>
+                <condition field="selections" scope="6f82-235d-a765-6ab6" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c15d-07b7-90a0-af85" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1505,7 +1545,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c15d-07b7-90a0-af85" type="equalTo"/>
+                <condition field="selections" scope="6f82-235d-a765-6ab6" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c15d-07b7-90a0-af85" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1519,7 +1559,7 @@
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
               <repeats>
-                <repeat field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4cce-aed4-e1f8-0aee" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4cce-aed4-e1f8-0aee" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1548,7 +1588,7 @@
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="4.0">
               <repeats>
-                <repeat field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4cce-aed4-e1f8-0aee" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4cce-aed4-e1f8-0aee" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1564,7 +1604,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4cce-aed4-e1f8-0aee" name="Space Marines" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="4cce-aed4-e1f8-0aee" name="Space Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="4895-503f-990b-22ef">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="507e-948b-599b-be32" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f4c-69e3-c764-fee1" type="min"/>
@@ -1572,26 +1612,25 @@
           <selectionEntries>
             <selectionEntry id="4895-503f-990b-22ef" name="Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
               <modifiers>
-                <modifier type="decrement" field="4ed5-2f92-9abc-2870" value="15.0">
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="15.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c15d-07b7-90a0-af85" type="equalTo"/>
                   </conditions>
                 </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup>
+                <modifier type="set" field="2336-2d1c-b74a-d2bd" value="0.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ab5-5684-73b2-9780" type="equalTo"/>
                   </conditions>
-                  <modifiers>
-                    <modifier type="set" field="1f66-0ae4-27eb-e7f7" value="0.0"/>
-                    <modifier type="set" field="2336-2d1c-b74a-d2bd" value="0.0"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
+                </modifier>
+                <modifier type="set" field="1f66-0ae4-27eb-e7f7" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ab5-5684-73b2-9780" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2336-2d1c-b74a-d2bd" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f66-0ae4-27eb-e7f7" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f66-0ae4-27eb-e7f7" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="6afa-1c19-859f-adb4" name="Space Marine" hidden="false" targetId="9514-67fd-b082-445f" type="profile"/>
@@ -1605,7 +1644,7 @@
             </selectionEntry>
             <selectionEntry id="4ab5-5684-73b2-9780" name="Veteran Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
               <modifiers>
-                <modifier type="decrement" field="4ed5-2f92-9abc-2870" value="15.0">
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="30.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c15d-07b7-90a0-af85" type="equalTo"/>
                   </conditions>
@@ -1628,7 +1667,7 @@
             </selectionEntry>
             <selectionEntry id="7cb6-a289-0a02-2294" name="Space Marine" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="decrement" field="4ed5-2f92-9abc-2870" value="15.0">
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="15.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c15d-07b7-90a0-af85" type="equalTo"/>
                   </conditions>
@@ -1682,32 +1721,37 @@
         <categoryLink id="a555-cc8c-5839-8c15" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="cd04-4800-8df0-1f1d" name="Space Marines" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="cd04-4800-8df0-1f1d" name="Space Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="2f34-c961-2d9c-37be">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7c8-1312-0fd6-5460" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68cb-c93f-ec5c-c025" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="2f34-c961-2d9c-37be" name="Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
-              <modifierGroups>
-                <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="0d50-ec64-16d8-b893" value="0.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56aa-0bdb-e077-e4c8" type="equalTo"/>
                   </conditions>
-                  <modifiers>
-                    <modifier type="set" field="3591-ccf4-6cf2-1c6f" value="0.0"/>
-                    <modifier type="set" field="0d50-ec64-16d8-b893" value="0.0"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
+                </modifier>
+                <modifier type="set" field="3591-ccf4-6cf2-1c6f" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56aa-0bdb-e077-e4c8" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d50-ec64-16d8-b893" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3591-ccf4-6cf2-1c6f" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3591-ccf4-6cf2-1c6f" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="03cc-6a77-75a2-29d9" name="Space Marine Biker" hidden="false" targetId="b03d-e20c-1e5e-86b8" type="profile"/>
                 <infoLink id="3dd5-a85d-fa0d-5ae8" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink id="15ec-3556-eb83-6d79" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                <infoLink id="15ec-3556-eb83-6d79" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="ce8d-f20d-b36c-f79a" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
               <selectionEntries>
@@ -1750,7 +1794,11 @@
               <infoLinks>
                 <infoLink id="c831-573d-35e2-eb5b" name="Space Marine Biker" hidden="false" targetId="b03d-e20c-1e5e-86b8" type="profile"/>
                 <infoLink id="877b-b8b1-7dd2-1736" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink id="8578-bf82-90b6-75e7" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                <infoLink id="8578-bf82-90b6-75e7" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="1e45-503c-9d22-2a55" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
               <costs>
@@ -1799,6 +1847,11 @@
               <infoLinks>
                 <infoLink id="4d47-24e9-8f8a-4ae8" name="Attack Bike" hidden="false" targetId="94d0-1b6d-2894-6089" type="profile"/>
                 <infoLink id="8a1b-c37e-9b42-5e3b" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                <infoLink id="bf14-d01c-824a-1fd8" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
@@ -1808,6 +1861,11 @@
               <infoLinks>
                 <infoLink id="193a-2e13-e47c-6535" name="Attack Bike" hidden="false" targetId="94d0-1b6d-2894-6089" type="profile"/>
                 <infoLink id="b6dd-2736-4ab6-4438" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
+                <infoLink id="1223-e45f-8acc-5a9f" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="65.0"/>
@@ -1829,7 +1887,7 @@
         <categoryLink id="8948-c3cb-7c70-af4d" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="051f-fa5b-57b3-7f4d" name="Attack Bike" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="051f-fa5b-57b3-7f4d" name="Attack Bike" hidden="false" collective="false" import="true" defaultSelectionEntryId="d176-d556-995b-c99d">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="470d-6e70-11c1-8a36" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4940-6e20-4759-24e9" type="min"/>
@@ -1839,6 +1897,11 @@
               <infoLinks>
                 <infoLink id="8ec2-ac69-bcf5-dc55" name="Attack Bike" hidden="false" targetId="94d0-1b6d-2894-6089" type="profile"/>
                 <infoLink id="c186-7e0d-a1b2-bc41" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                <infoLink id="ee7e-cb66-d9eb-e3b8" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
@@ -1848,6 +1911,11 @@
               <infoLinks>
                 <infoLink id="19ae-7426-3163-eabf" name="Attack Bike" hidden="false" targetId="94d0-1b6d-2894-6089" type="profile"/>
                 <infoLink id="e39d-a1d8-2e7c-89a8" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
+                <infoLink id="4a23-6636-6fc2-b728" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="65.0"/>
@@ -1876,13 +1944,12 @@
           <modifiers>
             <modifier type="increment" field="cd05-32e7-1c85-5376" value="1.0">
               <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cc03-daf5-9030-0fdf" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="e8c8-4bfb-5e2b-7737" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cc03-daf5-9030-0fdf" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="set" field="cd05-32e7-1c85-5376" value="0.0"/>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd05-32e7-1c85-5376" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd05-32e7-1c85-5376" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -1910,7 +1977,7 @@
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
               <repeats>
-                <repeat field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cc03-daf5-9030-0fdf" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cc03-daf5-9030-0fdf" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1926,32 +1993,37 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="cc03-daf5-9030-0fdf" name="Space Marines" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="cc03-daf5-9030-0fdf" name="Space Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="3155-4eea-8279-60a7">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6540-eca6-cc12-fa0e" type="max"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f58-6766-7294-4b03" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="3155-4eea-8279-60a7" name="Scout Sergeant" hidden="false" collective="false" import="true" type="model">
-              <modifierGroups>
-                <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="1c79-ef79-9e04-ff8b" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5f0-f7bc-9981-8e23" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="0133-3d5f-2ac9-1aec" value="0.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5f0-f7bc-9981-8e23" type="equalTo"/>
                   </conditions>
-                  <modifiers>
-                    <modifier type="set" field="1c79-ef79-9e04-ff8b" value="0.0"/>
-                    <modifier type="set" field="0133-3d5f-2ac9-1aec" value="0.0"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0133-3d5f-2ac9-1aec" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c79-ef79-9e04-ff8b" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c79-ef79-9e04-ff8b" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="f8df-0b17-8590-c673" name="Scout Biker" hidden="false" targetId="ff0f-3131-5264-028c" type="profile"/>
                 <infoLink id="4c9b-a330-10d2-ecd0" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink id="4e15-5c6f-20db-afcb" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                <infoLink id="4e15-5c6f-20db-afcb" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="8587-0d76-1297-c45d" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
               </infoLinks>
               <selectionEntries>
@@ -1994,8 +2066,12 @@
               <infoLinks>
                 <infoLink id="f99b-bf91-0bf7-bf02" name="Scout Biker" hidden="false" targetId="ff0f-3131-5264-028c" type="profile"/>
                 <infoLink id="1fee-d99c-459c-91ac" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink id="63e8-2712-7b8d-ceaa" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
                 <infoLink id="03ab-0d22-3f92-a757" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+                <infoLink id="5eea-8b14-3a55-3bc2" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
@@ -2065,7 +2141,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6e11-71c4-387b-d52f" type="equalTo"/>
+                <condition field="selections" scope="c398-1788-6d0b-3d3f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6e11-71c4-387b-d52f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2074,7 +2150,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="283c-51bf-c63b-da81" type="equalTo"/>
+                <condition field="selections" scope="c398-1788-6d0b-3d3f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="283c-51bf-c63b-da81" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2127,7 +2203,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="144f-9921-7d7d-59cb" type="equalTo"/>
+                <condition field="selections" scope="fd3d-a63d-ee67-d276" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="144f-9921-7d7d-59cb" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2166,33 +2242,34 @@
         <categoryLink id="a6bd-6ff1-893a-3168" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f08a-b730-6dec-d007" name="Space Marines" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f08a-b730-6dec-d007" name="Space Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="9bc6-2c0c-1752-b494">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f5b-a58b-9312-e99a" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="328a-58df-4db2-de15" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="9bc6-2c0c-1752-b494" name="Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
-              <modifierGroups>
-                <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="0c30-5e47-66d6-b111" value="0.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca0c-99df-8f3e-7c01" type="equalTo"/>
                   </conditions>
-                  <modifiers>
-                    <modifier type="set" field="0c30-5e47-66d6-b111" value="0.0"/>
-                    <modifier type="set" field="e174-b188-119f-bc37" value="0.0"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
+                </modifier>
+                <modifier type="set" field="e174-b188-119f-bc37" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca0c-99df-8f3e-7c01" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c30-5e47-66d6-b111" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e174-b188-119f-bc37" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e174-b188-119f-bc37" type="min"/>
               </constraints>
               <infoLinks>
                 <infoLink id="9477-d98f-cb69-54aa" name="Space Marine" hidden="false" targetId="9514-67fd-b082-445f" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="a5eb-6243-bb91-947b" name="Weapons" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="a5eb-6243-bb91-947b" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="c305-370c-676c-f521">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42a5-ea32-235a-e307" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8070-6763-e427-4aea" type="min"/>
@@ -2369,7 +2446,11 @@
       <infoLinks>
         <infoLink id="974e-d41d-0d7c-ed5e" name="Predator" hidden="false" targetId="f91e-f1b6-eb8c-ae23" type="profile"/>
         <infoLink id="dcdb-1a4c-468b-271e" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-        <infoLink id="7f29-60c9-a9ef-93e1" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
+        <infoLink id="7f29-60c9-a9ef-93e1" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Lascannon"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="586d-2beb-15d0-7d46" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -2440,9 +2521,17 @@
     <selectionEntry id="9e80-340b-902a-19fb" name="Marneus Calgar" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="fbc2-f849-0676-01be" value="0.0">
-          <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="lessThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ad23-c512-3d63-c3a4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="095c-81d6-2cb9-777e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdd0-e9d7-b9ca-cd36" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0196-c398-93e6-94d7" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2483,6 +2572,20 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5f4b-7f68-c2c9-adbf" name="Chief Librarian Tigurius" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="a7b7-3c49-8922-98e6" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="095c-81d6-2cb9-777e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0196-c398-93e6-94d7" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ad23-c512-3d63-c3a4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdd0-e9d7-b9ca-cd36" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7b7-3c49-8922-98e6" type="max"/>
       </constraints>
@@ -2518,6 +2621,21 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="095c-81d6-2cb9-777e" name="Captain Cortez" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="6e12-e966-f1e6-fa6f" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5f4b-7f68-c2c9-adbf" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0196-c398-93e6-94d7" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ad23-c512-3d63-c3a4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdd0-e9d7-b9ca-cd36" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e80-340b-902a-19fb" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e12-e966-f1e6-fa6f" type="max"/>
       </constraints>
@@ -2544,6 +2662,21 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ad23-c512-3d63-c3a4" name="Emperor&apos;s Champion" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="4e67-220e-a9dc-bd8c" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5f4b-7f68-c2c9-adbf" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="095c-81d6-2cb9-777e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0196-c398-93e6-94d7" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdd0-e9d7-b9ca-cd36" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e80-340b-902a-19fb" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e67-220e-a9dc-bd8c" type="max"/>
       </constraints>
@@ -2579,6 +2712,21 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0196-c398-93e6-94d7" name="Chaplain Xavier" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="1c55-0b0c-b1c1-76ca" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5f4b-7f68-c2c9-adbf" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="095c-81d6-2cb9-777e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ad23-c512-3d63-c3a4" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdd0-e9d7-b9ca-cd36" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e80-340b-902a-19fb" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c55-0b0c-b1c1-76ca" type="max"/>
       </constraints>
@@ -2604,8 +2752,24 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bdd0-e9d7-b9ca-cd36" name="Veteran Sergeant Lysander" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="f370-e143-edea-2299" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5f4b-7f68-c2c9-adbf" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="095c-81d6-2cb9-777e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0196-c398-93e6-94d7" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e80-340b-902a-19fb" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ad23-c512-3d63-c3a4" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f370-e143-edea-2299" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f370-e143-edea-2299" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d32-e561-f49b-509c" type="max"/>
       </constraints>
       <rules>
         <rule id="de4b-dec2-7e20-c761" name="Bolter Drill" hidden="false"/>
@@ -2672,10 +2836,17 @@
                 <infoLink id="8252-8100-93a3-4f83" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="07b9-cd24-7c52-c640" name="Force Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="699e-9cc9-5fdc-f04b" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5338-cafe-fa14-f5d7" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="699e-9cc9-5fdc-f04b" type="max"/>
               </constraints>
@@ -2683,7 +2854,7 @@
                 <infoLink id="836e-89d3-f5e4-857f" name="Force Weapon" hidden="false" targetId="e5ab-52f0-b14b-e93c" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="731d-36a9-da05-c67a" name="Lightning Claw" hidden="false" collective="false" import="true" type="upgrade">
@@ -2880,6 +3051,7 @@
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41fb-ac0a-281d-b2c9" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8817-6cdf-304c-8738" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
@@ -2911,6 +3083,7 @@
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd0c-fdec-e5a0-be0a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8f9-bc90-ae04-1e9d" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
@@ -2919,6 +3092,7 @@
             <selectionEntry id="34dd-3970-7081-057b" name="Iron Halo" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="030c-030c-1ed1-a2ac" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9bd-48d6-bfce-969e" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
@@ -2974,6 +3148,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="7fc4-3f62-527e-c1dc" name="Psychic Hood" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="d7e3-bdcc-a776-fd06" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5338-cafe-fa14-f5d7" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7e3-bdcc-a776-fd06" type="max"/>
               </constraints>
@@ -3060,16 +3241,39 @@
     <selectionEntryGroup id="93a4-c4f2-3183-a640" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="6a4f-cc19-8cf0-1c75" name="Dozer Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="eff5-ef81-4bc5-5df3" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f7e-ad94-b024-1a57" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eff5-ef81-4bc5-5df3" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="11e2-c5cc-aa39-819f" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fef5-4877-7e7a-ccad" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f7a1-a8df-6270-7afd" name="Hunter-killer Missile" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="cd20-74fc-a9fd-9792" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f7e-ad94-b024-1a57" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd20-74fc-a9fd-9792" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="15ab-a63a-f83f-5cf9" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile"/>
           </infoLinks>
@@ -3078,6 +3282,16 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="87fc-d683-0dde-5cda" name="Pintle-mounted Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="27d4-75e1-bce3-e957" value="0.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f7e-ad94-b024-1a57" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27d4-75e1-bce3-e957" type="max"/>
+          </constraints>
           <infoLinks>
             <infoLink id="0e8b-dbe7-0fc8-4bd2" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
           </infoLinks>
@@ -3086,11 +3300,17 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="2e6d-300e-80a9-1ffc" name="Search Lights" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0e3-426f-4755-388c" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="50ad-e7af-750e-d4f2" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c93-f6d4-963f-bd54" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
           </costs>
