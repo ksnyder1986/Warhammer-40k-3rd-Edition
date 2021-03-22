@@ -39,11 +39,6 @@
         <characteristicType id="492d-1f80-b777-26f2" name="Abilities"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="5535-2b48-81ee-04ce" name="Transport">
-      <characteristicTypes>
-        <characteristicType id="4b03-2db8-5ba0-e5fd" name="Capacity"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="7279-038a-b87a-ed0c" name="Abilities">
       <characteristicTypes>
         <characteristicType id="a08a-36f8-2fd3-b843" name="Description"/>
@@ -61,13 +56,23 @@
         <characteristicType id="bb33-7ddf-2296-174e" name="A"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="fa0f-aa94-2fec-5007" name="Weapon Temp">
+    <profileType id="5535-2b48-81ee-04ce" name="Transport">
       <characteristicTypes>
-        <characteristicType id="cab5-4755-b649-255a" name="Range"/>
-        <characteristicType id="6fd0-bf1e-ca9e-56a6" name="S"/>
-        <characteristicType id="1952-33e1-943c-038e" name="AP"/>
-        <characteristicType id="58cf-3974-e8d3-0034" name="Type"/>
-        <characteristicType id="59a0-13d1-707a-04e7" name="Abilities"/>
+        <characteristicType id="70ae-7a97-7e70-93ea" name="Front Armor"/>
+        <characteristicType id="bcca-0b51-9187-2e4e" name="Side Armor"/>
+        <characteristicType id="929b-c9cc-001b-3705" name="Rear Armor"/>
+        <characteristicType id="ae25-5be4-5470-2204" name="BS"/>
+        <characteristicType id="ec07-2d55-2ba5-6080" name="Capacity"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="36b6-ef06-48e4-cd45" name="Super Heavy Vehicle">
+      <characteristicTypes>
+        <characteristicType id="85f4-de3e-abeb-67f7" name="Front Armor"/>
+        <characteristicType id="8ec2-d2f2-3bed-35ef" name="Side Armor"/>
+        <characteristicType id="b276-1b4e-26d8-0a08" name="Rear Armor"/>
+        <characteristicType id="de63-2aba-c18c-6d47" name="BS"/>
+        <characteristicType id="a817-7301-451c-20c9" name="Structure Points"/>
+        <characteristicType id="e1d2-e9ec-26d6-1f11" name="Capacity"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -92,6 +97,7 @@
     <categoryEntry id="8f6c-e0de-fded-2875" name="Walkers" hidden="false"/>
     <categoryEntry id="be45-5314-4388-5bfd" name="No Force Org" hidden="false"/>
     <categoryEntry id="3cb1-645b-8bbb-3d49" name="Psyker" hidden="false"/>
+    <categoryEntry id="6b90-dc9c-1a49-3fdc" name="Super-Heavy" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="7da2-40c9-890c-3239" name="Standard Missions" hidden="false">
@@ -651,6 +657,10 @@
     <rule id="c7ad-9a4b-bbde-8bde" name="Drop Pods" hidden="false"/>
     <rule id="d2c6-0bb0-d830-4c62" name="Storm Shield" hidden="false"/>
     <rule id="3f21-57bb-fb07-54c5" name="Flyers" hidden="false"/>
+    <rule id="d831-af9c-0b53-6da3" name="Super Heavy Tank" hidden="false"/>
+    <rule id="b333-4165-9b69-fc6a" name="Titan Killer" hidden="false"/>
+    <rule id="7ca6-da5f-a87c-f49b" name="Super-Heavy Flyer" hidden="false"/>
+    <rule id="7b1f-05c8-5a14-f539" name="Orbital Lander" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="9177-ce8a-92e3-157e" name="Flamer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1635,10 +1645,10 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     <profile id="3da4-191b-40b4-847a" name="Wraithcannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4+</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds on a 4+, and on a roll of 6 inflicts Instant Death. Against vehicles it inflicts a glancing hit on a 4+ and a penetrating hit on a 6.</characteristic>
       </characteristics>
     </profile>
     <profile id="6f4e-bc15-c01c-501a" name="Bright Lance" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1701,7 +1711,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">When firing, choose a target point anywhere within range and line of sight, then roll to hit as normal. On a hit, all units between the cannon and the target point suffer D6 hits. Any vehicles or other target with a damage table duffers a single glancing hit. Any unit that suffers a casualty must take a Pinning test. All cannons in a unit fire one shot, but each additional cannon adds +1 S and inflicts a -1 modifier on the Pinning test.</characteristic>
       </characteristics>
     </profile>
     <profile id="87d0-8c40-7bcb-8cbb" name="Melta Bombs" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1832,6 +1842,42 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 4</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="3b3c-98aa-3295-96bd" name="Night Spinner" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G72&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="5820-b09c-720c-4e2a" name="Pulsar" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">60&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="1167-5f76-35ab-9e44" name="Distort Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores Imperial Fields, Eldar Fields and Ork Powe Fields</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8055-389a-dae3-488b" name="Long Barrelled Shuriken Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
