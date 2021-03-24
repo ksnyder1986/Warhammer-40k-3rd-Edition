@@ -1143,10 +1143,15 @@
         <selectionEntryGroup id="9ed5-7769-d576-870f" name="Burna Boyz" hidden="false" collective="false" import="true" defaultSelectionEntryId="9028-adae-68ad-cb95">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8222-e2cf-05e5-adb7" type="min"/>
-            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c46-b3c2-fd12-dddf" type="max"/>
+            <constraint field="selections" scope="parent" value="11.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c46-b3c2-fd12-dddf" type="max">
+              <comment>Per Chapter Approved 2001, this mob can go to 11 b/c Mekboyz is not a upgrade to an Ork.</comment>
+            </constraint>
           </constraints>
           <selectionEntries>
             <selectionEntry id="9028-adae-68ad-cb95" name="Burna Boy" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="accc-6608-3717-116f" type="max"/>
+              </constraints>
               <infoLinks>
                 <infoLink id="8f0d-0675-b2dd-6c52" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
                 <infoLink id="f7b3-23bc-9165-b146" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
@@ -4074,6 +4079,13 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
     <selectionEntryGroup id="ca39-32a0-1351-b07f" name="Single Handed Weapons" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="f7f3-d4d1-b9e9-54a1" name="Choppa" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="c45a-8ad9-780c-ddeb" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c45a-8ad9-780c-ddeb" type="max"/>
           </constraints>
@@ -4086,8 +4098,21 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
           </costs>
         </selectionEntry>
         <selectionEntry id="a919-acb4-6929-0f94" name="Power Claw" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="0dd5-235a-b389-ad61" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4ed5-2f92-9abc-2870" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c97-8b73-736e-298f" type="max"/>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0dd5-235a-b389-ad61" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="59bb-bee0-a10d-8ca7" name="Power Claw" hidden="false" targetId="ff9c-5b94-680f-36d5" type="profile"/>
@@ -4097,6 +4122,13 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
           </costs>
         </selectionEntry>
         <selectionEntry id="10e7-55de-7dda-0597" name="Slugga" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="9eaf-324c-b14e-467c" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9eaf-324c-b14e-467c" type="max"/>
           </constraints>
@@ -4119,6 +4151,11 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="dd53-e52e-01df-f375" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd53-e52e-01df-f375" type="max"/>
@@ -4135,11 +4172,26 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="7cd8-4c00-4781-f12d" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="eaf9-8aa3-782a-490e" value="1.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be5f-7d1c-3cc2-26da" type="max"/>
+        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eaf9-8aa3-782a-490e" type="min"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="084e-87e9-cf47-b4f7" name="Big Shoota" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="5ca0-28dd-295a-ce02" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ca0-28dd-295a-ce02" type="max"/>
           </constraints>
@@ -4268,6 +4320,13 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
           </costs>
         </selectionEntry>
         <selectionEntry id="b104-957d-c107-547e" name="Rokkit Launcha" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="6338-f9b1-2c61-2c76" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6338-f9b1-2c61-2c76" type="max"/>
           </constraints>
@@ -4290,6 +4349,13 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
           </costs>
         </selectionEntry>
         <selectionEntry id="7b9d-0030-68ac-503e" name="&apos;Uge Choppa" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="f555-2eca-fbc1-f7aa" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f555-2eca-fbc1-f7aa" type="max"/>
           </constraints>
@@ -4327,20 +4393,19 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
         </modifier>
         <modifier type="set" field="edf0-352a-bf53-449d" value="80.0">
           <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="edf0-352a-bf53-449d" value="80.0">
-          <conditionGroups>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b32d-5cad-2d37-2401" type="instanceOf"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b32d-5cad-2d37-2401" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -4533,6 +4598,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="06ff-0627-6709-a3ac" name="&apos;Eavy Armor" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="34e3-3bcf-51a0-7ef2" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34e3-3bcf-51a0-7ef2" type="max"/>
           </constraints>
@@ -4544,6 +4616,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="ba2c-490e-c494-a4ab" name="Frag Stikkbombz" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="dfd3-1d2d-d66f-d74b" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dfd3-1d2d-d66f-d74b" type="max"/>
           </constraints>
@@ -4635,6 +4714,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="5587-ed7b-772e-fe0d" name="Krak Stikkbombz" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="0222-dd5a-9430-079a" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0222-dd5a-9430-079a" type="max"/>
           </constraints>
@@ -4680,18 +4766,22 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
         </selectionEntry>
         <selectionEntry id="1518-7a1b-daac-0172" name="Mega Armor" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="6c6a-7f24-4946-085e" value="1.0">
+            <modifier type="set" field="6c6a-7f24-4946-085e" value="0.0">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c66e-a4c0-a550-351c" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f2ba-60ed-2378-5de2" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c66e-a4c0-a550-351c" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f2ba-60ed-2378-5de2" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0241-38e0-053c-2a6f" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="011a-8595-ccba-4e6e" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c66-3fe8-e9fa-9b83" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="instanceOf"/>
                   </conditions>
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b32d-5cad-2d37-2401" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b32d-5cad-2d37-2401" type="notInstanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4841,6 +4931,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="5eff-36fe-24fc-062e" name="Tankbusta Bombz" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="6a8a-7456-8bf9-aea8" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a8a-7456-8bf9-aea8" type="max"/>
           </constraints>
@@ -5196,7 +5293,11 @@ Hits against the Gunz is treated like a vehicle with an armor value of 10, but a
     </profile>
     <profile id="3ce0-9ee9-f672-9a71" name="Tankbustas" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
-        <characteristic name="Capacity" typeId="4b03-2db8-5ba0-e5fd"/>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea"/>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e"/>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705"/>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204"/>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080"/>
       </characteristics>
     </profile>
     <profile id="a9e7-02cc-7c37-8345" name="Gretchin" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -5417,7 +5518,11 @@ Hits against the Gunz is treated like a vehicle with an armor value of 10, but a
     </profile>
     <profile id="4f55-452f-b785-4bb4" name="Frag Stikk Bombs" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
-        <characteristic name="Capacity" typeId="4b03-2db8-5ba0-e5fd"/>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea"/>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e"/>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705"/>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204"/>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080"/>
       </characteristics>
     </profile>
     <profile id="d652-3dc5-266e-637c" name="Tankbusta Bombz" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
