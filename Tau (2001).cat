@@ -147,6 +147,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180b-057d-f756-5e64" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="0061-be9e-aea2-37cb" name="Bonding Knife" hidden="false" targetId="1f5f-2d35-c5f7-9db4" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -260,6 +263,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc76-f297-e6f0-a487" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="7b6d-61c2-3f2e-38e5" name="Bonding Knife" hidden="false" targetId="1f5f-2d35-c5f7-9db4" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -390,6 +396,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="969e-49db-ecb7-fece" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="e9f6-97ef-4d1e-183e" name="Bonding Knife" hidden="false" targetId="1f5f-2d35-c5f7-9db4" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -515,6 +524,28 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="dc0c-d73d-75e7-15f0" name="Devilfish" hidden="false" collective="false" import="true" targetId="6c43-af8f-c69c-df89" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="d86c-50be-4ffd-0a97" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="11.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1609-4944-0de8-1d72" type="atLeast"/>
+                        <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c3bc-4511-cbe2-90d0" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="12.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1609-4944-0de8-1d72" type="atLeast"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c3bc-4511-cbe2-90d0" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d86c-50be-4ffd-0a97" type="max"/>
           </constraints>
@@ -559,7 +590,7 @@
     </selectionEntry>
     <selectionEntry id="aeed-9d69-09d0-95e0" name="Gun Drone Squadron" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="d3b3-a400-0d2d-457b" value="1.0">
+        <modifier type="set" field="d3b3-a400-0d2d-457b" value="0.0">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02dc-e73d-f9f7-357a" type="equalTo"/>
           </conditions>
@@ -576,28 +607,6 @@
       <categoryLinks>
         <categoryLink id="e629-1a4b-7170-ae45" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="2e0f-4b47-dde2-849a" name="Ork Fighter (Farsight Enclave)" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="1349-732b-da7e-b8f0" value="0.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02dc-e73d-f9f7-357a" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ad06-6e67-4ba1-443d" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1349-732b-da7e-b8f0" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="ad06-6e67-4ba1-443d" name="Gun Drones" hidden="false" collective="false" import="true" defaultSelectionEntryId="9153-7e48-997c-92b4">
           <constraints>
@@ -799,6 +808,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c076-4999-d77d-d076" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="8449-2d0b-a5cc-18d7" name="Bonding Knife" hidden="false" targetId="1f5f-2d35-c5f7-9db4" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -956,7 +968,7 @@ Once attached, the Kroot Hounds function as part of the Carnivore squad they are
         <categoryLink id="6d0b-3d16-8e3b-95b9" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a9b3-fd9d-ab18-b747" name="Kroot Hounds" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="a9b3-fd9d-ab18-b747" name="Kroot Hounds" hidden="false" collective="false" import="true" defaultSelectionEntryId="ea29-0208-47f0-6160">
           <constraints>
             <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e55e-9807-1fcb-a5c0" type="max"/>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f772-0a7f-e814-0484" type="min"/>
@@ -993,6 +1005,9 @@ Once attached, the Kroot Hounds function as part of the Carnivore squad they are
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf15-b1ca-b8b8-f3d8" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="66ba-6ddb-8403-c7d9" name="Bonding Knife" hidden="false" targetId="1f5f-2d35-c5f7-9db4" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -1207,8 +1222,12 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54d2-74c5-ce38-d70f" type="max"/>
       </constraints>
       <rules>
-        <rule id="98cd-27ad-cfab-7936" name="Dawn Blade" hidden="false"/>
-        <rule id="8541-02ce-9b13-e6d7" name="Ork Fighter" hidden="false"/>
+        <rule id="98cd-27ad-cfab-7936" name="Dawn Blade" hidden="false">
+          <description>Farsight counts as a Monstrous Creature in hand-to-hand combat, so he ignores Armour Saves and rolls 2D6+S for Armour Penetration against vehicles.</description>
+        </rule>
+        <rule id="8541-02ce-9b13-e6d7" name="Ork Fighter" hidden="false">
+          <description>Any Tau unit in an army led by Farsight may improve both their WS and I by 1 at the cost of +5 points per model.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="081f-11d0-c2c4-04b1" name="Commander Farsight" hidden="false" targetId="a8a6-7b3c-f374-5939" type="profile"/>
@@ -1238,9 +1257,18 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
         <rule id="dfd7-71af-9bca-b3c1" name="Hard-wired Shield Generator" hidden="false">
           <description>4+ Invulnerable Save</description>
         </rule>
-        <rule id="bd46-1a14-6d8d-0265" name="Blade Master" hidden="false"/>
-        <rule id="553e-efc1-c279-2c50" name="Inspiring Presence" hidden="false"/>
-        <rule id="2c5d-8a09-4e64-fc2e" name="Price of Failure" hidden="false"/>
+        <rule id="bd46-1a14-6d8d-0265" name="Blade Master" hidden="false">
+          <description>Aun&apos;shi&apos;s skill with the blade grants the following two abilities:
+* He may use none, some, or all of his Attacks to parry. He must declare how many he will use at the start of close combat before any dice are rolled. For each Attack he forfiets, reduce the number of Attacks of each enemy attacking him by one (to a minimum of 1 each).
+* As normal his honour blade grants +2 S, and additionally causes an automatic wound with no Armour save possible if he rolls a 6 to hit.</description>
+        </rule>
+        <rule id="553e-efc1-c279-2c50" name="Inspiring Presence" hidden="false">
+          <description>Tau units may re-roll any Moral tests (passed or failed) if Aun&apos;shi is on the table. The re-rolled result stands. Any Tau units joined by Aun&apos;shi is fearless, passing all Morale checks and Pinning tests automatically.
+Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close combat while Aun&apos;shi remains with them.</description>
+        </rule>
+        <rule id="2c5d-8a09-4e64-fc2e" name="Price of Failure" hidden="false">
+          <description>If Aun&apos;shi is killed, every friendly Tau unit on the tabletop must take a Morale check at the start of their next turn if not in close combat or already falling back. Any units that fail must Fall Back during thier next Movement phase.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="c54e-b090-8d2a-eb70" name="Aun&apos;shi" hidden="false" targetId="36a1-be74-1347-8f58" type="profile"/>
@@ -1262,18 +1290,20 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="c406-53c8-88ca-ce9c" name="Hard-Wired Support Systems" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="increment" field="99e3-0af2-7077-9223" value="1.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c3bc-4511-cbe2-90d0" type="equalTo"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="99e3-0af2-7077-9223" value="3.0">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b044-07fe-a372-df49" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb66-5614-26e2-0e90" type="notInstanceOf"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b044-07fe-a372-df49" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1320,6 +1350,7 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
             <selectionEntryGroup id="c3bc-4511-cbe2-90d0" name="Drones" hidden="false" collective="false" import="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d2f-85ed-34fa-8fb0" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1282-bfcd-7a95-7014" type="min"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="1994-87ed-7743-4e1d" name="Gun Drone" hidden="false" collective="false" import="true" type="upgrade">
@@ -1356,6 +1387,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cac9-436e-95fa-fc1a" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="3aa0-3931-097b-8c2c" name="Sensor Spines" hidden="false" targetId="facc-db84-ec11-bf2c" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1364,6 +1398,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef63-447e-f4a3-909c" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="c6de-d102-e156-4a63" name="Targetting Array" hidden="false" targetId="ce5a-d3df-81a4-b045" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1372,6 +1409,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e2f-64a6-c282-64c1" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="6fdd-c9a6-3302-5e08" name="Multi-tracker" hidden="false" targetId="28ca-eea0-3317-daf9" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -1380,6 +1420,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54c9-db33-dd52-b9c6" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="424c-3f03-da54-82a6" name="Blacksun Filter" hidden="false" targetId="da14-cfd0-1939-ad50" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1388,6 +1431,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0caf-ed46-964d-a601" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="f82a-bdb5-2957-e786" name="Target Lock" hidden="false" targetId="83bc-f6e9-89c3-4bf3" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1396,6 +1442,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc62-ff86-7106-1da4" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="b9dc-47d9-198a-5679" name="Gun Drone" hidden="false" targetId="3fc2-241a-c6b0-45d6" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -1404,6 +1453,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a98-f89d-7c78-472e" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="f95d-b2e5-d253-66d7" name="Flechette Discharger" hidden="false" targetId="fe8d-2fa4-d273-0725" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1412,6 +1464,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f4-85c2-c667-88f3" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="97a0-0a01-3260-1b5a" name="Disruption Pod" hidden="false" targetId="2f77-21e2-5667-f96d" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1420,6 +1475,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af71-2cd1-bbed-a16d" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="3e59-6cc9-c622-14f7" name="Decoy Launchers" hidden="false" targetId="e807-f290-815c-7312" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1428,6 +1486,10 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d1d-3865-8d2b-9e4f" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="7736-8615-19e9-e25b" name="Seeker Missle" hidden="false" targetId="7496-dcbe-e677-3ecf" type="profile"/>
+            <infoLink id="627a-4e81-48ba-fc1b" name="Seeker Missiles" hidden="false" targetId="3da4-d1a8-b8ae-b4ad" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -1435,13 +1497,6 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="e300-8e1d-4235-1a3c" name="XV88 Broadside Battlesuit Hard Point Options" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="increment" field="51c8-d423-98ac-b5b1" value="1.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d67-7aa5-0525-8d70" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51c8-d423-98ac-b5b1" type="max"/>
         <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ccb-737a-ed70-5dbe" type="min"/>
@@ -1474,6 +1529,7 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
             <selectionEntryGroup id="1d67-7aa5-0525-8d70" name="Drones" hidden="false" collective="false" import="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4cc-4644-8acc-4de1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1269-12f1-77e7-4fe0" type="min"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="9d58-1325-4a6a-2d0f" name="Gun Drone" hidden="false" collective="false" import="true" type="upgrade">
@@ -1577,6 +1633,9 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a54-7a3c-fe4e-aff0" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="5910-03eb-cd23-7b2d" name="Bonding Knife" hidden="false" targetId="1f5f-2d35-c5f7-9db4" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -1584,9 +1643,14 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
         <selectionEntry id="0ff8-b48e-d349-1c1b" name="Ork Fighter (Farsight Enclave)" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="8258-5966-c325-24c1" value="1.0">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02dc-e73d-f9f7-357a" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02dc-e73d-f9f7-357a" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb66-5614-26e2-0e90" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
               <repeats>
@@ -1610,13 +1674,6 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="1064-3c61-359b-cb94" name="XV8 Crisis Battlesuit Hard Point Options" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="increment" field="8a60-b903-222a-2ba6" value="1.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d67-7aa5-0525-8d70" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
@@ -1797,6 +1854,7 @@ Once attached, the Krootox function as part of the Carnivore squad they are atta
             <selectionEntryGroup id="296e-f714-3e03-af00" name="Drones" hidden="false" collective="false" import="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f10a-875e-c8a5-2e33" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82dc-9577-5493-c061" type="min"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="547b-f149-d446-0edf" name="Gun Drone" hidden="false" collective="false" import="true" type="upgrade">
@@ -1858,10 +1916,39 @@ An unbroken model with a jetpack that is not in close combat may always move 6&q
     <rule id="56e7-a13f-c004-e8dd" name="Drone Controller" hidden="false">
       <description>A drone controller enables the suit wearer to command from 1 to 2 gun or sheild drones.</description>
     </rule>
-    <rule id="e4b3-561f-f686-b18d" name="Honour Blade" hidden="false"/>
-    <rule id="1f5f-2d35-c5f7-9db4" name="Bonding Knife" hidden="false"/>
+    <rule id="e4b3-561f-f686-b18d" name="Honour Blade" hidden="false">
+      <description>The honour blade is a two-handed weapon that cannot be used with an additional weapon. It adds +2 S to the wielder&apos;s Strength when rolling to wound.</description>
+    </rule>
+    <rule id="1f5f-2d35-c5f7-9db4" name="Bonding Knife" hidden="false">
+      <description>A bonded team may regroup even if below half strength. </description>
+    </rule>
     <rule id="da14-cfd0-1939-ad50" name="Blacksun Filter" hidden="false">
       <description>Enables the user to see up to 4D6 x 3&quot; when fighting at night.</description>
+    </rule>
+    <rule id="e807-f290-815c-7312" name="Decoy Launchers" hidden="false">
+      <description>Whenever a Glancing Hit result of 4 (Immobilised) is rolled against the vehicle, the decoy launchers force the damage dice to be re-rolled, but the re-rolled result stands.</description>
+    </rule>
+    <rule id="2f77-21e2-5667-f96d" name="Disruption Pod" hidden="false">
+      <description>Weapons firing at a vehicle equiped with a Disruption Pod reduce their range by 6&quot;, down to a minimum of 24&quot; or the maximum range of the weapon, whichever is less.</description>
+    </rule>
+    <rule id="fe8d-2fa4-d273-0725" name="Flechette Discharger" hidden="false">
+      <description>If an enemy model elects to make a death or glory attempt during a tank shock by a vehicle equipped with flechette dischargers, it must first pass an Armour saving throw or suffer one wound.</description>
+    </rule>
+    <rule id="28ca-eea0-3317-daf9" name="Multi-tracker" hidden="false">
+      <description>A vehicle-mounted multi-tracker allows the vehicle to fire as if it were a fast vehicle. Therefore it can fire one weapon if moving up to 12&quot; and all weapons if moving up to 6&quot;.</description>
+    </rule>
+    <rule id="3da4-d1a8-b8ae-b4ad" name="Seeker Missiles" hidden="false">
+      <description>Any model equipped with a markerlight may request a single missile to be launched if they score a hit on the desired target with their markerlight. The missles do not need a line of sight from the vehicle to the target, and they hit on a 2+. Against vehicles, the missle strikes the armour facing the firing vehicle, even if the markerlight is in a different facing. The target can still use the benefits of cover they are in or immediately behind.
+The vehicle equipped with the missiles cannot launch them itself. They are always fired by other models armed with markerlights.</description>
+    </rule>
+    <rule id="facc-db84-ec11-bf2c" name="Sensor Spines" hidden="false">
+      <description>Sensor spines allow the vehicle to detect ambushes (Codex: Catachans, p.20) and secret deployments (Lictors, Codex: Tyranids, p.11). They may shoot and scan in the same Shooting Phase. Additionally, a vehicle fitted with sensor spines will only trigger a mine when passing over a minefield on a roll of 6.</description>
+    </rule>
+    <rule id="83bc-f6e9-89c3-4bf3" name="Target Lock" hidden="false">
+      <description>The target lock enables the model to target a separate enemy unit with each weapon, if desired.</description>
+    </rule>
+    <rule id="ce5a-d3df-81a4-b045" name="Targetting Array" hidden="false">
+      <description>Add +1 BS to the vehicle.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2008,12 +2095,13 @@ An unbroken model with a jetpack that is not in close combat may always move 6&q
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="792c-9a16-c436-7e84" name="Devilfish" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+    <profile id="792c-9a16-c436-7e84" name="Devilfish" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
-        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
-        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
-        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
-        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">11</characteristic>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204">3</characteristic>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">12</characteristic>
       </characteristics>
     </profile>
     <profile id="ec7e-b563-6021-05f5" name="Kroot" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
