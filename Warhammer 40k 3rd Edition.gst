@@ -1860,7 +1860,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3, Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Treat any armour value higher than 12 as 12</characteristic>
       </characteristics>
     </profile>
     <profile id="1167-5f76-35ab-9e44" name="Distort Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
