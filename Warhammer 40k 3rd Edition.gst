@@ -780,22 +780,22 @@
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Meltaguns are devastating short ranged &quot;heat rays.&quot; Melta weapons roll an extra D6 to penetrate vehicles at half range.</characteristic>
       </characteristics>
     </profile>
-    <profile id="aa04-2d5e-da7e-2d25" name="Missle Launcher (frag)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="aa04-2d5e-da7e-2d25" name="Missile Launcher (frag)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1 Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missle Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="4e6c-7b62-ba6d-05cf" name="Missle Launcher (krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="4e6c-7b62-ba6d-05cf" name="Missile Launcher (krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missle Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>
     </profile>
     <profile id="57eb-e5dd-c986-ffaa" name="Mortar" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1245,7 +1245,7 @@
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"></characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
     <profile id="b467-e518-11c9-c23a" name="Big Shoota" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1329,13 +1329,13 @@
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If targetting a vehicle within 6&quot; roll 2D6 for armor penetration.</characteristic>
       </characteristics>
     </profile>
-    <profile id="a92d-c02e-9701-2405" name="Smart Missle System" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="a92d-c02e-9701-2405" name="Smart Missile System" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 4</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Smart Missle can engage any target in range regardless of whether there is a line of sight to it or not. The target can count the benefits of cover they are in or touching. If fighting at night, the range to the target is reduced as normal because the missle&apos;s sensors are less likely to identify and confirm the target.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Smart Missile can engage any target in range regardless of whether there is a line of sight to it or not. The target can count the benefits of cover they are in or touching. If fighting at night, the range to the target is reduced as normal because the missle&apos;s sensors are less likely to identify and confirm the target.</characteristic>
       </characteristics>
     </profile>
     <profile id="2748-95a6-70de-824a" name="Railgun (solid shot)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1732,7 +1732,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="760f-e4d8-3c2b-5e9a" name="Typhoon Missle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="760f-e4d8-3c2b-5e9a" name="Typhoon Missile" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -1959,7 +1959,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"></characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
     <profile id="5750-93a3-6a3c-49b9" name="Manticore Missile" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -2023,6 +2023,24 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance1/Blast</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Titan Killer</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d05d-f8bb-2011-6807" name="Turbo-laser" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heacy 1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="beb4-876e-921a-2c8f" name="Hyperios Ant-Aircraft Missiles" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/AA</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
   </sharedProfiles>
