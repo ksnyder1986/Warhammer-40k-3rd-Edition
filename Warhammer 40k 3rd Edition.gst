@@ -1244,8 +1244,8 @@
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 5 Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ordnance 1/Blast</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"></characteristic>
       </characteristics>
     </profile>
     <profile id="b467-e518-11c9-c23a" name="Big Shoota" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1896,7 +1896,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1 Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">One shot. If a flayer releases several bombs at the same time, treat each bomb as a separate bomb in a &quot;battery&quot;.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">One shot. If a flyer releases several bombs at the same time, treat each bomb as a separate bomb in a &quot;battery&quot;.</characteristic>
       </characteristics>
     </profile>
     <profile id="52ac-16f1-b437-6d96" name="Big Bomb" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1915,6 +1915,114 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">One shot.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6ed6-d055-77b9-709e" name="Vanquisher Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">May choose to fire an AT shell instead of using an Ordnance blast. Instead roll to hit using the crew&apos;s BS. If a hit is scored roll two D6 for Armour Penetration and add the scores together.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="b5c8-117e-3c18-ee72" name="Stormsword Siege Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Titan Killer</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7e64-0b48-b422-af0e" name="Volcano Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">120&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Titan Killer</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="9bbf-a9e4-15ee-0d10" name="Medusa Siege Gun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Orgnance 1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="85dd-b3a9-328b-96d5" name="Baneblade Battle Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"></characteristic>
+      </characteristics>
+    </profile>
+    <profile id="5750-93a3-6a3c-49b9" name="Manticore Missile" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G36-300&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">One shot.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="48dc-47d4-5d34-3078" name="Long Barrelled Autocannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="2d7d-d376-d4c2-3f8c" name="Plasma Destroyer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">54&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1 Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="5fd0-8bc3-0bce-5e81" name="Laser Destroyer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Instead of using the Scatter Dice, roll to hit using the crew&apos;s BS as normal. If the shot hits, resolve the damage as an ordnance hit (but without a blast marker). If the shot misses it simply misses.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="814e-4aa4-0908-6350" name="Conqueror Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="e434-66a1-6cb9-9e3d" name="Multiple Rockit Pods" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="1946-2b91-fbb1-1404" name="Plasma Blastgun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">54&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance1/Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Titan Killer</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
