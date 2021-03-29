@@ -39,6 +39,9 @@
     <entryLink id="e679-533d-7333-3f00" name="Nightwing (IA)" hidden="false" collective="false" import="true" targetId="4071-07cc-a2b7-d555" type="selectionEntry"/>
     <entryLink id="05c5-8c67-c102-8bb7" name="Scorpion (IA)" hidden="false" collective="false" import="true" targetId="d431-bb95-c1e1-fe66" type="selectionEntry"/>
     <entryLink id="452c-049f-d267-fe25" name="Vampire (IA)" hidden="false" collective="false" import="true" targetId="15be-6f70-5785-eec5" type="selectionEntry"/>
+    <entryLink id="494d-76a0-633c-0b70" name="Vampire Hunter (IA)" hidden="false" collective="false" import="true" targetId="3e81-6444-edc0-185d" type="selectionEntry"/>
+    <entryLink id="16e2-78d3-4aea-df6c" name="Phoenix (IA)" hidden="false" collective="false" import="true" targetId="66f2-0ddd-90f0-daf5" type="selectionEntry"/>
+    <entryLink id="108e-11ad-fd5f-3fea" name="Void Dragon Phoenix (IA)" hidden="false" collective="false" import="true" targetId="cb1a-bfbb-b7a1-4d76" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a4ef-a5f7-1009-a021" name="Avatar of the Bloody-Handed God" hidden="false" collective="false" import="true" type="unit">
@@ -2188,7 +2191,7 @@
         <entryLink id="4a4c-1e56-0956-8865" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="156.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d431-bb95-c1e1-fe66" name="Scorpion (IA)" hidden="false" collective="false" import="true" type="unit">
@@ -2201,7 +2204,7 @@
       <infoLinks>
         <infoLink id="9e96-b737-6fe4-94a7" name="Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
         <infoLink id="ee9c-1c7a-ea25-6ec9" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-        <infoLink id="e0fc-f35e-2f08-3b50" name="Bright Lance" hidden="false" targetId="6f4e-bc15-c01c-501a" type="profile"/>
+        <infoLink id="e0fc-f35e-2f08-3b50" name="Pulsar" hidden="false" targetId="5820-b09c-720c-4e2a" type="profile"/>
         <infoLink id="18d5-a7f5-45c0-1226" name="Pulsar" hidden="false" targetId="5820-b09c-720c-4e2a" type="profile">
           <modifiers>
             <modifier type="set" field="name" value="Twin-Linked Pulsar"/>
@@ -2265,11 +2268,19 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="287.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="15be-6f70-5785-eec5" name="Vampire (IA)" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="15be-6f70-5785-eec5" name="Vampire Raider (IA)" hidden="false" collective="false" import="true" type="unit">
       <comment>Imperial Armour 2 Page 21</comment>
       <infoLinks>
         <infoLink id="2a7e-e0b6-1b2f-e816" name="Super-Heavy Flyer" hidden="false" targetId="7ca6-da5f-a87c-f49b" type="rule"/>
-        <infoLink id="575b-0982-229d-0c14" name="Vampire" hidden="false" targetId="02f9-7f32-18ab-13b3" type="profile"/>
+        <infoLink id="575b-0982-229d-0c14" name="Vampire" hidden="false" targetId="02f9-7f32-18ab-13b3" type="profile">
+          <modifiers>
+            <modifier type="set" field="e1d2-e9ec-26d6-1f11" value="20">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1632-b87f-a5f3-a3e9" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="5229-5601-b62b-2627" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
         <infoLink id="72bf-0f7c-77bc-1e89" name="Orbital Lander" hidden="false" targetId="7b1f-05c8-5a14-f539" type="rule"/>
         <infoLink id="1a41-6b68-1040-766c" name="Pulse Laser" hidden="false" targetId="b726-76b7-0d78-59d9" type="profile">
@@ -2278,13 +2289,188 @@
           </modifiers>
         </infoLink>
         <infoLink id="29dc-13eb-94aa-1a49" name="Scatter Laser" hidden="false" targetId="0ea6-3b92-6129-8731" type="profile"/>
-        <infoLink id="8e25-1401-e843-d354" name="Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
+        <infoLink id="8e25-1401-e843-d354" name="Eldar Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0a4d-7374-d078-8cd5" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1632-b87f-a5f3-a3e9" name="Heavy Mount" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7623-80c5-c141-2372" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2801-7c98-2b96-cd7e" name="Pulsar" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="99ff-3d13-fc92-26c9" name="Pulsar" hidden="false" targetId="5820-b09c-720c-4e2a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="200.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="434a-e688-747b-1cf9" name="Gatling Eldar Missile Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="3aed-4f65-944b-8317" name="Gatling Missile Launcher (Krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">All missiles fired must be of the same type. Squad taking casualties from a plasma missile must test for pinning.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="64a5-152e-fc1b-aa61" name="Gatling Missile Launcher (Plasma)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3/Blast</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">All missiles fired must be of the same type. Squad taking casualties from a plasma missile must test for pinning.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="780.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="580.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3e81-6444-edc0-185d" name="Vampire Hunter (IA)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Imperial Armour 2 Page 21</comment>
+      <infoLinks>
+        <infoLink id="00ee-b1c4-7ea1-7d02" name="Super-Heavy Flyer" hidden="false" targetId="7ca6-da5f-a87c-f49b" type="rule"/>
+        <infoLink id="3503-ef0d-ff8e-74c1" name="Vampire" hidden="false" targetId="02f9-7f32-18ab-13b3" type="profile"/>
+        <infoLink id="1a67-379b-cd65-f618" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="3b4e-2720-27a4-e935" name="Orbital Lander" hidden="false" targetId="7b1f-05c8-5a14-f539" type="rule"/>
+        <infoLink id="88b4-03a2-b91a-a230" name="Pulse Laser" hidden="false" targetId="b726-76b7-0d78-59d9" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Pulse Lasers"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="32cd-b4ff-8fda-df1c" name="Scatter Laser" hidden="false" targetId="0ea6-3b92-6129-8731" type="profile"/>
+        <infoLink id="4a63-03d7-62a1-bb21" name="Eldar Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8491-68b8-75fc-a618" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="76fe-4412-ea75-f388" name="Twin-Linked Gatling Missile Launcher" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="251f-d042-99ca-d872" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9aaf-cbfa-9010-2ffa" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="d643-c375-32ad-f20a" name="Twin-Linked Gatling Missile Launcher (Krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">All missiles fired must be of the same type. Squad taking casualties from a plasma missile must test for pinning.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d5b3-fe25-4902-ad96" name="Twin-Linked Gatling Missile Launcher (Plasma)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3/Blast</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">All missiles fired must be of the same type. Squad taking casualties from a plasma missile must test for pinning.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="730.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="66f2-0ddd-90f0-daf5" name="Phoenix (IA)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="9eba-277a-003d-81cf" name="Twin-Linked Gatling Missile Launcher (Krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">All missiles fired must be of the same type. Squad taking casualties from a plasma missile must test for pinning.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="abae-cfbf-141c-1b32" name="Twin-Linked Gatling Missile Launcher (Plasma)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3/Blast</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">All missiles fired must be of the same type. Squad taking casualties from a plasma missile must test for pinning.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c689-a6ee-8c90-c119" name="Phoenix" hidden="false" targetId="dd41-806d-d360-5773" type="profile"/>
+        <infoLink id="8e27-f390-d8c3-5972" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="9625-9cf3-bc67-4518" name="Pulse Laser" hidden="false" targetId="b726-76b7-0d78-59d9" type="profile"/>
+        <infoLink id="1f5c-9788-b63e-0fc9" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Shuriken Cannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="f322-36de-4827-78da" name="Eldar Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
+        <infoLink id="8d82-b184-ace5-b394" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="260e-9d09-338c-c51a" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="353.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cb1a-bfbb-b7a1-4d76" name="Void Dragon Phoenix (IA)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="2183-55c1-bf37-e11e" name="Twin-Linked Gatling Missile Launcher (Krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">All missiles fired must be of the same type. Squad taking casualties from a plasma missile must test for pinning.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d255-392d-6633-9681" name="Twin-Linked Gatling Missile Launcher (Plasma)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3/Blast</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">All missiles fired must be of the same type. Squad taking casualties from a plasma missile must test for pinning.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="ef47-9b6b-a640-5281" name="Phoenix" hidden="false" targetId="dd41-806d-d360-5773" type="profile"/>
+        <infoLink id="07b2-cdcc-58de-c410" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="ef4d-1b0f-50db-9469" name="Eldar Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
+        <infoLink id="c88a-efac-79b9-f213" name="Starcannon" hidden="false" targetId="841e-28f9-4e25-68ca" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Starcannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="d892-786b-2854-b4be" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Shuriken Cannon"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4228-7dbf-98c5-c6c1" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="360.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -3385,7 +3571,7 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
         <characteristic name="Side Armor" typeId="8ec2-d2f2-3bed-35ef">10</characteristic>
         <characteristic name="Rear Armor" typeId="b276-1b4e-26d8-0a08">10</characteristic>
         <characteristic name="BS" typeId="de63-2aba-c18c-6d47">4</characteristic>
-        <characteristic name="Structure Points" typeId="a817-7301-451c-20c9">5</characteristic>
+        <characteristic name="Structure Points" typeId="a817-7301-451c-20c9">3</characteristic>
         <characteristic name="Capacity" typeId="e1d2-e9ec-26d6-1f11">30 infantry. It mat carry Wraithguard, which count as two models each. It may carry support platforms, which count as two models in addition to the crew.</characteristic>
       </characteristics>
     </profile>
@@ -3433,6 +3619,14 @@ Ignores Armour Saves. A multi-wound model that suffers a wound from a diresword 
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="dd41-806d-d360-5773" name="Phoenix" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
