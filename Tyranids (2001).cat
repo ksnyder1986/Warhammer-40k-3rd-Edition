@@ -6,7 +6,22 @@
         <categoryLink id="59f3-dbf4-e246-629f" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="a537-4de8-5390-38e2" name="Tyrant Guard Brood" hidden="false" collective="false" import="true" targetId="b6f8-a570-2d0d-bc4b" type="selectionEntry">
+    <entryLink id="a537-4de8-5390-38e2" name="Tyrant Guard Brood" hidden="true" collective="false" import="true" targetId="b6f8-a570-2d0d-bc4b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="23fb-5a5c-921c-6ebc" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="ed1d-8668-5777-d064" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0eb5-cb99-357f-6128" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed1d-8668-5777-d064" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="c118-9a76-b35a-ec46" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
@@ -88,6 +103,21 @@
     <entryLink id="3242-9bd5-ad4a-2c70" name="Old One Eye" hidden="false" collective="false" import="true" targetId="d417-00ea-ef6e-f6fd" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="d089-cdc6-95fc-2dce" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d5d0-184c-60e8-53b7" name="Scythed Hierodule (IA)" hidden="false" collective="false" import="true" targetId="f24a-bf46-43c5-9ee8" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a57c-ee21-f61c-2b19" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="15ca-47e0-fd7f-410f" name="Barbed Hierodule (IA)" hidden="false" collective="false" import="true" targetId="057b-ca57-e847-8a0b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f2ce-b69a-2a94-1b48" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4903-576d-70d3-1b97" name="Harridan (IA)" hidden="false" collective="false" import="true" targetId="6ae9-7f32-f095-e5d6" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="18b5-6118-33c0-451e" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -292,10 +322,15 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="0eb5-cb99-357f-6128" name="Retinue" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb14-37d3-9b08-c776" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="2562-7eb8-16f1-dbd1" name="Tyrant Guard Brood" hidden="false" collective="false" import="true" targetId="b6f8-a570-2d0d-bc4b" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="9e51-91ff-cc04-739a" name="Tyrant Guard Brood" hidden="false" collective="false" import="true" targetId="b6f8-a570-2d0d-bc4b" type="selectionEntry"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="90.0"/>
       </costs>
@@ -1255,6 +1290,167 @@ Models with a Strength of Toughness of 5 or greater, Bikes/Cavalry, and anything
       </infoLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="164.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f24a-bf46-43c5-9ee8" name="Scythed Hierodule (IA)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="9188-3fda-cc6c-35e5" name="Scythed Hierodule (IA)" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">6</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">2</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">10</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">8</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">5</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">2(4)</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2d3f-6437-fcda-478a" name="Acid Spray" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="57aa-c2f4-8f54-3122" name="The Horror" hidden="false" targetId="1145-b9af-3e5e-f939" type="rule"/>
+        <infoLink id="3c9e-c32b-4ca1-10a2" name="Scything Talons" hidden="false" targetId="959a-831b-05aa-b8cf" type="rule"/>
+        <infoLink id="3cd6-192f-1c80-8299" name="Tyranid Monstrous Creatures" hidden="false" targetId="afea-f57b-bf0d-614e" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="445.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="057b-ca57-e847-8a0b" name="Barbed Hierodule (IA)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="bb81-5da2-21b4-f54b" name="Barbed Hierodule" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">8</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">8</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">5</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">1(2)</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1e11-9766-7729-531e" name="Bio-Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Bio-Cannon"/>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1/Ordnance Blast</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4d35-498f-eb06-d6ce" name="The Horror" hidden="false" targetId="1145-b9af-3e5e-f939" type="rule"/>
+        <infoLink id="c618-5c8b-5377-d00f" name="Scything Talons" hidden="false" targetId="959a-831b-05aa-b8cf" type="rule"/>
+        <infoLink id="fb5e-3ad0-0dc0-fb4b" name="Tyranid Monstrous Creatures" hidden="false" targetId="afea-f57b-bf0d-614e" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="540.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6ae9-7f32-f095-e5d6" name="Harridan (IA)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="8464-1dfa-8667-c15b" name="Harridan (IA)" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">8</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">7</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">5</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">1(2)</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="67c0-54f4-517d-d430" name="Bio-Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Bio-Cannon"/>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1/Ordnance Blast</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="05e6-6aee-e8e5-83ce" name="Mass Points" hidden="false">
+          <description>The Harridan has 3 mass points</description>
+        </rule>
+        <rule id="197c-96ac-3357-4c9a" name="Scything Claws" hidden="false">
+          <description>Instead of firing its bio-cannons the Harridan may use its scything claws to swoop down on the enemy and attack in close combat. TO do this the Harridan is moved into contact with an enemy unit - it can still be fired at as normal. It then makes it two attacks. Afterwords the Harridan flies off using the normal flyer rules.</description>
+        </rule>
+        <rule id="ddfb-0c8c-f607-c9fa" name="Gargoyle Brood" hidden="false">
+          <description>The Gargoyle Brood can be deployed as if disembarking from a vehicle. Place the Gargoyle Brood on the table with 2&quot; of the Harridan. They may move as normal in the Tyranid player&apos;s next turn.
+If the Harridan is hit by a blast weapon while the Gargoyles are attacked then the Gargoyles are hit as well. If the Harridan is shot down then the Gargoyles immediately deploy from the point where the Harridan was destroyed.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="26cd-4764-0cc1-4ba9" name="Scything Talons" hidden="false" targetId="959a-831b-05aa-b8cf" type="rule"/>
+        <infoLink id="8c76-9d5e-8452-74f7" name="Tyranid Monstrous Creatures" hidden="false" targetId="afea-f57b-bf0d-614e" type="rule"/>
+        <infoLink id="a742-b16e-172a-3ba6" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="811a-796d-13e5-c764" name="Gargoyle Brood" hidden="false" collective="false" import="true" type="unit">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73e5-b16b-6779-f5d8" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="0de6-97b6-4e0b-653b" name="Fleet of Wing" hidden="false">
+              <description>Instead of shooting the unit may move an additional D6&quot; in the shooting phase</description>
+            </rule>
+            <rule id="5232-dfee-0aeb-08e8" name="Wings" hidden="false">
+              <description>Gargoyles can move 12&quot; in the Movement phase and they will advance and fall back 3D6&quot; instead of 2D6&quot;. They ignore terrain moved over, but may not enter difficult or impassable terrain. Gargoyles forced to enter difficult or impassible terrain for any reason are removed as casualties.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="dcec-278d-8aea-fcc1" name="Gargoyle" hidden="false" targetId="c3d2-4b27-25dc-cc65" type="profile"/>
+            <infoLink id="8d2a-5897-44c2-3160" name="Fleshborer" hidden="false" targetId="36de-021e-7ce1-8b11" type="profile"/>
+            <infoLink id="84cd-d6b1-d2b9-8cdf" name="Bio-plasma" hidden="false" targetId="5611-7e2e-662f-0506" type="rule"/>
+            <infoLink id="51d9-633a-a259-48b4" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
+            <infoLink id="df50-1470-27cf-817a" name="Instinctive Behavior" hidden="false" targetId="dea2-e710-8473-b3ed" type="rule"/>
+            <infoLink id="7cf0-ca86-e797-6241" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="8aee-aaae-d493-2e10" name="Gargoyles" hidden="false" collective="false" import="true" defaultSelectionEntryId="78e9-2d39-acbf-f0a0">
+              <constraints>
+                <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e63-8501-5390-f9e0" type="max"/>
+                <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="948f-0592-50be-581a" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="78e9-2d39-acbf-f0a0" name="Gargoyle" hidden="false" collective="false" import="true" type="model">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="636.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
