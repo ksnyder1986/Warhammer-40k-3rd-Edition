@@ -2,9 +2,15 @@
 <catalogue id="542b-105b-a073-a6c1" name="Witch Hunters (2003)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="bd50-bb90-bb09-3002" name="Adepta Sororitas" hidden="false"/>
+    <categoryEntry id="0ebb-2b64-3f2d-fffb" name="Space Marine Ally" hidden="false"/>
+    <categoryEntry id="258f-122f-d9a4-245c" name="Inducted Imperial Guard" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="affc-261e-e560-056a" name="Allied Contingents" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7af-42e9-eec4-5c09" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df72-e468-d0f5-86e8" type="min"/>
+      </constraints>
       <entryLinks>
         <entryLink id="a86d-fc7f-e870-4326" name="Allied Contingents" hidden="false" collective="false" import="true" targetId="5cd1-9f71-3b43-e985" type="selectionEntryGroup"/>
       </entryLinks>
@@ -15,6 +21,599 @@
   </selectionEntries>
   <entryLinks>
     <entryLink id="aa6e-66c4-4c87-7aec" name="Celestian Squad" hidden="false" collective="false" import="true" targetId="ed56-564f-d8bd-b514" type="selectionEntry"/>
+    <entryLink id="3c44-fa7f-3dbe-92e7" name="Ordo Hereticus Inquisitor Lord" hidden="false" collective="false" import="true" targetId="27ee-b0a2-0c2a-b518" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e999-7392-96d5-e675" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="260e-f26e-682c-14cd" name="Ordo Hereticus Inquisitor" hidden="false" collective="false" import="true" targetId="341c-1d2c-25d8-af97" type="selectionEntry"/>
+    <entryLink id="5902-3423-5c16-7366" name="Canoness" hidden="false" collective="false" import="true" targetId="f9ca-5d42-058f-b429" type="selectionEntry"/>
+    <entryLink id="258e-4752-81b7-44cc" name="Palatine" hidden="false" collective="false" import="true" targetId="c538-fd25-61e6-ca37" type="selectionEntry"/>
+    <entryLink id="27cb-11d6-8bac-47f9" name="Sisters Repentia" hidden="false" collective="false" import="true" targetId="4283-2c1e-14e2-b1f1" type="selectionEntry"/>
+    <entryLink id="34ec-8c26-a640-0a97" name="Arco-flagellants" hidden="false" collective="false" import="true" targetId="75e8-963b-d44e-77cd" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="9d5b-237c-d2ce-d6c6" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2313-d9ac-2eca-b253" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d5b-237c-d2ce-d6c6" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="bd6c-f61d-ecac-a92d" name="Inquisitorial Storm Troopers" hidden="false" collective="false" import="true" targetId="d993-03c9-2f08-148a" type="selectionEntry"/>
+    <entryLink id="98c0-0130-9a78-90ec" name="Battle Sisters Squad" hidden="false" collective="false" import="true" targetId="053f-b0a6-cb4b-33c5" type="selectionEntry"/>
+    <entryLink id="7e38-f343-b71c-8c18" name="Adeptus Arbites" hidden="false" collective="false" import="true" targetId="315a-e719-2d33-9f33" type="selectionEntry"/>
+    <entryLink id="2d2b-35c0-b51f-bb53" name="Dominion Squad" hidden="false" collective="false" import="true" targetId="074d-81dc-6c8a-41e2" type="selectionEntry"/>
+    <entryLink id="008c-e2a4-496d-e30e" name="Seraphim Squad" hidden="false" collective="false" import="true" targetId="dd8b-8f26-9f10-7ab1" type="selectionEntry"/>
+    <entryLink id="5e42-da57-cc81-1d69" name="Death-cult Assassins" hidden="false" collective="false" import="true" targetId="43a5-94d3-829a-f765" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="b315-9e1c-d7e0-4325" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="260e-f26e-682c-14cd" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c44-fa7f-3dbe-92e7" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b315-9e1c-d7e0-4325" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="d4ac-9410-cafd-4a1e" name="Officio Assassinorum Operative" hidden="false" collective="false" import="true" targetId="bb35-7be3-e49a-948b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="35bc-b333-7162-ec92" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="260e-f26e-682c-14cd" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c44-fa7f-3dbe-92e7" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35bc-b333-7162-ec92" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="6f9c-e53c-1f02-bfe4" name="Retributor Squad" hidden="false" collective="false" import="true" targetId="20c5-1c46-6b3b-c7d0" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="215a-c8c6-1e6c-708c" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="b568-4577-6d0f-d13d" name="Penitent Engines" hidden="false" collective="false" import="true" targetId="81bd-6c77-4ed1-ea44" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="ada0-2c4d-937e-83f1" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2313-d9ac-2eca-b253" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ada0-2c4d-937e-83f1" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="2313-d9ac-2eca-b253" name="Priests" hidden="false" collective="false" import="true" targetId="8920-3237-2788-4375" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba5a-0bfa-df1d-234e" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="e82c-b530-69e6-8250" name="Immolator" hidden="false" collective="false" import="true" targetId="172c-0e38-a231-9ad8" type="selectionEntry"/>
+    <entryLink id="05ff-0841-b1f5-78f7" name="Exorcist" hidden="false" collective="false" import="true" targetId="5ec3-ba74-8e16-11cc" type="selectionEntry"/>
+    <entryLink id="8b78-2d3f-c9db-3e3f" name="Orbital Strike" hidden="false" collective="false" import="true" targetId="6b62-c09c-fb16-cdf1" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a163-e7d2-ad4a-4fc3" type="max"/>
+      </constraints>
+    </entryLink>
+    <entryLink id="e256-e07e-c7d7-9565" name="Space Marine Tactical Squad (Allied)" hidden="true" collective="false" import="true" targetId="bae5-57a7-1274-2455" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="7e8c-30f4-ee46-4b1d" name="Scout Squad (Allied)" hidden="true" collective="false" import="true" targetId="7327-bb79-feec-855d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="a8dd-a75b-fbcb-b64d" name="Armoured Fist Squad (Inducted)" hidden="true" collective="false" import="true" targetId="bc8a-b970-530a-0bf3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1686-72da-a629-b31e" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="418f-e4e7-5190-5c39" name="Infantry Platoon (Inducted)" hidden="true" collective="false" import="true" targetId="63ec-c342-8998-62bf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1686-72da-a629-b31e" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="053f-b0a6-cb4b-33c5" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d993-03c9-2f08-148a" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="315a-e719-2d33-9f33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="484b-3e3f-4d3b-57a6" name="Assault Squad (Allied)" hidden="true" collective="false" import="true" targetId="eae2-86b0-8269-5b62" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="18f7-5a62-6646-bfa1" name="Land Speeder Squadron (Allied)" hidden="true" collective="false" import="true" targetId="7d14-87ca-457a-42a6" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="a571-902b-9f9d-d62b" name="Land Speeder Tornado (Allied)" hidden="true" collective="false" import="true" targetId="18b3-c5f3-dc8b-d06f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+                <condition field="selections" scope="0ebb-2b64-3f2d-fffb" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ef5-5056-d52e-3cfd" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="e48f-c2d4-a63f-4a71" name="Bike Squadron (Allied)" hidden="true" collective="false" import="true" targetId="856f-846b-69ed-ba13" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="a9f4-7d07-5db4-7611" name="Sentinel Squadron (Inducted)" hidden="true" collective="false" import="true" targetId="7c04-c975-1819-d67e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1686-72da-a629-b31e" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc8a-b970-530a-0bf3" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="63ec-c342-8998-62bf" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="63ec-c342-8998-62bf" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc8a-b970-530a-0bf3" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="f2c2-8bb6-5fe3-7c08" name="Rough Rider Squadron (Inducted)" hidden="true" collective="false" import="true" targetId="a698-14fd-db23-31b7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1686-72da-a629-b31e" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc8a-b970-530a-0bf3" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="63ec-c342-8998-62bf" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="63ec-c342-8998-62bf" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc8a-b970-530a-0bf3" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="4c49-a05f-cc5d-3e0b" name="Devastator Squad (Allied)" hidden="true" collective="false" import="true" targetId="22c7-dbbd-4b48-bae4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="2b29-b383-74ba-6ad3" name="Land Raider (Allied)" hidden="true" collective="false" import="true" targetId="04dc-6db9-4653-9440" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="dd8c-466e-1dad-696d" name="Predator Annihilator (Allied)" hidden="true" collective="false" import="true" targetId="d7f8-65d3-0542-ffb0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="ba0e-ed3f-dfd1-931d" name="Predator Destructor (Allied)" hidden="true" collective="false" import="true" targetId="1c3e-fcbe-4b17-5480" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="794d-0973-35b0-4339" name="Dreadnought (Allied)" hidden="true" collective="false" import="true" targetId="6852-d18d-8c5c-5c96" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc88-7358-80ab-4c19" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7327-bb79-feec-855d" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bae5-57a7-1274-2455" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="71b9-887d-8ec8-82b0" name="Leman Russ Battle Tank (Inducted)" hidden="true" collective="false" import="true" targetId="258d-86aa-7997-4fa8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1686-72da-a629-b31e" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc8a-b970-530a-0bf3" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="63ec-c342-8998-62bf" type="greaterThan"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="63ec-c342-8998-62bf" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bc8a-b970-530a-0bf3" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="536a-3377-6195-63ec" type="max"/>
+      </constraints>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="27ee-b0a2-0c2a-b518" name="Ordo Hereticus Inquisitor Lord" hidden="false" collective="false" import="true" type="unit">
@@ -54,6 +653,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="962e-f18b-99b8-afaa" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
+        <categoryLink id="9c85-d1aa-613e-0fc3" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="7479-0818-9f24-e87b" name="Turret Weapon" hidden="false" collective="false" import="true">
@@ -243,6 +843,10 @@
         <infoLink id="3487-0f5f-cada-6177" name="Battle Cannon" hidden="false" targetId="3a2e-94e4-b9a3-bb11" type="profile"/>
         <infoLink id="bb43-1c84-064b-7049" name="Leman Russ Battle Tank" hidden="false" targetId="dfe7-f8b7-0faf-abca" type="profile"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="875d-5a1c-3e00-84d6" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
+        <categoryLink id="49d7-118d-124f-71c9" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="9f71-77c0-39e2-05ec" name="Hull Weapon" hidden="false" collective="false" import="true">
           <constraints>
@@ -300,6 +904,10 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bc8a-b970-530a-0bf3" name="Armoured Fist Squad (Inducted)" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="3de8-6257-c43f-38a6" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="fa4a-28c3-8ec6-fea8" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4b9e-0e99-0250-c585" name="Frag Genades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -523,6 +1131,7 @@
       <categoryLinks>
         <categoryLink id="6ef5-038b-b48e-9050" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
         <categoryLink id="3976-54e7-b762-0050" name="Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="d34e-d6ba-87da-d8f5" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="08e8-fd1d-187f-086d" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="97dd-bf9e-7d7d-a40f" type="selectionEntryGroup"/>
@@ -532,6 +1141,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8ef2-6b84-c4d3-5045" name="Infantry Squad (Inducted)" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="5dfc-7cd7-ef04-22da" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e52d-d352-c500-d26c" name="Frag Genades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -733,6 +1345,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2a95-9d72-2947-417a" name="Platoon Command Squad (Inducted)" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="40ee-934c-410b-5d8e" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1e7a-38f6-244f-8d79" name="Frag Genades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -1053,6 +1668,10 @@
       <constraints>
         <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ddf-8609-96ab-d416" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink id="7945-fe1e-722a-0c64" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
+        <categoryLink id="2a36-6193-d69b-a2eb" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="a75e-e140-98d7-e8f0" name="Infantry Squad (Inducted)" hidden="false" collective="false" import="true" targetId="8ef2-6b84-c4d3-5045" type="selectionEntry">
           <constraints>
@@ -1083,6 +1702,7 @@
       <categoryLinks>
         <categoryLink id="5186-165f-65e9-689c" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
         <categoryLink id="5458-ccb8-9ee1-a1ff" name="Open-Topped" hidden="false" targetId="3b60-8955-571e-912d" primary="false"/>
+        <categoryLink id="5af1-3e1e-e5e4-84a9" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="e22b-d03b-d0d5-e2db" name="Weapon" hidden="false" collective="false" import="true">
@@ -1134,6 +1754,10 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7c04-c975-1819-d67e" name="Sentinel Squadron (Inducted)" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="a2ff-3abc-ac8b-39c9" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
+        <categoryLink id="561d-8578-ba72-4d4f" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="c841-14b8-afd0-d0f4" name="Sentinel (Inducted)" hidden="false" collective="false" import="true" targetId="1503-9582-1e82-99d8" type="selectionEntry">
           <constraints>
@@ -1155,6 +1779,10 @@
       <infoLinks>
         <infoLink id="64a9-4600-cf34-03f2" name="Cavalry" hidden="false" targetId="0e80-1d1e-f91a-11fe" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4975-f75e-23f3-3ec3" name="Inducted Imperial Guard" hidden="false" targetId="258f-122f-d9a4-245c" primary="false"/>
+        <categoryLink id="723f-df26-f9a6-4d0f" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f623-ded7-2b09-6846" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -1380,6 +2008,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="bf01-d6ef-4a10-3eef" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="e520-3be9-2c6f-7308" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="36a2-a7e0-c402-c91f" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1574,6 +2203,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="537c-dbb7-8225-b8a5" name="New CategoryLink" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
+        <categoryLink id="cb78-f6f5-02e7-592d" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="3e0c-d9f6-d002-cab6" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="28e7-a207-4e89-bcb5" type="selectionEntryGroup"/>
@@ -1588,6 +2218,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="da0a-2c57-8c53-ace6" name="New CategoryLink" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
+        <categoryLink id="1aaf-f596-73ff-5e7f" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="90de-f128-815a-918b" name="Turret Weapon" hidden="false" collective="false" import="true">
@@ -1659,6 +2290,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f8fd-4d1b-b0d3-4c87" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="397f-5453-9463-9806" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="778f-7156-c411-5367" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1841,6 +2473,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="912e-a373-9964-c917" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="2efa-7861-fbad-fcee" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="902c-0e89-d7fc-4815" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1979,6 +2612,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f078-ded7-6d7b-8152" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="05d6-0c46-1996-1159" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="07cd-0a10-3da0-3e01" name="Space Marines" hidden="false" collective="false" import="true">
@@ -2152,6 +2786,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5d2e-be39-4af6-5a81" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="65fb-3d1d-dbbc-91f7" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="ffe1-643a-d1d0-25fd" name="Replace Heavy Bolter" hidden="false" collective="false" import="true">
@@ -2192,6 +2827,7 @@
     <selectionEntry id="7d14-87ca-457a-42a6" name="Land Speeder Squadron (Allied)" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink id="aaef-7dcd-161f-3d8b" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="57ca-1d1e-ca9a-d96d" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7c26-daea-9f31-a52d" name="Land Speeder" hidden="false" collective="false" import="true" type="model">
@@ -2245,6 +2881,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e536-fc72-8540-be72" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+        <categoryLink id="a09a-09a2-c3c1-1d88" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="cbe2-b920-3d0a-2fe3" name="Space Marines" hidden="false" collective="false" import="true">
@@ -2400,6 +3037,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="87eb-1dd3-3f3b-19e6" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="856c-a5f0-7c8c-c4e7" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="6185-559e-0abc-68e0" name="Left Arm" hidden="false" collective="false" import="true">
@@ -2539,6 +3177,9 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2324-469c-7f13-6073" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f0f3-d49b-5ae9-57da" name="AA Mount (IA)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2573,6 +3214,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6903-3d82-57f0-9689" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+        <categoryLink id="2b3c-5410-eb1a-da37" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="ea84-1121-8d8f-103b" name="Side Sponsons" hidden="false" collective="false" import="true">
@@ -2613,6 +3255,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6939-9409-cd4d-e562" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+        <categoryLink id="2b5e-db73-fb24-db47" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="628d-87f6-12c9-092e" name="Side Sponsons" hidden="false" collective="false" import="true">
@@ -4300,6 +4943,9 @@
           <description>An orbital strike uses the Reserve special rule to determine when it strikes. Once the orbital strike passes the Reserve roll it fires each Space Marine shooting phases for the rest of the game. It cannot be stopped once started. The Space Marine player can opt to not roll for the onset of the orbital strike if they wish.</description>
         </rule>
       </rules>
+      <categoryLinks>
+        <categoryLink id="bd85-0a5e-84fa-6310" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="d7f8-ef0e-709a-32b9" name="Strike" hidden="false" collective="false" import="true">
           <constraints>
@@ -5227,6 +5873,13 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="bc88-7358-80ab-4c19" name="Space Marine" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
