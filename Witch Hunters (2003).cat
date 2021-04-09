@@ -3126,7 +3126,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7d14-87ca-457a-42a6" name="Land Speeder Squadron (Allied)" hidden="false" collective="false" import="true" type="unit">
@@ -3188,8 +3188,18 @@
         <categoryLink id="e536-fc72-8540-be72" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
         <categoryLink id="a09a-09a2-c3c1-1d88" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b9ec-ba05-c2bc-d935" name="Veteran Sergeant" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e23-9f06-ea0f-5f03" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="cbe2-b920-3d0a-2fe3" name="Space Marines" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="cbe2-b920-3d0a-2fe3" name="Space Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="0522-2240-ba05-0299">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0b0-b584-b58d-536a" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb4f-4411-abd6-b7ae" type="min"/>
@@ -3198,13 +3208,30 @@
             <selectionEntry id="0522-2240-ba05-0299" name="Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf30-e0b0-797e-96ec" type="max"/>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56f8-5449-60fe-376a" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56f8-5449-60fe-376a" type="min"/>
               </constraints>
               <infoLinks>
-                <infoLink id="af53-26b0-a7e2-56a9" name="Space Marine" hidden="false" targetId="6e1c-d5c5-35d2-35ad" type="profile"/>
+                <infoLink id="af53-26b0-a7e2-56a9" name="Space Marine" hidden="false" targetId="6e1c-d5c5-35d2-35ad" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="22c7-dbbd-4b48-bae4" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b9ec-ba05-c2bc-d935" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="2521-cfc5-5dd6-0686" name="Veteran Sergeant" hidden="false" targetId="13c5-ed00-e031-37ae" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="22c7-dbbd-4b48-bae4" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b9ec-ba05-c2bc-d935" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="6ea9-a740-fcaa-3676" name="Weapons" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="6ea9-a740-fcaa-3676" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="c52a-40d2-34ea-2d42">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="512a-2166-456d-a1c5" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc3d-c05a-f399-09be" type="min"/>
@@ -3230,25 +3257,22 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <entryLinks>
+                <entryLink id="45e2-7adc-418e-36c5" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="4a71-07c4-af21-52e1" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="22c7-dbbd-4b48-bae4" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b9ec-ba05-c2bc-d935" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="868a-7512-0fbf-39e6" name="Veteran Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="578d-cfbe-7a08-1ebb" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="a334-2498-ba38-32c3" name="Veteran Sergeant" hidden="false" targetId="13c5-ed00-e031-37ae" type="profile"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink id="7be9-6f45-ff64-e21e" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="4a71-07c4-af21-52e1" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c1bf-8cd3-4301-4577" name="Space Marine" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c1bf-8cd3-4301-4577" name="Space Marine" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa30-a7fa-b762-fe99" type="max"/>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d78d-ab6a-b387-9310" type="min"/>
@@ -3319,7 +3343,7 @@
             <entryLink id="e8e3-491e-29fa-b204" name="Rhino (Allied)" hidden="false" collective="false" import="true" targetId="3a1b-3bbd-5a6a-b58c" type="selectionEntry"/>
             <entryLink id="5ff8-fe51-0662-9adf" name="Razorback (Allied)" hidden="false" collective="false" import="true" targetId="0f78-b935-b599-6e97" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="b534-472c-edca-1f04" value="0.0">
+                <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cbe2-b920-3d0a-2fe3" type="greaterThan"/>
                   </conditions>
@@ -3484,6 +3508,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2324-469c-7f13-6073" name="Space Marine Ally" hidden="false" targetId="0ebb-2b64-3f2d-fffb" primary="false"/>
+        <categoryLink id="8fd4-5404-c1ca-7c68" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f0f3-d49b-5ae9-57da" name="AA Mount (IA)" hidden="false" collective="false" import="true" type="upgrade">
@@ -5611,6 +5636,17 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="90d9-e811-483e-42eb" name="Praesidium Protectiva" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ae0-65ba-45f3-5a62" type="max"/>
           </constraints>
@@ -5878,6 +5914,17 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="a5c4-5f87-f078-0bd7" name="Book of St. Lucius" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd6-e7b3-2d39-2de5" type="max"/>
           </constraints>
@@ -6058,6 +6105,17 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="ac64-4b1f-3ffe-a12f" name="Sarissa" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e1e-4f5a-6097-20e3" type="max"/>
           </constraints>
