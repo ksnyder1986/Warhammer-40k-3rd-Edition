@@ -4225,7 +4225,9 @@
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af47-f872-95fa-d491" type="max"/>
           </constraints>
           <rules>
-            <rule id="e918-6fbe-99bc-946c" name="Attachment" hidden="false"/>
+            <rule id="e918-6fbe-99bc-946c" name="Attachment" hidden="false">
+              <description>Priests must always be attached to other units,. and only one may be attached to each. Priests may be attacked to the following units: Celestians, Battle Sister Squads, Inquisitorial Strom Troops (and Adeptus Arbites), Dominions, Sisters Repentia, Inducted Imperial Guard Infantry Squads, or Inducted Imperial Guard Armoured Fist Squads.</description>
+            </rule>
             <rule id="aea0-c6f5-78a2-5897" name="Fanatical" hidden="false">
               <description>A Priest and the unit he is assigned to may re-roll any failed to hit rolls once in the turn they charge while the Priest lives.</description>
             </rule>
@@ -4253,7 +4255,7 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="a307-6715-b2a6-5fd1" name="Armoury" hidden="false" collective="false" import="true" targetId="b583-3e64-2ee0-8583" type="selectionEntryGroup"/>
+            <entryLink id="a307-6715-b2a6-5fd1" name="Witch Hunters Armoury" hidden="false" collective="false" import="true" targetId="b583-3e64-2ee0-8583" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
@@ -4302,8 +4304,13 @@
           <selectionEntries>
             <selectionEntry id="6576-b963-bf8e-c61a" name="Arco-flagellant" hidden="false" collective="false" import="true" type="upgrade">
               <rules>
-                <rule id="0317-e403-4bed-e7e4" name="Dangerous to Know" hidden="false"/>
-                <rule id="8504-3b39-dcae-9018" name="Implant Injectors" hidden="false"/>
+                <rule id="0317-e403-4bed-e7e4" name="Dangerous to Know" hidden="false">
+                  <description>Arco-flagellants may not ride in vehicles. They cannot capture table quarters, objectives, or count as surviving troops in a Meat Grinder mission. In addition, no other models may ever join a unit of Arco-flagellants.</description>
+                </rule>
+                <rule id="8504-3b39-dcae-9018" name="Implant Injectors" hidden="false">
+                  <description>The Arco-flagellant&apos;s stimm injectors can be activated at the beginning of any of the Witch Hunter&apos;s movement phases. For the remainder of the game they are subject to the Holy Rage (pg 24) rule. However, on a roll of 6 for additional movement remove a model as a casualty.
+In close combat, roll a D6 at the beginning of each Assault phase to determine the number of Attacks it may make that phase, in additional to the bonus for assaulting that turn. Should a 6 be rolled, the model will be removed as a casualty at the end of the Assault phase after it resolves its attacks.</description>
+                </rule>
               </rules>
               <infoLinks>
                 <infoLink id="4f72-82b2-effe-55c6" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
@@ -4382,8 +4389,12 @@
     </selectionEntry>
     <selectionEntry id="4283-2c1e-14e2-b1f1" name="Sisters Repentia" hidden="false" collective="false" import="true" type="unit">
       <rules>
-        <rule id="c280-6fb2-a1b6-cbe2" name="Only in Death Does Duty End" hidden="false"/>
-        <rule id="83e7-39fe-a005-df65" name="Righteous Zeal" hidden="false"/>
+        <rule id="c280-6fb2-a1b6-cbe2" name="Only in Death Does Duty End" hidden="false">
+          <description>At the start of the Movement phase roll a D6 to see if the unit is gripped so strongly by the desire to repent that is must rush towards the enemy. On a 1 or 2 they are subject to the Holy Rage (pg 24) rule.</description>
+        </rule>
+        <rule id="83e7-39fe-a005-df65" name="Righteous Zeal" hidden="false">
+          <description>Should the Repentia ever fail a Morale check they will move 2D6&quot; towards the nearest enemy unit instead of fall back, at the end of the enemy Shooting phase. Should this extra move take them into contact with an enemy unit, they count as having charged in the subsequent Assault phase. In close combat the squad automatically passes any Morale checks it is required to make.</description>
+        </rule>
       </rules>
       <categoryLinks>
         <categoryLink id="1f87-ef3c-74c7-9c09" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
@@ -4439,48 +4450,200 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="fffd-523c-10e1-26ef" name="Culexus" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="a38b-42ca-65d3-0f7f" name="Animus Speculum" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Special</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="8e6b-315c-c90f-6787" name="Etherium" hidden="false">
+                  <description>Any unit wishing to shoot at or charge the Culexus Assassin, and any psyker trying to target him with a psychic power, must first pass a Leadership test. If the test is failed they may not target the Assassin, but may attack another target instead.</description>
+                </rule>
+                <rule id="c4db-4afa-873f-05c0" name="Animus Speculum" hidden="false">
+                  <description>For each psyker within 12&quot; of the Culexus Assassin, add +1 to the Animus Speculum&apos;s Assault value.</description>
+                </rule>
+                <rule id="181a-9224-c278-e8e3" name="Psyk-Out Grenades" hidden="false">
+                  <description>Instead of using the Animus Speculum, the Culexus Assassin may throw a psyk-out grenade. They have a range of 6&quot;. Roll to hit as normal. If an enemy psyker is hit by the attack, he must pass a Leadership test on a 2D6. For each point the psyker fails the test by, he loses 1 Wound. Saving throws can be taken as normal.</description>
+                </rule>
+                <rule id="b9de-675a-bc31-3e3e" name="Psychic Abomination" hidden="false">
+                  <description>Any psyker within 6&quot; of the Culexus Assassin at the start of their turn must pass a Morale check  or fall back. If they are with a unit then the unit must also fall back.</description>
+                </rule>
+                <rule id="5666-fe20-b9c4-a35c" name="Soulless" hidden="false">
+                  <description>Any unit (friend or foe) with a model within 12&quot; of the Culexus Assassin counts as having Leadership 7, unless it would normally be lower.</description>
+                </rule>
+                <rule id="c786-77ca-9bc1-6454" name="Psyker Assassin" hidden="false">
+                  <description>The Culexus Assassin can always target a psyker specifically with any shooting attacks, regardless of whether the psyker is in a unit, an independent character, etc. The Culexus Assassin may ignore other models when charging into an assault if this will allow it to get into contact with a psyker.</description>
+                </rule>
+                <rule id="4344-b08f-0ccd-c66a" name="Life Drain" hidden="false">
+                  <description>The Culexus Assassin may use this ability when in close combat with a psyker. Before any attacks are resolved, but after models are moved, both players roll 2D6 and add the Leadership value of their respective models. If the Culexus Assassin scores higher, the psyker loses 1 Wound with no saving throws of any type allowed. This power can only be used to affect one psyker per turn.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="33a2-e280-adde-d065" name="Assassin" hidden="false" targetId="90a4-4252-9ca0-b73a" type="profile">
                   <modifiers>
                     <modifier type="set" field="name" value="Culexus Assassin"/>
                   </modifiers>
                 </infoLink>
+                <infoLink id="2b37-7180-3a1b-9588" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
+                <infoLink id="ad22-33ca-80f3-9d4a" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
+                <infoLink id="af12-a17f-c7ac-34e1" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+                <infoLink id="f01f-83f4-fc7d-0c2a" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="105.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="2941-b800-dcf3-45b2" name="Eversor" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="4dd4-ac1b-882a-cdcd" name="Needle Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">4+</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds on 4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="0b41-cac2-5aeb-bcad" name="Neuro-Gauntlet" hidden="false">
+                  <description>Roll to hit as normal in close combat, but don&apos;t roll ot wound. Instead each hit causes one wound on a D6 roll of 4+ with no Armour saves allowed. Vehicles hit by a neuro-gauntlet taking a glancing hit on a D6 roll of 6.</description>
+                </rule>
+                <rule id="bef1-4b28-f361-8cae" name="Combat Drugs" hidden="false">
+                  <description>The Eversor Assassin can charge 12&quot; in the Assault phase (or double the distance of the dice rilled if moving through difficult terrain). When the Eversor charges into combat, it gainst an extra D6 attacks rather than just +1 Attack.</description>
+                </rule>
+                <rule id="8902-8aec-b931-f926" name="Fast Shot" hidden="false">
+                  <description>The Eversor never counts as moving when firing its executioner pistol.</description>
+                </rule>
+                <rule id="53f1-e59e-56fe-de4a" name="Bio-Meltdown!" hidden="false">
+                  <description>If the Eversor is killed, place a Blast Marker center over the model. Any model touched by the templat takes an automatic Strength 5 hit. </description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="8209-778f-c104-718c" name="Assassin" hidden="false" targetId="90a4-4252-9ca0-b73a" type="profile">
                   <modifiers>
                     <modifier type="set" field="name" value="Eversor Assassin"/>
                   </modifiers>
                 </infoLink>
+                <infoLink id="5fb4-1bff-653c-eb94" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+                <infoLink id="763a-9d46-b1b1-0ca2" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+                <infoLink id="5997-5d41-c124-5c2c" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
+                <infoLink id="c9f7-800e-a632-5a62" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
+                <infoLink id="e253-89dd-0502-e05a" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                <infoLink id="1c1b-463e-c80e-17c4" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+                <infoLink id="159a-b7f3-fd82-112b" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="95.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6ee2-6e29-c0e8-7f57" name="Callidus" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="14bf-ba4b-20aa-f134" name="C&apos;tan Phase Sword" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">User</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores all armour and invul saves</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="b009-fc60-c0fc-02f1" name="Neural Shredder" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Special</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="a3a2-4c4e-d4db-c511" name="Neural Shredder" hidden="false">
+                  <description>The Neural Shredder has a Strength of 8, but rather than compare to the targets&apos; Toughness value, compare to their Leadership instead. Against vehicles, roll a D3 on the Glancing hits table instead.</description>
+                </rule>
+                <rule id="42ee-9731-ca9b-c275" name="Polymorphine" hidden="false">
+                  <description>The Callidus Assassin is always placed in reserve, even in missions that do not normally allow the Reserves rule. When she becomes available, she may be placed anywhere on the battlefield, and can move and fight normally in the turn she arrives.</description>
+                </rule>
+                <rule id="551c-40d3-5c66-d513" name="Poison Blades" hidden="false">
+                  <description>If the Callidus Assassin is in base contact with an enemy model at the end of the Assault phase, after all combats have been resolves, she may make an extra attack with her poisoned blades. This attack always wounds on a 4+, and normal armour saves are allowed.</description>
+                </rule>
+                <rule id="95ac-debd-5819-57e6" name="Jump Back" hidden="false">
+                  <description>At the start of any Assault phase, the Callidus Assassin can attempt to disengage from combat. Roll a D6 - on a roll of 1 she fails to disengage. On a 2 or more she moves that many inches away from the enemy. This move cannot be used to move into contact with a different enemy model. If this leaves the enemy unit unengaged, they may make a consolidate move at the end of the Assault phase.</description>
+                </rule>
+                <rule id="a272-3bc7-b46b-6f5c" name="A Word in Your Ear" hidden="false">
+                  <description>The player controlling the Callidus Assassin can move one enemy unit up to 6&quot; after both sides have deployed, but before the first turn starts. The unit&apos;s new position must be within the normal deployment zone and the owening play may choose the facing of the unit after it has been moved.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="ce27-a32b-f01f-10c3" name="Assassin" hidden="false" targetId="90a4-4252-9ca0-b73a" type="profile">
                   <modifiers>
                     <modifier type="set" field="name" value="Callidus Assassin"/>
                   </modifiers>
                 </infoLink>
+                <infoLink id="bb90-f97e-2a07-eca3" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+                <infoLink id="f13e-6247-7687-57ac" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
+                <infoLink id="50b0-e1d6-e5d2-3675" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+                <infoLink id="7be9-0f50-30c7-d709" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a7ed-76da-1e53-c52f" name="Vindicare" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="6d03-863d-8ec7-cba6" name="Exitus Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">4+</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Special</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="c9d2-d31b-a5ae-f97c" name="Exitus Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="be71-dcc7-8bcc-a2f2" name="Exitus Rifle" hidden="false">
+                  <description>Always hits on a 2+. The rifle is may fire a special round instead of a normal shot. The special rounds are used one at a time and you must declare which you are using before you roll the dice. The round is can only be used once per game, and is lost even if the shot misses.
+Shield Breaker Round: The shot ignores any invulnerable save.
+Turbo-Penetrator Round: This inflicts 2 wounds. If fired at a vehicle, the has has an Armour Penetration of 3D6.
+Hellfire Round: The shot wounds on a 2+.</description>
+                </rule>
+                <rule id="27e3-7d9e-0ef8-cc25" name="Spy Mask" hidden="false">
+                  <description>The Vindicare&apos;s spy mask reduces the Cover save of his target by 1 (a 6+ save is negated). In addition, the spy mask means the Vindicare rolls 2D6x5 for determing how far he can see during Night Fighting missions.</description>
+                </rule>
+                <rule id="3247-cc5b-cd2d-fd4c" name="Stealth Suit" hidden="false">
+                  <description>Any unit wishing to shoot the Vindicare Assassin must test to see if he can be seen as if using the Night Fighting rules. If the Night Fighting rules are in effect, the Assassin can only be seen if he is within half the range rolled.</description>
+                </rule>
+                <rule id="941f-6871-c73e-5b9c" name="Marksman" hidden="false">
+                  <description>You may nominate the model targeted by the Vindicare Assassin when he is shooting, such as a Sergeant or a Heavy Weapons trooper. In addition, he can target any model in range and line of sight, regardless of any other normal targetting restrictions.</description>
+                </rule>
+              </rules>
               <infoLinks>
                 <infoLink id="5b7a-7c95-ce1b-7f27" name="Assassin" hidden="false" targetId="90a4-4252-9ca0-b73a" type="profile">
                   <modifiers>
                     <modifier type="set" field="name" value="Vindicare Assassin"/>
                   </modifiers>
                 </infoLink>
+                <infoLink id="442c-575c-f6c7-2066" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+                <infoLink id="2520-d6bc-1338-a741" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+                <infoLink id="f26f-2237-d379-4fe4" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
+                <infoLink id="4724-c8e5-3993-349e" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="110.0"/>
@@ -5134,8 +5297,12 @@
         <rule id="46f9-dd96-95c5-224d" name="Faithful" hidden="false">
           <description>Add 1 Faith Point</description>
         </rule>
-        <rule id="ad4d-0da1-842c-5dde" name="Hit and Run" hidden="false"/>
-        <rule id="ea8a-7b7b-5a7b-87ca" name="Angelic Visage" hidden="false"/>
+        <rule id="ea8a-7b7b-5a7b-87ca" name="Angelic Visage" hidden="false">
+          <description>Any Adepta Sororitas unit with a model within 6&quot; of at least one model in the Seraphim unit adds +1 to their Leadership, up to a maximum of 10. Note that other units of Seraphim do not benefit from this rule.</description>
+        </rule>
+        <rule id="dbf2-26b1-36d6-4104" name="Hit and Run" hidden="false">
+          <description>At the end of a round of close combat, Seraphims may choose to break off if they and at least some of their close combat opponents do not have to fall back. She falls back 3D6&quot; in any direction and automatically regroups at the end of the move. Enemy models that were in the close combat may only consolidate.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="e8d4-bd3a-96eb-aeae" name="Jump Packs" hidden="false" targetId="2563-092a-a5bc-992f" type="rule"/>
@@ -5272,7 +5439,7 @@
                 </selectionEntry>
                 <selectionEntry id="acd8-e413-7fbf-6efb" name="2x Inferno Pistols" hidden="false" collective="false" import="true" type="upgrade">
                   <infoLinks>
-                    <infoLink id="4b60-258f-e2bf-9c37" name="Inferno Pistol" hidden="false" targetId="e7be-959a-8d13-9be6" type="profile">
+                    <infoLink id="4b60-258f-e2bf-9c37" name="Inferno Pistol" hidden="false" targetId="72e3-b413-6f5e-4a98" type="profile">
                       <modifiers>
                         <modifier type="set" field="name" value="2x Inferno Pistols"/>
                       </modifiers>
@@ -5756,9 +5923,15 @@
           <selectionEntries>
             <selectionEntry id="a881-dcd2-77b1-928d" name="Penitent Engine" hidden="false" collective="false" import="true" type="upgrade">
               <rules>
-                <rule id="e029-faa7-131a-6337" name="Battle Frenzy" hidden="false"/>
-                <rule id="a590-e7a7-5110-b2c5" name="Holy Rage" hidden="false"/>
-                <rule id="cca5-2cb9-3e7c-f4b5" name="Rampage" hidden="false"/>
+                <rule id="e029-faa7-131a-6337" name="Battle Frenzy" hidden="false">
+                  <description>The Penitent Engine must always fire its weapons if able to do so, and must always attempt to cover as many targets as possible with the Flamer template. Once in base-to-base contact, each Penitent Engine rolls at the beginning of every Assault phase to determine the number of attacks.</description>
+                </rule>
+                <rule id="a590-e7a7-5110-b2c5" name="Holy Rage" hidden="false">
+                  <description>Penitent Engines are subject to the Holy Rage rule (pg 24).</description>
+                </rule>
+                <rule id="cca5-2cb9-3e7c-f4b5" name="Rampage" hidden="false">
+                  <description>Penitent Engines ignore any Crew Shaken and Crew Stunned results.</description>
+                </rule>
               </rules>
               <infoLinks>
                 <infoLink id="10e3-a5aa-fcd6-c816" name="Penitent Engine" hidden="false" targetId="93f1-bde6-2396-6fdd" type="profile"/>
@@ -5928,7 +6101,9 @@
         <rule id="a41a-9013-d415-431f" name="Wings of Faith" hidden="false">
           <description>Counts as Jump Pack. Instead of assaulting, Celestine may always make an additional move of up to 6&quot; in the Assault phase if she is not engaged in close combat or joined to a squad. Celestine may make this move on the turn she Deep Strikes.</description>
         </rule>
-        <rule id="05b8-42e6-baf6-82f0" name="Hit and Run" hidden="false"/>
+        <rule id="05b8-42e6-baf6-82f0" name="Hit and Run" hidden="false">
+          <description>At the end of a round of close combat, Celestine may choose to break off if they and at least some of their close combat opponents do not have to fall back. She falls back 3D6&quot; in any direction and automatically regroups at the end of the move. Enemy models that were in the close combat may only consolidate.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="37ea-1f5d-a050-669a" name="Saint Celestine" hidden="false" targetId="bf44-1d4b-9d88-a40c" type="profile"/>
@@ -6841,9 +7016,27 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="dc81-5e28-daf5-d968" name="Inferno Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c538-fd25-61e6-ca37" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9ca-5d42-058f-b429" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eea-c6e8-e3c0-218f" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="54ac-d36b-5d38-1863" name="Inferno Pistol" hidden="false" targetId="72e3-b413-6f5e-4a98" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -6871,6 +7064,19 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="5028-db6c-6cd8-3354" name="Force Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2533-a6a6-e6bb-8ef2" type="max"/>
           </constraints>
@@ -6892,10 +7098,24 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ae0-65ba-45f3-5a62" type="max"/>
           </constraints>
+          <rules>
+            <rule id="f8c8-af13-6445-dd58" name="Praesidium Protectiva" hidden="false">
+              <description>A model equipped with a Praesidium Protectiva may take a 4+ Invulnerable save in an assault instead of her normal armour save. The save may only be used against one opponent per turn.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -6904,6 +7124,18 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7471-5985-7387-8e44" type="max"/>
           </constraints>
+          <rules>
+            <rule id="1b0f-3ceb-db38-ac18" name="Brazier of Holy Fire" hidden="false">
+              <description>Counts as a close combat weapon. Once per battle may be used as a flamer.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="25ba-ccae-1853-f996" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Brazier of Holy Fire"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -6916,10 +7148,33 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </constraints>
       <selectionEntries>
         <selectionEntry id="673f-ce41-c87d-022c" name="Blessed Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9ca-5d42-058f-b429" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c538-fd25-61e6-ca37" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ca4-2ed2-078e-103f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6c3-62d6-a19d-a4d6" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="a5f5-d5d3-8830-6d94" name="Blessed Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">User + 2</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignore armour. re-roll one miss.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
           </costs>
@@ -6948,9 +7203,33 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="9171-dc44-87b5-a445" name="Power Stake" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd5-50bc-26e4-2da9" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="3e80-4e9c-8662-1c3d" name="Power Stake" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignore Armour. 2+ to wound psykers.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -6978,6 +7257,17 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="a0b8-dd2b-20b5-0447" name="Mancatcher" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f14-835b-ff57-fe05" type="max"/>
           </constraints>
@@ -6989,6 +7279,17 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df64-b926-fd37-6003" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="f998-0b0f-de55-679f" name="Eviscerator" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores all armour saves. Rolls 2D6 + Strength when penetrating armour.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -6997,9 +7298,22 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="428a-702a-20f5-806f" type="max"/>
           </constraints>
-          <infoLinks>
-            <infoLink id="3406-16bc-74a7-eb05" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
-          </infoLinks>
+          <profiles>
+            <profile id="83bc-44ef-253a-d08f" name="Combi-Crossbow" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="27ce-2df2-7652-fe06" name="Combi-Crossbow" hidden="false">
+              <description>Any psyker hit by the Combi-crossbow is wounded on a 2+ and recieves no armour saves.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -7141,12 +7455,29 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="c0c1-7945-2013-7015" name="Wargear" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="c0c1-7945-2013-7015" name="Witch Hunter Wargear" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="6069-8153-48a2-218b" name="Cloak of St. Aspira" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9ca-5d42-058f-b429" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c538-fd25-61e6-ca37" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df32-81b5-c143-6c26" type="max"/>
           </constraints>
+          <rules>
+            <rule id="52c9-870b-cb0a-ede7" name="Cloak of St. Aspira" hidden="false">
+              <description>The Cloak of St. Aspira adds 1 to the model&apos;s Armour save.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -7155,6 +7486,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7ba-5736-134c-0b05" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="9e8e-aa57-3504-08e4" name="Bionics" hidden="false" targetId="4053-eb3d-7c9c-241d" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -7174,31 +7508,88 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd6-e7b3-2d39-2de5" type="max"/>
           </constraints>
+          <rules>
+            <rule id="b690-1014-6bea-4a2a" name="Book of St. Lucius" hidden="false">
+              <description>Any friendly unit with a model with 6&quot; may use the bearer&apos;s unmodified Leadership for any Morale Checks or Pinning tests.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ef85-f21e-e164-a265" name="Carapace Armour" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31e2-cffe-ac36-e1dc" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5f9d-3589-d763-bc5c" name="Carapace Armor" hidden="false">
+              <description>4+ Armour Save</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0e90-e0bd-6b0e-7701" name="Digital Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8e3-9656-2f31-dda0" type="max"/>
           </constraints>
+          <rules>
+            <rule id="e8fa-b815-7054-f0b8" name="Digital Weapons" hidden="false">
+              <description>A model with digital weapons may make a special attack in close combat at +2 to his Initiative in addition to his normal attacks, inflicting one S 4 hit on a D6 roll of 4+</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="87ea-fe78-d2cb-c224" name="Excruciators" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="11cf-3355-70fc-843f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f526-9fee-714a-28f3" type="max"/>
           </constraints>
+          <rules>
+            <rule id="b333-a729-f07b-8b7b" name="Excruciators" hidden="false">
+              <description>If the bearer of Excruciator is alive at the end of the battle, each enemy psyker killed or otherwise removed from the table is worth an additional D6x10 Victory Points.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -7207,31 +7598,83 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4b3-c335-f366-b8a2" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="facc-381a-cf87-7887" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fc02-ab73-f001-8ef8" name="Hexagrammic Wards" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb1b-6ad0-f995-477c" type="max"/>
           </constraints>
+          <rules>
+            <rule id="41b6-5d59-f4de-7b15" name="Hexagrammic Wards" hidden="false">
+              <description>Enemy psykers within 24&quot; who attempt to use any psychic powers that would affect the Inquisitor or their retinue take their Psychic test of -1 to their Leadership.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3444-b8c0-867f-bc38" name="Inquisitorial Mandate" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e896-ed1d-f38b-3819" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ecc-22b8-3180-3d89" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="33fe-d226-cddb-b105" name="Inquisitorial Mandate" hidden="false" targetId="3823-309e-5e93-c233" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0e0e-0e75-7fd8-1b90" name="Jump Pack" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9ca-5d42-058f-b429" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c538-fd25-61e6-ca37" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14d1-5267-731e-f19b" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="79ef-4cfd-462c-665d" name="Jump Packs" hidden="false" targetId="2563-092a-a5bc-992f" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -7240,31 +7683,86 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca36-fa54-1226-94fc" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="8d9b-b61f-1119-5d13" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4bcf-6dcc-28fd-d11b" name="Liber Heresius" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f43-4fce-439b-2721" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d7f9-2d1a-8b15-ed4a" name="Liber Heresius" hidden="false">
+              <description>In a mission where there is a choice of table edge, the Inquisitor must take a Leadership test before the game and if this is passed he may choose the deployment zone for his army rather than rolling a dice for it. If he fails the test on a double 6, then the enemy player may choose his deployment zone without rolling for it.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9e9b-acdc-4f52-abbf" name="Litanies of Faith" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9ca-5d42-058f-b429" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c538-fd25-61e6-ca37" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e759-77d5-8b74-0b4c" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6a61-e2d8-08f2-7e03" name="Litanies of Faith" hidden="false">
+              <description>Once per game, the character may use an Act of Faith without the need for a Test of Faith and without expending Faith Points.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="233d-7ccd-6693-24db" name="Mantle of Ophelia" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9ca-5d42-058f-b429" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c538-fd25-61e6-ca37" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b489-2afe-fff4-c3b0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5a6-400d-43b8-eddc" type="max"/>
           </constraints>
+          <rules>
+            <rule id="2db1-bdbb-4245-e9f7" name="Mantle of Ophelia" hidden="false">
+              <description>The first time the wearer takes a wound that caused an instant death, only one wound is taken instead. Only used once per battle.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -7273,6 +7771,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b19-7af8-091b-caac" type="max"/>
           </constraints>
+          <rules>
+            <rule id="26fa-0bde-ce46-66ea" name="Master-crafted Weapons" hidden="false">
+              <description>The bearer may re-roll one failed to hit roll per turn.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -7281,47 +7784,137 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fb4-2449-f6ad-961a" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="fa87-cbf8-714f-df64" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="149d-d3c8-3eeb-c196" name="Power Armour" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daab-ed5c-1bc1-8b7a" type="max"/>
           </constraints>
+          <rules>
+            <rule id="ecf8-30e0-1a33-98d6" name="Power Armour" hidden="false">
+              <description>The wearer gains a 3+ Armour save.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2a51-3708-ecb8-112b" name="Psi-tracker" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef61-2551-e509-d51f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3808-2193-f3f9-46c8" type="max"/>
           </constraints>
+          <rules>
+            <rule id="0587-00d7-3633-a26c" name="Psi-tracker" hidden="false">
+              <description>One roll to his made by any model in the Witch Hunter army may be re-rolled once per shooting phase, so long as the target is a psyker, or is a squad with a psyker attached to it.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4ea6-6b4f-f143-e5bb" name="Psycannon Bolts" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77bb-bc9a-2f4a-1ed6" type="max"/>
           </constraints>
+          <rules>
+            <rule id="8712-4056-0ee2-b052" name="Psycannon Bolts" hidden="false">
+              <description>Any bolter equiped by the model with Psycannon Bolts upgrades their AP to AP4. Only Armour saves may be taken against Psycannon Bolts. Invulnerable saves are ignored.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="364c-5e48-9092-fd5b" name="Psychic Hood" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31aa-5b48-b75c-7667" type="max"/>
           </constraints>
+          <rules>
+            <rule id="aaf6-6311-3c29-03d4" name="Psychic Hood" hidden="false">
+              <description>Declare you&apos;ll use the Psychic Hood after an opponent ahs successfully made a Psychic test, but before they have resolved the power. Each player rolls a D6 and adds their respective model&apos;s Leadership value. If the Space Marine beats the opposing model&apos;s score then the psychic power is nullified and may not be used that turn. Otherwise the power is unaffected. The Hood may be used each time an enemy model uses a power.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6545-e89c-4030-f53b" name="Psyocculum" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="341c-1d2c-25d8-af97" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="27ee-b0a2-0c2a-b518" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ab5-d725-1cf5-ba03" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c98a-9a82-8ac1-0b60" type="max"/>
           </constraints>
+          <rules>
+            <rule id="b5eb-f91e-c3c3-30e4" name="Psyocculum" hidden="false">
+              <description>A model wearing these does not need to roll to determine how far it can see when using the Night Fighting rules, so long as the target is a psyker or a squad joined by one.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
           </costs>
@@ -7330,6 +7923,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c552-6315-eeb4-0685" type="max"/>
           </constraints>
+          <rules>
+            <rule id="2896-0c79-3c19-8c37" name="Purity Seals" hidden="false">
+              <description>When a unit including a model wearing Purity Seals falls back, roll one extra D6 for the fall back distance, and then pick the D6 results you want. </description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -7338,6 +7936,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45e1-8009-b645-9ae7" type="max"/>
           </constraints>
+          <rules>
+            <rule id="2ce2-d07b-8bdb-3067" name="Rosarius" hidden="false">
+              <description>Gain a 4+ invulnerable save.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -7346,6 +7949,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0758-cf67-c5c3-2ba9" type="max"/>
           </constraints>
+          <rules>
+            <rule id="17ae-17da-09fe-42f5" name="Auspex" hidden="false">
+              <description>If enemy infiltrators set up within 4D6&quot; of a model with a auspex, then that model and the unit they are attached to is allowed to take a &quot;free&quot; shot at them. These shots are taken before the battle begins and may cause the infiltrators to fall back.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
@@ -7365,6 +7973,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e1e-4f5a-6097-20e3" type="max"/>
           </constraints>
+          <rules>
+            <rule id="03a4-83b3-5bbd-61ce" name="Sarissa" hidden="false">
+              <description>In any Assault phase in which the model charges, her close combat hits to wound may be re-rolled.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -7425,7 +8038,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a441-11f0-18ac-1834" type="max"/>
           </constraints>
           <rules>
-            <rule id="a6b2-5e43-ba00-078a" name="Blessed Ammunition" hidden="false"/>
+            <rule id="a6b2-5e43-ba00-078a" name="Blessed Ammunition" hidden="false">
+              <description>Any storm bolter or heavy bolter shots fired by the vehicle ignore cover saves.</description>
+            </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
@@ -7450,7 +8065,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66ee-70cf-95af-e4b8" type="max"/>
           </constraints>
           <rules>
-            <rule id="4e2c-faec-71f4-f580" name="Holy Icon" hidden="false"/>
+            <rule id="4e2c-faec-71f4-f580" name="Holy Icon" hidden="false">
+              <description>Any friendly unit with a model within 6&quot; of the vehicle adds 1 to its Leadership for the purposes of taking any Morale checks or Pinning tests.</description>
+            </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
@@ -7469,7 +8086,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27ad-198e-ef0e-7e0b" type="max"/>
           </constraints>
           <rules>
-            <rule id="7cd2-9e40-87c0-13f4" name="Holy Promethium" hidden="false"/>
+            <rule id="7cd2-9e40-87c0-13f4" name="Holy Promethium" hidden="false">
+              <description>The vehilce forces a unit which suffers casualties by a flamer weapon to take a Morale check as if it had suffered 25% or more casualties.</description>
+            </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
@@ -7505,7 +8124,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0038-e30c-0856-a6dc" type="max"/>
           </constraints>
           <rules>
-            <rule id="728a-763d-d71f-113b" name="Laud Hailer" hidden="false"/>
+            <rule id="728a-763d-d71f-113b" name="Laud Hailer" hidden="false">
+              <description>Any unit take shocked by a vehicle with a Laud Hailer deducts 1 from its Leadership.</description>
+            </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
@@ -9014,11 +9635,21 @@ Monor psychic powers have no effect on Adepta Sororitas units or characters at a
     <rule id="f219-56c3-ab1b-6ccd" name="And They Shall Know No Fear" hidden="false">
       <description>Space Marines automatically regroup as they fall back, even if the squad is reduced to less than 50% by casualties, but not if the squad is out of coherency or there are enemy models within 6&quot;. If the enemy advance into them the Space Marines are not destroyed and the new assault is treated in the same way as a sweeping advance (enemy gaining +1 A next turn). </description>
     </rule>
-    <rule id="424f-c543-4ada-a802" name="Simulacrum Imperialis" hidden="false"/>
-    <rule id="e0c1-d20d-07d0-d891" name="Servo-skill" hidden="false"/>
-    <rule id="a2e6-23ed-cf18-a4c0" name="Rosarius" hidden="false"/>
-    <rule id="0f6e-e675-24a7-6676" name="Master-crafted" hidden="false"/>
-    <rule id="3823-309e-5e93-c233" name="Inquisitorial Mandate" hidden="false"/>
+    <rule id="424f-c543-4ada-a802" name="Simulacrum Imperialis" hidden="false">
+      <description>The presence of the Simulacrum Imperialis allows a Faithful unit to roll one extra dice when making a Test of Faith and choose which two dice to use. This may be used once per player turn.</description>
+    </rule>
+    <rule id="e0c1-d20d-07d0-d891" name="Servo-skill" hidden="false">
+      <description>An Inquisitor with a Familiar in his retinue benefits from +1 Initiative. For each Familiar in his retinue he may purchase one more psychic power than normally allowed.</description>
+    </rule>
+    <rule id="a2e6-23ed-cf18-a4c0" name="Rosarius" hidden="false">
+      <description>4+ Invulnerable save</description>
+    </rule>
+    <rule id="0f6e-e675-24a7-6676" name="Master-crafted" hidden="false">
+      <description>The bearer may re-roll one failed to hit roll per turn.</description>
+    </rule>
+    <rule id="3823-309e-5e93-c233" name="Inquisitorial Mandate" hidden="false">
+      <description>A model bearing an Inquisitorial Mandate may reveal it once per battle. This may be done at any time, as long as the model with the Mandate does not move in the turn it is revealed. On the turn the Mandate is revealed, all friendly models with 2D6&quot; recieve a +1 Attack bonus for the rest of that turn.</description>
+    </rule>
     <rule id="6272-21de-c79d-2f70" name="VTOL Hover Mode" hidden="false">
       <description>Rather than leave the table as per normal, the flyer may choose to engage is VTOL Hover mode to remain on the table. It remains stationary, but can turn in any direction to bring its weapons to bear. It may fire all of its weapons.
 For the purposes of being fired at, the vehicle counts as a moving Skimmer. It can therefore be fired at using the firer&apos;s normal BS. All hits are treated as glancing hits. It can only be attack in close combat by attackers that can fly or have jump packs, in which case it is treated as a moving vehicle.
@@ -9582,15 +10213,6 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="e7be-959a-8d13-9be6" name="Inferno Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
-      </characteristics>
-    </profile>
     <profile id="9106-36a5-1c03-6e29" name="Karamazov" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
@@ -9624,6 +10246,15 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">One use. Must be used in first close combat phase the model participates in. Add +2 S and +1 I if the model charged. Ignores armour saves.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="72e3-b413-6f5e-4a98" name="Inferno Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">6&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">2D6 Armour Pen with 3&quot;</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
