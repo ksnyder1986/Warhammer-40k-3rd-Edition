@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="c8cb-cc69-1e43-3319" name="Daemon Hunters (2003)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
-    <categoryEntry id="bd50-bb90-bb09-3002" name="Adepta Sororitas" hidden="false"/>
     <categoryEntry id="0ebb-2b64-3f2d-fffb" name="Space Marine Ally" hidden="false"/>
     <categoryEntry id="258f-122f-d9a4-245c" name="Inducted Imperial Guard" hidden="false"/>
     <categoryEntry id="9b26-b663-04dc-1998" name="Officer" hidden="false"/>
+    <categoryEntry id="8e77-c08a-2671-f7e7" name="Grey Knight" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="39f0-aa54-c246-1ac7" name="Daemon Hunter Allies" hidden="false">
@@ -617,7 +617,7 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1a5-07d3-9241-ae18" type="max"/>
       </constraints>
     </entryLink>
-    <entryLink id="9795-d5c9-a534-40dc" name="Cyclops (Inducted) (IA)" hidden="true" collective="false" import="true" targetId="c4bd-73dd-7301-aaf6" type="selectionEntry">
+    <entryLink id="9795-d5c9-a534-40dc" name="Cyclops (IA)" hidden="true" collective="false" import="true" targetId="c4bd-73dd-7301-aaf6" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -645,6 +645,9 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e14d-54ac-44a7-e778" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="81df-e12a-aa67-b851" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
@@ -677,6 +680,9 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9d3-98e8-f8e7-c2a4" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="1973-60d0-f7d6-b129" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
@@ -5225,39 +5231,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="90d9-e811-483e-42eb" name="Praesidium Protectiva" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ae0-65ba-45f3-5a62" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="f8c8-af13-6445-dd58" name="Praesidium Protectiva" hidden="false">
-              <description>A model equipped with a Praesidium Protectiva may take a 4+ Invulnerable save in an assault instead of her normal armour save. The save may only be used against one opponent per turn.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="6325-48e5-a803-6cf7" name="Brazier of Holy Fire" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7471-5985-7387-8e44" type="max"/>
@@ -5482,26 +5455,26 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fb6-acae-a0db-741b" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e131-cdf5-a909-66f8" name="Divine Pronouncement" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e131-cdf5-a909-66f8" name="Banishment" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ba5-17be-f378-501a" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="81a8-6665-d55f-63db" name="Divine Pronouncement" hidden="false" targetId="4957-590d-f58b-9e0f" type="rule"/>
+            <infoLink id="81a8-6665-d55f-63db" name="Banishment" hidden="false" targetId="6276-9058-bcbf-699e" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d9d6-fbf1-7272-f7f8" name="Hammer of the Witched" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d9d6-fbf1-7272-f7f8" name="Destroy Daemon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3243-8676-dc90-33f5" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="44d4-fff4-4d42-5fb5" name="Hammer of the Witches" hidden="false" targetId="33dd-e1df-084b-9f8d" type="rule"/>
+            <infoLink id="44d4-fff4-4d42-5fb5" name="Destroy Daemon" hidden="false" targetId="a048-6fe2-6f7e-0698" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b73f-f183-3319-f952" name="Hammerhand" hidden="false" collective="false" import="true" type="upgrade">
@@ -5515,23 +5488,23 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f27e-d78f-8d32-0ea9" name="His Will be Done" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f27e-d78f-8d32-0ea9" name="Holocaust" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0190-4384-03c1-59ea" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="d7b8-ccd7-5727-9bee" name="His Will Be Done" hidden="false" targetId="64e7-7f23-dfff-225c" type="rule"/>
+            <infoLink id="d7b8-ccd7-5727-9bee" name="Holocaust" hidden="false" targetId="00ba-4bbe-4cbf-6039" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="86dd-137c-c48a-9f9a" name="Purgatus" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="86dd-137c-c48a-9f9a" name="Sanctuary" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5bb-9aeb-5718-056a" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="cfe4-8233-ffd2-706c" name="Purgatus" hidden="false" targetId="dbd0-7c71-0db0-d7be" type="rule"/>
+            <infoLink id="cfe4-8233-ffd2-706c" name="Sanctuary" hidden="false" targetId="eddc-2385-12c4-16aa" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
@@ -5545,7 +5518,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <infoLink id="a9db-bc64-c92d-7066" name="Scourging" hidden="false" targetId="5eef-907a-7737-8778" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9376-cf2c-120a-9d8b" name="Word of the Emperor" hidden="false" collective="false" import="true" type="upgrade">
@@ -5574,42 +5547,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a5c4-5f87-f078-0bd7" name="Book of St. Lucius" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcd6-e7b3-2d39-2de5" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="b690-1014-6bea-4a2a" name="Book of St. Lucius" hidden="false">
-              <description>Any friendly unit with a model with 6&quot; may use the bearer&apos;s unmodified Leadership for any Morale Checks or Pinning tests.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="ef85-f21e-e164-a265" name="Carapace Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31e2-cffe-ac36-e1dc" type="max"/>
           </constraints>
@@ -5799,17 +5737,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="149d-d3c8-3eeb-c196" name="Power Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daab-ed5c-1bc1-8b7a" type="max"/>
           </constraints>
@@ -5966,17 +5893,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="ac64-4b1f-3ffe-a12f" name="Sarissa" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e1e-4f5a-6097-20e3" type="max"/>
           </constraints>
@@ -6517,13 +6433,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="bc88-7358-80ab-4c19" name="Space Marine" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd50-bb90-bb09-3002" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
@@ -7492,20 +7401,8 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="4957-590d-f58b-9e0f" name="Divine Pronouncement" hidden="false">
-      <description>Instead of firing a weapon in the Shooting phase the psyker can take a psychic test to use this power. Designate a single enemy unit within 18&quot; and not in close combat. This unit must take a Morale check as if it has just suffered 25% casualties from shooting. If the Inquisitor&apos;s Leadership is greater than the target&apos;s highest Leadership, then the Leadership test is taken with a penalty equal to the different between the two values.</description>
-    </rule>
-    <rule id="33dd-e1df-084b-9f8d" name="Hammer of the Witches" hidden="false">
-      <description>Instead of firing a weapon in the Shooting phase the psyker can take a psychic test to use this power. It does not require LOS to use and may be used if the Inquisitor is in an assault. Roll a D6; this number of enemy psykers must pass a Leadership test or suffer a Perils of the Warp attack, starting with the psyker nearest to the Inquisitor and working outwards. No psyker can be attacked by this more than once.</description>
-    </rule>
     <rule id="af4c-0503-c81d-6237" name="Hammerhand" hidden="false">
       <description>This psykic power may be used at the beginning of any Assault phase. On a successful psychic test the psyker doubles their Strength until their next turn. The psyker also counts as having an additional close combat weapon. They may not benefit from any power weapons or other special close combat attacks while this power is active.</description>
-    </rule>
-    <rule id="64e7-7f23-dfff-225c" name="His Will Be Done" hidden="false">
-      <description>This psychic power is used in the Assault phase before the Inquisitor has made any attacks. If successful, each unsaved wound inflicted by the Inquisitor counts as two for the purposes of determine which side won the assault.</description>
-    </rule>
-    <rule id="dbd0-7c71-0db0-d7be" name="Purgatus" hidden="false">
-      <description>Instead of firing a weapon in the Shooting phase the psyker can take a psychic test to use this power. Choose any enemy model with the Independent Character special rule within 24&quot; of the Inquisitor and within his LOS. Both the Inquisitor and the target roll a D6 and add their Leadership. If the Inquisitor scores higher than the target mode, then the target&apos;s Leadership is reduced by 3 for the remainder of the game. This power cannot be used more than once on the same target, and cannot be used on models engaged in an assault.</description>
     </rule>
     <rule id="5eef-907a-7737-8778" name="Scourging" hidden="false">
       <description>Scourging is a psychic power that may be used in the shooting phase instead of firing a weapon. Roll to hit, wound and save as normal, but invulnerable saves may not be taken against wounds caused by Scourging.</description>
@@ -7530,13 +7427,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     </rule>
     <rule id="5597-f5b5-ee42-eb49" name="The Mystic" hidden="false">
       <description>If a unit of Daemons, a Greater Daemon, or a Deep Striking unit enters play with 4D6&quot; of an Inquisitor with a Mystic Henchment (roll when each unit enters play), both he and the rest of the retinue may immediately take a &apos;free&apos; shot at them. These shots are taken before the enemy unit moves and the unit counts as stationary. If the Inquisitor has two or more Mystics in his retinue he may instead nominate one unit with a model within 12&quot; of him to immediately take these free shots at the enemy unit.</description>
-    </rule>
-    <rule id="5feb-c54c-9e8a-c500" name="Shield of Faith" hidden="false">
-      <description>Force weapons used against a model with Shield of Faith lose the ability to instantly kill their target, they simply count as a power weapon instead. Psychic powers targetted against a model with Shield of Faith are nullified and will not work on a D6 roll of 5+.
-Monor psychic powers have no effect on Adepta Sororitas units or characters at all, even those used by friendly psykers.</description>
-    </rule>
-    <rule id="5b12-9463-d382-9543" name="Acts of Faith" hidden="false">
-      <description>See the Acts of Faith rule in Codex: Witch Hunters</description>
     </rule>
     <rule id="e9b2-e53b-2414-1a22" name="Targeter" hidden="false">
       <description>Models equipped with a targeter are allowed to pre-measure the range to a target before they decide who to shoot at in the Shooting phase. This ability must be used after all Guess ranged weapons have been used this turn, otherwise those weapons cannot fire this turn.</description>
@@ -7574,6 +7464,10 @@ For the purposes of being fired at, the vehicle counts as a moving Skimmer. It c
 If the vehicle is immobilised the model is destroyed.
 At the end of its own turn, the vehicle may disengage VTOL. It not reverts to being a flyer. It cannot return in the enemy turn immediately afer it leaves the table.</description>
     </rule>
+    <rule id="6276-9058-bcbf-699e" name="Banishment" hidden="false"/>
+    <rule id="a048-6fe2-6f7e-0698" name="Destroy Daemon" hidden="false"/>
+    <rule id="00ba-4bbe-4cbf-6039" name="Holocaust" hidden="false"/>
+    <rule id="eddc-2385-12c4-16aa" name="Sanctuary" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="be2f-7463-84ea-6b38" name="Scourging" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -7674,15 +7568,6 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e6a9-b765-a1bf-2163" name="Immolator" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
-      <characteristics>
-        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">11</characteristic>
-        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">11</characteristic>
-        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
-        <characteristic name="BS" typeId="ae25-5be4-5470-2204">4</characteristic>
-        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">6</characteristic>
       </characteristics>
     </profile>
     <profile id="6695-04d1-c3b7-6669" name="Chimera" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
@@ -7970,6 +7855,123 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">2D6 Armour Pen with 3&quot;</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6d74-050b-f96b-abd0" name="Grand Master" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">4</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="da49-e5c1-2e57-f229" name="Brother-Captain" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="04cc-377e-9ff8-421b" name="Daemonhost" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">6</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">4</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">D6</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="901e-482b-1132-c9ef" name="Grey Knight Terminator" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e35d-d5a1-0486-2f58" name="Grey Knight" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="ef3e-7c19-d75b-55ba" name="Grey Knight Justicar" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8e90-fd37-3313-fdd6" name="Barrage Bomb" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Unlimited</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="7074-8eab-8928-8248" name="Melta Torpedo" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Unlimited</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">2D6 Armour Pen</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7e80-afd8-1b33-d3a4" name="Lance Strike" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Unlimited</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="935c-477b-e1a5-46f2" name="Grey Knight Dreadnought" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">5</characteristic>
+        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
+        <characteristic name="S" typeId="2870-c64f-81e5-a118">6(10)</characteristic>
+        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">12</characteristic>
+        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">12</characteristic>
+        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">10</characteristic>
+        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">4</characteristic>
+        <characteristic name="A" typeId="bb33-7ddf-2296-174e">2</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
