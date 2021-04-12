@@ -98,6 +98,7 @@
     <categoryEntry id="be45-5314-4388-5bfd" name="No Force Org" hidden="false"/>
     <categoryEntry id="3cb1-645b-8bbb-3d49" name="Psyker" hidden="false"/>
     <categoryEntry id="6b90-dc9c-1a49-3fdc" name="Super-Heavy" hidden="false"/>
+    <categoryEntry id="9bbd-df2b-520d-778d" name="Space Wolf" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="7da2-40c9-890c-3239" name="Standard Missions" hidden="false">
@@ -109,6 +110,24 @@
           </constraints>
         </categoryLink>
         <categoryLink id="9c02-ec48-1124-380f" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+          <modifiers>
+            <modifier type="increment" field="6d1d-6801-aa7b-ea91" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="79c8-d712-b3f8-3fbc" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="79c8-d712-b3f8-3fbc" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d1d-6801-aa7b-ea91" type="min"/>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79c8-d712-b3f8-3fbc" type="max"/>
