@@ -25,7 +25,7 @@ to develop - cool! We need you! Take a look at [Getting Started wiki][]
 
 __Okay, nice project. Is it actually working?__ _I just want those files..._
 
-Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][]
+Documentation is in progress on obtaining the file.
 
 __I found a bug!__ / *I have another request*
 
@@ -36,7 +36,6 @@ __I found a bug!__ / *I have another request*
 
 * [BattleScribe homepage][]
 * [BattleScribe Data on Appspot][]
-* [Getting Started wiki][]
 
 [Data File]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/releases/latest/Warhammer-40k-3rd-Edition.latest.bsi
 [Open Issue directly]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/issues
