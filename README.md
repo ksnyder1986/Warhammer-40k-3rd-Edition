@@ -1,7 +1,7 @@
 Template Data Repo
 ==================
 
-[![GitHub release](https://img.shields.io/github/release/BSData/Warhammer-40k-3rd-Edition.svg?style=flat-square)](https://github.com/BSData/Warhammer-40k-3rd-Edition/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/ksnyder1986/Warhammer-40k-3rd-Edition.svg?style=flat-square)](https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/releases/latest)
 [![Github commits (since latest release)](https://img.shields.io/github/commits-since/BSData/Warhammer-40k-3rd-Edition/latest.svg?style=flat-square)](https://github.com/BSData/Warhammer-40k-3rd-Edition/releases)
 [![Open Bug issues](https://img.shields.io/github/issues/BSData/Warhammer-40k-3rd-Edition/bug.svg?style=flat-square&label=bugs)](https://github.com/BSData/Warhammer-40k-3rd-Edition/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 [![GitHub contributors](https://img.shields.io/github/contributors/BSData/Warhammer-40k-3rd-Edition.svg?style=flat-square)](https://github.com/BSData/Warhammer-40k-3rd-Edition/graphs/contributors)
