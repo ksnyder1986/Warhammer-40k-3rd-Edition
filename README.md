@@ -42,4 +42,4 @@ __I found a bug!__ / *I have another request*
 [Open Issue directly]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/issues
 [BattleScribe homepage]: http://www.battlescribe.net/
 [BattleScribe Data on Appspot]: http://battlescribedata.appspot.com/#/repos
-[Work in Progress Queue] : https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/milestone/1
+[Work in Progress Queue]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/milestone/1
