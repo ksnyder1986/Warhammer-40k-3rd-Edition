@@ -1,6 +1,6 @@
 ---
 name: New Request
-about: Do you want another roster/unit added. Please check the in progress Milestone to see if it is already in the queue before submitting.
+about: Do you want another roster/unit added. Please check the in progress [Milestone][https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/milestone/1] to see if it is already in the queue before submitting.
 title: 'Request for [Roster/Unit]'
 labels: ''
 assignees: ''
