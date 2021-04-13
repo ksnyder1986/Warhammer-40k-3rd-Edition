@@ -30,8 +30,7 @@ Documentation is in progress on obtaining the file.
 __I found a bug!__ / *I have another request*
 
 1. [Open issue directly][] (green `New Issue` in upper-right, GitHub account required) - you can track the progress, get notifications, help us by answering possibly follow-up questions and help us better!
-2. Check the work in progress queue [Milestone][https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/milestone/1] to see if it is already in the queue before submitting.
-title: 'Request for [Roster/Unit]
+2. Check the [Work in Progress Queue][]
 
 ## Links ##
 [Links]: #links
@@ -43,3 +42,4 @@ title: 'Request for [Roster/Unit]
 [Open Issue directly]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/issues
 [BattleScribe homepage]: http://www.battlescribe.net/
 [BattleScribe Data on Appspot]: http://battlescribedata.appspot.com/#/repos
+[Work in Progress Queue] : https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/milestone/1
