@@ -30,6 +30,8 @@ Documentation is in progress on obtaining the file.
 __I found a bug!__ / *I have another request*
 
 1. [Open issue directly][] (green `New Issue` in upper-right, GitHub account required) - you can track the progress, get notifications, help us by answering possibly follow-up questions and help us better!
+2. Check the work in progress queue [Milestone][https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/milestone/1] to see if it is already in the queue before submitting.
+title: 'Request for [Roster/Unit]
 
 ## Links ##
 [Links]: #links
