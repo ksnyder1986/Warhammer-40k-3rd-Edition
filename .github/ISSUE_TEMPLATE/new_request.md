@@ -1,7 +1,6 @@
 ---
 name: New Request
-about: Check the in progress [Milestone][https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/milestone/1] to see if it is already in the queue before submitting.
-title: 'Request for [Roster/Unit]'
+about: Check the work in progress queue before submitting
 labels: ''
 assignees: ''
 
