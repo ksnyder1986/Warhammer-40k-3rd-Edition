@@ -1,4 +1,4 @@
-Template Data Repo
+Warhammer 40k 3rd Edition
 ==================
 
 [![GitHub release](https://img.shields.io/github/release/ksnyder1986/Warhammer-40k-3rd-Edition.svg?style=flat-square)](https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/releases/latest)
