@@ -29,8 +29,9 @@ Documentation is in progress on obtaining the file.
 
 __I found a bug!__ / *I have another request*
 
-1. [Open issue directly][] (green `New Issue` in upper-right, GitHub account required) - you can track the progress, get notifications, help us by answering possibly follow-up questions and help us better!
-2. Check the [Work in Progress Queue][]
+
+1. Check the [Work in Progress Queue][] to see if your new request is already in process.
+2. [Open issue directly][] (green `New Issue` in upper-right, GitHub account required) - you can track the progress, get notifications, help us by answering possibly follow-up questions and help us better!
 
 ## Links ##
 [Links]: #links
