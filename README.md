@@ -1,11 +1,11 @@
-Template Data Repo
+Warhammer 40k 3rd Edition
 ==================
 
-[![GitHub release](https://img.shields.io/github/release/BSData/TemplateDataRepo.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/releases/latest)
-[![Github commits (since latest release)](https://img.shields.io/github/commits-since/BSData/TemplateDataRepo/latest.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/releases)
-[![Open Bug issues](https://img.shields.io/github/issues/BSData/TemplateDataRepo/bug.svg?style=flat-square&label=bugs)](https://github.com/BSData/TemplateDataRepo/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-[![GitHub contributors](https://img.shields.io/github/contributors/BSData/TemplateDataRepo.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/graphs/contributors)
-[![GitHub commit activity the past year](https://img.shields.io/github/commit-activity/y/BSData/TemplateDataRepo.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/pulse/monthly)
+[![GitHub release](https://img.shields.io/github/release/ksnyder1986/Warhammer-40k-3rd-Edition.svg?style=flat-square)](https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/releases/latest)
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/ksnyder1986/Warhammer-40k-3rd-Edition/latest.svg?style=flat-square)](https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/releases)
+[![Open Bug issues](https://img.shields.io/github/issues/ksnyder1986/Warhammer-40k-3rd-Edition/bug.svg?style=flat-square&label=bugs)](https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+[![GitHub contributors](https://img.shields.io/github/contributors/ksnyder1986/Warhammer-40k-3rd-Edition.svg?style=flat-square)](https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/graphs/contributors)
+[![GitHub commit activity the past year](https://img.shields.io/github/commit-activity/y/ksnyder1986/Warhammer-40k-3rd-Edition.svg?style=flat-square)](https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/pulse/monthly)
 
 [![Chat on Discord](https://img.shields.io/discord/558412685981777922.svg?logo=discord&style=popout-square)](https://discord.gg/KqPVhds)
 
@@ -42,8 +42,7 @@ Great, thank you! Now, you have some options:
 * [BattleScribe Data on Appspot][]
 * [Getting Started wiki][]
 
-[Report it on Appspot]: http://battlescribedata.appspot.com/#/repo/TemplateDataRepo
-[Open Issue directly]: https://github.com/BSData/TemplateDataRepo/issues
+[Data File]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/releases/latest/Warhammer-40k-3rd-Edition.latest.bsi
+[Open Issue directly]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/issues
 [BattleScribe homepage]: http://www.battlescribe.net/
 [BattleScribe Data on Appspot]: http://battlescribedata.appspot.com/#/repos
-[Getting Started wiki]: https://github.com/BSData/catalogue-development/wiki/Getting-Started#contributing
