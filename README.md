@@ -42,6 +42,7 @@ Great, thank you! Now, you have some options:
 * [BattleScribe Data on Appspot][]
 * [Getting Started wiki][]
 
+[Data File]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/releases/latest/Warhammer-40k-3rd-Edition.latest.bsi
 [Open Issue directly]: https://github.com/ksnyder1986/Warhammer-40k-3rd-Edition/issues
 [BattleScribe homepage]: http://www.battlescribe.net/
 [BattleScribe Data on Appspot]: http://battlescribedata.appspot.com/#/repos
