@@ -6112,9 +6112,22 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6be-ba2f-c25a-dbac" type="max"/>
       </constraints>
+      <rules>
+        <rule id="dafb-0c74-ecbf-0233" name="Annointed Daemonhammer" hidden="false">
+          <description>Cortez may re-roll any failed rolls to wound with his Daemonhammer.</description>
+        </rule>
+        <rule id="5310-fbf8-846a-1ee3" name="Glovodan Eagle" hidden="false">
+          <description>The Eagle grants Coteaz +1 I and +1 A, and does not count towards the number of Henchmen nor does it take up any additional space in a Transport vehicle.</description>
+        </rule>
+        <rule id="af12-3aa0-6460-f71b" name="Destroyer to Daemons" hidden="false">
+          <description>All Daemons within 6&quot; of Coteaz sufer -1 to their Leadership value.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="97b5-9b84-a3d7-befb" name="Coteaz" hidden="false" targetId="d09f-62ad-076a-229f" type="profile"/>
         <infoLink id="bac4-b230-c5b9-aa02" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+        <infoLink id="4789-5f9b-3f5a-85be" name="Daemonhammer" hidden="false" targetId="3bee-a355-97ec-23fd" type="profile"/>
+        <infoLink id="39be-5b39-4cf5-0c33" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="856b-e0fa-f81b-acd2" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
@@ -6125,6 +6138,53 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="185.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="2e61-10ad-9bf7-bd39" name="Brother-Captain Stern" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="e38a-abb3-d8c2-9f48" value="0.0">
+          <conditions>
+            <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e38a-abb3-d8c2-9f48" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="d35c-9cf1-1396-3483" name="The Strands of Fate" hidden="false">
+          <description>Stern may re-roll one dice roll per phase. Keep track of the number of times Stern uses this ability in a given player turn. His opponent may subsequently re-roll one of his own units&apos; dice per use of this ability. Any re-rolls garnered in this way that are not utilised by the end of the player turn are lost.</description>
+        </rule>
+        <rule id="c451-7c48-58bd-24ab" name="Daemonic Nemesis" hidden="false">
+          <description>Any opponent using the Adversaries rules may upgrade their Greater Daemon to Chaos to a Lord of Change for no extra cost.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="78e5-3b86-1d97-f7b8" name="Stern" hidden="false" targetId="2d38-ca9d-e0e8-2ebd" type="profile"/>
+        <infoLink id="428c-f59c-453f-94a4" name="Nemesis Force Weapon" hidden="false" targetId="4342-3943-c5f7-0b0c" type="profile"/>
+        <infoLink id="0054-e744-aa25-06a9" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+        <infoLink id="3bbc-7c3a-2bf1-0d9f" name="Grimoire of True Names" hidden="false" targetId="ae7b-f94d-367d-8d8f" type="rule"/>
+        <infoLink id="3164-8157-e920-3642" name="Holocaust" hidden="false" targetId="00ba-4bbe-4cbf-6039" type="rule"/>
+        <infoLink id="e556-87e3-f7b3-727a" name="Hammerhand" hidden="false" targetId="af4c-0503-c81d-6237" type="rule"/>
+        <infoLink id="cc34-0132-ecf5-ce8f" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="2a09-8c71-ff48-b06e" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11b8-00aa-cf87-a06f" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="ed68-3241-dc74-1bfc" name="Grey Knight Retinue" hidden="false" collective="false" import="true" targetId="7556-d03b-8349-851c" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c59-c0f5-8451-0a8b" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="470a-ed05-247e-a261" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -6298,6 +6358,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="ba64-4fbe-49d7-5e8d" value="0.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2345-227b-eb20-31cf" type="greaterThan"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -8955,6 +9020,7 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
     <rule id="a048-6fe2-6f7e-0698" name="Destroy Daemon" hidden="false"/>
     <rule id="00ba-4bbe-4cbf-6039" name="Holocaust" hidden="false"/>
     <rule id="eddc-2385-12c4-16aa" name="Sanctuary" hidden="false"/>
+    <rule id="ae7b-f94d-367d-8d8f" name="Grimoire of True Names" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="be2f-7463-84ea-6b38" name="Scourging" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -9494,6 +9560,15 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">3(4)</characteristic>
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="3bee-a355-97ec-23fd" name="Daemonhammer" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea"/>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e"/>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705"/>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204"/>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080"/>
       </characteristics>
     </profile>
   </sharedProfiles>
