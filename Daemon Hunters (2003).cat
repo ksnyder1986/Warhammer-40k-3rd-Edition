@@ -3790,7 +3790,7 @@
         <entryLink id="d4b7-c9d1-b13a-6a1d" name="Inquisitor&apos;s Retinue" hidden="false" collective="false" import="true" targetId="95b1-bedb-e542-5243" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bb35-7be3-e49a-948b" name="Officio Assassinorum Operative" hidden="false" collective="false" import="true" type="unit">
@@ -4223,7 +4223,15 @@ Hellfire Round: The shot wounds on a 2+.</description>
           </selectionEntries>
           <entryLinks>
             <entryLink id="e80e-cc08-7532-4f44" name="Daemon Hunter Chimera" hidden="false" collective="false" import="true" targetId="63c3-384e-b17f-4663" type="selectionEntry"/>
-            <entryLink id="3c49-6261-0071-f1ee" name="Daemon Hunter Rhino" hidden="false" collective="false" import="true" targetId="9960-ad05-7426-d5f1" type="selectionEntry"/>
+            <entryLink id="3c49-6261-0071-f1ee" name="Daemon Hunter Rhino" hidden="false" collective="false" import="true" targetId="9960-ad05-7426-d5f1" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0f6-d683-15bb-061c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -5614,6 +5622,14 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9365-64df-63a5-a5b5" repeats="1" roundUp="false"/>
               </repeats>
+              <conditions>
+                <condition field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9365-64df-63a5-a5b5" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3dd6-4740-aa30-fc47" value="4.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9365-64df-63a5-a5b5" type="greaterThan"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -7414,9 +7430,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2984-3183-a9c0-7270" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e9de-342c-e2ef-90ab" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f536-8829-3d31-7f92" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2984-3183-a9c0-7270" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e9de-342c-e2ef-90ab" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f536-8829-3d31-7f92" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7435,9 +7451,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2984-3183-a9c0-7270" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e9de-342c-e2ef-90ab" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f536-8829-3d31-7f92" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2984-3183-a9c0-7270" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e9de-342c-e2ef-90ab" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f536-8829-3d31-7f92" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7456,9 +7472,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2984-3183-a9c0-7270" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e9de-342c-e2ef-90ab" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f536-8829-3d31-7f92" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2984-3183-a9c0-7270" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e9de-342c-e2ef-90ab" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f536-8829-3d31-7f92" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
