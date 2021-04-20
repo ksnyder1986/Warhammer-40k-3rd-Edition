@@ -9,11 +9,13 @@
     <entryLink id="5cbf-9380-6a87-1b14" name="Land Raider" hidden="false" collective="false" import="true" targetId="0432-2db6-5eda-20d8" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="a10d-6c90-5cd1-ae18" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
+        <categoryLink id="85a8-ad7f-3892-afb1" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="02a8-9af9-232d-277a" name="Dreadnought" hidden="false" collective="false" import="true" targetId="3f7e-ad94-b024-1a57" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="b94d-0953-9ba5-8130" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
+        <categoryLink id="f645-b38c-a9ad-67c5" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="04e3-0701-def4-ae3d" name="Predator Destructor" hidden="false" collective="false" import="true" targetId="156e-b697-5422-38ff" type="selectionEntry">
@@ -157,82 +159,556 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="d1f7-6b7c-67ce-c814" name="Blood Angels Scout Squad" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="250d-6804-a1c5-22f8" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+        <infoLink id="e1f4-8a3a-1164-82a4" name="Move Through Cover" hidden="false" targetId="3a88-67df-4004-176b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6ce8-b411-232f-4225" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a848-f410-ba26-e89e" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a805-5e9e-f918-0bc5" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b89c-293f-9905-603f" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f761-a644-f78c-ea3c" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f309-037c-9020-d4ae" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="dd3b-fad4-6114-b8a6" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="dea4-2029-0ae5-4a5c" name="Scouts" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04d0-8079-a4e2-44b9" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb19-8c4b-9be1-1c1d" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="eedf-9df9-f513-3e89" name="Scout Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="a42f-9734-1495-bd52" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9eca-e5c8-50d0-02eb" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="816c-e71c-fe9e-519e" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9eca-e5c8-50d0-02eb" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="816c-e71c-fe9e-519e" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a42f-9734-1495-bd52" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="5004-6b6e-d53f-b34c" name="Scout" hidden="false" targetId="a6b9-9e6b-e5f6-16e4" type="profile"/>
+                <infoLink id="1899-411c-e092-ef52" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                <infoLink id="84a4-02f2-fbfa-090e" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="13.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9eca-e5c8-50d0-02eb" name="Veteran Scout Sergeant" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56dc-c0a7-3fe4-2349" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a161-3d35-ead4-8eb0" name="Terminator Honors" hidden="false" targetId="bad9-31ae-7a9c-f38c" type="rule"/>
+                <infoLink id="6876-4dda-8bad-69b4" name="Veteran Scout Sergeant" hidden="false" targetId="1b97-64e3-1217-1e14" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="7737-6e39-1fb3-01c1" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="26.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8490-9cf8-e2aa-037c" name="Scout" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d2c-2bf0-e78c-a60b" type="max"/>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e36d-a998-81a0-da7e" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="5120-7c35-a0c1-905a" name="Scout" hidden="false" targetId="a6b9-9e6b-e5f6-16e4" type="profile"/>
+                <infoLink id="1e1f-c982-242f-7199" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                <infoLink id="e2d9-f402-146e-b45a" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="13.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6a99-1685-bcd5-c453" name="Replace Bolt Pistol and Close Combat Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="910a-3ebe-84b7-34e9" value="0.0"/>
+            <modifier type="increment" field="910a-3ebe-84b7-34e9" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8490-9cf8-e2aa-037c" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eedf-9df9-f513-3e89" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="910a-3ebe-84b7-34e9" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8dda-c572-e4eb-2c63" name="Bolter" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="d1c4-95d4-d4e2-f35d" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2f2f-d296-e900-97cc" name="Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="36ed-661d-2e5f-529c" name="Sniper Rifle" hidden="false" targetId="3825-4a6b-6aaa-8c99" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dcbb-4869-9d8b-309d" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="18a5-c0f8-012f-1d35" name="Shotgun" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7fbc-2970-e421-6c7e" name="Blood Angels Veteran Assault Squad" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="793d-86c1-c9e4-861d" name="Jump Packs" hidden="false" targetId="2563-092a-a5bc-992f" type="rule"/>
+        <infoLink id="80c6-e16c-2c17-9e19" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
+        <infoLink id="1dd3-be84-56a5-cfcd" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ec4e-8e6e-c1fd-a77f" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="82fe-07bf-cb77-c417" name="Terminator Honours" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf35-6fc4-5c79-136d" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="10.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e044-7ed4-9b6b-4627" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe60-24af-d8e4-4647" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="f887-f4d3-9df5-33e0" name="Terminator Honors" hidden="false" targetId="bad9-31ae-7a9c-f38c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="50f0-6964-b882-9c3c" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="981d-73e3-8d0c-57b8" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="97ab-66e8-c0ca-3323" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ee05-68e6-1893-01b3" name="Melta Bombs" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="499c-fca5-093c-d59c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="a4af-dadb-3f00-5b36" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1af3-2ecb-5d6d-b69b" name="Veterans" hidden="false" collective="false" import="true" defaultSelectionEntryId="7714-a733-5fce-8c7d">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b2e-f32a-d53d-62d2" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3fb-d49e-3d38-d994" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e044-7ed4-9b6b-4627" name="Veteran Space Marine" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27fc-9233-af84-af9e" type="min"/>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fde-b2fb-a179-3af1" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="e9f6-307c-7a0d-d168" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
+                <infoLink id="d2c6-8afb-567e-1e2d" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                <infoLink id="3185-709f-7a3a-7357" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="157a-af43-3bda-053f" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="28.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cf35-6fc4-5c79-136d" name="Veteran Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="dfda-e316-2dcd-088f" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="7fbc-2970-e421-6c7e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7714-a733-5fce-8c7d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dfda-e316-2dcd-088f" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="fbeb-9f41-3960-890a" name="Veteran Sergeant" hidden="false" targetId="87bf-a0f5-0c67-2bae" type="profile"/>
+                <infoLink id="bb80-57d3-3c47-89ac" name="Terminator Honors" hidden="false" targetId="bad9-31ae-7a9c-f38c" type="rule"/>
+                <infoLink id="0e43-4924-de2d-3f34" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                <infoLink id="9095-2fb7-83d2-71ac" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="5825-7fa2-7b82-def4" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="bee1-df6b-d9cf-95a4" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7714-a733-5fce-8c7d" name="Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="3b3e-41d5-051b-45ac" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="7fbc-2970-e421-6c7e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cf35-6fc4-5c79-136d" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" field="fa7d-d4f9-a809-7af7" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="7fbc-2970-e421-6c7e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cf35-6fc4-5c79-136d" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b3e-41d5-051b-45ac" type="max"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa7d-d4f9-a809-7af7" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="fda8-5347-4cdf-bb15" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
+                <infoLink id="0d3c-82db-1d68-0a21" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                <infoLink id="f8f7-aa2b-20d3-d8b3" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="e7f3-b2da-2159-2fa5" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="28.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2a5b-921e-151e-e184" name="Special Weapons" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76c7-2479-31a5-a666" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="68c8-322f-2c18-b7ac" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="60e7-0b8d-9745-fb38" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4922-a0af-7242-b15e" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="27b8-d9c7-d9f2-6425" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eeaf-9521-764e-b60d" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="2714-c63f-2496-ca1a" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8b43-eabd-94b4-16cd" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="7c3d-f310-33a6-cd5b" name="Plasma Pistol" hidden="false" targetId="7b91-b670-d042-7c88" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6c49-6711-a182-f554" name="Death Company" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4303-921d-7856-b360" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcd4-4216-fc66-e18a" type="min"/>
+      </constraints>
+      <rules>
+        <rule id="b1a1-ed7a-a6ce-4928" name="The Red Thirst" hidden="false"/>
+        <rule id="a948-1898-bd89-aa02" name="Ignore Injury" hidden="false"/>
+        <rule id="f14b-b465-2c23-6c27" name="Deployment" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="8446-b2f2-1785-0ff6" name="Death Company" hidden="false" targetId="5fb7-b19b-e19c-0844" type="profile"/>
+        <infoLink id="5dec-5068-a5f3-fc06" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
+        <infoLink id="ec5a-114d-fb25-7ca9" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="3dca-eb70-3687-10d5" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1353-1161-f51c-aff5" name="Sanguinary High Priest" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4af1-aec3-04b5-e536" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="984d-3460-2dd6-5894" name="Sanguinius&apos; Chosen" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="64ac-c092-b202-1e93" name="High Priest" hidden="false" targetId="51bb-c849-30fc-e2f3" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="7353-41d7-91db-a823" name="Sanguinary Priest" hidden="false" targetId="5709-6bb9-f3f9-07f2" primary="false"/>
         <categoryLink id="ddcd-1c0f-2c5c-6844" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="ee03-44bf-8539-2701" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0413-0200-b6de-835e" name="Retinue" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c88-adb5-71ad-d41b" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="a5b5-9058-9b58-7f48" name="Blood Angels Honour Guard" hidden="false" collective="false" import="true" targetId="6d94-fc5b-d9d5-ca26" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="ba18-7379-5024-0068" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="44f9-6c25-c16b-e254" name="Blood Angels Librarian" hidden="false" collective="false" import="true" type="upgrade">
+      <rules>
+        <rule id="783f-0d20-6af6-f406" name="Quickening" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="a27c-c232-9bf9-d38d" name="Blood Angels LIbrarian" hidden="false" targetId="b0c7-2d0d-6d22-8e8c" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="8433-66a0-a8c4-7305" name="Librarian" hidden="false" targetId="02ee-bc24-ec98-8712" primary="false"/>
+        <categoryLink id="2081-606b-9266-702a" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="6745-fa31-8c5a-451f" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5ed4-a7eb-b151-289c" name="Retinue" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c904-6655-4f5c-527e" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="4486-7631-c97b-8644" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
+            <entryLink id="6101-aebb-2ce1-5caf" name="Blood Angels Honour Guard" hidden="false" collective="false" import="true" targetId="6d94-fc5b-d9d5-ca26" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e82b-2250-ecee-f45f" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ebb4-4e0b-f983-1fcf" name="Blood Angels Chaplain" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="ebb4-4e0b-f983-1fcf" name="Blood Angels Chaplain" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="bbd2-a6df-26fb-36b1" name="Death Company" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="0d71-7a15-dd18-ce18" name="Blood Angels Chaplain" hidden="false" targetId="6f03-bc54-05a5-20fc" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="58c6-4b25-8145-1f23" name="Chaplain" hidden="false" targetId="b216-ba2e-4d56-b986" primary="false"/>
+        <categoryLink id="98c4-e586-8be0-70ee" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="ab4e-68cd-ecc5-f526" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a39b-1e04-2f39-371f" name="Retinue" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3be2-4424-a172-1bef" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b0c6-88c5-2c0f-a4b3" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
+            <entryLink id="3630-d483-1520-5dd7" name="Blood Angels Honour Guard" hidden="false" collective="false" import="true" targetId="6d94-fc5b-d9d5-ca26" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="d6e9-ec27-4609-72c2" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="180.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="644f-8ec9-137a-8bc8" name="Blood Angels Leader" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="644f-8ec9-137a-8bc8" name="Blood Angels Leader" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="e3d5-869a-2d4b-1550" name="Blood Angels Leader" hidden="false" targetId="1273-ee16-16bd-dd9c" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="a35e-38e0-dafc-322c" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="9749-0516-2371-22b7" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1e7f-1e82-72ae-80fd" name="Retinue" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aff0-f01a-5467-91e3" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0ec4-7b4d-9fe6-c2cf" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
+            <entryLink id="fc50-6fc0-cc23-7ebd" name="Blood Angels Honour Guard" hidden="false" collective="false" import="true" targetId="6d94-fc5b-d9d5-ca26" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e272-605a-f8dc-290d" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b266-743c-fa51-2ab8" name="Blood Angels Commander" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b266-743c-fa51-2ab8" name="Blood Angels Commander" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="8da6-d24a-1e0a-9215" name="Blood Angels Commander" hidden="false" targetId="fd00-3947-77a1-a16c" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ddd6-daa3-c4d8-7dc1" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="3685-601d-200b-622d" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="751e-69d2-6fb1-367c" name="Retinue" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44d9-2bd3-2515-ce13" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="7dd2-9c65-42b4-a644" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
+            <entryLink id="86d8-af57-f26d-7387" name="Blood Angels Honour Guard" hidden="false" collective="false" import="true" targetId="6d94-fc5b-d9d5-ca26" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="3f46-ce4e-7a80-5bd6" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2569-af62-8085-c846" name="Blood Angels Force Commander" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="2569-af62-8085-c846" name="Blood Angels Force Commander" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="259f-cf63-20c8-9810" name="Blood Angels Force Commander" hidden="false" targetId="0c82-15bd-f92b-7107" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="a9f1-4c98-cf86-d71b" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="e1ea-7b64-73a9-304b" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b93d-2d80-4280-4859" name="Retinue" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6883-704c-122f-b6da" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="7b03-0d08-3549-b3a7" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
+            <entryLink id="18b9-2108-dfd8-233a" name="Blood Angels Honour Guard" hidden="false" collective="false" import="true" targetId="6d94-fc5b-d9d5-ca26" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="003a-f743-5df2-d32e" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6d94-fc5b-d9d5-ca26" name="Blood Angels Honour Guard" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
-  <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="05b8-11a2-c33d-ee39" name="Blood Angels Honour Guard" hidden="false" collective="false" import="true"/>
-  </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="2893-070a-392e-4bc8" name="The Black Rage" hidden="false"/>
   </sharedRules>
