@@ -9,6 +9,7 @@
     <categoryEntry id="2e99-a0cf-9812-b860" name="Techmarine" hidden="false"/>
     <categoryEntry id="a0a1-0673-b637-2cc4" name="Dark Angel" hidden="false"/>
     <categoryEntry id="5992-9b5f-b0e9-d902" name="Grand Master" hidden="false"/>
+    <categoryEntry id="d0ac-cb49-d41e-bba3" name="Deathwing" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="42a3-487a-8d98-5c47" name="Commander" hidden="false" collective="false" import="true" targetId="043b-1cc7-9a38-8133" type="selectionEntry"/>
@@ -1417,9 +1418,14 @@
             <entryLink id="9a0e-5b16-a6b4-3ed7" name="Veteran Sergeant Lysander" hidden="false" collective="false" import="true" targetId="bdd0-e9d7-b9ca-cd36" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a527-734f-2081-58cd" type="instanceOf"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a527-734f-2081-58cd" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -1582,14 +1588,24 @@
             <selectionEntry id="bc46-544f-c92d-394f" name="Scout Sergeant" hidden="false" collective="false" import="true" type="model">
               <modifiers>
                 <modifier type="set" field="ac1c-7509-e7c6-0bd0" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7345-3cc8-9bfd-852f" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7345-3cc8-9bfd-852f" type="equalTo"/>
+                        <condition field="selections" scope="e811-e637-bb36-1ad7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b8ec-bc82-4864-1e3e" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="set" field="1754-39c3-7810-3f0d" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7345-3cc8-9bfd-852f" type="equalTo"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7345-3cc8-9bfd-852f" type="equalTo"/>
+                        <condition field="selections" scope="e811-e637-bb36-1ad7" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b8ec-bc82-4864-1e3e" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -1606,6 +1622,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="7345-3cc8-9bfd-852f" name="Veteran Scout Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="74db-2d11-0569-0e7f" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="e811-e637-bb36-1ad7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b8ec-bc82-4864-1e3e" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74db-2d11-0569-0e7f" type="max"/>
               </constraints>
@@ -1635,6 +1658,17 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink id="b8ec-bc82-4864-1e3e" name="Veteran Sergeant Naaman" hidden="false" collective="false" import="true" targetId="fe78-3d4d-5e3b-9e66" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="360a-00e7-1b2b-196a" name="Replace Bolt Pistol and Close Combat Weapon" hidden="false" collective="false" import="true">
           <modifiers>
@@ -3908,6 +3942,37 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="fe78-3d4d-5e3b-9e66" name="Veteran Sergeant Naaman" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e556-520c-6a65-f3bd" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f66c-1408-cec0-96d3" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="0fc9-c331-1785-66b7" name="Evade Detection" hidden="false">
+          <description>As long as Naaman and his unit didn&apos;t fire in the previous turn, any unit wanting to shoot at him or his unit must check to see if they can spot him first using the rules for Night Fighting. If the Night Fighting rules are already in effect then the normal spotting distances is halved.</description>
+        </rule>
+        <rule id="feab-81b7-440f-4960" name="Brush Aside Blow" hidden="false">
+          <description>Naaman may ignore the first hit he suffers in any round of close combat.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="c197-3429-6da8-aa3c" name="Naaman" hidden="false" targetId="3646-d081-8001-8bce" type="profile"/>
+        <infoLink id="df42-d76f-d6c4-8888" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+        <infoLink id="1126-37ed-d828-d7ca" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+        <infoLink id="3b41-bbc3-7394-fc05" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+        <infoLink id="392b-10c7-c40f-6cd2" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+        <infoLink id="fe89-6ea4-fd9c-766f" name="Master-crafted Weapons" hidden="false" targetId="0e54-6618-9b31-0f81" type="rule"/>
+        <infoLink id="d50d-28a5-e9d1-a35e" name="Auspex" hidden="false" targetId="00e2-88f3-119d-9df3" type="rule"/>
+        <infoLink id="34ed-62e6-4bcf-9480" name="Teleport Homer" hidden="false" targetId="250f-507f-ea1b-b164" type="rule"/>
+        <infoLink id="6379-9ec5-b6ad-72fe" name="Stubborn" hidden="false" targetId="1eb7-6961-7e16-d0b6" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="800f-e4d6-c6b9-b727" name="Dark Angel" hidden="false" targetId="a0a1-0673-b637-2cc4" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="bfc9-22b8-1379-3112" name="Space Marine Armory" hidden="false" collective="false" import="true">
@@ -3934,6 +3999,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3958,6 +4024,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                       <conditions>
                         <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo"/>
                         <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="notInstanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3983,6 +4050,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4048,6 +4116,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4185,6 +4254,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4222,6 +4292,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4258,6 +4329,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4307,6 +4379,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4376,6 +4449,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4410,6 +4484,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19ba-d49b-1aff-d37a" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4435,6 +4510,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4470,6 +4546,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4511,6 +4588,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4575,6 +4653,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4645,6 +4724,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4675,6 +4755,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4708,6 +4789,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4757,6 +4839,11 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5510-fc60-e4b9-7286" type="max"/>
@@ -4796,6 +4883,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                         <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a447-8bb2-5071-def9" type="equalTo">
                           <comment>Termi can&apos;t equip</comment>
                         </condition>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -5353,6 +5441,9 @@ However, if the model bearing the standard is slain in close combat, then the en
     <rule id="2925-28e3-33e7-101b" name="Standard of Devastation" hidden="false"/>
     <rule id="061d-26d8-4ad2-d2dc" name="Standard of Fortitude" hidden="false"/>
     <rule id="f403-bb3d-e854-1b24" name="Standard of Retribution" hidden="false"/>
+    <rule id="1eb7-6961-7e16-d0b6" name="Stubborn" hidden="false">
+      <description>The unit will automatically pass any Morale checks they have to take, even if faced by a situation or opponent that would normally cause them to automatically fail. Note that they still must test for pinning as normal.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="f33a-4335-a0ee-05bb" name="Leader" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -5748,6 +5839,19 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="BS" typeId="de63-2aba-c18c-6d47">4</characteristic>
         <characteristic name="Structure Points" typeId="a817-7301-451c-20c9">3</characteristic>
         <characteristic name="Capacity" typeId="e1d2-e9ec-26d6-1f11"/>
+      </characteristics>
+    </profile>
+    <profile id="3646-d081-8001-8bce" name="Naaman" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
