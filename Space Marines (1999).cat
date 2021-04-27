@@ -47,7 +47,11 @@
     <entryLink id="8c44-eada-0c18-0c0d" name="Vindicator" hidden="false" collective="false" import="true" targetId="86f9-0db1-c67b-3442" type="selectionEntry"/>
     <entryLink id="20b9-27b7-52e9-1cd0" name="Whirlwind" hidden="false" collective="false" import="true" targetId="d13e-3fe7-b445-511c" type="selectionEntry"/>
     <entryLink id="3cbf-5a47-6b22-2d2b" name="Chaplain Xavier" hidden="false" collective="false" import="true" targetId="0196-c398-93e6-94d7" type="selectionEntry"/>
-    <entryLink id="39b1-f5f1-6830-4623" name="Emperor&apos;s Champion" hidden="false" collective="false" import="true" targetId="ad23-c512-3d63-c3a4" type="selectionEntry"/>
+    <entryLink id="39b1-f5f1-6830-4623" name="Emperor&apos;s Champion" hidden="false" collective="false" import="true" targetId="ad23-c512-3d63-c3a4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="105f-a8a9-f152-8d68" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="0410-9d0a-3e42-7786" name="Captain Cortez" hidden="false" collective="false" import="true" targetId="095c-81d6-2cb9-777e" type="selectionEntry"/>
     <entryLink id="7700-22b6-79ae-2146" name="Chief Librarian Tigurius" hidden="false" collective="false" import="true" targetId="5f4b-7f68-c2c9-adbf" type="selectionEntry"/>
     <entryLink id="84a2-75be-64c7-d56a" name="Marneus Calgar" hidden="false" collective="false" import="true" targetId="9e80-340b-902a-19fb" type="selectionEntry"/>
@@ -283,6 +287,23 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="9b89-b0a1-078b-8ef1" name="Purity Seals" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e24-d2c1-5ce8-e7cb" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="111a-dc95-6b5f-e71c" type="max"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="faa2-3c85-df57-e7e5" name="Space Marines" hidden="false" collective="false" import="true">
@@ -348,6 +369,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="c545-9053-5ca2-1d68" name="Veteran Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e24-d2c1-5ce8-e7cb" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ccc-f121-dc82-4684" type="max"/>
               </constraints>
@@ -741,6 +769,23 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="e681-0452-1a17-4382" name="Purity Seals" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e24-d2c1-5ce8-e7cb" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6669-5d93-9501-20eb" type="max"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="a8d4-214d-1411-f657" name="Terminators" hidden="false" collective="false" import="true" defaultSelectionEntryId="1cd7-0fa0-52e7-af04">
@@ -839,6 +884,25 @@
       <categoryLinks>
         <categoryLink id="dc46-b6f8-9ee9-424e" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="bbc9-7079-9c0e-6fe2" name="Purity Seals" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e24-d2c1-5ce8-e7cb" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="992d-0513-93e7-59e9" type="max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="3094-1297-cfba-e0d1" name="Terminators" hidden="false" collective="false" import="true" defaultSelectionEntryId="2dba-a3ba-9304-6670">
           <selectionEntries>
@@ -1117,6 +1181,23 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b963-a21f-cc0d-2485" name="Purity Seals" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e24-d2c1-5ce8-e7cb" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4f5-dd5d-a872-70b7" type="max"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="8883-c7bf-4824-77b0" name="Space Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="6a66-8e4b-a91f-5440">
@@ -1126,6 +1207,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="6818-ade4-abe2-aa63" name="Veteran Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e24-d2c1-5ce8-e7cb" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bc5-b126-70a9-0f33" type="max"/>
               </constraints>
@@ -2191,6 +2279,25 @@
       <categoryLinks>
         <categoryLink id="8948-c3cb-7c70-af4d" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="fd2d-2109-30d0-4987" name="Purity Seals" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e24-d2c1-5ce8-e7cb" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="319f-3158-e49f-91d5" type="max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="051f-fa5b-57b3-7f4d" name="Attack Bike" hidden="false" collective="false" import="true" defaultSelectionEntryId="d176-d556-995b-c99d">
           <constraints>
@@ -2788,6 +2895,21 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="33f2-5648-db62-7a7a" name="Heavy Flamers" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c77-1326-2bf2-1b97" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="2834-0e14-eb82-3b60" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3085,7 +3207,6 @@
         <infoLink id="da2d-e7e5-a8aa-b400" name="Emperor&apos;s Champion" hidden="false" targetId="74b7-a8a6-30bc-60aa" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="5b98-7d31-63da-0ceb" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
         <categoryLink id="7694-e7f1-3b82-4e5e" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
       <costs>
