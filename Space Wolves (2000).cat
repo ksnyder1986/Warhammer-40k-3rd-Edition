@@ -469,6 +469,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f17e-d81d-8244-c7e7" name="Rune Priest" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="add" field="category" value="86cf-31f2-e698-7a81">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6108-924d-eb58-8550" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b23-e3d5-f1d9-8da8" type="max"/>
       </constraints>
@@ -556,6 +563,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="3eef-2986-8524-8639" name="Wolf Guard Retinue" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="4ed5-2f92-9abc-2870" value="20.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86cf-31f2-e698-7a81" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="0495-d303-e71f-5a5d" name="Space Wolf" hidden="false" targetId="9bbd-df2b-520d-778d" primary="false"/>
       </categoryLinks>
@@ -697,6 +711,9 @@
               <entryLinks>
                 <entryLink id="f889-d5a9-8c97-a543" name="Space Wolves Armoury" hidden="false" collective="false" import="true" targetId="c4c0-8266-9b44-5012" type="selectionEntryGroup"/>
               </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -778,6 +795,11 @@
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="6108-924d-eb58-8550" name="Bike" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6cc-8f38-8ee7-864a" type="max"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
