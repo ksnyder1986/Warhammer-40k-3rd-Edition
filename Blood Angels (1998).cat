@@ -127,6 +127,9 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="c45b-e008-3161-3042" name="Scout Squad" hidden="false" collective="false" import="true" targetId="e811-e637-bb36-1ad7" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f555-a4b8-ac48-8fea" type="max"/>
+      </constraints>
       <infoLinks>
         <infoLink id="24e5-bc60-929a-7fc4" name="Blood Angels Special Rules" hidden="false" targetId="bcc9-4a2a-8619-1b80" type="infoGroup"/>
       </infoLinks>
@@ -405,7 +408,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="dea4-2029-0ae5-4a5c" name="Scouts" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="dea4-2029-0ae5-4a5c" name="Scouts" hidden="false" collective="false" import="true" defaultSelectionEntryId="eedf-9df9-f513-3e89">
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04d0-8079-a4e2-44b9" type="max"/>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb19-8c4b-9be1-1c1d" type="min"/>
@@ -413,14 +416,14 @@
           <selectionEntries>
             <selectionEntry id="eedf-9df9-f513-3e89" name="Scout Sergeant" hidden="false" collective="false" import="true" type="model">
               <modifiers>
-                <modifier type="set" field="a42f-9734-1495-bd52" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9eca-e5c8-50d0-02eb" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="816c-e71c-fe9e-519e" value="1.0">
+                <modifier type="set" field="a42f-9734-1495-bd52" value="1.0">
                   <conditions>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9eca-e5c8-50d0-02eb" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="816c-e71c-fe9e-519e" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9eca-e5c8-50d0-02eb" type="equalTo"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -488,14 +491,6 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2f2f-d296-e900-97cc" name="Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="36ed-661d-2e5f-529c" name="Sniper Rifle" hidden="false" targetId="3825-4a6b-6aaa-8c99" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="dcbb-4869-9d8b-309d" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
@@ -659,7 +654,7 @@
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="7fbc-2970-e421-6c7e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cf35-6fc4-5c79-136d" type="equalTo"/>
+                        <condition field="selections" scope="7fbc-2970-e421-6c7e" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cf35-6fc4-5c79-136d" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1091,7 +1086,7 @@
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1116,6 +1111,9 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="594a-6b8d-1fae-c046" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="a5e7-c0a0-638f-ac50" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
+              </categoryLinks>
               <entryLinks>
                 <entryLink id="dcb7-934e-deaa-0eb0" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
               </entryLinks>
@@ -1129,6 +1127,7 @@
               </constraints>
               <categoryLinks>
                 <categoryLink id="5854-912a-e8ea-fbbe" name="Sanguinary Priest" hidden="false" targetId="5709-6bb9-f3f9-07f2" primary="false"/>
+                <categoryLink id="ecc5-07d2-ec1d-a42a" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
               </categoryLinks>
               <entryLinks>
                 <entryLink id="06ce-d155-2f06-6248" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
@@ -1143,6 +1142,7 @@
               </constraints>
               <categoryLinks>
                 <categoryLink id="4c69-60e4-4da5-730c" name="Techmarine" hidden="false" targetId="2e99-a0cf-9812-b860" primary="false"/>
+                <categoryLink id="2888-a410-37e7-c670" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
               </categoryLinks>
               <entryLinks>
                 <entryLink id="7b82-b149-2d8c-a8f8" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
@@ -1157,6 +1157,7 @@
               </constraints>
               <categoryLinks>
                 <categoryLink id="930d-3537-16c7-3480" name="Standard Bearer" hidden="false" targetId="6c91-d214-036a-50a2" primary="false"/>
+                <categoryLink id="3f60-1db0-ddb2-afd3" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
               </categoryLinks>
               <entryLinks>
                 <entryLink id="d700-93b2-389d-dc3d" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
@@ -1469,7 +1470,7 @@ Any enemy squad with a model within 6&quot; of Dante at the start of that side&a
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="205.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="804d-474e-74ef-fbfe" name="Moriar the Chosen" hidden="false" collective="false" import="true" type="upgrade">
