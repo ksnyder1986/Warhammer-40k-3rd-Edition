@@ -12,6 +12,7 @@
     <categoryEntry id="d0ac-cb49-d41e-bba3" name="Deathwing" hidden="false"/>
     <categoryEntry id="0e24-d2c1-5ce8-e7cb" name="Black Templar" hidden="false"/>
     <categoryEntry id="3c77-1326-2bf2-1b97" name="Salamander" hidden="false"/>
+    <categoryEntry id="d056-919e-b449-186d" name="Ravenwing" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="42a3-487a-8d98-5c47" name="Commander" hidden="false" collective="false" import="true" targetId="043b-1cc7-9a38-8133" type="selectionEntry"/>
@@ -4890,9 +4891,15 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="d0ec-2d97-d6d8-a1b9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d056-919e-b449-186d" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6179-a7f9-400e-4643" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0ec-2d97-d6d8-a1b9" type="min"/>
           </constraints>
           <rules>
             <rule id="94cf-6f8c-8aac-ead8" name="Space Marine Bike" hidden="false">
@@ -4935,14 +4942,20 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
+            <modifier type="set" field="4ed5-2f92-9abc-2870" value="10.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4444-5be0-f0a3-99e7" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7801-f3be-e3dd-95f4" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4444-5be0-f0a3-99e7" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="7ee6-6cff-50e8-1c4c" name="Terminator Armour" hidden="false" targetId="fe7a-62df-712a-5bc5" type="rule"/>
@@ -5100,9 +5113,26 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5992-9b5f-b0e9-d902" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <comment>Not available to Termies according to CA:2003</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                      <comment>Termi can&apos;t equip</comment>
+                    </condition>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd13-f433-c3fe-e81a" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cd13-f433-c3fe-e81a" type="max">
+              <comment>Max one according to CA 2003</comment>
+            </constraint>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b02-5e65-4f49-1d35" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="240a-dfd9-e9ae-5243" name="Lion Helm" hidden="false" targetId="6deb-edba-53ca-53b5" type="rule"/>
@@ -5169,6 +5199,20 @@ After the first turn of firing the Deathwind cannot fire again.</description>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b216-ba2e-4d56-b986" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <comment>Not available to Termies according to CA:2003</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                      <comment>Termi can&apos;t equip</comment>
+                    </condition>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ccc-bf99-92a0-51bc" type="max"/>
@@ -5191,6 +5235,20 @@ After the first turn of firing the Deathwind cannot fire again.</description>
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <comment>Not available to Termies according to CA:2003</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                      <comment>Termi can&apos;t equip</comment>
+                    </condition>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
