@@ -203,7 +203,15 @@
       <infoLinks>
         <infoLink id="6b07-dcaf-0924-adab" name="Chaplain" hidden="false" targetId="0c8b-2645-5db9-f8c8" type="profile"/>
         <infoLink id="144d-abbf-43f0-14a5" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
-        <infoLink id="e7c3-5c69-ce0f-57e5" name="Crozius Arcanum" hidden="false" targetId="2927-357a-fc6c-42c3" type="rule"/>
+        <infoLink id="e7c3-5c69-ce0f-57e5" name="Crozius Arcanum" hidden="false" targetId="2927-357a-fc6c-42c3" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="40f4-9b03-d53a-d402" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="4802-8056-18b2-ad47" name="Rosarius" hidden="false" targetId="479f-929d-b531-a315" type="rule"/>
         <infoLink id="87c5-5535-a680-15d5" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
       </infoLinks>
@@ -212,6 +220,23 @@
         <categoryLink id="36ef-40ef-2812-f109" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
         <categoryLink id="aca9-4c0e-b770-bfa8" name="Chaplain" hidden="false" targetId="b216-ba2e-4d56-b986" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="40f4-9b03-d53a-d402" name="Thunder Hammer (Replace Crozius)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c77-1326-2bf2-1b97" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e92e-16db-bbac-53f5" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="ebc2-5a2c-f6e3-b998" name="Thunder Hammer" hidden="false" targetId="9edb-0754-ffa8-9dd3" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="8d4c-2300-84b5-489b" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
         <entryLink id="7ec8-13ca-89b1-b81d" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
@@ -4371,6 +4396,50 @@ After the first turn of firing the Deathwind cannot fire again.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="6ba4-06ff-28b7-669f" name="Reinforced Ceramite" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="06ff-8a9f-6e11-7432" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fd3d-a63d-ee67-d276" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f6dd-5ebf-e85f-daad" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7c0e-8c2e-0bfb-7646" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="4ed5-2f92-9abc-2870" value="25.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1be4-df32-2640-9413" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d7d7-d12e-387b-1b3b" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2fa6-311f-c6bd-6a9d" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0432-2db6-5eda-20d8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c77-1326-2bf2-1b97" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1811-da48-403d-99cc" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="083b-92fe-d7e3-a457" name="Reinforced Ceramite" hidden="false">
+              <description>Melta weapons, including melta bombs, never roll an extra dice for armor penetration due to being at half range.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="3721-6561-a311-27c0" name="Wargear" hidden="false" collective="false" import="true">
@@ -4668,6 +4737,13 @@ After the first turn of firing the Deathwind cannot fire again.</description>
           </costs>
         </selectionEntry>
         <selectionEntry id="f0e9-2eee-6db8-2da3" name="Master-Crafted Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="4ed5-2f92-9abc-2870" value="10.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c77-1326-2bf2-1b97" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c39d-e580-9343-23e4" type="max"/>
           </constraints>
@@ -4841,9 +4917,14 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         <selectionEntry id="5356-9692-fcaa-cf30" name="Signum" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2e99-a0cf-9812-b860" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c77-1326-2bf2-1b97" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2e99-a0cf-9812-b860" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -5359,6 +5440,46 @@ After the first turn of firing the Deathwind cannot fire again.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="37d0-53c6-cca6-c282" name="Salamanders Mantle" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c77-1326-2bf2-1b97" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ed9-8ba1-d989-0f60" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04a6-b41d-1b8c-a6cd" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1936-5e0e-86b4-fd59" name="Artificer Armor" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>For Salamander Non-Independent Characters</comment>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c77-1326-2bf2-1b97" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2f6-f2d3-c19a-1133" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9530-f010-116a-3726" name="Artificer Armor" hidden="false" targetId="7a02-cc04-9d97-3493" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="de15-e12d-186e-ce84" name="Single-Handed Weapons" hidden="false" collective="false" import="true">
@@ -5726,6 +5847,9 @@ However, if the model bearing the standard is slain in close combat, then the en
     <rule id="f403-bb3d-e854-1b24" name="Standard of Retribution" hidden="false"/>
     <rule id="1eb7-6961-7e16-d0b6" name="Stubborn" hidden="false">
       <description>The unit will automatically pass any Morale checks they have to take, even if faced by a situation or opponent that would normally cause them to automatically fail. Note that they still must test for pinning as normal.</description>
+    </rule>
+    <rule id="fced-61c2-a13a-ca80" name="Salamanders Mantle" hidden="false">
+      <description>The character is immune to suffering instant death caused by being hit by an attack which has a Strength value double his Toughness. The character loses a single wound instead. Note that instant death can be suffered in other ways.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
