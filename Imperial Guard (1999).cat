@@ -270,6 +270,9 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8dda-efc4-a1ae-094c" name="Command HQ" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="5135-40fd-ea65-61a0" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="fd63-bdfe-1087-222d" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -291,6 +294,21 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9ff7-271f-87c5-a87c" name="Regimental Standard" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d637-fa3f-c1fa-4b3e" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="410d-ed07-e811-1dc6" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -939,6 +957,9 @@
         <infoLink id="bc38-1854-1470-355b" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
         <infoLink id="9bac-c398-7b25-b569" name="Commissar" hidden="false" targetId="46ef-8307-f465-d6fc" type="profile"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b4e0-3413-8291-9e7e" name="New CategoryLink" hidden="false" targetId="d77a-7f37-0364-0a69" primary="true"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="5ea9-356f-7efd-a795" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1398,6 +1419,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a945-246a-3c59-c1cc" name="Command Section" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="1961-b45a-2d44-cd32" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="a214-34a5-8fb2-4d75" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3376,9 +3400,6 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="adb6-1146-5d08-a23f" name="Navy Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="efed-58a4-07dc-6bb4" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="148.0"/>
       </costs>
@@ -3410,9 +3431,6 @@
           </modifiers>
         </infoLink>
       </infoLinks>
-      <entryLinks>
-        <entryLink id="64c7-0f7b-ae13-bfe0" name="Navy Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="efed-58a4-07dc-6bb4" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="395.0"/>
       </costs>
@@ -3449,9 +3467,6 @@
           </modifiers>
         </infoLink>
       </infoLinks>
-      <entryLinks>
-        <entryLink id="fb1b-fad0-1575-e785" name="Navy Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="efed-58a4-07dc-6bb4" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="555.0"/>
       </costs>
@@ -3875,6 +3890,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="2f2f-7bb2-306a-904b" name="Power Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da0f-732c-3dc8-bea0" type="max"/>
           </constraints>
@@ -3908,6 +3930,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="b13b-67cc-7442-c0e9" name="Power Fist" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25be-3b21-7122-5bd6" type="max"/>
           </constraints>
@@ -3948,6 +3977,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </constraints>
       <selectionEntries>
         <selectionEntry id="3192-8c03-daa0-b73f" name="Bolter-grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c59-e566-a040-cef2" type="max"/>
           </constraints>
@@ -3961,6 +3997,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="97b0-6169-aa32-fb7b" name="Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6586-16d2-9625-0166" type="max"/>
           </constraints>
@@ -4005,6 +4048,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="75b3-e1c1-b8f7-81b8" name="Bolter-flamer" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f9f-6089-b208-0f9f" type="max"/>
           </constraints>
@@ -4017,6 +4067,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="d3b8-9ede-71f7-5d11" name="Bolter-meltagun" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="447a-c552-d6c5-6ff8" type="max"/>
           </constraints>
@@ -4029,6 +4086,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="b61f-2ee8-9c86-7dcc" name="Bolter-plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e26-45fb-ff51-4e24" type="max"/>
           </constraints>
@@ -4092,6 +4156,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="5301-1467-655b-8a41" name="Master-Crafted Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c04a-5a1c-cbe5-965c" type="max"/>
           </constraints>
@@ -4111,19 +4182,18 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="7d75-095a-781a-0238" name="Refractor Field" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a957-e8a6-8675-0aed" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="95b1-8ecb-d651-acfe" name="Regimental Standard" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d26f-85f1-94d3-344e" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7a8d-2a5e-0e0d-86a8" name="Scanner" hidden="false" collective="false" import="true" type="upgrade">
@@ -4155,6 +4225,37 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     <selectionEntryGroup id="c0af-40a7-0f54-9847" name="Vehicle Upgrades" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="a433-b113-da1d-68f1" name="Armored Crew Compartment" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4ce5-a21f-645a-ebfa" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a19-0a0c-3e8c-e0d0" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0d18-655f-f1b9-f451" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8968-eb43-b88e-440c" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6948-cae5-d6bf-ed92" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02b6-bdb8-6935-2cc9" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a018-1f62-6d23-1e9b" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b618-6741-3be4-995d" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e602-a0f0-1ad8-92b9" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e7ef-e433-9126-7068" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b9ed-d6c6-4fe7-14d8" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb16-f01c-0c2c-4ac3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e44-508d-e6b7-6cb3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c201-5a36-7de4-c131" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2aa4-9ffa-1f3a-f926" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e528-721e-8ff6-eb33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="484c-4ba0-9c6f-7a4e" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d11b-8c2f-9933-87d3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca5a-4094-bed9-52ad" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25d0-3e41-b984-c24e" type="max"/>
           </constraints>
@@ -4163,6 +4264,18 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="ad4e-e00c-2b35-f123" name="Camo Netting" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb16-f01c-0c2c-4ac3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e44-508d-e6b7-6cb3" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97bb-0994-bea7-7d05" type="max"/>
           </constraints>
@@ -4171,6 +4284,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="22cc-a005-5320-543e" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb16-f01c-0c2c-4ac3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e44-508d-e6b7-6cb3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e528-721e-8ff6-eb33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4aab-808b-2b65-658c" type="max"/>
           </constraints>
@@ -4179,6 +4307,20 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="1f3e-3e7f-c516-b9c1" name="Hunter-Killer Missle" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e7ef-e433-9126-7068" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e528-721e-8ff6-eb33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb86-98b3-8c33-bb9e" type="max"/>
           </constraints>
@@ -4190,6 +4332,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="a0be-ea58-8238-8023" name="Improved Comms" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e7ef-e433-9126-7068" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2aa4-9ffa-1f3a-f926" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e528-721e-8ff6-eb33" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9079-8edf-2271-ab82" type="max"/>
           </constraints>
@@ -4198,6 +4355,23 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="c8ac-6a7a-8480-1010" name="Mine Sweeper" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a19-0a0c-3e8c-e0d0" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e7ef-e433-9126-7068" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efb5-65a4-27b8-233d" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e602-a0f0-1ad8-92b9" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="349f-c266-b9c8-7678" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26b2-9675-07ae-a7c9" type="max"/>
           </constraints>
@@ -4206,6 +4380,18 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="d2ab-0741-3128-0218" name="Pintle Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9733-8581-4bab-ea5d" type="max"/>
           </constraints>
@@ -4217,9 +4403,26 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="489c-245d-eb1c-6e2b" name="Rough Terrain Modification" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb16-f01c-0c2c-4ac3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e44-508d-e6b7-6cb3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69a5-1bee-4691-a35f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="1d0a-fab2-b4bf-d647" name="Rough Terrain Modification" hidden="false"/>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -4233,6 +4436,18 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="528a-0826-a6fe-4a52" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69bb-7334-e036-7dd4" type="max"/>
           </constraints>
@@ -4241,6 +4456,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="6c35-d694-60a7-53bb" name="Track Guards" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efb5-65a4-27b8-233d" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb16-f01c-0c2c-4ac3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e44-508d-e6b7-6cb3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d10-75a5-cc16-eff7" type="max"/>
           </constraints>
@@ -4249,6 +4479,24 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="725b-c82c-a91e-2a2d" name="Crew Escape Mechanism" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e602-a0f0-1ad8-92b9" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e7ef-e433-9126-7068" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a19-0a0c-3e8c-e0d0" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efb5-65a4-27b8-233d" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="349f-c266-b9c8-7678" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb16-f01c-0c2c-4ac3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e44-508d-e6b7-6cb3" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6327-c2f7-80f1-7e12" type="max"/>
           </constraints>
@@ -4277,88 +4525,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </constraints>
         </entryLink>
       </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="efed-58a4-07dc-6bb4" name="Navy Vehicle Upgrades" hidden="false" collective="false" import="true">
-      <selectionEntries>
-        <selectionEntry id="b3fc-9ead-4e5b-8648" name="Ejector Seats" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12f0-4e15-d18e-8597" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="6a3b-6ad7-1fb0-a200" name="Ejector Seats" hidden="false">
-              <description>If the aircraft is destroyed roll a D6. On a 1-3 nothing happens. On a 4+ the crewman successfully ejects. Roll a Scatter Dice and 4D6&quot; for the direction and distance from the aircraft the crewman lands. Each crewman counts a single Guardsman with a laspistol. They are considered to be below half strength for the purposes of moral checks, claiming table quarters, etc. If any crew survice the aircraft will only count as damaged for the purposes of Victory Points at the end of the game.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6dab-dc0a-9381-f386" name="Flare/Chaff Launcher" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d07-afb0-ef7d-d46f" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="074d-2794-f42b-cd55" name="Flare/Chaff Launcher" hidden="false">
-              <description>One use only. If the vehicle takes the Immobilised damage result then re-roll the result. </description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4ef1-af3b-cd58-e21c" name="Armoured Cockpit" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf26-4578-aa63-d2c7" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="64ac-ed6a-66c6-0ba4" name="Armoured Cockpit" hidden="false">
-              <description>If the aircraft takes the Crew Shaken, Crew Stunned, or Pilot Shaken result, then roll a D6. On a 4+ the result is ignored.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fae6-fc42-912f-f0e5" name="Infrared Targeting" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9253-7fc4-e59f-b9e6" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="5e66-06d4-fa29-b32e" name="Infrared Targeting" hidden="false">
-              <description>The aircraft can re-roll the dice for the distance it can engage enemiers during a Night Fighting mission. </description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="482e-1e9a-3a2d-f308" name="Illum Flare" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f74-44d7-a9df-fe7a" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="87a1-a0be-5f90-aae7" name="Illum Flare" hidden="false">
-              <description>This flare is used in missions where the Night Fighting rules are in effect. They allow one enemy unit spotted by the aircraft to be fired at in the next turn by any other ground forces in range and that have line of sight.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9674-d7a6-41bc-86be" name="Nose Art" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb1d-eff4-c4fd-08ab" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="42ce-a38e-fb3f-ac1e" name="Nose Art" hidden="false">
-              <description>In the player&apos;s own turn, after the aircraft has attacked in the opponent&apos;s turn, the first unit to fail a Moral test may re-roll the test.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -4390,6 +4556,8 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     <rule id="4877-41b8-d9e1-6da3" name="Searchlight" hidden="false">
       <description>During Night Fighting missions, one enemy unit spotted by the vehicle can be fired at by any other Imperial Guard units in range and with line of fire. However, the vehicle using the Searchlight will then be exposed and can be fired at by any enemy units that are in range and line of sight of it until the next turn.</description>
     </rule>
+    <rule id="11ff-f612-addd-577e" name="Leadership" hidden="false"/>
+    <rule id="7023-343a-0f96-bd4e" name="Rough Terrain Modification" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="c623-489e-d7a0-0a93" name="Captain" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
