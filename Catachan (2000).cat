@@ -989,6 +989,42 @@
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="ab2f-eeaa-e419-04c5" name="Deathworld Veteran Command HQ" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="5b4b-58eb-0d89-6f10" name="Comm-Link" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff68-9045-8b76-3781" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="c334-54a4-6367-a401" name="Comm-Link" hidden="false" targetId="fcaa-7305-6950-d142" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="aad1-93cf-fff2-ef61" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5812-48a8-8b4f-6e3c" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed37-3d38-33c6-9308" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b475-5155-e83d-07bd" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9f20-5f5c-3588-bce4" name="Officer" hidden="false" collective="false" import="true" defaultSelectionEntryId="aa0e-bdb5-9080-e38c">
           <constraints>
@@ -1032,6 +1068,166 @@
           <entryLinks>
             <entryLink id="4b50-77dd-722b-9d5b" name="Colonel Iron Hand Straken" hidden="false" collective="false" import="true" targetId="eb4c-ad79-916c-8155" type="selectionEntry"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="16a4-ad6f-ed0e-ca00" name="Guardsmen" hidden="false" collective="false" import="true" defaultSelectionEntryId="9965-22a9-1da2-2b99">
+          <modifiers>
+            <modifier type="set" field="31e2-434e-4819-407c" value="3.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52a3-2c20-6250-09df" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="329f-e40c-2654-5ef6" value="3.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52a3-2c20-6250-09df" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31e2-434e-4819-407c" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="329f-e40c-2654-5ef6" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c1a2-c27e-2991-6ee3" name="Medic" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e53b-6004-4fb5-4055" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="0ac8-01a6-1636-1977" name="Deathworld Veteran" hidden="false" targetId="3173-cfab-abb8-2403" type="profile"/>
+                <infoLink id="6cac-0d0e-7bb2-a1e4" name="Medi-pack" hidden="false" targetId="16d3-73ab-2527-3e33" type="rule"/>
+                <infoLink id="5981-8abb-d324-b4c1" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+                <infoLink id="a8e6-6dc6-b61f-396d" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink id="e32a-cbbc-fc3b-584f" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="8539-6f14-2135-abd1" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9965-22a9-1da2-2b99" name="Guardsman" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="f01b-244f-b9d2-830e" name="Deathworld Veteran" hidden="false" targetId="3173-cfab-abb8-2403" type="profile"/>
+                <infoLink id="ded6-51b7-abff-cb8a" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+                <infoLink id="03b7-6915-07e6-e973" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink id="d88e-ee5a-62d3-fe46" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="477a-7a6f-3774-c9ca" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="60a9-1c69-f924-effe" name="Special Weapon Veteran" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="285e-4688-0f4b-caa8" name="Deathworld Veteran" hidden="false" targetId="3173-cfab-abb8-2403" type="profile"/>
+                <infoLink id="5afb-1721-91db-0bf9" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink id="4dfc-66b3-999f-cbdd" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="c2d6-5c1e-7268-de9a" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+                <infoLink id="15f0-2ede-f27a-0555" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="387f-aa9c-e463-3a9f" name="Special Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73ff-99be-4b98-80e3" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41a2-dd21-f6eb-c7c0" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="bf82-6c87-0316-20e8" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="03ca-9d81-8d5b-90c9" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="f60a-ce97-80ef-c35b" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="e114-5ccb-3024-0d97" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="d2d1-3fa9-5aa7-b67a" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="decc-2a68-a3f4-f457" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="e840-19cc-f37d-05d0" name="Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="ae25-b2eb-da76-b74f" name="Grenade Launcher (krak)" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
+                        <infoLink id="7892-3713-34dd-085a" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5812-48a8-8b4f-6e3c" name="Heavy Weapon Team" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5618-84d5-b50b-f4fc" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="078f-89b2-443c-b344" name="Deathworld Veteran" hidden="false" targetId="3173-cfab-abb8-2403" type="profile"/>
+                <infoLink id="7ffc-614f-fd8a-4365" name="Deathworld Veteran" hidden="false" targetId="3173-cfab-abb8-2403" type="profile"/>
+                <infoLink id="dac1-3b40-0e4f-39c8" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+                <infoLink id="f79a-e84b-0c83-2767" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="3198-a8b4-a5e6-81c8" name="Heavy Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78ba-3eaa-bd95-ab85" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03ba-270e-22ba-3201" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="66c5-185f-9fb2-a6e0" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="9075-bc64-7c32-3318" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="bd8f-5da4-853d-8f41" name="Missile Launcher" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="c351-e11b-9a62-3638" name="Missile Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
+                        <infoLink id="eb8b-81ef-10e1-3edc" name="Missile Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="a0fc-608a-7926-c07c" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="a763-e925-ce93-8f54" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="f3d7-0172-3145-f6c1" name="Mortar" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="4ff3-d952-95cf-9f03" name="Mortar" hidden="false" targetId="57eb-e5dd-c986-ffaa" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
