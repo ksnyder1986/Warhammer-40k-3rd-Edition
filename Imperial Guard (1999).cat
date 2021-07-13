@@ -11,6 +11,7 @@
     <categoryEntry id="8541-29cf-45ca-5d65" name="Gaunt&apos;s Ghosts" hidden="false"/>
     <categoryEntry id="206d-ffb4-6782-8865" name="City Fighter" hidden="false"/>
     <categoryEntry id="7613-3eb3-5a57-1219" name="PDF" hidden="false"/>
+    <categoryEntry id="71a1-ed13-f938-22b3" name="Cadian" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="5ebf-ab63-cd5b-afcb" name="Command Platoon" hidden="false" collective="false" import="true" targetId="ca89-e1b0-8df2-731f" type="selectionEntry">
@@ -682,14 +683,14 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b82e-2a45-4ab2-60b8" type="min"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7a10-b825-970b-fa86" name="Heavy Weapon Squads" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="7a10-b825-970b-fa86" name="Support Squads" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76f9-7d8b-2c05-097e" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="35c4-d35d-3d72-0847" name="Anti-tank Heavy Weapon Squad" hidden="false" collective="false" import="true" targetId="66ad-9fbe-c862-8bf0" type="selectionEntry">
               <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d021-c882-d246-7386" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de47-006b-38d8-638a" type="max"/>
               </constraints>
             </entryLink>
             <entryLink id="72b5-d71f-070d-8cf8" name="Fire Support Heavy Weapon Squad" hidden="false" collective="false" import="true" targetId="83df-022c-dc13-ea00" type="selectionEntry">
@@ -700,6 +701,18 @@
             <entryLink id="57ad-e68f-ebc5-d5e3" name="Mortar Heavy Weapon Squad" hidden="false" collective="false" import="true" targetId="6cef-ab8d-540e-6e7d" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5b8-03ea-3120-7784" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="69a6-6e56-68b2-9d50" name="Special Weapons Squad" hidden="false" collective="false" import="true" targetId="572e-72c4-f84e-4063" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="71a1-ed13-f938-22b3" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="365b-1d3a-ab4d-73c0" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -1205,6 +1218,25 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eb0a-3ee8-2722-12bd" name="Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="71a1-ed13-f938-22b3" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="0d44-4fda-3304-8f9b" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5688,6 +5720,108 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="572e-72c4-f84e-4063" name="Special Weapons Squad" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="df6a-033f-2dec-530b" name="Guardsmen" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cc2-2b40-48d1-54ce" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d961-4b0c-7361-d26a" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="46ae-0ad0-2838-45e3" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+            <infoLink id="a321-a4e0-1c71-b969" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+            <infoLink id="6a42-0b39-06f2-058e" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+            <infoLink id="0526-f1e7-24b2-03c6" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="b91b-cd76-21d8-b8de" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02e0-62bc-eb65-db2c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="e482-e661-be6d-7925" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ab8e-45fc-63d7-2d51" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ca6-a5ea-6ed1-b6ef" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5f67-5c49-4b4e-1236" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a682-9b50-9336-af37" name="Melta Bombs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9424-fe9a-0dba-2e4a" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="c74d-b6e6-312d-fdaf" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="24.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b2fa-e7c8-acea-cfa8" name="Special Weapons" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c42e-4022-0c56-a04f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f697-8545-624c-7146" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="529b-a1e6-eb27-513d" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d5eb-bd74-2b02-3a1e" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a1d4-f13a-2d9d-8032" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="9.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="722d-1a1d-457d-06c6" name="Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="8670-8147-5041-fe77" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+                <infoLink id="d73d-e895-f6d9-95fc" name="Grenade Launcher (krak)" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c6b7-d4e8-5e98-f325" name="Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="4ef0-6fbd-c96e-79ad" name="Sniper Rifle" hidden="false" targetId="3825-4a6b-6aaa-8c99" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="38d3-71b4-4222-0857" name="Demolition Charge" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f2f-fd07-db1a-0731" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="88c5-189b-72a4-ee49" name="Demolition Charge" hidden="false" targetId="60f0-36e3-b539-71ac" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
