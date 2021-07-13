@@ -9,6 +9,7 @@
     <categoryEntry id="81ac-8e4a-fec3-3918" name="Elysian Drop Troop" hidden="false"/>
     <categoryEntry id="cf71-bdef-a981-47b6" name="Steel Legion" hidden="false"/>
     <categoryEntry id="8541-29cf-45ca-5d65" name="Guant&apos;s Ghosts" hidden="false"/>
+    <categoryEntry id="206d-ffb4-6782-8865" name="City Fighter" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="5ebf-ab63-cd5b-afcb" name="Command Platoon" hidden="false" collective="false" import="true" targetId="ca89-e1b0-8df2-731f" type="selectionEntry">
@@ -318,6 +319,31 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="e0dc-6fe9-903e-5371" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="52a3-2c20-6250-09df" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d78-dba1-b27c-a701" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d9f4-c1f3-288d-02bf" name="Officer" hidden="false" collective="false" import="true" defaultSelectionEntryId="dc24-7ac6-76f4-98ac">
@@ -328,7 +354,15 @@
           <selectionEntries>
             <selectionEntry id="dc24-7ac6-76f4-98ac" name="Captain" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="7de2-0764-4db5-1ddb" name="Captain" hidden="false" targetId="c623-489e-d7a0-0a93" type="profile"/>
+                <infoLink id="7de2-0764-4db5-1ddb" name="Captain" hidden="false" targetId="c623-489e-d7a0-0a93" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="5">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="f17d-5721-0ffa-65f4" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
@@ -342,7 +376,15 @@
             </selectionEntry>
             <selectionEntry id="22e2-b37e-95af-b21f" name="Colonel" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="6883-af01-d8bf-aa26" name="Colonel" hidden="false" targetId="6cd0-8cde-3bf9-8d07" type="profile"/>
+                <infoLink id="6883-af01-d8bf-aa26" name="Colonel" hidden="false" targetId="6cd0-8cde-3bf9-8d07" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="5">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="f153-1ea9-03d9-6729" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
@@ -379,7 +421,15 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac5b-8dec-87e1-b096" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="756c-700c-962b-de43" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile"/>
+                <infoLink id="756c-700c-962b-de43" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="24a8-b44f-2bbb-03c2" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
@@ -393,7 +443,15 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="984b-4d5e-9d9c-a06d" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="3646-7321-e702-839b" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="3646-7321-e702-839b" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="7a73-460f-9ed1-95e4" name="Standard Bearer" hidden="false" targetId="5093-098d-a6e2-9246" type="rule"/>
                 <infoLink id="6ea6-9840-6f5f-70e4" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                 <infoLink id="53ff-bf59-010b-ce42" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
@@ -411,7 +469,15 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8761-3bc9-bb4c-6f57" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="9668-225a-1e6a-83ee" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="9668-225a-1e6a-83ee" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="21f4-9213-c70d-c72a" name="Medi-pack" hidden="false" targetId="16d3-73ab-2527-3e33" type="rule"/>
                 <infoLink id="7294-a238-b803-54ab" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
                 <infoLink id="d6eb-7a31-15be-2496" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
@@ -423,7 +489,15 @@
             </selectionEntry>
             <selectionEntry id="a714-271f-13d0-ffef" name="Guardsman" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="3986-5698-ef98-a1b4" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="3986-5698-ef98-a1b4" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="af52-d278-e16c-86c7" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
                 <infoLink id="ad5f-d28b-5ed4-c793" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
                 <infoLink id="a643-f289-a8fc-e4eb" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
@@ -434,7 +508,15 @@
             </selectionEntry>
             <selectionEntry id="590f-1ef8-84f6-ac9e" name="Special Weapon Guardsman" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="9efc-69e3-21ff-cd67" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="9efc-69e3-21ff-cd67" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="6143-a1a6-0bb0-6b44" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
                 <infoLink id="d6ad-693c-d820-4308" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                 <infoLink id="3a48-4c58-9aff-b6ed" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
@@ -491,8 +573,24 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5efa-7130-1eb8-d3fd" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="e372-80fd-9ce5-ec02" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
-                <infoLink id="b057-1029-4be5-f266" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="e372-80fd-9ce5-ec02" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="b057-1029-4be5-f266" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="8dda-efc4-a1ae-094c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e0dc-6fe9-903e-5371" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="12e6-8b5b-8711-ae54" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
@@ -634,13 +732,22 @@
     </selectionEntry>
     <selectionEntry id="66ad-9fbe-c862-8bf0" name="Anti-tank Heavy Weapon Squad" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="da06-486f-ec88-b778" name="Guardsmen" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="da06-486f-ec88-b778" name="Guardsmen" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0abb-b070-77e1-3ce0" type="max"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a199-905e-b9a4-efc7" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="545e-649a-dd35-d091" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+            <infoLink id="e476-1863-7dfa-6045" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="66ad-9fbe-c862-8bf0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="decf-876c-4492-67fa" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -655,6 +762,26 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="decf-876c-4492-67fa" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17ff-418f-f76c-93ba" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -691,13 +818,22 @@
     </selectionEntry>
     <selectionEntry id="83df-022c-dc13-ea00" name="Fire Support Heavy Weapon Squad" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="ad44-4955-6464-433f" name="Guardsmen" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ad44-4955-6464-433f" name="Guardsmen" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e999-277b-6620-4a43" type="max"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e66-e1ef-a350-2801" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="40a2-ca38-95b2-dbdb" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+            <infoLink id="0521-2190-2315-cf26" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="83df-022c-dc13-ea00" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="398f-cc61-952b-e4a5" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -712,6 +848,26 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="398f-cc61-952b-e4a5" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="583d-b8ff-a173-37de" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -747,13 +903,22 @@
     </selectionEntry>
     <selectionEntry id="6cef-ab8d-540e-6e7d" name="Mortar Heavy Weapon Squad" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="d957-da45-4f4d-282f" name="Guardsmen" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d957-da45-4f4d-282f" name="Guardsmen" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0667-0a2b-d58f-23fb" type="max"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec86-f83f-fc42-a3b8" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="42ad-b8d2-2292-22d5" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+            <infoLink id="6a89-f745-b795-4090" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="6cef-ab8d-540e-6e7d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6cef-ab8d-540e-6e7d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -768,6 +933,26 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e152-0ee2-0d49-ed3a" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e66-35ba-8a3e-a63b" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -927,6 +1112,27 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="17ea-cb3e-51ec-ea1c" name="Lascannon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="81ac-8e4a-fec3-3918" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cf71-bdef-a981-47b6" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="cf23-ed0d-41fe-97cd" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -962,11 +1168,41 @@
       <infoLinks>
         <infoLink id="3320-d987-1dd7-4b1b" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
         <infoLink id="bc38-1854-1470-355b" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
-        <infoLink id="9bac-c398-7b25-b569" name="Commissar" hidden="false" targetId="46ef-8307-f465-d6fc" type="profile"/>
+        <infoLink id="9bac-c398-7b25-b569" name="Commissar" hidden="false" targetId="46ef-8307-f465-d6fc" type="profile">
+          <modifiers>
+            <modifier type="set" field="c704-6128-f143-935a" value="5">
+              <conditions>
+                <condition field="selections" scope="2ef0-9292-7021-90d0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b89b-7aff-cb7b-37fe" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="b4e0-3413-8291-9e7e" name="New CategoryLink" hidden="false" targetId="d77a-7f37-0364-0a69" primary="true"/>
+        <categoryLink id="b4e0-3413-8291-9e7e" name="New CategoryLink" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b89b-7aff-cb7b-37fe" name="Deathworld Veteran" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70c9-92c8-7fa1-42d6" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="5ea9-356f-7efd-a795" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1023,7 +1259,15 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8249-e039-ef47-4956" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="0cf0-3ef3-6d4c-aa4b" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile"/>
+            <infoLink id="0cf0-3ef3-6d4c-aa4b" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="b34c-c7cd-66da-d9b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba63-c350-4c53-ab01" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <categoryLinks>
             <categoryLink id="ef29-82c2-af18-f245" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
@@ -1041,7 +1285,15 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbae-543d-e302-4ceb" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="ed84-af2a-a5ea-6b74" name="Veteran Officer" hidden="false" targetId="ad87-d6da-c090-cd62" type="profile"/>
+            <infoLink id="ed84-af2a-a5ea-6b74" name="Veteran Officer" hidden="false" targetId="ad87-d6da-c090-cd62" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="5">
+                  <conditions>
+                    <condition field="selections" scope="b34c-c7cd-66da-d9b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba63-c350-4c53-ab01" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <categoryLinks>
             <categoryLink id="e582-cad7-15f2-4158" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
@@ -1051,6 +1303,31 @@
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ba63-c350-4c53-ab01" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-c752-e897-efb7" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58dc-f346-da94-b6bb" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1079,7 +1356,15 @@
               </constraints>
               <infoLinks>
                 <infoLink id="6a54-31d4-0e5d-dcc7" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
-                <infoLink id="6cbf-f6d0-58ea-2af6" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile"/>
+                <infoLink id="6cbf-f6d0-58ea-2af6" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="b34c-c7cd-66da-d9b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba63-c350-4c53-ab01" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="afb0-d29c-00b0-4d57" name="Heavy Weapon" hidden="false" collective="false" import="true">
@@ -1140,7 +1425,15 @@
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="833e-1dee-7308-3bed" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="f0d2-dc48-b346-78e6" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile"/>
+                <infoLink id="f0d2-dc48-b346-78e6" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="b34c-c7cd-66da-d9b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba63-c350-4c53-ab01" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="9d4f-3474-4c6b-bbaa" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
@@ -1207,7 +1500,15 @@
             </selectionEntry>
             <selectionEntry id="939e-796e-44b9-b940" name="Veteran w/ Lasgun" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="f9d4-fc02-6000-8e0a" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile"/>
+                <infoLink id="f9d4-fc02-6000-8e0a" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="b34c-c7cd-66da-d9b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba63-c350-4c53-ab01" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="5a01-558f-2151-025c" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
                 <infoLink id="0678-7182-a6bc-6649" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
               </infoLinks>
@@ -1217,7 +1518,15 @@
             </selectionEntry>
             <selectionEntry id="eb07-7be8-f0d6-0f3c" name="Veteran w/ Shotgun" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="2570-b559-69a0-9f8a" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile"/>
+                <infoLink id="2570-b559-69a0-9f8a" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="b34c-c7cd-66da-d9b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba63-c350-4c53-ab01" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="706d-fc8c-b48d-922a" name="Shotgun" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
                 <infoLink id="0e41-37b1-a7c0-0437" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
               </infoLinks>
@@ -1227,7 +1536,15 @@
             </selectionEntry>
             <selectionEntry id="9d94-6abe-ea1a-4c96" name="Veteran w/ Laspistol and Close Combat Weapon" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="f1de-0ef3-6fbc-868f" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile"/>
+                <infoLink id="f1de-0ef3-6fbc-868f" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="b34c-c7cd-66da-d9b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba63-c350-4c53-ab01" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="0092-478c-4cbb-6116" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
                 <infoLink id="4232-97e6-41ab-0621" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                 <infoLink id="3cba-560f-536a-361d" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
@@ -1241,7 +1558,15 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d083-d40d-94fc-216f" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="96c5-96b6-45f3-df21" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile"/>
+                <infoLink id="96c5-96b6-45f3-df21" name="Hardened Veteran" hidden="false" targetId="a805-4d99-a592-5a3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="b34c-c7cd-66da-d9b1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba63-c350-4c53-ab01" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="7c70-8677-4fbe-a868" name="Sniper Rifle" hidden="false" targetId="3825-4a6b-6aaa-8c99" type="profile"/>
                 <infoLink id="0790-bc1e-0c1f-52ae" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
               </infoLinks>
@@ -1264,10 +1589,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e7cd-a8b8-db28-d34e" name="Storm Troopers" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="4ed5-2f92-9abc-2870" value="103.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="81ac-8e4a-fec3-3918" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="37f9-4580-8b5e-8a0a" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
         <infoLink id="63a2-2295-ef2f-e066" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
-        <infoLink id="1184-a87e-d3eb-f3bc" name="Storm Trooper" hidden="false" targetId="c022-9f85-433a-66b0" type="profile"/>
         <infoLink id="185d-5c22-af99-2386" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
         <infoLink id="be0f-ad5b-754c-5cca" name="Hellgun" hidden="false" targetId="efe9-35a9-ba8f-99a9" type="profile"/>
       </infoLinks>
@@ -1289,11 +1620,22 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f05-8ca5-4f86-2661" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="526b-7faf-4f4a-c6c0" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile"/>
+            <infoLink id="526b-7faf-4f4a-c6c0" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="e7cd-a8b8-db28-d34e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b68a-5b1b-0850-736e" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink id="4f6a-4696-27c6-6f6b" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
           </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="c2cc-0960-d9a4-0feb" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1353,9 +1695,56 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b68a-5b1b-0850-736e" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="067c-4340-d6e7-59db" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b314-f801-f0c4-a45f" name="Storm Trooper" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="934f-7e8b-066a-5ced" type="max"/>
+            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a55-d081-40d7-c856" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="feb9-534a-f881-b84f" name="Storm Trooper" hidden="false" targetId="c022-9f85-433a-66b0" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="e7cd-a8b8-db28-d34e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b68a-5b1b-0850-736e" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="d4e0-f09d-53e6-d8c1" name="Chimera" hidden="false" collective="false" import="true" targetId="7a19-0a0c-3e8c-e0d0" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="81ac-8e4a-fec3-3918" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a270-3149-e0c6-6d8b" type="max"/>
           </constraints>
@@ -1458,7 +1847,15 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a34-8580-091f-13c2" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="7e52-29be-c025-1b0d" name="Lieutenant" hidden="false" targetId="3a44-cf57-e2ac-f44c" type="profile"/>
+            <infoLink id="7e52-29be-c025-1b0d" name="Lieutenant" hidden="false" targetId="3a44-cf57-e2ac-f44c" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="a945-246a-3c59-c1cc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9934-dcac-8323-312c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <categoryLinks>
             <categoryLink id="25ca-e52b-3c9f-05d1" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
@@ -1468,6 +1865,31 @@
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9934-dcac-8323-312c" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="696f-2f9a-ab61-1cc3" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5373-9cff-e248-6092" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1495,7 +1917,15 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec71-4dd5-bd29-e956" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="a740-9683-c982-d565" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile"/>
+                <infoLink id="a740-9683-c982-d565" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="a945-246a-3c59-c1cc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9934-dcac-8323-312c" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="b78a-5370-00cd-b03b" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
@@ -1506,7 +1936,15 @@
             </selectionEntry>
             <selectionEntry id="15bc-5681-1a08-6a54" name="Guardsman" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="e314-ec6e-2fc4-4db6" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="e314-ec6e-2fc4-4db6" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="a945-246a-3c59-c1cc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9934-dcac-8323-312c" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="a46f-65a0-259d-db86" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
                 <infoLink id="6a13-2df3-ddef-e0e1" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
                 <infoLink id="d1c5-217a-714a-1f6f" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
@@ -1520,7 +1958,15 @@
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa24-d59e-00bc-3d54" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="4e35-8885-cd82-c1cd" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="4e35-8885-cd82-c1cd" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="a945-246a-3c59-c1cc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9934-dcac-8323-312c" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="392b-1186-10e2-c857" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
                 <infoLink id="6a4f-8369-1e34-e739" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                 <infoLink id="67f5-29f1-0956-16a6" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
@@ -1577,8 +2023,24 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d205-7bb6-837e-2231" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="e67f-08c4-4e06-c8b4" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
-                <infoLink id="90c0-a28a-37bf-18e0" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="e67f-08c4-4e06-c8b4" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="a945-246a-3c59-c1cc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9934-dcac-8323-312c" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="90c0-a28a-37bf-18e0" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="a945-246a-3c59-c1cc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9934-dcac-8323-312c" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="d000-0b70-a8be-b119" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
@@ -1665,6 +2127,9 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="584a-7ef5-fc9e-34b4" name="Infantry Squad" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
@@ -1685,7 +2150,15 @@
             <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d19b-5b40-1aa1-ccd3" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="7bff-823f-815d-92de" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+            <infoLink id="7bff-823f-815d-92de" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="584a-7ef5-fc9e-34b4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a007-cf90-0498-ddd8" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="c402-346d-a70b-c6fd" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
           </infoLinks>
           <costs>
@@ -1701,6 +2174,26 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a007-cf90-0498-ddd8" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f00-3356-3dbe-2574" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1793,7 +2286,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="95ef-2b29-768d-7d1b" name="Sergeant" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="95ef-2b29-768d-7d1b" name="Sergeant" hidden="false" collective="false" import="true" defaultSelectionEntryId="7f24-953d-b69e-67e0">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f793-55bd-cace-31bd" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d35-3f01-c20b-8612" type="min"/>
@@ -1801,7 +2294,15 @@
           <selectionEntries>
             <selectionEntry id="7f24-953d-b69e-67e0" name="Sergeant" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="045f-839c-1712-4b17" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="045f-839c-1712-4b17" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="584a-7ef5-fc9e-34b4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a007-cf90-0498-ddd8" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="9a0e-172e-4887-5433" name="Weapon" hidden="false" collective="false" import="true">
@@ -1838,13 +2339,32 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <entryLinks>
+                <entryLink id="2ba0-5245-532e-d0d9" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0a75-e305-594f-5973" name="Veteran Sergeant" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="7218-eb33-0a56-4c90" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile"/>
+                <infoLink id="7218-eb33-0a56-4c90" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="584a-7ef5-fc9e-34b4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a007-cf90-0498-ddd8" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="d834-021e-fdc7-11ec" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
@@ -1879,7 +2399,15 @@
             <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5529-9ed2-eeff-e585" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="5203-a89f-3fc5-5439" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+            <infoLink id="5203-a89f-3fc5-5439" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="f2ac-82ed-d154-87aa" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ca18-1e39-9d9b-9a4c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="7653-c761-e9d0-6fa7" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
           </infoLinks>
           <costs>
@@ -1895,6 +2423,26 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ca18-1e39-9d9b-9a4c" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75ef-09b3-7d91-660c" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1995,10 +2543,18 @@
           <selectionEntries>
             <selectionEntry id="2530-f338-8670-50e3" name="Sergeant" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="acbb-b6ed-d5c7-3cf2" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+                <infoLink id="acbb-b6ed-d5c7-3cf2" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="f2ac-82ed-d154-87aa" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ca18-1e39-9d9b-9a4c" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="7fc3-fe42-17fa-cedc" name="Weapon" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="7fc3-fe42-17fa-cedc" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="e9a1-bcee-e72e-063a">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ef2-93f7-8bd2-5184" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad88-b687-df3d-1c91" type="min"/>
@@ -2032,13 +2588,32 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <entryLinks>
+                <entryLink id="26fd-d5d4-8814-2ceb" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1650-1afe-f886-2618" name="Veteran Sergeant" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="815d-f9d6-2b2f-ea6e" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile"/>
+                <infoLink id="815d-f9d6-2b2f-ea6e" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="f2ac-82ed-d154-87aa" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ca18-1e39-9d9b-9a4c" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="3837-c657-081a-542a" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
@@ -2087,7 +2662,15 @@
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f94-d44c-b1a7-c4d3" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="dff3-d7d2-f202-bb2d" name="Rough Rider" hidden="false" targetId="33ce-1442-1d4c-a1ce" type="profile"/>
+            <infoLink id="dff3-d7d2-f202-bb2d" name="Rough Rider" hidden="false" targetId="33ce-1442-1d4c-a1ce" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="2418-a403-e4cb-b865" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4fe2-6ada-6eab-fb09" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="ca65-2bdb-0dc9-acc7" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
           </infoLinks>
           <costs>
@@ -2116,6 +2699,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="36bf-6e4e-1392-dad2" name="Comm-Link" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2142,6 +2728,29 @@
           <infoLinks>
             <infoLink id="feeb-76a4-8e79-4101" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4fe2-6ada-6eab-fb09" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d1c-d9e6-fec1-435a" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2193,24 +2802,43 @@
           <selectionEntries>
             <selectionEntry id="71d6-c054-d00a-cb32" name="Sergeant" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="fc36-f50d-a36e-21e3" name="Rough Rider" hidden="false" targetId="33ce-1442-1d4c-a1ce" type="profile"/>
+                <infoLink id="fc36-f50d-a36e-21e3" name="Rough Rider" hidden="false" targetId="33ce-1442-1d4c-a1ce" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="2418-a403-e4cb-b865" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4fe2-6ada-6eab-fb09" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="1b08-52fb-04ee-65e8" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
               </infoLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="a27f-58dc-70a8-a245" name="Weapon" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bcd-4298-874b-60e5" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f23c-792b-a26a-54eb" type="min"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink id="7940-83e8-6a17-246a" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="9.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="bf9d-d5ac-1705-b284" name="Veteran Sergeant" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="f8cb-9d17-41b3-5b4a" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile"/>
+                <infoLink id="f8cb-9d17-41b3-5b4a" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4">
+                      <conditions>
+                        <condition field="selections" scope="2418-a403-e4cb-b865" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4fe2-6ada-6eab-fb09" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="194c-7933-01f7-7c12" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
@@ -2222,6 +2850,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="0d18-655f-f1b9-f451" name="Leman Russ Battle Tank" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
@@ -2665,6 +3296,9 @@
             <infoLink id="5db7-7a6e-bb75-6a28" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
             <infoLink id="97fd-978d-c654-2af1" name="Carapace Armor" hidden="false" targetId="c55f-50a3-63ba-d585" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="ae71-570a-da56-1c27" name="Hero" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2677,6 +3311,9 @@
             <infoLink id="73a0-8e66-4495-3cf8" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
             <infoLink id="a644-537d-0a52-949c" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="a319-a201-1062-bc46" name="Ox" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2687,6 +3324,9 @@
             <infoLink id="2adc-ab42-ff46-f9f8" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
             <infoLink id="0993-0301-8b07-ba73" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="edc0-f0ed-fd6b-121f" name="Scope" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2697,6 +3337,9 @@
             <infoLink id="730d-9087-b1af-1e33" name="Sniper Rifle" hidden="false" targetId="3825-4a6b-6aaa-8c99" type="profile"/>
             <infoLink id="7d7f-d8c8-da08-3bbe" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="eb5b-645a-6ce2-5243" name="Brains" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2708,6 +3351,9 @@
             <infoLink id="adca-6d12-b19a-d9ea" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
             <infoLink id="5744-9ca7-bf20-090f" name="Comm-Link" hidden="false" targetId="fcaa-7305-6950-d142" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2096-48d7-b245-3b58" name="Grease Monkey" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2718,6 +3364,9 @@
             <infoLink id="83d8-10ac-b7b2-8043" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
             <infoLink id="b847-4c19-3467-7e18" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="61cb-f68b-e023-3297" name="Rocket Girl" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2729,6 +3378,9 @@
             <infoLink id="5e00-622b-e720-2f97" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
             <infoLink id="5561-d0d1-fcdb-5366" name="Missile Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="1ae4-6736-328e-8ce6" name="Fingers" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2739,6 +3391,9 @@
             <infoLink id="a37b-a36e-03f1-6a35" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
             <infoLink id="b587-c794-9a9c-9b9b" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="ea70-3b9e-5b3d-66be" name="Demolition Man" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2750,6 +3405,9 @@
             <infoLink id="9989-283b-e65a-8f0e" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
             <infoLink id="734b-41ef-7b01-da7e" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="3276-d023-d6ff-c85d" name="Shiv" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2761,6 +3419,9 @@
             <infoLink id="2b77-3aa3-b7fe-3008" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
             <infoLink id="0d72-0d74-6c79-05a0" name="Last Chancer" hidden="false" targetId="a215-990a-6b6c-247c" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="70d8-7017-a908-3695" name="Animal" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2773,6 +3434,9 @@
             <infoLink id="43f2-4867-64da-cf29" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
             <infoLink id="f407-42bd-ba9b-4a90" name="Scanner" hidden="false" targetId="c061-bcf5-ed69-d507" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="c380-1f40-a6d4-5bee" name="Warrior Woman" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2788,6 +3452,9 @@
               </modifiers>
             </infoLink>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -3583,16 +4250,46 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <infoLink id="5b95-57aa-b096-990e" name="Demolition Charge" hidden="false" targetId="60f0-36e3-b539-71ac" type="profile"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="c8ca-8bd5-6d83-3066" name="Operator" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c8ca-8bd5-6d83-3066" name="Operator" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="798d-191a-1a6c-7110" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d5f-5297-c8e9-7e66" type="min"/>
           </constraints>
           <infoLinks>
-            <infoLink id="e7c3-2060-f6aa-29a4" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile"/>
+            <infoLink id="e7c3-2060-f6aa-29a4" name="Guardsman" hidden="false" targetId="3413-dc78-6ece-067e" type="profile">
+              <modifiers>
+                <modifier type="set" field="c704-6128-f143-935a" value="4">
+                  <conditions>
+                    <condition field="selections" scope="c8ca-8bd5-6d83-3066" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f05e-e98c-8f77-6399" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="69f6-1c99-9d52-c54d" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
             <infoLink id="8653-8a6b-077f-590d" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
           </infoLinks>
+          <selectionEntries>
+            <selectionEntry id="f05e-e98c-8f77-6399" name="Deathworld Veteran" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d73-40cf-b44f-4211" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
@@ -3976,6 +4673,42 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="4d5a-5ace-99e3-2315" name="Choppa" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5f8-f13d-1bf2-4824" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="90c3-5fee-2e36-d831" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fadc-5e9c-0279-7e44" name="Slugga" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e12d-c7ad-65b4-32f1" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="0bf6-b214-d367-e9ce" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="2e09-0f06-a936-7cf5" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
@@ -4111,6 +4844,29 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="8aa9-fd32-e400-74fa" name="Shoota" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f817-a28f-dfce-8296" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="318d-d105-7b55-7a62" name="Shoota" hidden="false">
+              <description>All models using shootas count as having BS 2.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="e71e-3a51-8568-8221" name="Shoota" hidden="false" targetId="894f-1760-04e4-77c4" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="3680-cabd-c2ee-32f4" name="Wargear" hidden="false" collective="false" import="true">
@@ -4225,6 +4981,25 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a40e-ae67-cc42-74fd" name="Archeotech" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bdb-1ed6-43bc-cd6b" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4269-9829-5ea7-37f3" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="95d2-3852-7e16-1a2e" name="Archeotech" hidden="false"/>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4527,6 +5302,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="f6fd-6669-bb66-3a39" name="Wargear" hidden="false" collective="false" import="true" targetId="3680-cabd-c2ee-32f4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="4b9b-79e5-0ee1-4eab" value="25.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="206d-ffb4-6782-8865" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4b9b-79e5-0ee1-4eab" type="max"/>
           </constraints>
