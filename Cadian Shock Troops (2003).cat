@@ -3,8 +3,8 @@
   <entryLinks>
     <entryLink id="527a-36b1-cd4b-0af7" name="Command Platoon" page="" hidden="false" collective="false" import="true" targetId="ca89-e1b0-8df2-731f" type="selectionEntry">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d282-1487-1675-7991" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e6a-71fa-2726-7197" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d282-1487-1675-7991" type="min"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e6a-71fa-2726-7197" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="aeee-0422-4deb-07cb" name="Cadian" hidden="false" targetId="71a1-ed13-f938-22b3" primary="false"/>
@@ -13,7 +13,7 @@
     </entryLink>
     <entryLink id="f1ab-a979-d8b9-891b" name="Commissar" hidden="false" collective="false" import="true" targetId="2ef0-9292-7021-90d0" type="selectionEntry">
       <constraints>
-        <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b3d-1cdd-7c99-f677" type="max"/>
+        <constraint field="selections" scope="force" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b3d-1cdd-7c99-f677" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="3322-5788-8019-48ba" name="Cadian" hidden="false" targetId="71a1-ed13-f938-22b3" primary="false"/>
@@ -26,9 +26,11 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="0878-3be8-7667-6721" name="Sanctioned Psyker" hidden="false" collective="false" import="true" targetId="330d-1cf9-e3cd-b4b6" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="force" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc65-6d7f-cf81-1780" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="6a03-c1c0-c131-b5c1" name="Cadian" hidden="false" targetId="71a1-ed13-f938-22b3" primary="false"/>
-        <categoryLink id="5f9b-ec14-68fd-5f9e" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="d616-3f19-8a37-6b47" name="Storm Troopers" hidden="false" collective="false" import="true" targetId="e7cd-a8b8-db28-d34e" type="selectionEntry">
@@ -92,6 +94,9 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="d343-904c-b86a-3f1d" name="Lord Castellan Ursarkar E. Creed" hidden="false" collective="false" import="true" targetId="f090-12d6-e2dc-717a" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05a4-c4ee-2790-55c6" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="cdcc-66cf-eca3-5fbd" name="Cadian" hidden="false" targetId="71a1-ed13-f938-22b3" primary="false"/>
         <categoryLink id="570d-93f2-0825-a8c4" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
@@ -99,8 +104,148 @@
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
-    <selectionEntry id="330d-1cf9-e3cd-b4b6" name="Sanctioned Psyker" hidden="false" collective="false" import="true" type="unit"/>
-    <selectionEntry id="bf38-7a87-7691-ffaf" name="Kasrkin Squad" hidden="false" collective="false" import="true" type="unit"/>
+    <selectionEntry id="330d-1cf9-e3cd-b4b6" name="Sanctioned Psyker" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="77c4-9fdb-7118-1c29" name="Psychic Powers" hidden="false"/>
+        <rule id="7a76-115a-51be-a069" name="It&apos;s For Your Own Good!" hidden="false"/>
+        <rule id="b67d-b78c-a4bb-bbae" name="Advisors" hidden="false"/>
+        <rule id="c470-3a69-6124-774d" name="Telepathic Order" hidden="false"/>
+        <rule id="4ad4-0f82-807f-b2a4" name="Psychic Ward" hidden="false"/>
+        <rule id="1f85-0b92-c867-7197" name="Lightning Arc" hidden="false"/>
+        <rule id="daad-7363-bb0c-1107" name="Psychic Lash" hidden="false"/>
+        <rule id="dcce-7283-ce71-2117" name="Machine Curse" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="6804-f0ef-8ea1-4f05" name="Sanctioned Psyker" hidden="false" targetId="362e-f73d-1b3f-7727" type="profile"/>
+        <infoLink id="8e0c-3375-5b4b-df04" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+        <infoLink id="d210-d914-e7c6-481a" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bf38-7a87-7691-ffaf" name="Kasrkin Squad" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="2106-ec4a-a138-054a" name="Kasrkin Veteran Sergeant" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa32-ae78-847e-1818" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1860-4906-9ae0-2fa7" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="d5d9-17da-1b53-b213" name="Veteran Sergeant" hidden="false" targetId="5344-d090-fc5f-fada" type="profile">
+              <modifiers>
+                <modifier type="set" field="b309-5233-122f-82bb" value="4+"/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="8d60-a513-1a45-aebb" name="Hellgun" hidden="false" targetId="efe9-35a9-ba8f-99a9" type="profile"/>
+            <infoLink id="b6e0-0a96-ddf5-0cfc" name="Hellpistol" hidden="false" targetId="0eed-9652-00e8-9584" type="profile"/>
+            <infoLink id="053e-2c45-3554-a4a4" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+            <infoLink id="3f04-8ac5-3b05-f0a0" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+            <infoLink id="7515-6b79-3206-3221" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink id="35c0-aaf6-4e79-ee67" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="31b8-cdb5-1618-f199" name="Melta Bombs" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="4.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d98-c48e-adbe-3cbc" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7c26-2361-e2ee-d384" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="5e7f-b4b9-bcc8-44c9" name="Comm-Link" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="055a-4759-091a-43b5" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="1a07-8d2d-8b66-4cc3" name="Comm-Link" hidden="false" targetId="fcaa-7305-6950-d142" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3b2d-1f72-501b-43e4" name="Kasrkin" hidden="false" collective="false" import="true" defaultSelectionEntryId="19eb-c248-ad4c-14b3">
+          <selectionEntries>
+            <selectionEntry id="19eb-c248-ad4c-14b3" name="Kasrkin" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fc6-7863-3d64-4037" type="min"/>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5655-2110-7033-675d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="cf15-3da0-e7a4-026b" name="Hellgun" hidden="false" targetId="efe9-35a9-ba8f-99a9" type="profile"/>
+                <infoLink id="6f56-fcad-a300-da2c" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+                <infoLink id="aab5-46a2-0948-37ea" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+                <infoLink id="4f40-b6c4-de8d-86f3" name="Storm Trooper" hidden="false" targetId="c022-9f85-433a-66b0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9bcc-06be-ff77-f5e0" name="Special Weapons" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34b5-a2e5-0522-78bb" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1f16-ccb4-d568-45ba" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="9a9e-afaf-e21f-8e56" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d2e8-b79c-202e-2148" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="198f-7409-42ed-93dd" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="726e-8163-e9a0-0437" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="af9d-c0c7-d4a8-4c99" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5e14-7b8d-f72e-f561" name="Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="d0f8-a541-496a-4195" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+                <infoLink id="ce06-10a2-b1d8-a5f6" name="Grenade Launcher (krak)" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="cc99-c745-8d56-6992" name="Chimera" hidden="false" collective="false" import="true" targetId="7a19-0a0c-3e8c-e0d0" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4540-1d3f-967b-b547" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
     <selectionEntry id="bb7d-5aea-3552-f000" name="Youth Army Platoon" hidden="false" collective="false" import="true" type="unit">
       <entryLinks>
         <entryLink id="06ea-6352-524a-2f2b" name="Cadet Squad" hidden="false" collective="false" import="true" targetId="af1b-5ca3-8f8f-9f65" type="selectionEntry">
@@ -187,6 +332,46 @@
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="f090-12d6-e2dc-717a" name="Lord Castellan Ursarkar E. Creed" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="8589-8c6f-a83d-571f" name="Ursarkar Creed" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdcf-ae51-f2f3-be8d" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94de-dfea-f3dd-45fa" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="fab1-5ee9-9f89-9704" name="Refractor Field" hidden="false"/>
+            <rule id="b752-ebf9-983a-3a7c" name="Master Strategist" hidden="false"/>
+          </rules>
+          <infoLinks>
+            <infoLink id="82be-0209-3e62-eab9" name="Power Fist" hidden="false" targetId="a161-ed4b-bcb7-0a01" type="profile"/>
+            <infoLink id="ac42-acf1-67e8-27bf" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+            <infoLink id="35e3-95bb-93fa-d57c" name="Creed" hidden="false" targetId="915c-4b39-fbd8-d435" type="profile"/>
+            <infoLink id="2921-3824-4089-3748" name="Iron Discipline" hidden="false" targetId="8c2e-4534-10ac-d968" type="rule"/>
+            <infoLink id="dcd4-635b-102d-46ec" name="Carapace Armor" hidden="false" targetId="c55f-50a3-63ba-d585" type="rule"/>
+            <infoLink id="2cf3-c274-5eae-1d8e" name="Trademark Item" hidden="false" targetId="0630-f0bd-6da5-e593" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="f89e-e17a-24d9-be48" name="Colour Sergeant Jarran Kell" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2abb-1e5e-2081-2762" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0488-aa4f-8ea8-11eb" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="26fd-21dd-b639-e197" name="Medallion Crimson" hidden="false"/>
+            <rule id="7be9-e976-16e1-8503" name="Regimental Banner" hidden="false"/>
+            <rule id="5970-b37c-231e-8c03" name="Bodyguard" hidden="false"/>
+          </rules>
+          <infoLinks>
+            <infoLink id="4ef0-1426-4049-00b7" name="Hellpistol" hidden="false" targetId="0eed-9652-00e8-9584" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-Linked Hellpistol"/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="ea49-8053-2aa3-5035" name="Creed" hidden="false" targetId="915c-4b39-fbd8-d435" type="profile"/>
+            <infoLink id="1ff2-b38b-ec3b-a98e" name="Carapace Armor" hidden="false" targetId="c55f-50a3-63ba-d585" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="125.0"/>
       </costs>
