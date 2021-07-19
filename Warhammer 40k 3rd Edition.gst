@@ -4,6 +4,8 @@
   <publications>
     <publication id="263c-b15e-84a3-a711" name="Codex Necrons 3rd Edition" shortName="Codex Necrons 2002" publisher="Codex Necrons" publicationDate="2002"/>
     <publication id="aca0-89fc-f496-a111" name="Chapter Approved 2004"/>
+    <publication id="8acd-6511-d7f4-63c7" name="Warhammer 40k 3rd Edition Rulebook" shortName="3ED Rulebook" publisher="Warhammer 40,000" publicationDate="1998" publisherUrl="www.games-workshop.com"/>
+    <publication id="2b63-6841-db19-e6fa" name="Codex Armageddon 3rd Edition" shortName="Codex Armageddon" publicationDate="2000"/>
   </publications>
   <costTypes>
     <costType id="4ed5-2f92-9abc-2870" name="pts" defaultCostLimit="-1.0" hidden="false"/>
@@ -680,6 +682,67 @@
     <rule id="b333-4165-9b69-fc6a" name="Titan Killer" hidden="false"/>
     <rule id="7ca6-da5f-a87c-f49b" name="Super-Heavy Flyer" hidden="false"/>
     <rule id="7b1f-05c8-5a14-f539" name="Orbital Lander" hidden="false"/>
+    <rule id="1449-94f0-531a-7776" name="Street Fighters" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Infantry Battle Honor</comment>
+      <description>If the unit is in cover, then its saving throw for cover is increased by 1 point.</description>
+    </rule>
+    <rule id="17a4-53d8-039c-8f3d" name="Hardened Fighters" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Infantry Battle Honor; Bike/Cav Battle Honor</comment>
+      <description>The unit may ignore negative modifiers for Morale checks and tests for regrouping. In effect, the unit will always use its standard Leadership for these tests.</description>
+    </rule>
+    <rule id="ea73-5c36-49dc-dbff" name="Steadfast" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Infantry Battle Honors</comment>
+      <description>The unit may attempt to regroup even when below 50%</description>
+    </rule>
+    <rule id="00c1-3769-63a9-17d7" name="Guerrillas" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Infantry Battle Honors</comment>
+      <description>The unit rolls and extra D6 when moving through difficult terrain and picks the highest for its movement as usual.</description>
+    </rule>
+    <rule id="a61d-d857-0035-c7a8" name="Tank Hunters" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Infantry Battle Honors; Vehicle Battle Honor</comment>
+      <description>The unit always passes any tests for tank shock and adds +1 to all armour penetration rolls.</description>
+    </rule>
+    <rule id="f6a6-34fa-127b-d52d" name="Counter-Attack" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Infantry Battle Honor; Bike/Cav Battle Honor</comment>
+      <description>If a close combat involving this unit is a draw, the side with this unit automatically wins the tie-breaker. If both sides contain a unit with the Counter-Attack skill, then roll off as normal.</description>
+    </rule>
+    <rule id="2c8e-9381-711b-6fe3" name="Skilled Riders" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Bike/Cav Battle Honor</comment>
+      <description>The unit may re-roll any 1s rolled for difficult terrain tests.</description>
+    </rule>
+    <rule id="8b11-ab31-085b-a2d4" name="Rapid Deployment" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Bike/Cav Battle Honor</comment>
+      <description>After both armies have been deployed  the unit may move an additional 6&quot;; treated just like normal movement. If the unit starts in Reserve, then you may add +1 to all rolls for that unit when testing to see if they arrive.</description>
+    </rule>
+    <rule id="4e72-8bb0-bb7a-be3d" name="Resolute" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Bike/Cav Battle Honors</comment>
+      <description>The unit may re-roll any failed Morale checks.</description>
+    </rule>
+    <rule id="0fad-0140-d0ce-c2d4" name="Lighting Charge" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Bike/Cav Battle Honor</comment>
+      <description>If the unit makes an assault into the enemy and wins, the enemy suffers an additional -1 modifier to their Leadership for the subsequent Morale check.</description>
+    </rule>
+    <rule id="300e-775c-430f-4b5d" name="Terrifying" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Vehicle Battle Honor</comment>
+      <description>Tanks: Any unit testing for tank shock inflicted by this vehicle suffers an additional -1 modifier to its Leadership. 
+Others: The vehile causes tank shock if it moves through the enemy, just like Tanks.</description>
+    </rule>
+    <rule id="d668-4bd9-175d-8a61" name="Fast" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Vehicle Battle Honor</comment>
+      <description>The vehicle now uses the rules for Fast vehicles. However, it must still be stationary to fire Ordnance.</description>
+    </rule>
+    <rule id="493d-27e6-bb71-bb5b" name="Reinforced Armour" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Vehicle Battle Honor</comment>
+      <description>Reduce any damage rolls made for the vehicle on the Glancing hit table by -1, treating results less than 1 as 1. If the vehicle is open-topped then this reinforced armour bonus will negate the normal +1 modifier for open-topped vehicles. Penetrating hits will still add +1 for open-topped vehicles.</description>
+    </rule>
+    <rule id="a371-36e3-150e-19c1" name="Hardened Crew" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Vehicle Battle Honor</comment>
+      <description>The vehicle treats all Crew Stunned results as Crew Shaken results instead</description>
+    </rule>
+    <rule id="e03c-d741-f1c8-092c" name="Skilled Gunnery" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+      <comment>Vehicle Battle Honor</comment>
+      <description>Nominate a weapon at the start of the shooting phase. You may re-roll any missed to hit rolls with that weapon that turn. For ordnance, this allows you to re-roll the scatter dice.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="9177-ce8a-92e3-157e" name="Flamer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
