@@ -59,6 +59,16 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="c044-0190-c6f7-a570" name="Armoured Fist Squad" hidden="false" collective="false" import="true" targetId="f2ac-82ed-d154-87aa" type="selectionEntry">
+      <modifiers>
+        <modifier type="increment" field="7aee-d121-499c-107c" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="738a-eeff-6daa-38eb" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7aee-d121-499c-107c" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="b87a-1f5d-6d6f-de22" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
@@ -115,7 +125,7 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="atLeast"/>
+            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -130,7 +140,7 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="atLeast"/>
+            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -285,9 +295,6 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8dda-efc4-a1ae-094c" name="Command HQ" hidden="false" collective="false" import="true" type="unit">
-      <infoLinks>
-        <infoLink id="5135-40fd-ea65-61a0" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
-      </infoLinks>
       <selectionEntries>
         <selectionEntry id="fd63-bdfe-1087-222d" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -318,10 +325,23 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d637-fa3f-c1fa-4b3e" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2720-c005-3e0e-a48a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="22e2-b37e-95af-b21f" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="410d-ed07-e811-1dc6" type="max"/>
           </constraints>
+          <rules>
+            <rule id="e72b-932c-8756-2d5c" name="Regimental Standard" hidden="false"/>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -351,6 +371,30 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="2720-c005-3e0e-a48a" name="Holy Relic" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d637-fa3f-c1fa-4b3e" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9ff7-271f-87c5-a87c" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8cc6-f5fa-c943-7edf" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5853-a90b-48f7-093b" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7002-4f47-23ac-3cba" name="Holy Relic" hidden="false" targetId="bcc1-8c37-a9c9-b60b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d9f4-c1f3-288d-02bf" name="Officer" hidden="false" collective="false" import="true" defaultSelectionEntryId="dc24-7ac6-76f4-98ac">
@@ -370,6 +414,7 @@
                     </modifier>
                   </modifiers>
                 </infoLink>
+                <infoLink id="6a78-e547-b71b-e3e0" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="f17d-5721-0ffa-65f4" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
@@ -392,6 +437,7 @@
                     </modifier>
                   </modifiers>
                 </infoLink>
+                <infoLink id="c22e-e01b-758c-7909" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="f153-1ea9-03d9-6729" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
@@ -464,9 +510,6 @@
                 <infoLink id="53ff-bf59-010b-ce42" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
                 <infoLink id="f980-457b-b003-b75f" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink id="779f-7231-87a0-b435" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
               </costs>
@@ -1022,25 +1065,19 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a4b9-afcf-398b-4c2b" name="Heavy Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="291e-a531-012d-60c1">
+        <selectionEntry id="ca34-a788-2000-762b" name="Mortar" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="733e-39bf-8be6-8375" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1df5-64e6-3688-40a2" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c22-e7de-f11d-3b52" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dea-bb34-8160-8f96" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="291e-a531-012d-60c1" name="Mortar" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="56eb-0ae6-cb7b-06d3" name="Mortar" hidden="false" targetId="57eb-e5dd-c986-ffaa" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+          <infoLinks>
+            <infoLink id="083c-29aa-a012-9053" name="Mortar" hidden="false" targetId="57eb-e5dd-c986-ffaa" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="4d02-1e97-4667-e551" name="Chimera" hidden="false" collective="false" import="true" targetId="7a19-0a0c-3e8c-e0d0" type="selectionEntry">
           <modifiers>
@@ -1320,10 +1357,10 @@
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67e8-6a5a-9695-ae97" type="max"/>
       </constraints>
-      <rules>
-        <rule id="c65e-37ba-a5d5-9791" name="Hardened Fighters" hidden="false"/>
-        <rule id="8725-e1b7-5b34-feae" name="Steadfast" hidden="false"/>
-      </rules>
+      <infoLinks>
+        <infoLink id="076f-b942-5e49-c0cd" name="Hardened Fighters" hidden="false" targetId="17a4-53d8-039c-8f3d" type="rule"/>
+        <infoLink id="10fb-aaff-0cb4-6061" name="Steadfast" hidden="false" targetId="ea73-5c36-49dc-dbff" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="fe1e-7a11-f58f-8c18" name="Krak Genades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -1388,7 +1425,6 @@
         <selectionEntry id="a4f3-ef97-bb96-57fb" name="Veteran Officer" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f1d-d6b4-bc05-6a0e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbae-543d-e302-4ceb" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="ed84-af2a-a5ea-6b74" name="Veteran Officer" hidden="false" targetId="ad87-d6da-c090-cd62" type="profile">
@@ -1438,7 +1474,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9163-bb24-1536-47f1" name="Veterans" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="9163-bb24-1536-47f1" name="Veterans" hidden="false" collective="false" import="true" defaultSelectionEntryId="939e-796e-44b9-b940">
           <modifiers>
             <modifier type="set" field="9be4-4ee5-1939-2f43" value="8.0">
               <conditions>
@@ -1677,7 +1713,7 @@
                 <infoLink id="0790-bc1e-0c1f-52ae" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1749,7 +1785,7 @@
             <entryLink id="4f6a-4696-27c6-6f6b" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="22.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c2cc-0960-d9a4-0feb" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1761,53 +1797,6 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f815-5556-1f2f-d143" name="Special Weapons" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c768-efd4-4919-df37" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="b858-82b0-4ba8-6590" name="Special Weapon" hidden="false" collective="false" import="true">
-              <selectionEntries>
-                <selectionEntry id="0e7a-f30a-5eee-b8f2" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
-                  <infoLinks>
-                    <infoLink id="790f-c20c-ce61-0a05" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="8c04-057d-2f13-c09f" name="Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
-                  <infoLinks>
-                    <infoLink id="bfc4-c692-b1fb-f572" name="Grenade Launcher (krak)" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
-                    <infoLink id="0379-d3f1-cf66-5488" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="bc3c-78be-9ca1-e6ba" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
-                  <infoLinks>
-                    <infoLink id="10b2-93b9-c390-10f9" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="4c77-5d65-54a8-f75d" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
-                  <infoLinks>
-                    <infoLink id="bd84-1561-9ad1-09fa" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b68a-5b1b-0850-736e" name="Deathworld Veterans" hidden="false" collective="false" import="true" type="upgrade">
@@ -1847,10 +1836,52 @@
             </infoLink>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="fee5-0708-1203-91d4" name="Special Weapons" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e48-4f43-d068-8c9b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a887-b633-4978-027d" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="b68b-4599-d486-5eaa" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ba98-a00e-5f0e-b491" name="Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="e6ce-0fe1-0cc9-d58e" name="Grenade Launcher (krak)" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
+                <infoLink id="b4a3-8a18-f5f2-b225" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f802-13c7-ce8a-5f7c" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="3722-5185-fda9-487a" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8257-f07c-782f-a883" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="2211-6a70-5525-c23c" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="d4e0-f09d-53e6-d8c1" name="Chimera" hidden="false" collective="false" import="true" targetId="7a19-0a0c-3e8c-e0d0" type="selectionEntry">
           <modifiers>
@@ -1872,7 +1903,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="130.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="beba-f3ec-f257-0211" name="Ogryns" hidden="false" collective="false" import="true" type="unit">
@@ -1892,6 +1923,8 @@
           </constraints>
           <infoLinks>
             <infoLink id="76a2-e57d-2c9f-d959" name="Ogryn" hidden="false" targetId="2841-4910-c956-50e4" type="profile"/>
+            <infoLink id="af34-e460-df92-5844" name="Ripper Gun" hidden="false" targetId="3d57-a43d-1066-0f5d" type="profile"/>
+            <infoLink id="92e8-6f08-9252-aa40" name="Ogryn Close Combat Weapon" hidden="false" targetId="08d6-df64-1b2d-c479" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
@@ -2043,7 +2076,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f40d-cb42-c64f-8a6d" name="Guardsmen" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f40d-cb42-c64f-8a6d" name="Guardsmen" hidden="false" collective="false" import="true" defaultSelectionEntryId="15bc-5681-1a08-6a54">
           <modifiers>
             <modifier type="set" field="10a7-e7ef-9c4d-9a37" value="3.0">
               <conditions>
@@ -2486,7 +2519,7 @@
                 </infoLink>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="9a0e-172e-4887-5433" name="Weapon" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="9a0e-172e-4887-5433" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="f235-7271-5bc0-f5a6">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f577-cd7c-bb1a-0e88" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f44f-ffc7-aa33-209c" type="min"/>
@@ -2525,7 +2558,7 @@
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="notInstanceOf"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -2736,7 +2769,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="33a5-0e27-72f6-34ce" name="Sergeant" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="33a5-0e27-72f6-34ce" name="Sergeant" hidden="false" collective="false" import="true" defaultSelectionEntryId="2530-f338-8670-50e3">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b68-e57d-f710-36f3" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e407-1c7b-1ff1-0547" type="min"/>
@@ -2794,7 +2827,7 @@
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="notInstanceOf"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -2856,6 +2889,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2418-a403-e4cb-b865" name="Rough Rider Squad" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="9e88-47d6-7c42-1561" name="Trot" hidden="false"/>
+      </rules>
       <selectionEntries>
         <selectionEntry id="db96-4205-12b1-c6af" name="Rough Riders" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2995,7 +3031,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="1549-bfe8-85bf-8989" name="Sergeant" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="1549-bfe8-85bf-8989" name="Sergeant" hidden="false" collective="false" import="true" defaultSelectionEntryId="71d6-c054-d00a-cb32">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37e7-b325-e167-0033" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="997e-718c-ddf8-f08d" type="min"/>
@@ -3046,6 +3082,28 @@
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="19.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2c17-9fce-7b1c-89f5" name="Lasguns" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="61ee-b59b-e0a9-f031" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61ee-b59b-e0a9-f031" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6971-61bc-07c5-6afa" name="Lasgun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="67b3-4b99-4952-365b" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -3433,6 +3491,9 @@
         <rule id="d237-60eb-153c-c802" name="Force Field" hidden="false"/>
         <rule id="0284-e2a6-eb52-7187" name="Bale Eye" hidden="false"/>
         <rule id="2913-0b09-4ee2-e2f9" name="Iron Will" hidden="false"/>
+        <rule id="be2d-b9fa-0f0d-3dcb" name="Summary Execution" hidden="false">
+          <description>If a unit with a Commissar fails a Morale check for any reason, the Commissar will summarily execute the Officer or Sergeant leading the squad. Remove the executed model as a casualty. The unit then is assumed to have passed the Morale test and continues to fight under the leadership of the Commissar. The presence of a Commissar in a unit adds +1 Leadership to the Officer or Sergeant commanding the unit.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="e25b-d4f5-08f6-7cf8" name="Yarrick" hidden="false" targetId="4840-bbf2-f409-20c1" type="profile"/>
@@ -3477,10 +3538,10 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a5dd-e7c1-f7d2-0ade" name="Colonel Schaeffer&apos;s Last Chancers" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="7416-d4cc-9629-f52f" name="Hardened Fighters" hidden="false"/>
-        <rule id="9b77-7ea7-53a0-8ce0" name="Steadfast" hidden="false"/>
-      </rules>
+      <infoLinks>
+        <infoLink id="c5f9-034f-e652-10c0" name="Steadfast" hidden="false" targetId="ea73-5c36-49dc-dbff" type="rule"/>
+        <infoLink id="b17c-2403-b1a3-925c" name="Hardened Fighters" hidden="false" targetId="17a4-53d8-039c-8f3d" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="5b78-14bd-3969-07ee" name="Colonel Schaeffer" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -5736,6 +5797,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <infoLink id="6a42-0b39-06f2-058e" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
             <infoLink id="0526-f1e7-24b2-03c6" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="b91b-cd76-21d8-b8de" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5817,6 +5881,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
               <infoLinks>
                 <infoLink id="88c5-189b-72a4-ee49" name="Demolition Charge" hidden="false" targetId="60f0-36e3-b539-71ac" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5847,7 +5914,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5887,7 +5954,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5970,7 +6037,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5990,7 +6057,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6041,7 +6108,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6060,7 +6127,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6079,7 +6146,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6149,10 +6216,25 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry id="07de-588f-e620-90b5" name="Holy Relic" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ef0-9292-7021-90d0" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2720-c005-3e0e-a48a" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="84b5-e2ba-9b88-3e04" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1567-10b1-a1e1-617d" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="cb6e-6d7a-8722-6db3" name="Holy Relic" hidden="false" targetId="bcc1-8c37-a9c9-b60b" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
           </costs>
@@ -6172,7 +6254,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6198,7 +6280,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9f4-c1f3-288d-02bf" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d77a-7f37-0364-0a69" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6386,7 +6468,8 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9079-8edf-2271-ab82" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9079-8edf-2271-ab82" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="744e-c8e1-ea91-b7db" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
@@ -6425,6 +6508,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
                   <conditions>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f09-fa36-300f-5cda" type="instanceOf"/>
                     <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5829-a79d-bb5a-4cfe" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efb5-65a4-27b8-233d" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -6606,6 +6690,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     <rule id="647d-f731-5d52-f8e4" name="Camo Cloak" hidden="false"/>
     <rule id="36d3-c20f-b78f-7bf9" name="Tanith Knife" hidden="false"/>
     <rule id="ea86-cee4-a47b-c214" name="Absolute Direction" hidden="false"/>
+    <rule id="bcc1-8c37-a9c9-b60b" name="Holy Relic" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="c623-489e-d7a0-0a93" name="Captain" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -7173,6 +7258,15 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="08d6-df64-1b2d-c479" name="Ogryn Close Combat Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
   </sharedProfiles>
