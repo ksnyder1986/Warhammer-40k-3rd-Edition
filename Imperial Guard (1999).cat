@@ -3068,7 +3068,7 @@
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c19-7729-2a55-326c" type="notInstanceOf"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -6384,7 +6384,15 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4269-9829-5ea7-37f3" type="max"/>
           </constraints>
           <rules>
-            <rule id="95d2-3852-7e16-1a2e" name="Archeotech" hidden="false"/>
+            <rule id="95d2-3852-7e16-1a2e" name="Archeotech" hidden="false">
+              <description>Before each game, roll a D6 to see exactly what the Archeotech does.
+1 - Nothing
+2 - Against immobilised vehicles and bunkers the model may attack as if armed with a chainfist.
+3 - The model counts as being armed with frag grenades.
+4 - The owner gains a 5+ invulnerable save, but the save does not work against template or blast weapons. He also counts as four models when ascertaining which side outnumbers the other in close combat.
+5 - Counts as a power sword.
+6 - Counts as a master-crafted plasma pistol.</description>
+            </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
