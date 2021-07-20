@@ -1104,7 +1104,7 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="95.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7a19-0a0c-3e8c-e0d0" name="Chimera" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="7a19-0a0c-3e8c-e0d0" name="Chimera" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="4579-ea56-184f-7924" name="Firepoints" hidden="false">
           <description>The Chimera is fitted with six hull lasguns for passengers to use. Up to six passangers can use them to fire at single target. Additionally, one model may fire a weapon from the top hatch using their own weapon, but doing so turns the Chimera into an open topped vehicle until the next turn. </description>
@@ -1939,6 +1939,11 @@
             <modifier type="set" field="9dbc-61e4-f088-fe1e" value="1.0">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cf71-bdef-a981-47b6" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d79c-fe5a-5220-47df" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
