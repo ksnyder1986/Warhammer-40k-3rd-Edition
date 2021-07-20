@@ -30,6 +30,7 @@
       </constraints>
       <categoryLinks>
         <categoryLink id="bce9-e2f2-3d77-c138" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="901f-3f91-6806-2db4" name="Catachan" hidden="false" targetId="d79c-fe5a-5220-47df" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="bd2d-c92c-5a58-353d" name="Deathworld Infantry Platoon" hidden="false" collective="false" import="true" targetId="0159-b061-bb4d-5afb" type="selectionEntry">
@@ -103,9 +104,15 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="342c-70b4-c4bc-856f" name="May Move" hidden="false"/>
-        <rule id="8f83-e0f0-15a9-df85" name="Envenomed Blade" hidden="false"/>
-        <rule id="2227-bae0-ca6b-4d86" name="Always Operates Alone" hidden="false"/>
+        <rule id="342c-70b4-c4bc-856f" name="May Move" hidden="false">
+          <description>Unlike other Snipers, Sly may move after he has been revealed. You may removed him in your movement phase as if he was a normal Sniper, but write down new coordinates for a square adjacent to the one he disappeared from. He may reappear there using the Ambush rules from the start of his next turn.</description>
+        </rule>
+        <rule id="8f83-e0f0-15a9-df85" name="Envenomed Blade" hidden="false">
+          <description>Sly&apos;s knife is treated as a power weapon and the toxins on it allow Sly to re-roll any failed rolls to wound in close combat.</description>
+        </rule>
+        <rule id="2227-bae0-ca6b-4d86" name="Always Operates Alone" hidden="false">
+          <description>Sly is an independent character and may not join another unit.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="afc7-977a-c1d4-a012" name="Sly Marbo" hidden="false" targetId="85b0-84d8-0f08-a2d7" type="profile"/>
@@ -116,8 +123,12 @@
     </selectionEntry>
     <selectionEntry id="eb4c-ad79-916c-8155" name="Colonel Iron Hand Straken" hidden="false" collective="false" import="true" type="model">
       <rules>
-        <rule id="8ef6-6b2d-a5c7-ef83" name="Unique Bionics" hidden="false"/>
-        <rule id="19be-3ee9-f418-b3bc" name="Gung Ho" hidden="false"/>
+        <rule id="8ef6-6b2d-a5c7-ef83" name="Unique Bionics" hidden="false">
+          <description>Straken&apos;s arm mimics the effect of a power fist, but devices in the chest allow him to strike using his initiative value instead of going last. In addition he counts as having bionics. If Straken ever makes his special bionics saving roll, then it is assumed his bionic arm has been disabled and he can no longer use it.</description>
+        </rule>
+        <rule id="19be-3ee9-f418-b3bc" name="Gung Ho" hidden="false">
+          <description>Straken, the unit he is with and any friendly units with a model within 6&quot; of him may re-roll failed Morale &amp; Pinning tests. In addition, they may always attempt to regroup.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="f069-948b-47a8-57f4" name="Straken" hidden="false" targetId="a095-74b7-64a2-04bc" type="profile"/>
@@ -207,7 +218,7 @@
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="acad-3a52-cf5c-c3b9" name="Mortar Teams" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="acad-3a52-cf5c-c3b9" name="Mortar Teams" hidden="false" collective="false" import="true" defaultSelectionEntryId="cadd-baa7-0623-4923">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="957d-23e4-746f-0835" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7375-8c07-00f9-c7ac" type="max"/>
@@ -361,6 +372,33 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="5a44-ea3a-d678-50f5" name="Shootas" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="3531-756d-e2e0-e2d3" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3531-756d-e2e0-e2d3" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="286c-c282-8974-4021" name="Shoota" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="b0a7-c281-7a00-208e" name="Shoota" hidden="false" targetId="894f-1760-04e4-77c4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -368,7 +406,7 @@
     </selectionEntry>
     <selectionEntry id="4128-ef2a-7b3f-1202" name="Deathworld Sentinel Squadron" hidden="false" collective="false" import="true" type="unit">
       <selectionEntryGroups>
-        <selectionEntryGroup id="70a8-aa56-3b99-c85c" name="Sentinels" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="70a8-aa56-3b99-c85c" name="Sentinels" hidden="false" collective="false" import="true" defaultSelectionEntryId="7652-9fb2-052c-212b">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5575-c3f1-cbbd-c13e" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8367-726c-b221-fce6" type="max"/>
@@ -376,7 +414,9 @@
           <selectionEntries>
             <selectionEntry id="7652-9fb2-052c-212b" name="Deathworld Sentinel" hidden="false" collective="false" import="true" type="model">
               <rules>
-                <rule id="7c02-4088-dcbc-0f3e" name="Rough Terrain Modification" hidden="false"/>
+                <rule id="7c02-4088-dcbc-0f3e" name="Rough Terrain Modification" hidden="false">
+                  <description>Deathworld Sentinels can re-roll the dice for how far they move through difficult terrain.</description>
+                </rule>
               </rules>
               <infoLinks>
                 <infoLink id="8891-af9c-61c2-47a0" name="Deathworld Sentinel" hidden="false" targetId="18dd-f317-ad2b-228f" type="profile"/>
@@ -460,22 +500,22 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0159-b061-bb4d-5afb" name="Deathworld Infantry Platoon" hidden="false" collective="false" import="true" type="unit">
-      <selectionEntries>
-        <selectionEntry id="89af-28fe-d487-2fef" name="Platoon Commander" hidden="false" collective="false" import="true" type="model">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="537a-7901-3923-8b6e" name="Platoon Commander" hidden="false" collective="false" import="true" defaultSelectionEntryId="2435-850b-d681-c514">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ef6-7919-e5cf-c914" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="704d-d44a-a96d-a479" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bee5-bb07-bf9f-5aba" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c47-ce29-5a34-c33c" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="b5c2-9972-1af7-7434" name="Lieutenant" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="56bb-0ca4-d461-eeb4" name="Captain" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="910e-a1c5-ae78-0d6b" name="Deathworld Lieutenant" hidden="false" targetId="c9f9-e626-5f54-6035" type="profile"/>
-                <infoLink id="288a-f5ff-67dc-3427" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
-                <infoLink id="9489-2d59-9b49-0761" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
-                <infoLink id="f81b-e009-1a84-3d97" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-                <infoLink id="d3bb-9147-44ce-3591" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
-                <infoLink id="0c2d-0851-3e61-196f" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
-                <infoLink id="4250-9407-5f53-5bb4" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule">
+                <infoLink id="7b39-42f0-2063-613c" name="Deathworld Captain" hidden="false" targetId="2953-6d19-ef91-b403" type="profile"/>
+                <infoLink id="b79e-93f8-889a-a56e" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+                <infoLink id="f010-6112-2c28-dbcf" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink id="f15d-8159-5fdc-0fd3" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="189b-5008-6a0c-5889" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+                <infoLink id="867e-85f4-fd8c-8a89" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
+                <infoLink id="5f4f-0b50-6fa8-c9db" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule">
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
@@ -484,7 +524,7 @@
                     </modifier>
                   </modifiers>
                 </infoLink>
-                <infoLink id="c13a-9650-3eac-bdba" name="Jungle Fighters" hidden="false" targetId="5129-ecf7-d3f2-2a76" type="rule">
+                <infoLink id="73d6-0335-e500-5e03" name="Jungle Fighters" hidden="false" targetId="5129-ecf7-d3f2-2a76" type="rule">
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
@@ -494,53 +534,56 @@
                   </modifiers>
                 </infoLink>
               </infoLinks>
+              <categoryLinks>
+                <categoryLink id="1880-18d3-f46a-01fa" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
+              </categoryLinks>
               <entryLinks>
-                <entryLink id="1acc-069f-d5f4-3618" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9e4a-fa67-b069-e4c4" name="Captain" hidden="false" collective="false" import="true" type="model">
-              <infoLinks>
-                <infoLink id="b5a0-1057-6ed8-c573" name="Deathworld Captain" hidden="false" targetId="2953-6d19-ef91-b403" type="profile"/>
-                <infoLink id="1e2a-ceee-fe3b-2e12" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
-                <infoLink id="975f-6c68-3482-1d80" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
-                <infoLink id="bc85-b5fd-2f71-a91d" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-                <infoLink id="a004-0783-0379-8e1f" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
-                <infoLink id="482e-867d-b2b3-a663" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
-                <infoLink id="858e-363c-c9e5-9872" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="instanceOf"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
-                <infoLink id="b9a2-eb46-3067-17fa" name="Jungle Fighters" hidden="false" targetId="5129-ecf7-d3f2-2a76" type="rule">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="notInstanceOf"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <entryLinks>
-                <entryLink id="f9d5-9b94-cc72-491c" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
+                <entryLink id="83cf-0594-3beb-5dd3" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="2435-850b-d681-c514" name="Lieutenant" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="c2b7-a89d-3d59-48f7" name="Deathworld Lieutenant" hidden="false" targetId="c9f9-e626-5f54-6035" type="profile"/>
+                <infoLink id="989c-cbab-f3de-5a7e" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink id="fa46-7534-7322-9d69" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+                <infoLink id="e9a3-f08d-ada2-2765" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="49a2-015d-7824-ebd3" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+                <infoLink id="6b0f-21b4-d831-2dca" name="Leadership" hidden="false" targetId="11ff-f612-addd-577e" type="rule"/>
+                <infoLink id="d0e8-b6a0-4959-e0da" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="26c3-0589-2e3f-d34f" name="Jungle Fighters" hidden="false" targetId="5129-ecf7-d3f2-2a76" type="rule">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="dc8f-745b-e3d0-5a6e" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink id="2840-fd36-a331-ef07" name="Imperial Guard Armory" hidden="false" collective="false" import="true" targetId="b14e-7e11-6347-bf2d" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="29e8-b05b-82ca-0580" name="Deathworld Veteran Infantry Squad" hidden="false" collective="false" import="true" targetId="a66f-f63f-461b-a8ab" type="selectionEntry">
           <constraints>
@@ -818,7 +861,7 @@
           <entryLinks>
             <entryLink id="2548-6921-ddcb-e17e" name="Sly Marbo" hidden="false" collective="false" import="true" targetId="a4d7-56cb-bf76-4ef6" type="selectionEntry">
               <constraints>
-                <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80f5-d5dd-efbc-a905" type="max"/>
+                <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="80f5-d5dd-efbc-a905" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc79-5b64-421d-809e" type="max"/>
               </constraints>
             </entryLink>
@@ -830,6 +873,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5798-34fb-74d2-ba71" name="Deathworld Veteran Assault Team" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="name" value="Ork Hunters Fire Sweep Team">
+          <conditions>
+            <condition field="selections" scope="5798-34fb-74d2-ba71" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="6917-e831-c226-d169" name="Deathworld Veterans" hidden="false" targetId="0b0d-c34d-0b36-560d" type="rule">
           <modifiers>
@@ -887,7 +937,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3674-9a61-a05d-071b" name="Sergeant" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="3674-9a61-a05d-071b" name="Sergeant" hidden="false" collective="false" import="true" defaultSelectionEntryId="49a8-26cf-89eb-93a3">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ec7-daff-7b89-ba2b" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="268c-049d-946a-37fb" type="max"/>
@@ -915,7 +965,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f055-a5a0-4abf-db9d" name="Deathworld Veteran" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f055-a5a0-4abf-db9d" name="Deathworld Veteran" hidden="false" collective="false" import="true" defaultSelectionEntryId="5e90-9c3b-f4ed-a9c5">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3005-7fec-618f-fae6" type="min"/>
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53bd-19c6-3fa3-a2a4" type="max"/>
@@ -932,13 +982,8 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="3077-372a-08ee-e6ed" name="Loadout" hidden="false" collective="false" import="true" defaultSelectionEntryId="5976-8ac5-6ebb-5de9">
+        <selectionEntryGroup id="3077-372a-08ee-e6ed" name="Replace Lasgun" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="increment" field="d143-ada8-8b8a-15d9" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
             <modifier type="increment" field="489d-0c47-a764-2c67" value="1.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -947,17 +992,8 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="489d-0c47-a764-2c67" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d143-ada8-8b8a-15d9" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="5976-8ac5-6ebb-5de9" name="Lasgun" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="d0cb-1ad7-ad81-2079" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="3e15-8b1e-60b5-f14e" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="7e30-88b4-d645-1d74" name="Shotgun" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
@@ -1016,6 +1052,33 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="3bd6-930d-7176-a579" name="Choppas" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="b152-5354-f5bd-b4b6" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fc1-86a3-5273-c84e" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b152-5354-f5bd-b4b6" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="490b-2e5d-038d-940a" name="Choppa" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="aacb-9a89-9baa-979f" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -1033,8 +1096,8 @@
           </modifiers>
         </infoLink>
         <infoLink id="1d30-fe45-cc24-057b" name="Ambush" hidden="false" targetId="1e9a-8f2f-238e-9e34" type="rule"/>
-        <infoLink id="2d2b-d0fc-ac3b-7560" name="Hardened Fighters" hidden="false" targetId="3d6a-b2ba-abd5-f9be" type="rule"/>
-        <infoLink id="3e61-c027-1a40-8c98" name="Steadfast" hidden="false" targetId="7c9c-544a-68db-7cd7" type="rule"/>
+        <infoLink id="2d2b-d0fc-ac3b-7560" name="Hardened Fighters" hidden="false" targetId="17a4-53d8-039c-8f3d" type="rule"/>
+        <infoLink id="3e61-c027-1a40-8c98" name="Steadfast" hidden="false" targetId="ea73-5c36-49dc-dbff" type="rule"/>
         <infoLink id="8f88-e0f1-ecb5-d9b9" name="Jungle Fighters" hidden="false" targetId="5129-ecf7-d3f2-2a76" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -1081,9 +1144,27 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="48.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="da69-38f9-b0bb-4ccd" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f570-495c-76c8-585f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8350-65e6-e6cd-3b48" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ea56-b129-5dea-e853" name="Devils" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="ea56-b129-5dea-e853" name="Devils" hidden="false" collective="false" import="true" defaultSelectionEntryId="5a19-7237-c5b0-6214">
           <constraints>
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b1a-79af-1905-2699" type="min"/>
             <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3706-9f83-7502-cb27" type="max"/>
@@ -1103,11 +1184,6 @@
         </selectionEntryGroup>
         <selectionEntryGroup id="6b7a-71bd-214f-6324" name="Additional Loadout" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="increment" field="9255-c762-8707-d66a" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
             <modifier type="increment" field="308b-ac65-9fe1-848f" value="1.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
@@ -1116,7 +1192,6 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="308b-ac65-9fe1-848f" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9255-c762-8707-d66a" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="d2a6-f563-0f19-812e" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
@@ -1165,6 +1240,15 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="538d-d53d-204c-86a2" name="Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="0a51-cb90-caf5-ea79" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+                <infoLink id="597f-ad79-8988-ce22" name="Grenade Launcher (krak)" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1532,24 +1616,56 @@
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
-    <rule id="0b0d-c34d-0b36-560d" name="Deathworld Veterans" hidden="false"/>
-    <rule id="32a8-a559-293a-a999" name="Opps, Sorry Sir!" hidden="false"/>
-    <rule id="1e9a-8f2f-238e-9e34" name="Ambush" hidden="false"/>
-    <rule id="3d6a-b2ba-abd5-f9be" name="Hardened Fighters" hidden="false"/>
-    <rule id="7c9c-544a-68db-7cd7" name="Steadfast" hidden="false"/>
-    <rule id="9d60-b109-f37e-cfa6" name="Gung Ho" hidden="false"/>
-    <rule id="1496-27c3-2f58-885c" name="Deathworld Toxins" hidden="false"/>
-    <rule id="2150-cbd0-329c-5f33" name="Camouflage" hidden="false"/>
-    <rule id="f24f-9916-55fe-8bf6" name="Disappear" hidden="false"/>
-    <rule id="e3ad-147a-43f5-a00a" name="Set-Up" hidden="false"/>
-    <rule id="ef50-ea59-9c80-ccd7" name="Ignore Cover Saves" hidden="false"/>
-    <rule id="1644-75b3-7a1b-6398" name="Pinning" hidden="false"/>
-    <rule id="dc13-2a4b-c609-d6da" name="Plasma Charge" hidden="false"/>
-    <rule id="8879-cace-77eb-a230" name="Shredder Mine" hidden="false"/>
-    <rule id="3d45-8e04-2e94-1f6d" name="Spring Mine" hidden="false"/>
-    <rule id="8e6a-cb86-d10e-8502" name="Trap" hidden="false"/>
-    <rule id="0f0f-2dd1-567e-7c66" name="Placement" hidden="false"/>
-    <rule id="5129-ecf7-d3f2-2a76" name="Jungle Fighters" hidden="false"/>
+    <rule id="0b0d-c34d-0b36-560d" name="Deathworld Veterans" hidden="false">
+      <description>Deathworld Veterans count woods or jungles as clear terrain. They receive a 4+ cover save for being in woods or jungle terrain. If they do not move in the movement phase may see and shoot through 12&quot; of woods or jungle terrain instead of the normal 6&quot;. And they may infiltrate into woods or jungle in missions where infiltration is allowed.</description>
+    </rule>
+    <rule id="32a8-a559-293a-a999" name="Opps, Sorry Sir!" hidden="false">
+      <description>Roll a D6 for each Commissar before setting them up. On a roll of 1 the commissar has suffered an accident and cannot be used.</description>
+    </rule>
+    <rule id="1e9a-8f2f-238e-9e34" name="Ambush" hidden="false">
+      <description>See rules for Ambush set-up in Codex: Catachan page 20</description>
+    </rule>
+    <rule id="9d60-b109-f37e-cfa6" name="Gung Ho" hidden="false">
+      <description>The unit may re-roll failed Morale and Pinning tests and can try to regroup even if below half strength.</description>
+    </rule>
+    <rule id="1496-27c3-2f58-885c" name="Deathworld Toxins" hidden="false">
+      <description>Deathworld Snipers may re-roll a failed roll to wound when using their rifles.</description>
+    </rule>
+    <rule id="2150-cbd0-329c-5f33" name="Camouflage" hidden="false">
+      <description>Deathworld Snipers have a 3+ cover save in woods or jungle terrain.</description>
+    </rule>
+    <rule id="f24f-9916-55fe-8bf6" name="Disappear" hidden="false">
+      <description>Snipers never move. During your Movement phase, you may remove the sniper, representing the Sniper merging back into the shadows. Once removed, a Sniper may not return to the battlefield but doesn&apos;t count as having been killed for Victory point purposes. Snipers cannot claim table quarters or other objectives and don&apos;t have to be killed for an attacker to win Meat Ginder or Grand Assault.</description>
+    </rule>
+    <rule id="e3ad-147a-43f5-a00a" name="Set-Up" hidden="false">
+      <description>See rules for Booby Trap set-up in Codex: Catachan page 21</description>
+    </rule>
+    <rule id="ef50-ea59-9c80-ccd7" name="Ignore Cover Saves" hidden="false">
+      <description>Ignore cover saves.</description>
+    </rule>
+    <rule id="1644-75b3-7a1b-6398" name="Pinning" hidden="false">
+      <description>Any unit that suffers one or more casualties from a booby trap must test for pinning.</description>
+    </rule>
+    <rule id="dc13-2a4b-c609-d6da" name="Plasma Charge" hidden="false">
+      <description>The model that triggered the charge is hit automatically.</description>
+    </rule>
+    <rule id="8879-cace-77eb-a230" name="Shredder Mine" hidden="false">
+      <description>The mine is located D6&quot; away from the model that triggered it, in the direction indicated by the arrow on the Scatter dice. The player who laid the mine may place the flamer template with the narrow end at the location of the mine and positioned in such a manner that the model who triggered the trap is at least partially under the template. Any models touched by the template are hit automatically.</description>
+    </rule>
+    <rule id="3d45-8e04-2e94-1f6d" name="Spring Mine" hidden="false">
+      <description>Place the large Ordnance Blast marker so that the central hole is over the model which triggered the trap. Then roll for scatter in the same way as you would for ordnance. Any models that are fully under the Ordnance Blast marker are hit automatically, and any that are partially under the Blast marker are hit on a 4+.</description>
+    </rule>
+    <rule id="8e6a-cb86-d10e-8502" name="Trap" hidden="false">
+      <description>Place the small Blast market so that the central hole is over the model that triggered the trap. Any models fully under the Blast marker are hit automatically and any partially under are hit on a 4+.</description>
+    </rule>
+    <rule id="0f0f-2dd1-567e-7c66" name="Placement" hidden="false">
+      <description>Each booby trap you take allows you to booby trap a 1&apos; square area.</description>
+    </rule>
+    <rule id="5129-ecf7-d3f2-2a76" name="Jungle Fighters" hidden="false">
+      <description>Roll 3D6 and pick the highest to see how far the unit can move through jungle terrain. When pursuing and falling back through difficult terrain, they roll 3D6 and halve the result. They only become &apos;spooked&apos; on a roll of a triple one and only set off booby traps on any roll of a triple.
+They receive a 4+ cover save for being in woods or jungle.
+They may infiltrate into woods or jungles in missions where infiltration is allowed.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="3173-cfab-abb8-2403" name="Deathworld Veteran" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
