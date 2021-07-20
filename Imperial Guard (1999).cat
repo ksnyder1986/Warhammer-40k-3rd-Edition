@@ -340,7 +340,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="410d-ed07-e811-1dc6" type="max"/>
           </constraints>
           <rules>
-            <rule id="e72b-932c-8756-2d5c" name="Regimental Standard" hidden="false"/>
+            <rule id="e72b-932c-8756-2d5c" name="Regimental Standard" hidden="false">
+              <description>Add +1 to the combat resolution score of any assault that takes place within 6&quot; of a Regimental Standard. If the model bearing the standard is slain in close combat then the enemy model that slew him captures the standard and the enemy gets the +1 bonus from then on. A standard can change hands several times in a single battle.</description>
+            </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
@@ -2873,8 +2875,12 @@
     </selectionEntry>
     <selectionEntry id="e7ef-e433-9126-7068" name="Hellhound" hidden="false" collective="false" import="true" type="model">
       <rules>
-        <rule id="df77-fcbc-aa21-5142" name="Move &apos;n Shoot" hidden="false"/>
-        <rule id="c5f3-5ee6-1a64-ad74" name="Fuel Tanks" hidden="false"/>
+        <rule id="df77-fcbc-aa21-5142" name="Move &apos;n Shoot" hidden="false">
+          <description>A Hellhound that moves over 6&quot; can shoot in the shooting phase but only with its Inferno Cannon. If it moves over 6&quot; it must fire the caccnon via a side or rear facing.</description>
+        </rule>
+        <rule id="c5f3-5ee6-1a64-ad74" name="Fuel Tanks" hidden="false">
+          <description>All glancing hits are treated as penetrating hits instead.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="5baf-4035-fd58-8eb5" name="Hellhound" hidden="false" targetId="8d33-84eb-ee2f-6531" type="profile"/>
@@ -2890,7 +2896,9 @@
     </selectionEntry>
     <selectionEntry id="2418-a403-e4cb-b865" name="Rough Rider Squad" hidden="false" collective="false" import="true" type="unit">
       <rules>
-        <rule id="9e88-47d6-7c42-1561" name="Trot" hidden="false"/>
+        <rule id="9e88-47d6-7c42-1561" name="Trot" hidden="false">
+          <description>Rough Rider units may choose to trot during the movement phase. If they do they may move up to 9&quot; in the movement phase. But they may only charge 9&quot; in that turns assault phase and may only shoot pistols and may not enter or cross difficult terrain.</description>
+        </rule>
       </rules>
       <selectionEntries>
         <selectionEntry id="db96-4205-12b1-c6af" name="Rough Riders" hidden="false" collective="false" import="true" type="model">
@@ -3452,11 +3460,21 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c92-9336-0a7c-1f9c" type="max"/>
       </constraints>
       <rules>
-        <rule id="191a-83f8-bf50-b296" name="Helm of Macharius" hidden="false"/>
-        <rule id="dd61-3899-d803-3413" name="Command Presence" hidden="false"/>
-        <rule id="7138-1cd1-de6f-1b0e" name="Ferocious Charge" hidden="false"/>
-        <rule id="9200-768f-4d17-d36a" name="Old War Wounds" hidden="false"/>
-        <rule id="35ef-a5ed-22d7-fd20" name="Master Strategist" hidden="false"/>
+        <rule id="191a-83f8-bf50-b296" name="Helm of Macharius" hidden="false">
+          <description>Macharius has a 3+ invulnerable save.</description>
+        </rule>
+        <rule id="dd61-3899-d803-3413" name="Command Presence" hidden="false">
+          <description>Any Imperial Guard unit within 12&quot; of Macharius takes Morale and Pinning checks using his Leadership of 10</description>
+        </rule>
+        <rule id="7138-1cd1-de6f-1b0e" name="Ferocious Charge" hidden="false">
+          <description>Macharius adds D3 attacks when he charges, instead of the normal +1.</description>
+        </rule>
+        <rule id="9200-768f-4d17-d36a" name="Old War Wounds" hidden="false">
+          <description>Macharius&apos;s WS and A characteristics are determined randomly at the start of the battle.</description>
+        </rule>
+        <rule id="35ef-a5ed-22d7-fd20" name="Master Strategist" hidden="false">
+          <description>An army including Macharius may choose to go first in any mission where this is normally decided randomly.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="163b-befa-459b-d142" name="Macharius" hidden="false" targetId="e07c-426c-a0e5-c4b9" type="profile"/>
@@ -3477,7 +3495,7 @@
         </infoLink>
         <infoLink id="59f2-e42a-d299-8a83" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
         <infoLink id="90fb-2a93-18fa-5c06" name="Master-crafted Weapons" hidden="false" targetId="bfa6-639a-4ff4-e20e" type="rule"/>
-        <infoLink id="4fae-e204-7ed4-453c" name="Carapace Armor" hidden="false" targetId="c55f-50a3-63ba-d585" type="rule"/>
+        <infoLink id="4fae-e204-7ed4-453c" name="Carapace Armor" hidden="false" targetId="f1bf-49f9-4094-c2f9" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="173.0"/>
@@ -3488,9 +3506,15 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a7c-9172-d332-ba2b" type="max"/>
       </constraints>
       <rules>
-        <rule id="d237-60eb-153c-c802" name="Force Field" hidden="false"/>
-        <rule id="0284-e2a6-eb52-7187" name="Bale Eye" hidden="false"/>
-        <rule id="2913-0b09-4ee2-e2f9" name="Iron Will" hidden="false"/>
+        <rule id="d237-60eb-153c-c802" name="Force Field" hidden="false">
+          <description>Whenever Yarrick is hit by an attack, roll a D6 and duduct the amount from the strength of the attack. If reduced to 0 or less the attack is stopped completely. The force field has no effect on attacks that don&apos;t use strength to inflict damage.</description>
+        </rule>
+        <rule id="0284-e2a6-eb52-7187" name="Bale Eye" hidden="false">
+          <description>During close combat, Yarrick makes one free Strength 4 attack that hits automatically.</description>
+        </rule>
+        <rule id="2913-0b09-4ee2-e2f9" name="Iron Will" hidden="false">
+          <description>Do not remove Yarrick as a casualty if he loses his last wound (even if the wound was lost to an instant kill attack). Instead, place him on his side. Then, at the start of the Imperial Guard player&apos;s next turn roll a D6. On a roll of 4+ Yarrick staggers back to his feet with 1 wound. On a 1-3 Yarrick is removed as a casualty.</description>
+        </rule>
         <rule id="be2d-b9fa-0f0d-3dcb" name="Summary Execution" hidden="false">
           <description>If a unit with a Commissar fails a Morale check for any reason, the Commissar will summarily execute the Officer or Sergeant leading the squad. Remove the executed model as a casualty. The unit then is assumed to have passed the Morale test and continues to fight under the leadership of the Commissar. The presence of a Commissar in a unit adds +1 Leadership to the Officer or Sergeant commanding the unit.</description>
         </rule>
@@ -3510,7 +3534,7 @@
             <modifier type="set" field="name" value="Master-crafted Laspistol"/>
           </modifiers>
         </infoLink>
-        <infoLink id="68e8-43fe-6926-4b0e" name="Carapace Armor" hidden="false" targetId="c55f-50a3-63ba-d585" type="rule"/>
+        <infoLink id="68e8-43fe-6926-4b0e" name="Carapace Armor" hidden="false" targetId="f1bf-49f9-4094-c2f9" type="rule"/>
         <infoLink id="6ae1-602b-3615-e072" name="Power Fist" hidden="false" targetId="a161-ed4b-bcb7-0a01" type="profile">
           <modifiers>
             <modifier type="set" field="name" value="Battle Claw"/>
@@ -3524,14 +3548,18 @@
     </selectionEntry>
     <selectionEntry id="c596-2da2-eaae-4936" name="Nork Deddog" hidden="false" collective="false" import="true" type="model">
       <rules>
-        <rule id="fcfc-fdcd-e8f3-cd4d" name="Very Loyal" hidden="false"/>
-        <rule id="d051-cbe5-8432-ccee" name="Bodyguard" hidden="false"/>
+        <rule id="fcfc-fdcd-e8f3-cd4d" name="Very Loyal" hidden="false">
+          <description>So long as the commander is alive, Nork must remain within 2&quot; of him if at all possible.</description>
+        </rule>
+        <rule id="d051-cbe5-8432-ccee" name="Bodyguard" hidden="false">
+          <description>If Nork is within 2&quot; of the commander he may choose to take any shooting hit on that commander instead. Additionally, in close combat, after models have moved but before combats are resolved, Nork and his commander may swap places if they are within 2&quot; of each other.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="296c-8169-bfe5-9165" name="Nork Deddog" hidden="false" targetId="6701-6289-32e6-901d" type="profile"/>
         <infoLink id="c895-43f8-e22a-1033" name="Ripper Gun" hidden="false" targetId="3d57-a43d-1066-0f5d" type="profile"/>
         <infoLink id="ffff-13ae-ef6f-daee" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
-        <infoLink id="c89f-09ea-941a-ef28" name="Carapace Armor" hidden="false" targetId="c55f-50a3-63ba-d585" type="rule"/>
+        <infoLink id="c89f-09ea-941a-ef28" name="Carapace Armor" hidden="false" targetId="f1bf-49f9-4094-c2f9" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55.0"/>
@@ -3556,7 +3584,7 @@
             <infoLink id="6365-1c9c-7196-86f2" name="Schaeffer" hidden="false" targetId="5f4b-a874-d924-13d5" type="profile"/>
             <infoLink id="fd48-2ee6-f5a9-f2e0" name="Plasma Pistol" hidden="false" targetId="7b91-b670-d042-7c88" type="profile"/>
             <infoLink id="5db7-7a6e-bb75-6a28" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
-            <infoLink id="97fd-978d-c654-2af1" name="Carapace Armor" hidden="false" targetId="c55f-50a3-63ba-d585" type="rule"/>
+            <infoLink id="97fd-978d-c654-2af1" name="Carapace Armor" hidden="false" targetId="f1bf-49f9-4094-c2f9" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -4863,10 +4891,18 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <selectionEntries>
             <selectionEntry id="1008-66eb-342b-ad8f" name="Tanith Master Sniper" hidden="false" collective="false" import="true" type="model">
               <rules>
-                <rule id="7bfa-998e-123f-56ac" name="Ambush" hidden="false"/>
-                <rule id="033c-a9a3-02ed-436f" name="Camouflage" hidden="false"/>
-                <rule id="82a2-ed7d-9ac9-22e3" name="Master Sniper" hidden="false"/>
-                <rule id="98f2-80ac-cb0d-829d" name="Disappear" hidden="false"/>
+                <rule id="7bfa-998e-123f-56ac" name="Ambush" hidden="false">
+                  <description>Set up using the Ambush rules in Codex: Catachans page 20.</description>
+                </rule>
+                <rule id="033c-a9a3-02ed-436f" name="Camouflage" hidden="false">
+                  <description>Tanith Snipers have a 3+ cover save that cannot be improved or reduced by any factors (Camo Cloak already included).</description>
+                </rule>
+                <rule id="82a2-ed7d-9ac9-22e3" name="Master Snipers" hidden="false">
+                  <description>Tanith Master Snipers may re-roll a failed to wound roll but must accept the second result.</description>
+                </rule>
+                <rule id="98f2-80ac-cb0d-829d" name="Disappear" hidden="false">
+                  <description>Tanith Master Snipers never move. During your Movement phase, you may remove the sniper, representing the Master Sniper merging back into the shadows. Once removed, a Master Sniper may not return to the battlefield but doesn&apos;t count as having been killed for Victory point purposes. Tanith Master Snipers cannot claim table quarters or other objectives and don&apos;t have to be killed for an attacker to win Meat Ginder or Grand Assault.</description>
+                </rule>
               </rules>
               <infoLinks>
                 <infoLink id="fc0d-36d3-0a9a-5c82" name="Tanith Master Sniper" hidden="false" targetId="fe14-8df0-8592-4466" type="profile"/>
@@ -4888,13 +4924,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <constraints>
         <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c0d-a887-c40a-b198" type="max"/>
       </constraints>
-      <rules>
-        <rule id="4f7d-2337-8683-359f" name="Guerrillas" hidden="false"/>
-        <rule id="67d3-bd93-df9d-1330" name="Steadfast" hidden="false"/>
-      </rules>
       <infoLinks>
         <infoLink id="ad44-5140-4624-0dc8" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
         <infoLink id="0c51-f7ca-fd06-ce47" name="Absolute Direction" hidden="false" targetId="ea86-cee4-a47b-c214" type="rule"/>
+        <infoLink id="b0dd-037e-d220-1e25" name="Guerrillas" hidden="false" targetId="00c1-3769-63a9-17d7" type="rule"/>
+        <infoLink id="659b-d027-7112-2e7a" name="Steadfast" hidden="false" targetId="ea73-5c36-49dc-dbff" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c09a-ca9d-89d9-d45e" name="Gaunt&apos;s Ghosts" hidden="false" targetId="8541-29cf-45ca-5d65" primary="false"/>
@@ -5593,13 +5627,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="7c5f-c897-1ea8-c4d3" name="Tanith Command HQ" hidden="false" collective="false" import="true" type="unit">
-      <rules>
-        <rule id="a9cd-7f80-4da5-bd35" name="Guerrillas" hidden="false"/>
-        <rule id="cfbf-560f-08b2-de65" name="Steadfast" hidden="false"/>
-      </rules>
       <infoLinks>
         <infoLink id="0827-4f7e-9e14-971a" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
         <infoLink id="529d-267e-4898-bf70" name="Absolute Direction" hidden="false" targetId="ea86-cee4-a47b-c214" type="rule"/>
+        <infoLink id="0b56-656d-24ad-2c38" name="Guerrillas" hidden="false" targetId="00c1-3769-63a9-17d7" type="rule"/>
+        <infoLink id="d239-acc6-12d7-15ad" name="Steadfast" hidden="false" targetId="ea73-5c36-49dc-dbff" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9047-6574-c14d-7db2" name="Gaunt&apos;s Ghosts" hidden="false" targetId="8541-29cf-45ca-5d65" primary="false"/>
@@ -5612,9 +5644,15 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec45-c74c-a00c-4966" type="min"/>
           </constraints>
           <rules>
-            <rule id="f181-f8c4-9808-afe2" name="Colonel-Commissar" hidden="false"/>
-            <rule id="455b-381c-dc15-303e" name="Sword of Heironymo" hidden="false"/>
-            <rule id="a5b4-117a-5a91-b546" name="Front Liner" hidden="false"/>
+            <rule id="f181-f8c4-9808-afe2" name="Colonel-Commissar" hidden="false">
+              <description>Gaunt does not follow the normal special rules for Commissars and so is not assigned for an Officer or Sergeant, nor will he execute members of a squad that he joins. He must always be accompanied by his Command HQ.</description>
+            </rule>
+            <rule id="455b-381c-dc15-303e" name="Sword of Heironymo" hidden="false">
+              <description>The Sword of Heironymo is a master-crafted power sword that hits at Strenght 4.</description>
+            </rule>
+            <rule id="a5b4-117a-5a91-b546" name="Front Liner" hidden="false">
+              <description>If there is an assault occuring within 12&quot; of Gaunt at the start of the Imperial Guard player&apos;s turn and he is not in combat, he must immediately move towards the nearest combat in his Movement phase and assault the enemy models in that combat if at all possible. However, when Gaunt charges into an assault, he inspires such feats of heroism that all Imperial Guard models in that combat, even thsoe using supporting attacks, benefit from +1 Attack for that round only. This benefit includes Gaunt himself, and his command HQ.</description>
+            </rule>
           </rules>
           <infoLinks>
             <infoLink id="8634-bd80-2664-7b6e" name="Gaunt" hidden="false" targetId="aba6-abb5-f918-e9e1" type="profile"/>
@@ -5636,7 +5674,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d680-565b-0414-bc05" type="min"/>
           </constraints>
           <rules>
-            <rule id="1916-7875-b556-a983" name="Natural Born Leader" hidden="false"/>
+            <rule id="1916-7875-b556-a983" name="Natural Born Leader" hidden="false">
+              <description>If Gaunt is removed as a casualty, Corbec takes over the leadership of the Tanith troops. All Leadership bases tests taken by the unit from then on use Corbec&apos;s Leadership. All units that would normally have tested on Gaunt&apos;s Headership test of Corbec&apos;s instead.</description>
+            </rule>
           </rules>
           <infoLinks>
             <infoLink id="fdcc-f2b3-b25b-c085" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
@@ -5657,8 +5697,12 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71eb-fc8d-3c85-1fae" type="min"/>
           </constraints>
           <rules>
-            <rule id="6b7d-0f9c-052c-e0d4" name="Expert Medic" hidden="false"/>
-            <rule id="ba81-721a-20bf-17bc" name="Oath" hidden="false"/>
+            <rule id="6b7d-0f9c-052c-e0d4" name="Expert Medic" hidden="false">
+              <description>Dorden allows his unit to ignore both the first and second failed armor saving throw each turn. He may not use this ability if he is in base-to-base contact with any enemy models.</description>
+            </rule>
+            <rule id="ba81-721a-20bf-17bc" name="Oath" hidden="false">
+              <description>Dorden may not ever fire his laspistol in the Shooting phase, but may use it as a weapon in the Assault phase.</description>
+            </rule>
           </rules>
           <infoLinks>
             <infoLink id="91ed-e0c7-c507-8bc8" name="Dordon" hidden="false" targetId="c01a-35bb-9d90-33e4" type="profile"/>
@@ -5679,8 +5723,12 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="651e-e69c-285e-fe5f" type="min"/>
           </constraints>
           <rules>
-            <rule id="a346-a7a2-d0c9-07c5" name="Tanith Pipes" hidden="false"/>
-            <rule id="c49c-57c6-430a-2dd6" name="Precognition" hidden="false"/>
+            <rule id="a346-a7a2-d0c9-07c5" name="Tanith Pipes" hidden="false">
+              <description>The Tanith Pipes act as a Regimental Standard, although it cannot be captured by the enemy. However, if Milo is killed all Tanith troops (including Gaunt) are at -1 Leadership for the rest of the game.</description>
+            </rule>
+            <rule id="c49c-57c6-430a-2dd6" name="Precognition" hidden="false">
+              <description>Milo has a 4+ Invulnerable save, and confers it to Gaunt if he is within 2&quot; of him.</description>
+            </rule>
           </rules>
           <infoLinks>
             <infoLink id="9ec6-a2ea-709c-c4af" name="Milo" hidden="false" targetId="06ce-0aba-ce45-1e35" type="profile"/>
@@ -5699,8 +5747,12 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a4e-bfda-feba-64ed" type="min"/>
           </constraints>
           <rules>
-            <rule id="90b2-eb70-d3bf-d8d9" name="Marksman" hidden="false"/>
-            <rule id="5b03-a129-2cb5-1469" name="Customised Long-Las" hidden="false"/>
+            <rule id="90b2-eb70-d3bf-d8d9" name="Marksman" hidden="false">
+              <description>Larkin nominates a model when he is shooting, such as a Sergeant or a Heavy Weapons trooper. This means he gets to choose which model is removed as a casualty, not the enemy. In addition, Larkin can target any model in range and line of sight, regardless of any targetting restrictions. In addition, Larkin may move and fire his weapon.</description>
+            </rule>
+            <rule id="5b03-a129-2cb5-1469" name="Customised Long-Las" hidden="false">
+              <description>Larkin always hits on a 2+ and wounds on a 4+, rerolling any failed rolls to wound. The long-las has a range of 36&quot; and an AP value of 6, but on the roll of a 5+ to hit it ignores all cover and armour saves.</description>
+            </rule>
           </rules>
           <infoLinks>
             <infoLink id="9ad0-5b5d-d74a-2eca" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
@@ -6192,6 +6244,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca0e-1e3e-c696-d046" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="7193-d1b4-ab05-dc8a" name="Bionics" hidden="false" targetId="1973-df4c-dfdf-8af6" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -6200,6 +6255,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5469-5018-b7fb-9523" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="d783-8e36-ca02-137c" name="Carapace Armor" hidden="false" targetId="f1bf-49f9-4094-c2f9" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -6259,8 +6317,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c04a-5a1c-cbe5-965c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c04a-5a1c-cbe5-965c" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="04bf-813c-0dc2-6433" name="Master-crafted Weapons" hidden="false" targetId="bfa6-639a-4ff4-e20e" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -6287,6 +6348,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a957-e8a6-8675-0aed" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="0840-37b2-7885-865d" name="Refractor Field" hidden="false" targetId="b3db-ab15-ba69-979f" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -6295,6 +6359,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57d1-87fe-b8c6-bcc8" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="60b9-3fdd-fb5a-d99c" name="Scanner" hidden="false" targetId="c061-bcf5-ed69-d507" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
@@ -6303,6 +6370,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d10-0967-3d2f-b878" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="1500-e8f7-21ba-7b9f" name="Targeter" hidden="false" targetId="1c37-d83d-2234-7c18" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
           </costs>
@@ -6311,6 +6381,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3930-d539-5ee9-e9ca" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="e770-226e-36ae-b004" name="Trademark Item" hidden="false" targetId="0630-f0bd-6da5-e593" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -6379,6 +6452,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25d0-3e41-b984-c24e" type="max"/>
             <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e64-d748-6585-a0b7" type="min"/>
           </constraints>
+          <rules>
+            <rule id="b1ef-7124-5ca8-0875" name="Armoured Crew Compartment" hidden="false">
+              <description>The vehicle no longer counts as being open-topped.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -6399,6 +6477,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97bb-0994-bea7-7d05" type="max"/>
           </constraints>
+          <rules>
+            <rule id="3851-d00c-2ad4-6bca" name="Camo Netting" hidden="false">
+              <description>In scenarios using the Hidden Set-up rules, vehicles carrying camo netting can be set up hidden anywhere in their deployment zone.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
           </costs>
@@ -6422,6 +6505,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4aab-808b-2b65-658c" type="max"/>
           </constraints>
+          <rules>
+            <rule id="a732-fdd9-4211-b55c" name="Extra Armour" hidden="false">
+              <description>Count the &apos;Crew Stunned&apos; result as &apos;Crew Shaken&apos; instead</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -6471,6 +6559,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9079-8edf-2271-ab82" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="744e-c8e1-ea91-b7db" type="max"/>
           </constraints>
+          <rules>
+            <rule id="e0d6-6364-89fc-7d19" name="Improved Comms" hidden="false">
+              <description>The Imperial Guard player may re-roll one Reserves roll per turn, adn to re-roll the dice when checking to see if an enemy unit or obstacle is hit by a preliminary bombardment</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -6496,6 +6589,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26b2-9675-07ae-a7c9" type="max"/>
           </constraints>
+          <rules>
+            <rule id="9e55-e765-f0e1-20a4" name="Mine Sweeper" hidden="false">
+              <description>The vehicle may enter a minefield without being attack. Any minefield the vehicle moves across is cleared and removed from play</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -6543,7 +6641,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69a5-1bee-4691-a35f" type="max"/>
           </constraints>
           <rules>
-            <rule id="1d0a-fab2-b4bf-d647" name="Rough Terrain Modification" hidden="false"/>
+            <rule id="1d0a-fab2-b4bf-d647" name="Rough Terrain Modification" hidden="false">
+              <description>A vehicle that moves no more than 6&quot; may re-rolled failed Difficult Terrain tests</description>
+            </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
@@ -6553,6 +6653,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67ee-882c-4c56-1346" type="max"/>
           </constraints>
+          <rules>
+            <rule id="7258-c267-0c68-6ae0" name="Searchlight" hidden="false">
+              <description>During Night Fighting missions, one enemy unit spotted by the vehicle can be fired at by any other Imperial Guard units in range and with line of fire. However, the vehicle using the Searchlight will then be exposed and can be fired at by any enemy units that are in range and line of sight of it until the next turn.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
           </costs>
@@ -6573,6 +6678,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69bb-7334-e036-7dd4" type="max"/>
           </constraints>
+          <rules>
+            <rule id="1fa8-edec-196d-617f" name="Smoke Launchers" hidden="false">
+              <description>Once per game, after completing movement, a vehicle with smoke launchers may trigger them. The vehicle cannot fire and use its smoke launchers in the same turn. Any penetrating hits scored by the enemy in the next Shooting phase count as glancing hits.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
           </costs>
@@ -6596,6 +6706,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d10-75a5-cc16-eff7" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d2ce-0ead-a7fc-333e" name="Track Guards" hidden="false">
+              <description>The vehicle treats &apos;Immobilised&apos; results as &apos;Crew Stunned&apos; on a roll of a 4+. This does not combine with the extra armour ability.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -6622,6 +6737,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6327-c2f7-80f1-7e12" type="max"/>
           </constraints>
+          <rules>
+            <rule id="cbf3-cc7e-2807-27a7" name="Crew Escape Mechanism" hidden="false">
+              <description>If the vehicle is destroyed, D3 crew members survive. They form a small unit placed within 2&quot; of their vehicle. Each one is armed with a lasgun or laspistol and has the same stats as a basic Guardsman. They are considered to be below half strength for the purposes of morale checks, claiming table quarters, etc. They are worth zero victory point on their own, but their vehicle counts as being damaged for victory point purposes while the crew lives.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -6657,19 +6777,22 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="5093-098d-a6e2-9246" name="Standard Bearer" hidden="false"/>
-    <rule id="16d3-73ab-2527-3e33" name="Medi-pack" hidden="false"/>
+    <rule id="5093-098d-a6e2-9246" name="Standard Bearer" hidden="false">
+      <description>Any Imperial Guard units with a model within 12&quot; of the Standard Bearer may re-roll any failed Morale checks.</description>
+    </rule>
+    <rule id="16d3-73ab-2527-3e33" name="Medi-pack" hidden="false">
+      <description>Medi-packs allow a unit with a medic to ignore the first failed saving throw it rolls in every turn. The medi-pack may not be used on any model which suffers instant death or that has been hit by a close combat weapon that allows no Amrour save. It may not be used if the medic is in base contact with an enemy model.</description>
+    </rule>
     <rule id="fcaa-7305-6950-d142" name="Comm-Link" hidden="false"/>
     <rule id="bfa6-639a-4ff4-e20e" name="Master-crafted Weapons" hidden="false">
       <description>The bearer may re-roll one failed to hit roll per turn.</description>
     </rule>
-    <rule id="c55f-50a3-63ba-d585" name="Carapace Armor" hidden="false">
-      <description>4+ Armour Save</description>
-    </rule>
     <rule id="0630-f0bd-6da5-e593" name="Trademark Item" hidden="false">
       <description>A unit led by a person who carries a trademark item may re-roll any failed Morale or Pinning checks it suffers. However, if the character is slain, the unit must pass a Morale test to avoid falling back.</description>
     </rule>
-    <rule id="c061-bcf5-ed69-d507" name="Scanner" hidden="false"/>
+    <rule id="c061-bcf5-ed69-d507" name="Scanner" hidden="false">
+      <description>If enemy infiltrators set up with 4D6&quot; of a model with a surveyor then the model is allowed to take a &apos;free&apos; shot at them. If the model is part of a unit, the whole unit may shoot. These shots are taken before the battle begins and may cause the infiltrators to fall back.</description>
+    </rule>
     <rule id="468c-bd45-5505-589a" name="Immobile" hidden="false">
       <description>Once deployed, the model may not be moved unless towed.</description>
     </rule>
@@ -6686,11 +6809,33 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <description>During Night Fighting missions, one enemy unit spotted by the vehicle can be fired at by any other Imperial Guard units in range and with line of fire. However, the vehicle using the Searchlight will then be exposed and can be fired at by any enemy units that are in range and line of sight of it until the next turn.</description>
     </rule>
     <rule id="11ff-f612-addd-577e" name="Leadership" hidden="false"/>
-    <rule id="7023-343a-0f96-bd4e" name="Rough Terrain Modification" hidden="false"/>
-    <rule id="647d-f731-5d52-f8e4" name="Camo Cloak" hidden="false"/>
-    <rule id="36d3-c20f-b78f-7bf9" name="Tanith Knife" hidden="false"/>
-    <rule id="ea86-cee4-a47b-c214" name="Absolute Direction" hidden="false"/>
-    <rule id="bcc1-8c37-a9c9-b60b" name="Holy Relic" hidden="false"/>
+    <rule id="7023-343a-0f96-bd4e" name="Rough Terrain Modification" hidden="false">
+      <description>A vehicle that moves no more than 6&quot; may re-rolled failed Difficult Terrain tests</description>
+    </rule>
+    <rule id="647d-f731-5d52-f8e4" name="Camo Cloak" hidden="false">
+      <description>Any Tanith squad adds +1 to any cover saves they are allowed. In addition, opponents roll 2D6x2 instead of 2D6x3 when attempting to spot Tanith troops in a Night Fight.</description>
+    </rule>
+    <rule id="36d3-c20f-b78f-7bf9" name="Tanith Knife" hidden="false">
+      <description>A unit led by a person who carries a trademark item may re-roll any failed Morale or Pinning checks it suffers. However, if the character is slain, the unit must pass a Morale test to avoid falling back.</description>
+    </rule>
+    <rule id="ea86-cee4-a47b-c214" name="Absolute Direction" hidden="false">
+      <description>All Tanith units may re-roll failed Reserve rolls. If a Tanith unit is affected by a result on the Alaitoc Ranger Disruption table from Codex: Craftworld Eldar, roll a dice, the result is ignored on the roll of a 4+.</description>
+    </rule>
+    <rule id="bcc1-8c37-a9c9-b60b" name="Holy Relic" hidden="false">
+      <description>Once per battle. On any turn the model with the relic does not move they may reveal it. All friendly models that are within 2D6&quot; gain +1 Attacks for the rest of that turn. The relic may be revealed in the opposing player&apos;s turn assuming the model with the relic did not move in the previous turn.</description>
+    </rule>
+    <rule id="1973-df4c-dfdf-8af6" name="Bionics" hidden="false">
+      <description>When a model with bionics is killed, instead place it on its side. Roll a D6 at the start of the next turn: on a roll of 6 the model stands back up with 1 wound, but on any other roll it is removed as a casualty.</description>
+    </rule>
+    <rule id="f1bf-49f9-4094-c2f9" name="Carapace Armor" hidden="false">
+      <description>4+ Armour Save</description>
+    </rule>
+    <rule id="b3db-ab15-ba69-979f" name="Refractor Field" hidden="false">
+      <description>Gain a 5+ invulnerable save</description>
+    </rule>
+    <rule id="1c37-d83d-2234-7c18" name="Targeter" hidden="false">
+      <description>Models equipped with a targeter are allowed to pre-measure the range to a target before they decide who to shoot at in the Shooting phase. This ability must be used after all Guess ranged weapons have been used this turn, otherwise those weapons cannot fire this turn.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="c623-489e-d7a0-0a93" name="Captain" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -7262,10 +7407,10 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     </profile>
     <profile id="08d6-df64-1b2d-c479" name="Ogryn Close Combat Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User +1</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
