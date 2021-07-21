@@ -72,9 +72,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bee-f105-7aee-6e8e" type="max"/>
-      </constraints>
     </entryLink>
     <entryLink id="ee35-1091-5614-ec54" name="Harlequin Troupe" hidden="false" collective="false" import="true" targetId="45a4-9f9a-4faa-5117" type="selectionEntry">
       <modifiers>
@@ -89,9 +86,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91e7-fdf2-153f-b642" type="max"/>
-      </constraints>
     </entryLink>
     <entryLink id="24aa-ac83-f1b6-834b" name="Harlequin Jetbike Troupe" hidden="false" collective="false" import="true" targetId="6d7f-032e-0d77-09c3" type="selectionEntry">
       <modifiers>
@@ -106,9 +100,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4528-ab73-fb16-18ab" type="max"/>
-      </constraints>
     </entryLink>
     <entryLink id="76c9-8457-783b-41c2" name="Venom" hidden="false" collective="false" import="true" targetId="94dd-db05-ee64-3011" type="selectionEntry">
       <modifiers>
@@ -123,9 +114,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="096d-2790-6e69-60ba" type="max"/>
-      </constraints>
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
@@ -204,6 +192,9 @@
                 <infoLink id="1856-921f-c38f-fca0" name="Death Jester" hidden="false" targetId="502d-aa0f-9e19-61c9" type="profile"/>
                 <infoLink id="6362-4537-8f7d-60a0" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
               </infoLinks>
+              <categoryLinks>
+                <categoryLink id="789a-f2d1-8035-6424" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+              </categoryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup id="e4ac-c5e0-b7d5-f676" name="Ranged Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="6783-3526-3a63-e066">
                   <constraints>
@@ -410,7 +401,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2040-bb1a-7603-836b" name="Harlequins" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="2040-bb1a-7603-836b" name="Harlequins" hidden="false" collective="false" import="true" defaultSelectionEntryId="9df7-43d2-58ae-e711">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca02-b7a0-750c-3a5f" type="min"/>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="565c-21d1-29f1-41ea" type="max"/>
@@ -669,6 +660,13 @@
       </constraints>
       <selectionEntries>
         <selectionEntry id="3887-87f6-d69d-e796" name="Bio-explosive Ammunition" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="caa7-c987-ce5a-fa3e" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b5c-c9aa-20b0-f13c" type="max"/>
           </constraints>
@@ -849,14 +847,24 @@
     <rule id="0138-26c1-d599-8516" name="Spiritless" hidden="false">
       <description>The Solitaire does not have to take Leadership tests of any kind. In addition, any attack which relies on the Solitaire&apos;s Leadership value have no effect and automatically fail.</description>
     </rule>
-    <rule id="1576-6f03-d631-dfe4" name="Phase Field" hidden="false"/>
+    <rule id="1576-6f03-d631-dfe4" name="Phase Field" hidden="false">
+      <description>A phase field is used instead of moving normally. Nominate a direction for the model to move in. The model moves 3D6&quot; in that direction, ignoring any intervening terrain or models. A model using a phase field may not use fleet of foot on the same turn, but may shoot and assault as normal.</description>
+    </rule>
     <rule id="d5e9-faab-8f61-5730" name="Shrieker Cannon" hidden="false">
       <description>Targets slain by the shrieker cannon explode. Place a blast marker centered on the exploding model and roll to hit other models under the template using the rules for blast weapons. The attacks have a Strength equal to the exploding model&apos;s Toughness, and an AP value equal to the victim&apos;s saving throw. Any squad which suffers a casualty from a shriekr cannon must pass a morale check at the end of the shooting phase. Shrieker cannons count as Strength 5 against vehicles.</description>
     </rule>
-    <rule id="97ee-93d9-671e-5234" name="Bio-explosive Ammunition" hidden="false"/>
-    <rule id="0231-7309-f9dc-d351" name="D-field" hidden="false"/>
-    <rule id="3ef6-c0ff-5341-16a7" name="Dreadmask" hidden="false"/>
-    <rule id="e553-eaa2-1761-f250" name="Rictus Mask" hidden="false"/>
+    <rule id="97ee-93d9-671e-5234" name="Bio-explosive Ammunition" hidden="false">
+      <description>Bio-explosive ammo may only be used with a shuriken pistol. The weapon now always wounds on a 2+ and targets slain by the bio-explosive ammo explode. Place a blast marker centered on the exploding model and roll to hit other models under the template using the rules for blast weapons. The attacks have a Strength equal to the exploding model&apos;s Toughness, and an AP value equal to the victim&apos;s saving throw. Any squad which suffers a casualty from a shriekr cannon must pass a morale check at the end of the shooting phase.</description>
+    </rule>
+    <rule id="0231-7309-f9dc-d351" name="D-field" hidden="false">
+      <description>An enemy attacking a model with a Domino Field only hits on rols of 6. If the enemy has a fixed to hit roll that is not affected by WS then roll a D6. On a roll of 1-3 they are affected by the D-field and need 6&apos;s, otherwise they roll as normal.</description>
+    </rule>
+    <rule id="3ef6-c0ff-5341-16a7" name="Dreadmask" hidden="false">
+      <description>Any unit losing an assault against a Harlequin with a Dread Mask must take their morale check on 1D6 more than usual.</description>
+    </rule>
+    <rule id="e553-eaa2-1761-f250" name="Rictus Mask" hidden="false">
+      <description>Any enemy unit with a model with 6&quot; and line of sight of the model with the Rictus mask must take a Leadership test at the start of their turn. If the test if failed the unit may do nothing that turn. If the unit is fighting in close combat then they continue to fight as normal. Models immune to Morale checks are unaffected by a Rictus Mask.</description>
+    </rule>
     <rule id="1743-c535-eccc-b6c7" name="Blitz Attack" hidden="false">
       <description>A Solitaire can assault 12&quot;. Instead of gaining +1 Attack for charging into assault, a Solitaire gains +1 Attack for each inch of unused charge distance up to a maximum of +6.</description>
     </rule>
@@ -1031,12 +1039,13 @@
     </profile>
     <profile id="4e4d-4996-5a6f-afbc" name="Hallucinogen Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">In the turn the Harlequins charged into combat, when working out if one side outnumbers the other after an assault, the ratio of models is shifted one &quot;grade&quot; in favor of the Harlequins.
+These grenades do not work against Daemons, Wraithlords, Wraithguard, Dark Eldar Talos and Warp Beasts, Thousand Sons, Necrons, or Vehicles. Against Tyranids the Tyranid unit ignores the grenade on a D6 roll of 1.</characteristic>
       </characteristics>
     </profile>
     <profile id="d753-c022-6f20-41a9" name="Tanglefoot Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">In the turn the Harlequines charge into combat, if the unit attacked fails it morale check its fall back move is D6 less than normal. If the Harlequins break then their enemy may only consolidate. In the event of a drawn combat, then the unit fighting the Harlequins may not move any unengaged models into combat.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
