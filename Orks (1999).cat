@@ -2,6 +2,7 @@
 <catalogue id="a32b-2b78-118a-10a5" name="Orks (1999)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7ae7-ec32-6af0-2290" name="Kult of Speed" hidden="false"/>
+    <categoryEntry id="838f-024c-52e0-08f2" name="Deth Kopta" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="f8fa-6b86-2ccb-d211" name="Kommandos" hidden="false" collective="false" import="true" targetId="94c0-0e84-8e2c-99fb" type="selectionEntry">
@@ -241,26 +242,43 @@
         <categoryLink id="68f5-d0fc-d0ee-9c7e" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false"/>
         <categoryLink id="33d6-8315-7b78-f08c" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink id="205a-ebd7-ecff-bd79" name="Ork Armoury" hidden="false" collective="false" import="true" targetId="3fb8-65fc-3904-2e54" type="selectionEntryGroup"/>
-        <entryLink id="7395-cc19-145d-1575" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="565f-e97b-5fe5-f1a3" name="Transport" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="ec53-ab64-c7a4-d1a9" value="0.0">
-              <comment>I&apos;m choose to ignore the Grots and Squiqs rule here b/c it doesn&apos;t stop the Nob in the Trukk Boyz from going above 10 models.</comment>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4104-b3d8-d273-af9e" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ece-9eb9-c164-cf78" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" field="552e-9106-e888-2b5b" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="instanceOf"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec53-ab64-c7a4-d1a9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b72-4ed9-a0db-a91c" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="552e-9106-e888-2b5b" type="min"/>
           </constraints>
-        </entryLink>
+          <entryLinks>
+            <entryLink id="41c2-2469-15e1-6582" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ece-9eb9-c164-cf78" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="7e02-785e-1242-966d" name="Battlewagon" hidden="false" collective="false" import="true" targetId="edb7-4d2e-35fd-21b2" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="205a-ebd7-ecff-bd79" name="Ork Armoury" hidden="false" collective="false" import="true" targetId="3fb8-65fc-3904-2e54" type="selectionEntryGroup"/>
         <entryLink id="4104-b3d8-d273-af9e" name="Warboss&apos;s Bodyguard" hidden="false" collective="false" import="true" targetId="3ece-9eb9-c164-cf78" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -340,6 +358,38 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="075e-56e5-dd58-6f8b" name="Transport" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="4c39-eca6-380f-b60e" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e15b-93f9-d670-fdc6" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c39-eca6-380f-b60e" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="fd61-c1ec-6862-68ee" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe88-d057-4bb5-33ec" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="bfb6-3363-bff7-f7e1" name="Battlewagon" hidden="false" collective="false" import="true" targetId="edb7-4d2e-35fd-21b2" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="dc94-a6f5-faab-ee4b" name="Ork Armoury" hidden="false" collective="false" import="true" targetId="3fb8-65fc-3904-2e54" type="selectionEntryGroup"/>
       </entryLinks>
@@ -692,7 +742,7 @@
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf96-089f-fcd9-601b" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="676a-768d-d701-47d2" name="&apos;Ard Boy w/ Shoota" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="676a-768d-d701-47d2" name="&apos;Ard Boy w/ Shoota" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="c0a7-f01d-3457-7a4d" name="&apos;Ard Boyz" hidden="false" targetId="c462-62fd-a9a0-36b2" type="profile"/>
                 <infoLink id="77c4-4479-cff9-2dfc" name="Shoota" hidden="false" targetId="894f-1760-04e4-77c4" type="profile"/>
@@ -701,7 +751,7 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f540-97d8-d8e0-ea28" name="&apos;Ard Boy w/ Slugga and Choppa" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f540-97d8-d8e0-ea28" name="&apos;Ard Boy w/ Slugga and Choppa" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="20c1-edeb-668c-9654" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
                 <infoLink id="299d-c414-dd92-dcbf" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
@@ -730,6 +780,36 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="28.0"/>
               </costs>
             </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3323-a640-3ea9-4fea" name="Transport" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="b476-e56f-92dd-b546" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d423-7160-6635-97da" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b476-e56f-92dd-b546" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c75a-6dcd-ca49-4b05" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="cab4-80d8-f605-5703" name="Battlewagon" hidden="false" collective="false" import="true" targetId="edb7-4d2e-35fd-21b2" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -809,7 +889,7 @@
             <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="223d-931b-1544-59c6" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="55b6-f591-8930-51db" name="Skarboy w/ Shoota" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="55b6-f591-8930-51db" name="Skarboy w/ Shoota" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="14bd-827c-96b3-93d4" name="Skarboyz" hidden="false" targetId="0dca-d410-85db-8f66" type="profile"/>
                 <infoLink id="ae39-0c25-0f27-0ca0" name="Shoota" hidden="false" targetId="894f-1760-04e4-77c4" type="profile"/>
@@ -818,7 +898,7 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8dce-d230-8988-bcfd" name="Skarboy w/ Slugga and Choppa" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="8dce-d230-8988-bcfd" name="Skarboy w/ Slugga and Choppa" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="b869-3458-01d8-ce9c" name="Choppa" hidden="false" targetId="3d19-a53f-85b3-6cf3" type="profile"/>
                 <infoLink id="d716-8a65-d20f-2651" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
@@ -843,6 +923,36 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
               </costs>
             </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="098f-b3c8-67e7-d069" name="Transport" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="8e18-6b91-d2ad-1505" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b55b-c019-f3e5-cf45" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e18-6b91-d2ad-1505" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3f87-b20d-866f-2312" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="bca2-df47-bce9-42dd" name="Battlewagon" hidden="false" collective="false" import="true" targetId="edb7-4d2e-35fd-21b2" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1275,6 +1385,24 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
           </costs>
         </entryLink>
+        <entryLink id="4309-cce5-ba9f-5e50" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="fcae-6862-1432-a7ed" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="666e-71f1-2af4-ff68" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcae-6862-1432-a7ed" type="min"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -1300,7 +1428,7 @@
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9a6-5d88-c700-f62f" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="f89c-c9c2-bae0-f169" name="Tankbusta" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f89c-c9c2-bae0-f169" name="Tankbusta" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="6b8b-f7bd-641f-dff6" name="Tankbusta Bombz" hidden="false" targetId="d652-3dc5-266e-637c" type="profile"/>
                 <infoLink id="0aaf-3772-bd05-74be" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
@@ -1340,6 +1468,24 @@
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="7.0"/>
           </costs>
+        </entryLink>
+        <entryLink id="7153-aa9d-9001-d79a" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="7f36-32ef-51d2-e30a" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a91-79dc-d80c-9375" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f36-32ef-51d2-e30a" type="min"/>
+          </constraints>
         </entryLink>
       </entryLinks>
       <costs>
@@ -3979,7 +4125,7 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f8fb-7699-1ead-bc0d" name="Nobz" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="f8fb-7699-1ead-bc0d" name="Nobz" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
         <infoLink id="dabc-e489-e08e-0113" name="Ork Mob Rule!" hidden="false" targetId="1586-dbe5-3b2e-7590" type="rule"/>
         <infoLink id="aa65-b86c-7638-9dd1" name="The Power of the WAAAGH!" hidden="false" targetId="7bb4-34ca-51f3-bb8c" type="rule"/>
@@ -4704,9 +4850,15 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="034b-d1ab-39cf-4354" value="1.0">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95dc-839d-8f54-f5d9" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="034b-d1ab-39cf-4354" type="min"/>
           </constraints>
           <rules>
             <rule id="2f97-6fb2-4f85-64f4" name="Grot Riggers" hidden="false">
@@ -4890,6 +5042,36 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
               <description>An Ork vehicle with a Big Grabba make attack an enemy vehicle in close combat. The Ork vehicle must move into contact with the target vehicle during its movement phase but may not attack if it moved more than 12&quot;.
 The Ork vehicle may shoot in the shooting phase as normal and then resolves an attack in the assault phase. The vehicle has one attack for each upgrade listed (Big Grabber/Wrecker Ball/Reinforced Ram/Boarding Plank). Attacks hit on a 4+ regardless of the target&apos;s speed and are resolved with a Strength of 6. Walkers, skimmers, infantry and any other models that have a WS characteristic may not be attacked by these weapons.</description>
             </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dfb0-e6ca-d747-dc06" name="Armoured Top" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule id="53c9-ed36-b6a5-9f05" name="Armoured Top" hidden="false"/>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cd9f-065e-7b8c-21dd" name="Force Field" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule id="9ec7-94a7-47c6-683b" name="Force Field" hidden="false"/>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
@@ -5226,6 +5408,13 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
       </constraints>
       <selectionEntries>
         <selectionEntry id="72f2-3d0e-384a-dd84" name="Ammo Runt" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0363-12c2-26ca-53e5" type="max"/>
           </constraints>
@@ -5255,6 +5444,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="8a6b-1dd8-403c-8c50" name="Attack Squig" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f45-eecd-1b1a-ea22" type="max"/>
           </constraints>
@@ -5289,6 +5485,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c04-9a31-5b14-c6f9" type="max"/>
@@ -5309,6 +5510,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a355-38c2-4be0-21f0" type="max"/>
@@ -5327,6 +5533,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5354,6 +5565,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8d1-61ca-f82b-9b17" type="max"/>
@@ -5368,6 +5584,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="8af0-0343-cccb-8c71" name="Cybork Body" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29f5-5928-f3bf-5093" type="max"/>
           </constraints>
@@ -5395,6 +5618,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0aec-beb4-afe9-ca28" type="max"/>
@@ -5415,6 +5643,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34e3-3bcf-51a0-7ef2" type="max"/>
@@ -5431,6 +5664,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5455,6 +5693,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -5496,6 +5739,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b86-ed95-ff93-004a" type="max"/>
@@ -5531,6 +5779,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0222-dd5a-9430-079a" type="max"/>
@@ -5543,6 +5796,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="0955-398d-796b-1bc8" name="Kustom Job: More Dakka" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4930-f903-f1a6-ce60" type="max"/>
           </constraints>
@@ -5554,6 +5814,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="417e-4574-4452-167d" name="Kustom Job: Blasta" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f963-fc5b-f232-a5e4" type="max"/>
           </constraints>
@@ -5565,6 +5832,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="5230-36dc-cee3-c657" name="Kustom Job: Shootier" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1449-b81c-5d52-4274" type="max"/>
           </constraints>
@@ -5599,6 +5873,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c6a-7f24-4946-085e" type="max"/>
@@ -5621,6 +5900,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="notEqualTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5648,6 +5932,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e61c-ef10-b8df-39a5" type="max"/>
@@ -5666,6 +5955,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b1a1-9b18-ccb8-4302" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5703,6 +5997,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="notEqualTo"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d32-356b-73c7-12b5" type="max"/>
@@ -5728,6 +6027,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41ea-4c02-8e0f-1322" type="max"/>
@@ -5748,6 +6052,11 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1518-7a1b-daac-0172" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a8a-7456-8bf9-aea8" type="max"/>
@@ -5762,6 +6071,13 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </costs>
         </selectionEntry>
         <selectionEntry id="18ce-1821-0982-20b3" name="Waaagh! Banner" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="838f-024c-52e0-08f2" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2d83-1003-8f92-21e7" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6228-12b5-5d73-67f5" type="max"/>
