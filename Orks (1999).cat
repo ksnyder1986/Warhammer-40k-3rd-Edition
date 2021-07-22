@@ -341,11 +341,6 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9184-f7b3-8516-5519" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="c0d3-1eda-c93a-47dc" name="Wartrukk" hidden="false" collective="false" import="true" targetId="54fe-3f68-d142-362b" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2558-e36c-35dd-9ada" type="max"/>
-              </constraints>
-            </entryLink>
             <entryLink id="278f-8081-ebfd-9ed5" name="Mekboyz" hidden="false" collective="false" import="true" targetId="b4e1-5f13-9303-52ad" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3110-1a31-8189-aa80" type="max"/>
@@ -366,11 +361,6 @@
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="instanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e15b-93f9-d670-fdc6" type="max"/>
@@ -386,7 +376,15 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="bfb6-3363-bff7-f7e1" name="Battlewagon" hidden="false" collective="false" import="true" targetId="edb7-4d2e-35fd-21b2" type="selectionEntry"/>
+            <entryLink id="bfb6-3363-bff7-f7e1" name="Battlewagon" hidden="false" collective="false" import="true" targetId="edb7-4d2e-35fd-21b2" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ae7-ec32-6af0-2290" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
