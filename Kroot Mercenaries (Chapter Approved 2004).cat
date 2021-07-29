@@ -32,7 +32,12 @@
     </forceEntry>
   </forceEntries>
   <entryLinks>
-    <entryLink id="2508-e0e8-633e-0e50" name="Signature Evolutionary Adaptations" hidden="false" collective="false" import="true" targetId="ccfe-d669-b1b0-fb8e" type="selectionEntry"/>
+    <entryLink id="2508-e0e8-633e-0e50" name="Signature Evolutionary Adaptations" hidden="false" collective="false" import="true" targetId="ccfe-d669-b1b0-fb8e" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e14-e294-6468-5b99" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b50b-7cc6-d16f-fefd" type="min"/>
+      </constraints>
+    </entryLink>
     <entryLink id="69a3-9f26-86f1-2ab7" name="Master Shaper" hidden="false" collective="false" import="true" targetId="ce11-fef2-381f-7939" type="selectionEntry">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89d0-8601-30fa-6bc8" type="min"/>
@@ -50,6 +55,11 @@
         <categoryLink id="2f38-bbff-1b95-2fa1" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="82ed-8e2c-b48d-3847" name="Headhunter Kindred" hidden="false" collective="false" import="true" targetId="0875-1550-d4bd-1b45" type="selectionEntry"/>
+    <entryLink id="4d07-d56e-1e79-256d" name="Stalker Kindred" hidden="false" collective="false" import="true" targetId="7908-d29b-de7e-16a5" type="selectionEntry"/>
+    <entryLink id="b64f-e1de-940d-ddf8" name="Carnivore Kindred" hidden="false" collective="false" import="true" targetId="8574-d0de-e451-c440" type="selectionEntry"/>
+    <entryLink id="a552-72f9-9899-439a" name="Vulture Kindred" hidden="false" collective="false" import="true" targetId="b69b-5587-54ae-d267" type="selectionEntry"/>
+    <entryLink id="79c5-7fd2-1e26-6c20" name="Kroot Hound Pack" hidden="false" collective="false" import="true" targetId="bb3c-0d6a-37e8-2131" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="ce11-fef2-381f-7939" name="Master Shaper" hidden="false" collective="false" import="true" type="model">
@@ -242,6 +252,9 @@
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ce-8c48-5c1f-36ad" type="min"/>
                 <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b975-4f7b-8273-7b69" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="5449-09af-cb07-e4d6" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
               </costs>
@@ -263,6 +276,570 @@
             <selectionEntry id="f76a-69dd-7a27-dd24" name="Kroot Hound" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="c0aa-be3f-535e-6d4e" name="Kroot Hound" hidden="false" targetId="050b-4cdd-f25e-6a9c" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="0875-1550-d4bd-1b45" name="Headhunter Kindred" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="d64e-a011-30d1-1d3e" name="Poison Adaptation" hidden="false"/>
+      </rules>
+      <selectionEntries>
+        <selectionEntry id="965a-1ea0-5f0e-46e5" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fcf-ed61-c04d-0288" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="40ce-6382-b3fc-13c8" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="30bf-9f97-0521-46a3" name="Hyperactive Nymune Organ Adaptation" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89c2-35a8-50d6-4cef" type="max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="23fa-a0a0-e340-59f5" name="Kroot" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="881c-aa31-4992-245a" name="Kroot" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8acf-de2d-8ef1-0ba1" type="min"/>
+                <constraint field="selections" scope="parent" value="19.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4eb8-6e12-c6ba-bd66" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ffd9-afdf-2138-892b" name="Kroot" hidden="false" targetId="ec7e-b563-6021-05f5" type="profile"/>
+                <infoLink id="f245-4f90-c43e-5768" name="Kroot Rifle" hidden="false" targetId="a107-96c8-c043-e9d7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8275-acf0-0891-be6a" name="Shaper" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7064-2536-5152-0682" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a2a-bc38-e714-653d" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="5367-2696-0eed-4bcc" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="46e6-2c93-87d4-3818" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true" targetId="c031-b7db-2556-bc48" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="31.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="7908-d29b-de7e-16a5" name="Stalker Kindred" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="8561-c731-bdd6-09e2" name="Ambush" hidden="false"/>
+      </rules>
+      <selectionEntries>
+        <selectionEntry id="7e23-0f96-b749-79f3" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="868b-f990-9126-1bc0" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="311a-d3e1-f86d-4c70" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1004-69d2-ecb7-f4a3" name="Kroot" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="cbf2-4b68-b96f-55b3" name="Kroot" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3798-5077-763b-3c28" type="min"/>
+                <constraint field="selections" scope="parent" value="19.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93ab-a4a8-b27d-577b" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="f933-6f66-c901-aee7" name="Kroot" hidden="false" targetId="ec7e-b563-6021-05f5" type="profile"/>
+                <infoLink id="fc1d-c7da-9e7a-e879" name="Kroot Rifle" hidden="false" targetId="a107-96c8-c043-e9d7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ef90-1367-629f-f403" name="Shaper" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80ad-48e7-7487-2a73" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f40d-4f3f-8082-9a9a" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c086-5535-d415-cf29" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="cc06-bc3f-ab6f-9dfc" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true" targetId="c031-b7db-2556-bc48" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="32.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dafb-17f6-020b-2b2f" name="Kroot Hound" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1809-ecfb-cafb-9037" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="240b-e8e3-8da8-dd23" name="Kroot Hound" hidden="false" targetId="050b-4cdd-f25e-6a9c" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="8574-d0de-e451-c440" name="Carnivore Kindred" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="aae2-f40b-6810-2fb2" name="Kroot" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="9821-1a59-8492-c2c5" name="Kroot" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbcf-42fc-096d-6b0d" type="min"/>
+                <constraint field="selections" scope="parent" value="19.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bb3-d04e-5a7a-137a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a2ca-b06e-3697-a713" name="Kroot" hidden="false" targetId="ec7e-b563-6021-05f5" type="profile"/>
+                <infoLink id="e24b-8cab-8c43-c539" name="Kroot Rifle" hidden="false" targetId="a107-96c8-c043-e9d7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e06c-7842-5662-2e59" name="Shaper" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21eb-55d1-4197-ceb1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc5f-4307-7e66-8f4a" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8c10-b0ce-4ec8-080f" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="96a1-faa6-bace-8755" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true" targetId="c031-b7db-2556-bc48" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="29.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="b69b-5587-54ae-d267" name="Vulture Kindred" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="fe02-3017-f64b-6f5b" name="Winged Adaptation" hidden="false"/>
+      </rules>
+      <selectionEntries>
+        <selectionEntry id="5e57-762b-029c-fe01" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1014-e09a-3d25-ca6a" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8991-2479-ea35-d123" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1de3-f731-ea88-d51d" name="Kroot" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="587d-38e7-97d0-ad20" name="Kroot" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84a1-d6dd-42fc-88fd" type="min"/>
+                <constraint field="selections" scope="parent" value="19.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2a5-35d6-e4b9-adae" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1700-0c7c-d19f-b6b9" name="Kroot" hidden="false" targetId="ec7e-b563-6021-05f5" type="profile"/>
+                <infoLink id="c666-3c68-c798-e749" name="Kroot Rifle" hidden="false" targetId="a107-96c8-c043-e9d7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9408-8055-2443-4b2a" name="Shaper" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69b7-493a-843e-c7e7" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dc8-7178-28d2-d414" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="938f-d428-1634-0065" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="0ec3-a0b5-98cc-5f0b" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true" targetId="c031-b7db-2556-bc48" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="33.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="bb3c-0d6a-37e8-2131" name="Kroot Hound Pack" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="ca8b-b266-8e58-8fd2" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df33-09d9-a855-aadd" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8af5-3cb3-6337-5d6b" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="feee-b9b6-0a6e-4cb3" name="Hyperactive Nymune Organ Adaptation" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb0a-474c-35fc-d2ab" type="max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="bcf1-528a-1074-8f05" name="Kroot" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="9833-4306-e3af-bd71" name="Kroot" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aca5-b462-7c26-0e48" type="min"/>
+                <constraint field="selections" scope="parent" value="19.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecc8-6107-ae3f-bb2d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="67ca-79b8-b672-1cd6" name="Kroot" hidden="false" targetId="ec7e-b563-6021-05f5" type="profile"/>
+                <infoLink id="4f82-e03a-965b-53c8" name="Kroot Rifle" hidden="false" targetId="a107-96c8-c043-e9d7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="27d2-86e5-9698-125c" name="Shaper" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22f0-a98d-e8cb-49ee" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0277-946f-54ee-180e" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="5a54-bc34-27f2-df5c" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="ae7f-8f73-3054-c5f5" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true" targetId="c031-b7db-2556-bc48" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="29.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a18f-83c7-2b77-1fcf" name="Kroot Hound" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="573b-ec77-b468-cba4" type="max"/>
+                <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="589f-0547-bfd5-e420" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="b6bc-dfba-54db-899e" name="Kroot Hound" hidden="false" targetId="050b-4cdd-f25e-6a9c" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
