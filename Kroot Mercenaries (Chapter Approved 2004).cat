@@ -55,11 +55,54 @@
         <categoryLink id="2f38-bbff-1b95-2fa1" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="82ed-8e2c-b48d-3847" name="Headhunter Kindred" hidden="false" collective="false" import="true" targetId="0875-1550-d4bd-1b45" type="selectionEntry"/>
-    <entryLink id="4d07-d56e-1e79-256d" name="Stalker Kindred" hidden="false" collective="false" import="true" targetId="7908-d29b-de7e-16a5" type="selectionEntry"/>
-    <entryLink id="b64f-e1de-940d-ddf8" name="Carnivore Kindred" hidden="false" collective="false" import="true" targetId="8574-d0de-e451-c440" type="selectionEntry"/>
-    <entryLink id="a552-72f9-9899-439a" name="Vulture Kindred" hidden="false" collective="false" import="true" targetId="b69b-5587-54ae-d267" type="selectionEntry"/>
-    <entryLink id="79c5-7fd2-1e26-6c20" name="Kroot Hound Pack" hidden="false" collective="false" import="true" targetId="bb3c-0d6a-37e8-2131" type="selectionEntry"/>
+    <entryLink id="82ed-8e2c-b48d-3847" name="Headhunter Kindred" hidden="false" collective="false" import="true" targetId="0875-1550-d4bd-1b45" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2da9-e38d-9ddb-a051" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4d07-d56e-1e79-256d" name="Stalker Kindred" hidden="false" collective="false" import="true" targetId="7908-d29b-de7e-16a5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c1d7-cc48-0155-10eb" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="b64f-e1de-940d-ddf8" name="Carnivore Kindred" hidden="false" collective="false" import="true" targetId="8574-d0de-e451-c440" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="3771-7ec0-ea09-362a" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a552-72f9-9899-439a" name="Vulture Kindred" hidden="false" collective="false" import="true" targetId="b69b-5587-54ae-d267" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="80ba-df20-361d-05fe" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="79c5-7fd2-1e26-6c20" name="Kroot Hound Pack" hidden="false" collective="false" import="true" targetId="bb3c-0d6a-37e8-2131" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2419-62ae-1f4e-8c72" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="6b75-57a7-6ab4-61b4" name="Hunter Kindred" hidden="false" collective="false" import="true" targetId="ecc3-d7a1-eb3c-4f4f" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a0-c86b-1f10-3636" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="25fa-cffb-de2c-2b3c" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="61b6-d8d4-fb4d-ba67" name="Tracker Kindred" hidden="false" collective="false" import="true" targetId="5bea-5105-6368-8ea1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="45b1-4d07-846d-a44a" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="430d-0e80-7b54-d42d" name="Krootox Herd" hidden="false" collective="false" import="true" targetId="18f4-3ef8-85a5-29dd" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="1cf5-3c6f-a368-c185" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3c8c-5819-d8f2-ae44" name="Punji Traps" hidden="false" collective="false" import="true" targetId="4aa4-c09d-22b4-b749" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="61e8-7349-ba7a-c889" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="ce11-fef2-381f-7939" name="Master Shaper" hidden="false" collective="false" import="true" type="model">
@@ -91,10 +134,19 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <rules>
+        <rule id="ae39-e79f-f309-000e" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+        <rule id="fd1c-30c1-0d9c-6b74" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="b9f4-abc7-775c-279e" name="Master Shaper" hidden="false" targetId="efab-1ec1-c497-556a" type="profile"/>
         <infoLink id="f5c2-02e4-85a1-9b8d" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
         <infoLink id="7dbb-1d8b-3b0a-c796" name="Kroot Rifle" hidden="false" targetId="a107-96c8-c043-e9d7" type="profile"/>
+        <infoLink id="d5e2-7a82-6706-9e18" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="750c-aef3-8a57-75d2" name="Hyperactive Nymune Organ Adaptation" hidden="false" collective="false" import="true" type="upgrade">
@@ -175,6 +227,17 @@
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="e896-b7d7-cee0-a2db" name="Shaper Council" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="6957-72b9-a718-2cdb" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+        <rule id="765e-2163-2731-3792" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="cb5f-e8ba-5d4a-dbb5" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="f3a4-d6c5-9083-8b98" name="Hyperactive Nymune Organ Adaptation" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -288,7 +351,16 @@
     <selectionEntry id="0875-1550-d4bd-1b45" name="Headhunter Kindred" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="d64e-a011-30d1-1d3e" name="Poison Adaptation" hidden="false"/>
+        <rule id="2d23-0133-1918-c4ee" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+        <rule id="c867-2e62-7412-0a34" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
       </rules>
+      <infoLinks>
+        <infoLink id="f0be-8d21-c752-95a5" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="965a-1ea0-5f0e-46e5" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -408,7 +480,16 @@
     <selectionEntry id="7908-d29b-de7e-16a5" name="Stalker Kindred" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="8561-c731-bdd6-09e2" name="Ambush" hidden="false"/>
+        <rule id="dce3-0d18-1b86-c4ee" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+        <rule id="3772-9c71-2319-10ba" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
       </rules>
+      <infoLinks>
+        <infoLink id="c87b-9297-a75b-522a" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="7e23-0f96-b749-79f3" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -525,6 +606,17 @@
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="8574-d0de-e451-c440" name="Carnivore Kindred" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="dbb0-cc97-97f8-20b0" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
+        <rule id="712d-dba8-4c29-4b7b" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="1895-32ec-8f2b-889e" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+      </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="aae2-f40b-6810-2fb2" name="Kroot" hidden="false" collective="false" import="true">
           <selectionEntries>
@@ -615,7 +707,16 @@
     <selectionEntry id="b69b-5587-54ae-d267" name="Vulture Kindred" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="fe02-3017-f64b-6f5b" name="Winged Adaptation" hidden="false"/>
+        <rule id="d620-26b9-bf24-0741" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+        <rule id="4cae-e6d9-9fd7-16b4" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
       </rules>
+      <infoLinks>
+        <infoLink id="0bfb-e5ae-97bf-1e5c" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="5e57-762b-029c-fe01" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -721,6 +822,15 @@
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="bb3c-0d6a-37e8-2131" name="Kroot Hound Pack" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="78fa-9834-dfbb-81de" name="Kroot Hound Pack" hidden="false"/>
+        <rule id="70ae-c68b-a629-2d5e" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="34cd-4351-b284-3c7f" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="ca8b-b266-8e58-8fd2" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -849,6 +959,344 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
+    <selectionEntry id="ecc3-d7a1-eb3c-4f4f" name="Hunter Kindred" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="9a3e-3758-d4db-2f4c" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+        <rule id="72b3-ddd7-c6c6-4019" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="27df-b1ad-139e-f237" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8aae-fa13-3971-0c14" name="Kroot" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="4d05-98a4-5eb2-d63b" name="Kroot" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="165b-2673-40a8-6198" type="min"/>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4267-546b-cda8-2449" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="373d-2d34-4799-deda" name="Kroot" hidden="false" targetId="ec7e-b563-6021-05f5" type="profile"/>
+                <infoLink id="2215-2130-708e-e9d6" name="Kroot Hunting Rifle" hidden="false" targetId="7783-5cc6-5c1e-4b6d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="568e-e545-be97-401d" name="Shaper" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39f1-e75d-c550-79da" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c9f-1071-a7c8-f916" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="da22-d305-f3a3-0837" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="66e1-ab3a-63aa-0b69" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true" targetId="c031-b7db-2556-bc48" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="29.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="5bea-5105-6368-8ea1" name="Tracker Kindred" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="87f8-01e4-1421-44a5" name="Native Cavalry" hidden="false"/>
+        <rule id="d6be-2275-84e3-4fb5" name="Native Trackers" hidden="false"/>
+        <rule id="179f-c5cd-9dd2-c0a7" name="Native Scouts" hidden="false"/>
+        <rule id="d663-6943-db40-ada0" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+        <rule id="876c-e960-71a8-9142" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="8cbb-47d3-bae9-015f" name="Cavalry" hidden="false" targetId="0e80-1d1e-f91a-11fe" type="rule"/>
+        <infoLink id="78d7-0ac6-5680-c532" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0f0b-2cea-4fa8-d721" name="Kroot" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="eb09-5bc3-c0a1-76cc" name="Kroot" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5505-32ab-c839-47a8" type="min"/>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3d1-91f9-17fa-bb90" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="e5c4-b615-9cb6-9766" name="Kroot" hidden="false" targetId="ec7e-b563-6021-05f5" type="profile"/>
+                <infoLink id="e1fd-c244-ac8c-b3fb" name="Kroot Hunting Rifle" hidden="false" targetId="7783-5cc6-5c1e-4b6d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bccd-65d9-f8b3-cb4d" name="Shaper" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66cb-53f6-3e74-6079" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3731-4578-ce75-5c13" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d6cd-48d5-0bcf-0cf9" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="07a5-b5f9-1cf9-1a3a" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true" targetId="c031-b7db-2556-bc48" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="39.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="18f4-3ef8-85a5-29dd" name="Krootox Herd" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="04e5-63af-32bf-320f" name="Krootox Herd" hidden="false"/>
+        <rule id="3c8d-32ea-80bd-36e6" name="Eaters of the Dead" hidden="false">
+          <description>Kroot must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the Kroot must instead consolidate. If a Kroot Shaper is in the squad then they MUST consolidate, they have no choice.</description>
+        </rule>
+        <rule id="4158-8b5c-c4ff-4034" name="Fieldcraft" hidden="false">
+          <description>Kroot gain +1 to their cover save in woods or jungles. Kroot in woods or jungles do not roll a Difficult Terrain test; they may always move up to 6&quot;. If they do not move in the movement phase they may see and shoot through 12&quot; of woods or jungle terrain rather than the normal 6&quot;</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c7e7-7839-16ea-38ac" name="Kroot" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="b49a-14cd-2017-9443" name="Kroot" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9290-c70c-cc4b-46e4" type="min"/>
+                <constraint field="selections" scope="parent" value="19.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f2a-79c1-110d-8612" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="65b0-8d1a-8262-7eb2" name="Kroot" hidden="false" targetId="ec7e-b563-6021-05f5" type="profile"/>
+                <infoLink id="d016-b85a-49ee-f57e" name="Kroot Rifle" hidden="false" targetId="a107-96c8-c043-e9d7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6f2b-2e14-b764-b747" name="Shaper" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="74b9-069f-c360-36f6" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be50-4de8-0762-4cf8" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5e9-bebe-b3e9-b540" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5fe6-1616-7b0b-bc33" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="5.0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dad-1a68-8807-3490" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e403-3ef2-85cc-64f1" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8052-61e0-d7e6-cd13" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53c9-60bf-017d-eb3d" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="049b-8403-4f0a-643e" name="Kroot Shaper" hidden="false" targetId="5193-3ebd-d3e2-cd04" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="60e5-d2e2-6074-fb28" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true" targetId="c031-b7db-2556-bc48" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="29.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c02d-edf8-4e30-2df3" name="Krootox" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc8f-3b03-1f99-1038" type="max"/>
+                <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cc3-e3ce-7c0e-22d7" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="4667-5a27-08fb-ff94" name="Kroot Gun" hidden="false" targetId="502c-f105-689a-3755" type="profile"/>
+                <infoLink id="7c53-89c2-7dc3-6831" name="Krootox" hidden="false" targetId="8cc7-4bf0-4daf-4dc8" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="4aa4-c09d-22b4-b749" name="Punji Traps" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b596-67f5-3f3a-d06d" name="Traps" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="69d9-c8b3-be5b-c1db" name="Punji Trap" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cde7-477d-886d-b170" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdd5-36db-e0a0-f41b" type="min"/>
+              </constraints>
+              <rules>
+                <rule id="acca-6f91-5933-4617" name="Ignore Cover Saves" hidden="false"/>
+                <rule id="d19a-d256-1a49-a704" name="Set Up" hidden="false"/>
+                <rule id="abe4-c91c-a683-1c83" name="Pinning" hidden="false"/>
+                <rule id="0ccd-653f-e8b9-0e44" name="Punji Trap" hidden="false"/>
+              </rules>
+              <infoLinks>
+                <infoLink id="5f97-3916-34a0-424a" name="Punji Pit" hidden="false" targetId="2f80-3c0b-0bf7-a9b4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="c031-b7db-2556-bc48" name="Kroot Mercenary Armoury" hidden="false" collective="false" import="true">
@@ -875,10 +1323,357 @@
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="a9d2-f30f-5d26-3194" name="Single-Handed Weapons" hidden="false" collective="false" import="true"/>
-    <selectionEntryGroup id="b401-34d5-934c-d938" name="Two-Handed Weapons" hidden="false" collective="false" import="true"/>
-    <selectionEntryGroup id="8928-ce31-b8f3-80a6" name="Wargear" hidden="false" collective="false" import="true"/>
-    <selectionEntryGroup id="1137-f658-5e8e-6066" name="Totems" hidden="false" collective="false" import="true"/>
+    <selectionEntryGroup id="a9d2-f30f-5d26-3194" name="Single-Handed Weapons" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="cee4-7846-bba9-ffac" name="Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="508c-c745-3f28-9106" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="afd1-8dde-d76b-b50b" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c2ca-1cbb-0eb8-6632" name="Bolt Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68d3-eca3-e595-ef56" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="28d7-b829-a4a9-e6b2" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="be32-b6e9-cfed-511a" name="Slugga" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee8e-4407-7efd-13ad" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6942-6b7d-978f-2bfa" name="Slugga" hidden="false" targetId="1aaa-4805-c346-107e" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8482-c661-1b9c-b830" name="Splinter Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c11-04b3-e7f2-5c26" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6fac-a8a4-447f-d133" name="Splinter Pistol" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cec6-6ce7-00c1-0522" name="Shuriken Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f66-17db-d2f4-c4cb" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="0fbb-9b78-876c-321a" name="Shuriken Pistol" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9075-b470-2b89-a3fd" name="Power Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c802-de27-c7ba-1ec7" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="4c5c-e70e-6c42-fcb6" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b401-34d5-934c-d938" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="679e-64a7-a63d-019d" name="Bolter" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c831-1f43-01ef-95b5" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5fea-02b8-f146-44c2" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d34f-e8f1-b462-fc60" name="Splinter Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e54-a007-4753-2751" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7eda-e0eb-d621-84a5" name="Splinter Rifle" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e81e-a63b-7148-5c15" name="Shuriken Catapult" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e67-531f-0213-bc34" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="e700-0e9c-9616-f4f3" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="de22-b7d0-9690-e824" name="Shoota" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a39-a3ea-673a-2fe0" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="17ef-a0cf-8a80-9f04" name="Shoota" hidden="false" targetId="894f-1760-04e4-77c4" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f922-3248-5ad1-b980" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4492-a74b-e1b4-4fad" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ce11-fef2-381f-7939" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac17-400c-2b08-aa9b" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="ce75-775e-1263-f5e5" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="13.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b5b0-8757-463b-c438" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ce11-fef2-381f-7939" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4492-a74b-e1b4-4fad" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="046b-120c-92c6-bd07" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="266b-7124-a1de-a606" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bdc6-920e-0c90-3c74" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a80-c662-cc02-ccf4" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8427-e5c1-6c9f-797a" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d3a2-50ab-e38b-c940" name="Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34bd-7d0f-0c54-f0e7" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7675-5f1d-6223-c062" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e47b-d072-01f9-dc58" name="Eviserator" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2772-7734-1c3b-a198" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0ac2-2d08-2fa4-2701" name="Eviscerator" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="8928-ce31-b8f3-80a6" name="Wargear" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="2e19-6b1d-79eb-9ce4" name="Melta Bombs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a75b-170d-815c-8f4f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="94b9-ec39-7cd0-98cb" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="18a8-95bd-c88d-4724" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65af-766a-c54e-4ee4" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9d65-863d-1618-92d1" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="83a6-e369-539b-d35c" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66a3-318b-4ddd-8495" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="2ecc-cdef-9124-b52f" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="979c-d43f-b833-f692" name="Auspex" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1534-3544-5946-5ada" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="01ca-d2e8-2a5e-5dc0" name="Auspex" hidden="false">
+              <description>If enemy infiltrators set up within 4D6&quot; of a model with a auspex, then that model and the unit they are attached to is allowed to take a &quot;free&quot; shot at them. These shots are taken before the battle begins and may cause the infiltrators to fall back.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ca39-8ff4-7fc7-c467" name="Blood of the Stalker" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c335-100d-a146-eec2" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="c390-2891-4954-637d" name="Blood of the Stalker" hidden="false">
+              <description>In missions where the Kroot can infiltrate, the character and his kindred may deploy D6&quot; closer to the enemy that indicated in the scenario set-up instructions.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2f4f-6802-0347-a85f" name="Kroothawk Totem" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ce11-fef2-381f-7939" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4492-a74b-e1b4-4fad" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="701a-3a44-8f90-6439" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e984-c5a7-1e7c-9caf" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3eb2-4bcf-c7c0-4caa" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="a284-3dc2-97b5-aae4" name="Kroothawk Totem" hidden="false">
+              <description>You may re-roll the dice to determine who gets the first turn of the game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9db4-b9e7-75c1-0e9a" name="Mark of the Favoured Child" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ce11-fef2-381f-7939" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4492-a74b-e1b4-4fad" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ca1-6df1-c148-ed43" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5334-37ef-9ffd-4663" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="5553-11d2-57f5-168f" name="Mark of the Favoured Child" hidden="false">
+              <description>The character gains a 4+ Invulnerable save.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8215-5f1f-6517-dae1" name="Surefoot Charm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c3d-b1e7-674c-b29b" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="ead3-b50f-419f-9273" name="Surefoot Charm" hidden="false">
+              <description>The character and any unit they are attached to roll 2D6 and choose the highest when rolling for Fleet of Foot.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a0cc-1990-0780-1d58" name="Veneration Charm" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f33e-e0d7-3ce9-098d" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="07cc-b6d0-1bb1-7a33" name="Veneration Charm" hidden="false">
+              <description>A veneration charm turns one weapon the owner is equipped to as master-crafted.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
     <profile id="efab-1ec1-c497-556a" name="Master Shaper" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -894,7 +1689,16 @@
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
       </characteristics>
     </profile>
-    <profile id="ea41-a6d3-753b-90f8" name="Punji Pit" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="7783-5cc6-5c1e-4b6d" name="Kroot Hunting Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Sniper Rifle</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="2f80-3c0b-0bf7-a9b4" name="Punji Pit" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Trap</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
