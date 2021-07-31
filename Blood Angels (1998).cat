@@ -252,12 +252,20 @@
         <categoryLink id="6e05-586e-79ca-39b5" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="5de7-c719-55dd-544f" name="Lord Dante" hidden="false" collective="false" import="true" targetId="fbec-e532-c1b4-ca24" type="selectionEntry"/>
+    <entryLink id="5de7-c719-55dd-544f" name="Lord Dante" hidden="false" collective="false" import="true" targetId="fbec-e532-c1b4-ca24" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="b796-a9af-8adf-5f5e" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="0344-0444-23fb-2914" name="Brother Corbulo, Sanguinary High Priest" hidden="false" collective="false" import="true" targetId="44dc-151a-e345-606b" type="selectionEntry"/>
     <entryLink id="3d99-cb02-ffe1-e20d" name="Brother Captain Tycho" hidden="false" collective="false" import="true" targetId="5b52-fa19-64e5-2a60" type="selectionEntry"/>
     <entryLink id="89ec-9c14-7bc3-d010" name="Chaplain Lemartes" hidden="false" collective="false" import="true" targetId="f2f0-1f3c-acea-bd23" type="selectionEntry"/>
     <entryLink id="2345-06e3-3916-fb59" name="Chief Librarian Mephiston" hidden="false" collective="false" import="true" targetId="c722-8e89-b67e-9ee1" type="selectionEntry"/>
-    <entryLink id="611a-8297-ca80-ba7a" name="Moriar the Chosen" hidden="false" collective="false" import="true" targetId="804d-474e-74ef-fbfe" type="selectionEntry"/>
+    <entryLink id="611a-8297-ca80-ba7a" name="Moriar the Chosen" hidden="false" collective="false" import="true" targetId="804d-474e-74ef-fbfe" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="3fab-fb3d-58f7-07de" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="1ab6-0088-e1db-1ad2" name="Whirlwind Hyperios (IA)" hidden="false" collective="false" import="true" targetId="1466-696f-2a85-14b5" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="72b7-13ff-283d-7cde" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
@@ -361,6 +369,11 @@
         <categoryLink id="7fe7-21d0-6dfe-0cc3" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="c8a4-31a3-1ca2-9a26" name="Brother Captain Tycho (Death Company)" hidden="false" collective="false" import="true" targetId="f974-9355-4ddd-ccb5" type="selectionEntry">
+      <infoLinks>
+        <infoLink id="7aac-0205-7d3f-00a5" name="Blood Angels Special Rules" hidden="false" targetId="bcc9-4a2a-8619-1b80" type="infoGroup"/>
+      </infoLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="d1f7-6b7c-67ce-c814" name="Blood Angels Scout Squad" hidden="false" collective="false" import="true" type="unit">
@@ -429,6 +442,11 @@
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9eca-e5c8-50d0-02eb" type="equalTo"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="17.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="816c-e71c-fe9e-519e" type="max"/>
@@ -444,6 +462,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="9eca-e5c8-50d0-02eb" name="Veteran Scout Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="30.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56dc-c0a7-3fe4-2349" type="max"/>
               </constraints>
@@ -459,6 +484,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="8490-9cf8-e2aa-037c" name="Scout" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="17.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d2c-2bf0-e78c-a60b" type="max"/>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e36d-a998-81a0-da7e" type="min"/>
@@ -510,9 +542,14 @@
       <entryLinks>
         <entryLink id="6d7b-7053-550f-1739" name="Drop Pod (IA)" hidden="false" collective="false" import="true" targetId="a9cd-beaa-0d6b-0086" type="selectionEntry">
           <modifiers>
-            <modifier type="set" field="hidden" value="false">
+            <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -603,6 +640,13 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="e044-7ed4-9b6b-4627" name="Veteran Space Marine" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="35.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27fc-9233-af84-af9e" type="min"/>
                 <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fde-b2fb-a179-3af1" type="max"/>
@@ -622,6 +666,11 @@
                 <modifier type="set" field="dfda-e316-2dcd-088f" value="0.0">
                   <conditions>
                     <condition field="selections" scope="7fbc-2970-e421-6c7e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7714-a733-5fce-8c7d" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="47.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -661,6 +710,11 @@
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="35.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -753,6 +807,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="1353-1161-f51c-aff5" name="Sanguinary High Priest" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="4ed5-2f92-9abc-2870" value="94.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4af1-aec3-04b5-e536" type="max"/>
       </constraints>
@@ -788,10 +849,25 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="44f9-6c25-c16b-e254" name="Blood Angels Librarian" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="4ed5-2f92-9abc-2870" value="75.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="a27c-c232-9bf9-d38d" name="Blood Angels LIbrarian" hidden="false" targetId="b0c7-2d0d-6d22-8e8c" type="profile"/>
         <infoLink id="2110-0463-6395-05fd" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
-        <infoLink id="ba5a-108e-4b34-3c92" name="Quickening" hidden="false" targetId="0cad-264f-40eb-f70b" type="rule"/>
+        <infoLink id="ba5a-108e-4b34-3c92" name="Quickening" hidden="false" targetId="0cad-264f-40eb-f70b" type="rule">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8433-66a0-a8c4-7305" name="Librarian" hidden="false" targetId="02ee-bc24-ec98-8712" primary="false"/>
@@ -816,8 +892,22 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ebb4-4e0b-f983-1fcf" name="Blood Angels Chaplain" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="4ed5-2f92-9abc-2870" value="75.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="bbd2-a6df-26fb-36b1" name="Death Company" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <description>The Chaplain is always accompanied by D3+3 Death Company Space Marines. If the Death Company are equipped with jump packs, then the Chaplain must also have a jump pack.</description>
         </rule>
       </rules>
@@ -838,6 +928,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="644f-8ec9-137a-8bc8" name="Blood Angels Leader" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="4ed5-2f92-9abc-2870" value="38.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="e3d5-869a-2d4b-1550" name="Blood Angels Leader" hidden="false" targetId="1273-ee16-16bd-dd9c" type="profile"/>
         <infoLink id="b35e-de61-3ffa-ea66" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
@@ -864,6 +961,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b266-743c-fa51-2ab8" name="Blood Angels Commander" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="4ed5-2f92-9abc-2870" value="57.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="8da6-d24a-1e0a-9215" name="Blood Angels Commander" hidden="false" targetId="fd00-3947-77a1-a16c" type="profile"/>
         <infoLink id="509d-5f17-e14d-7fc8" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
@@ -890,6 +994,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2569-af62-8085-c846" name="Blood Angels Force Commander" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="4ed5-2f92-9abc-2870" value="75.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="259f-cf63-20c8-9810" name="Blood Angels Force Commander" hidden="false" targetId="0c82-15bd-f92b-7107" type="profile"/>
         <infoLink id="6ccb-7265-f672-a916" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
@@ -1080,6 +1191,11 @@
                     <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d73-26fa-d6ec-5ddb" type="max"/>
@@ -1090,6 +1206,11 @@
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1106,11 +1227,25 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="b5a3-7f63-bb92-cadd" name="Veteran Space Marine" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="23.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="60ff-266f-ae6f-5e20" name="Veteran Sergeant" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="35.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="594a-6b8d-1fae-c046" type="max"/>
               </constraints>
@@ -1125,6 +1260,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="f48c-6ada-2966-55db" name="Sanguinary Priest" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="23.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ee4-6f9a-2795-e292" type="max"/>
               </constraints>
@@ -1140,6 +1282,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="3fd1-363b-ddf0-4c4e" name="Techmarine" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="23.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d76-578e-4191-85f0" type="max"/>
               </constraints>
@@ -1155,6 +1304,13 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="a1b1-83e9-a0b4-5841" name="Standard Bearer" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="set" field="4ed5-2f92-9abc-2870" value="23.0">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0377-6dc6-65c2-5b95" type="max"/>
               </constraints>
@@ -1223,6 +1379,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5b52-fa19-64e5-2a60" name="Brother Captain Tycho" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f974-9355-4ddd-ccb5" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a20-bf12-9e77-172a" type="max"/>
       </constraints>
@@ -1502,6 +1665,64 @@ Any enemy squad with a model within 6&quot; of Dante at the start of that side&a
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="144.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f974-9355-4ddd-ccb5" name="Brother Captain Tycho (Death Company)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b52-fa19-64e5-2a60" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ebb4-4e0b-f983-1fcf" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff5e-e976-6622-01d5" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="f99a-5f6c-45db-1cfd" name="Digi-lasers" hidden="false">
+          <description>One model in base contact with Tycho, suffers a wound on a D6 roll of 4+ at the start of the round before any close combat attacks are made. Normal saving throws are allowed. In addition, the digi-lasers provides an extra close combat weapon (to 4 A).</description>
+        </rule>
+        <rule id="3c09-6241-fbe2-695c" name="Embittered" hidden="false">
+          <description>Any squad led by Tycho always moves towards the enemy D6&quot;.</description>
+        </rule>
+        <rule id="fa04-1429-7043-b194" name="Hates Orks" hidden="false">
+          <description>When fighting against Orks, Tcho and any squad he leads automatically pass any Morale checks they are required to make. In close combat against Orks, Tycho always hits on a 3+.</description>
+        </rule>
+        <rule id="c64e-f6e4-302f-c092" name="The Red Thirst" hidden="false">
+          <description>If a Death Company unit contains Tycho then it must move directly toward the nearest enemy as fast as possible and must make an assault if it can do so. This applies even if a Chaplain or a Sanguinary High Priest leads the Death Company.</description>
+        </rule>
+        <rule id="2795-8a00-e067-420f" name="Ignore Injury" hidden="false">
+          <description>If a Death Company Space Marine loses a wound, roll a dice. On a 4+ the injury is ignored and the model continues fighting. This cannot be used against weapons which inflict instant death or against close combat weapons that allow no save.</description>
+        </rule>
+        <rule id="d7fc-70b7-6bf1-2d64" name="Transport" hidden="false">
+          <description>A Death Company including Tycho may not use jump packs and must be mounted in a Rhino, unless there are more than 10 models in the unit, in which case they must march into battle on foot.</description>
+        </rule>
+        <rule id="4bd2-992e-3e12-6a59" name="Brother Captain Tycho (Death Company)" hidden="false">
+          <description>Tycho must join the Death Company unit, which must contain a Chaplain. He fights as one of the Death Company and does not follow any of the independent character rules. Opponents may designate him as a target for melee attacks subject to the normal rules.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="2079-a7e6-5040-57e0" name="Tycho" hidden="false" targetId="7397-98bf-66be-6525" type="profile"/>
+        <infoLink id="dd16-8f87-5774-653d" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+        <infoLink id="ea71-fdd5-abe1-f17d" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+        <infoLink id="be14-7bd3-bd36-0161" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+        <infoLink id="5bfb-beab-4543-1353" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+        <infoLink id="1c12-c606-ec70-318e" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+        <infoLink id="2f25-241e-e743-87ad" name="Artificer Armor" hidden="false" targetId="7a02-cc04-9d97-3493" type="rule"/>
+        <infoLink id="52ae-374d-0e02-53bc" name="Bionics" hidden="false" targetId="93ed-72da-0689-8a2d" type="rule"/>
+        <infoLink id="6344-e55f-5378-268d" name="Purity Seals" hidden="false" targetId="8fca-253c-bbf8-9510" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5fd6-2c82-182d-9fcb" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="7697-0801-0100-89e6" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
