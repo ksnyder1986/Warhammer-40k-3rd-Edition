@@ -3113,14 +3113,39 @@ However, if the model bearing the standard is slain in close combat, then the en
         <selectionEntry id="c37f-7380-6994-dd44" name="Mark of the Wulfen" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="962e-66b6-c77a-0739" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="4ed5-2f92-9abc-2870" value="30.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="4ed5-2f92-9abc-2870" value="20.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3129,6 +3154,23 @@ However, if the model bearing the standard is slain in close combat, then the en
           </constraints>
           <rules>
             <rule id="27e3-0b6f-e7aa-7d3b" name="Mark of the Wulfen" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <description>The model with the Mark receives D3 additional attacks in close combat and always hits on a 3+ regardless of WS. They and unit they are leading automatically pass any Morale checks, and will never fall back or become pinned, and will always hit and be hit on a roll of 3+ in close combat.</description>
+            </rule>
+            <rule id="d185-2720-6980-5c79" name="Mark of the Wulfen" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <description>A Wolf Guard bearing the Mark is treated as an independent character and must remain on his own at all times. He is allowed to be near another unit, but he cannot join it. A model bearing the Mark of the Wulfen may not be given Terminator Armour, a Jump Pack, nor a Space Marine Bike.
 The model with the Mark receives D3 additional attacks in close combat and always hits on a 3+ regardless of WS. They will pass all Morale and Pinning tests, and may ignore opposing troops or weapons that can cause an opponent to automatically fall back.</description>
             </rule>
