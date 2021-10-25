@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="0885-d75b-33a6-169b" name="Space Wolves (2000)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="2682-a24d-27d0-d11d" name="13th Company" hidden="false"/>
+  </categoryEntries>
   <entryLinks>
     <entryLink id="39f1-fcef-6cb3-b8e1" name="Wolf Lord" hidden="false" collective="false" import="true" targetId="5a50-b1c6-a93a-cc0d" type="selectionEntry"/>
     <entryLink id="2187-639e-f729-e0a8" name="Grey Hunter Pack" hidden="false" collective="false" import="true" targetId="3e5e-e6ef-03df-c011" type="selectionEntry">
@@ -167,6 +170,13 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ab8f-3bf3-76b4-0ee4" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e53f-a21d-1577-265e" type="max"/>
           </constraints>
