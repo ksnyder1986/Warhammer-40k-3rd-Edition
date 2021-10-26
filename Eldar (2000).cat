@@ -2523,6 +2523,23 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="97eb-5445-d9fe-ccf5" name="Augment" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2585-cdc1-80b7-c393" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule id="f7d7-9c32-8d4a-db4d" name="Augment" hidden="false">
+              <description>Use when a Farseer in the Seer Council successfully uses a psychic power. The warlock must pass a Psychic test, and if successful the range of the Farseer&apos;s power is doubled. Each Farseer power can only be augmented once per turn, and the Warlock must be in the Seer Council to use Augment. If any Warlock fails to augment a power, a second Warlock may attempt to augment the same power.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="c347-83e2-7f11-3074" name="Eldar Armoury" hidden="false" collective="false" import="true">
@@ -2585,12 +2602,12 @@
           <selectionEntries>
             <selectionEntry id="23d1-28cb-2144-81fc" name="Eldar Jetbike" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="add" field="category" value="e9f4-cd71-21e7-19f2"/>
                 <modifier type="set" field="1432-55e2-6ff8-fb55" value="0.0">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a421-09aa-6c08-ebe2" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2585-cdc1-80b7-c393" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a5-16a6-7525-aa8e" type="instanceOf"/>
                       </conditions>
                     </conditionGroup>
