@@ -489,9 +489,101 @@
         <categoryLink id="e30e-49cb-2f24-ab75" name="Ulthwe" hidden="false" targetId="2585-cdc1-80b7-c393" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="71af-ab51-0265-844e" name="Seer Council" hidden="false" collective="false" import="true" targetId="4f2c-5736-d463-fac0" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="cfe1-16af-f378-1c3d" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="c09a-df83-b24c-c28a" name="Ulthwe" hidden="false" targetId="2585-cdc1-80b7-c393" primary="false"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
-    <selectionEntry id="4f2c-5736-d463-fac0" name="Seer Council" hidden="false" collective="false" import="true" type="unit"/>
+    <selectionEntry id="4f2c-5736-d463-fac0" name="Seer Council" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="decrement" field="4ed5-2f92-9abc-2870" value="80.0"/>
+        <modifier type="decrement" field="4ed5-2f92-9abc-2870" value="33.0"/>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="52df-4907-98a9-7aa8" name="Farseers" hidden="false" collective="false" import="true" defaultSelectionEntryId="30ce-89a4-d095-add3">
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="015e-9682-40a3-06f2" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac14-a008-2975-7b8f" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="30ce-89a4-d095-add3" name="Farseer" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="0351-9566-1790-1802" name="Farseer" hidden="false" targetId="8834-311b-2c86-d397" type="profile"/>
+                <infoLink id="4220-dfc7-ecd2-121d" name="Rune Armour" hidden="false" targetId="96ee-79a8-217a-28a7" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="0569-5efb-9915-6ad4" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup"/>
+                <entryLink id="b8c9-4581-5fb5-f428" name="Farseer Psychic Powers" hidden="false" collective="false" import="true" targetId="6f8b-71e8-4378-aba2" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e54-d179-53cd-a02e" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3fa-cd36-0bed-170b" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="64d2-e399-2fd8-b9b3" name="Warlocks" hidden="false" collective="false" import="true" defaultSelectionEntryId="daee-53cd-485c-70cc">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1fd-3877-77cb-0eb9" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="daee-53cd-485c-70cc" name="Warlock" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="1d78-7288-72ed-23e0" name="Warlock" hidden="false" targetId="f970-9da9-42db-9f1d" type="profile"/>
+                <infoLink id="8a9d-4d5b-e1e7-d352" name="Rune Armour" hidden="false" targetId="96ee-79a8-217a-28a7" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="46d3-f4f7-a4ca-7e22" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup"/>
+                <entryLink id="c1eb-503e-e71b-fe0b" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b08d-0b86-1469-1f7f" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ba15-b0f7-5acf-48a5" name="Jetbike Warlock" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="dd97-0bb3-aa1c-d4a1" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="b109-a839-be46-f372" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+                <infoLink id="b9d9-3beb-b62c-7af0" name="Jetbike Walock" hidden="false" targetId="3e94-e809-5707-130a" type="profile"/>
+                <infoLink id="7c98-0049-8399-050d" name="Rune Armour" hidden="false" targetId="96ee-79a8-217a-28a7" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="849b-e6d7-4f08-9785" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
+                <entryLink id="a538-18a4-2454-6ab6" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="36.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="af58-32d9-01b0-53de" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a593-4722-9ebc-d558" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="90.0"/>
+      </costs>
+    </selectionEntry>
     <selectionEntry id="148d-380e-0852-ca5e" name="Black Guardian Defender Squad" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="0a5b-726e-0e25-d999" name="Black Guardian Defender" hidden="false" targetId="f1be-2ec6-3f44-48b2" type="profile"/>
