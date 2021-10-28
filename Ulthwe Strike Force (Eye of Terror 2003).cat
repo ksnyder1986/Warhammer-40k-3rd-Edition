@@ -95,13 +95,262 @@
   <sharedSelectionEntries>
     <selectionEntry id="5ff3-bb96-1e09-ce01" name="Spear of Khaine" hidden="false" collective="false" import="true" type="unit"/>
     <selectionEntry id="2430-8dba-c0f3-df44" name="Seer Council" hidden="false" collective="false" import="true" type="unit"/>
-    <selectionEntry id="85dc-316a-2bbd-3278" name="Black Guardian Defender Squad" hidden="false" collective="false" import="true" type="unit"/>
-    <selectionEntry id="e0e9-ddc7-503c-3848" name="Black Guardian Storm Squad" hidden="false" collective="false" import="true" type="unit"/>
+    <selectionEntry id="85dc-316a-2bbd-3278" name="Black Guardian Defender Squad" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="2144-0222-ab7a-5eea" name="Black Guardian Defender" hidden="false" targetId="813b-7f25-46c5-1d7b" type="profile"/>
+        <infoLink id="f670-4aea-5ece-3299" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
+        <infoLink id="4b3a-008f-8517-f4a5" name="Shuriken Catapult" hidden="false" targetId="1e3d-a3bb-ef48-bc12" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="c23c-e296-b1e8-4d72" name="Guardians" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffed-3503-dff2-8b73" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81ec-ec67-d74e-7d48" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4a0e-e1b8-ab1b-18c7" name="Plasma Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c23c-e296-b1e8-4d72" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d419-529f-0129-eb82" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="1a0c-7057-9813-3056" name="Plasma Grenades" hidden="false" targetId="a1a0-7026-df47-1b84" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f4b6-01ed-eca6-0c13" name="Heavy Weapon Platform" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9d9-e9b6-13b8-14f1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2d56-a4b8-1fc4-b73c" name="Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="d5d8-8bef-cc53-81c2" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="17b0-11f4-bf9c-9850" name="Scatter Laser" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="47f2-08fc-840b-1033" name="Scatter Laser" hidden="false" targetId="0ea6-3b92-6129-8731" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2f01-4c9e-a318-8c71" name="Missile Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="ba76-dd76-b798-2bb5" name="Missle Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
+                <infoLink id="4b75-79f5-43a0-829e" name="Missle Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b579-34bb-eb8e-98eb" name="Bright Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="2bdf-24c0-f8c0-78cc" name="Bright Lance" hidden="false" targetId="6f4e-bc15-c01c-501a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="86b0-83de-b1c7-03f6" name="Starcannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a366-dc30-dee6-43cc" name="Starcannon" hidden="false" targetId="841e-28f9-4e25-68ca" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3905-010e-5fae-ffed" name="Weapons" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59fc-bd3a-e4a1-ea3a" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="7e57-617e-fd7f-5fb9" name="Fusion Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="4fbb-bd6a-bd11-7ccd" name="Fusion Gun" hidden="false" targetId="f79d-d9c2-c8b4-aa03" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="4.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="632e-d3e7-2dbe-d6dd" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="7c84-9e94-e16e-80aa" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="e0e9-ddc7-503c-3848" name="Black Guardian Storm Squad" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="74cd-ed2e-87b5-3b44" name="Black Guardian Storm" hidden="false" targetId="d233-b35c-9442-470f" type="profile"/>
+        <infoLink id="ea47-bb69-0685-b2a6" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+        <infoLink id="9646-61df-7744-967c" name="Shuriken Pistol" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
+        <infoLink id="10ff-c787-3584-ed6f" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="02fc-f946-e89e-2446" name="Guardians" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8e2-762d-68b2-de19" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57fe-e1c4-8b67-f6e8" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="50d4-f4a4-2e6e-d11d" name="Haywire Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02fc-f946-e89e-2446" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ac2-7afa-66d9-40f8" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6959-6bb1-4c27-0010" name="Haywire Grenades" hidden="false" targetId="b01a-6da1-2166-d3e6" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dcec-305b-0944-fed3" name="Plasma and Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02fc-f946-e89e-2446" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffd7-df96-0560-48c9" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6fed-429d-61d8-4869" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+            <infoLink id="333f-0e9a-f96d-8004" name="Plasma Grenades" hidden="false" targetId="a1a0-7026-df47-1b84" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e938-0b31-c26e-6862" name="Weapons" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c334-7db0-292e-19c4" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9a7a-2c25-14b5-db53" name="Fusion Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="92e8-78d1-acdc-3d75" name="Fusion Gun" hidden="false" targetId="f79d-d9c2-c8b4-aa03" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="4.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="128a-4df6-39f1-2fef" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="53e7-efa1-19b3-aacc" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
     <selectionEntry id="b17a-2021-2bfb-9a52" name="Black Guardian Jetbike Squadron" hidden="false" collective="false" import="true" type="upgrade"/>
     <selectionEntry id="9ca5-8d0f-c250-0a0e" name="Black Guardian War Walker Squadron" hidden="false" collective="false" import="true" type="upgrade"/>
     <selectionEntry id="faf1-b0f2-a965-5083" name="Black Guardian Support Weapon Battery" hidden="false" collective="false" import="true" type="upgrade"/>
     <selectionEntry id="dbdc-10dc-05b0-e000" name="Black Guardian Vyper Squadron" hidden="false" collective="false" import="true" type="unit"/>
   </sharedSelectionEntries>
+  <sharedProfiles>
+    <profile id="813b-7f25-46c5-1d7b" name="Black Guardian Defender" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d233-b35c-9442-470f" name="Black Guardian Storm" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="0723-768b-390c-3fde" name="Black Guardian Jetbike" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3(4)</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="793a-ea38-0433-3e6d" name="Black Guardian Vyper" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8364-6744-d1f7-c699" name="Black Guardian War Walker" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">3</characteristic>
+        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
+        <characteristic name="S" typeId="2870-c64f-81e5-a118">5</characteristic>
+        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">10</characteristic>
+        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">10</characteristic>
+        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">10</characteristic>
+        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">4</characteristic>
+        <characteristic name="A" typeId="bb33-7ddf-2296-174e">2</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
   <catalogueLinks>
     <catalogueLink id="2feb-5653-fc8d-437f" name="Eldar (2000)" targetId="1369-4fc1-fe31-48dd" type="catalogue" importRootEntries="false"/>
   </catalogueLinks>
