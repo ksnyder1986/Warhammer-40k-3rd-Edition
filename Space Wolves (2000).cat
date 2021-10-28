@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="0885-d75b-33a6-169b" name="Space Wolves (2000)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="2682-a24d-27d0-d11d" name="13th Company" hidden="false"/>
+  </categoryEntries>
   <entryLinks>
     <entryLink id="39f1-fcef-6cb3-b8e1" name="Wolf Lord" hidden="false" collective="false" import="true" targetId="5a50-b1c6-a93a-cc0d" type="selectionEntry"/>
     <entryLink id="2187-639e-f729-e0a8" name="Grey Hunter Pack" hidden="false" collective="false" import="true" targetId="3e5e-e6ef-03df-c011" type="selectionEntry">
@@ -167,6 +170,13 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ab8f-3bf3-76b4-0ee4" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e53f-a21d-1577-265e" type="max"/>
           </constraints>
@@ -289,6 +299,23 @@
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="374a-a3a7-b666-7176" name="Wulfen Lord" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+                    <condition field="selections" scope="5a50-b1c6-a93a-cc0d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c37f-7380-6994-dd44" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fa1-32f3-697b-b97b" type="max"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1559,6 +1586,13 @@ However, if the model bearing the standard is slain in close combat, then the en
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="81a1-90f1-486f-2f0a" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0593-e936-9a16-e77d" type="max"/>
           </constraints>
@@ -1720,6 +1754,13 @@ However, if the model bearing the standard is slain in close combat, then the en
       </constraints>
       <rules>
         <rule id="c2d9-e78d-6164-44c8" name="Storm Caller" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <description>In the Shooting phase of any Space Wolve&apos;s turn, the Rune Priest can use this psychic powers to call up a blizzard of psychic energy which can be used to hide friendly troops from the enemy. He may not shoot on the same turn that he calls up the storm. If successfully he summons a storm over himself and the unit he is with, or over any friendly unit that has a model within 12&quot; of him. The unit counts as being in cover for rules purposes and so will receive a 5+ cover save and will strike first in close combat until the end of the following enemy turn. A unit protected in this way may assault, and if they do so against an enemy that are also in cover the attacks are resolved in order of Initiative.</description>
         </rule>
       </rules>
@@ -1736,6 +1777,13 @@ However, if the model bearing the standard is slain in close combat, then the en
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="392b-33a0-de56-485a" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad9a-3d32-85fa-6a27" type="max"/>
           </constraints>
@@ -3089,14 +3137,39 @@ However, if the model bearing the standard is slain in close combat, then the en
         <selectionEntry id="c37f-7380-6994-dd44" name="Mark of the Wulfen" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="962e-66b6-c77a-0739" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="4ed5-2f92-9abc-2870" value="30.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="4ed5-2f92-9abc-2870" value="20.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -3105,6 +3178,23 @@ However, if the model bearing the standard is slain in close combat, then the en
           </constraints>
           <rules>
             <rule id="27e3-0b6f-e7aa-7d3b" name="Mark of the Wulfen" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <description>The model with the Mark receives D3 additional attacks in close combat and always hits on a 3+ regardless of WS. They and unit they are leading automatically pass any Morale checks, and will never fall back or become pinned, and will always hit and be hit on a roll of 3+ in close combat.</description>
+            </rule>
+            <rule id="d185-2720-6980-5c79" name="Mark of the Wulfen" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2682-a24d-27d0-d11d" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <description>A Wolf Guard bearing the Mark is treated as an independent character and must remain on his own at all times. He is allowed to be near another unit, but he cannot join it. A model bearing the Mark of the Wulfen may not be given Terminator Armour, a Jump Pack, nor a Space Marine Bike.
 The model with the Mark receives D3 additional attacks in close combat and always hits on a 3+ regardless of WS. They will pass all Morale and Pinning tests, and may ignore opposing troops or weapons that can cause an opponent to automatically fall back.</description>
             </rule>
