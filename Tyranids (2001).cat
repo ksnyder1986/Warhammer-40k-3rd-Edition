@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="8dbc-55e2-a3e5-a400" name="Tyranids (2001)" revision="1" battleScribeVersion="2.03" authorName="Snyder" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="e504-ec2b-fa1a-4ab3" name="Seeding Swarm" hidden="false"/>
+  </categoryEntries>
   <entryLinks>
     <entryLink id="e2aa-5030-5aff-84ae" name="Hive Tyrant" hidden="false" collective="false" import="true" targetId="23fb-5a5c-921c-6ebc" type="selectionEntry">
       <categoryLinks>
@@ -430,6 +433,13 @@
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="7174-e1f9-6f0d-0416" name="Lictor" hidden="false" collective="false" import="true" defaultSelectionEntryId="c000-b229-d7e0-43e8">
+          <modifiers>
+            <modifier type="set" field="2d11-5b25-8437-847e" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e504-ec2b-fa1a-4ab3" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d11-5b25-8437-847e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bde9-3f6b-0d3d-d052" type="min"/>
@@ -443,6 +453,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="2183-b5ee-51a1-f263" name="Warrior Brood" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -1105,6 +1118,13 @@
     <selectionEntry id="7869-3878-3862-1dfe" name="Zoanthropes" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
         <selectionEntry id="7089-8c4c-9b6a-14f4" name="Zoanthrope" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="4f6c-74f4-18af-3933" value="1.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e504-ec2b-fa1a-4ab3" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f6c-74f4-18af-3933" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45c8-7921-f941-3554" type="min"/>
