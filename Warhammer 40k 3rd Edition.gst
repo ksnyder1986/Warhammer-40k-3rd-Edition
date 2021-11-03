@@ -1657,5 +1657,221 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
+    <profile id="f19e-8c76-141d-c6cd" name="Arc Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Haywire</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="5ff2-56c5-2d6f-a7b2" name="Arc Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Haywire</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="4f31-0690-4742-4577" name="Cognis Autocannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Cognis</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="4938-0bdb-0132-b705" name="Cognis Lascannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Cognis</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a8aa-dfd8-d54b-256d" name="Cognis Heavy Stubber" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Cognis</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="278d-c457-2d02-4ed8" name="Eradication Beamer (Long Range)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;-36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1, Large Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="cfe0-34d3-b5f7-c723" name="Eradication Beamer (Short Range)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">0&quot;-9&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="bb3c-82bf-7b03-4dff" name="Eradication Beamer (Medium Range)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">9&quot;-18&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="e4c1-d6e0-8dfe-a6ac" name="Flechette Blaster" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Burst Pistol</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Shred</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8e4a-d419-0c41-ed89" name="Galvanic Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Precision Shots</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="2c86-ae24-13b3-4822" name="Heavy Phosphor Blaster" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Luminagen</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e836-d5ab-33e7-c33e" name="Daedalus Missile Launcher" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Anti-Air</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="db35-9c4e-e776-3bde" name="Gatling Rocket Launcher" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 5</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores Cover, Anti-Air</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="c066-f363-50d1-bad9" name="Twin Icarus Autocannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Twin-Linked, Anti-Air</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="b4ae-c946-7c0d-da21" name="Mindscrambler Grenade" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">8&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Haywire, Special</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="669c-7fc4-b0a9-b63f" name="Neutron Laser" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Concussive</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="10d5-8c21-5b44-e11d" name="Phosphor Blast Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Luminagen</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="631a-e32f-fc07-8446" name="Phosphor Serpenta" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Luminagen</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="fc81-53fc-8b52-d390" name="Plasma Caliver" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If you roll a 1 to hit with a plasma weapon it has overheated and injured the model firing it. Make an armor save for the model, otherwise it will suffer a wound. Plasma weapons on vehicles are not affected by overheating.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e24f-25dc-6737-84d4" name="Radium Carbine" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Rad Poisoning</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e751-0d8d-19ea-d146" name="Radium Jezzail" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Sniper, Rad Poisoning</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="da37-04f0-e7ad-a05b" name="Stubcarbine" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="8c94-838d-d9f4-a642" name="Radium Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Rad Poisoning</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="f9c9-986f-fa44-3001" name="Transuranic Arquebus" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">60&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Sniper, Armourbane</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
 </gameSystem>
