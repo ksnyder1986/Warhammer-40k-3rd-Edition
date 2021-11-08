@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="002b-f9bb-0155-a9c4" name="Imperial Knights (Homebrew)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <profileTypes>
+    <profileType id="46a1-b555-d7a5-c9f1" name="Super Heavy Walker">
+      <characteristicTypes>
+        <characteristicType id="e0a5-ab6c-b9dd-0426" name="WS"/>
+        <characteristicType id="bb21-1e41-2305-222d" name="BS"/>
+        <characteristicType id="c1f6-37a6-2e99-9b40" name="S"/>
+        <characteristicType id="0c22-6b6d-d76d-1721" name="Front Armour"/>
+        <characteristicType id="336f-76be-174d-c573" name="Side Armour"/>
+        <characteristicType id="0d5d-7d9a-7bef-1032" name="Rear Armour"/>
+        <characteristicType id="0cda-3182-b6ca-4a1c" name="I"/>
+        <characteristicType id="f8ee-6fb4-e468-83e8" name="A"/>
+        <characteristicType id="9ff7-6201-8ac9-f4be" name="Structure Points"/>
+      </characteristicTypes>
+    </profileType>
+  </profileTypes>
+  <entryLinks>
+    <entryLink id="9c01-fadf-1aa3-cc38" name="Knight Errant" hidden="false" collective="false" import="true" targetId="b6eb-b23c-b938-b454" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="38c5-a94d-328a-23fb" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0ad4-3d56-a6fe-5ebd" name="Knight Paladin" hidden="false" collective="false" import="true" targetId="aa29-ff8a-ec1c-8663" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="5508-7356-2bf4-af7d" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9f1d-d943-4bd2-11a6" name="Knight Crusader" hidden="false" collective="false" import="true" targetId="1856-0b0a-f160-391a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c403-925e-bee4-46e7" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f301-37a1-be8b-a5ab" name="Knight Warden" hidden="false" collective="false" import="true" targetId="8e18-88de-54c0-f209" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="8cfb-e542-4959-0465" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="5e54-fbac-282c-5cf8" name="Knight Gallant" hidden="false" collective="false" import="true" targetId="f271-a1a8-bc51-749d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="003c-1e7e-0634-e1b3" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
+  <sharedSelectionEntries>
+    <selectionEntry id="1856-0b0a-f160-391a" name="Knight Crusader" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>190 Points without weapons</comment>
+      <infoLinks>
+        <infoLink id="36f7-85a3-8fb3-b528" name="Imperial Knight" hidden="false" targetId="0695-848b-9810-966a" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="a359-866a-c5a0-c3d7" name="Ion Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>35 Points for the Ion Field (could be +35 for additional charges?)</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="425c-0aab-438a-3e8a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="776e-d595-dd9b-0788" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8784-62cf-42e1-355f" name="Ion Shield" hidden="false" targetId="37f7-73b9-c18f-f345" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e0e8-ac4b-ce8e-7a33" name="Avenger Gatling Cannon" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>20+150%(gatling)+25%(rending). The rending percent is just something I invented by seeinbg how Gaussflayers are 5 points vs boltguns being 4 points.</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1600-9f7d-1a59-d2fc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3316-ad8d-c088-cc54" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6d91-3e18-42f4-d0ff" name="Avenger Gatling Cannon" hidden="false" targetId="feb9-c4bf-98c9-9cef" type="profile"/>
+            <infoLink id="3d94-8dcd-751f-f45b" name="Rending" hidden="false" targetId="decf-8204-53f9-cc6e" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b519-7fcf-676f-e2ed" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a870-e09b-cb61-0807" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a17-326e-1d84-a59f" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="e26a-bd1c-208f-bfe0" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0be3-1e80-0028-613f" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="49ce-15a8-bd54-317b">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d01-4d23-bbd9-6a0e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbd8-bdbf-acc0-4915" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="49ce-15a8-bd54-317b" name="Heavy Stubber" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="62a6-70f3-c7a0-772c" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bef0-381a-f443-ddc8" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="9019-fda7-0263-06c1" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6849-2afc-f7a6-4503" name="Weapon Choice" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7489-cc21-a275-7cd6" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9250-a26a-f9dd-7483" name="Ironstorm Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40 Base (whirlwind)+20(long barrel)</comment>
+              <infoLinks>
+                <infoLink id="ee68-2929-3a11-2426" name="Ironstorm Missile Pod" hidden="false" targetId="396a-9df5-13ac-aef1" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="225c-21bd-67d3-a3b3" name="Twin Icarus Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>35+35 (twin-linked and anti-air)</comment>
+              <infoLinks>
+                <infoLink id="ca15-d929-65b8-61ee" name="Twin Icarus Autocannon" hidden="false" targetId="2881-3096-6181-bc4a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3fd0-bc37-b196-be78" name="Stormspear Rocket Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40+40 (Gun Battery(2))</comment>
+              <infoLinks>
+                <infoLink id="b8cb-edff-ea61-f7d1" name="Stormspear Rocket Pod" hidden="false" targetId="8512-f87d-8340-57a6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b919-5a2b-2967-23ef" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="dfce-0e60-70e3-ab92">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d97-3736-37de-fd9b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02e6-8f4f-e0c0-0ead" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="dfce-0e60-70e3-ab92" name="Thermal Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>Thermal Cannon costs: Multi-melta base 40, Blast 150% increase, +100% for long range (make it 36&quot;)</comment>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3aa9-b657-3828-3a3f" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10a6-7ecf-dcea-9534" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="9491-4c0a-c3de-a2a1" name="Thermal Cannon" hidden="false" targetId="1662-d874-e9a2-e924" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b4ad-9bc9-ceeb-cde4" name="Rapid-Fire Battle Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>50 Base+25 (Gun Battery)</comment>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f14-de23-8d39-b5de" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5d1-0600-7264-a2d1" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1736-8113-93fb-d2b8" name="Rapid-fire Battle Cannon" hidden="false" targetId="23ce-aa13-d3ac-a2b0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="190.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aa29-ff8a-ec1c-8663" name="Knight Paladin" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>190 Points without weapons</comment>
+      <infoLinks>
+        <infoLink id="1f2c-fecf-bbc7-b97f" name="Imperial Knight" hidden="false" targetId="0695-848b-9810-966a" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="685e-0de8-4880-54d9" name="Ion Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>35 Points for the Ion Field (could be +35 for additional charges?)</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c74-456e-b43f-0c89" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d279-f048-7b10-92a3" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="bcad-9fa6-c6ea-4655" name="Ion Shield" hidden="false" targetId="37f7-73b9-c18f-f345" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2ce3-5f17-6ea6-8e4d" name="Rapid-Fire Battle Cannon" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>50 Base+25 (Gun Battery)</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e242-3ab2-8c48-8872" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9ac-590a-a2bd-499f" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="e55b-4cb0-a196-9866" name="Rapid-fire Battle Cannon" hidden="false" targetId="23ce-aa13-d3ac-a2b0" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9f2f-92c0-9c07-2e8e" name="Heavy Stubber" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21fe-11ee-a48c-ce65" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5368-3c02-fbd5-190f" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="afcd-9e86-3060-4711" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="17.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1c8a-436b-3576-7ba5" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="cd8d-da4c-6595-bd6d">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d11-11d3-059e-bb66" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="450f-208a-b124-f436" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="cd8d-da4c-6595-bd6d" name="Reaper Chainsword" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="991e-6ac2-304c-03f4" name="Reaper Chainsword" hidden="false" targetId="824a-9656-67f5-2378" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ea91-48e8-7e19-ac93" name="Thunderstrike Gauntlet" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="8790-d0dd-f4ee-ab7a" name="Thunderstrike Gauntlet" hidden="false" targetId="126d-6315-6c45-e8ae" type="profile"/>
+                <infoLink id="556f-2b5e-b591-2f02" name="Hurl" hidden="false" targetId="bde7-4adb-925c-904d" type="profile"/>
+                <infoLink id="cd8a-46f6-1deb-c8f6" name="Colossal" hidden="false" targetId="372f-165c-9154-a560" type="rule"/>
+                <infoLink id="e060-8500-8efc-d2aa" name="Hurl" hidden="false" targetId="f19c-6bd0-d25d-7807" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6dc1-5c09-ec3c-5308" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="ca2a-afa6-9e0e-9af9">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="463e-0980-a5e3-b038" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93c8-25f4-1df8-7385" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ca2a-afa6-9e0e-9af9" name="Heavy Stubber" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="80fa-d90b-e9e2-dc8d" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d2ba-c42a-653b-5c77" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="3bf0-df9d-5ba9-639c" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="0cda-ffe7-50f1-5f67" name="Weapon Choice" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb3b-290f-1503-a3e2" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="eeec-748b-0dbc-11bb" name="Ironstorm Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40 Base (whirlwind)+20(long barrel)</comment>
+              <infoLinks>
+                <infoLink id="2b2c-5c20-ada2-b445" name="Ironstorm Missile Pod" hidden="false" targetId="396a-9df5-13ac-aef1" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="233b-de8f-9dba-3bb8" name="Twin Icarus Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>35+35 (twin-linked and anti-air)</comment>
+              <infoLinks>
+                <infoLink id="9995-bc23-8b42-7e03" name="Twin Icarus Autocannon" hidden="false" targetId="2881-3096-6181-bc4a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="31ea-6249-7587-c105" name="Stormspear Rocket Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40+40 (Gun Battery(2))</comment>
+              <infoLinks>
+                <infoLink id="0567-dc26-7dae-dbd9" name="Stormspear Rocket Pod" hidden="false" targetId="8512-f87d-8340-57a6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="190.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8e18-88de-54c0-f209" name="Knight Warden" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>190 Points without weapons</comment>
+      <infoLinks>
+        <infoLink id="d1b3-7c64-eff8-518c" name="Imperial Knight" hidden="false" targetId="0695-848b-9810-966a" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="6498-e9b6-1510-641f" name="Ion Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>35 Points for the Ion Field (could be +35 for additional charges?)</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d003-4c29-b44d-5702" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a37e-404c-dd8a-ef1a" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="a83a-e207-d425-a0d3" name="Ion Shield" hidden="false" targetId="37f7-73b9-c18f-f345" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0070-a764-4009-1b00" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5599-33d9-41f4-0e10" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1727-a6b9-39f8-4560" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="f312-8ade-93da-79f1" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c4d4-c06c-429a-a3ba" name="Avenger Gatling Cannon" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>20+150%(gatling)+25%(rending). The rending percent is just something I invented by seeinbg how Gaussflayers are 5 points vs boltguns being 4 points.</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c685-201e-f973-0097" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a97d-e2e3-99f7-ee0c" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="14d2-b4d9-bd40-7934" name="Avenger Gatling Cannon" hidden="false" targetId="feb9-c4bf-98c9-9cef" type="profile"/>
+            <infoLink id="9905-075c-a199-3c4d" name="Rending" hidden="false" targetId="decf-8204-53f9-cc6e" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2407-ff17-22fa-3eba" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="a9f4-bb09-c7be-3938">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6153-6bc8-1354-dae0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6466-674a-4045-9e18" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a9f4-bb09-c7be-3938" name="Heavy Stubber" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="84c2-9073-1909-c30c" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="826c-ea64-6e0d-1de7" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="bd22-7488-7fa6-7e90" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b120-0a52-f5f9-0369" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="9823-4b70-4b15-66df">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb90-2a4b-c1e8-da9f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a531-204e-d56a-a932" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9823-4b70-4b15-66df" name="Reaper Chainsword" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="f588-a9bb-c2ce-e4ad" name="Reaper Chainsword" hidden="false" targetId="824a-9656-67f5-2378" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="97db-0e0d-a75b-a973" name="Thunderstrike Gauntlet" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="69e6-c24a-e84c-b12b" name="Thunderstrike Gauntlet" hidden="false" targetId="126d-6315-6c45-e8ae" type="profile"/>
+                <infoLink id="23a8-04cc-d1c4-d658" name="Colossal" hidden="false" targetId="372f-165c-9154-a560" type="rule"/>
+                <infoLink id="57f4-ec1d-8e3d-f773" name="Hurl" hidden="false" targetId="f19c-6bd0-d25d-7807" type="rule"/>
+                <infoLink id="a21f-4b1a-9926-b045" name="Hurl" hidden="false" targetId="bde7-4adb-925c-904d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ea75-2b5e-f9d0-25a8" name="Weapon Choice" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2b9-83ee-3a94-19b1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="caa0-47d6-2382-2e7b" name="Ironstorm Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40 Base (whirlwind)+20(long barrel)</comment>
+              <infoLinks>
+                <infoLink id="83c3-3491-5f7c-5fa3" name="Ironstorm Missile Pod" hidden="false" targetId="396a-9df5-13ac-aef1" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ab48-32f8-6f5a-c723" name="Twin Icarus Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>25+25 (twin-linked and anti-air)</comment>
+              <infoLinks>
+                <infoLink id="3cd7-5c1c-39be-51a2" name="Twin Icarus Autocannon" hidden="false" targetId="2881-3096-6181-bc4a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="47cf-ff9b-93b6-280d" name="Stormspear Rocket Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40+40 (Gun Battery(2))</comment>
+              <infoLinks>
+                <infoLink id="2b41-eb80-c06c-1e37" name="Stormspear Rocket Pod" hidden="false" targetId="8512-f87d-8340-57a6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="190.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f271-a1a8-bc51-749d" name="Knight Gallant" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>190 Points without weapons</comment>
+      <infoLinks>
+        <infoLink id="adcf-0e45-96b8-d3ae" name="Imperial Knight" hidden="false" targetId="0695-848b-9810-966a" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="cdd5-fa7f-fbde-5881" name="Ion Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>35 Points for the Ion Field (could be +35 for additional charges?)</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6554-9e6b-91cb-5f47" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="477e-577b-5ea6-288d" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8a6f-b992-d015-7ce6" name="Ion Shield" hidden="false" targetId="37f7-73b9-c18f-f345" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="94a4-2f99-9181-e29d" name="Reaper Chainsword" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2895-f80b-30db-3f56" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2312-8088-4bd4-4faa" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6796-bb0e-92ef-68d3" name="Reaper Chainsword" hidden="false" targetId="824a-9656-67f5-2378" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="eee2-ae44-156a-68cd" name="Thunderstrike Gauntlet" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea82-9994-c796-9185" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33be-039d-8854-f7a6" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="893b-985d-7fe9-05e0" name="Thunderstrike Gauntlet" hidden="false" targetId="126d-6315-6c45-e8ae" type="profile"/>
+            <infoLink id="c93e-eae4-c155-1e38" name="Hurl" hidden="false" targetId="f19c-6bd0-d25d-7807" type="rule"/>
+            <infoLink id="c3d4-637b-fd28-09ae" name="Colossal" hidden="false" targetId="372f-165c-9154-a560" type="rule"/>
+            <infoLink id="ff4a-fe42-f3d7-a463" name="Hurl" hidden="false" targetId="bde7-4adb-925c-904d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8f5b-142f-16db-ef63" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="9733-5847-a9b0-315d">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53fc-3054-47f0-11f4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7645-0190-dcfe-a48b" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9733-5847-a9b0-315d" name="Heavy Stubber" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="f83f-dff8-a607-1cda" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="41d0-4824-dfb4-d07d" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="d00e-8b92-7b69-11f0" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="49bf-ba06-97b4-9606" name="Weapon Choice" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="674a-1169-378c-60a9" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fc21-1134-4c80-de83" name="Ironstorm Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40 Base (whirlwind)+20(long barrel)</comment>
+              <infoLinks>
+                <infoLink id="b65f-6ff2-c483-6e0e" name="Ironstorm Missile Pod" hidden="false" targetId="396a-9df5-13ac-aef1" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3e55-c508-f6db-dd02" name="Twin Icarus Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>25+25 (twin-linked and anti-air)</comment>
+              <infoLinks>
+                <infoLink id="bd62-42f2-9462-108b" name="Twin Icarus Autocannon" hidden="false" targetId="2881-3096-6181-bc4a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a008-de08-1187-0273" name="Stormspear Rocket Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40+40 (Gun Battery(2))</comment>
+              <infoLinks>
+                <infoLink id="1e02-abf5-6aab-9863" name="Stormspear Rocket Pod" hidden="false" targetId="8512-f87d-8340-57a6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="190.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b6eb-b23c-b938-b454" name="Knight Errant" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>190 Points without weapons or options (from vehicle design rules)
+
+</comment>
+      <infoLinks>
+        <infoLink id="e613-7155-8238-c49f" name="Imperial Knight" hidden="false" targetId="0695-848b-9810-966a" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="34cc-c39a-ffc8-87cb" name="Thermal Cannon" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>Thermal Cannon costs: Multi-melta base 40, Blast 150% increase, +100% for long range (make it 36&quot;)</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69ec-6b8f-2c66-1626" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="107c-17a0-2096-1fba" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7e84-77b1-b9b8-b91a" name="Thermal Cannon" hidden="false" targetId="1662-d874-e9a2-e924" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9ea4-15b5-2017-2004" name="Ion Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>35 Points for the Ion Field (could be +35 for additional charges?)</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cd8-eb91-6bf8-6389" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed2e-a156-bdc8-a3d5" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="546c-b987-ea4c-ae78" name="Ion Shield" hidden="false" targetId="37f7-73b9-c18f-f345" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="396a-909d-7ec8-4781" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="9134-cfe6-ff09-9acc">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f74e-9eca-a882-8fb4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c6a-8652-e593-4be6" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9134-cfe6-ff09-9acc" name="Heavy Stubber" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="1871-ea99-c5db-ed0a" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="242f-f093-a14a-49e1" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="fe52-bcb4-2dc2-a50f" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="c310-b12c-666c-2000" name="Weapon Choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="a7b9-f118-b843-e860">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5e5-a00c-fdb2-4b20" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbe7-6fed-ea85-4fe5" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a7b9-f118-b843-e860" name="Reaper Chainsword" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="4b64-177b-901a-6761" name="Reaper Chainsword" hidden="false" targetId="824a-9656-67f5-2378" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="32ba-1d2a-ffd7-aafb" name="Thunderstrike Gauntlet" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="2ece-9492-dc4a-ad30" name="Thunderstrike Gauntlet" hidden="false" targetId="126d-6315-6c45-e8ae" type="profile"/>
+                <infoLink id="3d9b-09cc-7194-05c9" name="Hurl" hidden="false" targetId="bde7-4adb-925c-904d" type="profile"/>
+                <infoLink id="4860-0c09-68b7-a309" name="Colossal" hidden="false" targetId="372f-165c-9154-a560" type="rule"/>
+                <infoLink id="066e-1b2a-c5c7-aeaa" name="Hurl" hidden="false" targetId="f19c-6bd0-d25d-7807" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="743b-1bce-2c9b-d4d4" name="Weapon Choice" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="618a-bc8a-6024-5c19" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3635-372d-8502-ef99" name="Ironstorm Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40 Base (whirlwind)+20(long barrel)</comment>
+              <infoLinks>
+                <infoLink id="710b-ed6f-6c40-0686" name="Ironstorm Missile Pod" hidden="false" targetId="396a-9df5-13ac-aef1" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7ab8-6047-a2df-bc8a" name="Twin Icarus Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>35+35 (twin-linked and anti-air)</comment>
+              <infoLinks>
+                <infoLink id="9ca8-f65c-d49d-3d9d" name="Twin Icarus Autocannon" hidden="false" targetId="2881-3096-6181-bc4a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3bb6-0927-cfd3-d1e4" name="Stormspear Rocket Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>40+40 (Gun Battery(2))</comment>
+              <infoLinks>
+                <infoLink id="5a52-788e-41c6-b007" name="Stormspear Rocket Pod" hidden="false" targetId="8512-f87d-8340-57a6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="190.0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedRules>
+    <rule id="372f-165c-9154-a560" name="Colossal" hidden="false">
+      <description>Strike at Initiative 1</description>
+    </rule>
+    <rule id="f19c-6bd0-d25d-7807" name="Hurl" hidden="false">
+      <description>If the Knight destroys a monstrous creature or vechile in the melee phase, it can choose to hurl it. Gargantuan creatures and super-heavy vehicles cannot be thrown. To hurl an enemy model, immediately resolve a shooting attack an enemy unit within 12&quot; that is not locked in combat. The hurled model is removed from the battlefield after the attack has been resolved.</description>
+    </rule>
+    <rule id="decf-8204-53f9-cc6e" name="Rending" hidden="false">
+      <description>To wound rolls of 6 auto wound the target regardless of toughness, and are resolved at AP 2.</description>
+    </rule>
+    <rule id="37f7-73b9-c18f-f345" name="Ion Shield" hidden="false">
+      <description>Ignore one glancing or penetrating hit. The Ion Shield is reactiviated on a D6 roll of 6 at the start of a future turn.</description>
+    </rule>
+  </sharedRules>
+  <sharedProfiles>
+    <profile id="0695-848b-9810-966a" name="Imperial Knight" hidden="false" typeId="46a1-b555-d7a5-c9f1" typeName="Super Heavy Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="e0a5-ab6c-b9dd-0426">4</characteristic>
+        <characteristic name="BS" typeId="bb21-1e41-2305-222d">4</characteristic>
+        <characteristic name="S" typeId="c1f6-37a6-2e99-9b40">10</characteristic>
+        <characteristic name="Front Armour" typeId="0c22-6b6d-d76d-1721">13</characteristic>
+        <characteristic name="Side Armour" typeId="336f-76be-174d-c573">12</characteristic>
+        <characteristic name="Rear Armour" typeId="0d5d-7d9a-7bef-1032">12</characteristic>
+        <characteristic name="I" typeId="0cda-3182-b6ca-4a1c">4</characteristic>
+        <characteristic name="A" typeId="f8ee-6fb4-e468-83e8">3</characteristic>
+        <characteristic name="Structure Points" typeId="9ff7-6201-8ac9-f4be">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="824a-9656-67f5-2378" name="Reaper Chainsword" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="126d-6315-6c45-e8ae" name="Thunderstrike Gauntlet" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Colossal, Hurl</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="feb9-c4bf-98c9-9cef" name="Avenger Gatling Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <comment>Heavy Bolter, with Gatling Rule, and Additional Upcharge for Rending</comment>
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3D3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Rending</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="396a-9df5-13ac-aef1" name="Ironstorm Missile Pod" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1, Large Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="23ce-aa13-d3ac-a2b0" name="Rapid-fire Battle Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2, Large Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="1662-d874-e9a2-e924" name="Thermal Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <comment>Turn into a multi-melta with 12&quot; extra range and a small blast, instead of the larger weapon in 8th edition. This is to reign in the cost of the item.</comment>
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Melta</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="2881-3096-6181-bc4a" name="Twin Icarus Autocannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Twin-linked, Anti-Air</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8512-f87d-8340-57a6" name="Stormspear Rocket Pod" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="bde7-4adb-925c-904d" name="Hurl" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">*</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Strength is equal to the Toughness or half the Front Armour of the thrown model.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+</catalogue>
