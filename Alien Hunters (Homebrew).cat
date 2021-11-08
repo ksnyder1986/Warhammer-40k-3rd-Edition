@@ -187,6 +187,9 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="c769-f293-be5b-4982" name="Inquisitor Gideon Ravenor" hidden="false" collective="false" import="true" targetId="4756-8176-6805-75b1" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3122-67fb-5985-e855" type="max"/>
       </constraints>
@@ -220,22 +223,6 @@
         <categoryLink id="f041-1bca-9ff2-99fe" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="4b6b-491c-5098-f7e3" name="Ortan Cassius" hidden="false" collective="false" import="true" targetId="51be-cf1e-b87e-de14" type="selectionEntry">
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad6f-b875-f483-e99e" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="a91e-8876-1959-d315" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink id="e397-7f11-754c-dc58" name="Jensus Natorian" hidden="false" collective="false" import="true" targetId="11cb-2bf9-cde9-51e3" type="selectionEntry">
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47db-9286-61f8-df85" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="c6b8-a720-da07-4e27" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink id="cfe6-153d-ba36-258a" name="Watch Captain Artemis" hidden="true" collective="false" import="true" targetId="fe20-d4d9-bd2c-a1ba" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
@@ -266,9 +253,94 @@
         <categoryLink id="5922-9e17-0a74-3a6b" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="3e9e-2d15-f402-6c05" name="Seer Council" hidden="true" collective="false" import="true" targetId="4f2c-5736-d463-fac0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4756-8176-6805-75b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a9b-c06c-1d2e-615e" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="1aaf-cbd6-55e5-e6bd" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+        <categoryLink id="641d-7a43-ac1e-4641" name="Ulthwe" hidden="false" targetId="2585-cdc1-80b7-c393" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f0d2-5e9c-3980-85e1" name="Black Guardian Defender Squad" hidden="true" collective="false" import="true" targetId="148d-380e-0852-ca5e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f2c-5736-d463-fac0" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4756-8176-6805-75b1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bee-a901-dc07-5199" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="e72c-08aa-73b1-500c" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="9711-58da-11ca-e7a0" name="Ulthwe" hidden="false" targetId="2585-cdc1-80b7-c393" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="18fd-8e25-ceb7-dbea" name="Dark Reapers" hidden="true" collective="false" import="true" targetId="5fe4-0c62-cde4-77c4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f2c-5736-d463-fac0" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4756-8176-6805-75b1" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc88-370b-7f25-26c0" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="6e2a-b8fb-3f5a-65c0" name="Ulthwe" hidden="false" targetId="2585-cdc1-80b7-c393" primary="false"/>
+        <categoryLink id="e701-6450-48c1-ed87" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a0ab-ddd4-f3af-427e" name="Cherubael" hidden="true" collective="false" import="true" targetId="0c7c-366f-7db2-d82c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cbb8-266b-5683-c883" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ab9-0f71-ba96-b4d1" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="969b-2c76-f018-e73c" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="025b-45e6-34ab-0a5b" name="Ordo Xenos Inquisitor Lord" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4756-8176-6805-75b1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cbb8-266b-5683-c883" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15db-01bd-5a8b-1d1f" type="max"/>
       </constraints>
@@ -285,7 +357,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="f84c-0eaf-6185-7622" name="Psychic Powers" hidden="false" collective="false" import="true" targetId="ad00-67b6-ee12-a4a3" type="selectionEntryGroup"/>
-        <entryLink id="26b7-e093-4b2c-67b5" name="Daemon Hunter Armoury" hidden="false" collective="false" import="true" targetId="3948-dd65-80fc-1bc3" type="selectionEntryGroup"/>
+        <entryLink id="26b7-e093-4b2c-67b5" name="Ordo Xenos Armoury" hidden="false" collective="false" import="true" targetId="3948-dd65-80fc-1bc3" type="selectionEntryGroup"/>
         <entryLink id="dbaf-5c3d-d213-4ebf" name="Inquisitor&apos;s Retinue" hidden="false" collective="false" import="true" targetId="cf17-268d-1756-7768" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
@@ -438,8 +510,24 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6d9c-5cb1-3171-08c2" name="Ordo Xenos Inquisitor" hidden="false" collective="false" import="true" type="upgrade">
+      <rules>
+        <rule id="184e-ab57-4732-5020" name="Iron Will" hidden="false">
+          <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="d5dd-0351-2655-cb1c" name="Inquisitor" hidden="false" targetId="72c3-69e3-f147-f126" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="30e6-0626-017f-f541" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b6e4-0a65-fead-922d" name="Psychic Powers" hidden="false" collective="false" import="true" targetId="ad00-67b6-ee12-a4a3" type="selectionEntryGroup"/>
+        <entryLink id="4276-89ab-42f0-fadd" name="Ordo Xenos Armoury" hidden="false" collective="false" import="true" targetId="3948-dd65-80fc-1bc3" type="selectionEntryGroup"/>
+        <entryLink id="411b-51f4-e188-4c09" name="Inquisitor&apos;s Retinue" hidden="false" collective="false" import="true" targetId="cf17-268d-1756-7768" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dbd4-1d59-b806-6b20" name="Deathwatch Chaplain" hidden="false" collective="false" import="true" type="model">
@@ -528,29 +616,418 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="fe20-d4d9-bd2c-a1ba" name="Watch Captain Artemis" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>160</comment>
+      <rules>
+        <rule id="a7ac-bb02-17b0-625a" name="Stasis Bomb" hidden="false">
+          <description>Once per game, Artemis can throw the Statis Bomb at a target within 6&quot;. Resolve D6 S10 AP 1 hits against the target.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="72ad-a567-0084-0146" name="Master of Tactics" hidden="false" targetId="f509-abf7-faf2-ba2e" type="rule"/>
+        <infoLink id="92bb-dd87-a0ab-6300" name="Watch Captain Artemis" hidden="false" targetId="21d5-90bd-9bef-6354" type="profile"/>
+        <infoLink id="c72b-44ea-285d-4dfa" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
+        <infoLink id="6d74-777c-9633-27e8" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+        <infoLink id="5c72-00d5-9f0c-d60d" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+        <infoLink id="8da2-69ce-dc8a-c2c3" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+        <infoLink id="c66d-b116-d845-e64a" name="Iron Halo" hidden="false" targetId="04ef-3dda-69b8-e59b" type="rule"/>
+        <infoLink id="3215-ba77-cc1f-26b8" name="Bionics" hidden="false" targetId="b53f-9f84-e2e3-6f3d" type="rule"/>
+        <infoLink id="9bae-58a7-a614-da62" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Hellfire Extremis (Bolter)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="7fd9-5791-39af-8bbb" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Hellfire Extremis (Combi-Flamer)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="139c-23f5-2f30-76fa" name="Mission Tactics" hidden="false" targetId="8454-b9d6-c0c6-01d6" type="rule"/>
       </infoLinks>
-      <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="11cb-2bf9-cde9-51e3" name="Jensus Natorian" hidden="false" collective="false" import="true" type="upgrade">
-      <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="51be-cf1e-b87e-de14" name="Ortan Cassius" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="2734-6d32-79ca-bc3d" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cbb8-266b-5683-c883" name="Inquisitor Gregor Eisenhorn" hidden="false" collective="false" import="true" type="upgrade">
+      <comment></comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4756-8176-6805-75b1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9fd-e7f8-8ed2-7da9" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4a90-2ea8-2599-f32b" name="Gregor Eisenhorn" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="4ca8-0f9e-a374-90ea" name="Iron Will" hidden="false">
+          <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
+        </rule>
+        <rule id="f765-2842-b9c9-e41a" name="The Voice" hidden="false">
+          <description>Use this Psyker phase in the shooting phase by targetting an enemy unit within 24&quot;. If the psychic test is passed, roll D6 for both Eisenhorn and the target unit, adding the Leadership of both units. If Eisenhorn&apos;s total exceeds the target unit, all shooting attacks at that unit are at +1 to hit for the whole of the Shooting Phase.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="082c-91a3-21c5-9525" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Naval Pattern Scipio Stub Pistol "/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="70e7-a170-1f62-3b8f" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Barbarisater"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="bbc1-5f23-f558-ed94" name="Force Weapon" hidden="false" targetId="e5ab-52f0-b14b-e93c" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Rune Staff"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="b1ad-6484-f10d-2ea5" name="Smite" hidden="false" targetId="f05c-fa42-c91b-f6b6" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="8f05-a040-b0c3-e955" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6ee-c7c4-4099-e95b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c8b-499b-0009-5327" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="afb8-83de-8d21-0c4b" name="Alizebeth Bequin" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c701-6a78-b028-c158" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e629-5a68-db3b-91b9" type="min"/>
+              </constraints>
+              <rules>
+                <rule id="3121-d6c2-6f04-4930" name="Blank" hidden="false">
+                  <description>While Alizebeth is alive, any psychic powers targeting Eisenhorn or his retinue, or include them in their area of effect, fails on a 4+.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="a7a4-dd8b-70ab-845a" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Duel Laspistols"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="d3dc-7f8f-02d2-9c4f" name="Henchman" hidden="false" targetId="f1c0-f909-74b0-8a4b" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Alizebeth Bequin"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b7a2-b1a2-6ab7-1cbb" name="Gideon Ravenor" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a68b-f88e-8c21-6a8d" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8133-80c1-ae48-a756" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8668-6071-aa2e-815e" name="Henchman" hidden="false" targetId="f1c0-f909-74b0-8a4b" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Gideon Ravenor"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="e314-7c31-bbd3-b20b" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink id="f07e-ab80-7b8f-4e55" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+                <infoLink id="83a3-e2f0-8cca-e877" name="Smite" hidden="false" targetId="f05c-fa42-c91b-f6b6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="26.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ebc2-0286-b03e-9745" name="Godwyn Fischig" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07a2-5899-e58c-b5b4" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5525-5e55-f038-3c6b" type="min"/>
+              </constraints>
+              <rules>
+                <rule id="ce30-8a47-c4bf-a142" name="Stunner" hidden="false">
+                  <description>A model that suffers a wound from Godwyn Fischig has their WS reduced to 1 and movement rate reduced to 0&quot; until the next Alien Hunter&apos;s turn.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="21bf-56c3-77a3-4047" name="Henchman" hidden="false" targetId="f1c0-f909-74b0-8a4b" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Godwyn Fischig"/>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4"/>
+                    <modifier type="set" field="b309-5233-122f-82bb" value="4+"/>
+                    <modifier type="set" field="7928-3a9b-6080-ed95" value="4"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="f18a-56c0-a9b7-46b4" name="Shotgun" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="14.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7642-91f8-95ed-bca2" name="Harlon Nayl" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8515-85d9-7454-be9d" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3e2-deb1-522d-6f83" type="min"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3085-c2f5-6107-c93f" name="Henchman" hidden="false" targetId="f1c0-f909-74b0-8a4b" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Harlon Nayl"/>
+                    <modifier type="set" field="e5f6-94c4-de8c-5fa8" value="4"/>
+                    <modifier type="set" field="df03-6292-d3f5-f778" value="4"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="b687-baff-f70d-190b" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Autogun"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="8e4f-6367-f405-889e" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4498-90a0-0ae5-412a" name="Kara Swole" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5c9-5717-2af7-fabe" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="204d-d9e9-a50f-ee14" type="min"/>
+              </constraints>
+              <rules>
+                <rule id="c797-501f-3e50-c964" name="Kara Swole" hidden="false">
+                  <description>Kara Swole always has a 4+ cover save. Models in base-to-base contact with Kara Swole halves their WS (rounding up)</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="9103-ba88-5eb2-39ed" name="Henchman" hidden="false" targetId="f1c0-f909-74b0-8a4b" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Kara Swole"/>
+                    <modifier type="set" field="eeda-4fb4-901e-b70d" value="4"/>
+                    <modifier type="set" field="c704-6128-f143-935a" value="4"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="dad2-3c0d-266b-4696" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="ee19-b0e9-ee3b-83dd" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Autopistol"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cd06-d7e8-8c47-b118" name="Lucius Devlan" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5981-50bc-6d82-a27e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a34b-9d0b-f2f1-3d7f" type="min"/>
+              </constraints>
+              <rules>
+                <rule id="ba5e-cc57-96b6-74f1" name="Lucius Devlan" hidden="false">
+                  <description>Lucius Devlan fields two autopistols, which act as a twin-linked autopistol.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="f0f5-2e28-b6fa-8bd3" name="Henchman" hidden="false" targetId="f1c0-f909-74b0-8a4b" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Lucius Devian"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="b258-4fea-d89b-cf2e" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Duel Autopistols"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="06a2-3d1c-1983-84d8" name="Uber Aemos" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a86-d6c5-feb3-0553" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82aa-9b64-ecaa-1583" type="min"/>
+              </constraints>
+              <rules>
+                <rule id="8f10-3020-4e61-48f5" name="Uber Aemos" hidden="false">
+                  <description>As long as Aemos is alive, Eisenhorn and all members of his retinue have +1 BS.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="fa27-c84c-9f7e-e224" name="Henchman" hidden="false" targetId="f1c0-f909-74b0-8a4b" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Uber Aemos"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry id="12e6-5e2c-661a-a2cd" name="Guncutter" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d84-98b3-ab0f-dc2f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5828-d93b-57ba-d64b" name="Guncutter" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+              <characteristics>
+                <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+                <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+                <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+                <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="df37-575c-e02a-9236" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+            <infoLink id="fec8-09aa-7fdb-6982" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+            <infoLink id="c489-7726-b6bd-4362" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="2x Autocannons"/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="ac23-99ad-b06f-8c4d" name="VTOL Hover Mode" hidden="false" targetId="bc73-210b-4a3f-c9aa" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="126.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4756-8176-6805-75b1" name="Inquisitor Gideon Ravenor" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cbb8-266b-5683-c883" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25dd-b0dc-d426-53f0" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="ebfa-8254-261c-59ea" name="Iron Will" hidden="false">
+          <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="027d-22d6-2e0e-75d6" name="Retinue" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="eb9c-a9e0-f4e2-4ad9" name="Kara Swole" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="077a-7d59-e8ba-b04f" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2de-d1e5-f210-5322" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eec3-37e8-d84c-cfd0" name="Harlon Nayl" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86cc-8217-6532-f8ad" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fee3-1faf-769f-3cfa" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8f8d-792c-5581-2134" name="Angharad Esw Sweydyr" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2c2-08bc-7aec-5e44" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5869-2d5f-3e30-c57b" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a3bc-358e-ac39-f231" name="Patience Kys" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0da-85b6-f9fd-5244" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4fa-9536-ddb0-4c42" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="db12-5afc-5ca0-9fa6" name="Zeph Mathuin" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="942b-9688-cac1-58b9" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c5d-ac7e-5d13-5972" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e5fe-e416-9548-027f" name="Wystan Frauka" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49bd-1de0-4416-9e95" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eff-59f4-fc2b-f5a3" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f99e-e4bb-aa70-b090" name="Zael Effernetti" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bb8-eb76-fd23-c055" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9993-c5bc-32d9-c78c" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="453e-fc66-7899-034c" name="Carl Thonius" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e565-227f-d37e-8293" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6183-e66d-9ad3-b9fb" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e2f3-626a-338d-f6f8" name="Maud Plyton" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7915-00ac-41de-a20a" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84aa-3229-194e-14fa" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
@@ -1889,6 +2366,53 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="0c7c-366f-7db2-d82c" name="Cherubael" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="680e-c5b1-f989-b742" name="Daemonhosts" hidden="false" collective="false" import="true" defaultSelectionEntryId="e5ef-8b81-0737-c80f">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2663-f0ea-2d54-78bd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d11-d621-ddb7-fe41" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e5ef-8b81-0737-c80f" name="Cherubael" hidden="false" collective="false" import="true" type="model">
+              <rules>
+                <rule id="bd2e-a2bb-b30b-44d4" name="Summoned" hidden="false">
+                  <description>Daemonhosts may be held in reserve and enter play by Deep Strike, even in missions which do not normally allow Deep Strike or Reserves.</description>
+                </rule>
+                <rule id="c718-2bb6-7c0e-0d1d" name="Psyker" hidden="false">
+                  <description>Roll a D6 for each Daemonhost at the beginning of each of the Daemonhunter player&apos;s turns to determine which psychic power it can manifest unti the beginning of the next turn, at which point a new power is rolled. Daemonhosts automatically pass all Psychic tests, but their psychic powers may be countered by Psychic Hoods and other such items.
+1. Terrify
+2. Re-knit Host Form
+3. Teleport
+4. Bloodboil
+5. Timeshift
+6. Warp Strength</description>
+                </rule>
+                <rule id="d29c-8fc1-02c4-c6ea" name="Daemonhost" hidden="false">
+                  <description>Daemonhosts operate independently during the game and may not join units or ride in vehicles. For the purposes of mission objectives, Daemonhosts cannot capture table quarters, hold objectives, or count as surviving troops in a Meat Grinder mission.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="7f15-4fba-1e70-14f2" name="Daemonhost" hidden="false" targetId="250f-36f5-ba07-ffd1" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Cherubael "/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="4c33-99d7-c23b-a2e8" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
+                <infoLink id="ce30-9d90-835a-8b6e" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
+                <infoLink id="fc88-a732-80f2-694a" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="85.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3948-dd65-80fc-1bc3" name="Ordo Xenos Armoury" hidden="false" collective="false" import="true">
@@ -1952,6 +2476,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
                           <conditions>
                             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
                             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52fe-2aec-9751-fbcd" type="notInstanceOf"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -2008,6 +2533,19 @@ Hellfire Round: The shot wounds on a 2+.</description>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="24a8-1497-eda9-88bc" name="Shuriken Pistol (Eldar)" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52fe-2aec-9751-fbcd" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c63-2481-4f27-9af7" type="max"/>
                   </constraints>
@@ -2016,6 +2554,19 @@ Hellfire Round: The shot wounds on a 2+.</description>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="9dcf-0f70-d3b3-e930" name="Blaster (Dark Eldar)" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52fe-2aec-9751-fbcd" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aca8-5214-8505-55e1" type="max"/>
                   </constraints>
@@ -2028,6 +2579,19 @@ Hellfire Round: The shot wounds on a 2+.</description>
             <selectionEntryGroup id="706b-6571-b3a5-17b6" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
               <selectionEntries>
                 <selectionEntry id="f286-e4fd-65b4-6351" name="Executioner (Eldar)" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52fe-2aec-9751-fbcd" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="491b-a3e2-e7c9-a3a1" type="max"/>
                   </constraints>
@@ -2036,6 +2600,19 @@ Hellfire Round: The shot wounds on a 2+.</description>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="7326-2fe1-0888-29de" name="Punisher (Dark Eldar)" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52fe-2aec-9751-fbcd" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="025e-330a-3ce0-2012" type="max"/>
                   </constraints>
@@ -2121,6 +2698,19 @@ Hellfire Round: The shot wounds on a 2+.</description>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="fe78-4829-e8ce-cc6d" name="Gauss Flayer (Necrons)" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52fe-2aec-9751-fbcd" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="757f-39be-d4ce-cf74" type="max"/>
                   </constraints>
@@ -2129,6 +2719,19 @@ Hellfire Round: The shot wounds on a 2+.</description>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="aaf9-7957-2dac-ec3f" name="Pulse Rifle (Tau)" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52fe-2aec-9751-fbcd" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e0b-a91a-bdde-2b9c" type="max"/>
                   </constraints>
@@ -2137,6 +2740,19 @@ Hellfire Round: The shot wounds on a 2+.</description>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="4df3-c466-2a88-cdb6" name="Pulse Carbine (Tau)" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52fe-2aec-9751-fbcd" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dc2-a57b-fdf9-e106" type="max"/>
                   </constraints>
@@ -2171,6 +2787,16 @@ Hellfire Round: The shot wounds on a 2+.</description>
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbe3-36dd-4c86-8c2a" type="equalTo"/>
                   </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -2425,6 +3051,18 @@ Hellfire Round: The shot wounds on a 2+.</description>
               </costs>
             </selectionEntry>
             <selectionEntry id="6c7f-91c7-b952-b81c" name="Gun Drone" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0508-d958-1e5b-0a0e" type="max"/>
               </constraints>
@@ -2433,11 +3071,73 @@ Hellfire Round: The shot wounds on a 2+.</description>
               </costs>
             </selectionEntry>
             <selectionEntry id="9e42-41b2-af93-f0ff" name="Shield Drone " hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04bb-ae88-67d4-20f3" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e30f-8f03-634c-bc86" name="Liber Xenologis" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6498-3992-2bc5-3b85" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="0408-6031-456c-fd3f" name="Liber Xenologis" hidden="false">
+                  <description>The Inquisitor rolls a leadership before the start of the battle. If they succeed they can choose which player takes the first turn, even in scenarios where one side is always first player. If they fail the test with a double 6, their opponent can choose instead. Any other result means the first player is determined like normal.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a086-83f5-a725-c863" name="Univeral Anathema" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="025b-45e6-34ab-0a5b" type="notInstanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d9c-5cb1-3171-08c2" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4672-aebb-ce9c-ed75" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="4264-a1b3-e98f-9530" name="Univeral Anathema" hidden="false">
+                  <description>In melee, a model with the Universal Anathema always wounds on a 2+ regardless of Toughness. This has no effect on vehicles.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2558,6 +3258,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5727-8990-47dc-0b8c" type="max"/>
+          </constraints>
           <rules>
             <rule id="1c34-d601-3a66-98a4" name="Fury of the Salamander" hidden="false">
               <description>Use in the shooting phase instead of firing a weapon. Nominate a direction from the Librarian and draw a line 3D6&quot; long in that direction. You cannot choose a line that might pass through a unit in close combat. Any model (friend or foe) which the line crosses over takes a Strength 5 hit; normal saving throws allowed. A unit suffering any casualties from this attack must take an immediate Morale check or fall back. If the unit passes, but loses 25% or more of its models in that Shoot phase, it must still take the Morale check for casualties as normal.</description>
@@ -2575,6 +3278,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec7a-4b8b-8105-d70d" type="max"/>
+          </constraints>
           <rules>
             <rule id="4d52-3349-1c95-c514" name="Weaken Resolve" hidden="false">
               <description>Attempt to use this power when an enemy unit with a model within 12&quot; has to take a Morale check. On a successful Psychic test then the enemy unit must take its Morale check on a 3D6 added together. This power may only be used once per player turn.</description>
@@ -4166,6 +4872,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
                 <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a11d-b4ab-9f04-afec" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ea5-3b40-2663-428c" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="1bac-36c1-ab18-6cd6" name="Iron Halo" hidden="false" targetId="04ef-3dda-69b8-e59b" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
               </costs>
@@ -4615,7 +5324,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
               </constraints>
               <rules>
                 <rule id="b566-8145-c147-3d5a" name="The Flesh is Weak" hidden="false">
-                  <description>6+ Feel No Pain</description>
+                  <description>When a model with bionics is killed, instead place it on its side. Roll a D6 at the start of the next turn: on a roll of 6 the model stands back up with 1 wound, but on any other roll it is removed as a casualty.</description>
                 </rule>
               </rules>
               <costs>
@@ -5499,6 +6208,10 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
     <rule id="c9ef-f898-482d-a07f" name="Wolf Tooth Necklace" hidden="false">
       <description>Models with a Wolf Tooth Necklace always hit on a 3+ in close combat.</description>
     </rule>
+    <rule id="04ef-3dda-69b8-e59b" name="Iron Halo" hidden="false"/>
+    <rule id="b53f-9f84-e2e3-6f3d" name="Bionics" hidden="false">
+      <description>When a model with bionics is killed, instead place it on its side. Roll a D6 at the start of the next turn: on a roll of 6 the model stands back up with 1 wound, but on any other roll it is removed as a casualty.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="f1c0-f909-74b0-8a4b" name="Henchman" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -5774,10 +6487,10 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
         <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
         <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
         <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
@@ -5825,5 +6538,21 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
+    <profile id="250f-36f5-ba07-ffd1" name="Daemonhost" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">6</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">4</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">D6</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
+  <catalogueLinks>
+    <catalogueLink id="3032-a1ee-036a-4178" name="Ulthwe The Damned (2000)" targetId="d1e2-e6ed-e01f-ae6f" type="catalogue" importRootEntries="false"/>
+  </catalogueLinks>
 </catalogue>
