@@ -139,6 +139,7 @@
           <infoLinks>
             <infoLink id="ce4a-2341-da05-295c" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
             <infoLink id="6349-c882-cd5c-df87" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+            <infoLink id="ae2d-63a3-c710-f4a4" name="Exo-Armour" hidden="false" targetId="ab31-e90f-dae3-6887" type="rule"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -331,6 +332,7 @@
           <infoLinks>
             <infoLink id="9322-3a12-3f67-0790" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
             <infoLink id="3299-f307-7304-f35b" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+            <infoLink id="e8b6-366b-3d54-9ba1" name="Exo-Armour" hidden="false" targetId="ab31-e90f-dae3-6887" type="rule"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -943,6 +945,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="176d-2e8f-6358-828f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="440c-0967-1912-3728" name="Auspex" hidden="false">
+              <description>If enemy infiltrators set up within 4D6&quot; of a model with a auspex, then that model and the unit they are attached to is allowed to take a &quot;free&quot; shot at them. These shots are taken before the battle begins and may cause the infiltrators to fall back.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
@@ -951,27 +958,27 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e2a-9908-c9fb-bc19" type="max"/>
           </constraints>
+          <rules>
+            <rule id="c843-5520-375d-c545" name="Bionics" hidden="false">
+              <description>When a model with bionics is killed, instead place it on its side. Roll a D6 at the start of the next turn: on a roll of 6 the model stands back up with 1 wound, but on any other roll it is removed as a casualty.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="95d3-5889-4534-859b" name="Carapace Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14b8-d816-d916-0181" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="7.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7273-30d2-8ddc-af93" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4e7-3a62-b933-0d2a" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="e7df-d953-beec-90d9" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0e2d-5286-e444-4fd4" name="Exo-Armor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0e2d-5286-e444-4fd4" name="Exo-Armour" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="42e9-6cc5-b6ed-a6c1" value="1.0">
               <conditionGroups>
@@ -993,6 +1000,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2cec-2fdb-d193-ad12" type="max"/>
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42e9-6cc5-b6ed-a6c1" type="min"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="7ac0-d27c-29ca-d13b" name="Exo-Armour" hidden="false" targetId="ab31-e90f-dae3-6887" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -1010,6 +1020,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de0b-6967-b484-8083" type="max"/>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="956f-ab6c-cf44-55b2" type="max"/>
           </constraints>
+          <rules>
+            <rule id="ec33-bab4-2fc7-b001" name="Holy Relic" hidden="false">
+              <description>Once per battle. On any turn the model with the relic does not move they may reveal it. All friendly models that are within 2D6&quot; gain +1 Attacks for the rest of that turn. The relic may be revealed in the opposing player&apos;s turn assuming the model with the relic did not move in the previous turn.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
           </costs>
@@ -1020,6 +1035,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c606-1dfd-b2d7-26cc" type="max"/>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b349-48f4-f402-7b6b" type="max"/>
           </constraints>
+          <rules>
+            <rule id="402a-1321-d877-d955" name="Iron Halo" hidden="false">
+              <description>The iron halo grants a 4+ invilnerable save.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -1037,6 +1057,14 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e02-1489-9a2b-a1bc" type="max"/>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cb2-4e31-d604-5c93" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d90a-30e0-9661-79d6" name="Clan Banner" hidden="false">
+              <description>Once per battle. On any turn the model with the relic does not move they may reveal it. All friendly models that are within 2D6&quot; gain +1 Attacks for the rest of that turn. The relic may be revealed in the opposing player&apos;s turn assuming the model with the relic did not move in the previous turn.
+
+Add +1 to the Squat combat resolution socre of any assault that takes place within 6&quot; of the Sacred Banner.
+However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
           </costs>
@@ -1045,14 +1073,22 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6df2-326e-5bfe-b0c9" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="a599-6a8e-cdf3-5d5b" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="322a-6fb6-a524-3263" name="Master-Crafted Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba08-7a82-7ffd-e267" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba08-7a82-7ffd-e267" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5257-0761-f5d7-a207" name="Master-crafted Weapons" hidden="false">
+              <description>The bearer may re-roll one failed to hit roll per turn.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -1061,6 +1097,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2347-728c-ffbc-9566" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="695f-a843-8652-18ed" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
@@ -1077,6 +1116,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ec9-33a4-c99b-56b0" type="max"/>
           </constraints>
+          <rules>
+            <rule id="b399-df15-f08d-7905" name="Psychic Hood" hidden="false">
+              <description>Declare you&apos;ll use the Psychic Hood after an opponent has successfully made a Psychic test, but before they have resolved the power. Each player rolls a D6 and adds their respective model&apos;s Leadership value. If the Space Marine beats the opposing model&apos;s score then the psychic power is nullified and may not be used that turn. Otherwise the power is unaffected. The Hood may be used each time an enemy model uses a power.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -1092,6 +1136,12 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dfd2-1e00-dfe7-7a1e" type="max"/>
           </constraints>
+          <rules>
+            <rule id="0b17-db68-63ff-e3d2" name="Sacred Standard" hidden="false">
+              <description>Add +1 to the Squat combat resolution socre of any assault that takes place within 6&quot; of the Sacred Banner.
+However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -1107,6 +1157,17 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8026-5511-d2cd-58df" type="max"/>
           </constraints>
+          <profiles>
+            <profile id="c20a-aa4c-7800-1437" name="Servo-Arm" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Makes a single attack, hitting on a 4+. independently of the Techpriests attacks. Ignores all armour saves.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
           </costs>
@@ -1122,6 +1183,11 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3099-b642-c2bb-7366" type="max"/>
           </constraints>
+          <rules>
+            <rule id="ac25-1d26-28c2-6e75" name="Signum" hidden="false">
+              <description>Each turn, you may re-roll one missed to hit shooting dice for the Command squad the Techmarine belongs to.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
@@ -1130,6 +1196,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2347-4f11-5051-d1c7" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="3538-7a29-e111-6168" name="Bikes" hidden="false" targetId="6bd6-e738-e144-6db9" type="rule"/>
+            <infoLink id="c7d7-8f2c-51b3-17fa" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-linked Boltgun"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
@@ -1216,6 +1290,9 @@
   <sharedRules>
     <rule id="fa84-af1e-096b-0f33" name="Dangerous Over Short Distances" hidden="false">
       <description>Due to their low mobility, Squats must roll 3d6 and choose the lowest two results when chasing, advancing or retreating.</description>
+    </rule>
+    <rule id="ab31-e90f-dae3-6887" name="Exo-Armour" hidden="false">
+      <description>A model with exo-armor has a saving throw of 2+ and its attacks are increased by 1. Troops equipped with exo-armor can be teleported to the battlefield so they can use the Deep Strike rules but only if the mission allows it. In addition, the troops with exo-armor that win a hand-to-hand combat will only be able to consolidate their position.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
