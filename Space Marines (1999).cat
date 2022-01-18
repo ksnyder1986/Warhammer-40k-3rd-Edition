@@ -126,6 +126,7 @@
     </entryLink>
     <entryLink id="99e5-ce2a-aa97-1f0e" name="Hyperious Air Defence Battery (IA)" hidden="false" collective="false" import="true" targetId="fde5-3ce5-0c7a-820c" type="selectionEntry"/>
     <entryLink id="65ba-6def-583f-f8bc" name="Stormraven Gunship (Homebrew)" hidden="false" collective="false" import="true" targetId="fb33-3e36-b9a7-679d" type="selectionEntry"/>
+    <entryLink id="da2e-7a38-f740-fee7" name="Contemport Dreadnought (Homebrew)" hidden="false" collective="false" import="true" targetId="9042-1a04-ca8a-4f29" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="043b-1cc7-9a38-8133" name="Commander" hidden="false" collective="false" import="true" type="unit">
@@ -5699,6 +5700,107 @@ Transport = 12</comment>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="102.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="9042-1a04-ca8a-4f29" name="Contemptor Dreadnought (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Based on vehicle design rules and 7th edition stats
+
+Walker-Normal
+Points for Armour:
+Front 13 = 20
+Side 12 = 40
+Rear 10 = 10
+
+Normal = 10
+
+Dreadnought CCW = 5*5*4 = 100
+Combi-bolter = 6
+
+Special Force Field = 35</comment>
+      <modifiers>
+        <modifier type="set" field="4ed5-2f92-9abc-2870" value="277.0">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule id="89df-e131-d975-0f81" name="Atomantic Shielding" hidden="false">
+          <comment>This normally can only be fitted to warmachines, but its not that powerful.</comment>
+          <description>Atomantic sheilding absorb the damage from one glancing or penetrating hit (from shooting attacks only) and then &apos;go down&apos; as they dissipate the energy that was absorbed. The player can roll to repair the downed fields at the start of each of his turns. Roll 1D6 per field, and it comes back on line with a roll of 6+.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="591f-8e73-7129-b244" name="Contemptor Dreadnought" hidden="false" targetId="7870-e0a0-a10b-e807" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ca31-e9dd-fb8e-6db6" name="Dreadnought" hidden="false" targetId="8dd2-2313-fb9d-0368" primary="false"/>
+        <categoryLink id="f619-0eaf-8ad7-b550" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6fc5-c951-ab48-1c2a" name="Left Arm" hidden="false" collective="false" import="true" defaultSelectionEntryId="e54a-9682-feac-ab9b">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="197b-a27a-c8ae-77df" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef17-3f33-bf89-5d44" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e54a-9682-feac-ab9b" name="Dreadnought Close Combat Weapon w/ Combi-bolter" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="80a1-cce9-2d64-f9d8" name="Dreadnought Close Combat Weapons" hidden="false" targetId="c7f7-e5ab-17a7-1cf9" type="profile"/>
+                <infoLink id="6d29-6922-5d17-72d2" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Combi-bolter"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2d5f-68dd-509c-c1fa" name="Right Arm" hidden="false" collective="false" import="true" defaultSelectionEntryId="98b8-16db-e236-11ee">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="482e-b251-9f7d-834a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b30e-e822-c797-a23d" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="98b8-16db-e236-11ee" name="Assault Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="dbd3-361d-cfb2-9441" name="Assault Cannon" hidden="false" targetId="3f9c-e7c1-c442-3b7c" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="abf7-cca6-7f37-3fc9" name="Multi-melta" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="2e86-c35e-b82d-9809" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="aa09-0e39-f877-ebc5" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="93a4-c4f2-3183-a640" type="selectionEntryGroup"/>
+        <entryLink id="33a1-e8e4-11f0-bd0e" name="Drop Pod (IA)" hidden="false" collective="false" import="true" targetId="a9cd-beaa-0d6b-0086" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4177-9cf0-f858-b480" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="221.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="bfc9-22b8-1379-3112" name="Space Marine Armory" hidden="false" collective="false" import="true">
@@ -7734,6 +7836,18 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
         <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7870-e0a0-a10b-e807" name="Contemptor Dreadnought" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">5</characteristic>
+        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">5</characteristic>
+        <characteristic name="S" typeId="2870-c64f-81e5-a118">7(10)</characteristic>
+        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">13</characteristic>
+        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">12</characteristic>
+        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">10</characteristic>
+        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">4</characteristic>
+        <characteristic name="A" typeId="bb33-7ddf-2296-174e">4</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
