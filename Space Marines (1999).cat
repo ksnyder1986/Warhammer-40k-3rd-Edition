@@ -125,6 +125,7 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="99e5-ce2a-aa97-1f0e" name="Hyperious Air Defence Battery (IA)" hidden="false" collective="false" import="true" targetId="fde5-3ce5-0c7a-820c" type="selectionEntry"/>
+    <entryLink id="65ba-6def-583f-f8bc" name="Stormraven Gunship (Homebrew)" hidden="false" collective="false" import="true" targetId="fb33-3e36-b9a7-679d" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="043b-1cc7-9a38-8133" name="Commander" hidden="false" collective="false" import="true" type="unit">
@@ -3707,7 +3708,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3791,7 +3792,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="fb23-9b6a-2441-2507" name="Typhoon Missle" hidden="false" targetId="760f-e4d8-3c2b-5e9a" type="profile"/>
+        <infoLink id="fb23-9b6a-2441-2507" name="Typhoon Missile" hidden="false" targetId="760f-e4d8-3c2b-5e9a" type="profile"/>
         <infoLink id="742f-a2d7-e49d-ad17" name="Land Speeder" hidden="false" targetId="ff8b-807e-4c96-b60d" type="profile"/>
       </infoLinks>
       <categoryLinks>
@@ -5572,6 +5573,132 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="fb33-3e36-b9a7-679d" name="Stormraven Gunship (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Based on vehicle design rules and 7th edition stats
+
+Skimmer-Normal
+Points for Armour:
+Front 12 = 10
+Side 11 = 30
+Rear 10 = 10
+
+Fast = 20
+Skimmer = 20
+
+Transport = 12</comment>
+      <rules>
+        <rule id="be72-0b5f-5d6a-98ca" name="Transport Capacity" hidden="false">
+          <description>A stormraven gunship can carry up to 12 models (count terminators as 2 models each), or a single dreadnaught.</description>
+        </rule>
+        <rule id="2b31-c6e9-afdc-5f33" name="Stormraven Gunship (Homebrew)" hidden="false">
+          <description>Based on the vehicle design rules in Chapter Approved 2004. The vehicle is a Fast Skimmer with a transport capacity of 12 models or 1 dreadnought.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="e39f-14d3-9062-dd5e" name="Stormraven Gunship (Homebrew)" hidden="false" targetId="2a32-eb54-06dd-1a3b" type="profile"/>
+        <infoLink id="4f85-8e59-8376-8e1a" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="29c7-d0d8-f176-6acf" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4d80-95e7-1cbe-1da1" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d862-a647-e5b0-6150" name="Add Side Hurricane Bolters" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>12+50% * 2 = 36</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03ef-f0b3-10d6-8d5f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="1872-2b79-4571-4bbb" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="2x Hurricane Pattern Bolters"/>
+                <modifier type="set" field="d3f6-19e8-ac9e-ae13" value="Rapid Fire 3"/>
+                <modifier type="set" field="492d-1f80-b777-26f2" value="Twin-Linked. Counts as 3 Bolters."/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="9c2b-36cd-502f-5c8e" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="36.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0f74-aae7-7a29-96d3" name="Dorsal Turret Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="42e4-7954-2873-0622">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7f8-0438-57b8-4657" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="42e4-7954-2873-0622" name="Twin-linked Assault Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="eed9-0a9e-2cf3-9733" name="Assault Cannon" hidden="false" targetId="3f9c-e7c1-c442-3b7c" type="profile"/>
+                <infoLink id="d066-1d24-2ddc-5bd1" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="52.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c0f3-3e08-8a76-fafa" name="Twin-linked Plasma Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="c0e5-b587-4c89-d83a" name="Plasma Cannon" hidden="false" targetId="9a19-ea1c-3d75-94aa" type="profile"/>
+                <infoLink id="ea7b-1040-b853-e92a" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="329d-58e3-c08d-1bf0" name="Twin-linked Lascannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="7098-a6e9-7ec8-30c8" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
+                <infoLink id="fc03-1f92-97f3-f72d" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="52.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7587-a718-c1e2-1374" name="Nose Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="2098-19b4-c3bf-053c">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="785e-52a5-3a34-173f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2098-19b4-c3bf-053c" name="Twin-linked Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="3237-5a16-24f7-d2e7" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                <infoLink id="874b-4e67-c78f-9421" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7bb7-6398-7f8a-50c7" name="Twin-linked Multi-melta" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a8a4-c6da-2830-10f3" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
+                <infoLink id="bcf5-07da-aecc-2b11" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="329a-7b07-a366-1bcb" name="Typhoon Missle Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="64b0-7cbc-395b-d833" name="Typhoon Missile" hidden="false" targetId="760f-e4d8-3c2b-5e9a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="33dd-3d9d-8d23-f0ed" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="93a4-c4f2-3183-a640" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="102.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="bfc9-22b8-1379-3112" name="Space Marine Armory" hidden="false" collective="false" import="true">
@@ -5595,9 +5722,14 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         <selectionEntry id="6a4f-cc19-8cf0-1c75" name="Dozer Blade" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dd2-2313-fb9d-0368" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dd2-2313-fb9d-0368" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb33-3e36-b9a7-679d" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -5624,9 +5756,14 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         <selectionEntry id="f7a1-a8df-6270-7afd" name="Hunter-killer Missile" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dd2-2313-fb9d-0368" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dd2-2313-fb9d-0368" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb33-3e36-b9a7-679d" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -5642,9 +5779,14 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         <selectionEntry id="87fc-d683-0dde-5cda" name="Pintle-mounted Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dd2-2313-fb9d-0368" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dd2-2313-fb9d-0368" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb33-3e36-b9a7-679d" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -5669,6 +5811,17 @@ After the first turn of firing the Deathwind cannot fire again.</description>
           </costs>
         </selectionEntry>
         <selectionEntry id="50ad-e7af-750e-d4f2" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb33-3e36-b9a7-679d" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c93-f6d4-963f-bd54" type="max"/>
           </constraints>
@@ -7572,6 +7725,15 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="2a32-eb54-06dd-1a3b" name="Stormraven Gunship (Homebrew)" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <comment>Can&apos;t go above 44 combined armor, so the side and rear armors cannot be as high as in 7th edition. Matches more closely with a Rhino.</comment>
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
