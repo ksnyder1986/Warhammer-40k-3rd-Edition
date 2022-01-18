@@ -130,7 +130,7 @@
     <categoryEntry id="9bbd-df2b-520d-778d" name="Space Wolf" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="7da2-40c9-890c-3239" name="Standard Missions" hidden="false">
+    <forceEntry id="7da2-40c9-890c-3239" name="1-Standard Missions" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
         <categoryLink id="d4a3-35ce-7202-922e" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
@@ -181,7 +181,7 @@
         <categoryLink id="0561-fef4-ad1a-f2ef" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="949f-fced-04a6-c467" name="Apoc Missions" hidden="false">
+    <forceEntry id="949f-fced-04a6-c467" name="2-Apoc Missions" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
         <categoryLink id="c3f7-5895-ade5-8674" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
