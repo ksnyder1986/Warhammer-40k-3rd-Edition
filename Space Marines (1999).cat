@@ -127,6 +127,7 @@
     <entryLink id="99e5-ce2a-aa97-1f0e" name="Hyperious Air Defence Battery (IA)" hidden="false" collective="false" import="true" targetId="fde5-3ce5-0c7a-820c" type="selectionEntry"/>
     <entryLink id="65ba-6def-583f-f8bc" name="Stormraven Gunship (Homebrew)" hidden="false" collective="false" import="true" targetId="fb33-3e36-b9a7-679d" type="selectionEntry"/>
     <entryLink id="da2e-7a38-f740-fee7" name="Contemport Dreadnought (Homebrew)" hidden="false" collective="false" import="true" targetId="9042-1a04-ca8a-4f29" type="selectionEntry"/>
+    <entryLink id="7828-971b-06a8-fd77" name="Stormtalon Gunship (Homebrew)" hidden="false" collective="false" import="true" targetId="2bfb-ac8e-748b-2de0" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="043b-1cc7-9a38-8133" name="Commander" hidden="false" collective="false" import="true" type="unit">
@@ -5600,7 +5601,6 @@ Front 12 = 10
 Side 11 = 30
 Rear 10 = 10
 
-Fast = 20
 Skimmer = 20
 
 Transport = 12</comment>
@@ -5615,7 +5615,6 @@ Transport = 12</comment>
       <infoLinks>
         <infoLink id="e39f-14d3-9062-dd5e" name="Stormraven Gunship (Homebrew)" hidden="false" targetId="2a32-eb54-06dd-1a3b" type="profile"/>
         <infoLink id="4f85-8e59-8376-8e1a" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
-        <infoLink id="29c7-d0d8-f176-6acf" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4d80-95e7-1cbe-1da1" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -5714,7 +5713,7 @@ Transport = 12</comment>
         <entryLink id="33dd-3d9d-8d23-f0ed" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="93a4-c4f2-3183-a640" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="102.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="82.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9042-1a04-ca8a-4f29" name="Contemptor Dreadnought (Homebrew)" hidden="false" collective="false" import="true" type="unit">
@@ -5956,6 +5955,83 @@ Hunter-killer Missile: 20*50%*50% = 40
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="95.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2bfb-ac8e-748b-2de0" name="Stormtalon Gunship (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Based on vehicle design rules and 7th edition stats
+
+Skimmer-Normal
+Points for Armour:
+Front 11 = 5
+Side 11 = 30
+Rear 10 = 10
+
+Skimmer = 20</comment>
+      <infoLinks>
+        <infoLink id="443b-7cd4-72f4-3b7b" name="Stormraven Gunship (Homebrew)" hidden="false" targetId="2a32-eb54-06dd-1a3b" type="profile"/>
+        <infoLink id="b6d0-dd1f-405f-cccb" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="7a48-ae94-fc84-2f96" name="Assault Cannon" hidden="false" targetId="3f9c-e7c1-c442-3b7c" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Assault Cannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="067e-b712-ad22-4562" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8f47-98fd-6d6c-10c3" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4324-09d7-ca63-9e6f" name="Nose Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a89a-86e5-246b-36ce" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="68b8-4d8e-9df4-8ba6" name="Twin-linked Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a167-c34f-e676-1d33" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                <infoLink id="4f4f-a99f-abd2-2649" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="19d9-40a8-8f57-0468" name="Twin-linked Lascannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="5ad2-d925-a5a9-cb7b" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
+                <infoLink id="0eb6-b6b4-ee2f-c19b" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="52.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ced5-7689-553c-9cc8" name="Typhoon Missle Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="278d-9146-684d-b57a" name="Typhoon Missile" hidden="false" targetId="760f-e4d8-3c2b-5e9a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="15ab-9ff0-fe82-9858" name="Skyhammer Missile Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="30d2-ec82-37b5-3f23" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="6x Hunter-killer Missiles"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="90.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="21b0-e8e4-6f32-e59d" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="93a4-c4f2-3183-a640" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="65.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
