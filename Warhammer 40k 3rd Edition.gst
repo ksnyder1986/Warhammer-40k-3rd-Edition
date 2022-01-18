@@ -459,7 +459,7 @@ Others: The vehile causes tank shock if it moves through the enemy, just like Ta
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>

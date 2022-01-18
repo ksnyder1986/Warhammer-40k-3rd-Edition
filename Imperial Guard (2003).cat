@@ -11277,26 +11277,81 @@ Transport = 10
 Normal-Normal
 Armor: 11-10-10 = 5+20+10=35
 Speed = 10
-Twin-linked Autocannon = 38
 Transport = 10
 </comment>
       <infoLinks>
         <infoLink id="e275-24ad-dab0-1d0b" name="Taurox" hidden="false" targetId="dea4-4d39-cab5-188d" type="profile"/>
-        <infoLink id="7739-1c3c-a011-6080" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
-          <modifiers>
-            <modifier type="set" field="name" value="Twin-linked Autocannon"/>
-          </modifiers>
-        </infoLink>
         <infoLink id="1f5f-a35f-e62a-7230" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7da1-9df7-1a5e-f3c7" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c2b0-b1bb-fc7c-92eb" name="Side Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="4f08-029c-0114-0bfc">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43be-8bf5-8617-ba78" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="920b-edea-9733-6f60" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4f08-029c-0114-0bfc" name="Twin-linked Hellgun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="ef3c-72e9-8a53-70e9" name="Hellgun" hidden="false" targetId="efe9-35a9-ba8f-99a9" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Hellgun"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="1b7b-a3f7-60a1-5102" name="Twin-linked Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="74c5-4dcf-9bfc-7218" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Autocannon"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b145-6d7a-762b-dc40" name="Turret Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="69c5-5c33-d1f0-5d51">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a217-7031-2eea-c4a2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa2c-e67e-5e5d-103e" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="69c5-5c33-d1f0-5d51" name="Conqueror Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="0c59-8e25-4b59-7641" name="Conqueror Cannon" hidden="false" targetId="814e-4aa4-0908-6350" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="db42-4332-bf19-4f48" name="Gatling Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>In 5th edition, a punisher gatling cannon was 30 points more than a battlecannon. In the VDR a battle cannon is 50 points. It has half as many shots, and is 1 strength less. 30 points seems reasonable.</comment>
+              <profiles>
+                <profile id="c04c-590c-a8e0-74fe" name="Gatling Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 10</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="78be-2ff4-3a4f-7284" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="0ad0-e8db-2347-229f" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="93.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
