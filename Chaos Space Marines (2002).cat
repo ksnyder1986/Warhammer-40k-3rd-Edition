@@ -60,6 +60,7 @@
     <entryLink id="6025-8e80-c914-99ec" name="Plague Marines" hidden="false" collective="false" import="true" targetId="f9e9-958f-7db5-57f0" type="selectionEntry"/>
     <entryLink id="0ee9-cc1e-1608-75e7" name="Forgefiend (Homebrew)" hidden="false" collective="false" import="true" targetId="c743-5d92-38d8-8ad9" type="selectionEntry"/>
     <entryLink id="476c-e0d7-8f1d-7c48" name="Maulerfiend (Homebrew)" hidden="false" collective="false" import="true" targetId="f92e-ed72-d3f4-0a71" type="selectionEntry"/>
+    <entryLink id="bb5f-a0fc-b42e-35d3" name="Helldrake (Homebrew)" hidden="false" collective="false" import="true" targetId="bc00-24bd-ea7f-3134" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9fda-9a74-56c3-7c97" name="Chaos Lord" hidden="false" collective="false" import="true" type="unit">
@@ -9081,6 +9082,65 @@ Daemonic Possession=20</comment>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="160.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="bc00-24bd-ea7f-3134" name="Helldrake (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <comment>7th Edition and VDR inspired
+
+Normal-Flyer
+Armor 12-11-11 = 10+30+20 = 60
+Flyer = 40
+Daemonic Possession = 20
+</comment>
+      <rules>
+        <rule id="b317-349f-ee60-cd72" name="Daemonic Possession" hidden="false">
+          <description>A Daemon controls the vehicle and may ignore &apos;shaken&apos; and &apos;stunned&apos; results.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="86dd-7fde-eb54-48e5" name="Helldrake" hidden="false" targetId="12eb-9d25-40c4-82ed" type="profile"/>
+        <infoLink id="5f96-de36-17e7-335a" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="704c-33f4-7968-7d4a" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="300d-e9de-441f-08c0" name="Mouthgun" hidden="false" collective="false" import="true" defaultSelectionEntryId="1f1f-86d5-22d5-6752">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="294c-37f5-826c-5b1b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce03-0014-ca0f-4b65" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8d01-fb4f-87f8-07fb" name="Inferno Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="85f6-3ba1-fd17-0b49" name="Inferno Cannon" hidden="false" targetId="6a00-06f9-5972-4b79" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1f1f-86d5-22d5-6752" name="Hades Autocannons" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="6ca0-34d0-4d4b-2233" name="Hades Autocannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <comment>Count as a double autocannon</comment>
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 4</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="4171-c75d-6633-1a19" name="Marks of Chaos" hidden="false" collective="false" import="true">
@@ -13773,6 +13833,27 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">10</characteristic>
         <characteristic name="I" typeId="695a-ba63-65d1-3ce5">3</characteristic>
         <characteristic name="A" typeId="bb33-7ddf-2296-174e">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="12eb-9d25-40c4-82ed" name="Helldrake" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">11</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="16c5-f64d-65cd-5c4a" name="Lord of Skulls" hidden="false" typeId="8363-119d-bce3-2e3b" typeName="Super Heavy Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="66aa-c126-e0da-eff1">4</characteristic>
+        <characteristic name="BS" typeId="caba-3888-54de-7384">3</characteristic>
+        <characteristic name="S" typeId="094c-cba6-7096-9805">10</characteristic>
+        <characteristic name="Front Armor" typeId="02e0-3eba-d3ed-75e0">13</characteristic>
+        <characteristic name="Side Armor" typeId="efff-2637-7f7f-8339">13</characteristic>
+        <characteristic name="Rear Armor" typeId="6b33-ddb1-a14c-9034">11</characteristic>
+        <characteristic name="I" typeId="e58a-0314-a94e-b641">3</characteristic>
+        <characteristic name="A" typeId="1735-ac9d-d5c1-ca2f">4</characteristic>
+        <characteristic name="Structure Points" typeId="b9dd-3e64-0507-92f1">3</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

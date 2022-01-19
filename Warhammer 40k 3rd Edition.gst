@@ -104,6 +104,19 @@
         <characteristicType id="e1d2-e9ec-26d6-1f11" name="Capacity"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="8363-119d-bce3-2e3b" name="Super Heavy Walker">
+      <characteristicTypes>
+        <characteristicType id="66aa-c126-e0da-eff1" name="WS"/>
+        <characteristicType id="caba-3888-54de-7384" name="BS"/>
+        <characteristicType id="094c-cba6-7096-9805" name="S"/>
+        <characteristicType id="02e0-3eba-d3ed-75e0" name="Front Armor"/>
+        <characteristicType id="efff-2637-7f7f-8339" name="Side Armor"/>
+        <characteristicType id="6b33-ddb1-a14c-9034" name="Rear Armor"/>
+        <characteristicType id="e58a-0314-a94e-b641" name="I"/>
+        <characteristicType id="1735-ac9d-d5c1-ca2f" name="A"/>
+        <characteristicType id="b9dd-3e64-0507-92f1" name="Structure Points"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="a8a7-7a4b-5f7e-2138" name="HQ" hidden="false"/>
