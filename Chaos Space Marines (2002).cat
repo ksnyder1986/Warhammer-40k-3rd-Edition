@@ -61,6 +61,7 @@
     <entryLink id="0ee9-cc1e-1608-75e7" name="Forgefiend (Homebrew)" hidden="false" collective="false" import="true" targetId="c743-5d92-38d8-8ad9" type="selectionEntry"/>
     <entryLink id="476c-e0d7-8f1d-7c48" name="Maulerfiend (Homebrew)" hidden="false" collective="false" import="true" targetId="f92e-ed72-d3f4-0a71" type="selectionEntry"/>
     <entryLink id="bb5f-a0fc-b42e-35d3" name="Helldrake (Homebrew)" hidden="false" collective="false" import="true" targetId="bc00-24bd-ea7f-3134" type="selectionEntry"/>
+    <entryLink id="eaa3-0ecd-666c-6bc6" name="Khorne Lord of Skulls" hidden="false" collective="false" import="true" targetId="76e8-0006-d8f4-e536" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9fda-9a74-56c3-7c97" name="Chaos Lord" hidden="false" collective="false" import="true" type="unit">
@@ -9139,6 +9140,133 @@ Daemonic Possession = 20
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="76e8-0006-d8f4-e536" name="Khorne Lord of Skulls" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>7th edition rules and vdr inspired
+War Machine-Walker
+Armor 13-13-11 = 20+60+20=100
+Lumbering = 20
+War Machine CCW = 10x4x4=160
+Daemonic Possession = 20
+Destroyer=25</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule id="a4d6-d7fc-3ce1-8ecd" name="Daemonic Possession" hidden="false">
+          <description>A Daemon controls the vehicle and may ignore &apos;shaken&apos; and &apos;stunned&apos; results.</description>
+        </rule>
+        <rule id="f637-5178-ea0b-680e" name="Destroyer" hidden="false">
+          <description>A tank with Destroyer upgrade causes enemy units forced to move due to a tank shock on a 4+ with normal saves allowed.
+A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each round of close combat, and when rolling for Fire Frenzy will trigger Blood Rage on a 1 or 2.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="06fe-d2c0-44fc-83b8" name="Lord of Skulls" hidden="false" targetId="16c5-f64d-65cd-5c4a" type="profile"/>
+        <infoLink id="1389-1a44-5068-7f73" name="Super Heavy Tank" hidden="false" targetId="d831-af9c-0b53-6da3" type="rule"/>
+        <infoLink id="ab5e-2229-9afc-e0a8" name="Slow and Purposeful" hidden="false" targetId="dfb3-f2d0-e017-ab77" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4808-b201-42c8-2eaa" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="ab29-5f38-cd92-40d9" name="Left Arm" hidden="false" collective="false" import="true" defaultSelectionEntryId="e5b9-8295-83a4-ae08">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0df5-c590-6737-bdcd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d65-daf5-219d-2386" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e5b9-8295-83a4-ae08" name="Gattling Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="a356-cb41-0495-56de" name="Gattling Cannon (Frag)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <comment>Shoots 3 Missiles per shot basically</comment>
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3, Blast</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="34ac-803f-b461-b5d1" name="Gattling Cannon (Krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <comment>Shoots 3 Missiles per shot basically</comment>
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="37ef-e3e7-9d24-65af" name="Skull Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>Plasma Cannon w/ Ordnance Blast &amp; Titan Killer
+30+150%+50% = 30+45+15=90</comment>
+              <infoLinks>
+                <infoLink id="e48b-9930-b67f-1552" name="Plasma Destroyer" hidden="false" targetId="2d7d-d376-d4c2-3f8c" type="profile"/>
+                <infoLink id="44f5-e6a8-7600-9258" name="Titan Killer" hidden="false" targetId="b333-4165-9b69-fc6a" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="90.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="748d-65a1-bc68-b75c" name="Belly Gun" hidden="false" collective="false" import="true" defaultSelectionEntryId="853a-2471-ca59-734e">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e95d-2a81-cc7d-9457" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f95e-e6a5-f06f-f672" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="853a-2471-ca59-734e" name="Gorestorm Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="7445-8b57-4ab0-baa1" name="Demolisher" hidden="false" targetId="720f-5c52-b5ff-ee75" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3331-94ca-6b91-08a3" name="Ichor Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="fffa-3004-03f8-80b8" name="Inferno Cannon" hidden="false" targetId="6a00-06f9-5972-4b79" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ac63-6dd5-83a3-ede3" name="Daemongore Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="de91-9da0-085c-fc9d" name="Battle Cannon" hidden="false" targetId="3a2e-94e4-b9a3-bb11" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="325.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
