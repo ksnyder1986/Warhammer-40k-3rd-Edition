@@ -436,6 +436,7 @@
         <categoryLink id="7f85-6a48-7ad2-6ad1" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="1c06-8da2-af02-7166" name="Deathstrike (Homebrew)" hidden="false" collective="false" import="true" targetId="ed4a-1c1c-add9-add6" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f6c9-305b-8827-2cb6" name="Command Platoon" hidden="false" collective="false" import="true" type="unit">
@@ -11385,6 +11386,48 @@ Stormshard Mortar(4x mortars) = 100</comment>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="175.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="ed4a-1c1c-add9-add6" name="Deathstrike (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="8a0f-4f1f-bdf4-1fd1" name="Deathstrike Missile" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G12&quot;-960&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1, Ordnance</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">One Shot Only</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c0d5-84f7-a786-cdd1" name="Deathstrike Missle" hidden="false">
+          <description>Once the final position of the missile has been determined, mark the impact location with a counter. Roll D3+3&quot; to determine the blast radius. All models fully or partially in range of the blast are hit. Note that its full strength 10 is used for armour penetration regardless of the vehicle&apos;s position.</description>
+        </rule>
+        <rule id="ef61-2c08-727d-0a3c" name="Ignore Cover" hidden="false">
+          <description>Cover saves may not be taken against hits caused by a Deathstrike missile.</description>
+        </rule>
+        <rule id="ddaf-764e-60a2-46ca" name="Five minutes to launch..." hidden="false">
+          <description>A deathstrike missile may not be fired on the first turn of the game or if the vehicle has moved that turn. When firing, roll a dice and apply the following modifiers:
++1 for each full turn
+-1 for each weapon destroyed
+-1 if crew shaken/stunned
+
+On a roll of 6 or more, the Deathstrike Missile can be fired. A natural roll of 6 will always result in the missile being launched, regardless of negative modifiers. </description>
+        </rule>
+        <rule id="f752-ccde-dde6-dc28" name="Assured Destruction" hidden="false">
+          <description>The Deathstrike Missile cannot be destroyed by a weapon destroyed result, only delayed. A crew shaken or stunned result does not prevent the missile from being fired.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="4e84-2dfb-ce99-f2b9" name="Deathstrike" hidden="false" targetId="f94b-cd00-5041-58ce" type="profile"/>
+        <infoLink id="5b52-4d93-9aba-a423" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c48c-6aa7-2747-61a6" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="135.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="fe51-5a52-0962-aa96" name="Single-Handed Weapons" hidden="false" collective="false" import="true">
@@ -13843,6 +13886,14 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
       </characteristics>
     </profile>
     <profile id="7d50-8732-3981-7cdd" name="Wyvern" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="f94b-cd00-5041-58ce" name="Deathstrike" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
