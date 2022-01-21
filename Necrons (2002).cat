@@ -18,6 +18,7 @@
     <entryLink id="1b85-ea5c-f41f-a842" name="Tomb Spyders" hidden="false" collective="false" import="true" targetId="0164-f47e-2789-9154" type="selectionEntry"/>
     <entryLink id="3580-4b5a-f18e-93b0" name="Warriors" hidden="false" collective="false" import="true" targetId="7fdf-5e14-4871-22ad" type="selectionEntry"/>
     <entryLink id="5e1f-85c5-a346-18f0" name="Wraiths" hidden="false" collective="false" import="true" targetId="9605-3b01-4680-5ca1" type="selectionEntry"/>
+    <entryLink id="c713-0561-1ac5-9115" name="Night Scythe (Homebrew)" hidden="false" collective="false" import="true" targetId="f851-9166-e134-2d28" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8fc7-a6c7-799f-bef7" name="Necron Lord" hidden="false" collective="false" import="true" type="unit">
@@ -222,6 +223,7 @@
         <infoLink id="ce22-eb9f-9ccc-dffe" name="Gauss Flayer" hidden="false" targetId="fe17-2150-02e5-4298" type="profile"/>
         <infoLink id="4d15-30b4-67d2-de8a" name="Phase Out" hidden="false" targetId="d2b0-ba08-4fb1-d9f3" type="rule"/>
         <infoLink id="4e9c-bf35-b807-b9ee" name="We&apos;ll Be Back!" hidden="false" targetId="e957-8c69-1203-279c" type="rule"/>
+        <infoLink id="d034-8d2e-9e02-cc5b" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9895-9bc3-73b8-37da" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
@@ -261,6 +263,20 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="f273-ad45-c4c6-2dcc" name="Ghost Arc (Homebrew)" hidden="false" collective="false" import="true" targetId="f6c6-6c43-39d8-faf1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d56a-c986-f6c8-0257" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec1c-78cf-0b28-b372" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
@@ -479,9 +495,6 @@
     </selectionEntry>
     <selectionEntry id="dc9f-b5be-d617-3729" name="Monolith" hidden="false" collective="false" import="true" type="unit">
       <rules>
-        <rule id="fb59-90f2-b5b7-778b" name="Living Metal" hidden="false">
-          <description>Attacks which count the target&apos;s Armor Value as being less than it really is do not do so against the Monolith. Similarly, weapons that get additional Armor Penetration dice do not get the extra dice against the Monolith. Ordnance weapons still roll 2D6 and select the highest.</description>
-        </rule>
         <rule id="3acc-28e8-8fb3-f339" name="Ponderous" hidden="false">
           <description>The Monolith is a skimmer whihc can move up to 6&quot; a turn and can if it wished remain totally stationary. It will not drift if stunned or shaken and if immobilised will not crash like other skimmers.</description>
         </rule>
@@ -503,6 +516,7 @@
         <infoLink id="7954-5ffc-44e7-9a19" name="Monolith" hidden="false" targetId="19b8-5cfb-abe1-7925" type="profile"/>
         <infoLink id="853f-0c23-012d-214b" name="Gauss Flux Arc" hidden="false" targetId="3327-1be5-382c-8124" type="profile"/>
         <infoLink id="1102-a188-b232-f293" name="Particle Whip" hidden="false" targetId="ab40-80fe-6cda-81bd" type="profile"/>
+        <infoLink id="743a-b0e2-6f7e-2ce3" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5af4-5894-b718-5556" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -591,6 +605,71 @@
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="360.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f851-9166-e134-2d28" name="Night Scythe (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>7th Ed rules and VDR (ignoring some of restrictions put in place for Necrons by CA2004)
+
+Flyer-Normal
+Armor - 11-11-11 = 5+30+20=55
+Flyer=40
+
+Living Metal=50
+Tesla Destructor=50 (based on some analysis this appears to be worth 50 points compared to any autocannon after considering Tesla)</comment>
+      <profiles>
+        <profile id="c1e8-af28-674d-58c8" name="Twin-linked Tesla Destructor" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">0</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Tesla</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="e53e-89e3-d356-011f" name="Living Metal" hidden="false">
+          <description>Attacks which count the target&apos;s Armor Value as being less than it really is do not do so against the Monolith. Similarly, weapons that get additional Armor Penetration dice do not get the extra dice against the Monolith. Ordnance weapons still roll 2D6 and select the highest.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="9088-768c-429a-a204" name="Night Scythe" hidden="false" targetId="f92d-3a3c-4025-befc" type="profile"/>
+        <infoLink id="0496-6f0c-5070-cd43" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="c440-6c12-4b5e-10a0" name="Tesla" hidden="false" targetId="6f5b-5593-89e2-7728" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="908b-028e-ca5e-4296" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="195.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f6c6-6c43-39d8-faf1" name="Ghost Arc (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Skimmer-Normal-Open-Topped
+
+Armour = 11-11-11 = 5+30+20=55
+Speed Normal = 10
+Transport = 10
+Skimmer = 20
+Living Metal=50
+
+5x Gauss Flayer = 25</comment>
+      <infoLinks>
+        <infoLink id="f4c0-f253-0938-5e05" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="3bbe-5c22-92fb-445c" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
+        <infoLink id="acd5-087a-726e-53a8" name="Ghost Arc" hidden="false" targetId="6943-b346-e690-2bc5" type="profile"/>
+        <infoLink id="975a-4b0f-7940-9654" name="Gauss Flayer" hidden="false" targetId="fe17-2150-02e5-4298" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="5 Gauss Flayers"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="1a03-df98-7234-3ef2" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="91dc-a203-3c9b-c839" name="Dedicated Transport" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="170.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -797,6 +876,13 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
     <rule id="ec1e-b09d-90d9-bba3" name="Gauss Weapons" hidden="false">
       <description>Against troops, any roll to would of a 6 automatically causes a would regardless of Toughness. Agaisnt vehicles, any roll of 6 will cause a glancing hit if it does not already cause a penetrating hit.</description>
     </rule>
+    <rule id="7952-d645-54f2-4e49" name="Living Metal" hidden="false">
+      <description>Attacks which count the target&apos;s Armor Value as being less than it really is do not do so against the Monolith. Similarly, weapons that get additional Armor Penetration dice do not get the extra dice against the Monolith. Ordnance weapons still roll 2D6 and select the highest.</description>
+    </rule>
+    <rule id="6f5b-5593-89e2-7728" name="Tesla" hidden="false">
+      <comment>7th Edition Rule seems most fair and in line with 3rd edition type play</comment>
+      <description>A Tesla weapon that rolls a to hit of a 6 causes 2 hits on a target instead of only 1.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="e74a-1780-4c85-52aa" name="Necron Lord" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -957,6 +1043,23 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="f92d-3a3c-4025-befc" name="Night Scythe" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">11</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6943-b346-e690-2bc5" name="Ghost Arc" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">11</characteristic>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">11</characteristic>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">11</characteristic>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204">4</characteristic>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">10</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
