@@ -19,6 +19,7 @@
     <entryLink id="3580-4b5a-f18e-93b0" name="Warriors" hidden="false" collective="false" import="true" targetId="7fdf-5e14-4871-22ad" type="selectionEntry"/>
     <entryLink id="5e1f-85c5-a346-18f0" name="Wraiths" hidden="false" collective="false" import="true" targetId="9605-3b01-4680-5ca1" type="selectionEntry"/>
     <entryLink id="c713-0561-1ac5-9115" name="Night Scythe (Homebrew)" hidden="false" collective="false" import="true" targetId="f851-9166-e134-2d28" type="selectionEntry"/>
+    <entryLink id="e0ac-dc52-c35f-a67f" name="Annihilation Barge (Homebrew)" hidden="false" collective="false" import="true" targetId="b5ae-9f0f-dd5c-2fe3" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8fc7-a6c7-799f-bef7" name="Necron Lord" hidden="false" collective="false" import="true" type="unit">
@@ -616,17 +617,6 @@ Flyer=40
 
 Living Metal=50
 Tesla Destructor=50 (based on some analysis this appears to be worth 50 points compared to any autocannon after considering Tesla)</comment>
-      <profiles>
-        <profile id="c1e8-af28-674d-58c8" name="Twin-linked Tesla Destructor" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
-            <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
-            <characteristic name="AP" typeId="25ce-028f-0aae-2855">0</characteristic>
-            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
-            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Tesla</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule id="e53e-89e3-d356-011f" name="Living Metal" hidden="false">
           <description>Attacks which count the target&apos;s Armor Value as being less than it really is do not do so against the Monolith. Similarly, weapons that get additional Armor Penetration dice do not get the extra dice against the Monolith. Ordnance weapons still roll 2D6 and select the highest.</description>
@@ -636,6 +626,11 @@ Tesla Destructor=50 (based on some analysis this appears to be worth 50 points c
         <infoLink id="9088-768c-429a-a204" name="Night Scythe" hidden="false" targetId="f92d-3a3c-4025-befc" type="profile"/>
         <infoLink id="0496-6f0c-5070-cd43" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
         <infoLink id="c440-6c12-4b5e-10a0" name="Tesla" hidden="false" targetId="6f5b-5593-89e2-7728" type="rule"/>
+        <infoLink id="9bc4-f4d7-616c-ba92" name="Tesla Destructor" hidden="false" targetId="5ade-9992-f072-1150" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Tesla Destructor"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="908b-028e-ca5e-4296" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -664,12 +659,67 @@ Living Metal=50
           </modifiers>
         </infoLink>
         <infoLink id="1a03-df98-7234-3ef2" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
+        <infoLink id="3726-1da4-a9ab-c6ce" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="91dc-a203-3c9b-c839" name="Dedicated Transport" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="170.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b5ae-9f0f-dd5c-2fe3" name="Annihilation Barge (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Skimmer-Opentopped
+
+Armor = 11+11+11 = 5+30+20 = 55
+Skimmer = 20
+Normal Speed = 10
+Living Metal = 50
+Twin-linked Tesla Destructor = 75</comment>
+      <infoLinks>
+        <infoLink id="8229-acd9-556f-0503" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="f763-b369-d852-003a" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink id="c8cf-be1f-40e8-a8d7" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
+        <infoLink id="3b93-71ee-0f3f-3fd7" name="Annihilation Barge" hidden="false" targetId="6c9c-aff2-1e04-fd70" type="profile"/>
+        <infoLink id="c70a-b34d-8c92-6b51" name="Tesla Destructor" hidden="false" targetId="5ade-9992-f072-1150" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Tesla Destructor"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="c2e1-9bd3-dce8-b096" name="Tesla" hidden="false" targetId="6f5b-5593-89e2-7728" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2fa7-0b1a-c4cf-5b9b" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5130-8a60-4823-7b1c" name="Under Carraige Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="41c9-7172-803d-0817">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0895-6664-2c55-ecf6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb0f-5978-75da-7238" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="41c9-7172-803d-0817" name="Gauss Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="b61b-02de-26f2-c6fd" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
+                <infoLink id="1b31-65b1-a78b-6590" name="Gauss Cannon" hidden="false" targetId="96af-6622-de74-9cb8" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="00bc-a577-8200-f278" name="Tesla Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="28d1-52ab-3b0f-c275" name="Telsa Cannon" hidden="false" targetId="723c-ae96-7a54-94ff" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="210.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -883,6 +933,9 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
       <comment>7th Edition Rule seems most fair and in line with 3rd edition type play</comment>
       <description>A Tesla weapon that rolls a to hit of a 6 causes 2 hits on a target instead of only 1.</description>
     </rule>
+    <rule id="c4ab-4235-0b02-127d" name="Shroud" hidden="false">
+      <description>A Shourd system wreaths the Necron vehicle in a shifting miasma of impenetrable shadow. All shooting attacks made against the vehicle use the night fighting special rule if it is not already in use.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="e74a-1780-4c85-52aa" name="Necron Lord" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -1060,6 +1113,32 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
         <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">11</characteristic>
         <characteristic name="BS" typeId="ae25-5be4-5470-2204">4</characteristic>
         <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6c9c-aff2-1e04-fd70" name="Annihilation Barge" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">11</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="5ade-9992-f072-1150" name="Tesla Destructor" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">0</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Tesla</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="723c-ae96-7a54-94ff" name="Tesla Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Tesla</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
