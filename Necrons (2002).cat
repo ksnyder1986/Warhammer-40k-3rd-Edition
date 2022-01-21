@@ -20,6 +20,7 @@
     <entryLink id="5e1f-85c5-a346-18f0" name="Wraiths" hidden="false" collective="false" import="true" targetId="9605-3b01-4680-5ca1" type="selectionEntry"/>
     <entryLink id="c713-0561-1ac5-9115" name="Night Scythe (Homebrew)" hidden="false" collective="false" import="true" targetId="f851-9166-e134-2d28" type="selectionEntry"/>
     <entryLink id="e0ac-dc52-c35f-a67f" name="Annihilation Barge (Homebrew)" hidden="false" collective="false" import="true" targetId="b5ae-9f0f-dd5c-2fe3" type="selectionEntry"/>
+    <entryLink id="b7c4-23fc-50c3-5d2b" name="Triarch Stalkers (Homebrew)" hidden="false" collective="false" import="true" targetId="5aee-d841-f349-f1f5" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8fc7-a6c7-799f-bef7" name="Necron Lord" hidden="false" collective="false" import="true" type="unit">
@@ -455,7 +456,11 @@
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="73b3-219b-9447-0f1a" name="Staff of Light" hidden="false" targetId="f0e1-c7e2-18e3-5e45" type="profile"/>
+                <infoLink id="73b3-219b-9447-0f1a" name="Staff of Light" hidden="false" targetId="f0e1-c7e2-18e3-5e45" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Particle Projector"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -776,6 +781,98 @@ Skimmer=20</comment>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="146.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="5aee-d841-f349-f1f5" name="Triarch Stalkers (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="ad75-1b7c-4c72-dc80" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9e12-2317-d36b-941f" name="Triarch Stalker" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>Walker-Small-Opentopped
+Armor = 11-11-11 = 5+30+20=55
+Normal Speed = 5
+Living Metal=50
+CCW = 1*4*3 = 12
+
+</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3db0-dd1b-a039-dadb" type="min">
+              <comment>
+</comment>
+            </constraint>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="181a-182f-a973-943b" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b36d-e208-96d8-f2d3" name="Move Through Cover" hidden="false" targetId="3a88-67df-4004-176b" type="rule"/>
+            <infoLink id="9b20-dc2e-3f87-a178" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
+            <infoLink id="d3ed-72c7-15c9-e12e" name="Triarch Stalker" hidden="false" targetId="541b-e47a-cdf8-9315" type="profile"/>
+            <infoLink id="f059-d48c-ce07-795d" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="28d0-b7dd-f362-4902" name="Weapon" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f2f-4c87-b135-3efa" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f60b-75f6-f8a1-2fa7" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="42fa-301e-e854-740f" name="Heat Ray" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="5dac-965e-3fa0-6a89" name="Heat Ray (Melta)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+                        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+                        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+                        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Melta</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="c69f-6782-f2d9-d932" name="Heat Ray (Flamer)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
+                        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+                        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+                        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="d843-5914-a58d-097d" name="Twin-linked Heavy Gauss Cannon" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="fe65-315d-f93c-65e9" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
+                    <infoLink id="3f2f-a997-2e5d-b6de" name="Gauss Cannon" hidden="false" targetId="96af-6622-de74-9cb8" type="profile">
+                      <modifiers>
+                        <modifier type="set" field="name" value="Twin-linked Gauss Cannon"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="1889-ac08-a3d6-5db1" name="Particle Projector" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="1fc7-070f-ad6d-ca29" name="Staff of Light" hidden="false" targetId="f0e1-c7e2-18e3-5e45" type="profile">
+                      <modifiers>
+                        <modifier type="set" field="name" value="Particle Projector"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="122.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -1203,6 +1300,18 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
         <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">11</characteristic>
         <characteristic name="BS" typeId="ae25-5be4-5470-2204">4</characteristic>
         <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="541b-e47a-cdf8-9315" name="Triarch Stalker" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">4</characteristic>
+        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
+        <characteristic name="S" typeId="2870-c64f-81e5-a118">7</characteristic>
+        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">11</characteristic>
+        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">11</characteristic>
+        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">11</characteristic>
+        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">2</characteristic>
+        <characteristic name="A" typeId="bb33-7ddf-2296-174e">3</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
