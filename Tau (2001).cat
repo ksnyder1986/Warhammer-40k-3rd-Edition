@@ -22,6 +22,7 @@
     <entryLink id="7ee5-a8fa-7428-2fdb" name="Heavy Gun Drone Squadron (IA)" hidden="false" collective="false" import="true" targetId="8113-ccd1-001e-9a96" type="selectionEntry"/>
     <entryLink id="9fd2-02cb-2208-94d5" name="Piranha (Homebrew)" hidden="false" collective="false" import="true" targetId="57fa-2e2e-e453-6313" type="selectionEntry"/>
     <entryLink id="e4b5-3c0a-1bc3-c02c" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" targetId="9c59-ab22-f60f-c9c9" type="selectionEntry"/>
+    <entryLink id="917e-46e4-bd4e-e4ec" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" targetId="4725-b232-bbd7-82e3" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b044-07fe-a372-df49" name="Shas&apos;el" hidden="false" collective="false" import="true" type="unit">
@@ -1595,9 +1596,73 @@ Ion Turret=Short Ranged Ion Cannon = 20
       </costs>
     </selectionEntry>
     <selectionEntry id="4725-b232-bbd7-82e3" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Flyer
+Armor 11-10-10 = 5+20+10 = 35
+Flyer = 40
+2xSeeker Missiles = 20
+2x Twin-linked Ion Rifles (slow firing, twin-linked, short barrelled, Ion Cannos) = 2x35=70
+2xPulse Bombs=60
+</comment>
+      <infoLinks>
+        <infoLink id="8c89-7c63-f102-6a26" name="Ion Cannon" hidden="false" targetId="43b2-2313-d8ca-a57b" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Twin-linked Ion Rifles"/>
+            <modifier type="set" field="deb8-131d-bdcf-1376" value="30&quot;"/>
+            <modifier type="set" field="d3f6-19e8-ac9e-ae13" value="Rapid Fire"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="5efd-c9e4-c4bb-003a" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="f93b-6914-cb0f-7a3b" name="Sun Shark" hidden="false" targetId="8e64-8687-e870-2fc4" type="profile"/>
+        <infoLink id="e3bb-e895-6bd5-1e69" name="Seeker Missle" hidden="false" targetId="7496-dcbe-e677-3ecf" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Seeker Missiles"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="e1e9-84e1-3e54-5a29" name="Pulse Bomb" hidden="false" targetId="c945-6301-8d8c-d4bd" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Pulse Bombs"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="6c73-bd13-486d-810d" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7feb-a256-fda9-c5c9" name="Missile Pod" hidden="false" collective="false" import="true" defaultSelectionEntryId="90fc-6a64-9843-1382">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb1e-898b-9295-767f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3d0-cc03-468b-6694" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="90fc-6a64-9843-1382" name="Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="9321-8107-3b12-10ff" name="Missle Pod" hidden="false" targetId="0f38-81fa-b5b9-0663" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="caab-f0fb-d8cc-733c" name="Twin-linked Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="aa08-d2df-9e86-fe44" name="Missle Pod" hidden="false" targetId="0f38-81fa-b5b9-0663" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Missile Pod"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="cd32-b07a-f365-c698" name="Tau Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="660d-edf9-04e6-9966" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="225.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2738,6 +2803,15 @@ The vehicle equipped with the missiles cannot launch them itself. They are alway
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
         <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="c945-6301-8d8c-d4bd" name="Pulse Bomb" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G12-48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Smart Bomb</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
