@@ -21,6 +21,7 @@
     <entryLink id="d7b2-f13a-b0d5-3552" name="Barracuda (IA)" hidden="false" collective="false" import="true" targetId="fb65-7a01-3259-46bc" type="selectionEntry"/>
     <entryLink id="7ee5-a8fa-7428-2fdb" name="Heavy Gun Drone Squadron (IA)" hidden="false" collective="false" import="true" targetId="8113-ccd1-001e-9a96" type="selectionEntry"/>
     <entryLink id="9fd2-02cb-2208-94d5" name="Piranha (Homebrew)" hidden="false" collective="false" import="true" targetId="57fa-2e2e-e453-6313" type="selectionEntry"/>
+    <entryLink id="e4b5-3c0a-1bc3-c02c" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" targetId="9c59-ab22-f60f-c9c9" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b044-07fe-a372-df49" name="Shas&apos;el" hidden="false" collective="false" import="true" type="unit">
@@ -1535,8 +1536,69 @@ Two-Gun Drones = 34</comment>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="94.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9c59-ab22-f60f-c9c9" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" type="upgrade"/>
-    <selectionEntry id="4725-b232-bbd7-82e3" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="9c59-ab22-f60f-c9c9" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Flyer
+Armor 11-10-10 = 5+20+10 = 35
+Flyer = 40
+2xSeeker Missiles = 20
+Ion Turret=Short Ranged Ion Cannon = 20
+
+</comment>
+      <infoLinks>
+        <infoLink id="52b8-55c8-f39f-bd15" name="Ion Cannon" hidden="false" targetId="43b2-2313-d8ca-a57b" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Quad Ion Turret"/>
+            <modifier type="set" field="deb8-131d-bdcf-1376" value="30&quot;"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="da9a-3d9a-a602-7087" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="b5cc-9b08-164b-cdab" name="Seeker Missle" hidden="false" targetId="7496-dcbe-e677-3ecf" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Seeker Missiles"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1188-8e6f-01a7-eca7" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9ce9-3329-7205-a78e" name="Nose Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="0a5c-fb10-c976-d72e">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="076d-f391-a8b6-f5dd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf5d-5d94-c225-dfb2" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0a5c-fb10-c976-d72e" name="Burst Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="659e-2665-b2cf-14b4" name="Burst Cannon" hidden="false" targetId="9e5e-b881-3c15-e101" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="48c6-9d8c-6751-09a4" name="Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="05d8-dcb7-05e8-55c3" name="Missle Pod" hidden="false" targetId="0f38-81fa-b5b9-0663" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="94f8-d3c0-32a3-c2b2" name="Tau Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="660d-edf9-04e6-9966" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="115.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4725-b232-bbd7-82e3" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="6c73-bd13-486d-810d" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="c406-53c8-88ca-ce9c" name="Hard-Wired Support Systems" hidden="false" collective="false" import="true">
@@ -1641,6 +1703,8 @@ Two-Gun Drones = 34</comment>
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1665,6 +1729,8 @@ Two-Gun Drones = 34</comment>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e9c-f3f1-1647-b580" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e3-1a2d-c1ac-213a" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1688,6 +1754,8 @@ Two-Gun Drones = 34</comment>
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e9c-f3f1-1647-b580" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1745,6 +1813,8 @@ Two-Gun Drones = 34</comment>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e9c-f3f1-1647-b580" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57fa-2e2e-e453-6313" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1767,6 +1837,8 @@ Two-Gun Drones = 34</comment>
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1813,6 +1885,8 @@ Two-Gun Drones = 34</comment>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e9c-f3f1-1647-b580" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57fa-2e2e-e453-6313" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1827,6 +1901,32 @@ Two-Gun Drones = 34</comment>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e84a-d06a-0218-17b0" name="Escape Pods" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6028-d238-0246-14db" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="6b9f-6d66-0612-c47b" name="Escape Pods" hidden="false">
+              <description>If a Tau Flyer is destroyed, nominate a point on the table and scatter the pod 2D6&quot; as with the rules for Deep Strike. If the pod scatters so that it is off-table is is counted as being destroyed. If not, place 2 Tau models within 2&quot; of it (count as Fire Warriors with no weapons). The crew as counted as being below half strength and are worth zero Victory Points on their own, but their vehicle counts as only being damaged for Victory Point purposes whilst either of the crew is still alive or if they reach the table edge for any reason.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2617,6 +2717,22 @@ The vehicle equipped with the missiles cannot launch them itself. They are alway
       </characteristics>
     </profile>
     <profile id="7721-ef21-14e6-28f2" name="Piranha" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="229b-bf3c-f047-57ef" name="Razorshark" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8e64-8687-e870-2fc4" name="Sun Shark" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
