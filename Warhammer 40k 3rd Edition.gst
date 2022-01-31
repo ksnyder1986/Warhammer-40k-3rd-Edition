@@ -104,6 +104,19 @@
         <characteristicType id="e1d2-e9ec-26d6-1f11" name="Capacity"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="8363-119d-bce3-2e3b" name="Super Heavy Walker">
+      <characteristicTypes>
+        <characteristicType id="66aa-c126-e0da-eff1" name="WS"/>
+        <characteristicType id="caba-3888-54de-7384" name="BS"/>
+        <characteristicType id="094c-cba6-7096-9805" name="S"/>
+        <characteristicType id="02e0-3eba-d3ed-75e0" name="Front Armor"/>
+        <characteristicType id="efff-2637-7f7f-8339" name="Side Armor"/>
+        <characteristicType id="6b33-ddb1-a14c-9034" name="Rear Armor"/>
+        <characteristicType id="e58a-0314-a94e-b641" name="I"/>
+        <characteristicType id="1735-ac9d-d5c1-ca2f" name="A"/>
+        <characteristicType id="b9dd-3e64-0507-92f1" name="Structure Points"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="a8a7-7a4b-5f7e-2138" name="HQ" hidden="false"/>
@@ -130,7 +143,7 @@
     <categoryEntry id="9bbd-df2b-520d-778d" name="Space Wolf" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="7da2-40c9-890c-3239" name="Standard Missions" hidden="false">
+    <forceEntry id="7da2-40c9-890c-3239" name="1-Standard Missions" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
         <categoryLink id="d4a3-35ce-7202-922e" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
@@ -179,6 +192,58 @@
           </constraints>
         </categoryLink>
         <categoryLink id="0561-fef4-ad1a-f2ef" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="949f-fced-04a6-c467" name="2-Apoc Missions" hidden="false">
+      <comment>Imperial Guard (2003)</comment>
+      <categoryLinks>
+        <categoryLink id="c3f7-5895-ade5-8674" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79b1-ccaf-d2c5-9d2b" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f801-8c9d-fa6d-39e7" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+          <modifiers>
+            <modifier type="increment" field="dce7-0551-bd25-f2fe" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="3957-703a-aa85-c7ee" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="dce7-0551-bd25-f2fe" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3957-703a-aa85-c7ee" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dce7-0551-bd25-f2fe" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="43d9-ad22-a680-d127" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c158-7146-2304-00d1" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7ac-405f-3cc9-6972" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="bb74-4f6a-0881-dae1" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6663-4d34-9b7a-4273" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d21f-5bbf-4583-8a99" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d540-a457-070f-5fb2" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0547-3077-0e08-1f63" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink id="6396-e5a7-b57a-66e4" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -407,7 +472,7 @@ Others: The vehile causes tank shock if it moves through the enemy, just like Ta
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>
