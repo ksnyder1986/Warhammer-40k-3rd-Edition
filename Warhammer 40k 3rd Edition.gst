@@ -104,6 +104,19 @@
         <characteristicType id="e1d2-e9ec-26d6-1f11" name="Capacity"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="8363-119d-bce3-2e3b" name="Super Heavy Walker">
+      <characteristicTypes>
+        <characteristicType id="66aa-c126-e0da-eff1" name="WS"/>
+        <characteristicType id="caba-3888-54de-7384" name="BS"/>
+        <characteristicType id="094c-cba6-7096-9805" name="S"/>
+        <characteristicType id="02e0-3eba-d3ed-75e0" name="Front Armor"/>
+        <characteristicType id="efff-2637-7f7f-8339" name="Side Armor"/>
+        <characteristicType id="6b33-ddb1-a14c-9034" name="Rear Armor"/>
+        <characteristicType id="e58a-0314-a94e-b641" name="I"/>
+        <characteristicType id="1735-ac9d-d5c1-ca2f" name="A"/>
+        <characteristicType id="b9dd-3e64-0507-92f1" name="Structure Points"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="a8a7-7a4b-5f7e-2138" name="HQ" hidden="false"/>
@@ -130,7 +143,7 @@
     <categoryEntry id="9bbd-df2b-520d-778d" name="Space Wolf" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="7da2-40c9-890c-3239" name="Standard Missions" hidden="false">
+    <forceEntry id="7da2-40c9-890c-3239" name="1-Standard Missions" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
         <categoryLink id="d4a3-35ce-7202-922e" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
@@ -181,7 +194,7 @@
         <categoryLink id="0561-fef4-ad1a-f2ef" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
       </categoryLinks>
     </forceEntry>
-    <forceEntry id="949f-fced-04a6-c467" name="Apoc Missions" hidden="false">
+    <forceEntry id="949f-fced-04a6-c467" name="2-Apoc Missions" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
         <categoryLink id="c3f7-5895-ade5-8674" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
@@ -459,7 +472,7 @@ Others: The vehile causes tank shock if it moves through the enemy, just like Ta
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>
