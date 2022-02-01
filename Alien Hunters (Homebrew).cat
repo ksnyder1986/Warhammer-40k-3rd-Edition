@@ -4,14 +4,114 @@
   <categoryEntries>
     <categoryEntry id="400a-5925-01df-da4a" name="Deathwatch" hidden="false"/>
     <categoryEntry id="e5eb-445e-c343-092e" name="Apothecary" hidden="false"/>
+    <categoryEntry id="0485-f8e0-f879-53ef" name="Xeno Mercenary" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="force" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a622-4cb7-cb33-a3a1" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
+  <forceEntries>
+    <forceEntry id="5602-b5b2-bc98-719e" name="Xeno Hunter Allies" hidden="false">
+      <categoryLinks>
+        <categoryLink id="82bd-bb0d-a882-e5ed" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5062-8eb2-56a5-f19f" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="fdd2-9e33-572e-cd95" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceee-0822-a7b8-b941" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="65e5-a003-1bc6-db81" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2c0-08ef-a6f7-fe74" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6ee1-fb9f-6211-2dab" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b7a-2145-58c6-2158" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
+  <selectionEntries>
+    <selectionEntry id="7b6a-7aba-0175-3b5a" name="Xeno Mercenary Leader" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="400a-5925-01df-da4a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f409-317c-08cb-a6ca" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="1f8e-b792-f3ce-5315" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="150e-2274-534f-ad2a" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f817-7506-15ef-2710" name="Leader" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6990-0098-2f77-1f0b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bb3-4b1a-9416-02be" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b638-6a01-e91e-568b" name="Dracon Lord" hidden="false" collective="false" import="true" targetId="ca59-9bd6-bd62-fd74" type="selectionEntry"/>
+            <entryLink id="8b22-a3aa-e77b-c3e0" name="Jetbike Warlock" hidden="false" collective="false" import="true" targetId="c73d-eae9-debb-ffa6" type="selectionEntry"/>
+            <entryLink id="c998-cae3-0d3f-cf86" name="Mekboyz" hidden="false" collective="false" import="true" targetId="b4e1-5f13-9303-52ad" type="selectionEntry"/>
+            <entryLink id="18c9-7d2d-0bab-57f8" name="Nobz" hidden="false" collective="false" import="true" targetId="f8fb-7699-1ead-bc0d" type="selectionEntry"/>
+            <entryLink id="3b75-0240-f01b-1e98" name="Shas&apos;o" hidden="false" collective="false" import="true" targetId="72b4-c34f-a2ff-9323" type="selectionEntry"/>
+            <entryLink id="ad0d-d425-7616-9df4" name="Warlock" hidden="false" collective="false" import="true" targetId="6b76-8ad9-66ec-c224" type="selectionEntry"/>
+            <entryLink id="d56a-07d9-2555-75c5" name="Wych Dracite" hidden="false" collective="false" import="true" targetId="1807-7f0f-8101-7ef9" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="54c4-5d29-1cab-baef" name="Allied Contingents" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5602-b5b2-bc98-719e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="a668-7090-8831-613a" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5602-b5b2-bc98-719e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63e3-9886-0c14-9e67" type="max"/>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a668-7090-8831-613a" type="min"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="4e59-a187-97cb-c886" name="Allied Contingents" hidden="false" collective="false" import="true" targetId="02f3-0c60-0986-0a27" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+  </selectionEntries>
   <entryLinks>
     <entryLink id="cd0e-1807-594c-e674" name="Death-cult Assassins" hidden="false" collective="false" import="true" targetId="8403-63be-d043-62b8" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="ec41-70a6-ff1c-d107" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="932d-9c66-854f-86c1" name="Deathwatch Bikers" hidden="false" collective="false" import="true" targetId="4f47-7c6f-22de-4316" type="selectionEntry">
+    <entryLink id="932d-9c66-854f-86c1" name="Deathwatch Bikers" hidden="true" collective="false" import="true" targetId="4f47-7c6f-22de-4316" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="f17a-ddb9-f49c-5eab" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
@@ -24,6 +124,7 @@
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="86ca-e8cc-8644-4e8b" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -39,14 +140,12 @@
     <entryLink id="86ca-e8cc-8644-4e8b" name="Deathwatch Master" hidden="true" collective="false" import="true" targetId="41c3-8654-571e-d0ae" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="equalTo"/>
-          </conditions>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -59,7 +158,14 @@
         <categoryLink id="bcf0-2830-e0a8-d5e7" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="170f-56c0-5b52-b77e" name="Deathwatch Chaplain" hidden="false" collective="false" import="true" targetId="dbd4-1d59-b806-6b20" type="selectionEntry">
+    <entryLink id="170f-56c0-5b52-b77e" name="Deathwatch Chaplain" hidden="true" collective="false" import="true" targetId="dbd4-1d59-b806-6b20" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9857-4a1f-8ebe-cf9d" type="max"/>
       </constraints>
@@ -67,7 +173,14 @@
         <categoryLink id="9f24-de00-5585-09c5" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="533b-b2a8-76f0-14e1" name="Deathwatch Librarian" hidden="false" collective="false" import="true" targetId="627d-f078-c5f3-d06f" type="selectionEntry">
+    <entryLink id="533b-b2a8-76f0-14e1" name="Deathwatch Librarian" hidden="true" collective="false" import="true" targetId="627d-f078-c5f3-d06f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2959-bc6e-0c12-aafc" type="max"/>
       </constraints>
@@ -79,12 +192,19 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -97,12 +217,19 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -115,12 +242,19 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -133,12 +267,19 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -147,12 +288,26 @@
         <categoryLink id="3b1c-ae8c-9c8e-fb5b" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="160f-3868-660e-40bc" name="Deathwatch Terminators" hidden="false" collective="false" import="true" targetId="5d2e-e688-d62c-e200" type="selectionEntry">
+    <entryLink id="160f-3868-660e-40bc" name="Deathwatch Terminators" hidden="true" collective="false" import="true" targetId="5d2e-e688-d62c-e200" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="7109-22bc-e198-e596" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="2436-b02a-f738-e2ac" name="Deathwatch Vanguard Veterans" hidden="false" collective="false" import="true" targetId="5fa0-6710-dae8-2cb8" type="selectionEntry">
+    <entryLink id="2436-b02a-f738-e2ac" name="Deathwatch Vanguard Veterans" hidden="true" collective="false" import="true" targetId="5fa0-6710-dae8-2cb8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d39-e9f8-cc3a-bbbb" type="max"/>
       </constraints>
@@ -164,12 +319,19 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe20-d4d9-bd2c-a1ba" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-8654-571e-d0ae" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -181,20 +343,16 @@
         <categoryLink id="0703-c2a6-cb3e-02b2" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="02c7-5050-558b-cce5" name="Deathwatch Veterans" hidden="false" collective="false" import="true" targetId="ef5a-6ffb-f22b-6605" type="selectionEntry">
+    <entryLink id="02c7-5050-558b-cce5" name="Deathwatch Veterans" hidden="true" collective="false" import="true" targetId="ef5a-6ffb-f22b-6605" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="3850-1ef4-6788-dbb7" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink id="c769-f293-be5b-4982" name="Inquisitor Gideon Ravenor" hidden="false" collective="false" import="true" targetId="4756-8176-6805-75b1" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true"/>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3122-67fb-5985-e855" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="d58a-217a-faf1-be8f" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="06d3-f258-f0b2-b060" name="Inquisitorial Storm Troopers" hidden="false" collective="false" import="true" targetId="4e83-bb95-64f8-7777" type="selectionEntry">
@@ -231,6 +389,7 @@
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="86ca-e8cc-8644-4e8b" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6511-3f01-7576-88ab" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -243,72 +402,28 @@
         <categoryLink id="6cb2-3a8c-1bf3-7392" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="70ff-7a4b-e83a-b486" name="Corvus Blackstar" hidden="false" collective="false" import="true" targetId="4902-d863-d129-6744" type="selectionEntry">
+    <entryLink id="70ff-7a4b-e83a-b486" name="Corvus Blackstar" hidden="true" collective="false" import="true" targetId="4902-d863-d129-6744" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="2375-2e56-c6a1-408a" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="12fe-b1d1-5a9c-53bb" name="Deathwatch Assault Veterans" hidden="false" collective="false" import="true" targetId="b102-de7a-a275-157d" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink id="5922-9e17-0a74-3a6b" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink id="3e9e-2d15-f402-6c05" name="Seer Council" hidden="true" collective="false" import="true" targetId="4f2c-5736-d463-fac0" type="selectionEntry">
+    <entryLink id="12fe-b1d1-5a9c-53bb" name="Deathwatch Assault Veterans" hidden="true" collective="false" import="true" targetId="b102-de7a-a275-157d" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4756-8176-6805-75b1" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0485-f8e0-f879-53ef" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a9b-c06c-1d2e-615e" type="max"/>
-      </constraints>
       <categoryLinks>
-        <categoryLink id="1aaf-cbd6-55e5-e6bd" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
-        <categoryLink id="641d-7a43-ac1e-4641" name="Ulthwe" hidden="false" targetId="2585-cdc1-80b7-c393" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink id="f0d2-5e9c-3980-85e1" name="Black Guardian Defender Squad" hidden="true" collective="false" import="true" targetId="148d-380e-0852-ca5e" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f2c-5736-d463-fac0" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4756-8176-6805-75b1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bee-a901-dc07-5199" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="e72c-08aa-73b1-500c" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
-        <categoryLink id="9711-58da-11ca-e7a0" name="Ulthwe" hidden="false" targetId="2585-cdc1-80b7-c393" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink id="18fd-8e25-ceb7-dbea" name="Dark Reapers" hidden="true" collective="false" import="true" targetId="5fe4-0c62-cde4-77c4" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4f2c-5736-d463-fac0" type="equalTo"/>
-                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4756-8176-6805-75b1" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc88-370b-7f25-26c0" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="6e2a-b8fb-3f5a-65c0" name="Ulthwe" hidden="false" targetId="2585-cdc1-80b7-c393" primary="false"/>
-        <categoryLink id="e701-6450-48c1-ed87" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+        <categoryLink id="5922-9e17-0a74-3a6b" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="a0ab-ddd4-f3af-427e" name="Cherubael" hidden="true" collective="false" import="true" targetId="0c7c-366f-7db2-d82c" type="selectionEntry">
@@ -324,6 +439,784 @@
       </constraints>
       <categoryLinks>
         <categoryLink id="969b-2c76-f018-e73c" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="8251-e641-2098-c6ac" name="Shoota Boyz" hidden="true" collective="false" import="true" targetId="89ec-0742-328f-2510" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="a699-f8a5-c5dc-9197" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="8e05-b9ef-e34e-de88" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2135-8c49-d6af-600c" name="Slugga Boyz" hidden="true" collective="false" import="true" targetId="285b-4446-6152-f35f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="67f7-ea40-d4c6-12e2" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="a449-94aa-c295-19cf" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f9fe-22a5-c038-85e3" name="Guardian Defender Squad" hidden="true" collective="false" import="true" targetId="3331-9e91-18c4-3976" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5a3f-5976-d5e5-23d1" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="9cce-113a-4054-c1b2" name="New CategoryLink" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d045-2e89-1132-b9ae" name="Flash Gitz" hidden="true" collective="false" import="true" targetId="24cc-91ab-7f7a-8653" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f27-bde5-dd72-7cdf" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="e8b2-c551-9ebb-e69c" name="New CategoryLink" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="8cda-69bb-1875-22bd" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="e559-b93c-9830-0a79" name="Kommandos" hidden="true" collective="false" import="true" targetId="94c0-0e84-8e2c-99fb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="567e-e4ea-c3bb-992b" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="c2de-1b7e-b785-abbe" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="71b8-e8ac-fb85-ae29" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d11b-273d-0ebf-07c5" name="Lootas" hidden="true" collective="false" import="true" targetId="8b9b-622e-a912-7e44" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f029-9d89-5895-4cad" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="f14b-d5b3-083f-da00" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="4087-2ecb-6492-a0b7" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="1f33-9cac-cbe9-00e4" name="Stormboyz" hidden="true" collective="false" import="true" targetId="89ad-7891-8c63-1cbd" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d49-e782-bb49-9a7b" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="03a5-3b44-f6fe-161d" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="ab47-ad3a-e76c-cd40" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3ace-4576-c8ff-a30b" name="Dire Avengers" hidden="true" collective="false" import="true" targetId="6027-1393-de68-29de" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="8c28-9000-6bc6-11e9" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="129a-dd04-8814-e9e1" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="e87b-b226-3233-926d" name="Guardian Storm Squad" hidden="true" collective="false" import="true" targetId="165b-56e9-5ba9-0a7e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="65df-4243-a199-c5a9" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="9d4b-3a57-bd61-56e6" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="601c-6e66-98e3-85c2" name="Guardian Jetbike Squadron" hidden="true" collective="false" import="true" targetId="9a65-700b-d909-e56a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e36d-bc1e-ad3a-2797" name="New CategoryLink" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="c6e5-57c9-2e34-388c" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="1cba-9143-df39-480b" name="Fire Dragons" hidden="true" collective="false" import="true" targetId="3185-c1b2-d3e6-ab7e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34c5-e16f-ca38-cb2b" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="8901-b48b-7ce4-de23" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="f4f2-a223-7306-1890" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="5af1-7064-2d42-e09b" name="Dark Reapers" hidden="true" collective="false" import="true" targetId="5fe4-0c62-cde4-77c4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1531-8fc7-8d00-c794" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="fdc1-42cb-a23b-4953" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+        <categoryLink id="130f-f618-2f68-b8d1" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="32b3-6982-3cc2-d3e1" name="Howling Banshees" hidden="true" collective="false" import="true" targetId="31ab-d862-386d-b35c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df67-4f9a-8d13-0fc2" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="5be2-9a31-bc14-7850" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="0c5c-fc0b-edf0-7565" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f2b3-391c-4579-be74" name="Rangers" hidden="true" collective="false" import="true" targetId="9217-1abc-0930-901a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41f2-b192-669f-68b7" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="27d7-e298-a395-7183" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="c06a-bff1-115b-17aa" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="166e-454f-a9fb-7ff8" name="Shining Spears" hidden="true" collective="false" import="true" targetId="ac77-965d-6973-5c3a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fbd-bdc3-a9a1-df21" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="f8cf-60a6-7dcd-ecfd" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="7557-5286-4d5c-7dd6" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9b5a-3578-b648-e634" name="Swooping Hawks" hidden="true" collective="false" import="true" targetId="0770-49ae-3aa2-2303" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a273-d734-8a1a-279c" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="00b7-dd91-bd25-08d7" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="f0d0-d697-89b4-1f61" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="b0fd-85d1-85a8-0a87" name="Warp Spiders" hidden="true" collective="false" import="true" targetId="b4c8-4720-f8da-ea8f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c73d-eae9-debb-ffa6" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b76-8ad9-66ec-c224" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43d7-bbba-eaba-7731" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="98cf-f8de-2cc6-66e3" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="0d9d-363d-e209-4616" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3e64-894e-60cc-83c0" name="Dark Eldar Scourges" hidden="true" collective="false" import="true" targetId="3609-d55b-7004-f5b7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1807-7f0f-8101-7ef9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca59-9bd6-bd62-fd74" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93e9-c136-056d-338c" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="1e76-534d-1c9c-74cd" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="ff9d-97f9-89ca-6022" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="5d89-8f4c-1a1e-11d5" name="Hellions" hidden="true" collective="false" import="true" targetId="f73e-f2f6-1774-94ca" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1807-7f0f-8101-7ef9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca59-9bd6-bd62-fd74" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1c5-6167-031b-9ece" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="57c7-cd72-1544-8672" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="7929-d5ec-206a-fa97" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="91a8-a037-7f97-cce9" name="Mandrakes" hidden="true" collective="false" import="true" targetId="2aaa-5105-fcf0-2282" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1807-7f0f-8101-7ef9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca59-9bd6-bd62-fd74" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="087b-9e58-6871-64c3" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="f2fc-4f3a-dfe1-5c7b" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="9130-451c-044a-49d9" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7843-03f5-0644-2980" name="Raider Squad" hidden="true" collective="false" import="true" targetId="db69-fd2e-b675-38ce" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca59-9bd6-bd62-fd74" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4d68-b6b3-150b-6732" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="d08a-0363-98eb-2473" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="430f-628b-e1d2-00d0" name="Reaver Jetbike Squad" hidden="true" collective="false" import="true" targetId="89d0-b76f-819a-ffc8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1807-7f0f-8101-7ef9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca59-9bd6-bd62-fd74" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3969-6ac6-9a12-adfe" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="d10e-340b-ddb4-7f6f" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink id="0f83-23b1-4ff2-361f" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="fe2f-dddd-d9ce-245c" name="Warp Beast Pack" hidden="true" collective="false" import="true" targetId="9d23-3c32-3e72-68bf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1807-7f0f-8101-7ef9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca59-9bd6-bd62-fd74" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3041-2cd8-15e7-b817" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="b694-36ef-b011-e078" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="612a-6a5f-7890-2eef" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="18f7-982c-f673-2228" name="Warrior Squad" hidden="true" collective="false" import="true" targetId="90b0-c1c3-0eb5-5751" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1807-7f0f-8101-7ef9" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c683-8758-d84a-01f9" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="8b53-f649-f1be-13ed" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="9c9e-883d-fd21-d570" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="942e-b060-8568-a9f8" name="Wyches" hidden="true" collective="false" import="true" targetId="0486-b755-c746-6b1d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca59-9bd6-bd62-fd74" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6d7-84a2-b222-973a" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="357f-0e2c-7ebc-a992" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="d869-a18b-20f6-90cf" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="5764-44f5-a6f2-743a" name="Wyches" hidden="true" collective="false" import="true" targetId="0486-b755-c746-6b1d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1807-7f0f-8101-7ef9" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0a38-735f-b295-a5b6" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="7dea-746a-a0a3-d2bd" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="b52f-436b-a76b-b203" name="Raider Squad" hidden="true" collective="false" import="true" targetId="db69-fd2e-b675-38ce" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1807-7f0f-8101-7ef9" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9aa-3924-be3e-c5eb" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="e2e2-2be1-0bfe-932b" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="bdcb-bb78-d821-4c43" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="bcba-fe45-c800-3cea" name="Warrior Squad" hidden="true" collective="false" import="true" targetId="90b0-c1c3-0eb5-5751" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca59-9bd6-bd62-fd74" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="65da-2b4f-3c5f-b1bf" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink id="56aa-bf20-2e11-5a55" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="aee6-7748-e264-3004" name="&apos;Ard Boyz" hidden="true" collective="false" import="true" targetId="c4f1-e2d7-cc90-9cfb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab22-f613-286c-0c57" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="ca0c-d326-7ff2-10d4" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="59aa-5ebe-b0ba-644a" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0443-c5de-8702-07d4" name="Burna Boyz" hidden="true" collective="false" import="true" targetId="541f-ccfc-684a-de6f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5243-7ee8-f0e0-e996" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="4d67-3b02-8428-0e8b" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="89a6-390f-5fec-6383" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a326-04af-3b62-29f2" name="Warbike Mobz" hidden="true" collective="false" import="true" targetId="7fe1-5292-1d58-9196" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b2c-d2e6-eec3-dba7" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="29bf-d23b-da4a-3560" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="a18c-4021-6b5d-b6b5" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2999-49aa-910e-f7e5" name="Tankbustas" hidden="true" collective="false" import="true" targetId="094b-2b8c-7290-bc19" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8fb-7699-1ead-bc0d" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a20-f860-4987-0383" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="832a-b84d-6eae-1f54" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="0ae2-cfb4-fa77-d4e7" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="db16-7e13-6881-9410" name="Gun Drone Squadron" hidden="true" collective="false" import="true" targetId="aeed-9d69-09d0-95e0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1922-5c9b-1f30-ca93" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="9f94-9d82-7159-934a" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="d879-d666-0f5f-a202" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d75b-5d24-fbc1-775f" name="Kroot Carnivore Squad" hidden="true" collective="false" import="true" targetId="4a6e-34f4-77b7-2ab9" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="6232-ef7f-4a28-ba3d" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="c737-e768-2aa5-255d" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="8bda-25a8-3175-c9ae" name="Pathfinder Team" hidden="true" collective="false" import="true" targetId="3f57-c38b-95cd-1331" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7cf-e5a0-d71c-1c23" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="4004-e549-a5ed-c7b9" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="cd41-f69c-141f-4325" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2e9c-a160-cfb6-3387" name="Tau Fire Warrior Team" hidden="true" collective="false" import="true" targetId="b126-8dcc-d48e-2acb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="99e5-6408-c30f-2235" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="a5d6-953b-01b3-6370" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="edba-7dc7-dad1-7c75" name="XV15 Stealth Team" hidden="true" collective="false" import="true" targetId="0eeb-1f5c-f1a1-ec5a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88c7-6bd2-a214-7bb3" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="c2c6-cd9d-bece-8a0c" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="1386-7821-88f3-3219" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f377-e636-7aa0-9eb4" name="XV8 Crisis Battlesuit Team" hidden="true" collective="false" import="true" targetId="4d93-2816-46b0-9ed3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d9f-746a-7464-76d0" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="22b5-72aa-fef9-1c24" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="8002-e5a6-6299-7960" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="30d2-725d-f561-605a" name="XV88 Broadside Battlesuit Team" hidden="true" collective="false" import="true" targetId="0e3b-214a-587d-f617" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72b4-c34f-a2ff-9323" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99f9-497d-f17d-ce70" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="9840-3ec3-efc4-423a" name="Xeno Mercenary" hidden="false" targetId="0485-f8e0-f879-53ef" primary="false"/>
+        <categoryLink id="1e2d-10e8-0e92-8fd0" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3b54-6fb3-0688-c32e" name="Orbital Strike" hidden="false" collective="false" import="true" targetId="ced2-9c47-0813-e8fc" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c1d5-1b78-ef8e-771d" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -542,6 +1435,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="74af-eebf-5b02-88ec" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="376c-0679-8dc6-ed72" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="be98-0311-5dbc-84e0" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="28b8-2af4-e87c-8047" type="selectionEntryGroup"/>
@@ -563,6 +1457,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="46d3-978e-c59a-fb26" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="dc34-ef84-0754-bfa6" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="17a0-9274-269b-0a9f" name="Deathwatch Armoury" hidden="false" collective="false" import="true" targetId="2ee3-aeb9-9475-18c3" type="selectionEntryGroup"/>
@@ -584,6 +1479,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b7a5-643f-8f14-fa1f" name="New CategoryLink" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="6047-414d-f9e5-41c0" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="5a45-a2b2-4bdd-860d" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="28b8-2af4-e87c-8047" type="selectionEntryGroup"/>
@@ -605,6 +1501,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d5b9-994c-b0b4-4610" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="ce72-1e50-0917-401a" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="38d1-0ff2-99a4-de0d" name="Deathwatch Armoury" hidden="false" collective="false" import="true" targetId="2ee3-aeb9-9475-18c3" type="selectionEntryGroup"/>
@@ -1131,6 +2028,9 @@
         <infoLink id="8471-c462-2fa4-bdec" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
         <infoLink id="f909-2dcb-92b2-04ca" name="Mission Tactics" hidden="false" targetId="8454-b9d6-c0c6-01d6" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4c9d-fe30-f97f-d5e8" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="6a97-8955-504a-fa9b" name="Veterans" hidden="false" collective="false" import="true">
           <selectionEntries>
@@ -1194,6 +2094,9 @@
         <infoLink id="d4a7-884f-be79-a98d" name="Mission Tactics" hidden="false" targetId="8454-b9d6-c0c6-01d6" type="rule"/>
         <infoLink id="92a4-a7ff-18c3-2cd9" name="Dreadnought" hidden="false" targetId="6f41-f408-70e6-5225" type="profile"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0217-2e67-abb7-f6dc" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="ade6-2fdc-8414-aec9" name="Left Arm" hidden="false" collective="false" import="true">
           <constraints>
@@ -1316,6 +2219,9 @@
         <infoLink id="664a-d22b-8b3a-6ca7" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
         <infoLink id="1e82-69f5-f185-5cd0" name="Mission Tactics" hidden="false" targetId="8454-b9d6-c0c6-01d6" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1f42-c2e3-abe5-3792" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="1c85-5fab-fea0-6317" name="Terminators" hidden="false" collective="false" import="true">
           <selectionEntries>
@@ -1378,6 +2284,9 @@
         <infoLink id="5fb6-74d2-b97b-f2c0" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
         <infoLink id="8671-da3c-3c6a-4fd7" name="Mission Tactics" hidden="false" targetId="8454-b9d6-c0c6-01d6" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5b4b-068c-b511-b1fd" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ff41-cd1e-f6e5-5e6e" name="Vanguard Veterans" hidden="false" collective="false" import="true" type="unit">
           <constraints>
@@ -1421,6 +2330,9 @@
         <infoLink id="fedf-10c0-22b2-3be9" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
         <infoLink id="ec09-4afc-e1c8-0d95" name="Venerable Dreadnought" hidden="false" targetId="3860-44bc-a83e-4285" type="profile"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8347-2f37-d1a2-a19c" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="3a8c-849e-35c1-1a6c" name="Left Arm" hidden="false" collective="false" import="true">
           <constraints>
@@ -1538,6 +2450,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4f47-7c6f-22de-4316" name="Deathwatch Bikers" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="84ec-3168-061c-62e1" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="4259-fc71-20f6-5dee" name="Deathwatch Bikers" hidden="false" collective="false" import="true" defaultSelectionEntryId="0b60-6083-75d6-6517">
           <selectionEntries>
@@ -1606,6 +2521,9 @@
         <infoLink id="9177-3b39-8c68-ac33" name="Razorback" hidden="false" targetId="ed53-db2a-5c0a-6839" type="profile"/>
         <infoLink id="acf0-44ab-6be7-6083" name="Mission Tactics" hidden="false" targetId="8454-b9d6-c0c6-01d6" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="93e0-d053-02ee-96e3" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="3223-6404-0df7-97b5" name="Turret Weapon" hidden="false" collective="false" import="true">
           <constraints>
@@ -1682,6 +2600,9 @@
         <infoLink id="0456-341c-2133-5f2a" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
         <infoLink id="c57b-5acd-48ef-ef3e" name="Rhino" hidden="false" targetId="37bf-a998-d9af-f79e" type="profile"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4152-a123-6ccd-186f" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="c9ae-d9a9-1b57-7fca" name="Deathwatch Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="e674-0c6f-19bc-1152" type="selectionEntryGroup"/>
         <entryLink id="9dc3-2ee8-eef6-7842" name="Deathwatch Vehicle Veteran Skills" hidden="false" collective="false" import="true" targetId="8d16-de5a-71a3-1e75" type="selectionEntryGroup"/>
@@ -1715,6 +2636,9 @@
         </infoLink>
         <infoLink id="b765-5688-5fed-1c4c" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8b8f-ad1c-f481-384b" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="2d77-2503-e359-46e0" name="Deathwatch Vehicle Veteran Skills" hidden="false" collective="false" import="true" targetId="8d16-de5a-71a3-1e75" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1755,6 +2679,9 @@
         </infoLink>
         <infoLink id="3ab1-783d-9bba-7fd7" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="a14f-cf92-eb5b-b560" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="8af6-be32-2340-d451" name="Deathwatch Vehicle Veteran Skills" hidden="false" collective="false" import="true" targetId="8d16-de5a-71a3-1e75" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1790,6 +2717,9 @@
         </infoLink>
         <infoLink id="5302-a8a9-3772-1316" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5289-1fb9-596b-b372" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="ed6f-afef-3c84-2c4a" name="Deathwatch Vehicle Veteran Skills" hidden="false" collective="false" import="true" targetId="8d16-de5a-71a3-1e75" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2267,6 +3197,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <infoLink id="2749-ecf5-596f-0d63" name="Super-Heavy Flyer" hidden="false" targetId="7ca6-da5f-a87c-f49b" type="rule"/>
         <infoLink id="5bc9-cfb8-ec3a-9383" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d5d0-4971-2e8f-6823" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="ffe8-e1c6-5709-ef99" name="Dorsal Weapon" hidden="false" collective="false" import="true">
           <constraints>
@@ -2350,6 +3283,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <infoLink id="e301-7b23-61cc-a377" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
         <infoLink id="1a30-7989-66ff-b727" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="33fd-2ed6-3a46-fd80" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d3f2-e2a7-f372-1403" name="4x Hellstrike Missiles" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2411,6 +3347,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="b102-de7a-a275-157d" name="Deathwatch Assault Veterans" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="915d-12f8-d547-dfa1" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
+      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="f8c3-0fb5-04ee-b2a3" name="Veterans" hidden="false" collective="false" import="true" defaultSelectionEntryId="d954-59c1-4d1d-5a07">
           <selectionEntries>
@@ -2505,6 +3444,410 @@ Hellfire Round: The shot wounds on a 2+.</description>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ced2-9c47-0813-e8fc" name="Orbital Strike" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3270-fcdf-8c99-8faf" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="5709-ae48-bb5c-7018" name="Inaccuracy" hidden="false">
+          <description>An Orbital Strike scatters just like ordinary ordnance weapons, except when a miss is rolled the distance scatterd is double the number scored on the D6. If a hit is rolled, the template deviates by the distance shown on the Hit Symbol.</description>
+        </rule>
+        <rule id="0ae4-4eb1-b674-37bd" name="Pinning" hidden="false">
+          <description>All Orbital Strikes cause Pinning tests</description>
+        </rule>
+        <rule id="1970-5572-a8d4-b548" name="Placement" hidden="false">
+          <description>The Ordnance Blast marker for the strike must be placed anywhere within the specified terrain piece</description>
+        </rule>
+        <rule id="1434-00dd-5dcd-f2f9" name="Plotting" hidden="false">
+          <description>The Orbital Strike must be keyed to a specific piece of terrain at the start of the battle. Make a note of the plotted target before forces are deployed but after deployment zones have been determined</description>
+        </rule>
+        <rule id="ab02-dda3-1aa3-3238" name="Timing" hidden="false">
+          <description>An orbital strike uses the Reserve special rule to determine when it strikes. Once the orbital strike passes the Reserve roll it fires each Space Marine shooting phases for the rest of the game. It cannot be stopped once started. The Space Marine player can opt to not roll for the onset of the orbital strike if they wish.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="7fa7-f6d4-adf8-f2dd" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2e7a-8f27-4a06-ac78" name="Orbital Strike Type" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48f5-e211-a356-7e4f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e847-f353-56ae-c44f" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="afb2-a87c-fc30-5fd7" name="Lance Strike" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="1400-70c4-db01-7053" name="Lance Strike" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Unlimited</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5aa8-5adc-3b0b-35a3" name="Melta Torpedo" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="b2c6-dc69-2968-d7b2" name="Melta Torpedo" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Unlimited</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">2D6 Armour Pen</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6550-c912-afaf-2914" name="Barrage Bomb" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="24f7-0233-0a28-c3c9" name="Barrage Bomb" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Unlimited</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f6b1-44a4-47dd-2ae6" name="Lightning (IA)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="bb2c-0d47-6b24-a779" name="Lightning" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="7bb3-3ec3-9db1-37f2" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="b819-2ec3-3eb5-8bdb" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Lascannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="44d2-11de-3e96-1a02" name="Long Barrelled Autocannon" hidden="false" targetId="48dc-47d4-5d34-3078" type="profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="858f-ab79-0b72-e408" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="42c0-0774-34b1-de3a" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="7c2c-ba31-8300-1434" name="Rockits" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Hellstrike Missiles"/>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b2b-9a22-ec69-edfc" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="858f-ab79-0b72-e408" name="Strike Variant" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f076-2685-580f-49a9" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7b2b-9a22-ec69-edfc" name="Wing Mounted Hellstrike Missiles" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc81-107e-b1a0-b231" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="c743-693b-8f94-dd43" name="Rockits" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Hellstrike Missiles"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="578f-3d68-a2e6-fbb5" name="Navy Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="daa5-8149-0e1c-b126" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="145.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="44cb-0aa4-e501-647b" name="Thunderbolt (IA)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="bd0f-9d59-4d28-bcaa" name="Thunderbolt" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b2fa-986d-f49d-7167" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="2e6f-2e80-078d-2071" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Lascannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="4c9f-4699-ed1e-a721" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Twin-Linked Autocannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="38f4-f9cb-0020-5117" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="addf-fde0-dd20-5bea" name="Wing Mount Payload" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="bd60-616d-3315-1599" name="Bombs" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="7b2d-bc81-8fa1-fcea" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2761-4e9a-77e4-408d" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b2d-bc81-8fa1-fcea" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d156-9c02-0be1-cc8e" name="Bomb" hidden="false" targetId="8fab-1e56-f345-a884" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2761-4e9a-77e4-408d" name="Hellstrike Missiles" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="e28f-977a-aada-b91b" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd60-616d-3315-1599" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e28f-977a-aada-b91b" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="2736-0722-c985-eabb" name="Rockits" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Hellstrike Missiles"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9e7e-9b2a-8d59-6200" name="Navy Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="daa5-8149-0e1c-b126" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="180.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8424-b623-19a8-5575" name="Vulture (IA)" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="8507-cdcb-8ae8-aa3d" name="Vulture Gunship" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="53b9-4b1f-cb8b-0c6f" name="VTOL Hover Mode" hidden="false" targetId="bc73-210b-4a3f-c9aa" type="rule"/>
+        <infoLink id="93fb-da67-1377-eb43" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="53e0-ccb6-d7f7-2ea4" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="a870-8d77-7b8e-c0a2" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="cfbf-90fb-3432-f51d" name="Hardpoint 1" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a3b-69b3-ecef-6598" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fc10-ec11-3a91-b250" name="Twin-Linked Multi-laser" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="151b-e259-4336-7d14" name="Multi-laser" hidden="false" targetId="63ed-7ae2-0dce-e02e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Multi-laser"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="2d27-dcf8-fbc2-d9d3" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1a53-1ee4-b555-dcf2" name="Twin-Linked MIssile Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a40e-9aaa-4d5f-244c" name="Missle Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Missile Launcher (frag)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="64cd-ea86-ae06-7d91" name="Missle Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Missile Launcher (krak)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="335a-45e3-bf74-afde" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c0ff-b7d2-9e8c-ff09" name="Twin-Linked Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a7aa-6e47-6000-1170" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Autocannon"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="0931-6f6a-e85c-4d9b" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b2fa-8bb7-58a1-a796" name="Twin-Linked Las-Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="fdd4-16a7-338a-cf29" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Lascannon"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="152d-06fe-ffe8-2400" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="210a-3983-a915-2bcb" name="2x Multiple Rocket Pods" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="df84-ef36-ed11-2ca7" name="Multiple Rockit Pods" hidden="false" targetId="e434-66a1-6cb9-9e3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="2x Multiple Rockit Pods"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="63a4-6949-916b-33cc" name="Hardpoint 2" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbda-0391-fa16-2a21" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="310f-0fc3-c8b6-9dad" name="2x Heavy Bomb Racks" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="93e5-4b53-e557-d4e4" name="Big Bomb" hidden="false" targetId="52ac-16f1-b437-6d96" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="6x Heavy Bombs"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cf1b-4cf4-53e0-56f2" name="2x Heavy Smark Bomb Racks" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="8fd6-1038-7158-d748" name="Multiple Rockit Pods" hidden="false" targetId="e434-66a1-6cb9-9e3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="6x Heavy Smart Bombs"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="90.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1581-9397-2258-ead8" name="2x Missle Racks" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="2703-b190-7641-e69f" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="6x Hunter-killer Missiles"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="388f-3eee-b1ee-123e" name="2x Multiple Rocket Pods" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="6892-70c8-562b-09b5" name="Multiple Rockit Pods" hidden="false" targetId="e434-66a1-6cb9-9e3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="2x Multiple Rockit Pods"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c174-6a93-db78-d852" name="2x Hellstrike Missiles" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="b53a-0a34-aa62-5f82" name="Rockits" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="2x Hellstrike Missiles"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d5fd-eb65-87fb-dfde" name="Navy Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="daa5-8149-0e1c-b126" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2716,9 +4059,17 @@ Hellfire Round: The shot wounds on a 2+.</description>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="491b-a3e2-e7c9-a3a1" type="max"/>
                   </constraints>
-                  <infoLinks>
-                    <infoLink id="a85f-3b1d-07e3-5cf1" name="Executioner" hidden="false" targetId="ca79-8127-4045-b637" type="profile"/>
-                  </infoLinks>
+                  <profiles>
+                    <profile id="92ea-dff2-5662-02d9" name="Executioner" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                        <characteristic name="S" typeId="24d8-2110-08fa-d844">User +2</characteristic>
+                        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">May not be used to gain +1 A with a pistol or additional CCW. Ignores armour saves.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
                   </costs>
@@ -6376,6 +7727,23 @@ Hellfire Round: The shot wounds on a 2+.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
+    <selectionEntryGroup id="02f3-0c60-0986-0a27" name="Allied Contingents" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0aa-6f82-756f-20a2" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="a834-1077-f0c5-fd15" name="Imperial Guard" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b044-4368-45c5-6ead" name="Space Marine" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="fb99-855c-6062-3de7" name="Targeter" hidden="false">
@@ -6757,6 +8125,9 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
     </profile>
   </sharedProfiles>
   <catalogueLinks>
-    <catalogueLink id="3032-a1ee-036a-4178" name="Ulthwe The Damned (2000)" targetId="d1e2-e6ed-e01f-ae6f" type="catalogue" importRootEntries="false"/>
+    <catalogueLink id="cf3a-f2c7-d7e9-14a5" name="Dark Eldar (2001)" targetId="c1aa-7a7a-4831-e6fb" type="catalogue" importRootEntries="false"/>
+    <catalogueLink id="39c1-1f44-1acc-8d3f" name="Eldar (2000)" targetId="1369-4fc1-fe31-48dd" type="catalogue" importRootEntries="false"/>
+    <catalogueLink id="246a-bba2-42ca-c46d" name="Orks (1999)" targetId="a32b-2b78-118a-10a5" type="catalogue" importRootEntries="false"/>
+    <catalogueLink id="d8ad-fd6f-0983-2408" name="Tau (2001)" targetId="785b-e45d-f46b-fe58" type="catalogue" importRootEntries="false"/>
   </catalogueLinks>
 </catalogue>
