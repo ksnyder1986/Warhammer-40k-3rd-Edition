@@ -340,6 +340,9 @@ Others: The vehile causes tank shock if it moves through the enemy, just like Ta
       <comment>Vehicle Battle Honor</comment>
       <description>Nominate a weapon at the start of the shooting phase. You may re-roll any missed to hit rolls with that weapon that turn. For ordnance, this allows you to re-roll the scatter dice.</description>
     </rule>
+    <rule id="69af-f095-551d-130c" name="Minor Psychic Power" hidden="false">
+      <description>See Chapter Approved 2004 page 142</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="9177-ce8a-92e3-157e" name="Flamer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
