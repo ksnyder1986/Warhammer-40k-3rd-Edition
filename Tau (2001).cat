@@ -872,6 +872,47 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="9481-bbba-5131-d027" name="Rail Rifles (Chapter Approved 2004)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1ee-5e1d-3fd8-bf9f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5b09-e2c4-df63-0c64" name="Rail Rifles (Chapter Approved 2004)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Pinning</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="322f-889c-b24b-483b" name="Rail Rifle&apos;s Target Lock Interface" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9481-bbba-5131-d027" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="7.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9481-bbba-5131-d027" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2152-ad42-16b4-a2ee" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="5c5e-df6a-2d4f-a8e7" name="Target Lock Interface" hidden="false">
+              <description>When the target lock interface is used the Pathfinder counts as having a hard-wired target lock, but the rail rifle will suffer from the &apos;get hot&apos; weapon rule in the same way as plasma weapons. If the interface is not fitted, or if all members of the unit engage the same target, this does not happen.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e15a-9b5a-2d06-825b" name="Pathfinders" hidden="false" collective="false" import="true" defaultSelectionEntryId="11bd-bd41-f7bc-d6e0">
@@ -937,6 +978,7 @@
         <entryLink id="40f7-b7b1-8e19-2a15" name="Devilfish" hidden="false" collective="false" import="true" targetId="6c43-af8f-c69c-df89" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac5c-ac69-9ad3-b265" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c59d-2a64-9225-55f7" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
