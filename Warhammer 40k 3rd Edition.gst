@@ -251,12 +251,15 @@
     <selectionEntry id="1004-74e9-5ee6-c51f" name="Deathwatch Kill Team (Chapter Approved)" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="8284-3c96-b0b9-db3f" name="True Grit" hidden="false">
-          <description>May treat Bolters as a Bolt Pistol in close combat and will therefore be allowed to roll an extra Attack dice as if they were armed with a second close combat weapon. However, the model using their bolter in this manner may not receive the extra attack bonush for charging.</description>
+          <description>May treat Bolters as a Bolt Pistol in close combat and will therefore be allowed to roll an extra Attack dice as if they were armed with a second close combat weapon. However, the model using their bolter in this manner may not receive the extra attack bonush for charging. </description>
         </rule>
         <rule id="f233-37b5-8abb-bbd2" name="Deep Strike" hidden="false">
           <description>Unless mounted in a Rhino, Deathwatch Kill Teams may always start the game in reserve and arrive by Deep Strike.</description>
         </rule>
       </rules>
+      <infoLinks>
+        <infoLink id="df17-1d0d-4b60-e426" name="Deathwatch" hidden="false" targetId="2d1a-ee41-20f6-a6c8" type="rule"/>
+      </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="5364-ae7c-0e35-fe79" name="Kill Team Members" hidden="false" collective="false" import="true" defaultSelectionEntryId="fbe4-73d3-df6b-230c">
           <constraints>
@@ -1133,6 +1136,9 @@ Others: The vehile causes tank shock if it moves through the enemy, just like Ta
     </rule>
     <rule id="69af-f095-551d-130c" name="Minor Psychic Power" hidden="false">
       <description>See Chapter Approved 2004 page 142</description>
+    </rule>
+    <rule id="2d1a-ee41-20f6-a6c8" name="Deathwatch" hidden="false">
+      <description>Deathwatch squad members and characters are never subject to the Special rules which apply to specific Chapters (i.e. Space Wolves&apos; counter attack, Blood Angels&apos; Black Rage, Black Templars&apos; vows, etc.) and which affect their fighting abilities or battlefield behaviour. Must be equiped with bolters or combi-weapons.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
