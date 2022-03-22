@@ -246,6 +246,338 @@
         <categoryLink id="6396-e5a7-b57a-66e4" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="false"/>
       </categoryLinks>
     </forceEntry>
+    <forceEntry id="8b56-2596-2bfa-9f1b" name="9-Unrestricted" hidden="false">
+      <comment>Imperial Guard (2003)</comment>
+      <categoryLinks>
+        <categoryLink id="e788-9490-7c59-274b" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false"/>
+        <categoryLink id="36df-6db3-867c-8690" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+        </categoryLink>
+        <categoryLink id="edaf-2b40-06c9-15ac" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false"/>
+        <categoryLink id="7e36-fb64-6321-6a2f" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false"/>
+        <categoryLink id="ab1f-e078-11fb-c46f" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false"/>
+        <categoryLink id="58d8-2eb2-9d85-68f4" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink id="6dfb-7f6b-7c09-7e91" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="3f32-74fc-e29a-38e3" name="3A-Battle Attacker" hidden="false">
+      <comment>Imperial Guard (2003)</comment>
+      <categoryLinks>
+        <categoryLink id="1cf2-6528-1f81-871e" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="582b-d1ef-880e-5a17" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="26d1-77bc-1a33-8119" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+          <modifiers>
+            <modifier type="increment" field="e4d2-bf42-4306-3692" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="ffdf-c34b-d8bc-f20a" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="e4d2-bf42-4306-3692" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffdf-c34b-d8bc-f20a" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4d2-bf42-4306-3692" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1278-8a0a-1feb-a124" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5652-470a-d717-b3cc" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cac5-3f28-c637-f2a3" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5186-4358-de7f-7031" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1833-9f65-64d8-c3c7" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="ca8b-e4f5-c0d0-1490" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6c7-55b5-c4ed-489a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f9a-5919-6d60-45d5" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="df4a-a18d-0436-c92a" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="5d5f-cfa8-2970-4a50" name="3D-Battle Defender" hidden="false">
+      <comment>Imperial Guard (2003)</comment>
+      <categoryLinks>
+        <categoryLink id="afa3-08e9-5b3f-b7ca" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3269-af73-e42b-6671" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d1de-50cf-619d-864f" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+          <modifiers>
+            <modifier type="increment" field="1a75-3bac-a46a-34de" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="f10d-43f1-775e-1609" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="f10d-43f1-775e-1609" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a75-3bac-a46a-34de" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f10d-43f1-775e-1609" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="eb64-685e-82f7-48a3" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54b3-4d13-ea86-7fab" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f7e-c748-2823-5f36" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="f3f6-47b1-09df-f5ed" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c94-e417-3141-8ee5" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5892-944b-5717-6b60" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f869-0cca-ee96-c53d" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="a63a-a4f4-10cc-79cd" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="f0b5-294d-9445-a1b7" name="4A-Raid Attacker" hidden="false">
+      <comment>Imperial Guard (2003)</comment>
+      <categoryLinks>
+        <categoryLink id="ac99-94ae-0204-d610" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb67-55a4-8348-64e6" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="fe0a-de5b-3419-374f" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+          <modifiers>
+            <modifier type="increment" field="47e4-9690-9cca-4e26" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="71fe-e8b3-a2c2-dbd1" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="71fe-e8b3-a2c2-dbd1" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="47e4-9690-9cca-4e26" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71fe-e8b3-a2c2-dbd1" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47e4-9690-9cca-4e26" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="fe7c-c4dc-0163-4ccc" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2724-949b-2595-c0ab" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d425-8d65-05e4-d647" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="9b2f-c8c9-f318-31f8" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da2a-d8dc-04c8-f4e9" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="df83-b739-e368-5360" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f731-8ccb-6d84-fd38" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3c0e-4dcf-8f9a-fc4b" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="b1dd-a74a-0fe1-35b8" name="4D-Raid Defender" hidden="false">
+      <comment>Imperial Guard (2003)</comment>
+      <categoryLinks>
+        <categoryLink id="cbb8-aedd-2f13-0783" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e506-f3a8-2fe5-2d95" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="8b17-55e9-bdf7-7ae8" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+          <modifiers>
+            <modifier type="increment" field="2e45-726c-b86c-a2ad" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="0392-cebf-ecde-bc99" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="0392-cebf-ecde-bc99" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e45-726c-b86c-a2ad" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0392-cebf-ecde-bc99" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="11e6-9f9e-a189-8d28" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49d1-3ae2-17b2-0ec2" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cdc-0e3c-c3cd-ae48" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1915-959e-90d1-4fb4" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce62-bdd1-f774-7e08" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="cfe7-fb49-2f5c-e908" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c4b-215d-07a6-4bac" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="3eae-54d4-9ba3-13cd" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="172d-d416-c92b-3694" name="5A-Breakthrough Attacker" hidden="false">
+      <comment>Imperial Guard (2003)</comment>
+      <categoryLinks>
+        <categoryLink id="5802-6a53-04a1-da4b" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="730f-46ca-7528-3ce7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96a4-1591-dafa-b3bc" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="25f7-5155-8ed0-1bed" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+          <modifiers>
+            <modifier type="increment" field="004b-86dd-21b7-fdee" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="e2c7-2639-d9b7-fc65" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="004b-86dd-21b7-fdee" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="e2c7-2639-d9b7-fc65" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="004b-86dd-21b7-fdee" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2c7-2639-d9b7-fc65" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6fc1-9e2a-d387-f61f" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b675-01dc-6f08-9320" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5497-f143-2cd0-eb3b" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="6672-273c-cb32-648b" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e51a-6fda-2f35-f70d" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="374c-7702-f4aa-2ae1" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6380-614a-df74-1f96" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5be7-5104-446a-b85d" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry id="90e9-2e2f-1754-4917" name="5D-Breakthrough Defender" hidden="false">
+      <comment>Imperial Guard (2003)</comment>
+      <categoryLinks>
+        <categoryLink id="f1f2-c92c-18bb-b3d3" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee32-676f-9d7c-6efd" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="eb23-98a8-1fda-6586" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+          <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
+          <modifiers>
+            <modifier type="increment" field="837d-76da-f810-d300" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="837d-76da-f810-d300" value="1.0">
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="8ba2-d07d-e18e-de87" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ba2-d07d-e18e-de87" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="837d-76da-f810-d300" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="5181-07bb-6fd2-c730" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39b4-b70b-f8d6-5d5b" type="min"/>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3044-9e6f-b97e-0ed6" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="70aa-e29a-65b9-baad" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="068e-8717-6e50-bb79" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="d69b-3fc9-7777-b048" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af9a-899a-8bbb-130a" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="7f83-a5cd-0aab-99f5" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry id="1004-74e9-5ee6-c51f" name="Deathwatch Kill Team (Chapter Approved)" hidden="false" collective="false" import="true" type="unit">
@@ -1039,6 +1371,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
@@ -1139,6 +1474,11 @@ Others: The vehile causes tank shock if it moves through the enemy, just like Ta
     </rule>
     <rule id="2d1a-ee41-20f6-a6c8" name="Deathwatch" hidden="false">
       <description>Deathwatch squad members and characters are never subject to the Special rules which apply to specific Chapters (i.e. Space Wolves&apos; counter attack, Blood Angels&apos; Black Rage, Black Templars&apos; vows, etc.) and which affect their fighting abilities or battlefield behaviour. Must be equiped with bolters or combi-weapons.</description>
+    </rule>
+    <rule id="0f7e-d79a-ce04-7d3d" name="Smoke &amp; Blind Grenades" hidden="false">
+      <description>One use only.
+
+Blind/smoke grenades are used in the Shooting phase instead of the unit firing any weapons. Mark the unit as using its blind/smoke grenades by placing cotton wool around them. A unit cannot assault on the same turn it uses blind/smoke grenades. The blind/smoke screen lasts until the start of the player&apos;s next turn and until then the unit counts as in cover with a 5+ cover save. Because they count as being in cover, models in the unit will also strike first if assaulting, unless the enemy is armed with something like frag grenades, or has an ability that allows them to always strike first.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
