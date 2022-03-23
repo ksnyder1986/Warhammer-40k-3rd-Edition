@@ -406,6 +406,22 @@
         <categoryLink id="5645-8cc6-75f8-d6c7" name="Blood Angel" hidden="false" targetId="a527-734f-2081-58cd" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="5669-f70f-41e6-99b6" name="Deathwatch Kill Team (Chapter Approved)" hidden="false" collective="false" import="true" targetId="1004-74e9-5ee6-c51f" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e5c-f9bc-e232-aafb" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="7219-7402-3bab-08e7" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="488f-dd81-7f5d-15ef" name="Emperor&apos;s Champion" hidden="false" collective="false" import="true" targetId="ad23-c512-3d63-c3a4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="name" value="Emperor&apos;s Champion (Chapter Approved)"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8924-1952-861e-86e6" type="max"/>
+      </constraints>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="d1f7-6b7c-67ce-c814" name="Blood Angels Scout Squad" hidden="false" collective="false" import="true" type="unit">
@@ -449,6 +465,24 @@
           </constraints>
           <infoLinks>
             <infoLink id="dd3b-fad4-6114-b8a6" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1246-306d-7f86-f0ee" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f6f-b581-62dd-1b08" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="57cf-4918-9b97-543a" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -658,6 +692,24 @@
           </constraints>
           <infoLinks>
             <infoLink id="a4af-dadb-3f00-5b36" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="04b2-d1b7-5c18-030d" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="4.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="accb-fded-ea8f-51e1" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b9b9-88ec-bb01-9d23" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -875,6 +927,27 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="ba18-7379-5024-0068" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+        <entryLink id="9455-f77b-59e0-dfbf" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d82-1916-2f4b-7575" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="3cf6-090b-c1d4-9686" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
@@ -906,6 +979,16 @@
         <categoryLink id="2081-606b-9266-702a" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
         <categoryLink id="6745-fa31-8c5a-451f" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b50b-4396-51bc-2641" name="Minor Psychic Power" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="4ef1-a1b6-979b-8509" name="Minor Psychic Power" hidden="false" targetId="69af-f095-551d-130c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="5ed4-a7eb-b151-289c" name="Retinue" hidden="false" collective="false" import="true">
           <constraints>
@@ -918,6 +1001,27 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e82b-2250-ecee-f45f" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+        <entryLink id="08e7-3faf-65c4-f91b" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cabf-5d52-6d1b-fcb6" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="6e0a-1cb2-68d7-b8da" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
@@ -954,6 +1058,27 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="d6e9-ec27-4609-72c2" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+        <entryLink id="41b4-80b8-15c2-efcf" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceae-4813-5fa1-a9f4" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="0175-12b2-8298-1cbc" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="180.0"/>
@@ -987,6 +1112,27 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e272-605a-f8dc-290d" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+        <entryLink id="a8bc-c141-a7f3-7359" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e38-77ff-e373-1d61" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="8b90-bfe3-9f65-9488" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
@@ -1020,6 +1166,27 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="3f46-ce4e-7a80-5bd6" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+        <entryLink id="113e-e252-f0dc-8435" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ba7-8ed2-b2b5-3813" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="08c1-501f-3485-d179" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
@@ -1053,6 +1220,27 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="003a-f743-5df2-d32e" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+        <entryLink id="f168-57ec-ba37-2b6d" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5ff-cfcd-7ab8-675d" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="96e1-53c2-a8b6-5d74" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
@@ -1189,6 +1377,21 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="d173-ce30-d13c-970f" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="4.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="063c-8920-2b09-cef7" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="cd9d-80a2-8956-9be7" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="6404-ab84-dec7-36aa" name="Transport Vehicle" hidden="false" collective="false" import="true">
@@ -1286,6 +1489,27 @@
               </categoryLinks>
               <entryLinks>
                 <entryLink id="dcb7-934e-deaa-0eb0" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+                <entryLink id="8556-dd58-9a4b-1fc0" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adb7-9b90-aebb-76f6" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="2ea3-d652-065f-2b9b" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
@@ -1308,6 +1532,27 @@
               </categoryLinks>
               <entryLinks>
                 <entryLink id="06ce-d155-2f06-6248" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+                <entryLink id="d277-26ba-eaec-f211" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b37-991e-c3e8-b6aa" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="8ad2-9abd-153e-d415" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18.0"/>
@@ -1330,6 +1575,27 @@
               </categoryLinks>
               <entryLinks>
                 <entryLink id="7b82-b149-2d8c-a8f8" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+                <entryLink id="7690-6de3-fd37-f489" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2171-da24-61a1-c9ee" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="77e3-477f-3e73-4a48" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18.0"/>
@@ -1352,12 +1618,54 @@
               </categoryLinks>
               <entryLinks>
                 <entryLink id="d700-93b2-389d-dc3d" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
+                <entryLink id="599f-76c8-a816-a621" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b2e-df4b-e3c1-3464" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="e009-ea4d-2ba1-b9ca" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink id="4902-c44d-143c-00b5" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink id="ca20-7f6d-de04-80f4" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
+                <infoLink id="9568-38af-88aa-a15b" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="ffdf-15c6-b090-e0ce" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="23.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="f850-6959-36fd-c961" name="Special Weapons" hidden="false" collective="false" import="true">
           <modifiers>
