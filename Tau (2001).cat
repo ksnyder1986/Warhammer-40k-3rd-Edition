@@ -20,6 +20,9 @@
     <entryLink id="c2d9-6c6d-cda2-c323" name="Sky Ray (IA)" hidden="false" collective="false" import="true" targetId="3e9c-f3f1-1647-b580" type="selectionEntry"/>
     <entryLink id="d7b2-f13a-b0d5-3552" name="Barracuda (IA)" hidden="false" collective="false" import="true" targetId="fb65-7a01-3259-46bc" type="selectionEntry"/>
     <entryLink id="7ee5-a8fa-7428-2fdb" name="Heavy Gun Drone Squadron (IA)" hidden="false" collective="false" import="true" targetId="8113-ccd1-001e-9a96" type="selectionEntry"/>
+    <entryLink id="9fd2-02cb-2208-94d5" name="Piranha (Homebrew)" hidden="false" collective="false" import="true" targetId="57fa-2e2e-e453-6313" type="selectionEntry"/>
+    <entryLink id="e4b5-3c0a-1bc3-c02c" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" targetId="9c59-ab22-f60f-c9c9" type="selectionEntry"/>
+    <entryLink id="917e-46e4-bd4e-e4ec" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" targetId="4725-b232-bbd7-82e3" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b044-07fe-a372-df49" name="Shas&apos;el" hidden="false" collective="false" import="true" type="unit">
@@ -600,9 +603,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3b3-a400-0d2d-457b" type="max"/>
-      </constraints>
       <rules>
         <rule id="ebe8-27a0-f92a-aace" name="Gun Drone Squadron" hidden="false">
           <description>A Gun Drone squadron has its processors linked to enable it to have the capacity for independent action. They are programmed for self-preservation and take Leadership tests normally. If their numbers are reduced to less than 4 their Leadership drops to 4.</description>
@@ -657,9 +657,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9bd-eac2-dcc7-5779" type="max"/>
-      </constraints>
       <rules>
         <rule id="17cb-dfc2-d32b-4121" name="Mercenaries" hidden="false">
           <description>The leadership of the Kroot is not fixed, instead is considered equal to their points value. Normally it is 7, but if they are upgraded with a 6+ Armor save it increeases to 8. Note that the presence of a Kroot Shaper, Kroot Hounds or a Krootox doesn&apos;t directly affect the Leadership of the squad.</description>
@@ -875,6 +872,47 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="9481-bbba-5131-d027" name="Rail Rifles (Chapter Approved 2004)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1ee-5e1d-3fd8-bf9f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5b09-e2c4-df63-0c64" name="Rail Rifles (Chapter Approved 2004)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Pinning</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="322f-889c-b24b-483b" name="Rail Rifle&apos;s Target Lock Interface" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9481-bbba-5131-d027" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="7.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9481-bbba-5131-d027" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2152-ad42-16b4-a2ee" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="5c5e-df6a-2d4f-a8e7" name="Target Lock Interface" hidden="false">
+              <description>When the target lock interface is used the Pathfinder counts as having a hard-wired target lock, but the rail rifle will suffer from the &apos;get hot&apos; weapon rule in the same way as plasma weapons. If the interface is not fitted, or if all members of the unit engage the same target, this does not happen.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e15a-9b5a-2d06-825b" name="Pathfinders" hidden="false" collective="false" import="true" defaultSelectionEntryId="11bd-bd41-f7bc-d6e0">
@@ -940,6 +978,7 @@
         <entryLink id="40f7-b7b1-8e19-2a15" name="Devilfish" hidden="false" collective="false" import="true" targetId="6c43-af8f-c69c-df89" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac5c-ac69-9ad3-b265" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c59d-2a64-9225-55f7" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -955,9 +994,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9eef-3cfe-9582-bab4" type="max"/>
-      </constraints>
       <rules>
         <rule id="b29c-e65b-5fdd-5a1d" name="Attached Unit" hidden="false">
           <description>A unit of Kroot Hounds must be attacked to a Kroot Carnivore squad before the game. They are deployed along with the Kroot Carnivore squad as if they were all a single Troop choice selection from the Force Organisation chart (but the Kroot Hound Pack still occupies a Fast Attack choice). There cannot be more attached models (including Krootox) added to a Carnivor squad than Kroot.
@@ -1183,9 +1219,6 @@ Once attached, the Kroot Hounds function as part of the Carnivore squad they are
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64a3-354b-4dce-9306" type="max"/>
-      </constraints>
       <rules>
         <rule id="f63a-d2a9-df66-57d0" name="Attached Unit" hidden="false">
           <description>A unit of Krootox must be attacked to a Kroot Carnivore squad before the game. They are deployed along with the Kroot Carnivore squad as if they were all a single Troop choice selection from the Force Organisation chart (but the Krootox still occupies a Fast Attack choice). There cannot be more attached models (including Kroot Hounds) added to a Carnivor squad than Kroot.
@@ -1415,6 +1448,9 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
                     <infoLink id="e1d7-0925-8dda-9387" name="Burst Cannon" hidden="false" targetId="9e5e-b881-3c15-e101" type="profile"/>
                     <infoLink id="05da-d222-64d3-6528" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                  </costs>
                 </selectionEntry>
                 <selectionEntry id="626d-4c91-ede5-ea3c" name="Burst Cannon and Markerlight" hidden="false" collective="false" import="true" type="upgrade">
                   <infoLinks>
@@ -1425,6 +1461,9 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
                     </infoLink>
                     <infoLink id="0fb4-b88a-8ebb-24c1" name="Markerlight" hidden="false" targetId="93c5-ed67-a327-95e9" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -1434,6 +1473,9 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3e9c-f3f1-1647-b580" name="Sky Ray (IA)" hidden="false" collective="false" import="true" type="unit">
       <rules>
@@ -1468,6 +1510,200 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="200.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="57fa-2e2e-e453-6313" name="Piranha (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Small-Fast-Skimmer-Opentopped
+Armor 11-10-10 = 5+20+10 = 35
+Fast = 10
+Skimmer = 20
+Open Topped = -5
+Two-Gun Drones = 34</comment>
+      <infoLinks>
+        <infoLink id="ac6b-ae2e-816a-bca2" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="27ec-ceb5-b2ed-695d" name="Piranha" hidden="false" targetId="7721-ef21-14e6-28f2" type="profile"/>
+        <infoLink id="cc5d-50c2-9b8a-7ecc" name="Gun Drone" hidden="false" targetId="3fc2-241a-c6b0-45d6" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Gun Drones"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="b7fc-528d-746e-7402" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+        <infoLink id="da6d-40a4-a299-c4cb" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1dcd-0c00-f4ea-b045" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4302-457b-ac30-f55b" name="Seeker Missile" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1ba-0269-8c19-2db3" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="c61f-282c-c0b2-9e39" name="Seeker Missle" hidden="false" targetId="7496-dcbe-e677-3ecf" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a58e-0836-23b2-1bc5" name="Nose Gun" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfe6-34f0-4ebb-5d8a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c79e-40d1-d13d-0f61" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3afd-d72e-8ed7-380e" name="Burst Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="e38a-b548-2616-3197" name="Burst Cannon" hidden="false" targetId="9e5e-b881-3c15-e101" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6e78-b853-f7f7-c81b" name="Fusion Blaster" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a6cf-6cb7-b0a1-4df5" name="Fusion Blaster" hidden="false" targetId="8afa-9848-b02f-36b5" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d106-1598-9884-af57" name="Tau Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="660d-edf9-04e6-9966" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="94.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9c59-ab22-f60f-c9c9" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Flyer
+Armor 11-10-10 = 5+20+10 = 35
+Flyer = 40
+2xSeeker Missiles = 20
+Ion Turret=Short Ranged Ion Cannon = 20
+
+</comment>
+      <infoLinks>
+        <infoLink id="52b8-55c8-f39f-bd15" name="Ion Cannon" hidden="false" targetId="43b2-2313-d8ca-a57b" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Quad Ion Turret"/>
+            <modifier type="set" field="deb8-131d-bdcf-1376" value="30&quot;"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="da9a-3d9a-a602-7087" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="b5cc-9b08-164b-cdab" name="Seeker Missle" hidden="false" targetId="7496-dcbe-e677-3ecf" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Seeker Missiles"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1188-8e6f-01a7-eca7" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9ce9-3329-7205-a78e" name="Nose Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="0a5c-fb10-c976-d72e">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="076d-f391-a8b6-f5dd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf5d-5d94-c225-dfb2" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0a5c-fb10-c976-d72e" name="Burst Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="659e-2665-b2cf-14b4" name="Burst Cannon" hidden="false" targetId="9e5e-b881-3c15-e101" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="48c6-9d8c-6751-09a4" name="Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="05d8-dcb7-05e8-55c3" name="Missle Pod" hidden="false" targetId="0f38-81fa-b5b9-0663" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="94f8-d3c0-32a3-c2b2" name="Tau Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="660d-edf9-04e6-9966" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="115.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4725-b232-bbd7-82e3" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Flyer
+Armor 11-10-10 = 5+20+10 = 35
+Flyer = 40
+2xSeeker Missiles = 20
+2x Twin-linked Ion Rifles (slow firing, twin-linked, short barrelled, Ion Cannos) = 2x35=70
+2xPulse Bombs=60
+</comment>
+      <infoLinks>
+        <infoLink id="8c89-7c63-f102-6a26" name="Ion Cannon" hidden="false" targetId="43b2-2313-d8ca-a57b" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Twin-linked Ion Rifles"/>
+            <modifier type="set" field="deb8-131d-bdcf-1376" value="30&quot;"/>
+            <modifier type="set" field="d3f6-19e8-ac9e-ae13" value="Rapid Fire"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="5efd-c9e4-c4bb-003a" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="f93b-6914-cb0f-7a3b" name="Sun Shark" hidden="false" targetId="8e64-8687-e870-2fc4" type="profile"/>
+        <infoLink id="e3bb-e895-6bd5-1e69" name="Seeker Missle" hidden="false" targetId="7496-dcbe-e677-3ecf" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Seeker Missiles"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="e1e9-84e1-3e54-5a29" name="Pulse Bomb" hidden="false" targetId="c945-6301-8d8c-d4bd" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Pulse Bombs"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6c73-bd13-486d-810d" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7feb-a256-fda9-c5c9" name="Missile Pod" hidden="false" collective="false" import="true" defaultSelectionEntryId="90fc-6a64-9843-1382">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb1e-898b-9295-767f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3d0-cc03-468b-6694" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="90fc-6a64-9843-1382" name="Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="9321-8107-3b12-10ff" name="Missle Pod" hidden="false" targetId="0f38-81fa-b5b9-0663" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="caab-f0fb-d8cc-733c" name="Twin-linked Missile Pod" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="aa08-d2df-9e86-fe44" name="Missle Pod" hidden="false" targetId="0f38-81fa-b5b9-0663" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-linked Missile Pod"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="cd32-b07a-f365-c698" name="Tau Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="660d-edf9-04e6-9966" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="225.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1574,6 +1810,8 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1598,6 +1836,8 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e9c-f3f1-1647-b580" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e3-1a2d-c1ac-213a" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1621,6 +1861,8 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e9c-f3f1-1647-b580" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1677,6 +1919,9 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e9c-f3f1-1647-b580" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57fa-2e2e-e453-6313" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1699,6 +1944,8 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1744,6 +1991,9 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e9c-f3f1-1647-b580" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="57fa-2e2e-e453-6313" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1758,6 +2008,32 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e84a-d06a-0218-17b0" name="Escape Pods" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6028-d238-0246-14db" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="6b9f-6d66-0612-c47b" name="Escape Pods" hidden="false">
+              <description>If a Tau Flyer is destroyed, nominate a point on the table and scatter the pod 2D6&quot; as with the rules for Deep Strike. If the pod scatters so that it is off-table is is counted as being destroyed. If not, place 2 Tau models within 2&quot; of it (count as Fire Warriors with no weapons). The crew as counted as being below half strength and are worth zero Victory Points on their own, but their vehicle counts as only being damaged for Victory Point purposes whilst either of the crew is still alive or if they reach the table edge for any reason.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2545,6 +2821,39 @@ The vehicle equipped with the missiles cannot launch them itself. They are alway
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">12</characteristic>
         <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3(4)</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7721-ef21-14e6-28f2" name="Piranha" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="229b-bf3c-f047-57ef" name="Razorshark" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8e64-8687-e870-2fc4" name="Sun Shark" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="c945-6301-8d8c-d4bd" name="Pulse Bomb" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G12-48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Smart Bomb</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
