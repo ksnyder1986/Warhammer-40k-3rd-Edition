@@ -271,12 +271,13 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
       </costs>
     </selectionEntry>
     <selectionEntry id="69c7-890b-a76c-c9f3" name="Electro-Priests" hidden="false" collective="false" import="true" type="unit">
-      <comment>Ogryns maybe?</comment>
+      <comment>Ogryns maybe? They look like repentia basically.</comment>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e6e9-c049-2c76-dc74" name="Kastelan Robot Maniple" hidden="false" collective="false" import="true" type="unit">
+      <comment>Maybe these are ogryn&apos;s instead?</comment>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
@@ -287,19 +288,207 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="734d-98bd-a75e-2a73" name="Sydonian Dragoons" hidden="false" collective="false" import="true" type="unit">
-      <comment>Sentinels</comment>
+    <selectionEntry id="734d-98bd-a75e-2a73" name="Ironstrider" hidden="false" collective="false" import="true" type="unit">
+      <comment>Sentinels
+
+Small Walker - 10-10-10 - Open-topped - Agile
+
+Armour = 0 + 10 + 10 + 10 = 40
+Open-topped = -5
+Small Agile = 10
+Close Combat Weapon = 1x3x1 = 3
+</comment>
+      <rules>
+        <rule id="f12b-db01-6388-d694" name="Agile" hidden="false">
+          <description>Agile vehicles are quite fast and manoeuvrable, but don&apos;t have the straight-line speed of a fast vehicle. They can move up to 6&quot; and fire all weapons, or up to 12&quot; and fire one. They may not move more than 12&quot;.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="bb92-c555-5c5d-08bd" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink id="240b-779c-481f-a44a" name="Ironstrider" hidden="false" targetId="62c3-f3f3-b6e6-5354" type="profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="14cc-62df-8542-cb62" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink id="25df-f93f-1df8-9cb1" name="Ironstrider" hidden="false" targetId="62c3-f3f3-b6e6-5354" type="profile">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="14cc-62df-8542-cb62" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bb33-7ddf-2296-174e" value="3"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3eee-2d43-51a5-5c56" name="Weapon Selection" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ebe-303c-658a-adfa" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e0f-60ff-febe-d519" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c255-862e-d324-b98a" name="Twin-Linked Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="6a1d-f415-6524-0afc" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+                <infoLink id="8494-a0c2-9acf-7d21" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Autocannon"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1ddf-5a53-e46d-854c" name="Twin-Linked Lascannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="068c-34c8-8dd4-44fb" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+                <infoLink id="ea11-55ad-c6c6-81f8" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Lascannon"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="14cc-62df-8542-cb62" name="Power Lance" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="50ba-1c97-645b-407e" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="24.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="784e-bc8d-0152-b777" name="Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="18f1-db17-ea42-0ade" name="Sniper Rifle" hidden="false" targetId="3825-4a6b-6aaa-8c99" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="48.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="679a-3179-fe2e-e085" name="Onager Dunecrawlers" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="679a-3179-fe2e-e085" name="Onager Dunecrawler" hidden="false" collective="false" import="true" type="unit">
+      <comment>Leman Russ walker (use VDR)
+
+Walker - Normal
+Armour 13-12-10 = 20+40+10 = 70points
+Speed: Normal = 10
+</comment>
+      <infoLinks>
+        <infoLink id="f100-c70d-7106-849a" name="Onager Dunecrawler" hidden="false" targetId="444f-64de-ba57-895e" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="43cb-3449-0537-a595" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="90cb-17a3-6e6f-2634" name="Weapon Option" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74fb-4647-9b02-9cf9" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="485d-ffee-c715-5d18" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c9f1-81cb-63af-40e0" name="Battle Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="d9b1-ab13-7032-a006" name="Battle Cannon" hidden="false" targetId="3a2e-94e4-b9a3-bb11" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="883b-c703-96e7-1534" name="Daedalus Missile Launcher" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="aff1-9ee2-867e-4ff5" name="Earthshaker" hidden="false" targetId="0d02-965c-b2d8-eab5" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e473-a70d-d12b-9c1e" name="Rocket Launcher &amp; Twin-Linked Autocannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>35 for autocannon and 40 for missle launcher</comment>
+              <rules>
+                <rule id="e20d-317b-4602-a455" name="Gattling" hidden="false">
+                  <description>Any weapons with gatling takes D3 shots for each shot they would normally fire. Weapons with a template must place additional templates touching the first using the rules for mortars and other Guess range weapons.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="c67a-c22e-036c-ce73" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Autocannon"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="68da-9364-4083-7a4b" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+                <infoLink id="a0d4-0867-7bd8-596a" name="Missile Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
+                <infoLink id="d09c-1b40-52c2-656a" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ae21-b377-704d-75f2" name="Neutron Laser &amp; Heavy Stubber" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>12 for heavy stubber, Demolisher Cannon 50</comment>
+              <infoLinks>
+                <infoLink id="1512-e589-589f-4732" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile"/>
+                <infoLink id="a2fd-b128-0b59-0815" name="Demolisher" hidden="false" targetId="720f-5c52-b5ff-ee75" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="62.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a8d4-9a30-4dae-93c7" name="Twin-Linked Phosphor Blaster" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="3321-46d0-df6f-b0c9" name="Inferno Cannon" hidden="false" targetId="6a00-06f9-5972-4b79" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="83.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0a89-0b21-2264-033c" name="Skorpius Dunerider" hidden="false" collective="false" import="true" type="upgrade">
-      <comment>Base off of Chimera, but use the VDR to modify</comment>
+    <selectionEntry id="0a89-0b21-2264-033c" name="Skorpius Dunerider" hidden="false" collective="false" import="true" type="unit">
+      <comment>Base off of Chimera, but use the VDR to modify:
+
+Normal - Light Vehicle - Open Topped
+Armour 12-10-10 = Total = 42
+10+10+10+10 = 40 points
+Normal Speed = 10 points
+4x Heavy Stubber = 12*4 = 48points
+Transport 12 models = 12 points
+Open-Topped = -5 points
+</comment>
+      <infoLinks>
+        <infoLink id="9997-2dcd-a998-b97c" name="Skorpius Dunerider" hidden="false" targetId="d69b-d39d-b9e7-05d8" type="profile"/>
+        <infoLink id="1f33-b5b4-e1c8-5fb4" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink id="0af0-6ee6-601f-e10d" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="4x Heavy Stubbers"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f4af-92d8-a40d-fd1e" name="New CategoryLink" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="105.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="986e-26c9-4cf1-ee2a" name="Pteraxii" hidden="false" collective="false" import="true" type="upgrade">
       <comment>Storm troopers</comment>
@@ -311,14 +500,78 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
       <comment>Use VDR</comment>
     </selectionEntry>
     <selectionEntry id="4260-94c2-4540-3313" name="Skorpius Disintegrator" hidden="false" collective="false" import="true" type="upgrade">
-      <comment>Base off of Chimera, but use the VDR to modify</comment>
+      <comment>Base off of Chimera, but use the VDR to modify
+10+10+10+10 = 40 points
+Less than 46 armour and not open-topped = 10pts
+Normal Speed = 10 points
+3x Heavy Stubber = 12*3 = 36points
+Missle Launcher = 40pts</comment>
+      <infoLinks>
+        <infoLink id="222f-337a-9528-6745" name="Skorpius Disintegrator" hidden="false" targetId="f426-f3c5-1f74-a330" type="profile">
+          <comment>
+Normal - Light Vehicle
+Armour 12-10-10 = Total = 42</comment>
+        </infoLink>
+        <infoLink id="e6db-33da-fc40-2d6b" name="Heavy Stubber" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="3x Heavy Stubbers"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="db44-fac0-b862-7b36" name="Missile Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
+        <infoLink id="f487-6c62-edc2-b439" name="Missile Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="283a-2026-11b2-7c12" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7049-4e12-706d-7d55" name="Turret Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="5484-8c98-f1c9-28b2">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3f5-2811-cf52-0c72" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f633-a651-14db-c637" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="09af-dd98-70c5-f563" name="Battle Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="380d-64b8-8d15-d3fa" name="Battle Cannon" hidden="false" targetId="3a2e-94e4-b9a3-bb11" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5484-8c98-f1c9-28b2" name="Griffon Mortar" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a7a7-bea7-ffa7-cfa7" name="Griffon Mortar" hidden="false" targetId="ebcc-b45a-6232-fc77" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="136.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="4dd5-f2de-af98-9cd2" name="Kataphron Platoon" hidden="false" collective="false" import="true" type="unit">
       <entryLinks>
         <entryLink id="d0d4-5d3e-4445-e326" name="Kataphron Squad" hidden="false" collective="false" import="true" targetId="5bba-16f9-727e-483f" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3fc-aa70-7722-7173" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d16-ae90-6432-807a" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d16-ae90-6432-807a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aba7-18aa-e47b-388a" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="75fc-ec3d-66a5-0f2a" name="Ironstrider Squadron" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="e51e-3bfa-7ffc-11a2" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="cafe-03b8-ed72-7a04" name="Ironstrider" hidden="false" collective="false" import="true" targetId="734d-98bd-a75e-2a73" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f7b-3682-7e45-1fff" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6b7-55c6-a012-0486" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -506,20 +759,7 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
       </characteristics>
     </profile>
-    <profile id="8a0a-b1f2-051e-32bd" name="Fulgurite Electro-Priest" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
-      <characteristics>
-        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
-        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9ccb-78e3-d132-d286" name="Corpuscarii Electro-Priest" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="9ccb-78e3-d132-d286" name="Electro-Priest" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
@@ -558,19 +798,6 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
       </characteristics>
     </profile>
-    <profile id="58c0-8b00-bb8c-1395" name="Vanguard Alpha" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
-      <characteristics>
-        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
-        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
-      </characteristics>
-    </profile>
     <profile id="df10-cd3c-a7e8-fd8e" name="Skitarii" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <comment>Guardsman profile with Carapace Armour</comment>
       <characteristics>
@@ -585,7 +812,7 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="2162-d396-c0b1-3ddc" name="Sicarian Ruststalker" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="ab66-8258-f2e2-c002" name="Sicarian" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -596,81 +823,6 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e8af-6f1e-875f-5d2d" name="Ruststalker Princeps" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
-      <characteristics>
-        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
-        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ab66-8258-f2e2-c002" name="Sicarian Infiltrator" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
-      <characteristics>
-        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
-        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="0905-9e25-1d7a-e659" name="Infiltrator Princeps" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
-      <characteristics>
-        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
-        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c7a5-cd77-a570-e4fb" name="Sydonian Dragoon" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
-      <characteristics>
-        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">4</characteristic>
-        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
-        <characteristic name="S" typeId="2870-c64f-81e5-a118">5</characteristic>
-        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">11</characteristic>
-        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">11</characteristic>
-        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">11</characteristic>
-        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">3</characteristic>
-        <characteristic name="A" typeId="bb33-7ddf-2296-174e">3</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ef34-b3df-38ac-e97e" name="Ironstrider Ballistarius" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
-      <characteristics>
-        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">3</characteristic>
-        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
-        <characteristic name="S" typeId="2870-c64f-81e5-a118">5</characteristic>
-        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">11</characteristic>
-        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">11</characteristic>
-        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">11</characteristic>
-        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">3</characteristic>
-        <characteristic name="A" typeId="bb33-7ddf-2296-174e">2</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="15ac-9fdb-6f70-c15e" name="Onager Dunecrawlers" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
-      <characteristics>
-        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">3</characteristic>
-        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
-        <characteristic name="S" typeId="2870-c64f-81e5-a118">5</characteristic>
-        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">12</characteristic>
-        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">12</characteristic>
-        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">11</characteristic>
-        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">2</characteristic>
-        <characteristic name="A" typeId="bb33-7ddf-2296-174e">1</characteristic>
       </characteristics>
     </profile>
     <profile id="3e1b-dc59-a319-091c" name="Techpriest Enginseer" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -686,24 +838,6 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="b7db-6c07-38b6-f4be" name="Mechadendrites" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">2D6 attacks at Initiative 10</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="394e-77a5-eafc-8907" name="Dataspike" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">User</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Haywire</characteristic>
-      </characteristics>
-    </profile>
     <profile id="2b40-1f4f-e71e-2c82" name="Belisarius Cawl" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
@@ -715,105 +849,6 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ef8e-f610-6139-eb5f" name="Servo-Arm" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">Melee</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Makes a single attack, hitting on a 4+. independently of the Techpriests attacks. Ignores all armour saves.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1432-1991-172b-5eff" name="Heavy Arc Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Haywire</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b7d6-351c-b7b7-3387" name="Arc Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">User +1</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Haywire</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f741-d710-4232-99ec" name="Hydraulic Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">User +2</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Iron Grasp, Unwieldy</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="afcf-668f-93a1-629d" name="Plasma Culverin" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2, Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Gets Hot</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ba11-ba5a-bd62-62ca" name="Heavy Grav-Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">*</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 4</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Wound using the opponent&apos;s Sv value</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7394-a17f-d99e-0b57" name="Phosphor Blaster" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Luminagen</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="37cc-5bd9-3edc-6fa8" name="Cognis Flamer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
-      </characteristics>
-    </profile>
-    <profile id="36f0-b8d2-8922-b132" name="Electrostatic Gauntlets (Melee)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">User +1</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
-      </characteristics>
-    </profile>
-    <profile id="79f7-c2c6-e6ec-cb5e" name="Electrostatic Gauntlets (Ranged)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Twin-Linked</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ca17-9a0f-7001-87f2" name="Electroleech Stave" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">User +2</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Any To Wound roll of 6 made by an electroleech stave has the Instant Death special rule</characteristic>
       </characteristics>
     </profile>
     <profile id="8f1b-685c-d352-e948" name="Technical Servitor" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -855,15 +890,6 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="0622-25e8-6ea0-1c63" name="Gamma Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"></characteristic>
-      </characteristics>
-    </profile>
     <profile id="947b-6854-b79e-d786" name="Skitarri Alpha" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <comment>Veteran Sergeant profile with Carapace Armour</comment>
       <characteristics>
@@ -876,6 +902,48 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d69b-d39d-b9e7-05d8" name="Skorpius Dunerider" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">10</characteristic>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204">3</characteristic>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">12</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="f426-f3c5-1f74-a330" name="Skorpius Disintegrator" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">10</characteristic>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204">3</characteristic>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">12</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="62c3-f3f3-b6e6-5354" name="Ironstrider" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">3</characteristic>
+        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">3</characteristic>
+        <characteristic name="S" typeId="2870-c64f-81e5-a118">5</characteristic>
+        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">10</characteristic>
+        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">10</characteristic>
+        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">10</characteristic>
+        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">3</characteristic>
+        <characteristic name="A" typeId="bb33-7ddf-2296-174e">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="444f-64de-ba57-895e" name="Onager Dunecrawler" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">3</characteristic>
+        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">3</characteristic>
+        <characteristic name="S" typeId="2870-c64f-81e5-a118">5</characteristic>
+        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">13</characteristic>
+        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">12</characteristic>
+        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">10</characteristic>
+        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">3</characteristic>
+        <characteristic name="A" typeId="bb33-7ddf-2296-174e">1</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
