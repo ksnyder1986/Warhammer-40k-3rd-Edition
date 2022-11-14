@@ -14,7 +14,7 @@ Vehicles all use the vehicle design rule if a comparible unit from the 2003 Impe
         <categoryLink id="db30-6da6-4e38-056c" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="96a9-2c11-4246-e5f6" name="Ironstrider" hidden="false" collective="false" import="true" targetId="734d-98bd-a75e-2a73" type="selectionEntry">
+    <entryLink id="96a9-2c11-4246-e5f6" name="Ironstrider Squadron" hidden="false" collective="false" import="true" targetId="75fc-ec3d-66a5-0f2a" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="ae04-dc53-22c2-d263" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
@@ -29,12 +29,7 @@ Vehicles all use the vehicle design rule if a comparible unit from the 2003 Impe
         <categoryLink id="b368-27de-2a68-8d9b" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="972f-4afd-c472-04aa" name="Belisarius Cawl" hidden="false" collective="false" import="true" targetId="2357-c4a2-d575-d071" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink id="31de-7bf4-b83c-d81e" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink id="5b09-c687-a8b9-ec90" name="Tech-Priest Enginseer" hidden="false" collective="false" import="true" targetId="7166-f1fe-2bd4-6bf6" type="selectionEntry">
+    <entryLink id="5b09-c687-a8b9-ec90" name="Tech-Priest Enginseer" hidden="false" collective="false" import="true" targetId="7b74-9543-24ce-a3c5" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="2cd1-d0a6-f5b8-e041" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
@@ -54,6 +49,10 @@ Vehicles all use the vehicle design rule if a comparible unit from the 2003 Impe
         <categoryLink id="0db6-8d5b-2cd3-5a18" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="e2b2-e49a-178e-8289" name="Archaeopter" hidden="false" collective="false" import="true" targetId="7bfb-8ddd-7355-64ac" type="selectionEntry"/>
+    <entryLink id="4a97-74cc-a1f2-3ece" name="Pteraxii" hidden="false" collective="false" import="true" targetId="986e-26c9-4cf1-ee2a" type="selectionEntry"/>
+    <entryLink id="2c26-d24f-a26b-2db5" name="Skorpius Disintegrator" hidden="false" collective="false" import="true" targetId="4260-94c2-4540-3313" type="selectionEntry"/>
+    <entryLink id="711e-504e-f877-b706" name="Serbery Squadron" hidden="false" collective="false" import="true" targetId="cf9e-ad51-1208-0030" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="4a1e-aa8d-557f-d504" name="Skitarii" hidden="false" collective="false" import="true" type="unit">
@@ -199,18 +198,146 @@ Sharpshoots = +1
       </costs>
     </selectionEntry>
     <selectionEntry id="7f36-c7e5-4d91-59bc" name="Tech-Priest Dominus" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="bac6-086b-b104-7a49" name="Blessing of the Machine-God" hidden="false">
+          <description>If the Enginseer starts the turn in contact with a damaged vehicle he may attempt to make a repair. If the vehicle is Immoblisied or has a Weapon Destroyed, one of these is repaired on a roll of 6+. The Techpriest gains +1 on this roll for each Technical Servitor he has with him.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="3bf6-c0a5-651b-4e60" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+        <infoLink id="9c7f-aa2d-70d5-08fc" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+        <infoLink id="a353-c97e-3944-bafd" name="Servo-Arm" hidden="false" targetId="bc4b-e2d4-302e-9abf" type="profile"/>
+        <infoLink id="12f2-7009-5311-e1ad" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+        <infoLink id="8634-5fcb-ff25-368a" name="Techpriest Dominus" hidden="false" targetId="24d0-bb90-6725-84ca" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="794c-23f4-1060-ceff" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e1e2-4ba1-2662-37dc" name="Servitors" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a48-5ab8-2f16-3b60" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ac56-eb25-fd95-4c36" name="Multi-Melta Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="e6cc-8c9d-4c9a-6d6b" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="135d-3c05-9c7a-9d0d" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9034-264d-eb0e-5c51" name="Combat Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="8947-9940-dfbd-efa6" name="Combat Servitor" hidden="false" targetId="665f-ebf3-75fd-cee0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4479-b704-35f6-8f57" name="Heavy Bolter Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="27f7-46a3-3653-ed13" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="9038-5fca-5aa7-3cdf" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ad72-ff0b-303e-8755" name="Plasma Cannon Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="74e9-ab90-958e-535f" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="7bf2-f4cd-39cf-85b6" name="Plasma Cannon" hidden="false" targetId="9a19-ea1c-3d75-94aa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="768d-773c-fdac-b7d9" name="Technical Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="5d09-6831-70d8-bddb" name="Technical Servitor" hidden="false" targetId="8f1b-685c-d352-e948" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="b33f-7d6c-af1b-0f08" name="Adeptus Mechanicus Armoury" hidden="false" collective="false" import="true" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2357-c4a2-d575-d071" name="Belisarius Cawl" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11f9-768a-d65c-e584" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="3328-92b6-3f5f-79c3" name="Blessing of the Machine-God" hidden="false">
+          <description>If the Enginseer starts the turn in contact with a damaged vehicle he may attempt to make a repair. If the vehicle is Immoblisied or has a Weapon Destroyed, one of these is repaired on a roll of 6+. The Techpriest gains +1 on this roll for each Technical Servitor he has with him.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="defd-3197-e1d4-2e69" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="98a8-134a-20c3-ce1f" name="Servitors" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59cf-bd51-fd7a-e660" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="987c-a1df-8324-fa2a" name="Multi-Melta Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="9420-27bb-1c84-ff01" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="b0d5-7551-de14-8d46" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="af68-97a8-15a0-01a6" name="Combat Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="b9d4-dca2-882e-7cfb" name="Combat Servitor" hidden="false" targetId="665f-ebf3-75fd-cee0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="018e-91af-aba5-eec9" name="Heavy Bolter Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="8592-5c64-cb43-54ce" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="76e6-ff3d-31e6-4f13" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f087-cbf9-0ba2-0f51" name="Plasma Cannon Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="ce45-d33e-5547-f32b" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="3b0c-303e-8cb7-e630" name="Plasma Cannon" hidden="false" targetId="9a19-ea1c-3d75-94aa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="94a6-93c4-d46b-1213" name="Technical Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="e769-7600-4f7b-b411" name="Technical Servitor" hidden="false" targetId="8f1b-685c-d352-e948" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7166-f1fe-2bd4-6bf6" name="Tech-Priest Enginseer" hidden="false" collective="false" import="true" type="unit">
-      <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5bba-16f9-727e-483f" name="Kataphron Squad" hidden="false" collective="false" import="true" type="unit">
@@ -277,6 +404,30 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
     </selectionEntry>
     <selectionEntry id="69c7-890b-a76c-c9f3" name="Electro-Priests" hidden="false" collective="false" import="true" type="unit">
       <comment>Ogryns maybe? They look like repentia basically.</comment>
+      <categoryLinks>
+        <categoryLink id="3869-c4ca-e300-9fac" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2af9-c3ad-4b64-8b2a" name="Electro-Priests" hidden="false" collective="false" import="true" defaultSelectionEntryId="9114-13fd-2100-5982">
+          <constraints>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6ae-0c79-2517-a05c" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f829-a61d-1f6e-095d" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9114-13fd-2100-5982" name="Electro-Priest" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="163b-9efb-c804-40bd" name="Electro-Priest" hidden="false" targetId="9ccb-78e3-d132-d286" type="profile"/>
+                <infoLink id="a4c9-2da2-9646-0847" name="Eviscerator" hidden="false" targetId="b20d-b927-c47c-b8b7" type="profile"/>
+                <infoLink id="9bf3-7825-c0b3-af43" name="Chem-inhaler" hidden="false" targetId="f958-be95-5a44-3f15" type="rule"/>
+                <infoLink id="c8f0-4b2e-4dd0-611f" name="Cyber-Enhancement" hidden="false" targetId="9786-4169-1cd4-91c9" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
@@ -711,6 +862,9 @@ Open-Topped = -5 points
       <infoLinks>
         <infoLink id="a00f-c2f8-ebfb-69a4" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7b24-f444-82a7-391d" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+      </categoryLinks>
       <selectionEntries>
         <selectionEntry id="fe71-63bc-11c3-66ab" name="Pteraxii Alpha" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -750,7 +904,7 @@ Open-Topped = -5 points
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d147-b505-72fe-8c3d" name="Pteraxii" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="d147-b505-72fe-8c3d" name="Pteraxii" hidden="false" collective="false" import="true" defaultSelectionEntryId="ae8b-378a-c6a7-da02">
           <comment>Base 10
 Deepstrike 1
 Cheminhaller 1
@@ -1056,7 +1210,78 @@ Armour 12-10-10 = Total = 42</comment>
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry id="94fc-46a3-ac43-fff1" name="Cybernetica Datasmith" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="7b74-9543-24ce-a3c5" name="Tech-Priest Enginseer" hidden="false" collective="false" import="true" type="upgrade">
+      <rules>
+        <rule id="257d-82ce-274c-f907" name="Blessing of the Machine-God" hidden="false">
+          <description>If the Enginseer starts the turn in contact with a damaged vehicle he may attempt to make a repair. If the vehicle is Immoblisied or has a Weapon Destroyed, one of these is repaired on a roll of 6+. The Techpriest gains +1 on this roll for each Technical Servitor he has with him.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="2a40-c64d-b7a3-3e15" name="Techpriest Enginseer" hidden="false" targetId="3e1b-dc59-a319-091c" type="profile"/>
+        <infoLink id="85b0-7536-7970-07a0" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+        <infoLink id="043c-adcd-44dd-716f" name="Servo-Arm" hidden="false" targetId="bc4b-e2d4-302e-9abf" type="profile"/>
+        <infoLink id="e51c-488b-1dd7-365b" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+        <infoLink id="14a6-2b18-9966-14df" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1350-9486-0980-bb1c" name="Servitors" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd59-f75b-53bf-df1b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2794-87d8-72d6-d462" name="Multi-Melta Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="0072-5e38-17b8-b870" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="5d60-2ce6-10d8-5ad9" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5242-97b5-e9ed-204d" name="Combat Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="8a9c-091d-9bed-b694" name="Combat Servitor" hidden="false" targetId="665f-ebf3-75fd-cee0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7977-6857-d407-97f9" name="Heavy Bolter Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="c62e-0f10-d4a2-dff6" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="0404-64b3-6cb2-f25f" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e96d-bfc8-f186-f8d7" name="Plasma Cannon Gun Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="b7b6-65bd-5085-51b0" name="Gun Servitor" hidden="false" targetId="2ae1-3c54-552d-83ee" type="profile"/>
+                <infoLink id="3ec4-f36b-c593-574d" name="Plasma Cannon" hidden="false" targetId="9a19-ea1c-3d75-94aa" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="30f6-f652-1fe2-bac1" name="Technical Servitor" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="4337-acf9-9e64-4f0d" name="Technical Servitor" hidden="false" targetId="8f1b-685c-d352-e948" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="eced-2226-3a9e-b18c" name="Adeptus Mechanicus Armoury" hidden="false" collective="false" import="true" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f1e6-9c47-7479-2f26" name="Wargear" hidden="false" collective="false" import="true"/>
@@ -1230,27 +1455,27 @@ Armour 12-10-10 = Total = 42</comment>
     <profile id="24d0-bb90-6725-84ca" name="Techpriest Dominus" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
         <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
     <profile id="9ccb-78e3-d132-d286" name="Electro-Priest" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
-        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3(6)</characteristic>
         <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
         <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
         <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">-</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">6</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
     <profile id="14b0-1c38-6f6a-0d2f" name="Kastelan Robot" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
@@ -1499,6 +1724,24 @@ Armour 12-10-10 = Total = 42</comment>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
         <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="bc4b-e2d4-302e-9abf" name="Servo-Arm" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Makes a single attack, hitting on a 4+. independently of the Techpriests attacks. Ignores all armour saves.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="b20d-b927-c47c-b8b7" name="Eviscerator" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores all armour saves. Rolls 2D6 + Strength when penetrating armour.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
