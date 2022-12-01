@@ -1375,6 +1375,72 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2f5d-e085-02b7-4fe4" name="Grey Knight Terminator Squad (White Dwarf 234)" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="f89d-877b-2a54-8184" name="Holocaust" hidden="false">
+          <description>The squad has the psychic power that may be used at any point during the assault phase. On a successful Psychic test, place the Ordanance template in contact with one of the Gery Knights. All models under the template suffer a S5 AP5 hit. Wounds inflicted by this power count towards combat results.</description>
+        </rule>
+        <rule id="73fc-8178-3ec9-afb5" name="Chaosbane" hidden="false">
+          <description>Grey Knights can only be fielded against Chaos opponents.</description>
+        </rule>
+        <rule id="96b8-de6a-b4f8-9786" name="Reserves" hidden="false">
+          <description>Grey Knights are always held in reserve even if the mission does not allow reserves. In addition, they may only deploy once either Daemons are present on the battlefield or a Chaos Sorcerer has used a psychic power.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="16fa-8cfd-fdba-9c76" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c3d8-5501-3f84-ca39" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="62fe-adca-89ca-f1d1" name="Grey Knights" hidden="false" collective="false" import="true" defaultSelectionEntryId="f1df-291b-2d6f-068f">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f233-5929-c712-6bb9" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91b7-c9a9-1006-09ee" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f1df-291b-2d6f-068f" name="Grey Knight" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="959b-453d-55fb-95e9" name="Grey Knight" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+                  <characteristics>
+                    <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+                    <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+                    <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                    <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                    <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+                    <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+                    <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+                    <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+                    <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="e6a8-b048-0e07-64eb" name="Nemesis Force Halberd" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">User</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds Daemons on a 2+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="368e-31e9-46d1-5c54" name="Aegis Suit" hidden="false">
+                  <description>Grey Knights are considered to have a Psychic Hood that can be used again Psychic attacks that target the Gery Knights. Only one roll is made regardless of the number of Grey Knights.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="b3b0-8d10-6cd1-6b4a" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="4a60-7f7e-c37f-a4d6" name="Independent Character" hidden="false"/>
