@@ -103,7 +103,7 @@
         <categoryLink id="10fb-d454-fbc6-55b3" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="ba42-0c52-b538-f386" name="Land Raider Crusader (IA)" hidden="false" collective="false" import="true" targetId="d7d7-d12e-387b-1b3b" type="selectionEntry">
+    <entryLink id="ba42-0c52-b538-f386" name="Land Raider Crusader" hidden="false" collective="false" import="true" targetId="f995-47f0-4378-bdfb" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="name" value="Land Raider Crusader"/>
       </modifiers>
@@ -186,7 +186,14 @@
       <entryLinks>
         <entryLink id="3483-8384-40a1-9414" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
         <entryLink id="7c0a-c6a0-994d-f687" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
-        <entryLink id="7021-330a-bf0d-22c3" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+        <entryLink id="7021-330a-bf0d-22c3" name="Deathwatch Veteran (Chapter Approved)" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9f8-7de4-38e4-c03e" type="max"/>
           </constraints>
@@ -219,7 +226,14 @@
       <entryLinks>
         <entryLink id="9f34-3c45-6303-f760" name="Space Marine Armory" hidden="false" collective="false" import="true" targetId="bfc9-22b8-1379-3112" type="selectionEntryGroup"/>
         <entryLink id="a982-140d-58be-6041" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
-        <entryLink id="e825-a58f-896d-5ae6" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+        <entryLink id="e825-a58f-896d-5ae6" name="Deathwatch Veteran (Chapter Approved)" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0f1-d66c-4709-0e87" type="max"/>
           </constraints>
@@ -298,6 +312,29 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="3af3-df07-15d7-e620" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c49-5d68-1455-47eb" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="f3f2-573d-69f4-57a4" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="bf73-8892-26b5-4d0e" name="Initiates" hidden="false" collective="false" import="true" defaultSelectionEntryId="9af4-0c5e-a2a2-fb67">
@@ -319,7 +356,14 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="5a34-e610-c66a-c9d4" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+            <entryLink id="5a34-e610-c66a-c9d4" name="Deathwatch Veteran (Chapter Approved)" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <infoLinks>
                 <infoLink id="b579-e17e-c92c-76ed" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
                 <infoLink id="4c5c-9924-71ac-bb4b" name="Initiate" hidden="false" targetId="958b-031a-c028-b157" type="profile"/>
@@ -547,6 +591,11 @@
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b107-7b2b-3dc0-1b45" type="max"/>
@@ -554,6 +603,9 @@
           <infoLinks>
             <infoLink id="4f4c-9649-48fa-56bd" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -698,6 +750,11 @@
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec23-976d-2084-5d2c" type="max"/>
@@ -705,6 +762,9 @@
           <infoLinks>
             <infoLink id="dc04-c1b9-e1e4-e688" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -793,6 +853,49 @@
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f995-47f0-4378-bdfb" name="Land Raider Crusader" hidden="false" collective="false" import="true" type="unit">
+      <rules>
+        <rule id="1575-a414-a13e-dbff" name="Deus Ex Machina" hidden="false">
+          <description>If the crew are stunned then the Machine Spirit will take over temporarily. The Land Raider may be moved directly forward up to its maximum move.</description>
+        </rule>
+        <rule id="f174-1cf3-09d4-cdc1" name="Fire Control" hidden="false">
+          <description>The Land Raider may always fire one additional weapon system to those it would normally be able to fire. This shot may be against a different target to that engaged by the crew. Automatic targetting is less accurate and therefore conducted with BS2. If the crew are stunned or shaken, the Machine Spirit may still fire a weapon using this rule.</description>
+        </rule>
+        <rule id="483d-a9ad-1e5d-af84" name="Frag Assault Launchers" hidden="false">
+          <description>Any unit that assaults on the same turn it disembarks from the Crusader counts as having frag grenades</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="1d35-3012-17eb-166b" name="Land Raider" hidden="false" targetId="ad60-6998-8da3-8149" type="profile">
+          <modifiers>
+            <modifier type="set" field="ec07-2d55-2ba5-6080" value="15 Marines. 8 Terminators."/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="79c7-5ca6-fd72-3f5e" name="Multi-melta" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
+        <infoLink id="8b82-3531-b5fa-be6a" name="Assault Cannon" hidden="false" targetId="3f9c-e7c1-c442-3b7c" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Twin-Linked Assault Cannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="2fa8-cfd6-cec3-64cb" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Hurricane Pattern Bolters"/>
+            <modifier type="set" field="d3f6-19e8-ac9e-ae13" value="Rapid Fire 3"/>
+            <modifier type="set" field="492d-1f80-b777-26f2" value="Twin-Linked. Counts as 3 Bolters."/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="8a48-5f5f-3e95-0847" name="Extra Armour" hidden="false" targetId="0d41-84e8-e76b-8cfb" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4dde-5f84-ef50-5a93" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="46e5-3ed0-c083-daac" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="93a4-c4f2-3183-a640" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="255.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
