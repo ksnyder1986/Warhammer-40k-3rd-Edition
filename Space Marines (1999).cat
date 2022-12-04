@@ -284,7 +284,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -366,7 +366,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -448,7 +448,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -530,7 +530,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -620,7 +620,7 @@
       <infoLinks>
         <infoLink id="6b07-dcaf-0924-adab" name="Chaplain" hidden="false" targetId="0c8b-2645-5db9-f8c8" type="profile"/>
         <infoLink id="144d-abbf-43f0-14a5" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
-        <infoLink id="e7c3-5c69-ce0f-57e5" name="Crozius Arcanum" hidden="false" targetId="2927-357a-fc6c-42c3" type="rule">
+        <infoLink id="e7c3-5c69-ce0f-57e5" name="Crozius Arcanum" hidden="false" targetId="7ce8-fd51-4727-b5ea" type="profile">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -634,7 +634,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -708,7 +708,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1205,6 +1205,11 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8f0b-3e54-c10f-0a71" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919e-2da6-2f65-7175" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed50-b114-92e0-2a30" type="max"/>
@@ -1375,6 +1380,11 @@
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4ddc-8876-f834-c73d" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink id="189f-97e6-2292-064f" name="Razorback" hidden="false" targetId="cc35-bece-fe42-a1be" type="profile"/>
@@ -1453,10 +1463,10 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="133d-6053-6d52-6fec" name="Deus Ex Machina (IA)" hidden="false">
+        <rule id="133d-6053-6d52-6fec" name="Deus Ex Machina (IA)" publicationId="e060-faad-d3fd-2415" page="93" hidden="false">
           <description>If the crew are stunned then the Machine Spirit will take over temporarily. The Land Raider may be moved directly forward up to its maximum move.</description>
         </rule>
-        <rule id="593b-1308-d2cc-4c09" name="Fire Control (IA)" hidden="false">
+        <rule id="593b-1308-d2cc-4c09" name="Fire Control (IA)" publicationId="e060-faad-d3fd-2415" page="93" hidden="false">
           <description>The Land Raider may always fire one additional weapon system to those it would normally be able to fire. This shot may be against a different target to that engaged by the crew. Automatic targetting is less accurate and therefore conducted with BS2. If the crew are stunned or shaken, the Machine Spirit may still fire a weapon using this rule.</description>
         </rule>
       </rules>
@@ -1480,8 +1490,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9061-6fb6-bd9b-9e68" type="max"/>
           </constraints>
           <rules>
-            <rule id="c660-b97f-044d-2573" name="AA" hidden="false">
-              <description>The Lascannon may fire at aircraft using its normal BS</description>
+            <rule id="c660-b97f-044d-2573" name="AA" publicationId="e060-faad-d3fd-2415" page="93" hidden="false">
+              <description>The Twin-linked heavy bolters may fire at aircraft using its normal BS</description>
             </rule>
           </rules>
           <costs>
@@ -1502,7 +1512,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1722,7 +1732,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2286,6 +2296,11 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8f0b-3e54-c10f-0a71" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="919e-2da6-2f65-7175" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1707-edc6-e3d6-f66e" type="max"/>
@@ -2398,7 +2413,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2802,6 +2817,11 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8f0b-3e54-c10f-0a71" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919e-2da6-2f65-7175" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a87-8f0c-8a28-dc16" type="max"/>
@@ -3132,12 +3152,17 @@
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="919e-2da6-2f65-7175" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5925-6a8d-faae-76af" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="27fa-ffc9-b24a-1f35" name="Land Speeder Storm" hidden="false" collective="false" import="true" targetId="3207-59fb-1756-57c7" type="selectionEntry">
+        <entryLink id="27fa-ffc9-b24a-1f35" name="Land Speeder Storm (Homebrew)" hidden="false" collective="false" import="true" targetId="3207-59fb-1756-57c7" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="9145-7159-d33a-0f4c" value="0.0">
               <conditions>
@@ -3147,6 +3172,11 @@
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-cb6b-fa64-6b84" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="919e-2da6-2f65-7175" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3159,13 +3189,13 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6f82-235d-a765-6ab6" name="Assault Squad" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="6f82-235d-a765-6ab6" name="Assault Squad" publicationId="a32d-d82d-5f82-b13a" page="12" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="775c-224c-5a7b-f9f4" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3560,7 +3590,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3939,7 +3969,7 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="26b2-8587-e170-87ee" name="Attack Bike Squadron" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="26b2-8587-e170-87ee" name="Attack Bike Squadron" publicationId="a32d-d82d-5f82-b13a" page="12" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="f615-032e-2d36-523f" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule">
           <modifiers>
@@ -4050,7 +4080,7 @@
     </selectionEntry>
     <selectionEntry id="e8c8-4bfb-5e2b-7737" name="Scout Bike Squadron" hidden="false" collective="false" import="true" type="unit">
       <rules>
-        <rule id="7410-9113-dc22-3d63" name="Difficult Terrain" hidden="false">
+        <rule id="7410-9113-dc22-3d63" name="Difficult Terrain" publicationId="a32d-d82d-5f82-b13a" page="13" hidden="false">
           <description>Scout bikes may re-roll a failed Difficult Terrain test.</description>
         </rule>
       </rules>
@@ -4419,7 +4449,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2de3-5ccc-967b-e580" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4676,6 +4706,13 @@
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="467c-1005-8a4b-7bd7" name="Transport Vehicle" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919e-2da6-2f65-7175" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7fb-b166-80bd-c223" type="max"/>
           </constraints>
@@ -4850,7 +4887,7 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="2ad3-09fe-8d9d-5801" name="Siege Armour" hidden="false">
+        <rule id="2ad3-09fe-8d9d-5801" name="Siege Armour" publicationId="e060-faad-d3fd-2415" page="71" hidden="false">
           <description>Shots fired from above are resolved aginst the Side Armour value instead of the rear</description>
         </rule>
       </rules>
@@ -4911,7 +4948,7 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbc2-f849-0676-01be" type="max"/>
       </constraints>
       <profiles>
-        <profile id="890e-3367-e762-88c0" name="Gauntlets of Ultramar" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+        <profile id="890e-3367-e762-88c0" name="Gauntlets of Ultramar" publicationId="a32d-d82d-5f82-b13a" page="36" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
           <characteristics>
             <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
             <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
@@ -4922,7 +4959,7 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="8714-fef0-1bcb-216d" name="Never Falls Back" hidden="false">
+        <rule id="8714-fef0-1bcb-216d" name="Never Falls Back" publicationId="a32d-d82d-5f82-b13a" page="36" hidden="false">
           <description>Calgar and the unit he has joined never falls back. They automatically pass any Fall Back tests and is not effected by abilities that cause troops to automatically fall back.</description>
         </rule>
       </rules>
@@ -4971,7 +5008,7 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7b7-3c49-8922-98e6" type="max"/>
       </constraints>
       <profiles>
-        <profile id="1e0b-10f2-fd28-db57" name="Rod of Tigurius" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+        <profile id="1e0b-10f2-fd28-db57" name="Rod of Tigurius" publicationId="a32d-d82d-5f82-b13a" page="38" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
           <characteristics>
             <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
             <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
@@ -4982,7 +5019,7 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="2883-89f2-07a5-d27f" name="Hood of Hellfire" hidden="false">
+        <rule id="2883-89f2-07a5-d27f" name="Hood of Hellfire" publicationId="a32d-d82d-5f82-b13a" page="38" hidden="false">
           <description>Counts as a psychic good. Additionally increases Tigurius&apos;s Smite&apos;s range to 24&quot;.</description>
         </rule>
       </rules>
@@ -5025,10 +5062,10 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e12-e966-f1e6-fa6f" type="max"/>
       </constraints>
       <rules>
-        <rule id="bf7e-96d6-5479-cf9c" name="Stubborn" hidden="false">
+        <rule id="bf7e-96d6-5479-cf9c" name="Stubborn" publicationId="a32d-d82d-5f82-b13a" page="38" hidden="false">
           <description>Once per game, ignore the first failed Fall Back test made by a unit in the army. This also applies to things that would normally cause a unit to fall back automatically without a test. </description>
         </rule>
-        <rule id="0df3-4740-e28b-e806" name="Invulnerable" hidden="false">
+        <rule id="0df3-4740-e28b-e806" name="Invulnerable" publicationId="a32d-d82d-5f82-b13a" page="38" hidden="false">
           <description>Cortez may always take a 3+ invulnerable save</description>
         </rule>
       </rules>
@@ -5071,7 +5108,7 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e67-220e-a9dc-bd8c" type="max"/>
       </constraints>
       <profiles>
-        <profile id="d887-e7c8-fd6b-e4b5" name="The Black Sword" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+        <profile id="d887-e7c8-fd6b-e4b5" name="The Black Sword" publicationId="a32d-d82d-5f82-b13a" page="39" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
           <characteristics>
             <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
             <characteristic name="S" typeId="24d8-2110-08fa-d844">User +1/User x 2</characteristic>
@@ -5082,7 +5119,7 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="b135-05bd-4494-a327" name="Challenge" hidden="false">
+        <rule id="b135-05bd-4494-a327" name="Challenge" publicationId="a32d-d82d-5f82-b13a" page="39" hidden="false">
           <description>At the start of any Assault phase that the Champion is in combat, he may issue a challenge. Your opponent must choose an enemy character to fight him who is involved in the same close combat. The challenge may not be refused. Move the models into base contact and fight out the close combat as normal. No other models may attack the Champion or his opponent. The outcome of the challenge decides the outcome of the close combat; only the wounds they inflict on each other are used to determine which side has won. </description>
         </rule>
       </rules>
@@ -5124,17 +5161,17 @@
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c55-0b0c-b1c1-76ca" type="max"/>
       </constraints>
       <rules>
-        <rule id="eb55-dd8c-042f-b039" name="Vulkan&apos;s Sigil" hidden="false">
+        <rule id="eb55-dd8c-042f-b039" name="Vulkan&apos;s Sigil" publicationId="a32d-d82d-5f82-b13a" page="40" hidden="false">
           <description>Counts as a holy relic. It affects all Salamanders within 12&quot; when it is revealed, instead of the normal 2D6&quot;.</description>
         </rule>
-        <rule id="e597-ab89-12f5-c563" name="Salamanders Mantal" hidden="false">
+        <rule id="e597-ab89-12f5-c563" name="Salamanders Mantal" publicationId="a32d-d82d-5f82-b13a" page="40" hidden="false">
           <description>Xavier is immune to suffering instant death by being hit by an attach which has a Strength value double his Toughness. He loses a single wound instead. Note that instant death can be suffered in other ways.</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink id="0333-58f2-8130-c87d" name="Chaplain Xavier" hidden="false" targetId="fc47-9a71-ac61-87d2" type="profile"/>
         <infoLink id="d578-33fb-8a07-2251" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-        <infoLink id="c89b-0c22-2747-d481" name="Crozius Arcanum" hidden="false" targetId="2927-357a-fc6c-42c3" type="rule"/>
+        <infoLink id="c89b-0c22-2747-d481" name="Crozius Arcanum" hidden="false" targetId="7ce8-fd51-4727-b5ea" type="profile"/>
         <infoLink id="0aeb-444f-1499-e39c" name="Rosarius" hidden="false" targetId="479f-929d-b531-a315" type="rule"/>
         <infoLink id="c1f0-9411-391f-f2fe" name="Terminator Honors" hidden="false" targetId="bad9-31ae-7a9c-f38c" type="rule"/>
         <infoLink id="e147-34bc-6500-f5ca" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
@@ -5142,6 +5179,7 @@
       <categoryLinks>
         <categoryLink id="ab88-09e1-06b6-aa2a" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
         <categoryLink id="31ca-464c-ed09-766a" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink id="79aa-9fac-58be-4e06" name="Salamander" hidden="false" targetId="3c77-1326-2bf2-1b97" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="e216-e1dc-7b6a-74e9" name="Command Squad" hidden="false" collective="false" import="true" targetId="bc53-c50d-f840-ebaa" type="selectionEntry"/>
@@ -5171,7 +5209,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d32-e561-f49b-509c" type="max"/>
       </constraints>
       <rules>
-        <rule id="de4b-dec2-7e20-c761" name="Bolter Drill" hidden="false">
+        <rule id="de4b-dec2-7e20-c761" name="Bolter Drill" publicationId="a32d-d82d-5f82-b13a" page="40" hidden="false">
           <description>You may re-roll the to hit dice for any bolter fire undertaken by a squad led by Lysander. If you do then you must re-roll all the to hit dice, not just the ones that missed. You may only re-roll boltgun dice, not bolt pistols or heavy bolters, etc.</description>
         </rule>
       </rules>
@@ -5251,7 +5289,7 @@
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="8296-0b38-c552-3331" name="Twin-Linked Hyperious Missile Launcher" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+        <profile id="8296-0b38-c552-3331" name="Twin-Linked Hyperious Missile Launcher" publicationId="a32d-d82d-5f82-b13a" page="61" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
           <characteristics>
             <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
             <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -5292,10 +5330,10 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b631-004b-aea2-8d26" type="max"/>
       </constraints>
       <rules>
-        <rule id="15ae-e95e-f727-9e4e" name="Improved Communications" hidden="false">
+        <rule id="15ae-e95e-f727-9e4e" name="Improved Communications" publicationId="e060-faad-d3fd-2415" page="77" hidden="false">
           <description>The Space Marine player may re-roll a reinforcement dice once per turn, and to re-roll the dice when checking to see if an enemy unit or obstacle is hit by a premilinary bombardment.</description>
         </rule>
-        <rule id="3aae-764b-fe05-74e9" name="Teleport Beacon" hidden="false">
+        <rule id="3aae-764b-fe05-74e9" name="Teleport Beacon" publicationId="e060-faad-d3fd-2415" page="77" hidden="false">
           <description>If a Damocles is deployed on the table then any teleporting troops may re-roll the scatter and distance dice for their Deep Strike.</description>
         </rule>
       </rules>
@@ -5355,26 +5393,26 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c55-8b6c-10af-a1de" type="min"/>
           </constraints>
           <rules>
-            <rule id="927d-2e56-f581-a7ad" name="Plotting" hidden="false">
+            <rule id="927d-2e56-f581-a7ad" name="Plotting" publicationId="e060-faad-d3fd-2415" page="77" hidden="false">
               <description>The Orbital Strike must be keyed to a specific piece of terrain at the start of the battle. Make a note of the plotted target before forces are deployed but after deployment zones have been determined</description>
             </rule>
-            <rule id="d44e-df6c-f95e-c152" name="Timing" hidden="false">
+            <rule id="d44e-df6c-f95e-c152" name="Timing" publicationId="e060-faad-d3fd-2415" page="77" hidden="false">
               <description>An orbital strike uses the Reserve special rule to determine when it strikes. Once the orbital strike passes the Reserve roll it fires each Space Marine shooting phases for the rest of the game. It cannot be stopped once started. The Space Marine player can opt to not roll for the onset of the orbital strike if they wish.</description>
             </rule>
-            <rule id="dc29-7619-949f-8bc1" name="Placement" hidden="false">
+            <rule id="dc29-7619-949f-8bc1" name="Placement" publicationId="e060-faad-d3fd-2415" page="77" hidden="false">
               <description>The Ordnance Blast marker for the strike must be placed anywhere within the specified terrain piece</description>
             </rule>
-            <rule id="a4ef-ff8b-b32c-5623" name="Inaccuracy" hidden="false">
+            <rule id="a4ef-ff8b-b32c-5623" name="Inaccuracy" publicationId="e060-faad-d3fd-2415" page="77" hidden="false">
               <description>An Orbital Strike scatters just like ordinary ordnance weapons, except when a miss is rolled the distance scatterd is double the number scored on the D6. If a hit is rolled, the template deviates by the distance shown on the Hit Symbol.</description>
             </rule>
-            <rule id="785d-9333-5372-b764" name="Pinning" hidden="false">
+            <rule id="785d-9333-5372-b764" name="Pinning" publicationId="e060-faad-d3fd-2415" page="77" hidden="false">
               <description>All Orbital Strikes cause Pinning tests</description>
             </rule>
           </rules>
           <selectionEntries>
             <selectionEntry id="0be5-6e22-c8de-a80e" name="Lance Strike" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="3b32-25fa-23c6-e7a4" name="Lance Strike" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                <profile id="3b32-25fa-23c6-e7a4" name="Lance Strike" publicationId="e060-faad-d3fd-2415" page="77" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Special</characteristic>
                     <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
@@ -5390,7 +5428,7 @@
             </selectionEntry>
             <selectionEntry id="905a-7af7-3d5f-5052" name="Melta Torpedo" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="c384-3026-07d6-03e0" name="Melta Torpedo" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                <profile id="c384-3026-07d6-03e0" name="Melta Torpedo" publicationId="e060-faad-d3fd-2415" page="77" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Special</characteristic>
                     <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -5406,7 +5444,7 @@
             </selectionEntry>
             <selectionEntry id="9175-9402-3c8a-c135" name="Barrage Bomb" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="4654-c37a-8f40-d4a6" name="Barrage Bomb" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                <profile id="4654-c37a-8f40-d4a6" name="Barrage Bomb" publicationId="e060-faad-d3fd-2415" page="77" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Special</characteristic>
                     <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -5427,7 +5465,7 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d7d7-d12e-387b-1b3b" name="Land Raider Crusader (IA)" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="d7d7-d12e-387b-1b3b" name="Land Raider Crusader (IA)" page="" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -5436,13 +5474,13 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="bfdb-e255-57b6-61f6" name="Deus Ex Machina (IA)" hidden="false">
+        <rule id="bfdb-e255-57b6-61f6" name="Deus Ex Machina (IA)" publicationId="e060-faad-d3fd-2415" page="99" hidden="false">
           <description>If the crew are stunned then the Machine Spirit will take over temporarily. The Land Raider may be moved directly forward up to its maximum move.</description>
         </rule>
-        <rule id="92ce-8019-9392-7c53" name="Fire Control (IA)" hidden="false">
+        <rule id="92ce-8019-9392-7c53" name="Fire Control (IA)" publicationId="e060-faad-d3fd-2415" page="99" hidden="false">
           <description>The Land Raider may always fire one additional weapon system to those it would normally be able to fire. This shot may be against a different target to that engaged by the crew. Automatic targetting is less accurate and therefore conducted with BS2. If the crew are stunned or shaken, the Machine Spirit may still fire a weapon using this rule.</description>
         </rule>
-        <rule id="2e98-c14f-7f90-3d41" name="Frag Assault Launchers" hidden="false">
+        <rule id="2e98-c14f-7f90-3d41" name="Frag Assault Launchers" publicationId="e060-faad-d3fd-2415" page="99" hidden="false">
           <description>Any unit that assaults on the same turn it disembarks from the Crusader counts as having frag grenades</description>
         </rule>
       </rules>
@@ -5486,10 +5524,10 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="1928-652e-5201-a685" name="Deus Ex Machina (IA)" hidden="false">
+        <rule id="1928-652e-5201-a685" name="Deus Ex Machina (IA)" publicationId="e060-faad-d3fd-2415" page="105" hidden="false">
           <description>If the crew are stunned then the Machine Spirit will take over temporarily. The Land Raider may be moved directly forward up to its maximum move.</description>
         </rule>
-        <rule id="98e0-f3b1-2f51-3336" name="Fire Control (IA)" hidden="false">
+        <rule id="98e0-f3b1-2f51-3336" name="Fire Control (IA)" publicationId="e060-faad-d3fd-2415" page="105" hidden="false">
           <description>The Land Raider may always fire one additional weapon system to those it would normally be able to fire. This shot may be against a different target to that engaged by the crew. Automatic targetting is less accurate and therefore conducted with BS2. If the crew are stunned or shaken, the Machine Spirit may still fire a weapon using this rule.</description>
         </rule>
       </rules>
@@ -5526,13 +5564,13 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="d754-2d12-4043-24d3" name="Deus Ex Machina (IA)" hidden="false">
+        <rule id="d754-2d12-4043-24d3" name="Deus Ex Machina (IA)" publicationId="e060-faad-d3fd-2415" page="111" hidden="false">
           <description>If the crew are stunned then the Machine Spirit will take over temporarily. The Land Raider may be moved directly forward up to its maximum move.</description>
         </rule>
-        <rule id="7811-14ac-bf38-6369" name="Fire Control (IA)" hidden="false">
+        <rule id="7811-14ac-bf38-6369" name="Fire Control (IA)" publicationId="e060-faad-d3fd-2415" page="111" hidden="false">
           <description>The Land Raider may always fire one additional weapon system to those it would normally be able to fire. This shot may be against a different target to that engaged by the crew. Automatic targetting is less accurate and therefore conducted with BS2. If the crew are stunned or shaken, the Machine Spirit may still fire a weapon using this rule.</description>
         </rule>
-        <rule id="2fb3-a5ad-684f-cc39" name="Improved Communications" hidden="false">
+        <rule id="2fb3-a5ad-684f-cc39" name="Improved Communications" publicationId="e060-faad-d3fd-2415" page="111" hidden="false">
           <description>The Space Marine player may re-roll a reinforcement dice once per turn.</description>
         </rule>
       </rules>
@@ -5603,7 +5641,7 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="9246-0db6-7982-9681" name="Hard to Kill" hidden="false">
+        <rule id="9246-0db6-7982-9681" name="Hard to Kill" publicationId="e060-faad-d3fd-2415" page="136" hidden="false">
           <description>Venerable Dreadnoughts are extraordinarily tenacious. When taking a glancing or penetrating hit, you may force your opponent to re-roll the resulting damage.</description>
         </rule>
       </rules>
@@ -5755,7 +5793,7 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="4e1b-de77-50e0-db7e" name="Tear Attack" hidden="false">
+        <rule id="4e1b-de77-50e0-db7e" name="Tear Attack" publicationId="e060-faad-d3fd-2415" page="137" hidden="false">
           <description>The Furioso Dreadnought rolls 2D6 + Strength as Armour Penetration against vehicles</description>
         </rule>
       </rules>
@@ -5935,10 +5973,10 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="aee9-7ad8-ccce-c097" name="Reserves" hidden="false">
+        <rule id="aee9-7ad8-ccce-c097" name="Reserves" publicationId="e060-faad-d3fd-2415" page="148" hidden="false">
           <description>Units in drop pods are always in Reserve, even in missions that do not normally allow reserves to be used</description>
         </rule>
-        <rule id="bb02-b5bd-8249-4eb3" name="Drop Pod Deployment" hidden="false">
+        <rule id="bb02-b5bd-8249-4eb3" name="Drop Pod Deployment" publicationId="e060-faad-d3fd-2415" page="148" hidden="false">
           <description>See 1st Edition Imperial Armour v2</description>
         </rule>
       </rules>
@@ -5958,13 +5996,13 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="8532-409c-2240-2c5f" name="Reserves" hidden="false">
+        <rule id="8532-409c-2240-2c5f" name="Reserves" publicationId="e060-faad-d3fd-2415" page="148" hidden="false">
           <description>Units in drop pods are always in Reserve, even in missions that do not normally allow reserves to be used</description>
         </rule>
-        <rule id="b044-faa1-ea9d-ceb3" name="Drop Pod Deployment" hidden="false">
+        <rule id="b044-faa1-ea9d-ceb3" name="Drop Pod Deployment" publicationId="e060-faad-d3fd-2415" page="148" hidden="false">
           <description>See 1st Edition Imperial Armour v2</description>
         </rule>
-        <rule id="bb84-de5f-7c74-3eb0" name="Automated Weapons" hidden="false">
+        <rule id="bb84-de5f-7c74-3eb0" name="Automated Weapons" publicationId="e060-faad-d3fd-2415" page="148" hidden="false">
           <description>When the Deathwind drop pod lands it opens fire. After landing, each unit (enemy and friendly) within 12&quot; of the Deathwind and in line of sight is fired as a hail of missiles or bullets sweep the area. Roll to hit using the Deathwind&apos;s BS2 for either D3 frag missile attacks or a D3 assault cannon attacks (Heavy 3) against each target unit.
 After the first turn of firing the Deathwind cannot fire again.</description>
         </rule>
@@ -6131,13 +6169,13 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         </modifier>
       </modifiers>
       <rules>
-        <rule id="21e9-0efc-b045-a446" name="Battery" hidden="false">
+        <rule id="21e9-0efc-b045-a446" name="Battery" publicationId="e060-faad-d3fd-2415" page="173" hidden="false">
           <description>The platforms do not need to be deployed together, although each Hyperios platform must be less than 36&quot; from the command platform.</description>
         </rule>
-        <rule id="82d8-3330-5084-1855" name="Firing Mode" hidden="false">
+        <rule id="82d8-3330-5084-1855" name="Firing Mode" publicationId="e060-faad-d3fd-2415" page="173" hidden="false">
           <description>The battery is always set to Air Defense mode. When an incoming aircraft is detected the control console selects the nearest platforms and relays the targetting information. The Hyperios then activates, spins, tracks, and fires.</description>
         </rule>
-        <rule id="a737-6d17-43a4-9439" name="Victory Points" hidden="false">
+        <rule id="a737-6d17-43a4-9439" name="Victory Points" publicationId="e060-faad-d3fd-2415" page="173" hidden="false">
           <description>The Air Defense Battery cannot claim to occupy table quarters or objectives.</description>
         </rule>
       </rules>
@@ -6168,10 +6206,10 @@ After the first turn of firing the Deathwind cannot fire again.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81e3-30ac-e4fc-6ffc" type="min"/>
           </constraints>
           <rules>
-            <rule id="debe-94ce-59cc-73ee" name="Anti Air" hidden="false">
+            <rule id="debe-94ce-59cc-73ee" name="Anti Air" publicationId="e060-faad-d3fd-2415" page="173" hidden="false">
               <description>May fire at aircraft using normal BS</description>
             </rule>
-            <rule id="e455-32f8-4894-55bf" name="Targeting" hidden="false">
+            <rule id="e455-32f8-4894-55bf" name="Targeting" publicationId="e060-faad-d3fd-2415" page="173" hidden="false">
               <description>A Hyperious platform will fire a single missile in its own Shooting phase at any enemy aircraft whose flight path takes it within 36&quot; of a platform. If the aircraft&apos;s flight path takes it within 36&quot; of multiple platforms then each plaform will fire a single missile.</description>
             </rule>
           </rules>
@@ -6199,10 +6237,10 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f66c-1408-cec0-96d3" type="max"/>
       </constraints>
       <rules>
-        <rule id="0fc9-c331-1785-66b7" name="Evade Detection" hidden="false">
+        <rule id="0fc9-c331-1785-66b7" name="Evade Detection" publicationId="a32d-d82d-5f82-b13a" page="19" hidden="false">
           <description>As long as Naaman and his unit didn&apos;t fire in the previous turn, any unit wanting to shoot at him or his unit must check to see if they can spot him first using the rules for Night Fighting. If the Night Fighting rules are already in effect then the normal spotting distances is halved.</description>
         </rule>
-        <rule id="feab-81b7-440f-4960" name="Brush Aside Blow" hidden="false">
+        <rule id="feab-81b7-440f-4960" name="Brush Aside Blow" publicationId="84ae-73e9-f754-9349" page="19" hidden="false">
           <description>Naaman may ignore the first hit he suffers in any round of close combat.</description>
         </rule>
       </rules>
@@ -6237,31 +6275,55 @@ After the first turn of firing the Deathwind cannot fire again.</description>
           </constraints>
           <selectionEntries>
             <selectionEntry id="de30-a151-25ec-ed7a" name="Ossific Blades" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="04e1-422e-995d-6e6e" name="Ossific Blades" hidden="false" targetId="32a1-620b-ead1-f8a8" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="15c3-ec03-9025-925c" name="Berserkers" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="46b9-00c2-593c-6144" name="Berserkers" hidden="false" targetId="b224-ac5d-a07f-59f1" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4ddc-8876-f834-c73d" name="Apparitions" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="5c33-3b7f-2ee5-ef65" name="Apparitions" publicationId="aca0-89fc-f496-a111" page="7" hidden="false">
+                  <description>Apparitions always deploy using the Deep Strike scenario special rule, except they do so before the game begins. The normal deployment order for the mission being played is used, with the exception that apparitions may be set up anywhere on the battlefield, other than the opponent&apos;s deployment zone (althought they may scatter into it). Note that even the ghostly vehicles of the legion enter play in this manner.
+
+In any mission that uses the Reserves and/or Depp Strike scenario special rules, all Legion of the Damned models Deep Strike when they become available; they do not enter play from random table edges. Deep Striking vehicles count as having moved over 6&quot; for the purposes of firing weapons and being hit in an assault, and embarked passengers may not disembark.
+
+In addition, apparitions have a 6+ invulnerable save. Their vehicles receive a 6+ invulerable save against enemy shooting, taken before Armour Penetration rolls are made.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ede0-0b37-8811-4023" name="Aura of Doom" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="1d3f-a429-076d-9cfe" name="Aura of Doom" hidden="false" targetId="6e6e-472b-1599-7902" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="919e-2da6-2f65-7175" name="Immolation" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="c9f6-c6b2-fda6-a6b4" name="Immolation" hidden="false" targetId="f78e-b4d1-ac1e-e1e1" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="911a-793b-d817-c409" name="Augmented Skeleton" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="3567-136d-4eb7-d209" name="Augmented Skeleton" hidden="false" targetId="b21b-660b-e2e6-b6f7" type="rule"/>
+              </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
               </costs>
@@ -7036,7 +7098,7 @@ Twin-linked Assault Cannon:52</comment>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a409-e559-3793-a572" name="Over-charged Engine" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a409-e559-3793-a572" name="Over-charged Engine" publicationId="924f-1bb6-b9bd-0e77" page="17" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -7057,6 +7119,11 @@ Twin-linked Assault Cannon:52</comment>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f367-73f9-c12b-f078" type="max"/>
           </constraints>
+          <rules>
+            <rule id="e95a-4f90-0db6-533e" name="Over-charged Engine" publicationId="924f-1bb6-b9bd-0e77" page="17" hidden="false">
+              <description>At the end of its move, a vehicle with over-charged engine can try to go an extra 6&quot;. It must first take a Difficult Terrain test and if successful can be moved forward up to 6&quot;. Blood Angels are adept at these fast assaults and can still disembark from a Rhino or Razorback that has travelled more than 12&quot;. A vehicle that uses its overcharged engines may not shoot in the same turn.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
@@ -7097,7 +7164,7 @@ Twin-linked Assault Cannon:52</comment>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1811-da48-403d-99cc" type="max"/>
           </constraints>
           <rules>
-            <rule id="083b-92fe-d7e3-a457" name="Reinforced Ceramite" hidden="false">
+            <rule id="083b-92fe-d7e3-a457" name="Reinforced Ceramite" publicationId="2b63-6841-db19-e6fa" page="25" hidden="false">
               <description>Melta weapons, including melta bombs, never roll an extra dice for armor penetration due to being at half range.</description>
             </rule>
           </rules>
@@ -7674,7 +7741,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0ec-2d97-d6d8-a1b9" type="min"/>
           </constraints>
           <rules>
-            <rule id="94cf-6f8c-8aac-ead8" name="Space Marine Bike" hidden="false">
+            <rule id="94cf-6f8c-8aac-ead8" name="Space Marine Bike" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
               <description>Gain +1 Toughness. All members of a Command Squad must be equipped with a Space Marine Bike for any to be equipped with a Space Marine Bike.</description>
             </rule>
           </rules>
@@ -7796,9 +7863,9 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c0f-9d08-5493-5f8c" type="max"/>
           </constraints>
-          <rules>
-            <rule id="766c-ba97-486b-8290" name="Death Mask" hidden="false"/>
-          </rules>
+          <infoLinks>
+            <infoLink id="36b4-bb7f-9f92-bf59" name="Death Mask" hidden="false" targetId="c585-ce6a-bf8d-27a5" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
           </costs>
@@ -7831,9 +7898,9 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c535-5e65-db79-47c8" type="max"/>
           </constraints>
-          <rules>
-            <rule id="b465-8525-2fae-af8a" name="Exsanguinator" hidden="false"/>
-          </rules>
+          <infoLinks>
+            <infoLink id="983c-bcb5-9ec2-359e" name="Exsanguinator" hidden="false" targetId="3043-42d1-b30e-28e4" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
           </costs>
@@ -7866,9 +7933,9 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c17-02e9-d9b1-afbf" type="max"/>
           </constraints>
-          <rules>
-            <rule id="b2bd-a389-1408-6579" name="Holy Shroud" hidden="false"/>
-          </rules>
+          <infoLinks>
+            <infoLink id="2c9b-cc12-1287-9f44" name="Holy Shroud" hidden="false" targetId="1d4a-2b4c-e8a4-8d7d" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
           </costs>
@@ -7930,7 +7997,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7ab-f832-384f-4b51" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="7117-13ed-d0ea-cfc6" name="Sword of Secrets" hidden="false" targetId="73fd-818d-e387-e703" type="rule"/>
+            <infoLink id="7117-13ed-d0ea-cfc6" name="Sword of Secrets" hidden="false" targetId="7cc0-bcea-66c2-3c83" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
@@ -8124,9 +8191,9 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2976-5df3-420e-685f" type="max"/>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="21b0-cf01-29c6-9d09" type="max"/>
           </constraints>
-          <rules>
-            <rule id="b619-f8ed-5e43-ad87" name="Grail" hidden="false"/>
-          </rules>
+          <infoLinks>
+            <infoLink id="6a97-5400-03ce-9871" name="Grail" hidden="false" targetId="d463-2905-bcde-0a33" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
@@ -8143,6 +8210,9 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ed9-8ba1-d989-0f60" type="max"/>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04a6-b41d-1b8c-a6cd" type="max"/>
           </constraints>
+          <infoLinks>
+            <infoLink id="2639-0793-c234-b56e" name="Salamanders Mantle" hidden="false" targetId="fced-61c2-a13a-ca80" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35.0"/>
           </costs>
@@ -8195,7 +8265,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c4a4-e7e5-6df9-50c5" type="max"/>
           </constraints>
           <rules>
-            <rule id="345d-536b-15c7-a831" name="Horsetail Talismans" hidden="false">
+            <rule id="345d-536b-15c7-a831" name="Horsetail Talismans" publicationId="2c51-936e-c8c4-bd9e" page="46" hidden="false">
               <description>This Holy Relic can be revealed in each and every White Scars&apos; Movement Phase during which the bearer has moved and is no longer in a vehicle. Any unit of White Scares infantry or bikes that have at least one model within 6&quot; of the bearer when it is revealed may move an extra D6&quot; rather than firing in the following Shooting phase.</description>
             </rule>
           </rules>
@@ -8403,7 +8473,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72e5-7d74-94b8-18a8" type="max"/>
           </constraints>
           <rules>
-            <rule id="b9da-80ee-413b-45bd" name="Power Lance" hidden="false">
+            <rule id="b9da-80ee-413b-45bd" name="Power Lance" publicationId="2c51-936e-c8c4-bd9e" page="46" hidden="false">
               <description>The power lance grants +1 Initiative to any bike-mounted model that is charging or counter-attacking. Once an opponent gets inside their guard though, the improved weapon length becomes a disadvantage and they get a -1 Initative when they aren&apos;t charging or counter-attacking.</description>
             </rule>
           </rules>
@@ -8542,100 +8612,150 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="2927-357a-fc6c-42c3" name="Crozius Arcanum" hidden="false"/>
-    <rule id="479f-929d-b531-a315" name="Rosarius" hidden="false">
+    <rule id="479f-929d-b531-a315" name="Rosarius" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>Gain a 4+ invulnerable save.</description>
     </rule>
-    <rule id="bad9-31ae-7a9c-f38c" name="Terminator Honors" hidden="false">
+    <rule id="bad9-31ae-7a9c-f38c" name="Terminator Honors" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>Gain +1 Attack (Already included for Veteran Sergeants and Space Marines wearing Terminator Armour)</description>
     </rule>
-    <rule id="93ed-72da-0689-8a2d" name="Bionics" hidden="false">
+    <rule id="93ed-72da-0689-8a2d" name="Bionics" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>If a model with bionics is killed, instead of removing it, place it on its side. Roll a D6 at the start of the next turn; on a roll of a 6 the model stands back up with 1 wound.</description>
     </rule>
-    <rule id="7a02-cc04-9d97-3493" name="Artificer Armor" hidden="false">
+    <rule id="7a02-cc04-9d97-3493" name="Artificer Armor" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false">
       <description>Upgrades Power Armour to a 2+</description>
     </rule>
-    <rule id="8fca-253c-bbf8-9510" name="Purity Seals" hidden="false">
+    <rule id="8fca-253c-bbf8-9510" name="Purity Seals" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false">
       <description>When a unit including a model wearing Purity Seals falls back, roll one extra D6 for the fall back distance, and then pick the D6 results you want. </description>
     </rule>
-    <rule id="c214-19e6-edea-0f81" name="Iron Halo" hidden="false">
+    <rule id="c214-19e6-edea-0f81" name="Iron Halo" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false">
       <description>The iron halo grants a 4+ invilnerable save.</description>
     </rule>
-    <rule id="00e2-88f3-119d-9df3" name="Auspex" hidden="false">
+    <rule id="00e2-88f3-119d-9df3" name="Auspex" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>If enemy infiltrators set up within 4D6&quot; of a model with a auspex, then that model and the unit they are attached to is allowed to take a &quot;free&quot; shot at them. These shots are taken before the battle begins and may cause the infiltrators to fall back.</description>
     </rule>
-    <rule id="d637-ddb3-5ed3-bee8" name="Psychic Hood" hidden="false">
+    <rule id="d637-ddb3-5ed3-bee8" name="Psychic Hood" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false">
       <description>Declare you&apos;ll use the Psychic Hood after an opponent has successfully made a Psychic test, but before they have resolved the power. Each player rolls a D6 and adds their respective model&apos;s Leadership value. If the Space Marine beats the opposing model&apos;s score then the psychic power is nullified and may not be used that turn. Otherwise the power is unaffected. The Hood may be used each time an enemy model uses a power.</description>
     </rule>
-    <rule id="7097-810b-2462-51cb" name="And They Shall Know No Fear" hidden="false">
+    <rule id="7097-810b-2462-51cb" name="And They Shall Know No Fear" publicationId="a32d-d82d-5f82-b13a" page="5" hidden="false">
       <description>Space Marines automatically regroup as they fall back, even if the squad is reduced to less than 50% by casualties, but not if the squad is out of coherency or there are enemy models within 6&quot;. If the enemy advance into them the Space Marines are not destroyed and the new assault is treated in the same way as a sweeping advance (enemy gaining +1 A next turn). </description>
     </rule>
-    <rule id="e75a-c8bc-ad0d-01af" name="Drop Pods" hidden="false">
+    <rule id="e75a-c8bc-ad0d-01af" name="Drop Pods" publicationId="a32d-d82d-5f82-b13a" page="5" hidden="false">
       <description>At the start of a battle where the mission allows Deep Strike, the Space Marines may choose to deploy using Drop Pods instead of deploying like normal. Models doing this will deploy using the Deep Strike rules. Only the following can deploy from Drop Pods. All other units must sit out the mission: Marines in Power Armour or Terminator Armour; Scouts; Dreadnoughts and Land Speeders.</description>
     </rule>
-    <rule id="5df3-0068-e083-9213" name="Chapter Banner" hidden="false">
+    <rule id="5df3-0068-e083-9213" name="Chapter Banner" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false">
       <description>Add +1 to the Space Marine combat resolution socre of any assault that takes place within 6&quot; of the Chapter Banner. Additionally, once per game the banner may be activated to grant all Space Marines within 2D6&quot; to gain +1 Attack for the rest of the turn. Note it may be activated during the enemy&apos;s turn.
 However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.</description>
     </rule>
-    <rule id="a3b0-6af2-1358-7196" name="Holy Relic" hidden="false">
+    <rule id="a3b0-6af2-1358-7196" name="Holy Relic" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false">
       <description>Once per game the relic may be activated to grant all Space Marines within 2D6&quot; to gain +1 Attack for the rest of the turn. Note it may be activated during the enemy&apos;s turn.</description>
     </rule>
-    <rule id="cfad-88c2-ae81-cdc1" name="Narthecium" hidden="false">
+    <rule id="cfad-88c2-ae81-cdc1" name="Narthecium" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false">
       <description>The Narthecium allows the medic to ignore the first failed saving throw each turn in the unit containing the Apothecary. This may not be used on any model who suffered &apos;Instant Death&apos; or hit by a weapon that allows no saves. It cannot be used if the Apothecary is in base to base contact with an enemy model.</description>
     </rule>
-    <rule id="ba6f-5067-ce85-aa4b" name="Reductor" hidden="false">
+    <rule id="ba6f-5067-ce85-aa4b" name="Reductor" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>At the end of a scenario that uses Victory Points, gain 1 VP per slain Space Marine as long as the Apothecary is alive at the end of the battle.</description>
     </rule>
-    <rule id="66ac-c870-a383-6b83" name="Sacred Standard" hidden="false">
+    <rule id="66ac-c870-a383-6b83" name="Sacred Standard" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>Add +1 to the Space Marine combat resolution socre of any assault that takes place within 6&quot; of the Sacred Banner.
 However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.</description>
     </rule>
-    <rule id="9ba6-c94b-3548-d9e8" name="Signum" hidden="false">
+    <rule id="9ba6-c94b-3548-d9e8" name="Signum" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>Each turn, you may re-roll one missed to hit shooting dice for the Command squad the Techmarine belongs to.</description>
     </rule>
-    <rule id="250f-507f-ea1b-b164" name="Teleport Homer" hidden="false">
+    <rule id="250f-507f-ea1b-b164" name="Teleport Homer" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>If the template used by teleporting Terminators making a Deep Strike is centered  on the model with the homer, then it does not scatter. </description>
     </rule>
-    <rule id="fe7a-62df-712a-5bc5" name="Terminator Armour" hidden="false">
-      <description>Gain a 2+ Armour save and 5+ invulnerable save</description>
+    <rule id="fe7a-62df-712a-5bc5" name="Terminator Armour" publicationId="26e5-ce39-9a6e-4817" page="55" hidden="false">
+      <description>Gain a 2+ Armour save and 5+ invulnerable save. Additionl the model can not Deep Strike if permitted by the mission.</description>
     </rule>
-    <rule id="9d15-603e-4af4-bf3f" name="Dozer Blade" hidden="false">
+    <rule id="9d15-603e-4af4-bf3f" name="Dozer Blade" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>Re-roll failed Difficult Terrain tests as long as the model did not move more than 6&quot; that turn.</description>
     </rule>
-    <rule id="8921-da68-8172-a6a5" name="Extra Armour" hidden="false">
+    <rule id="8921-da68-8172-a6a5" name="Extra Armour" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>Treat &apos;Crew Stunned&apos; results as &apos;Crew Shakeen&apos; instead.</description>
     </rule>
-    <rule id="cdf1-af4d-b6a8-3a2a" name="Searchlight" hidden="false">
+    <rule id="cdf1-af4d-b6a8-3a2a" name="Searchlight" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>During battles using Night Fight rules, one enemy unit spotted by the vehicle may be fired at by all other friendly units within range and that have line of sight, but by doing so the vehicle may be fired at by all enemy units in the next turn.</description>
     </rule>
-    <rule id="42cc-b2d9-b9f3-90ea" name="Smoke Launchers" hidden="false">
+    <rule id="42cc-b2d9-b9f3-90ea" name="Smoke Launchers" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false">
       <description>Once per game, after completing its move, a vehicle with Smoke Launchers may trigger them. The vehicle may not fire this turn, but any penetrating hits scored by the enemy in the next shooting phase are instead turned into glancing hits.</description>
     </rule>
-    <rule id="c585-ce6a-bf8d-27a5" name="Death Mask" hidden="false">
+    <rule id="c585-ce6a-bf8d-27a5" name="Death Mask" publicationId="924f-1bb6-b9bd-0e77" page="17" hidden="false">
       <description>Any enemy unit that loses as close combat against a model wearing a Death Mask suffers -1 modifier to its Leadership test.</description>
     </rule>
-    <rule id="3043-42d1-b30e-28e4" name="Exsanguinator" hidden="false"/>
-    <rule id="d463-2905-bcde-0a33" name="Grail" hidden="false">
+    <rule id="3043-42d1-b30e-28e4" name="Exsanguinator" publicationId="924f-1bb6-b9bd-0e77" page="17" hidden="false">
+      <description>A model with an Exsanguinator allows the squad he is in to ignore the first failed armour save each turn. In addition, the Sanguinary Priest can try to save more of his brethren with his own life fluid and attempt to negate second and subsequent failed armour saves. To do so, roll a D6. If the score is equal to or less than the Sanguinary Priest&apos;s Toughness, the failed armour save is ignored. If it is higher than the Priest&apos;s Toughness, the model which failed its armour save and the Priest both suffer a wound with no armour save allowed. An Exsanguinator cannot negate hits from a weapon that inflicts instant death and it cannot be used if the Priest is in base contact with an enemy model.</description>
+    </rule>
+    <rule id="d463-2905-bcde-0a33" name="Grail" publicationId="924f-1bb6-b9bd-0e77" page="17" hidden="false">
       <description>Any Blood Angels unit with a model within 6&quot; of a character with a Grail may roll an extra dice when making an advance after winning a close combat and discard the lowest. </description>
     </rule>
-    <rule id="1d4a-2b4c-e8a4-8d7d" name="Holy Shroud" hidden="false"/>
-    <rule id="6deb-edba-53ca-53b5" name="Lion Helm" hidden="false"/>
-    <rule id="73fd-818d-e387-e703" name="Sword of Secrets" hidden="false"/>
-    <rule id="38a3-2029-a26a-69de" name="Book of Salvation" hidden="false"/>
-    <rule id="7177-bf98-d1f1-c06b" name="Blades of Reason" hidden="false"/>
-    <rule id="eb88-3b95-a020-38c0" name="Cup of Retribution" hidden="false"/>
-    <rule id="2925-28e3-33e7-101b" name="Standard of Devastation" hidden="false"/>
-    <rule id="061d-26d8-4ad2-d2dc" name="Standard of Fortitude" hidden="false"/>
-    <rule id="f403-bb3d-e854-1b24" name="Standard of Retribution" hidden="false"/>
-    <rule id="1eb7-6961-7e16-d0b6" name="Stubborn" hidden="false">
+    <rule id="1d4a-2b4c-e8a4-8d7d" name="Holy Shroud" publicationId="924f-1bb6-b9bd-0e77" page="17" hidden="false">
+      <description>All Blood Angels unit with a model within 6&quot; of the Holy Shroud will ignore all negative modifiers to their Leadership when taking Moral checks. In effect, they always make these test using the Leadership characteristic on their profile.</description>
+    </rule>
+    <rule id="6deb-edba-53ca-53b5" name="Lion Helm" publicationId="84ae-73e9-f754-9349" page="17" hidden="false">
+      <description>Whenever the character moves, simply place the Helmet Bearer within 2&quot; of his final location, even if the character was teleported or moved by some other extraordinary means. The Watcher has a unique power psychic talent protecting it from all forms of attack so it can never be harmed in any way under any circumstances. However, it cannot attack in any way either. If the character is killed or removed from the battle, the Helment Bearer is also removed, but will reappear if the character later returns.
+
+Any model (friend or foe) within 3&quot; of the Helmet Bearer gains a 4+ invulnerable save against shooting attacks. </description>
+    </rule>
+    <rule id="38a3-2029-a26a-69de" name="Book of Salvation" publicationId="84ae-73e9-f754-9349" page="17" hidden="false">
+      <description>Once per game the relic may be activated to grant all Space Marines within 2D6&quot; to gain +1 Attack for the rest of the turn. Note it may be activated during the enemy&apos;s turn.
+
+In addition, if the hold is slain, do not remove his body. Simply place the model on its side and leave it on the tabletop. The first Dark Angel to reach the body will retrieve the book but may do nothing else that turn. If there are any Dark Angels within 6&quot; of the Book, one of them must move to pick it up. Until it has been picked up, all Dark Angels become stubborn, if not already, all may ignore the &apos;Intractable&apos; special rule, and all add +1 to the WS. However, if the Dark Angels have failed to retrieve the book by the end of the battle they lose the game.</description>
+    </rule>
+    <rule id="7177-bf98-d1f1-c06b" name="Blades of Reason" publicationId="84ae-73e9-f754-9349" page="17" hidden="false">
+      <description>As long as the holder of the Blades of Reason is alive at the end of the battle, the Dark Angels player rolls a D6 for each enemy model that was slain. On a roll of a 6, they do not die and are instead captured by the Dark Angels. Each captured prisoner adds +D6 victory points to the Dark Angels&apos; total in scenarioes where victory points are being used. The Blades of Reason have no effect against Necrons or Tyranids.</description>
+    </rule>
+    <rule id="eb88-3b95-a020-38c0" name="Cup of Retribution" publicationId="84ae-73e9-f754-9349" page="17" hidden="false">
+      <description>Once per game the relic may be activated to grant all Space Marines within 2D6&quot; to gain +1 Attack for the rest of the turn. Note it may be activated during the enemy&apos;s turn.</description>
+    </rule>
+    <rule id="2925-28e3-33e7-101b" name="Standard of Devastation" publicationId="84ae-73e9-f754-9349" page="17" hidden="false">
+      <description>Add +1 to the Space Marine combat resolution socre of any assault that takes place within 6&quot; of the Sacred Banner.
+
+However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.
+
+In addition, once per battle the bearer can call on the power of the Standard. This is done in the opponent&apos;s assault phase, after they have declared charges but before they have moved. It allows one Dark Angels unit with a model within 6&quot; of the bearer to shoot, as if it were the unit&apos;s shooting phase. The unit counts as moving for the purposes of using weapons, even if they were stationary in their last turn.</description>
+    </rule>
+    <rule id="061d-26d8-4ad2-d2dc" name="Standard of Fortitude" publicationId="84ae-73e9-f754-9349" page="17" hidden="false">
+      <description>Add +1 to the Space Marine combat resolution socre of any assault that takes place within 6&quot; of the Sacred Banner.
+
+However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.
+
+In addition, once per battle the bearer can call on the power of the Standard. This is done in your own movement phase. It allows one Dark Angels unit with a model within 6&quot; of the standard bearer to move in the movement phase, but still use any rapid fire weapons in the shooting phase, just as if the unit had been stationary.</description>
+    </rule>
+    <rule id="f403-bb3d-e854-1b24" name="Standard of Retribution" publicationId="84ae-73e9-f754-9349" page="17" hidden="false">
+      <description>Add +1 to the Space Marine combat resolution socre of any assault that takes place within 6&quot; of the Sacred Banner.
+
+However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.
+
+In addition, once per battle the bearer can all on the power of the Standard. This is done in an assault phase. It allows one Dark Angels unit with a model within 6&quot; of the standard to re-roll any failed To Hit rolls.</description>
+    </rule>
+    <rule id="1eb7-6961-7e16-d0b6" name="Stubborn" publicationId="84ae-73e9-f754-9349" page="5" hidden="false">
       <description>The unit will automatically pass any Morale checks they have to take, even if faced by a situation or opponent that would normally cause them to automatically fail. Note that they still must test for pinning as normal.</description>
     </rule>
-    <rule id="fced-61c2-a13a-ca80" name="Salamanders Mantle" hidden="false">
+    <rule id="fced-61c2-a13a-ca80" name="Salamanders Mantle" publicationId="2b63-6841-db19-e6fa" page="25" hidden="false">
       <description>The character is immune to suffering instant death caused by being hit by an attack which has a Strength value double his Toughness. The character loses a single wound instead. Note that instant death can be suffered in other ways.</description>
+    </rule>
+    <rule id="7b49-d957-9dc7-9f87" name="Apparitions" publicationId="aca0-89fc-f496-a111" page="7" hidden="false">
+      <description>6+ Invulnerable Save. Vehicles negate any glancing or penetrating hits on a roll of 6+.</description>
+    </rule>
+    <rule id="6e6e-472b-1599-7902" name="Aura of Doom" publicationId="aca0-89fc-f496-a111" page="8" hidden="false">
+      <description>Any enemy wishing to charge a model with an Aura of Doom must pass a Leadership test in order to do so. If the test is failed the unit may choose an alternative target for the charge. Units which automatically pass Morale checks do not need to test.</description>
+    </rule>
+    <rule id="f78e-b4d1-ac1e-e1e1" name="Immolation" publicationId="aca0-89fc-f496-a111" page="8" hidden="false">
+      <description>The flames surrounding these marines render them difficult to target. As a result they always receive a 5+ cover save from enemy shooting and always count as occupying over if they are charged by an enemy unit. The unit also cannot ever use any transport vehicles.</description>
+    </rule>
+    <rule id="b21b-660b-e2e6-b6f7" name="Augmented Skeleton" publicationId="aca0-89fc-f496-a111" page="8" hidden="false">
+      <description>Every model in the chapter has +1 Toughness added to its profile. For determining &apos;Instant Death&apos; results use the models original toughness.</description>
+    </rule>
+    <rule id="32a1-620b-ead1-f8a8" name="Ossific Blades" publicationId="aca0-89fc-f496-a111" page="6" hidden="false">
+      <description>Any close combat attack that rolls 6 to hit will inflict an automatic wound with no Armour save possible.</description>
+    </rule>
+    <rule id="b224-ac5d-a07f-59f1" name="Berserkers" publicationId="aca0-89fc-f496-a111" page="6" hidden="false">
+      <description>All models gain +1 Attack and will pass all Morale and Pinning tests. They must assault the nearest enemy in range at the start of the Assault phase (including vehicles or creatures they cannot hurt). If victorious in an assault they must Sweeping Advance unless any models are equipped with Terminator armour or they won due to &apos;moral high ground.&apos;</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="f33a-4335-a0ee-05bb" name="Leader" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="f33a-4335-a0ee-05bb" name="Leader" publicationId="a32d-d82d-5f82-b13a" page="7" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8648,7 +8768,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="d9d8-4682-c4d4-27b3" name="Commander" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="d9d8-4682-c4d4-27b3" name="Commander" publicationId="a32d-d82d-5f82-b13a" page="7" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
@@ -8661,7 +8781,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="d908-6783-2545-3329" name="Force Commander" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="d908-6783-2545-3329" name="Force Commander" publicationId="a32d-d82d-5f82-b13a" page="7" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
@@ -8674,7 +8794,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="88bf-eda2-ae52-7988" name="Librarian" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="88bf-eda2-ae52-7988" name="Librarian" publicationId="a32d-d82d-5f82-b13a" page="7" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
@@ -8687,7 +8807,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="0c8b-2645-5db9-f8c8" name="Chaplain" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="0c8b-2645-5db9-f8c8" name="Chaplain" publicationId="a32d-d82d-5f82-b13a" page="7" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
@@ -8700,7 +8820,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="2729-9458-bd05-2a9c" name="Veteran Space Marine" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="2729-9458-bd05-2a9c" name="Veteran Space Marine" publicationId="a32d-d82d-5f82-b13a" page="9" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8713,7 +8833,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="87bf-a0f5-0c67-2bae" name="Veteran Sergeant" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="87bf-a0f5-0c67-2bae" name="Veteran Sergeant" publicationId="a32d-d82d-5f82-b13a" page="10" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8726,7 +8846,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="3371-0451-e7e5-82b0" name="Terminator" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="3371-0451-e7e5-82b0" name="Terminator" publicationId="a32d-d82d-5f82-b13a" page="8" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8739,7 +8859,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
       </characteristics>
     </profile>
-    <profile id="528d-0883-0dd5-a47d" name="Dreadnought" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+    <profile id="528d-0883-0dd5-a47d" name="Dreadnought" publicationId="a32d-d82d-5f82-b13a" page="9" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
       <characteristics>
         <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">4</characteristic>
         <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
@@ -8751,7 +8871,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="A" typeId="bb33-7ddf-2296-174e">2</characteristic>
       </characteristics>
     </profile>
-    <profile id="9514-67fd-b082-445f" name="Space Marine" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="9514-67fd-b082-445f" name="Space Marine" publicationId="a32d-d82d-5f82-b13a" page="10" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8764,7 +8884,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="a6b9-9e6b-e5f6-16e4" name="Scout" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="a6b9-9e6b-e5f6-16e4" name="Scout" publicationId="a32d-d82d-5f82-b13a" page="10" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8777,7 +8897,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="1b97-64e3-1217-1e14" name="Veteran Scout Sergeant" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="1b97-64e3-1217-1e14" name="Veteran Scout Sergeant" publicationId="a32d-d82d-5f82-b13a" page="10" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8790,7 +8910,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="870a-b8e6-ca97-deec" name="Rhino" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+    <profile id="870a-b8e6-ca97-deec" name="Rhino" publicationId="a32d-d82d-5f82-b13a" page="11" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
@@ -8798,7 +8918,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
-    <profile id="cc35-bece-fe42-a1be" name="Razorback" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+    <profile id="cc35-bece-fe42-a1be" name="Razorback" publicationId="a32d-d82d-5f82-b13a" page="11" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
@@ -8806,7 +8926,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
-    <profile id="b03d-e20c-1e5e-86b8" name="Space Marine Biker" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="b03d-e20c-1e5e-86b8" name="Space Marine Biker" publicationId="a32d-d82d-5f82-b13a" page="12" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8819,7 +8939,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="71ac-d684-f5f3-d76c" name="Veteran Biker Sergeant" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="71ac-d684-f5f3-d76c" name="Veteran Biker Sergeant" publicationId="a32d-d82d-5f82-b13a" page="12" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8832,7 +8952,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="94d0-1b6d-2894-6089" name="Attack Bike" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="94d0-1b6d-2894-6089" name="Attack Bike" publicationId="a32d-d82d-5f82-b13a" page="12" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8845,7 +8965,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
       </characteristics>
     </profile>
-    <profile id="ff0f-3131-5264-028c" name="Scout Biker" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="ff0f-3131-5264-028c" name="Scout Biker" publicationId="a32d-d82d-5f82-b13a" page="13" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8858,7 +8978,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="8073-f675-28a3-1371" name="Veteran Scout Biker Sergeant" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="8073-f675-28a3-1371" name="Veteran Scout Biker Sergeant" publicationId="a32d-d82d-5f82-b13a" page="13" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8871,7 +8991,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
-    <profile id="ff8b-807e-4c96-b60d" name="Land Speeder" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+    <profile id="ff8b-807e-4c96-b60d" name="Land Speeder" publicationId="a32d-d82d-5f82-b13a" page="13" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
@@ -8879,7 +8999,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
-    <profile id="f91e-f1b6-eb8c-ae23" name="Predator" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+    <profile id="f91e-f1b6-eb8c-ae23" name="Predator" publicationId="a32d-d82d-5f82-b13a" page="14" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">13</characteristic>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
@@ -8887,7 +9007,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
-    <profile id="2841-462d-da35-eceb" name="Vindicator" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+    <profile id="2841-462d-da35-eceb" name="Vindicator" publicationId="a32d-d82d-5f82-b13a" page="14" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">13</characteristic>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
@@ -8895,7 +9015,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
-    <profile id="ad60-6998-8da3-8149" name="Land Raider" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+    <profile id="ad60-6998-8da3-8149" name="Land Raider" publicationId="a32d-d82d-5f82-b13a" page="15" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
         <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">14</characteristic>
         <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">14</characteristic>
@@ -8904,7 +9024,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">10 Marines. 5 Terminators.</characteristic>
       </characteristics>
     </profile>
-    <profile id="c03c-83ab-08de-2c28" name="Whirlwind" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+    <profile id="c03c-83ab-08de-2c28" name="Whirlwind" publicationId="a32d-d82d-5f82-b13a" page="15" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
@@ -8912,7 +9032,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
-    <profile id="0875-ef7b-31c2-36cf" name="Marneus Calgar" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="0875-ef7b-31c2-36cf" name="Marneus Calgar" publicationId="a32d-d82d-5f82-b13a" page="36" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
@@ -8925,7 +9045,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
       </characteristics>
     </profile>
-    <profile id="fc47-9a71-ac61-87d2" name="Chaplain Xavier" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="fc47-9a71-ac61-87d2" name="Chaplain Xavier" publicationId="a32d-d82d-5f82-b13a" page="40" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
@@ -8938,7 +9058,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="4f14-6faa-6181-373f" name="Captain Cortez" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="4f14-6faa-6181-373f" name="Captain Cortez" publicationId="a32d-d82d-5f82-b13a" page="38" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
@@ -8951,7 +9071,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="74b7-a8a6-30bc-60aa" name="Emperor&apos;s Champion" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="74b7-a8a6-30bc-60aa" name="Emperor&apos;s Champion" publicationId="a32d-d82d-5f82-b13a" page="39" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8964,7 +9084,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
       </characteristics>
     </profile>
-    <profile id="635b-a3e3-7aa4-f050" name="Chief Librarian Tigurius" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="635b-a3e3-7aa4-f050" name="Chief Librarian Tigurius" publicationId="a32d-d82d-5f82-b13a" page="38" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
@@ -8977,7 +9097,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="38ed-846d-2ffd-8677" name="Sergeant Lysander" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="38ed-846d-2ffd-8677" name="Sergeant Lysander" publicationId="a32d-d82d-5f82-b13a" page="40" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -8990,7 +9110,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
-    <profile id="c4fd-c9a0-298c-1f66" name="Smite" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="c4fd-c9a0-298c-1f66" name="Smite" publicationId="a32d-d82d-5f82-b13a" page="7" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -8999,7 +9119,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Autohits</characteristic>
       </characteristics>
     </profile>
-    <profile id="51e5-f2dc-8261-e34f" name="Venerable Dreadnought" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+    <profile id="51e5-f2dc-8261-e34f" name="Venerable Dreadnought" publicationId="e060-faad-d3fd-2415" page="136" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
       <characteristics>
         <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">5</characteristic>
         <characteristic name="BS" typeId="5734-f043-7bcc-cff2">5</characteristic>
@@ -9011,7 +9131,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="A" typeId="bb33-7ddf-2296-174e">3</characteristic>
       </characteristics>
     </profile>
-    <profile id="e25a-8a70-e82b-2775" name="Drop Pod" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+    <profile id="e25a-8a70-e82b-2775" name="Drop Pod" publicationId="e060-faad-d3fd-2415" page="167" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
       <characteristics>
         <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12/10</characteristic>
         <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">12/10</characteristic>
@@ -9020,7 +9140,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">5 Marines. 1 Dreadnought</characteristic>
       </characteristics>
     </profile>
-    <profile id="60fb-82ac-f5a8-7ab4" name="Thunderhawk Gunship" hidden="false" typeId="36b6-ef06-48e4-cd45" typeName="Super Heavy Vehicle">
+    <profile id="60fb-82ac-f5a8-7ab4" name="Thunderhawk Gunship" publicationId="e060-faad-d3fd-2415" page="148" hidden="false" typeId="36b6-ef06-48e4-cd45" typeName="Super Heavy Vehicle">
       <characteristics>
         <characteristic name="Front Armor" typeId="85f4-de3e-abeb-67f7">12</characteristic>
         <characteristic name="Side Armor" typeId="8ec2-d2f2-3bed-35ef">12</characteristic>
@@ -9030,7 +9150,7 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Capacity" typeId="e1d2-e9ec-26d6-1f11"/>
       </characteristics>
     </profile>
-    <profile id="3646-d081-8001-8bce" name="Naaman" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+    <profile id="3646-d081-8001-8bce" name="Naaman" publicationId="84ae-73e9-f754-9349" page="19" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
         <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
@@ -9096,6 +9216,24 @@ However, if the model bearing the standard is slain in close combat, then the en
         <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
         <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7ce8-fd51-4727-b5ea" name="Crozius Arcanum" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="7cc0-bcea-66c2-3c83" name="Sword of Secrets" publicationId="84ae-73e9-f754-9349" page="17" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
   </sharedProfiles>

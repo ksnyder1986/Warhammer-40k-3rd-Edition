@@ -33,6 +33,8 @@
     <publication id="8ac4-ee68-a57a-42b4" name="Codex Catachan 3rd Edition" shortName="Catachan"/>
     <publication id="514c-2f6d-fd13-c8e1" name="Codex Chaos Space Marines 3rd Edition" shortName="CSM 3Ed"/>
     <publication id="64f6-e768-7e7d-5053" name="Codex Tyranids 3rd Edition" shortName="Tyranids"/>
+    <publication id="2c51-936e-c8c4-bd9e" name="Index Astartes I"/>
+    <publication id="6d05-2b77-dda0-48d1" name="Index Astartes II"/>
   </publications>
   <costTypes>
     <costType id="4ed5-2f92-9abc-2870" name="pts" defaultCostLimit="-1.0" hidden="false"/>
@@ -583,7 +585,7 @@
     <entryLink id="abd1-8783-0ec3-a496" name="Additional Options" hidden="false" collective="false" import="true" targetId="955f-86dd-474a-8af4" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
-    <selectionEntry id="1004-74e9-5ee6-c51f" name="Deathwatch Kill Team (Chapter Approved)" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="1004-74e9-5ee6-c51f" name="Deathwatch Kill Team (Chapter Approved)" publicationId="133d-f866-dd04-b26c" page="74" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1397,48 +1399,125 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f688-aa6d-9ffb-1a54" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="3261-6601-5bfe-f5d0" name="Imperial Armour" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56b1-cd1f-07b4-e161" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="e6d5-bc03-5827-d5da" name="Chapter Approved" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b60-efbb-8902-8995" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
-    <rule id="4a60-7f7e-c37f-a4d6" name="Independent Character" hidden="false"/>
-    <rule id="97b3-810d-a09e-872b" name="Invulnerable Saving Throw" hidden="false"/>
-    <rule id="2563-092a-a5bc-992f" name="Jump Packs" hidden="false"/>
-    <rule id="6bd6-e738-e144-6db9" name="Bikes" hidden="false">
-      <description>h</description>
+    <rule id="4a60-7f7e-c37f-a4d6" name="Independent Character" publicationId="8acd-6511-d7f4-63c7" page="75" hidden="false">
+      <description>Independent characters are allowed to move freely around the battlefield and can temporarily join other units. While part of a unit they must obey the usual coherency rules until they leave the unit. To join a unit the independent character must move within 2&quot; of the unit during their movement phase.
+
+Independent characters can only be chosen as targets in shooting if they are more than 6&quot; away from other viable targets or if they are the closest target and within 12&quot; of the shooter. Otherwise they may not be targeted. </description>
     </rule>
-    <rule id="0e80-1d1e-f91a-11fe" name="Cavalry" hidden="false"/>
-    <rule id="4795-fd7c-2846-78ba" name="Open-Topped" hidden="false"/>
-    <rule id="b4ea-750c-d9a4-e398" name="Infiltrators" hidden="false"/>
-    <rule id="5715-6219-5059-9bcf" name="Deep Strike" hidden="false"/>
-    <rule id="b35d-993f-e267-1ec0" name="Fast" hidden="false"/>
-    <rule id="ebe5-6318-0fba-b84c" name="Twin-Linked" hidden="false"/>
-    <rule id="e65f-0536-e057-e2d2" name="Combi Weapons" hidden="false"/>
-    <rule id="cedc-c0a1-ffd3-1b51" name="Frag Grenades" hidden="false"/>
+    <rule id="97b3-810d-a09e-872b" name="Invulnerable Saving Throw" hidden="false"/>
+    <rule id="2563-092a-a5bc-992f" name="Jump Packs" publicationId="8acd-6511-d7f4-63c7" page="92" hidden="false">
+      <description>Jump pack equiped troops can move up to 12&quot; during their movement phase. They may charge up to 6&quot; in the assault phase. They ignore the effects of terrain until they move into it. If they move into difficult terrain roll a D6 for each model. On a 1 a the model is removed as a casualty with no armour saves allowed.
+
+Jump pack troups advance 3D6&quot; after an assault and fall back 3D6&quot;.</description>
+    </rule>
+    <rule id="6bd6-e738-e144-6db9" name="Bikes" publicationId="8acd-6511-d7f4-63c7" page="96" hidden="false">
+      <description>Bikes can move up to 12&quot; in their movement phase. A unit of bikes can charge 6&quot; in the assault phase if it is within 6&quot; of the enemy. If bikers enter difficult terrain roll a D6 for each model. On a 1 the biker is removed as a casualty with no armour saves allowed.
+
+Any rapid fire weapons first from a bike get two shots at targets up to 12&quot; away or one shot at targets up to 24&quot; away. Heavy weapons can be fired by moving bikes.
+
+Bikes can advance 3D6&quot; after an assault and fall back 3D6&quot;.</description>
+    </rule>
+    <rule id="0e80-1d1e-f91a-11fe" name="Cavalry" publicationId="8acd-6511-d7f4-63c7" page="93" hidden="false">
+      <description>Cavalry can move up to 6&quot; in their movement phase. A unit of cavalry can charge 12&quot; in the assault phase.
+
+If cavalry enter difficult terrain roll a D6 for each model. For each roll of 1 a model is removed as a casualty with no armour saves allowed.
+
+Cavalry can advance up to 3D6&quot; after an assault and fall back 3D6&quot;.</description>
+    </rule>
+    <rule id="4795-fd7c-2846-78ba" name="Open-Topped" publicationId="8acd-6511-d7f4-63c7" page="82 &amp; 88" hidden="false">
+      <description>Units firing from open-topped vehicles may have all models in the unit shoot. 
+
+Whenever a damage roll is made against an open-topped vehicle add +1 to the damage result. Template and blast marker weapons are particularly dangerous to open-topped vehicles. To represent this those weapons cause double the normal number of hits gainst open-topped vehicles (i.e. two hits instead of one).</description>
+    </rule>
+    <rule id="b4ea-750c-d9a4-e398" name="Infiltrators" publicationId="8acd-6511-d7f4-63c7" page="134" hidden="false">
+      <description>In missions using the infiltrators rule this unit can follow the special deployment rules outlined in the mission description.</description>
+    </rule>
+    <rule id="5715-6219-5059-9bcf" name="Deep Strike" publicationId="8acd-6511-d7f4-63c7" page="132" hidden="false">
+      <description>In missions where Deep Strike special rules are in use, the unit starts the game in reserve. When they become available they may deploy anywhere on the table.
+
+To deploy Deep Strike units, choose a point anywhere on the board and place the center of the Ordnance blast marker there. Roll a Scatter Dice. On a &apos;hit&apos; the marker does not move and on an arrow the marker moves 2D6&quot; in the direction shown. Once the final position of the marker has been established, place all the Deep Striking models on top of it, facing in any direction. Deep Strike troops may not move or assault the turn they arrive, but may fire as normal (counting as moving).
+
+If a double 1 is rolled the squad is losed. If the marker misses the table then the Deep Strike troops are not available for the rest of the battle.</description>
+    </rule>
+    <rule id="b35d-993f-e267-1ec0" name="Fast" publicationId="8acd-6511-d7f4-63c7" page="83" hidden="false">
+      <description>Fast vehicles can move up to 24&quot; in the movement phase. Fast vehicles moving up 6&quot; can fire all their weapons. Moving up to 12&quot; can fire one weapon. Moving more than 12&quot; may not fire any weapons at all.</description>
+    </rule>
+    <rule id="ebe5-6318-0fba-b84c" name="Twin-Linked" publicationId="8acd-6511-d7f4-63c7" page="58" hidden="false">
+      <description>Twin-linked weapons allow the shooter to re-roll the dice if it misses.</description>
+    </rule>
+    <rule id="e65f-0536-e057-e2d2" name="Combi Weapons" publicationId="8acd-6511-d7f4-63c7" page="169" hidden="false">
+      <description>A model with a combi-weapon may choose to fire one of the weapons in the shooting phase. Note that you may not choose to fire both weapons at once.</description>
+    </rule>
+    <rule id="cedc-c0a1-ffd3-1b51" name="Frag Grenades" publicationId="8acd-6511-d7f4-63c7" page="66" hidden="false">
+      <description>Troops armed with frag grenades always fight simultaneously against troops in cover. Initiative values are not used, both sides roll to hit and wound at the same time before making armour saves and removing casualties.</description>
+    </rule>
     <rule id="9db9-94c1-ce97-f40a" name="Jetpack" hidden="false">
       <description>Tau jetpack rule</description>
     </rule>
-    <rule id="b137-13a1-eb97-c5e5" name="Fearless" hidden="false"/>
+    <rule id="b137-13a1-eb97-c5e5" name="Fearless" hidden="false">
+      <description>The unit pass all model and Leadership checks.</description>
+    </rule>
     <rule id="3a88-67df-4004-176b" name="Move Through Cover" hidden="false"/>
-    <rule id="4556-3c66-6ed4-87a0" name="Jetbikes" hidden="false"/>
-    <rule id="445e-e873-2a3f-776f" name="Monstorous Creature" hidden="false"/>
-    <rule id="5150-e938-2792-646f" name="Tank" hidden="false"/>
-    <rule id="e111-c9c6-72de-1626" name="Skimmer" hidden="false"/>
-    <rule id="3f9b-513f-8f10-5cc6" name="And They Shall Know No Fear" hidden="false"/>
-    <rule id="c7ad-9a4b-bbde-8bde" name="Drop Pods" hidden="false"/>
+    <rule id="4556-3c66-6ed4-87a0" name="Jetbikes" publicationId="8acd-6511-d7f4-63c7" page="94" hidden="false">
+      <description>Bikes can move up to 12&quot; in their movement phase. A unit of bikes can charge 6&quot; in the assault phase if it is within 6&quot; of the enemy. If bikers enter difficult terrain roll a D6 for each model. On a 1 the biker is removed as a casualty with no armour saves allowed.
+
+Any rapid fire weapons first from a bike get two shots at targets up to 12&quot; away or one shot at targets up to 24&quot; away. Heavy weapons can be fired by moving bikes.
+
+Bikes can advance 3D6&quot; after an assault and fall back 3D6&quot;.
+
+Jetbikes can pass over and ignore terrain when they are moving. If they begin or end their turn in difficult terrain they must test to avoid crashing.</description>
+    </rule>
+    <rule id="445e-e873-2a3f-776f" name="Monstrous Creature" publicationId="8acd-6511-d7f4-63c7" page="66 &amp; 90" hidden="false">
+      <description>A monstrous creature ignores armour saves. Against vehicles they roll an extra D6 to penetrate armour.</description>
+    </rule>
+    <rule id="5150-e938-2792-646f" name="Tank" publicationId="8acd-6511-d7f4-63c7" page="89" hidden="false">
+      <description>Tanks can perform Tank Shock during movement phase.</description>
+    </rule>
+    <rule id="e111-c9c6-72de-1626" name="Skimmer" publicationId="8acd-6511-d7f4-63c7" page="80, 88 &amp; 89" hidden="false">
+      <description>Skimmers can ignore terrain as they move unless the begin or end thei move in difficult or impassable terrain (they must test to see if they are immobilised).
+
+Immobilised skimms are destroyed.
+
+A skimmer that moved more than 6&quot; in its movement phase count all penetrating hits as glancing hits instead.</description>
+    </rule>
+    <rule id="3f9b-513f-8f10-5cc6" name="And They Shall Know No Fear" publicationId="8acd-6511-d7f4-63c7" page="169" hidden="false">
+      <description>Space Marines automatically regroup as they fall back, even if the squad has been reduced to less than 50% casualties. If the enemy advance onto them they are therefore not destroyed and this is treated as a new assault (enemy striking +1 A in the following turn) in the same way as a sweeping advance. If the enemy do not advance onto them they are free to move, shoot and assault normally in their following turn.</description>
+    </rule>
+    <rule id="c7ad-9a4b-bbde-8bde" name="Drop Pods" publicationId="a32d-d82d-5f82-b13a" page="5" hidden="false">
+      <description>At the start of a battle where you can use the Deep Strike rules, you can declare that your Space Marines are deploying by landing in drop pods from orbiting spacecraft. Models doing this deploy using the Deep Strike rules. Only the following can deploy from drop pods.
+* Any Space Marine model in power or terminator armour
+* Space Marine Scouts
+* Dreadnoughts and Land Speeders</description>
+    </rule>
     <rule id="d2c6-0bb0-d830-4c62" name="Storm Shield" hidden="false"/>
     <rule id="3f21-57bb-fb07-54c5" name="Flyers" hidden="false"/>
     <rule id="d831-af9c-0b53-6da3" name="Super Heavy Tank" hidden="false"/>
@@ -1481,7 +1560,7 @@
       <comment>Bike/Cav Battle Honors</comment>
       <description>The unit may re-roll any failed Morale checks.</description>
     </rule>
-    <rule id="0fad-0140-d0ce-c2d4" name="Lighting Charge" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
+    <rule id="0fad-0140-d0ce-c2d4" name="Lightning Charge" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
       <comment>Bike/Cav Battle Honor</comment>
       <description>If the unit makes an assault into the enemy and wins, the enemy suffers an additional -1 modifier to their Leadership for the subsequent Morale check.</description>
     </rule>
@@ -1489,10 +1568,6 @@
       <comment>Vehicle Battle Honor</comment>
       <description>Tanks: Any unit testing for tank shock inflicted by this vehicle suffers an additional -1 modifier to its Leadership. 
 Others: The vehile causes tank shock if it moves through the enemy, just like Tanks.</description>
-    </rule>
-    <rule id="d668-4bd9-175d-8a61" name="Fast" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
-      <comment>Vehicle Battle Honor</comment>
-      <description>The vehicle now uses the rules for Fast vehicles. However, it must still be stationary to fire Ordnance.</description>
     </rule>
     <rule id="493d-27e6-bb71-bb5b" name="Reinforced Armour" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
       <comment>Vehicle Battle Honor</comment>
@@ -1509,17 +1584,17 @@ Others: The vehile causes tank shock if it moves through the enemy, just like Ta
     <rule id="69af-f095-551d-130c" name="Minor Psychic Power" hidden="false">
       <description>See Chapter Approved 2004 page 142</description>
     </rule>
-    <rule id="2d1a-ee41-20f6-a6c8" name="Deathwatch" hidden="false">
+    <rule id="2d1a-ee41-20f6-a6c8" name="Deathwatch" publicationId="133d-f866-dd04-b26c" page="74" hidden="false">
       <description>Deathwatch squad members and characters are never subject to the Special rules which apply to specific Chapters (i.e. Space Wolves&apos; counter attack, Blood Angels&apos; Black Rage, Black Templars&apos; vows, etc.) and which affect their fighting abilities or battlefield behaviour. Must be equiped with bolters or combi-weapons.</description>
     </rule>
-    <rule id="0f7e-d79a-ce04-7d3d" name="Smoke &amp; Blind Grenades" hidden="false">
+    <rule id="0f7e-d79a-ce04-7d3d" name="Smoke &amp; Blind Grenades" publicationId="26e5-ce39-9a6e-4817" page="60" hidden="false">
       <description>One use only.
 
 Blind/smoke grenades are used in the Shooting phase instead of the unit firing any weapons. Mark the unit as using its blind/smoke grenades by placing cotton wool around them. A unit cannot assault on the same turn it uses blind/smoke grenades. The blind/smoke screen lasts until the start of the player&apos;s next turn and until then the unit counts as in cover with a 5+ cover save. Because they count as being in cover, models in the unit will also strike first if assaulting, unless the enemy is armed with something like frag grenades, or has an ability that allows them to always strike first.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="9177-ce8a-92e3-157e" name="Flamer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9177-ce8a-92e3-157e" name="Flamer" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1528,7 +1603,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="edff-5743-8a17-916e" name="Grenade Launcher (frag)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="edff-5743-8a17-916e" name="Grenade Launcher (frag)" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1537,7 +1612,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Grenade Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="d236-a268-4f05-49f0" name="Grenade Launcher (krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="d236-a268-4f05-49f0" name="Grenade Launcher (krak)" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -1546,7 +1621,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Grenade Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="b9aa-366b-bd62-4692" name="Heavy Bolter" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="b9aa-366b-bd62-4692" name="Heavy Bolter" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -1555,7 +1630,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="6d36-2c09-dfc3-f257" name="Heavy Flamer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="6d36-2c09-dfc3-f257" name="Heavy Flamer" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -1600,7 +1675,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">When firing the inferno cannon, designate a target unit and place the normal flamer template so that is at least partially over as many unit members as possible. The whole template must be in range and line of sight. Roll to hit once, using the Hellhound&apos;s BS. If you hit then all models partially or wholly under the template are hit. If you miss, they are each hit on a roll of 4+ instead.</characteristic>
       </characteristics>
     </profile>
-    <profile id="ce92-3ccf-ee54-f6b1" name="Lasgun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="ce92-3ccf-ee54-f6b1" name="Lasgun" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
@@ -1609,7 +1684,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="95a9-d270-d218-1772" name="Laspistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="95a9-d270-d218-1772" name="Laspistol" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
@@ -1618,7 +1693,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="a160-d79e-e7a9-2e9c" name="Lascannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="a160-d79e-e7a9-2e9c" name="Lascannon" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
@@ -1627,7 +1702,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="737d-c7ef-4cb5-e6fa" name="Meltagun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="737d-c7ef-4cb5-e6fa" name="Meltagun" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -1636,7 +1711,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Meltaguns are devastating short ranged &quot;heat rays.&quot; Melta weapons roll an extra D6 to penetrate vehicles at half range.</characteristic>
       </characteristics>
     </profile>
-    <profile id="aa04-2d5e-da7e-2d25" name="Missile Launcher (frag)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="aa04-2d5e-da7e-2d25" name="Missile Launcher (frag)" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1645,7 +1720,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="4e6c-7b62-ba6d-05cf" name="Missile Launcher (krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="4e6c-7b62-ba6d-05cf" name="Missile Launcher (krak)" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -1654,7 +1729,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Missile Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="57eb-e5dd-c986-ffaa" name="Mortar" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="57eb-e5dd-c986-ffaa" name="Mortar" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1663,7 +1738,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Barrage Weapon. See page 58 of the Core Rulebook for details.</characteristic>
       </characteristics>
     </profile>
-    <profile id="63ed-7ae2-0dce-e02e" name="Multi-laser" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="63ed-7ae2-0dce-e02e" name="Multi-laser" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -1672,7 +1747,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="7077-4e34-5c92-5320" name="Multi-melta" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="7077-4e34-5c92-5320" name="Multi-melta" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -1681,7 +1756,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Multi-melta guns are devastating short ranged &quot;heat rays.&quot; Melta weapons roll an extra D6 to penetrate vehicles at half range.</characteristic>
       </characteristics>
     </profile>
-    <profile id="112a-baea-9eeb-b1b5" name="Plasma Gun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="112a-baea-9eeb-b1b5" name="Plasma Gun" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -1690,7 +1765,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If you roll a 1 to hit with a plasma weapon it has overheated and injured the model firing it. Make an armor save for the model, otherwise it will suffer a wound. Plasma weapons on vehicles are not affected by overheating.</characteristic>
       </characteristics>
     </profile>
-    <profile id="7b91-b670-d042-7c88" name="Plasma Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="7b91-b670-d042-7c88" name="Plasma Pistol" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -1699,7 +1774,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If you roll a 1 to hit with a plasma weapon it has overheated and injured the model firing it. Make an armor save for the model, otherwise it will suffer a wound. Plasma weapons on vehicles are not affected by overheating.</characteristic>
       </characteristics>
     </profile>
-    <profile id="3d57-a43d-1066-0f5d" name="Ripper Gun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="3d57-a43d-1066-0f5d" name="Ripper Gun" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1708,7 +1783,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="9882-0cca-b1d2-8e0b" name="Shotgun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9882-0cca-b1d2-8e0b" name="Shotgun" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
@@ -1717,7 +1792,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="a2e7-8f4e-c06d-6cf1" name="Ranger Long Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="a2e7-8f4e-c06d-6cf1" name="Ranger Long Rifle" publicationId="5eaa-7676-fd04-242d" page="35" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
@@ -1726,7 +1801,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Sniper Rifles aways hit on a 2+ and its Strength always equals the Toughness of the target. Units suffering casualties from a sniper rifles must test to avoid pinning as for a barrage. A sniper rifle only has an armor penetration of D6 against a vehicle. Additionally, if a 6 is rolled for the to hit roll, the shot counts as having AP 1.</characteristic>
       </characteristics>
     </profile>
-    <profile id="4c6c-9de1-00a8-8016" name="Storm Bolter" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="4c6c-9de1-00a8-8016" name="Storm Bolter" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1735,7 +1810,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="720f-5c52-b5ff-ee75" name="Demolisher" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="720f-5c52-b5ff-ee75" name="Demolisher" publicationId="8acd-6511-d7f4-63c7" page="83" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
@@ -1744,7 +1819,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="0d02-965c-b2d8-eab5" name="Earthshaker" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="0d02-965c-b2d8-eab5" name="Earthshaker" publicationId="8acd-6511-d7f4-63c7" page="83" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">120&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
@@ -1753,7 +1828,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Barrage Weapon. See page 58 of the Core Rulebook for details.</characteristic>
       </characteristics>
     </profile>
-    <profile id="53c6-a3aa-c0b8-fea5" name="Gretchin Blasta" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="53c6-a3aa-c0b8-fea5" name="Gretchin Blasta" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
@@ -1762,7 +1837,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="1aaa-4805-c346-107e" name="Slugga" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="1aaa-4805-c346-107e" name="Slugga" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1771,7 +1846,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="894f-1760-04e4-77c4" name="Shoota" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="894f-1760-04e4-77c4" name="Shoota" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1780,7 +1855,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="56b9-9d7d-bfdf-0ef7" name="Rokkit Launcha" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="56b9-9d7d-bfdf-0ef7" name="Rokkit Launcha" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -1789,7 +1864,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="1213-0a13-18ca-92f6" name="Shuriken Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="1213-0a13-18ca-92f6" name="Shuriken Pistol" publicationId="5eaa-7676-fd04-242d" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1798,7 +1873,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="1e3d-a3bb-ef48-bc12" name="Shuriken Catapult" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="1e3d-a3bb-ef48-bc12" name="Shuriken Catapult" publicationId="5eaa-7676-fd04-242d" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1807,7 +1882,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="925b-d150-8e56-0832" name="Shuriken Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="925b-d150-8e56-0832" name="Shuriken Cannon" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -1816,7 +1891,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="f79d-d9c2-c8b4-aa03" name="Fusion Gun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="f79d-d9c2-c8b4-aa03" name="Fusion Gun" publicationId="5eaa-7676-fd04-242d" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -1834,7 +1909,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="bed6-4f6f-cf45-0fbb" name="Reaper Launcher" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="bed6-4f6f-cf45-0fbb" name="Reaper Launcher" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -1852,7 +1927,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">An improved Eldar version of the multi-laser than shoots D6 times rather than 3. Roll each time it fires.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2970-d6c7-ba60-1ed1" name="Splinter Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="2970-d6c7-ba60-1ed1" name="Splinter Pistol" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
@@ -1861,7 +1936,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="7551-db77-f751-a050" name="Splinter Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="7551-db77-f751-a050" name="Splinter Rifle" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
@@ -1870,7 +1945,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="dc54-e209-b701-3881" name="Splinter Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="dc54-e209-b701-3881" name="Splinter Cannon" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -1879,7 +1954,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="f097-1dd4-942c-3206" name="Shredder" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="f097-1dd4-942c-3206" name="Shredder" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -1942,7 +2017,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">One Shot Only. May move and fire. Ordnance Template. Scatter.</characteristic>
       </characteristics>
     </profile>
-    <profile id="ebcc-b45a-6232-fc77" name="Griffon Mortar" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="ebcc-b45a-6232-fc77" name="Griffon Mortar" publicationId="8acd-6511-d7f4-63c7" page="83" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -1951,7 +2026,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Min 12&quot;</characteristic>
       </characteristics>
     </profile>
-    <profile id="dd3b-11b5-eaee-9284" name="Whirtwind" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="dd3b-11b5-eaee-9284" name="Whirtwind" publicationId="8acd-6511-d7f4-63c7" page="89" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -1960,25 +2035,25 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="c7a3-7006-5226-8181" name="Lightning Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="c7a3-7006-5226-8181" name="Lightning Claw" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Re-roll any to wound rolls that fail to wound.</characteristic>
       </characteristics>
     </profile>
-    <profile id="3d19-a53f-85b3-6cf3" name="Choppa" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="3d19-a53f-85b3-6cf3" name="Choppa" publicationId="7f3a-bc20-c411-2e02" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Any 2+ or 3+ saves are made on a 4+ instead against a choppa</characteristic>
       </characteristics>
     </profile>
-    <profile id="46d5-85f2-d932-f0a2" name="Close Combat Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="46d5-85f2-d932-f0a2" name="Close Combat Weapon" publicationId="8acd-6511-d7f4-63c7" page="63" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
@@ -1987,7 +2062,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">+1 A if model is equiped with a second CCW or Pistol</characteristic>
       </characteristics>
     </profile>
-    <profile id="a162-3683-bca7-8f2c" name="Skorcha" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="a162-3683-bca7-8f2c" name="Skorcha" publicationId="7f3a-bc20-c411-2e02" page="36" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -1996,7 +2071,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="a945-4569-4e36-f2b2" name="Mega Blasta" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="a945-4569-4e36-f2b2" name="Mega Blasta" publicationId="7f3a-bc20-c411-2e02" page="35" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -2005,34 +2080,30 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Gets Hot!</characteristic>
       </characteristics>
     </profile>
-    <profile id="c7f7-e5ab-17a7-1cf9" name="Dreadnought Close Combat Weapons" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="c7f7-e5ab-17a7-1cf9" name="Dreadnought Close Combat Weapons" publicationId="8acd-6511-d7f4-63c7" page="91" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
     <profile id="ff9c-5b94-680f-36d5" name="Power Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always Strike Last</characteristic>
       </characteristics>
     </profile>
-    <profile id="9c1b-bf93-059b-27f5" name="Krak Grenades" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9c1b-bf93-059b-27f5" name="Krak Grenades" publicationId="8acd-6511-d7f4-63c7" page="90" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Troops equiped with krak grenades can use them to assault vehicles. Krak grenades give troops S6 for close combat hits scored against vehicles. Krak grenades need both handes so models using them can only make a single attack.</characteristic>
       </characteristics>
     </profile>
-    <profile id="1687-221e-1a62-e1f6" name="Zzap Gun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="1687-221e-1a62-e1f6" name="Zzap Gun" publicationId="7f3a-bc20-c411-2e02" page="36" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">2D6</characteristic>
@@ -2041,7 +2112,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Zzap Guns automatically hit a single unit within range and line of sight. Roll a 2D6 to determine the strength of each hit (up to S10). On a roll of 11 or 12 the weapon overheats. No hit is scored and instead a Gretchin krew is killed. Against vehicles the gun rolls its Strength as normal, and then adds 2D6 to the armor penetration roll.</characteristic>
       </characteristics>
     </profile>
-    <profile id="db47-7114-1dc5-719f" name="Lobba" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="db47-7114-1dc5-719f" name="Lobba" publicationId="7f3a-bc20-c411-2e02" page="35" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2050,7 +2121,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">When the range and scatter are rolled for a lobba, if a &quot;Hit&quot; and a 6 are rolled together a hit is scored, but one of the Gretchin krew is also killed. </characteristic>
       </characteristics>
     </profile>
-    <profile id="4b41-49f9-53bf-b6d2" name="Kannon (Frag)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="4b41-49f9-53bf-b6d2" name="Kannon (Frag)" publicationId="7f3a-bc20-c411-2e02" page="35" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2059,7 +2130,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Frag shots from a Kannon scatter like Ordnance, but still use the small Blast marker. If a &quot;hit&quot; and a 6 is rolled on the D6 then a member of a Gretchin Krew also dies. Resolve the hit as normal.</characteristic>
       </characteristics>
     </profile>
-    <profile id="19db-f2cc-cdd7-d751" name="Kannon (Shell)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="19db-f2cc-cdd7-d751" name="Kannon (Shell)" publicationId="7f3a-bc20-c411-2e02" page="35" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -2068,7 +2139,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Against vehicles roll 2D6 for armor penetration and pick the highest result. Any penetrating hits roll for damage on the Ordnance Damage table, but glancing hits are rolled for as normal on the Glancing Hits table.</characteristic>
       </characteristics>
     </profile>
-    <profile id="3f9c-e7c1-c442-3b7c" name="Assault Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="3f9c-e7c1-c442-3b7c" name="Assault Cannon" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2077,7 +2148,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If a triple 1 is rolled on the To Hit dice for an assault cannon it jams and is destroyed.</characteristic>
       </characteristics>
     </profile>
-    <profile id="6128-e2af-037e-4d1a" name="Autocannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="6128-e2af-037e-4d1a" name="Autocannon" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -2086,7 +2157,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="4bfe-6dbf-9f2e-3df8" name="Barbed Strangler" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="4bfe-6dbf-9f2e-3df8" name="Barbed Strangler" page="" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">S-2</characteristic>
@@ -2095,7 +2166,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="3a2e-94e4-b9a3-bb11" name="Battle Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="3a2e-94e4-b9a3-bb11" name="Battle Cannon" publicationId="8acd-6511-d7f4-63c7" page="83" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -2104,7 +2175,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="b467-e518-11c9-c23a" name="Big Shoota" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="b467-e518-11c9-c23a" name="Big Shoota" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2113,7 +2184,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="e9ac-c779-51bb-3c9a" name="Bolt Pistol" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="e9ac-c779-51bb-3c9a" name="Bolt Pistol" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -2122,7 +2193,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="60bf-18fd-f6e6-6eb4" name="Boltgun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="60bf-18fd-f6e6-6eb4" name="Boltgun" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -2131,7 +2202,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="958b-1f4c-9991-cbcc" name="Burna" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="958b-1f4c-9991-cbcc" name="Burna" publicationId="7f3a-bc20-c411-2e02" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -2140,7 +2211,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">A burna may be used in the shooting phase, or act as a power weapon in close combat. It may not be used in both manners during the same turn. Burnas also roll 2D6 instead of D6 for armor penetration against vehicles.</characteristic>
       </characteristics>
     </profile>
-    <profile id="9e5e-b881-3c15-e101" name="Burst Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9e5e-b881-3c15-e101" name="Burst Cannon" publicationId="3d8e-2aa5-a1d3-b4d4" page="17" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2149,16 +2220,16 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="9a19-ea1c-3d75-94aa" name="Plasma Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9a19-ea1c-3d75-94aa" name="Plasma Cannon" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1 Blast</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If you roll a 1 to hit with a plasma weapon it has overheated and injured the model firing it. Make an armor save for the model, otherwise it will suffer a wound. Plasma weapons on vehicles are not affected by overheating.</characteristic>
       </characteristics>
     </profile>
-    <profile id="0f38-81fa-b5b9-0663" name="Missle Pod" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="0f38-81fa-b5b9-0663" name="Missle Pod" publicationId="3d8e-2aa5-a1d3-b4d4" page="17" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -2167,7 +2238,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="44d4-12ec-d6b1-ef3c" name="Plasma Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="44d4-12ec-d6b1-ef3c" name="Plasma Rifle" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -2176,7 +2247,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">The Tau plasma rifle is lower powered than its Imperial counterpart but does not suffer from overheating.</characteristic>
       </characteristics>
     </profile>
-    <profile id="8afa-9848-b02f-36b5" name="Fusion Blaster" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="8afa-9848-b02f-36b5" name="Fusion Blaster" publicationId="5eaa-7676-fd04-242d" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -2185,7 +2256,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If targetting a vehicle within 6&quot; roll 2D6 for armor penetration.</characteristic>
       </characteristics>
     </profile>
-    <profile id="a92d-c02e-9701-2405" name="Smart Missile System" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="a92d-c02e-9701-2405" name="Smart Missile System" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2194,7 +2265,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Smart Missile can engage any target in range regardless of whether there is a line of sight to it or not. The target can count the benefits of cover they are in or touching. If fighting at night, the range to the target is reduced as normal because the missle&apos;s sensors are less likely to identify and confirm the target.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2748-95a6-70de-824a" name="Railgun (solid shot)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="2748-95a6-70de-824a" name="Railgun (solid shot)" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
@@ -2203,17 +2274,17 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="5c1c-6924-1f3c-f6b7" name="Photon Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
+    <profile id="5c1c-6924-1f3c-f6b7" name="Photon Grenades" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">If a model has photon grenades then enemy units assault them do not get any bonus attacks for charging.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2140-93ef-49c8-1008" name="EMP Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
+    <profile id="2140-93ef-49c8-1008" name="EMP Grenades" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">EMP grenades are used when assault enemy vehicles. Each attacker may make one attack unadjusted for charging or additional close combat weapons. Roll to hit as normal. When determining damage, roll a D6. On a 4 or 5 they inflict a glancing hit and on a 6 they inflict a penetrating hit. They cannot be used against vehicles with WS unless they are immobilised. </characteristic>
       </characteristics>
     </profile>
-    <profile id="93c5-ed67-a327-95e9" name="Markerlight" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="93c5-ed67-a327-95e9" name="Markerlight" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">-</characteristic>
@@ -2222,7 +2293,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Models roll to hit normally when using a markerlight. Each hit can be used to either launch a seeker missle or to mark a target for another vehicle or model. If marking a target then one other vehicle or model in the Tau force which has yet to fire can change its to hit roll against the marked target to 2+ with a single weapon during the same Shooting phase. Re-rolls for twin-linked weapons still apply to the improved to hit roll.</characteristic>
       </characteristics>
     </profile>
-    <profile id="a939-0e4e-2430-0ef2" name="Pulse Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="a939-0e4e-2430-0ef2" name="Pulse Rifle" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2231,7 +2302,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="b90e-cd3a-8611-3762" name="Pulse Carbine" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="b90e-cd3a-8611-3762" name="Pulse Carbine" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2240,7 +2311,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Any unit suffering at least one wound from a pulse carbine must test for pinning.</characteristic>
       </characteristics>
     </profile>
-    <profile id="43b2-2313-d8ca-a57b" name="Ion Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="43b2-2313-d8ca-a57b" name="Ion Cannon" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">60&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -2249,7 +2320,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="89fc-882b-9612-ea5c" name="Railgun (submunition)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="89fc-882b-9612-ea5c" name="Railgun (submunition)" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -2258,7 +2329,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ordnance Blast</characteristic>
       </characteristics>
     </profile>
-    <profile id="a107-96c8-c043-e9d7" name="Kroot Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="a107-96c8-c043-e9d7" name="Kroot Rifle" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -2267,7 +2338,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Kroot armed with Kroot rifles count as having an additional close combat weapon (+1 A).</characteristic>
       </characteristics>
     </profile>
-    <profile id="502c-f105-689a-3755" name="Kroot Gun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="502c-f105-689a-3755" name="Kroot Gun" publicationId="3d8e-2aa5-a1d3-b4d4" page="19" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -2285,7 +2356,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="fe17-2150-02e5-4298" name="Gauss Flayer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="fe17-2150-02e5-4298" name="Gauss Flayer" publicationId="263c-b15e-84a3-a711" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -2296,7 +2367,7 @@ Any vehicle that suffers a hit from a gauss weapon will suffer a glancing hit on
 If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hits are possible, for example, a hull down vehicle, a vehicle screened by smoke launchers or one protected by a kustom force field, then a glancing hit is still inflicted. If a gauss weapon scores a glancing hit on a vehicle with a roll of 6 when it would not otherwise be able to damage it, and the vehicle is one which treats glancing hits as penetrating hits, such as the Hellhound, then it remains a glancing hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="9dcd-a606-8c49-1862" name="Gauss Blaster" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9dcd-a606-8c49-1862" name="Gauss Blaster" publicationId="263c-b15e-84a3-a711" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2307,7 +2378,7 @@ Any vehicle that suffers a hit from a gauss weapon will suffer a glancing hit on
 If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hits are possible, for example, a hull down vehicle, a vehicle screened by smoke launchers or one protected by a kustom force field, then a glancing hit is still inflicted. If a gauss weapon scores a glancing hit on a vehicle with a roll of 6 when it would not otherwise be able to damage it, and the vehicle is one which treats glancing hits as penetrating hits, such as the Hellhound, then it remains a glancing hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="96af-6622-de74-9cb8" name="Gauss Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="96af-6622-de74-9cb8" name="Gauss Cannon" publicationId="263c-b15e-84a3-a711" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -2318,7 +2389,7 @@ Any vehicle that suffers a hit from a gauss weapon will suffer a glancing hit on
 If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hits are possible, for example, a hull down vehicle, a vehicle screened by smoke launchers or one protected by a kustom force field, then a glancing hit is still inflicted. If a gauss weapon scores a glancing hit on a vehicle with a roll of 6 when it would not otherwise be able to damage it, and the vehicle is one which treats glancing hits as penetrating hits, such as the Hellhound, then it remains a glancing hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="9530-25e5-5f48-0b82" name="Heavy Gauss Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9530-25e5-5f48-0b82" name="Heavy Gauss Cannon" publicationId="263c-b15e-84a3-a711" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
@@ -2329,7 +2400,7 @@ Any vehicle that suffers a hit from a gauss weapon will suffer a glancing hit on
 If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hits are possible, for example, a hull down vehicle, a vehicle screened by smoke launchers or one protected by a kustom force field, then a glancing hit is still inflicted. If a gauss weapon scores a glancing hit on a vehicle with a roll of 6 when it would not otherwise be able to damage it, and the vehicle is one which treats glancing hits as penetrating hits, such as the Hellhound, then it remains a glancing hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="3327-1be5-382c-8124" name="Gauss Flux Arc" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="3327-1be5-382c-8124" name="Gauss Flux Arc" publicationId="263c-b15e-84a3-a711" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2340,7 +2411,7 @@ Any vehicle that suffers a hit from a gauss weapon will suffer a glancing hit on
 If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hits are possible, for example, a hull down vehicle, a vehicle screened by smoke launchers or one protected by a kustom force field, then a glancing hit is still inflicted. If a gauss weapon scores a glancing hit on a vehicle with a roll of 6 when it would not otherwise be able to damage it, and the vehicle is one which treats glancing hits as penetrating hits, such as the Hellhound, then it remains a glancing hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="ab40-80fe-6cda-81bd" name="Particle Whip" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="ab40-80fe-6cda-81bd" name="Particle Whip" publicationId="263c-b15e-84a3-a711" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
@@ -2349,7 +2420,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Any model under the hole in the middle of the Ordnance template is hit with a AP1 attack.</characteristic>
       </characteristics>
     </profile>
-    <profile id="f0e1-c7e2-18e3-5e45" name="Staff of Light" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="f0e1-c7e2-18e3-5e45" name="Staff of Light" publicationId="263c-b15e-84a3-a711" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
@@ -2358,7 +2429,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">In the assault phase is used as power weapon.</characteristic>
       </characteristics>
     </profile>
-    <profile id="c161-89b0-1ad0-f8d3" name="Blaster" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="c161-89b0-1ad0-f8d3" name="Blaster" publicationId="2da3-b15a-5ffe-aa7a" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -2367,7 +2438,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Treats vehicles with an Armor value greater than 12 as 12.</characteristic>
       </characteristics>
     </profile>
-    <profile id="8fc4-ffbc-ce70-c5bf" name="Dark Lance" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="8fc4-ffbc-ce70-c5bf" name="Dark Lance" publicationId="2da3-b15a-5ffe-aa7a" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -2376,7 +2447,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Treats vehicles with an Armor value greater than 12 as 12.</characteristic>
       </characteristics>
     </profile>
-    <profile id="471b-0158-fba8-ed84" name="Destructor" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="471b-0158-fba8-ed84" name="Destructor" publicationId="2da3-b15a-5ffe-aa7a" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -2385,7 +2456,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Determine the AP of each wound caused by the destructor for each model hit. Cover saves cannot be taken against hits from a Destructor.</characteristic>
       </characteristics>
     </profile>
-    <profile id="8f79-d821-9c93-4ed3" name="Disintegrator (Max)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="8f79-d821-9c93-4ed3" name="Disintegrator (Max)" publicationId="2da3-b15a-5ffe-aa7a" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -2394,7 +2465,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="706d-137b-28d9-702d" name="Disintegrator (Sustained)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="706d-137b-28d9-702d" name="Disintegrator (Sustained)" publicationId="2da3-b15a-5ffe-aa7a" page="14" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -2403,7 +2474,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="cbf4-a511-e9f6-e8e5" name="Stinger" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="cbf4-a511-e9f6-e8e5" name="Stinger" publicationId="2da3-b15a-5ffe-aa7a" page="15" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">-</characteristic>
@@ -2430,7 +2501,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Roll to hit as normal, but don&apos;t roll to wound or save. Instead, if one or more models are hit then the unit they belong to must pass a Leadership test or become pinned. Apply a -1 modifier if the unit is under half its starting strength and -1 per non-Dark Eldar model hit.</characteristic>
       </characteristics>
     </profile>
-    <profile id="b01a-6da1-2166-d3e6" name="Haywire Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
+    <profile id="b01a-6da1-2166-d3e6" name="Haywire Grenades" publicationId="2da3-b15a-5ffe-aa7a" page="14" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
         <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">When making close combat attacks against a vehicle, models with Haywire Grenades may choose to make only one attack using the grenade instead of their normal attacks. If they hit, roll on the following table to see the effect.
 1 - No effect
@@ -2448,7 +2519,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="a1a0-7026-df47-1b84" name="Plasma Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
+    <profile id="a1a0-7026-df47-1b84" name="Plasma Grenades" publicationId="5eaa-7676-fd04-242d" page="35" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
         <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">These grenades negate the effect of cover in close combat, so that models strike in Initiative order.</characteristic>
       </characteristics>
@@ -2466,7 +2537,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores all Armor Saves</characteristic>
       </characteristics>
@@ -2480,7 +2551,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="8815-ec91-4a67-c21b" name="Firepike" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="8815-ec91-4a67-c21b" name="Firepike" publicationId="5eaa-7676-fd04-242d" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -2489,7 +2560,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Firepikes are devastating short ranged &quot;heat rays.&quot; Roll an extra D6 to penetrate vehicles at half range.</characteristic>
       </characteristics>
     </profile>
-    <profile id="3825-4a6b-6aaa-8c99" name="Sniper Rifle" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="3825-4a6b-6aaa-8c99" name="Sniper Rifle" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
@@ -2507,7 +2578,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds on a 4+, and on a roll of 6 inflicts Instant Death. Against vehicles it inflicts a glancing hit on a 4+ and a penetrating hit on a 6.</characteristic>
       </characteristics>
     </profile>
-    <profile id="6f4e-bc15-c01c-501a" name="Bright Lance" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="6f4e-bc15-c01c-501a" name="Bright Lance" publicationId="5eaa-7676-fd04-242d" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -2516,7 +2587,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Treats vehicles with an Armor value greater than 12 as 12.</characteristic>
       </characteristics>
     </profile>
-    <profile id="841e-28f9-4e25-68ca" name="Starcannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="841e-28f9-4e25-68ca" name="Starcannon" publicationId="5eaa-7676-fd04-242d" page="35" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
@@ -2534,7 +2605,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="e44b-58e1-770a-1893" name="Prism Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="e44b-58e1-770a-1893" name="Prism Cannon" publicationId="5eaa-7676-fd04-242d" page="36" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">60&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
@@ -2543,7 +2614,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="03d5-3df8-63cd-9769" name="D-cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="03d5-3df8-63cd-9769" name="D-cannon" publicationId="8acd-6511-d7f4-63c7" page="59" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
@@ -2570,13 +2641,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">When firing, choose a target point anywhere within range and line of sight, then roll to hit as normal. On a hit, all units between the cannon and the target point suffer D6 hits. Any vehicles or other target with a damage table duffers a single glancing hit. Any unit that suffers a casualty must take a Pinning test. All cannons in a unit fire one shot, but each additional cannon adds +1 S and inflicts a -1 modifier on the Pinning test.</characteristic>
       </characteristics>
     </profile>
-    <profile id="87d0-8c40-7bcb-8cbb" name="Melta Bombs" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="87d0-8c40-7bcb-8cbb" name="Melta Bombs" publicationId="8acd-6511-d7f4-63c7" page="90" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Troops armed with melta bombs roll S8 + 2D6 against vehicles hit in close combat. Melta bombs need both handes so models using them can only make a single attack.</characteristic>
       </characteristics>
     </profile>
     <profile id="b726-76b7-0d78-59d9" name="Pulse Laser" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -2597,22 +2664,22 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile id="9edb-0754-ffa8-9dd3" name="Thunder Hammer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="9edb-0754-ffa8-9dd3" name="Thunder Hammer" publicationId="a32d-d82d-5f82-b13a" page="35" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Any model wounded by not killed by this weapon may not attack again until the end of the new assault phase. Always Strike Last. Any vehicles struck by a thunder hammer are crew shaken, in addition to any other results they suffer.</characteristic>
       </characteristics>
     </profile>
     <profile id="a161-ed4b-bcb7-0a01" name="Power Fist" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always Strike Last</characteristic>
       </characteristics>
     </profile>
     <profile id="e5ab-52f0-b14b-e93c" name="Force Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -2624,18 +2691,18 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If one or more wounds are successful, roll a psychich test. On a success the opponent is slain outright.</characteristic>
       </characteristics>
     </profile>
-    <profile id="b063-0e0a-050c-3114" name="Chainfist" hidden="true" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="b063-0e0a-050c-3114" name="Chainfist" publicationId="a32d-d82d-5f82-b13a" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always Strike Last. Roll 2D6 and add strength for armour penetration against vehicles.</characteristic>
       </characteristics>
     </profile>
-    <profile id="9dd4-e950-2419-5934" name="Frag Grenades" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
+    <profile id="9dd4-e950-2419-5934" name="Frag Grenades" publicationId="8acd-6511-d7f4-63c7" page="66" hidden="false" typeId="7279-038a-b87a-ed0c" typeName="Abilities">
       <characteristics>
-        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843"/>
+        <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Troops armed with frag grenades always fight simultaneously against troops in cover. Initiative values are not used, both sides roll to hit and wound at the same time before making armour saves and removing casualties.</characteristic>
       </characteristics>
     </profile>
     <profile id="86d5-c5a0-fc04-7f5a" name="Hunter-killer Missile" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -2719,13 +2786,13 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Treat any armour value higher than 12 as 12</characteristic>
       </characteristics>
     </profile>
-    <profile id="1167-5f76-35ab-9e44" name="Distort Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="1167-5f76-35ab-9e44" name="Distort Cannon" publicationId="5eaa-7676-fd04-242d" page="34" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G36&quot;</characteristic>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">G24&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1, Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores Imperial Fields, Eldar Fields and Ork Powe Fields</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
     <profile id="8055-389a-dae3-488b" name="Long Barrelled Shuriken Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -2886,7 +2953,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heacy 1/Blast</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/Blast</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
