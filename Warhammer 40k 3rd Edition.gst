@@ -22,7 +22,7 @@
     <publication id="7f3a-bc20-c411-2e02" name="Codex Orks 3rd Edition" shortName="Orks"/>
     <publication id="a32d-d82d-5f82-b13a" name="Codex Space Marines 3rd Edition" shortName="Space Marines"/>
     <publication id="3d8e-2aa5-a1d3-b4d4" name="Codex Tau Empire 3rd Edition" shortName="Tau"/>
-    <publication id="f79b-7033-9d04-3162" name="Cpdex Space Wolves 3rd Edition" shortName="Space Wolves"/>
+    <publication id="f79b-7033-9d04-3162" name="Codex Space Wolves 3rd Edition" shortName="Space Wolves"/>
     <publication id="3bd9-41d8-79ac-3cb0" name="Codex Witch Hunters 3rd Edition" shortName="Witch Hunters"/>
     <publication id="4577-599e-e7f7-d154" name="Eye of Terror" shortName="Eye of Terror"/>
     <publication id="82e6-04f1-b8fa-c616" name="Imperial Armor 1" shortName="Imperial Armor 1" publicationDate="2000"/>
