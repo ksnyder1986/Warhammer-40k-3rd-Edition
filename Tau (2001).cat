@@ -881,6 +881,50 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="9481-bbba-5131-d027" name="Rail Rifles (Chapter Approved 2004)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1ee-5e1d-3fd8-bf9f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5b09-e2c4-df63-0c64" name="Rail Rifles (Chapter Approved 2004)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Pinning</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="322f-889c-b24b-483b" name="Rail Rifle&apos;s Target Lock Interface" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9481-bbba-5131-d027" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="7.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9481-bbba-5131-d027" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2152-ad42-16b4-a2ee" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="5c5e-df6a-2d4f-a8e7" name="Target Lock Interface" hidden="false">
+              <description>When the target lock interface is used the Pathfinder counts as having a hard-wired target lock, but the rail rifle will suffer from the &apos;get hot&apos; weapon rule in the same way as plasma weapons. If the interface is not fitted, or if all members of the unit engage the same target, this does not happen.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e15a-9b5a-2d06-825b" name="Pathfinders" hidden="false" collective="false" import="true" defaultSelectionEntryId="11bd-bd41-f7bc-d6e0">
@@ -946,6 +990,7 @@
         <entryLink id="40f7-b7b1-8e19-2a15" name="Devilfish" hidden="false" collective="false" import="true" targetId="6c43-af8f-c69c-df89" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac5c-ac69-9ad3-b265" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c59d-2a64-9225-55f7" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -1291,6 +1336,13 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
       </costs>
     </selectionEntry>
     <selectionEntry id="3335-09bc-e144-dc02" name="Tiger Shark (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="2acb-0d7b-18e2-a57c" name="Drone Racks" hidden="false">
           <description>The Tiger Shark can carry up to 14 drones. These can be deployed in one or more squadrons. These may be deployed on any attack run without the flying needing to land. These drones deploy by the normal rules for Deep Strike, but as they deploy during the attack run in the opponent&apos;s turn, they may move, shoot, and assault normally in the Tau Player&apos;s upcoming turn. Any number of squadrons can be deployed in a single turn.</description>
@@ -1339,6 +1391,13 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
       </costs>
     </selectionEntry>
     <selectionEntry id="fb65-7a01-3259-46bc" name="Barracuda (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="67fd-30f2-5f97-1514" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
         <infoLink id="81f9-34f6-7d40-0505" name="Barracuda" hidden="false" targetId="89a5-bc04-e191-41dc" type="profile"/>
@@ -1389,6 +1448,11 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02dc-e73d-f9f7-357a" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1445,6 +1509,13 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
       </costs>
     </selectionEntry>
     <selectionEntry id="3e9c-f3f1-1647-b580" name="Sky Ray (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="8e0f-2f90-0b28-d0b9" name="Anti-Air" hidden="false">
           <description>To fire at enemy aircraft the Sky Ray must first hit the target with its marker lights. It can target aircraft up to 36&quot; away. If the target is hit, then any number of Seeker Missiles can be fired at the target. Each missiles hits on a roll of 2+.</description>
@@ -1486,6 +1557,13 @@ Fast = 10
 Skimmer = 20
 Open Topped = -5
 Two-Gun Drones = 34</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="ac6b-ae2e-816a-bca2" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
         <infoLink id="27ec-ceb5-b2ed-695d" name="Piranha" hidden="false" targetId="7721-ef21-14e6-28f2" type="profile"/>
@@ -1554,6 +1632,13 @@ Flyer = 40
 Ion Turret=Short Ranged Ion Cannon = 20
 
 </comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="52b8-55c8-f39f-bd15" name="Ion Cannon" hidden="false" targetId="43b2-2313-d8ca-a57b" type="profile">
           <modifiers>
@@ -1612,6 +1697,13 @@ Flyer = 40
 2x Twin-linked Ion Rifles (slow firing, twin-linked, short barrelled, Ion Cannos) = 2x35=70
 2xPulse Bombs=60
 </comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="8c89-7c63-f102-6a26" name="Ion Cannon" hidden="false" targetId="43b2-2313-d8ca-a57b" type="profile">
           <modifiers>

@@ -437,6 +437,14 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="1c06-8da2-af02-7166" name="Deathstrike (Homebrew)" hidden="false" collective="false" import="true" targetId="ed4a-1c1c-add9-add6" type="selectionEntry"/>
+    <entryLink id="8f40-6c31-1d25-697a" name="Deathwatch Kill Team (Chapter Approved)" hidden="false" collective="false" import="true" targetId="1004-74e9-5ee6-c51f" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57a3-2062-be2b-689f" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="5caa-e705-05a2-7411" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f6c9-305b-8827-2cb6" name="Command Platoon" hidden="false" collective="false" import="true" type="unit">
@@ -3174,6 +3182,24 @@
           </constraints>
           <infoLinks>
             <infoLink id="9fe1-795b-03b0-b1c9" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1cfd-1f67-480d-db72" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6891-aa2a-2a1b-9e00" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="0aff-57eb-54ec-bdb7" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -9378,6 +9404,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ba67-d2c8-7807-1429" name="Leman Russ Conqueror (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="8a6b-bb6f-6742-9d8c" name="Leman Russ Conqueror" hidden="false" targetId="2ca5-be67-e6ab-f208" type="profile">
           <modifiers>
@@ -9457,6 +9490,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="678b-1f22-52be-a405" name="Thunderer Siege Tank (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="7b39-8994-9510-6665" name="Siege Armour" hidden="false">
           <description>When being fired at from above, hits are resolved against the Side Armour instead of the Rear.</description>
@@ -9474,6 +9514,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="9861-283f-0380-3030" name="Destroyer Tank Hunter (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="532c-46aa-fdad-0301" name="Destroyer Tank Hunter" hidden="false" targetId="2df4-fcde-71cc-630e" type="profile">
           <modifiers>
@@ -9504,6 +9551,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2a2e-11fa-8765-46dd" name="Leman Russ Vanquisher (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="942d-9c32-6c15-bd1b" name="Leman Russ Vanquisher" hidden="false" targetId="8c5c-cc58-1178-15da" type="profile">
           <modifiers>
@@ -9603,6 +9657,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="7751-0fcb-7fa3-a937" name="Leman Russ Executioner (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="d0d7-2c9d-ceda-1469" name="Leman Russ Executioner" hidden="false" targetId="b91c-c69b-5519-841d" type="profile">
           <modifiers>
@@ -9682,6 +9743,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0e4b-7bca-acca-8824" name="Baneblade (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="8977-4122-70ad-063e" name="Difficult Terrain" hidden="false">
           <description>The Stormsword can ignore low walls, hedges, bushes and rubble. Going through other difficult terrain they test as normal, but if they roll a 1 they lose D3&quot; of movement, just as if they had suffered an Engines Damaged result, instead of being immobilised.</description>
@@ -9721,6 +9789,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="1a10-d4e7-6977-58a8" name="Shadowsword (IA)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="38cd-0dd4-eb2a-e57c" name="Targetting" hidden="false">
           <description>Instead of picking one target, pick a target for each weapons.</description>
@@ -9757,6 +9832,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a780-e004-8d28-030f" name="Salamander Command Vehicle (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="dec2-9053-969f-d937" name="Surveyor" hidden="false">
           <description>If enemy infiltrators set up with 4D6&quot; of a model with a surveyor then the model is allowed to take a &apos;free&apos; shot at them. If the model is part of a unit, the whole unit may shoot. These shots are taken before the battle begins and may cause the infiltrators to fall back.</description>
@@ -9777,6 +9859,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ffa7-484a-4aa7-1d4d" name="Salamander Scout Vehicle (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="1e47-a827-f3ec-e6d5" name="Souped-Up Engines" hidden="false">
           <description>A Salamander Scout Vehcile&apos;s souped-up engines make it a fast vehicle.</description>
@@ -9815,6 +9904,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4999-2b7c-a426-e5f0" name="Sentinel Powerlifter Squadron (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="ee2b-990b-3056-9279" name="Sentinel Powerlifter (IA)" hidden="false" collective="false" import="true" targetId="118f-2e0e-6b9a-541a" type="selectionEntry">
           <constraints>
@@ -9828,6 +9924,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="0c34-69e3-aabf-b53c" name="Trojan Towing Vehicle (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="b93d-ef2e-9485-ab75" name="Towing Vehicle" hidden="false">
           <description>The Trojan may move an Earthshaker, Hydra, or Manticore platform fitted with carriages that is limbered to the Trojan. Limbering and unlimbering a plaform takes an entire turn each, and neither the Trojan or plaform may fire weapons or move during that turn.</description>
@@ -9846,6 +9949,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="6e17-cba2-a269-bf1d" name="Turret Emplacement (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="a650-b5ac-1538-d955" name="Turret Emplacement" hidden="false" targetId="91d5-87bb-8b47-6251" type="profile"/>
         <infoLink id="6dae-e287-e551-c7c8" name="Immobile" hidden="false" targetId="de3d-c21c-3d4f-5259" type="rule"/>
@@ -9991,6 +10101,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a1aa-d6f4-064a-3514" name="Earthshaker Platform (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="762d-cf4f-e3f6-b0ee" name="Indirect Fire" hidden="false">
           <description>May fire the earthshaker in Indirect File mode instead of direct fire. A weapon that does so changes its range to G36&quot;-240&quot;.</description>
@@ -10015,6 +10132,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="580e-5f01-017e-c7fa" name="Hydra (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="0fe2-0d67-0f6a-5f0b" name="Anti-Air" hidden="false" targetId="2dca-27d7-d779-65f4" type="rule"/>
         <infoLink id="c768-f3b7-2da8-2acc" name="Long Barrelled Autocannon" hidden="false" targetId="48dc-47d4-5d34-3078" type="profile">
@@ -10034,6 +10158,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e816-76c5-4936-731d" name="Hydra Flak Platform (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="0902-5835-3914-1f7d" name="Immobile" hidden="false" targetId="de3d-c21c-3d4f-5259" type="rule"/>
         <infoLink id="c7e0-bdd6-7eb6-0071" name="Weapon Plaform" hidden="false" targetId="a6bb-7a68-e3e4-d388" type="profile"/>
@@ -10067,6 +10198,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c95b-c897-719c-ee10" name="Manticore (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="53ea-2d69-57ac-8905" name="Manticore Missile" hidden="false" targetId="5750-93a3-6a3c-49b9" type="profile">
           <modifiers>
@@ -10081,6 +10219,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="32f9-d99a-4605-a0c0" name="Manticore Platform (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="aa5d-1879-e317-7c16" name="Weapon Plaform" hidden="false" targetId="a6bb-7a68-e3e4-d388" type="profile"/>
         <infoLink id="5ea7-da72-51c9-199b" name="Manticore Missile" hidden="false" targetId="5750-93a3-6a3c-49b9" type="profile">
@@ -10112,6 +10257,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="49c0-66fa-4bf0-af05" name="Medusa (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="c054-c620-3b8b-b24c" name="Siege Shells" hidden="false">
           <description>May choose to fire siege shells instead of normal shells. Roll 2D6+5 when rolling for Armour penetration for the Medusa siege gun against bunkers.</description>
@@ -10131,6 +10283,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="97f5-b08e-fd2e-8440" name="Lightning (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="8c3e-2d66-2a87-1278" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
         <infoLink id="f891-fe40-4201-5701" name="Lightning" hidden="false" targetId="9783-d170-540c-e6be" type="profile"/>
@@ -10193,6 +10352,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="416c-65a1-3ce3-3cce" name="Marauder Bomber (IA)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="f53f-72df-cd91-cc17" name="Marauder" hidden="false" targetId="90b9-8a91-2866-be9f" type="profile"/>
         <infoLink id="6bdb-680d-6422-0608" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
@@ -10279,6 +10445,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="8be0-47e5-6a5a-a2bf" name="Marauder Destroyer (IA)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="3da0-5c8d-1ac1-41ea" name="Super-Heavy Flyer" hidden="false" targetId="7ca6-da5f-a87c-f49b" type="rule"/>
         <infoLink id="5e7d-524f-7c2b-58dd" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
@@ -10336,6 +10509,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="82c5-8065-6903-5174" name="Tarantula Sentry Gun (IA)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="89c7-f2f5-9e8b-c4ed" name="Firing Modes" hidden="false">
           <description>At deployment, you must select a firing mode. It cannot be changed once the game begins.
@@ -10409,6 +10589,13 @@ Sentry Mode: The gun will fire at the nearest enemy target within 12&quot; that 
       </costs>
     </selectionEntry>
     <selectionEntry id="a368-8d72-199b-23aa" name="Atlas Recovery Vehicle (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="aa2f-1f2d-f893-80fa" name="Recovery Vehicle" hidden="false">
           <description>The Atlast can drag any destroyed or immobilised vehicle (friend or foe) that starts the turn in contact with it. Both vehicles may move up to D6&quot; and must remain in base contact at the end of the move. Neither vehicle may shoot in the same turn that they are towing or being towed, except that the vehicle may fire one weapon at the Atlast if it is able and wants.</description>
@@ -10426,6 +10613,13 @@ Sentry Mode: The gun will fire at the nearest enemy target within 12&quot; that 
       </costs>
     </selectionEntry>
     <selectionEntry id="11d2-9ada-a903-a290" name="Cyclops (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="0d8f-dce0-8133-2233" name="Remote Controlled" hidden="false">
           <description>The Cyclops is controlled by a single guardsman, or by the crew of a transporting Chimera. It moves independently of its controller, but it must remain with 48&quot; of the controller, otherwise it simple stops and cannot do anything until control is restored.
@@ -10467,6 +10661,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="9385-dfc6-bdf8-c42f" name="Maximillian Weisemann (IA)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="84f3-5627-6aa8-d3a3" name="Hardened Crew" hidden="false">
           <description>The vehicle treats all &apos;Driver Stunned&apos; results on the damage tables as &apos;Crew Shaken&apos; instead.</description>
@@ -10528,6 +10729,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="ba66-66f2-0fdd-1c91" name="Stormsword (IA)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="8ddb-118d-fd25-f0e9" name="Targetting" hidden="false">
           <description>Instead of picking one target for the Stormsword, pick a target for each of its weapons. The co-axial heavy bolter must fire at the same target as the Siege Cannon.</description>
@@ -10584,6 +10792,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="118f-2e0e-6b9a-541a" name="Sentinel Powerlifter (IA)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="2a81-01af-254a-63da" name="Powerlifter" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
           <characteristics>
@@ -10607,6 +10822,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="4023-f9e5-10b2-b681" name="Leman Russ Exterminator (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="0df5-db15-5926-89dc" name="Leman Russ Exterminator" hidden="false" targetId="72ea-d08b-cdd9-c107" type="profile">
           <modifiers>
@@ -10690,6 +10912,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="b3af-1551-3789-b7a3" name="Stormblade (IA)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="8f09-56f4-adb3-ece3" name="Difficult Terrain" hidden="false">
           <description>The Stormsword can ignore low walls, hedges, bushes and rubble. Going through other difficult terrain they test as normal, but if they roll a 1 they lose D3&quot; of movement, just as if they had suffered an Engines Damaged result, instead of being immobilised.</description>
@@ -10745,6 +10974,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="0f62-9403-92b7-0e71" name="Captain Obadiah Schfeer (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="860f-0fb6-25b1-733b" name="My Boys Love It" hidden="false">
           <description>Obadiah&apos;s tank is converted to varry a loud speaker system. Over this, he broadcasts orders to the rest of the company and loud Varolian martial music to inspire the boys and frighten the enemy (Varolian martial music is very loud, long, and to the untrained ear, quite painful). When Obadiah&apos;s tank forces a Tank Shock test on an enemy unit, they must make the test at -1 to their Leadership.</description>
@@ -10772,6 +11008,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="093f-18d8-3420-4501" name="Colonel &apos;Snake&apos; Stranski (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry id="53ec-ad65-4762-b155" name="Colonel &apos;Snake&apos; Stranski" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -10897,6 +11140,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="24fe-bc4d-29e9-ae6e" name="General Grizmund (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="2718-e920-493e-835b" name="Best of the Best" hidden="false">
           <description>Any other tank in a force led by Grizmund may take as many Ace Crew skills as they like, they are not restricted to one per vehicle. They may not take the same skill more than once per vehicle.</description>
@@ -10919,6 +11169,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="4916-2143-0b47-d951" name="Thunderbolt (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="4f8e-6115-0dce-4a3d" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
         <infoLink id="b998-79ef-f816-1af2" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
@@ -10988,6 +11245,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="15fa-a2a9-33a2-7a5e" name="Valkrie (IA)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="74d3-0b88-2d62-d537" name="Heavy Lift" hidden="false">
           <modifiers>
@@ -11053,6 +11317,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="7525-0f6e-647b-f492" name="Vulture (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="3cda-1a72-7580-438d" name="VTOL Hover Mode" hidden="false" targetId="c28e-05cc-afdf-32d0" type="rule"/>
         <infoLink id="b607-24dd-05f7-e664" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
@@ -11213,6 +11484,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </costs>
     </selectionEntry>
     <selectionEntry id="0aa4-275b-24ff-710b" name="Griffon (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="6b98-967d-5634-c654" name="Griffon" hidden="false" targetId="4859-8f16-7587-f552" type="profile"/>
         <infoLink id="3c88-0b7c-97d9-dcc2" name="Griffon Mortar" hidden="false" targetId="ebcc-b45a-6232-fc77" type="profile"/>
@@ -11247,6 +11525,13 @@ Speed = 10
 Twin-linked Autocannon = 38
 Transport = 10
 </comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="746e-4a2a-029b-4d26" name="Taurox" hidden="false" targetId="dea4-4d39-cab5-188d" type="profile"/>
         <infoLink id="49d2-f345-7556-0b5d" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
@@ -11274,6 +11559,13 @@ Fully Armoured Upcharge for &lt; 43 armour = 20
 Speed = 10
 Transport = 10
 </comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="e275-24ad-dab0-1d0b" name="Taurox" hidden="false" targetId="dea4-4d39-cab5-188d" type="profile"/>
         <infoLink id="1f5f-a35f-e62a-7230" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
@@ -11361,6 +11653,13 @@ Fully Armoured Upcharge for &lt; 43 armour = 20
 Normal Speed = 10
 Heavy Bolter=15
 Stormshard Mortar(4x mortars) = 100</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c3ab-00a6-7b34-952b" name="2x Stormshard Mortars" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
           <characteristics>
@@ -11387,6 +11686,13 @@ Stormshard Mortar(4x mortars) = 100</comment>
       </costs>
     </selectionEntry>
     <selectionEntry id="ed4a-1c1c-add9-add6" name="Deathstrike (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="8a0f-4f1f-bdf4-1fd1" name="Deathstrike Missile" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
           <characteristics>

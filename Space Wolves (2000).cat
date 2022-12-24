@@ -181,6 +181,22 @@
         <categoryLink id="2c41-808b-c9fb-41f3" name="Space Wolf" hidden="false" targetId="9bbd-df2b-520d-778d" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="4b33-915d-e29b-44c8" name="Deathwatch Kill Team (Chapter Approved)" hidden="false" collective="false" import="true" targetId="1004-74e9-5ee6-c51f" type="selectionEntry">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2227-39c0-84da-3e84" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="0ad2-544b-3bdb-3535" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="c462-02ff-d9a8-1838" name="Emperor&apos;s Champion" hidden="false" collective="false" import="true" targetId="ad23-c512-3d63-c3a4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="name" value="Emperor&apos;s Champion (Chapter Approved)"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd02-5d20-85ac-d996" type="max"/>
+      </constraints>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="5a50-b1c6-a93a-cc0d" name="Wolf Lord" hidden="false" collective="false" import="true" type="unit">
@@ -370,6 +386,20 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="9893-8ba7-1b4b-859c" name="Space Wolves Armoury" hidden="false" collective="false" import="true" targetId="c4c0-8266-9b44-5012" type="selectionEntryGroup"/>
+        <entryLink id="dee3-0bd3-373d-2e53" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="982e-7b96-4be8-13f4" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0eb1-0fe2-0b21-b47f" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
@@ -472,9 +502,6 @@ However, if the model bearing the standard is slain in close combat, then the en
           </constraints>
           <selectionEntries>
             <selectionEntry id="3514-adf9-9de6-845b" name="Grey Hunter" hidden="false" collective="false" import="true" type="model">
-              <constraints>
-                <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2047-0121-4e80-e413" type="min"/>
-              </constraints>
               <infoLinks>
                 <infoLink id="0754-39d2-5ae5-aa7e" name="Grey Hunter" hidden="false" targetId="904a-a9f3-4b9a-8608" type="profile"/>
                 <infoLink id="f43d-1dde-73c7-1254" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
@@ -485,6 +512,20 @@ However, if the model bearing the standard is slain in close combat, then the en
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink id="02d4-8870-ced0-5e59" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+              <infoLinks>
+                <infoLink id="6879-f305-93e3-7410" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                <infoLink id="7e56-ffc0-192b-e4fb" name="Space Marine" hidden="false" targetId="9514-67fd-b082-445f" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="70fc-9bc8-00dc-437c" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="22.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="da52-042d-4fa3-192c" name="Weapon Option" hidden="false" collective="false" import="true">
           <constraints>
@@ -1086,6 +1127,23 @@ However, if the model bearing the standard is slain in close combat, then the en
         <categoryLink id="4833-369b-a307-3901" name="Space Wolf" hidden="false" targetId="9bbd-df2b-520d-778d" primary="false"/>
         <categoryLink id="6e0f-3c51-ec4a-07eb" name="New CategoryLink" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="1d10-162a-68d4-edc2" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83ca-938c-c680-a6d4" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7f1d-e210-5787-a756" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9810-6328-af26-ae41" name="Weapon Option" hidden="false" collective="false" import="true">
           <constraints>
@@ -1380,6 +1438,20 @@ However, if the model bearing the standard is slain in close combat, then the en
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="4ea1-35ad-4420-d3ff" name="Space Wolves Armoury" hidden="false" collective="false" import="true" targetId="c4c0-8266-9b44-5012" type="selectionEntryGroup"/>
+        <entryLink id="b064-1f41-8b9e-1043" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac35-2e3c-0a08-2dd5" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="ea0a-222c-96c6-040d" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
@@ -1430,6 +1502,21 @@ However, if the model bearing the standard is slain in close combat, then the en
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="941e-2e14-4da8-7e35" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73e5-ae50-e02e-11a0" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="f29b-8b15-25a9-610a" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1769,6 +1856,20 @@ However, if the model bearing the standard is slain in close combat, then the en
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="2c1f-6fc8-f282-00a6" name="Space Wolves Armoury" hidden="false" collective="false" import="true" targetId="c4c0-8266-9b44-5012" type="selectionEntryGroup"/>
+        <entryLink id="5b81-a6a3-4767-f9df" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="299f-ff7d-fecc-2cdf" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="8e5f-88b1-bb29-de6b" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="95.0"/>
@@ -1944,9 +2045,31 @@ However, if the model bearing the standard is slain in close combat, then the en
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="20d9-0843-238b-66c4" name="Minor Psychic Power" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="2c66-2b4d-0b41-54e7" name="Minor Psychic Power" hidden="false" targetId="69af-f095-551d-130c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="801a-cab7-210c-3f7e" name="Space Wolves Armoury" hidden="false" collective="false" import="true" targetId="c4c0-8266-9b44-5012" type="selectionEntryGroup"/>
+        <entryLink id="e573-58ef-ed69-7c88" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c520-1d25-a6b1-24a4" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="1594-22ed-33a4-4da3" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
@@ -2109,6 +2232,20 @@ However, if the model bearing the standard is slain in close combat, then the en
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="f136-d60d-11bb-bd25" name="Space Wolves Armoury" hidden="false" collective="false" import="true" targetId="c4c0-8266-9b44-5012" type="selectionEntryGroup"/>
+        <entryLink id="94d9-ee09-bc13-eee8" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb2d-92d2-d6dd-3370" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="c0ce-0187-510e-2abc" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
@@ -2257,6 +2394,20 @@ However, if the model bearing the standard is slain in close combat, then the en
               </selectionEntryGroups>
               <entryLinks>
                 <entryLink id="f889-d5a9-8c97-a543" name="Space Wolves Armoury" hidden="false" collective="false" import="true" targetId="c4c0-8266-9b44-5012" type="selectionEntryGroup"/>
+                <entryLink id="4746-c0f1-1a54-0b6a" name="Deathwatch Veteran" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9b8-ae01-2e01-f732" type="max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="ee40-01df-21d6-cec0" name="Deathwatch Special Ammo (Independent Characters)" hidden="false" collective="false" import="true" targetId="175a-d904-f65a-6dd4" type="selectionEntryGroup">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="340a-63dd-f55e-9d16" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
@@ -2351,6 +2502,21 @@ However, if the model bearing the standard is slain in close combat, then the en
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="9013-c0fe-c583-c4bf" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="4.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63be-17ca-fb0e-49b3" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="724a-575f-a4c7-4d25" name="Smoke &amp; Blind Grenades" hidden="false" targetId="0f7e-d79a-ce04-7d3d" type="rule"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
