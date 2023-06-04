@@ -579,8 +579,18 @@
       </categoryLinks>
     </forceEntry>
   </forceEntries>
+  <entryLinks>
+    <entryLink id="abd1-8783-0ec3-a496" name="Additional Options" hidden="false" collective="false" import="true" targetId="955f-86dd-474a-8af4" type="selectionEntry"/>
+  </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="1004-74e9-5ee6-c51f" name="Deathwatch Kill Team (Chapter Approved)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="8284-3c96-b0b9-db3f" name="True Grit" hidden="false">
           <description>May treat Bolters as a Bolt Pistol in close combat and will therefore be allowed to roll an extra Attack dice as if they were armed with a second close combat weapon. However, the model using their bolter in this manner may not receive the extra attack bonush for charging. </description>
@@ -1441,6 +1451,42 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
+    <selectionEntry id="955f-86dd-474a-8af4" name="Additional Options" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d061-b8ab-72d5-b785" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea0f-d883-f6c4-7a27" type="min"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4f0a-4e6d-6ef7-3c1f" name="Additional Options" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="eca8-ace3-d503-7923" name="Homebrew" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f688-aa6d-9ffb-1a54" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3261-6601-5bfe-f5d0" name="Imperial Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56b1-cd1f-07b4-e161" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e6d5-bc03-5827-d5da" name="Chapter Approved" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b60-efbb-8902-8995" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="4a60-7f7e-c37f-a4d6" name="Independent Character" hidden="false"/>
@@ -2100,7 +2146,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
     <profile id="3f9c-e7c1-c442-3b7c" name="Assault Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If a triple 1 is rolled on the To Hit dice for an assault cannon it jams and is destroyed.</characteristic>

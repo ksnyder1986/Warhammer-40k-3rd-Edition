@@ -63,6 +63,7 @@
     <entryLink id="bb5f-a0fc-b42e-35d3" name="Helldrake (Homebrew)" hidden="false" collective="false" import="true" targetId="bc00-24bd-ea7f-3134" type="selectionEntry"/>
     <entryLink id="eaa3-0ecd-666c-6bc6" name="Khorne Lord of Skulls" hidden="false" collective="false" import="true" targetId="76e8-0006-d8f4-e536" type="selectionEntry"/>
     <entryLink id="f858-1e3f-e102-7430" name="Mounted Daemonette Daemon Pack" hidden="false" collective="false" import="true" targetId="ee9c-7446-f48a-f942" type="selectionEntry"/>
+    <entryLink id="e279-4747-818e-a3d8" name="Kharn the Betrayer" hidden="false" collective="false" import="true" targetId="6b75-5c8b-898f-eaa0" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9fda-9a74-56c3-7c97" name="Chaos Lord" hidden="false" collective="false" import="true" type="unit">
@@ -3941,10 +3942,25 @@ Weapon Destroyed results may choose to remove this weapon.</description>
     </selectionEntry>
     <selectionEntry id="6b75-5c8b-898f-eaa0" name="Kharn the Betrayer" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="7a5a-b1ba-de9f-dc3f" value="0.0">
           <conditions>
-            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="958a-4953-9c9c-2605" type="greaterThan"/>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="958a-4953-9c9c-2605" type="lessThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3992,7 +4008,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4bde-bf7f-8300-7011" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
           </conditions>
         </modifier>
         <modifier type="set" field="1d88-fae4-e4ba-4ad1" value="0.0">
@@ -9099,6 +9115,13 @@ Fully Armour &lt;47 = 10
 Normal = 10
 CCW = 1*3*2=6
 Daemonic Possession=20</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="5588-1bdb-2411-7305" name="Daemonic Possession" hidden="false">
           <description>A Daemon controls the vehicle and may ignore &apos;shaken&apos; and &apos;stunned&apos; results.</description>
@@ -9178,6 +9201,13 @@ Fully Armour &lt;47 = 10
 Normal = 10
 Dreadnought CCW= 5*3*4=60
 Daemonic Possession=20</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="c644-4b44-78db-b825" name="Daemonic Possession" hidden="false">
           <description>A Daemon controls the vehicle and may ignore &apos;shaken&apos; and &apos;stunned&apos; results.</description>
@@ -9210,6 +9240,13 @@ Armor 12-11-11 = 10+30+20 = 60
 Flyer = 40
 Daemonic Possession = 20
 </comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="b317-349f-ee60-cd72" name="Daemonic Possession" hidden="false">
           <description>A Daemon controls the vehicle and may ignore &apos;shaken&apos; and &apos;stunned&apos; results.</description>
