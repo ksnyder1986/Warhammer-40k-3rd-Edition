@@ -408,6 +408,8 @@
         <categoryLink id="c7b4-f682-15ba-8e6b" name="New CategoryLink" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="5ebf-bb86-315b-318a" name="Corrupted Basilisk (White Dwarf 255)" hidden="false" collective="false" import="true" targetId="4239-6eb1-bd58-9f8e" type="selectionEntry"/>
+    <entryLink id="96ac-72d8-cd0c-905e" name="Corrupted Vindicator (White Dwarf 255)" hidden="false" collective="false" import="true" targetId="dff4-780b-1a8f-dbee" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="e7e2-63c9-5484-d7d2" name="Exalted Champion" hidden="false" collective="false" import="true" type="unit">
@@ -6953,6 +6955,85 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="4239-6eb1-bd58-9f8e" name="Corrupted Basilisk (White Dwarf 255)" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="99dd-a596-bfc9-4c66" name="Basilisk" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5e1e-7ccd-09b4-9e4e" name="Earthshaker" hidden="false" targetId="0d02-965c-b2d8-eab5" type="profile"/>
+        <infoLink id="f136-4cae-5beb-8f7c" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+        <infoLink id="9b54-bc97-a650-bc48" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="91e0-68f6-cde4-64f3" name="Indirect Fire" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e523-19e9-a88b-c6b7" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="ef69-81dd-fd12-f53d" name="Indirect Fire" hidden="false">
+              <description>May fire the earthshaker in Indirect File mode instead of direct fire. A weapon that does so changes its range to G36&quot;-240&quot;.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dff4-780b-1a8f-dbee" name="Corrupted Vindicator (White Dwarf 255)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="6d1a-587d-98fb-76ca" name="Vindicator" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">13</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6c53-d9d6-d6aa-c9e1" name="Siege Armour" hidden="false">
+          <description>Shots fired from above are resolved aginst the Side Armour value instead of the rear</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="b161-a142-2828-ee99" name="Demolisher" hidden="false" targetId="720f-5c52-b5ff-ee75" type="profile"/>
+        <infoLink id="5baa-59c3-bf7a-62d8" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="60f6-7cef-ca0b-0ef7" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="3d70-68f1-2e7c-4dfd" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="bfd1-fafd-af3a-a625" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f2d6-226f-3a34-c33f" name="Chaos Armoury" hidden="false" collective="false" import="true">
@@ -7532,17 +7613,6 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0baa-395c-1ed2-9657" name="Power Fist" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a32a-b6fe-1a54-8610" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="c1f1-407e-ef44-0919" name="Power Fist" hidden="false" targetId="a161-ed4b-bcb7-0a01" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="cf9c-e917-9bc1-7845" name="Power Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b471-109f-1fb0-b045" type="max"/>
@@ -7577,6 +7647,17 @@
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fa67-9236-29c2-1e54" name="Power Fist" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="446f-ffb6-e925-6c50" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="7499-35bf-58e5-5eeb" name="Power Fist" hidden="false" targetId="a161-ed4b-bcb7-0a01" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -8444,6 +8525,59 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8845-3a0d-dd0e-9f2e" name="Warsmith Servo Arm (White Dwarf 255)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0252-3f65-267d-9721" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="2bf6-ed0c-ea18-41ee" name="Servo Arm" hidden="false">
+              <description>The servo-arm counts as a powerfist in close combat, always attacking once and hitting on a 4+. It may be used at the start of any Iron Warriors turn to repair an immobilized vehicle that is in base contact with the Warsmith on a D6 roll of 6.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="d4c2-0326-7774-5996" name="Power Fist" hidden="false" targetId="a161-ed4b-bcb7-0a01" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5763-7c1c-a047-d4ee" name="Iron Warriors Bionics (White Dwarf 255)" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="855b-c003-38bd-be45" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b39c-36bc-a368-00af" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e6d5-bc03-5827-d5da" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52ed-b956-d096-432f" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="5a5e-a823-89e4-1ac4" name="Bionics" hidden="false">
+              <description>Any wound suffered may be ignored on a roll of 6. Wounds that allow no armour save or with a Strength that causes Instant Death cannot be ignored.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
