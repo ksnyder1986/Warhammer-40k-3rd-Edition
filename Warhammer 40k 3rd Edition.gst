@@ -33,6 +33,7 @@
     <publication id="8ac4-ee68-a57a-42b4" name="Codex Catachan 3rd Edition" shortName="Catachan"/>
     <publication id="514c-2f6d-fd13-c8e1" name="Codex Chaos Space Marines 3rd Edition" shortName="CSM 3Ed"/>
     <publication id="64f6-e768-7e7d-5053" name="Codex Tyranids 3rd Edition" shortName="Tyranids"/>
+    <publication id="14a5-5fbb-19cd-e8ee" name="The Citadel Journal 29" shortName="Issue 29" publisher="The Citadel Journal" publicationDate="1998"/>
   </publications>
   <costTypes>
     <costType id="4ed5-2f92-9abc-2870" name="pts" defaultCostLimit="-1.0" hidden="false"/>
@@ -1507,7 +1508,1404 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="52a4-73f3-8747-3e8e" name="Arbites Judge (Citadel Journal 29)" publicationId="14a5-5fbb-19cd-e8ee" page="19" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="666b-cae4-44ef-109c" name="Judge" hidden="false" targetId="ae50-ed21-fc34-b433" type="profile"/>
+        <infoLink id="cb76-59b1-ba8e-f000" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink id="1a2a-1748-efac-bd66" name="Arbites Weapon List" hidden="false" collective="false" import="true" targetId="341a-db7b-80c8-470b" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="349e-968c-37b2-6611" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2211-0784-24e6-75d0" name="Arbites Combat Team (Citadel Journal 29)" publicationId="14a5-5fbb-19cd-e8ee" page="19" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="1a0c-3ba9-e0b5-e244" name="Proctor" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7ee-9700-386a-0ea0" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="552e-3845-e7cb-0cf3" name="Proctor" hidden="false" targetId="a899-43a0-00d8-ca2a" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink id="e5ff-fb7a-db51-089c" name="Arbites Weapon List" hidden="false" collective="false" import="true" targetId="341a-db7b-80c8-470b" type="selectionEntryGroup">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faff-42b5-0345-b381" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="7.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4fa3-bd04-8a9e-ca61" name="Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba21-afaf-f843-1901" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9770-cc3d-019e-43cc" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+            <infoLink id="387f-beb9-ded6-35da" name="Grenade Launcher (krak)" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c9f5-7775-629b-801a" name="Arbitrators" hidden="false" collective="false" import="true" defaultSelectionEntryId="3535-d715-d72b-fead">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ef4-d5eb-ff51-c64f" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c45-fa27-8780-65a6" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3535-d715-d72b-fead" name="Arbitrator" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="b0b4-94ed-aecb-70f4" name="Arbitrator" hidden="false" targetId="9b39-15cd-ae8d-620c" type="profile"/>
+                <infoLink id="0174-191f-0db7-58f8" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="700b-2dee-967d-6146" name="Transport" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e37f-d0c3-f75f-e0f5" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6e9d-761f-5e91-a758" name="Rhino" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="6029-b61f-f7b5-fadc" name="Rhino" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+                  <characteristics>
+                    <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+                    <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+                    <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+                    <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="82f8-32e9-1a35-3b5e" name="Reliability" hidden="false">
+                  <description>If a Rhino is immobilised and spends a turn without firing any weapons its drive may be able to effect a temporary repair that turn. On a D6 roll of 6 the vehicle will be free to move in its next Movement phase.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="703d-7b8a-74a8-1ffb" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="525c-da6c-deca-0b25" name="New CategoryLink" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
+              </categoryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="d2c5-5f4f-8c07-5146" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true">
+                  <selectionEntries>
+                    <selectionEntry id="7613-006e-7b4b-05bc" name="Dozer Blade" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7b3-abeb-0e5b-0fba" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="1e4f-f033-ba4a-7e0c" name="Dozer Blade" hidden="false">
+                          <description>Re-roll failed Difficult Terrain tests as long as the model did not move more than 6&quot; that turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="9c0f-9368-7538-b2e4" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7603-0e53-7a41-8917" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="c499-a1cc-ed49-cff8" name="Extra Armour" hidden="false">
+                          <description>Treat &apos;Crew Stunned&apos; results as &apos;Crew Shakeen&apos; instead.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="48a8-5594-f387-caee" name="Hunter-killer Missile" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4d8-0056-bd6f-fc28" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="d719-d91a-696c-aec4" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="f102-8e65-5ea0-1233" name="Pintle-mounted Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d01-7578-f22e-77b1" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="113f-c83f-aa63-686f" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="c485-c161-f7e6-f0fd" name="Searchlight" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad17-8f15-a009-11c3" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="ca28-de0c-9288-c617" name="Searchlight" hidden="false">
+                          <description>During battles using Night Fight rules, one enemy unit spotted by the vehicle may be fired at by all other friendly units within range and that have line of sight, but by doing so the vehicle may be fired at by all enemy units in the next turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="ee2e-28f7-630e-5949" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f09-fe97-e1a5-b383" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="a990-3aa4-3f34-2599" name="Smoke Launchers" hidden="false">
+                          <description>Once per game, after completing its move, a vehicle with Smoke Launchers may trigger them. The vehicle may not fire this turn, but any penetrating hits scored by the enemy in the next shooting phase are instead turned into glancing hits.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="46d7-9314-92e7-843d" name="Chimera" hidden="false" collective="false" import="true" type="unit">
+              <profiles>
+                <profile id="387a-f17b-18ae-3bf9" name="Chimera" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+                  <characteristics>
+                    <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
+                    <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">10</characteristic>
+                    <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
+                    <characteristic name="BS" typeId="ae25-5be4-5470-2204">3</characteristic>
+                    <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">12</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="3f69-166a-e0c5-e37c" name="Firepoints" hidden="false">
+                  <description>The Chimera is fitted with six hull lasguns for passengers to use. Up to six passangers can use them to fire at single target. Additionally, one model may fire a weapon from the top hatch using their own weapon, but doing so turns the Chimera into an open topped vehicle until the next turn. </description>
+                </rule>
+                <rule id="fdf0-2ece-a468-d0cb" name="Amphibious" hidden="false">
+                  <description>Treat all water features as clear terrain when moving</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="2cca-a8d5-0d5c-4c61" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
+              </categoryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="01b5-52ba-8e88-753f" name="Turret Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f41-888f-1d9d-a199" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd45-4ef1-ad5d-4b42" type="min"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="6eb2-3156-f479-e8bb" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="e93b-bb87-d4f0-5005" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="4e02-7492-f31a-5b43" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="d8aa-4f4b-655e-0796" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="4e6f-6fff-9980-708e" name="Multi-laser" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="6209-c78a-68f5-5a55" name="Multi-laser" hidden="false" targetId="63ed-7ae2-0dce-e02e" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="afac-705c-4132-7b94" name="Twin-Linked Heavy Bolter (IA)" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="1670-3da9-c986-c32b" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
+                          <modifiers>
+                            <modifier type="set" field="name" value="Twin-Linked Heavy Bolter"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="9e35-46e0-7bfc-5ec3" name="Autocannon (IA)" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="f2d7-dd90-cc7a-129c" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="4397-b04b-2ec9-5ad3" name="Hull Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="083a-7e43-2bdd-ff44" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9095-bb96-bed3-feb3" type="min"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="1fb6-a15a-04b5-916a" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="b567-158e-6db4-27dc" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="1fe2-893f-bd54-b4a4" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="d07e-bde4-4f05-d3bc" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="ea51-04ff-6d05-58b1" name="Vehicle Upgrades" hidden="false" collective="false" import="true">
+                  <selectionEntries>
+                    <selectionEntry id="6754-275e-2af8-bc8c" name="Camo Netting" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="727f-dcb7-749e-9b73" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="34c3-0bdc-6b66-24af" name="Camo Netting" hidden="false">
+                          <description>In scenarios using the Hidden Set-up rules, vehicles carrying camo netting can be set up hidden anywhere in their deployment zone.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="79b0-da5c-a83a-3e3d" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0af-4d8b-f289-f586" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="60ac-3c27-e6b5-f735" name="Extra Armour" hidden="false">
+                          <description>Count the &apos;Crew Stunned&apos; result as &apos;Crew Shaken&apos; instead</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="98b3-b5c9-08ed-ce79" name="Hunter-Killer Missle" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02bc-25c7-b4e9-f624" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="02ea-b2bc-6b1e-9c94" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="74fd-e692-e1ee-bbe4" name="Improved Comms" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a39d-ffa3-f743-dfb0" type="max"/>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5e4-59d5-838f-4239" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="5f3a-c985-242f-48f0" name="Improved Comms" hidden="false">
+                          <description>The Imperial Guard player may re-roll one Reserves roll per turn, adn to re-roll the dice when checking to see if an enemy unit or obstacle is hit by a preliminary bombardment</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="b89f-20f5-3f2d-5dcc" name="Mine Sweeper" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50ea-3716-cf6d-8c83" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="87e4-e309-64dc-99eb" name="Mine Sweeper" hidden="false">
+                          <description>The vehicle may enter a minefield without being attack. Any minefield the vehicle moves across is cleared and removed from play</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="2656-6e0d-4249-c5f8" name="Pintle Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7c1-e4a4-98b3-66e3" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="f16e-8b4c-a7db-bb85" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="427c-19e4-8499-f50d" name="Rough Terrain Modification" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2942-8685-9091-a210" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="389b-4c09-5307-7ff2" name="Rough Terrain Modification" hidden="false">
+                          <description>A vehicle that moves no more than 6&quot; may re-rolled failed Difficult Terrain tests</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="e33d-a545-89c1-c0f1" name="Searchlight" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="809d-0b21-818b-1e0d" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="6661-f497-4236-7995" name="Searchlight" hidden="false">
+                          <description>During Night Fighting missions, one enemy unit spotted by the vehicle can be fired at by any other Imperial Guard units in range and with line of fire. However, the vehicle using the Searchlight will then be exposed and can be fired at by any enemy units that are in range and line of sight of it until the next turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="3efd-eb95-f005-631d" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a3c-3b9a-2ed4-c494" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="3390-fe9c-efea-4405" name="Smoke Launchers" hidden="false">
+                          <description>Once per game, after completing movement, a vehicle with smoke launchers may trigger them. The vehicle cannot fire and use its smoke launchers in the same turn. Any penetrating hits scored by the enemy in the next Shooting phase count as glancing hits.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="7bca-fcc6-24b7-2ae7" name="Track Guards" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4552-8be6-7d06-b4b6" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="3276-66b9-e86b-9f38" name="Track Guards" hidden="false">
+                          <description>The vehicle treats &apos;Immobilised&apos; results as &apos;Crew Stunned&apos; on a roll of a 4+. This does not combine with the extra armour ability.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="37d6-da09-a4db-a9b6" name="Arbites Shock Team (Citadel Journal 29)" publicationId="14a5-5fbb-19cd-e8ee" page="20" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="4058-d6eb-2a8e-9089" name="Proctor" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e82-e2c2-748f-a25f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="03d5-784b-c362-9275" name="Proctor" hidden="false" targetId="a899-43a0-00d8-ca2a" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink id="d79f-7187-490e-d79d" name="Arbites Weapon List" hidden="false" collective="false" import="true" targetId="341a-db7b-80c8-470b" type="selectionEntryGroup">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3b2-efc7-7155-27b9" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="7.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4362-7e59-b1d4-b7a2" name="Arbitrators" hidden="false" collective="false" import="true" defaultSelectionEntryId="5a98-a46a-1314-6e99">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a528-9ead-2ba8-6202" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb2d-febc-e532-b0b7" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5a98-a46a-1314-6e99" name="Arbitrator" hidden="false" collective="false" import="true" type="model">
+              <rules>
+                <rule id="38e1-d2ed-32aa-6fd0" name="Suppression Shield" hidden="false">
+                  <description>The Arbite has a 2+ armour save in close combat only.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="dd8b-280b-3e60-29d9" name="Arbitrator" hidden="false" targetId="9b39-15cd-ae8d-620c" type="profile"/>
+                <infoLink id="6c4b-ce55-6f35-37b0" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3bda-c99e-2af9-0a00" name="Transport" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5669-5aee-4319-da9e" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="802e-12b9-8c94-b833" name="Rhino" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="baba-70cd-3772-390a" name="Rhino" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+                  <characteristics>
+                    <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+                    <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+                    <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+                    <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="9add-e3df-e2f1-a392" name="Reliability" hidden="false">
+                  <description>If a Rhino is immobilised and spends a turn without firing any weapons its drive may be able to effect a temporary repair that turn. On a D6 roll of 6 the vehicle will be free to move in its next Movement phase.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="0f2b-3733-eea4-4032" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="501c-e899-557c-ef6b" name="New CategoryLink" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
+              </categoryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="fc0a-7e37-74f6-97eb" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true">
+                  <selectionEntries>
+                    <selectionEntry id="ea4a-9b22-1372-bc44" name="Dozer Blade" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee31-5f57-4ca1-9e65" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="8ebb-33ef-7cfc-0101" name="Dozer Blade" hidden="false">
+                          <description>Re-roll failed Difficult Terrain tests as long as the model did not move more than 6&quot; that turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="ee9a-e34d-04bd-73e5" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a420-2f00-aaed-6980" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="c611-a65b-616e-400e" name="Extra Armour" hidden="false">
+                          <description>Treat &apos;Crew Stunned&apos; results as &apos;Crew Shakeen&apos; instead.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="c2e5-816a-3612-3a53" name="Hunter-killer Missile" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d109-a892-dac5-c863" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="9926-d19c-923f-cb78" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="acc2-f3af-9f2e-e618" name="Pintle-mounted Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="050a-0536-ec7c-c62a" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="1440-848a-5568-676b" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="69a4-3f82-3f00-f43e" name="Searchlight" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8d0-f24e-915d-6efe" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="ebb7-fbe2-38e5-199b" name="Searchlight" hidden="false">
+                          <description>During battles using Night Fight rules, one enemy unit spotted by the vehicle may be fired at by all other friendly units within range and that have line of sight, but by doing so the vehicle may be fired at by all enemy units in the next turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="df0c-a1e8-4e5f-720d" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4eb-47c8-aabd-02bd" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="6ea0-f055-c88f-8c64" name="Smoke Launchers" hidden="false">
+                          <description>Once per game, after completing its move, a vehicle with Smoke Launchers may trigger them. The vehicle may not fire this turn, but any penetrating hits scored by the enemy in the next shooting phase are instead turned into glancing hits.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d563-4001-6474-ad5c" name="Chimera" hidden="false" collective="false" import="true" type="unit">
+              <profiles>
+                <profile id="f04c-a2d3-be82-ff6f" name="Chimera" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+                  <characteristics>
+                    <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
+                    <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">10</characteristic>
+                    <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
+                    <characteristic name="BS" typeId="ae25-5be4-5470-2204">3</characteristic>
+                    <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">12</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="3caf-dd71-d427-329d" name="Firepoints" hidden="false">
+                  <description>The Chimera is fitted with six hull lasguns for passengers to use. Up to six passangers can use them to fire at single target. Additionally, one model may fire a weapon from the top hatch using their own weapon, but doing so turns the Chimera into an open topped vehicle until the next turn. </description>
+                </rule>
+                <rule id="6acb-181d-7b66-57da" name="Amphibious" hidden="false">
+                  <description>Treat all water features as clear terrain when moving</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="8c98-cd8b-40dc-e46f" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
+              </categoryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="acb8-2a21-0935-e380" name="Turret Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f93b-8b16-2f40-e1fc" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="168a-6be5-91bf-d7bd" type="min"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="836f-2c11-59dc-413b" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="6538-7399-4491-c64b" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="5b74-61d3-a96a-ce21" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="b339-2cef-0f0e-c543" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="235c-f8a4-c52d-4a01" name="Multi-laser" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="22cf-c441-1336-fcf5" name="Multi-laser" hidden="false" targetId="63ed-7ae2-0dce-e02e" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="79b3-bc77-267e-07fe" name="Twin-Linked Heavy Bolter (IA)" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="49ed-972e-10f2-24a3" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
+                          <modifiers>
+                            <modifier type="set" field="name" value="Twin-Linked Heavy Bolter"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="ee53-0889-15f1-bdbd" name="Autocannon (IA)" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="851a-bba1-e4df-d559" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="2470-6ff9-9bc6-61a5" name="Hull Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc1e-1a72-d6f9-8068" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e3e-ddb3-3885-fa65" type="min"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="8067-cf19-b299-4549" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="9fc6-4232-2df7-5595" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="f264-7a1c-889d-d8e2" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="2fc8-65fb-3bdb-b591" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="0858-7833-8bc1-2e78" name="Vehicle Upgrades" hidden="false" collective="false" import="true">
+                  <selectionEntries>
+                    <selectionEntry id="fec4-bfd5-f718-a8f9" name="Camo Netting" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="864a-7c50-ae71-98c3" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="457c-3e1c-4d34-687d" name="Camo Netting" hidden="false">
+                          <description>In scenarios using the Hidden Set-up rules, vehicles carrying camo netting can be set up hidden anywhere in their deployment zone.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="f425-defa-88a4-a7ff" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d98-cab5-5960-49bc" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="0431-11b1-9383-1fd6" name="Extra Armour" hidden="false">
+                          <description>Count the &apos;Crew Stunned&apos; result as &apos;Crew Shaken&apos; instead</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="1037-f17c-6b5d-107e" name="Hunter-Killer Missle" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a965-0953-f7e3-fe8f" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="778e-7945-0407-298a" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="c24d-1e9e-03f2-b4e2" name="Improved Comms" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="49f0-efad-9656-24cf" type="max"/>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a78-d862-db7c-5c43" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="d5da-2066-0f0c-16b6" name="Improved Comms" hidden="false">
+                          <description>The Imperial Guard player may re-roll one Reserves roll per turn, adn to re-roll the dice when checking to see if an enemy unit or obstacle is hit by a preliminary bombardment</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="09b3-4ef3-1dba-efab" name="Mine Sweeper" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fd2-30ba-8076-e2c7" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="e57b-5cea-0a93-4911" name="Mine Sweeper" hidden="false">
+                          <description>The vehicle may enter a minefield without being attack. Any minefield the vehicle moves across is cleared and removed from play</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="1444-a06c-d2ee-d3fe" name="Pintle Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce76-9d50-28b1-ec20" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="e8aa-c134-05fc-5172" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="a0d4-4bb6-8ce9-74eb" name="Rough Terrain Modification" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b89e-4e77-6158-f036" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="f3e4-76e0-aabb-d7a0" name="Rough Terrain Modification" hidden="false">
+                          <description>A vehicle that moves no more than 6&quot; may re-rolled failed Difficult Terrain tests</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="04ad-af07-f015-9d8d" name="Searchlight" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a253-9b01-0507-7c79" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="5a0f-1300-c3c5-1ed9" name="Searchlight" hidden="false">
+                          <description>During Night Fighting missions, one enemy unit spotted by the vehicle can be fired at by any other Imperial Guard units in range and with line of fire. However, the vehicle using the Searchlight will then be exposed and can be fired at by any enemy units that are in range and line of sight of it until the next turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="49c9-a4aa-2d2b-a970" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="338a-100e-c85a-aee9" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="4de6-91ec-3e22-997a" name="Smoke Launchers" hidden="false">
+                          <description>Once per game, after completing movement, a vehicle with smoke launchers may trigger them. The vehicle cannot fire and use its smoke launchers in the same turn. Any penetrating hits scored by the enemy in the next Shooting phase count as glancing hits.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="9536-96b7-6512-127b" name="Track Guards" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afd2-635f-6866-1749" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="4dda-1b70-c1bc-182e" name="Track Guards" hidden="false">
+                          <description>The vehicle treats &apos;Immobilised&apos; results as &apos;Crew Stunned&apos; on a roll of a 4+. This does not combine with the extra armour ability.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8a20-969c-4b0c-1a20" name="Arbites Partrol Team (Citadel Journal 29)" publicationId="14a5-5fbb-19cd-e8ee" page="20" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="0bfc-52b2-caa9-1718" name="Proctor" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0edb-8ebb-fbeb-c206" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="aed7-2a45-2099-6821" name="Proctor" hidden="false" targetId="a899-43a0-00d8-ca2a" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink id="010d-b863-04e7-0277" name="Arbites Weapon List" hidden="false" collective="false" import="true" targetId="341a-db7b-80c8-470b" type="selectionEntryGroup">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="011a-2531-8f11-7ed1" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="7.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9b83-d7cd-a62b-f2aa" name="Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="650e-2982-8068-492f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9311-7815-73b4-fbf9" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+            <infoLink id="9270-39a2-d9cf-9378" name="Grenade Launcher (krak)" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="33e9-bc72-c6a0-92d0" name="Arbitrators" hidden="false" collective="false" import="true" defaultSelectionEntryId="215f-86e6-8e90-983c">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="297e-d8f7-f3c3-00c2" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7381-07fb-d1c7-86ec" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="215f-86e6-8e90-983c" name="Arbitrator" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="4c00-78d4-ab0e-d104" name="Arbitrator" hidden="false" targetId="9b39-15cd-ae8d-620c" type="profile"/>
+                <infoLink id="9a70-0846-80f1-cd41" name="Shotgun" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
+                <infoLink id="5b1e-5e43-fd7a-82ec" name="Executioner Shotgun" hidden="false" targetId="71b7-45ca-0389-1358" type="profile"/>
+                <infoLink id="28c0-7f6f-4944-67fd" name="Arbites Shotgun" hidden="false" targetId="6afb-5a3e-8e8b-135a" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b73a-3bc9-9e0d-a64c" name="Transport" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="722a-835d-d622-aec8" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="88a2-8dab-4809-8460" name="Rhino" hidden="false" collective="false" import="true" type="model">
+              <profiles>
+                <profile id="33a0-06e4-afe3-38ef" name="Rhino" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+                  <characteristics>
+                    <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+                    <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+                    <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+                    <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="36bb-d810-5058-da92" name="Reliability" hidden="false">
+                  <description>If a Rhino is immobilised and spends a turn without firing any weapons its drive may be able to effect a temporary repair that turn. On a D6 roll of 6 the vehicle will be free to move in its next Movement phase.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="a4c7-f0ce-883e-99a9" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="5df7-b72b-0ba1-efa6" name="New CategoryLink" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
+              </categoryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="3e06-cda5-5e0b-97c4" name="Space Marine Vehicle Upgrades" hidden="false" collective="false" import="true">
+                  <selectionEntries>
+                    <selectionEntry id="680e-def1-fba7-a569" name="Dozer Blade" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ecd-b5d9-ee95-31de" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="4c2a-c5bd-e87c-c5c6" name="Dozer Blade" hidden="false">
+                          <description>Re-roll failed Difficult Terrain tests as long as the model did not move more than 6&quot; that turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="6f25-e24c-5dd3-f8f2" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd8c-b319-4355-9739" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="2372-2de7-9608-a092" name="Extra Armour" hidden="false">
+                          <description>Treat &apos;Crew Stunned&apos; results as &apos;Crew Shakeen&apos; instead.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="f773-5179-9e61-90bf" name="Hunter-killer Missile" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44f2-7e1e-36d7-bd0b" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="d670-29f7-4847-27a6" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="d698-989c-2313-aded" name="Pintle-mounted Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9877-8164-8542-dbea" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="6b55-c07c-9bcd-41c9" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="4e44-e643-7303-d9e7" name="Searchlight" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27f8-91d5-5e77-b613" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="81fc-5f77-5faf-c2a7" name="Searchlight" hidden="false">
+                          <description>During battles using Night Fight rules, one enemy unit spotted by the vehicle may be fired at by all other friendly units within range and that have line of sight, but by doing so the vehicle may be fired at by all enemy units in the next turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="b831-f67a-6b1e-547f" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b816-93c1-3fc8-6e05" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="435a-bb24-ef07-1547" name="Smoke Launchers" hidden="false">
+                          <description>Once per game, after completing its move, a vehicle with Smoke Launchers may trigger them. The vehicle may not fire this turn, but any penetrating hits scored by the enemy in the next shooting phase are instead turned into glancing hits.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b8ec-725d-f9c2-c46d" name="Chimera" hidden="false" collective="false" import="true" type="unit">
+              <profiles>
+                <profile id="8b11-4082-4f38-5c2a" name="Chimera" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+                  <characteristics>
+                    <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
+                    <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">10</characteristic>
+                    <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
+                    <characteristic name="BS" typeId="ae25-5be4-5470-2204">3</characteristic>
+                    <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">12</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="328f-dd47-7191-1ffe" name="Firepoints" hidden="false">
+                  <description>The Chimera is fitted with six hull lasguns for passengers to use. Up to six passangers can use them to fire at single target. Additionally, one model may fire a weapon from the top hatch using their own weapon, but doing so turns the Chimera into an open topped vehicle until the next turn. </description>
+                </rule>
+                <rule id="e2e1-ffd1-75ba-1c28" name="Amphibious" hidden="false">
+                  <description>Treat all water features as clear terrain when moving</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="dbb4-9606-997f-ff42" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
+              </categoryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="9d58-1ef9-5396-6c26" name="Turret Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1d8-360b-510b-35d0" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e06f-1c60-00e6-dd20" type="min"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="d5f1-4bf0-85a7-318f" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="9010-aee0-0372-b088" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="1c4e-cf34-dc89-5d5e" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="231c-529a-0bb1-63ed" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="1d72-fc3d-27ff-2461" name="Multi-laser" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="c44b-9f89-e734-e51e" name="Multi-laser" hidden="false" targetId="63ed-7ae2-0dce-e02e" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="5713-52b1-0ddf-9b42" name="Twin-Linked Heavy Bolter (IA)" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="15bb-731d-7ebb-2851" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
+                          <modifiers>
+                            <modifier type="set" field="name" value="Twin-Linked Heavy Bolter"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="758f-e087-900d-5f0b" name="Autocannon (IA)" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="4b13-2a3c-7594-c810" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="0f6f-3c4c-9b39-cb82" name="Hull Weapon" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="137e-a569-66f5-cce7" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75d7-917d-5b43-4525" type="min"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="f9f7-94f5-cd6d-b924" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="ee00-ea09-d7e8-f524" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="77a2-977b-57b1-7b19" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink id="5109-703f-47a9-fffd" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup id="f124-0913-cd45-f6ae" name="Vehicle Upgrades" hidden="false" collective="false" import="true">
+                  <selectionEntries>
+                    <selectionEntry id="a0c9-bcca-9a19-f1a9" name="Camo Netting" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d3a-fde3-ace3-6d40" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="996d-6483-f5ee-d45f" name="Camo Netting" hidden="false">
+                          <description>In scenarios using the Hidden Set-up rules, vehicles carrying camo netting can be set up hidden anywhere in their deployment zone.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="2011-c718-5d89-2915" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a90b-e22e-4a8d-2970" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="5c04-8d61-2299-77de" name="Extra Armour" hidden="false">
+                          <description>Count the &apos;Crew Stunned&apos; result as &apos;Crew Shaken&apos; instead</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="ff76-a879-9ff7-c5c6" name="Hunter-Killer Missle" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95cd-0069-027d-2e0e" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="99f7-a0be-833a-65f3" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="4f5b-d709-76a5-a309" name="Improved Comms" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47bf-9b78-c8dc-a7f3" type="max"/>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9ca-e00f-0ae4-546d" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="a532-3f57-e1e3-faf5" name="Improved Comms" hidden="false">
+                          <description>The Imperial Guard player may re-roll one Reserves roll per turn, adn to re-roll the dice when checking to see if an enemy unit or obstacle is hit by a preliminary bombardment</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="7434-afe8-097a-24ef" name="Mine Sweeper" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f55a-d46b-2b5f-ffe6" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="4a54-8b80-f052-79a0" name="Mine Sweeper" hidden="false">
+                          <description>The vehicle may enter a minefield without being attack. Any minefield the vehicle moves across is cleared and removed from play</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="922e-e0db-f3ab-c786" name="Pintle Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b3b-0d2c-b33f-4e82" type="max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink id="6572-ed06-6bcd-553b" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="fd8b-246b-be3f-b9cd" name="Rough Terrain Modification" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d5a-ed26-5e92-cff8" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="ebf6-7dd3-4216-3b4a" name="Rough Terrain Modification" hidden="false">
+                          <description>A vehicle that moves no more than 6&quot; may re-rolled failed Difficult Terrain tests</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="5943-beb7-5261-d4e8" name="Searchlight" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61f7-1485-94c1-a397" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="fc1d-e046-ade9-71ad" name="Searchlight" hidden="false">
+                          <description>During Night Fighting missions, one enemy unit spotted by the vehicle can be fired at by any other Imperial Guard units in range and with line of fire. However, the vehicle using the Searchlight will then be exposed and can be fired at by any enemy units that are in range and line of sight of it until the next turn.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="b604-aade-5695-5555" name="Smoke Launchers" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b62-0a68-930d-6667" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="3bb0-2c61-9c07-207d" name="Smoke Launchers" hidden="false">
+                          <description>Once per game, after completing movement, a vehicle with smoke launchers may trigger them. The vehicle cannot fire and use its smoke launchers in the same turn. Any penetrating hits scored by the enemy in the next Shooting phase count as glancing hits.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="82ae-98fa-66c1-71d4" name="Track Guards" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d74-8701-9377-fe57" type="max"/>
+                      </constraints>
+                      <rules>
+                        <rule id="2d5f-c3f7-67c1-943c" name="Track Guards" hidden="false">
+                          <description>The vehicle treats &apos;Immobilised&apos; results as &apos;Crew Stunned&apos; on a roll of a 4+. This does not combine with the extra armour ability.</description>
+                        </rule>
+                      </rules>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="eab7-7a7d-8220-e8e2" name="Arbites Rapid Pursuit Team (Citadel Journal 29)" publicationId="14a5-5fbb-19cd-e8ee" page="21" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="9573-2988-1b3e-c1d8" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+        <infoLink id="7ae4-3e64-cf28-f772" name="Bikes" hidden="false" targetId="6bd6-e738-e144-6db9" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="ea42-1dff-b7a0-6ae9" name="Proctor" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29f6-1d45-e404-459e" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="6a3d-fadb-6877-1cb1" name="Proctor" hidden="false" targetId="a899-43a0-00d8-ca2a" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink id="4e19-9651-19ae-a11d" name="Arbites Weapon List" hidden="false" collective="false" import="true" targetId="341a-db7b-80c8-470b" type="selectionEntryGroup">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed9f-aed7-61a7-7262" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="7.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2df1-fdd8-9e41-7dc9" name="Arbitrators" hidden="false" collective="false" import="true" defaultSelectionEntryId="bdf1-3b60-e8b7-7085">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="893d-57c8-ef4c-19e3" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5b4-320c-bfec-7673" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="bdf1-3b60-e8b7-7085" name="Arbitrator" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="29c8-38fd-3031-a89f" name="Arbitrator" hidden="false" targetId="9b39-15cd-ae8d-620c" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="e5f6-94c4-de8c-5fa8" value="3(4)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="5753-7caf-4104-9861" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Bolter"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="341a-db7b-80c8-470b" name="Arbites Weapon List" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="6c25-a27a-6f5c-e900" name="Additional Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="d713-a32a-2ca7-4dad" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f40c-146c-e113-5310" name="Boltgun" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="1fa2-0492-057d-1466" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4409-8abc-79d4-f400" name="Lasgun" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="d33d-6741-e5c0-924d" name="Lasgun" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="43b0-572b-01b5-77d9" name="Arbites Shotgun" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="fbb6-6cdd-68e3-e327" name="Arbites Shotgun" hidden="false" targetId="6afb-5a3e-8e8b-135a" type="rule"/>
+            <infoLink id="982b-e86e-72cd-1a8c" name="Executioner Shotgun" hidden="false" targetId="71b7-45ca-0389-1358" type="profile"/>
+            <infoLink id="1ca4-8f94-2e28-55b5" name="Shotgun" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ae9b-5044-2f05-e778" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="95c2-f483-3a21-5a34" name="Plasma Pistol" hidden="false" targetId="7b91-b670-d042-7c88" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="29b4-fcdc-cb68-01e0" name="Power Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="27ce-f8f1-2f17-ab63" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cc17-799e-3e44-ea31" name="Powerfist" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="735a-cbcb-6e76-8f23" name="Power Fist" hidden="false" targetId="a161-ed4b-bcb7-0a01" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="db43-89e9-13bf-eda1" name="Combi-Flamer" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="7528-239e-a9c3-2fa2" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+            <infoLink id="2bcd-9898-3d6f-3112" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c019-e582-596e-aaaf" name="Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="2541-6f39-5e6e-2906" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9984-ea3b-8ab6-82bc" name="Combi-Melta" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="8f98-1e47-b3ec-e932" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+            <infoLink id="86a2-e311-826d-e17e" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ded8-0277-955b-caf1" name="Combi-Plasma" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="508a-3e07-767c-f121" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
+            <infoLink id="7e53-2640-072f-b18d" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="4a60-7f7e-c37f-a4d6" name="Independent Character" hidden="false"/>
     <rule id="97b3-810d-a09e-872b" name="Invulnerable Saving Throw" hidden="false"/>
@@ -1611,6 +3009,9 @@ Others: The vehile causes tank shock if it moves through the enemy, just like Ta
       <description>One use only.
 
 Blind/smoke grenades are used in the Shooting phase instead of the unit firing any weapons. Mark the unit as using its blind/smoke grenades by placing cotton wool around them. A unit cannot assault on the same turn it uses blind/smoke grenades. The blind/smoke screen lasts until the start of the player&apos;s next turn and until then the unit counts as in cover with a 5+ cover save. Because they count as being in cover, models in the unit will also strike first if assaulting, unless the enemy is armed with something like frag grenades, or has an ability that allows them to always strike first.</description>
+    </rule>
+    <rule id="6afb-5a3e-8e8b-135a" name="Arbites Shotgun" publicationId="14a5-5fbb-19cd-e8ee" page="18" hidden="false">
+      <description>A model armed with a Arbites Shotgun may choose to use the Shotgun or Executioner Shotgun profile prior to rolling to hit.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2992,6 +4393,54 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/AA</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="ae50-ed21-fc34-b433" name="Judge" publicationId="14a5-5fbb-19cd-e8ee" page="19" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="9b39-15cd-ae8d-620c" name="Arbitrator" publicationId="14a5-5fbb-19cd-e8ee" page="19" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">7</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a899-43a0-00d8-ca2a" name="Proctor" publicationId="14a5-5fbb-19cd-e8ee" page="19" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="71b7-45ca-0389-1358" name="Executioner Shotgun" publicationId="14a5-5fbb-19cd-e8ee" page="18" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Re-roll Misses</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
