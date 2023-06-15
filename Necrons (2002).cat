@@ -18,6 +18,9 @@
     <entryLink id="1b85-ea5c-f41f-a842" name="Tomb Spyders" hidden="false" collective="false" import="true" targetId="0164-f47e-2789-9154" type="selectionEntry"/>
     <entryLink id="3580-4b5a-f18e-93b0" name="Warriors" hidden="false" collective="false" import="true" targetId="7fdf-5e14-4871-22ad" type="selectionEntry"/>
     <entryLink id="5e1f-85c5-a346-18f0" name="Wraiths" hidden="false" collective="false" import="true" targetId="9605-3b01-4680-5ca1" type="selectionEntry"/>
+    <entryLink id="c713-0561-1ac5-9115" name="Night Scythe (Homebrew)" hidden="false" collective="false" import="true" targetId="f851-9166-e134-2d28" type="selectionEntry"/>
+    <entryLink id="e0ac-dc52-c35f-a67f" name="Annihilation Barge (Homebrew)" hidden="false" collective="false" import="true" targetId="b5ae-9f0f-dd5c-2fe3" type="selectionEntry"/>
+    <entryLink id="b7c4-23fc-50c3-5d2b" name="Triarch Stalkers (Homebrew)" hidden="false" collective="false" import="true" targetId="5aee-d841-f349-f1f5" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8fc7-a6c7-799f-bef7" name="Necron Lord" hidden="false" collective="false" import="true" type="unit">
@@ -60,6 +63,11 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="7e8c-fd7c-5a0d-ad78" name="Necron Wargear" hidden="false" collective="false" import="true" targetId="6938-e3f0-977a-35ce" type="selectionEntryGroup"/>
+        <entryLink id="06ea-423e-8de3-2b5a" name="Catacomb Command Barge (Homebrew)" hidden="false" collective="false" import="true" targetId="1e88-d98c-d696-d244" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d5f-7489-e83e-6707" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100.0"/>
@@ -222,6 +230,7 @@
         <infoLink id="ce22-eb9f-9ccc-dffe" name="Gauss Flayer" hidden="false" targetId="fe17-2150-02e5-4298" type="profile"/>
         <infoLink id="4d15-30b4-67d2-de8a" name="Phase Out" hidden="false" targetId="d2b0-ba08-4fb1-d9f3" type="rule"/>
         <infoLink id="4e9c-bf35-b807-b9ee" name="We&apos;ll Be Back!" hidden="false" targetId="e957-8c69-1203-279c" type="rule"/>
+        <infoLink id="d034-8d2e-9e02-cc5b" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9895-9bc3-73b8-37da" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
@@ -261,6 +270,20 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="f273-ad45-c4c6-2dcc" name="Ghost Arc (Homebrew)" hidden="false" collective="false" import="true" targetId="f6c6-6c43-39d8-faf1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d56a-c986-f6c8-0257" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec1c-78cf-0b28-b372" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
@@ -433,7 +456,11 @@
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="73b3-219b-9447-0f1a" name="Staff of Light" hidden="false" targetId="f0e1-c7e2-18e3-5e45" type="profile"/>
+                <infoLink id="73b3-219b-9447-0f1a" name="Staff of Light" hidden="false" targetId="f0e1-c7e2-18e3-5e45" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Particle Projector"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -479,9 +506,6 @@
     </selectionEntry>
     <selectionEntry id="dc9f-b5be-d617-3729" name="Monolith" hidden="false" collective="false" import="true" type="unit">
       <rules>
-        <rule id="fb59-90f2-b5b7-778b" name="Living Metal" hidden="false">
-          <description>Attacks which count the target&apos;s Armor Value as being less than it really is do not do so against the Monolith. Similarly, weapons that get additional Armor Penetration dice do not get the extra dice against the Monolith. Ordnance weapons still roll 2D6 and select the highest.</description>
-        </rule>
         <rule id="3acc-28e8-8fb3-f339" name="Ponderous" hidden="false">
           <description>The Monolith is a skimmer whihc can move up to 6&quot; a turn and can if it wished remain totally stationary. It will not drift if stunned or shaken and if immobilised will not crash like other skimmers.</description>
         </rule>
@@ -503,6 +527,7 @@
         <infoLink id="7954-5ffc-44e7-9a19" name="Monolith" hidden="false" targetId="19b8-5cfb-abe1-7925" type="profile"/>
         <infoLink id="853f-0c23-012d-214b" name="Gauss Flux Arc" hidden="false" targetId="3327-1be5-382c-8124" type="profile"/>
         <infoLink id="1102-a188-b232-f293" name="Particle Whip" hidden="false" targetId="ab40-80fe-6cda-81bd" type="profile"/>
+        <infoLink id="743a-b0e2-6f7e-2ce3" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5af4-5894-b718-5556" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -591,6 +616,304 @@
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="360.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f851-9166-e134-2d28" name="Night Scythe (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>7th Ed rules and VDR (ignoring some of restrictions put in place for Necrons by CA2004)
+
+Flyer-Normal
+Armor - 11-11-11 = 5+30+20=55
+Flyer=40
+
+Living Metal=50
+Tesla Destructor=50 (based on some analysis this appears to be worth 50 points compared to any autocannon after considering Tesla)</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule id="e53e-89e3-d356-011f" name="Living Metal" hidden="false">
+          <description>Attacks which count the target&apos;s Armor Value as being less than it really is do not do so against the Monolith. Similarly, weapons that get additional Armor Penetration dice do not get the extra dice against the Monolith. Ordnance weapons still roll 2D6 and select the highest.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="9088-768c-429a-a204" name="Night Scythe" hidden="false" targetId="f92d-3a3c-4025-befc" type="profile"/>
+        <infoLink id="0496-6f0c-5070-cd43" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="c440-6c12-4b5e-10a0" name="Tesla" hidden="false" targetId="6f5b-5593-89e2-7728" type="rule"/>
+        <infoLink id="9bc4-f4d7-616c-ba92" name="Tesla Destructor" hidden="false" targetId="5ade-9992-f072-1150" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Tesla Destructor"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="908b-028e-ca5e-4296" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="195.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f6c6-6c43-39d8-faf1" name="Ghost Arc (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Skimmer-Normal-Open-Topped
+
+Armour = 11-11-11 = 5+30+20=55
+Speed Normal = 10
+opentopped = -5
+Transport = 10
+Skimmer = 20
+Living Metal=50
+
+5x Gauss Flayer = 25</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="f4c0-f253-0938-5e05" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="3bbe-5c22-92fb-445c" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
+        <infoLink id="acd5-087a-726e-53a8" name="Ghost Arc" hidden="false" targetId="6943-b346-e690-2bc5" type="profile"/>
+        <infoLink id="975a-4b0f-7940-9654" name="Gauss Flayer" hidden="false" targetId="fe17-2150-02e5-4298" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="5 Gauss Flayers"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="1a03-df98-7234-3ef2" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
+        <infoLink id="3726-1da4-a9ab-c6ce" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="91dc-a203-3c9b-c839" name="Dedicated Transport" hidden="false" targetId="a090-a855-c7de-f5c3" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="165.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b5ae-9f0f-dd5c-2fe3" name="Annihilation Barge (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Skimmer-Opentopped
+
+Armor = 11+11+11 = 5+30+20 = 55
+Skimmer = 20
+Opentopped= -5
+Normal Speed = 10
+Living Metal = 50
+Twin-linked Tesla Destructor = 75</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="8229-acd9-556f-0503" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="f763-b369-d852-003a" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink id="c8cf-be1f-40e8-a8d7" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
+        <infoLink id="3b93-71ee-0f3f-3fd7" name="Annihilation Barge" hidden="false" targetId="6c9c-aff2-1e04-fd70" type="profile"/>
+        <infoLink id="c70a-b34d-8c92-6b51" name="Tesla Destructor" hidden="false" targetId="5ade-9992-f072-1150" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-linked Tesla Destructor"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="c2e1-9bd3-dce8-b096" name="Tesla" hidden="false" targetId="6f5b-5593-89e2-7728" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2fa7-0b1a-c4cf-5b9b" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5130-8a60-4823-7b1c" name="Under Carraige Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="41c9-7172-803d-0817">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0895-6664-2c55-ecf6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb0f-5978-75da-7238" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="41c9-7172-803d-0817" name="Gauss Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="b61b-02de-26f2-c6fd" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
+                <infoLink id="1b31-65b1-a78b-6590" name="Gauss Cannon" hidden="false" targetId="96af-6622-de74-9cb8" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="00bc-a577-8200-f278" name="Tesla Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="28d1-52ab-3b0f-c275" name="Telsa Cannon" hidden="false" targetId="723c-ae96-7a54-94ff" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="205.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1e88-d98c-d696-d244" name="Catacomb Command Barge (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal-Skimmer-OpenTopped
+Armor = 11-11-11 = 5+30+20=55
+Opentopped = -5
+Living Metal = 50
+Transport = 1
+Fast = 20
+Skimmer=20</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule id="9bfe-a8de-a142-c57f" name="Chariot" hidden="false">
+          <description>If the Catacomb Command Barge is assaulted the Necron Lord embarked on it may make melee attacks on the models assaulting it. Resolve the attacks in Initiative order as normal. If the Catacomb Command Barge is destroyed before the Necron Lord can attack then he may not make these attacks.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="0502-7f16-6af2-ede6" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink id="d806-b845-30a5-3c03" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+        <infoLink id="a113-cc38-4cb4-9abc" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink id="5fed-25a5-a581-ff37" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6b70-ba11-539d-094b" name="Under Carraige Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7aa4-aef0-5a7b-af7e">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5c5-9bed-7e6a-4b3a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73d9-4f1f-dd7f-3015" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="7aa4-aef0-5a7b-af7e" name="Gauss Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="5eb2-c7dd-5986-af11" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
+                <infoLink id="fd2c-2360-ccf6-2a12" name="Gauss Cannon" hidden="false" targetId="96af-6622-de74-9cb8" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dbff-459f-1809-9e5c" name="Tesla Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="ad14-a0cc-3d47-b603" name="Tesla Cannon" hidden="false" targetId="723c-ae96-7a54-94ff" type="profile"/>
+                <infoLink id="52fe-8f4a-0d41-b8ea" name="Tesla" hidden="false" targetId="6f5b-5593-89e2-7728" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="141.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5aee-d841-f349-f1f5" name="Triarch Stalkers (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ad75-1b7c-4c72-dc80" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9e12-2317-d36b-941f" name="Triarch Stalker" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>Walker-Small-Opentopped
+Armor = 11-11-11 = 5+30+20=55
+Normal Speed = 5
+opentopped = -5
+Living Metal=50
+CCW = 1*4*3 = 12
+
+</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3db0-dd1b-a039-dadb" type="min">
+              <comment>
+</comment>
+            </constraint>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="181a-182f-a973-943b" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b36d-e208-96d8-f2d3" name="Move Through Cover" hidden="false" targetId="3a88-67df-4004-176b" type="rule"/>
+            <infoLink id="9b20-dc2e-3f87-a178" name="Living Metal" hidden="false" targetId="7952-d645-54f2-4e49" type="rule"/>
+            <infoLink id="d3ed-72c7-15c9-e12e" name="Triarch Stalker" hidden="false" targetId="541b-e47a-cdf8-9315" type="profile"/>
+            <infoLink id="f059-d48c-ce07-795d" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="28d0-b7dd-f362-4902" name="Weapon" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f2f-4c87-b135-3efa" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f60b-75f6-f8a1-2fa7" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="42fa-301e-e854-740f" name="Heat Ray" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="5dac-965e-3fa0-6a89" name="Heat Ray (Melta)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+                        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+                        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
+                        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Melta</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="c69f-6782-f2d9-d932" name="Heat Ray (Flamer)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
+                        <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+                        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+                        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="d843-5914-a58d-097d" name="Twin-linked Heavy Gauss Cannon" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="fe65-315d-f93c-65e9" name="Gauss Weapons" hidden="false" targetId="ec1e-b09d-90d9-bba3" type="rule"/>
+                    <infoLink id="3f2f-a997-2e5d-b6de" name="Gauss Cannon" hidden="false" targetId="96af-6622-de74-9cb8" type="profile">
+                      <modifiers>
+                        <modifier type="set" field="name" value="Twin-linked Gauss Cannon"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="1889-ac08-a3d6-5db1" name="Particle Projector" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="1fc7-070f-ad6d-ca29" name="Staff of Light" hidden="false" targetId="f0e1-c7e2-18e3-5e45" type="profile">
+                      <modifiers>
+                        <modifier type="set" field="name" value="Particle Projector"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="117.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -797,6 +1120,16 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
     <rule id="ec1e-b09d-90d9-bba3" name="Gauss Weapons" hidden="false">
       <description>Against troops, any roll to would of a 6 automatically causes a would regardless of Toughness. Agaisnt vehicles, any roll of 6 will cause a glancing hit if it does not already cause a penetrating hit.</description>
     </rule>
+    <rule id="7952-d645-54f2-4e49" name="Living Metal" hidden="false">
+      <description>Attacks which count the target&apos;s Armor Value as being less than it really is do not do so against the Monolith. Similarly, weapons that get additional Armor Penetration dice do not get the extra dice against the Monolith. Ordnance weapons still roll 2D6 and select the highest.</description>
+    </rule>
+    <rule id="6f5b-5593-89e2-7728" name="Tesla" hidden="false">
+      <comment>7th Edition Rule seems most fair and in line with 3rd edition type play</comment>
+      <description>A Tesla weapon that rolls a to hit of a 6 causes 2 hits on a target instead of only 1.</description>
+    </rule>
+    <rule id="c4ab-4235-0b02-127d" name="Shroud" hidden="false">
+      <description>A Shourd system wreaths the Necron vehicle in a shifting miasma of impenetrable shadow. All shooting attacks made against the vehicle use the night fighting special rule if it is not already in use.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="e74a-1780-4c85-52aa" name="Necron Lord" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
@@ -957,6 +1290,70 @@ If a Wraithcannon inflicts instant death on a C&apos;tan it will not be transpor
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="f92d-3a3c-4025-befc" name="Night Scythe" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">11</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6943-b346-e690-2bc5" name="Ghost Arc" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">11</characteristic>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">11</characteristic>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">11</characteristic>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204">4</characteristic>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6c9c-aff2-1e04-fd70" name="Annihilation Barge" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">11</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="5ade-9992-f072-1150" name="Tesla Destructor" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">0</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Tesla</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="723c-ae96-7a54-94ff" name="Tesla Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Tesla</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a9b4-9deb-95a6-0c4b" name="Command Barge" hidden="false" typeId="5535-2b48-81ee-04ce" typeName="Transport">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">11</characteristic>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">11</characteristic>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">11</characteristic>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204">4</characteristic>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="541b-e47a-cdf8-9315" name="Triarch Stalker" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+      <characteristics>
+        <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">4</characteristic>
+        <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
+        <characteristic name="S" typeId="2870-c64f-81e5-a118">7</characteristic>
+        <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">11</characteristic>
+        <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">11</characteristic>
+        <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">11</characteristic>
+        <characteristic name="I" typeId="695a-ba63-65d1-3ce5">2</characteristic>
+        <characteristic name="A" typeId="bb33-7ddf-2296-174e">3</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
