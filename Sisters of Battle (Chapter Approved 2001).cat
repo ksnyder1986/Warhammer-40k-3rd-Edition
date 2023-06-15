@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="f711-3772-cc5d-47dd" name="Sisters of Battle (Chapter Approved 2001)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="f3cc-7f9b-fb5d-c740" name="Imperial Guard" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d39-f332-f35f-2a64" type="max"/>
+      </constraints>
+    </categoryEntry>
+  </categoryEntries>
   <entryLinks>
     <entryLink id="2b96-3892-e134-77a9" name="Canoness" hidden="false" collective="false" import="true" targetId="b3bb-c4aa-64a1-e24f" type="selectionEntry">
       <constraints>
@@ -32,7 +39,7 @@
         <categoryLink id="7543-ccad-aeae-b841" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="2ed4-d499-8d2b-ba42" name="Battle Sisters Squad" hidden="false" collective="false" import="true" targetId="bc18-2259-650d-40d1" type="selectionEntry">
+    <entryLink id="2ed4-d499-8d2b-ba42" name="Battle Sisters Squad (Troops)" hidden="false" collective="false" import="true" targetId="bc18-2259-650d-40d1" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="0a5a-375b-2164-35e5" name="New CategoryLink" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
@@ -67,75 +74,289 @@
         <categoryLink id="52e8-1dc8-aa3d-e96e" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="68f9-9950-d4a8-6804" name="Infantry Squad" hidden="false" collective="false" import="true" targetId="584a-7ef5-fc9e-34b4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4088-b004-fead-8f11" name="Imperial Guard" hidden="false" targetId="f3cc-7f9b-fb5d-c740" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="41e2-016c-249b-343b" name="Armoured Fist Squad" hidden="false" collective="false" import="true" targetId="f2ac-82ed-d154-87aa" type="selectionEntry">
+      <modifiers>
+        <modifier type="unset-primary" field="category" value="0ef5-5056-d52e-3cfd"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="6a57-fd37-d23d-8367" name="Imperial Guard" hidden="false" targetId="f3cc-7f9b-fb5d-c740" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="c2d4-9a0d-b92a-3a9a" name="Storm Troopers" hidden="false" collective="false" import="true" targetId="e7cd-a8b8-db28-d34e" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="76d7-4838-e996-11a5" name="Imperial Guard" hidden="false" targetId="f3cc-7f9b-fb5d-c740" primary="false"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
-    <selectionEntry id="b3bb-c4aa-64a1-e24f" name="Canoness" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b3bb-c4aa-64a1-e24f" name="Canoness" hidden="false" collective="false" import="true" type="model">
+      <rules>
+        <rule id="9478-86af-4198-c4f6" name="Sacred Rites" hidden="false">
+          <description>The Canoness adds +2 Faith Points</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="783a-f3c4-51d7-8046" name="Canoness" hidden="false" targetId="e917-5c4f-d4b5-cecf" type="profile"/>
+        <infoLink id="af8a-1863-62b3-811e" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="6cf7-e789-931c-6edc" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b275-4952-0a96-6646" name="Bodyguard" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0d7-297c-cc9e-9d8f" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="d4da-a37c-63de-c825" name="Celestian Bodyguard" hidden="false" collective="false" import="true" targetId="bb13-c0c0-8ad7-b55c" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="9543-b31b-0bb2-2c8c" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6242-4ef1-097e-5e86" name="Celestian Superior" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="6242-4ef1-097e-5e86" name="Celestian Superior" hidden="false" collective="false" import="true" type="model">
+      <rules>
+        <rule id="6d7c-cb40-e11a-3fc4" name="Sacred Rites" hidden="false">
+          <description>The Celestian Superior adds +1 Faith Point</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="fca0-bd0d-17df-89e6" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
+        <infoLink id="3f46-a06e-563a-e719" name="Celestain Superior" hidden="false" targetId="cc44-df57-041e-ad17" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="ab0b-d9fe-e6de-1419" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9373-bf59-2feb-a8df" name="Bodyguard" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53f4-5177-111e-16b9" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="cf92-6b82-c04a-6922" name="Celestian Bodyguard" hidden="false" collective="false" import="true" targetId="bb13-c0c0-8ad7-b55c" type="selectionEntry"/>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="6a6a-333f-e6c2-eee8" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bb13-c0c0-8ad7-b55c" name="Celestian Bodyguard" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="bb13-c0c0-8ad7-b55c" name="Celestian Bodyguard" hidden="false" collective="false" import="true" type="unit">
+      <selectionEntries>
+        <selectionEntry id="bc76-313f-7b26-18c3" name="Sister Superior" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3762-fa23-5d32-8eaf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa53-0e8c-3d4b-5a6f" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b9c7-b76e-a474-6a6c" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bef1-a34e-78bf-6433" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6a17-3317-2a64-0552" name="Veteran Sister Superior" hidden="false" targetId="8daa-eee8-33eb-4ad7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="eff2-4278-6861-8517" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="ea23-4b20-c15b-0c23">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca77-00fe-82cb-417d" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b28-d28a-c1da-c7bd" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="ea23-4b20-c15b-0c23" name="Boltgun" hidden="false" collective="false" import="true" type="upgrade"/>
+                <selectionEntry id="1a30-d927-7851-8ac1" name="Bolt Pistol and CCW" hidden="false" collective="false" import="true" type="upgrade"/>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="37b5-b0d1-808d-9085" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b9c7-b76e-a474-6a6c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="de51-2be7-836d-bf6f" name="Bodyguards" hidden="false" collective="false" import="true" defaultSelectionEntryId="77b2-2a8b-e680-c0a3">
+          <constraints>
+            <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3d6-b403-0014-eb94" type="max"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05cd-d478-ce5b-84b4" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="77b2-2a8b-e680-c0a3" name="Celestian" hidden="false" collective="false" import="true" type="model">
+              <infoLinks>
+                <infoLink id="b712-8b39-7f40-908c" name="Celestain" hidden="false" targetId="db9b-91a4-4f99-9855" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3601-f467-dd69-f9b1" name="Banner Bearer" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6012-4dc0-30ea-87e2" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a5f3-ecfa-edb3-d6ec" name="Celestain" hidden="false" targetId="db9b-91a4-4f99-9855" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="3580-a95e-540e-6028" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="64ce-a67d-45b0-215d" name="Imagifer" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4201-805d-cac6-6716" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8637-1507-b6c0-49a3" name="Celestain" hidden="false" targetId="db9b-91a4-4f99-9855" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="cd83-4712-cef5-f742" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1db3-e2fb-0044-4358" name="Sister of the Orders Hospitaller" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faa2-26e3-b178-38fd" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="728b-8b5d-26ba-ad91" name="Medicus Ministorum" hidden="false"/>
+              </rules>
+              <infoLinks>
+                <infoLink id="77c5-2482-1766-a5f9" name="Celestain" hidden="false" targetId="db9b-91a4-4f99-9855" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="e35a-56cf-a9f8-beb4" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2864-f05e-465c-5b3d" name="Sister of the Orders Famulous" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a916-caa4-433c-859b" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ae85-09e6-af29-e8fd" name="Celestain" hidden="false" targetId="db9b-91a4-4f99-9855" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="ed07-7be8-960d-5f56" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fb9e-72b0-3f2c-d1f0" name="Sister of the Order Dialogus" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cff-2639-19f0-8bf8" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="e910-d0a5-7db7-8ef9" name="Sacred Rites" hidden="false"/>
+              </rules>
+              <infoLinks>
+                <infoLink id="2f6c-1fda-88c8-08d7" name="Celestain" hidden="false" targetId="db9b-91a4-4f99-9855" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="9de0-88f9-8117-4bbd" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="27.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b9c2-edf0-8186-f66d" name="Dominion Squad" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b9c2-edf0-8186-f66d" name="Dominion Squad" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5b70-96f7-1738-aa72" name="Celestian Squad" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="5b70-96f7-1738-aa72" name="Celestian Squad" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b48d-f5fd-aec9-da25" name="Priestly Delegation" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="b48d-f5fd-aec9-da25" name="Priestly Delegation" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bc18-2259-650d-40d1" name="Battle Sisters Squad (Troops)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="bc18-2259-650d-40d1" name="Battle Sisters Squad (Troops)" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a063-c048-be5d-bf3b" name="Redemptionists" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a063-c048-be5d-bf3b" name="Redemptionists" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="87ab-8b2c-4923-a708" name="Seraphim Squad" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="87ab-8b2c-4923-a708" name="Seraphim Squad" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6fbd-6462-bb0c-4667" name="Retributor Squad" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="6fbd-6462-bb0c-4667" name="Retributor Squad" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a63b-0202-9af9-7363" name="Immolator" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a63b-0202-9af9-7363" name="Immolator" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="36b4-5649-7e1d-76d3" name="Exorcist" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="36b4-5649-7e1d-76d3" name="Exorcist" hidden="false" collective="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1d4b-6911-b35b-d0bb" name="Battle Sisters Squad (Fast Attack)" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1d4b-6911-b35b-d0bb" name="Battle Sisters Squad (Fast Attack)" hidden="false" collective="false" import="true" type="unit">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f37a-ffd8-138b-637b" name="Rhino" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
@@ -502,6 +723,11 @@
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
+  <sharedRules>
+    <rule id="0e13-f956-9067-8648" name="Holy Hatred" hidden="false">
+      <description>Celestians gain +1 Attack in the first round of combat in which they were charged.</description>
+    </rule>
+  </sharedRules>
   <sharedProfiles>
     <profile id="e917-5c4f-d4b5-cecf" name="Canoness" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
@@ -683,5 +909,21 @@
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
       </characteristics>
     </profile>
+    <profile id="8daa-eee8-33eb-4ad7" name="Veteran Sister Superior" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
+  <catalogueLinks>
+    <catalogueLink id="9b3c-e7cb-29f7-3a7e" name="Imperial Guard (1999)" targetId="571f-bded-9f3f-e9f6" type="catalogue" importRootEntries="false"/>
+  </catalogueLinks>
 </catalogue>
