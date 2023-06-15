@@ -2,6 +2,13 @@
 <catalogue id="f711-3772-cc5d-47dd" name="Sisters of Battle (Chapter Approved 2001)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="f3cc-7f9b-fb5d-c740" name="Imperial Guard" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="2d39-f332-f35f-2a64" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2864-f05e-465c-5b3d" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d39-f332-f35f-2a64" type="max"/>
       </constraints>
@@ -113,7 +120,12 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0d7-297c-cc9e-9d8f" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="d4da-a37c-63de-c825" name="Celestian Bodyguard" hidden="false" collective="false" import="true" targetId="bb13-c0c0-8ad7-b55c" type="selectionEntry"/>
+            <entryLink id="d4da-a37c-63de-c825" name="Celestian Bodyguard" hidden="false" collective="false" import="true" targetId="bb13-c0c0-8ad7-b55c" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db93-840a-2bfe-464b" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58e2-8d74-cae2-5ef8" type="min"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -146,7 +158,12 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53f4-5177-111e-16b9" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="cf92-6b82-c04a-6922" name="Celestian Bodyguard" hidden="false" collective="false" import="true" targetId="bb13-c0c0-8ad7-b55c" type="selectionEntry"/>
+            <entryLink id="cf92-6b82-c04a-6922" name="Celestian Bodyguard" hidden="false" collective="false" import="true" targetId="bb13-c0c0-8ad7-b55c" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65ce-7d68-eb3f-c742" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a079-7662-c866-cb0e" type="min"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -157,10 +174,13 @@
         <entryLink id="6a6a-333f-e6c2-eee8" name="Ministorum Armoury" hidden="false" collective="false" import="true" targetId="e775-ee49-af8b-227b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="32.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bb13-c0c0-8ad7-b55c" name="Celestian Bodyguard" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="8611-d5ba-6efb-bae3" name="Holy Hatred" hidden="false" targetId="0e13-f956-9067-8648" type="rule"/>
+      </infoLinks>
       <selectionEntries>
         <selectionEntry id="bc76-313f-7b26-18c3" name="Sister Superior" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -187,8 +207,16 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b28-d28a-c1da-c7bd" type="min"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="ea23-4b20-c15b-0c23" name="Boltgun" hidden="false" collective="false" import="true" type="upgrade"/>
-                <selectionEntry id="1a30-d927-7851-8ac1" name="Bolt Pistol and CCW" hidden="false" collective="false" import="true" type="upgrade"/>
+                <selectionEntry id="ea23-4b20-c15b-0c23" name="Boltgun" hidden="false" collective="false" import="true" type="upgrade">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="1a30-d927-7851-8ac1" name="Bolt Pistol and CCW" hidden="false" collective="false" import="true" type="upgrade">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                  </costs>
+                </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -301,6 +329,23 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="db77-f317-af3f-a566" name="Transport" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da22-3c1a-8af2-38db" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3ac8-7c66-b865-8ba2" name="Rhino" hidden="false" collective="false" import="true" targetId="f37a-ffd8-138b-637b" type="selectionEntry"/>
+            <entryLink id="42f8-bafe-10ae-1b80" name="Immolator" hidden="false" collective="false" import="true" targetId="a63b-0202-9af9-7363" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
@@ -312,6 +357,9 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="5b70-96f7-1738-aa72" name="Celestian Squad" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="a484-c46a-4be9-147b" name="Holy Hatred" hidden="false" targetId="0e13-f956-9067-8648" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
@@ -343,7 +391,7 @@
     </selectionEntry>
     <selectionEntry id="a63b-0202-9af9-7363" name="Immolator" hidden="false" collective="false" import="true" type="unit">
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="36b4-5649-7e1d-76d3" name="Exorcist" hidden="false" collective="false" import="true" type="unit">
@@ -358,7 +406,7 @@
     </selectionEntry>
     <selectionEntry id="f37a-ffd8-138b-637b" name="Rhino" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
