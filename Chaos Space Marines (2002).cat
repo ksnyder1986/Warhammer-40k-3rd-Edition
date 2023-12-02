@@ -416,6 +416,7 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4e40-db3e-6ca6-5e18" name="Mark of Nurgle" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>30</comment>
       <modifiers>
         <modifier type="add" field="category" value="b1cf-c764-2ad0-c229"/>
         <modifier type="set" field="hidden" value="true">
@@ -9509,10 +9510,142 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5c7e-92fc-bb4a-aeaf" name="Bloat Drone (Homebrew)" hidden="false" collective="false" import="true" type="upgrade"/>
-    <selectionEntry id="708c-3dfb-6e2a-92a3" name="Blight Hauler (Homebrew)" hidden="false" collective="false" import="true" type="upgrade"/>
-    <selectionEntry id="aebe-0634-ff0e-3d63" name="Plagueburst Crawler (Homebrew)" hidden="false" collective="false" import="true" type="upgrade"/>
-    <selectionEntry id="6dd8-6a7b-83be-a854" name="Lord of Skulls (Homebrew)" hidden="false" collective="false" import="true" type="upgrade"/>
+    <selectionEntry id="5c7e-92fc-bb4a-aeaf" name="Bloat Drone (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="708c-3dfb-6e2a-92a3" name="Blight Hauler (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aebe-0634-ff0e-3d63" name="Plagueburst Crawler (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6dd8-6a7b-83be-a854" name="Lord of Skulls (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Warmachine Walker 
+Armour 13-13-11: 20+60+20 = 100
+Lumbering: 20
+Stucture Points: 200</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="6232-bba2-2a1c-2742" name="Lord of Skulls" hidden="false" typeId="8363-119d-bce3-2e3b" typeName="Super Heavy Walker">
+          <characteristics>
+            <characteristic name="WS" typeId="66aa-c126-e0da-eff1">4</characteristic>
+            <characteristic name="BS" typeId="caba-3888-54de-7384">3</characteristic>
+            <characteristic name="S" typeId="094c-cba6-7096-9805">10</characteristic>
+            <characteristic name="Front Armor" typeId="02e0-3eba-d3ed-75e0">13</characteristic>
+            <characteristic name="Side Armor" typeId="efff-2637-7f7f-8339">13</characteristic>
+            <characteristic name="Rear Armor" typeId="6b33-ddb1-a14c-9034">11</characteristic>
+            <characteristic name="I" typeId="e58a-0314-a94e-b641">3</characteristic>
+            <characteristic name="A" typeId="1735-ac9d-d5c1-ca2f">3</characteristic>
+            <characteristic name="Structure Points" typeId="b9dd-3e64-0507-92f1">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="1fcc-c1ca-3e40-3c0d" name="Daemonic Possession" hidden="false">
+          <description>A Daemon controls the vehicle and may ignore &apos;shaken&apos; and &apos;stunned&apos; results.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="473f-8872-8bcd-fcb6" name="Super Heavy Tank" hidden="false" targetId="d831-af9c-0b53-6da3" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="94db-8b06-4ecf-fd15" name="Great Cleaver of Khorne" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc69-bb81-6bb4-8d4e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="180e-f1c5-b6a7-fd1d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="86e4-b53e-ebff-9d31" name="Great Cleaver of Khorne" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">D3 Structure Points per glancing and penetrating hit</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6d16-7cf6-1d53-db83" name="Arm Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="9559-8ac8-95db-38fb">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2944-6eed-c8ef-d6cd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f67c-2e2a-337a-504b" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9559-8ac8-95db-38fb" name="Gatling Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>50+150%=125</comment>
+              <profiles>
+                <profile id="2e51-6ed9-f50e-4685" name="Gatling Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3/Blast</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ordnance</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="125.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0838-0e40-5865-ced5" name="Skullhurler" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="775d-acf2-024e-dbe9" name="Skullhurler" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <comment>50+50%=75</comment>
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/Blast</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ordnance</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="66cb-5015-80dd-6cc5" name="Torso Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="4955-c4b2-7ad0-aac5">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8089-2b27-3822-763a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18cc-1bd6-6d70-f46c" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4955-c4b2-7ad0-aac5" name="Inferno Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="1417-a460-e3d6-57e0" name="Inferno Cannon" hidden="false" targetId="6a00-06f9-5972-4b79" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="320.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="4171-c75d-6633-1a19" name="Marks of Chaos" hidden="false" collective="false" import="true">
