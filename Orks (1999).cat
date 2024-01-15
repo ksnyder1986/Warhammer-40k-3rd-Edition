@@ -5385,16 +5385,8 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="7cd8-4c00-4781-f12d" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="eaf9-8aa3-782a-490e" value="1.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be5f-7d1c-3cc2-26da" type="max"/>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eaf9-8aa3-782a-490e" type="min"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="084e-87e9-cf47-b4f7" name="Big Shoota" hidden="false" collective="false" import="true" type="upgrade">
@@ -5551,6 +5543,13 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
           </costs>
         </selectionEntry>
         <selectionEntry id="a238-dd66-f951-5797" name="Shoota" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6af4-4009-8ce8-bfbd" type="max"/>
           </constraints>
