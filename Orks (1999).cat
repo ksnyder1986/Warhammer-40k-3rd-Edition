@@ -3386,6 +3386,21 @@
         <infoLink id="5992-8829-8fa1-ed5a" name="Earthshaker" hidden="false" targetId="0d02-965c-b2d8-eab5" type="profile"/>
         <infoLink id="b126-76dc-698a-9d7d" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry id="6660-d0b0-4a2a-cbfa" name="Indirect Fire" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ead-7ef4-ba55-911c" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="6e08-037b-1ce2-ff5a" name="Indirect Fire" hidden="false">
+              <description>May fire the earthshaker in Indirect File mode instead of direct fire. A weapon that does so changes its range to G36&quot;-240&quot;.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="55aa-c00c-38b5-8337" name="Ork Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="7ab0-3a69-56f8-540b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -5385,16 +5400,8 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="7cd8-4c00-4781-f12d" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="eaf9-8aa3-782a-490e" value="1.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be5f-7d1c-3cc2-26da" type="max"/>
-        <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eaf9-8aa3-782a-490e" type="min"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="084e-87e9-cf47-b4f7" name="Big Shoota" hidden="false" collective="false" import="true" type="upgrade">
@@ -5551,6 +5558,13 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
           </costs>
         </selectionEntry>
         <selectionEntry id="a238-dd66-f951-5797" name="Shoota" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1518-7a1b-daac-0172" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6af4-4009-8ce8-bfbd" type="max"/>
           </constraints>
