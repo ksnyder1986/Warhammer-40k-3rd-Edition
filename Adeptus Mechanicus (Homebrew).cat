@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f1b-a880-af7d-2195" name="Adeptus Mechanicus (Homebrew)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6f1b-a880-af7d-2195" name="Adeptus Mechanicus (Homebrew)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Rather than attempt to point everything based on arbitrary decisions, the Ad Mech list is based on using the 2003 Imperial Guard Codex with the regimental doctrines of Cyber-Enhancement, Carapace Armour, Sharpshooters, and Chem-Inhaler baked in, without limited access to certain specialized units.
 
 Vehicles all use the vehicle design rule if a comparable unit from the 2003 Imperial Guard Codex does not exist.</readme>
@@ -105,17 +105,17 @@ Vehicles all use the vehicle design rule if a comparable unit from the 2003 Impe
 Chem Inhalers = +1
 Cyber-Enhancement = +2
 Carapace Armour = +2
-Total = 11 Each
-Sharpshoots = +1</comment>
+Sharpshoots = +1
+Total = 12 Each</comment>
               <infoLinks>
-                <infoLink id="679d-3c0d-e30c-6c34" name="Pteraxii" hidden="false" targetId="df10-cd3c-a7e8-fd8e" type="profile"/>
+                <infoLink id="679d-3c0d-e30c-6c34" name="Skitarii" hidden="false" targetId="a95f-2ff8-5d93-4cab" type="profile"/>
                 <infoLink id="4b96-5b54-39a6-aa41" name="Chem-inhaler" hidden="false" targetId="f958-be95-5a44-3f15" type="rule"/>
                 <infoLink id="6c7c-61b7-ebbb-ff93" name="Sharpshooters" hidden="false" targetId="1a82-7408-f1a7-5ccb" type="rule"/>
                 <infoLink id="e781-962a-ce1e-e5bd" name="Cyber-Enhancement" hidden="false" targetId="9786-4169-1cd4-91c9" type="rule"/>
                 <infoLink id="5c1f-d20a-f4a3-e786" name="Carapace Armor" hidden="false" targetId="bd6b-cb61-1e31-6813" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -124,7 +124,7 @@ Sharpshoots = +1</comment>
           <modifiers>
             <modifier type="set" field="9fd0-df18-f31d-96d8" value="2">
               <conditions>
-                <condition field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="14" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -401,27 +401,28 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
       </costs>
     </selectionEntry>
     <selectionEntry id="69c7-890b-a76c-c9f3" name="Electro-Priests" hidden="false" collective="false" import="true" type="unit">
-      <comment>Ogryns maybe? They look like repentia basically.</comment>
+      <comment>Ogryns maybe</comment>
       <categoryLinks>
         <categoryLink id="3869-c4ca-e300-9fac" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="2af9-c3ad-4b64-8b2a" name="Electro-Priests" hidden="false" collective="false" import="true" defaultSelectionEntryId="9114-13fd-2100-5982">
           <constraints>
-            <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6ae-0c79-2517-a05c" type="max"/>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f829-a61d-1f6e-095d" type="min"/>
+            <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6ae-0c79-2517-a05c" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f829-a61d-1f6e-095d" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="9114-13fd-2100-5982" name="Electro-Priest" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="163b-9efb-c804-40bd" name="Electro-Priest" hidden="false" targetId="9ccb-78e3-d132-d286" type="profile"/>
-                <infoLink id="a4c9-2da2-9646-0847" name="Eviscerator" hidden="false" targetId="b20d-b927-c47c-b8b7" type="profile"/>
                 <infoLink id="9bf3-7825-c0b3-af43" name="Chem-inhaler" hidden="false" targetId="f958-be95-5a44-3f15" type="rule"/>
                 <infoLink id="c8f0-4b2e-4dd0-611f" name="Cyber-Enhancement" hidden="false" targetId="9786-4169-1cd4-91c9" type="rule"/>
+                <infoLink name="Carapace Armor" id="bb72-92f0-d507-7574" hidden="false" type="rule" targetId="bd6b-cb61-1e31-6813"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="29"/>
               </costs>
+              <comment>25 + 1 Chem-Inhalers, +2 Cyber-Enhancement, +2 Carapace Armour</comment>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -861,7 +862,7 @@ Open-Topped = -5 points</comment>
         <infoLink id="a00f-c2f8-ebfb-69a4" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="7b24-f444-82a7-391d" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink targetId="6d25-b346-c314-6911" id="3c8a-7af7-9f95-daa2" primary="true" name="Elites"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="fe71-63bc-11c3-66ab" name="Pteraxii Alpha" hidden="false" collective="false" import="true" type="upgrade">
@@ -1034,18 +1035,20 @@ Armor 11-11-10 = 5+30+10 = +45
 Fully Armoured = +10
 Speed Flyer = +40
 Skimmer = +20
+Orbital Lander: +30
 Base = 115</comment>
       <rules>
         <rule id="b5ff-d8f1-852c-5a04" name="VTOL Hover Mode" hidden="false">
-          <description>Rather than leave the table as per normal, the flyer may choose to engage is VTOL Hover mode to remain on the table. It remains stationary, but can turn in any direction to bring its weapons to bear. It may fire all of its weapons.
-For the purposes of being fired at, the vehicle counts as a moving Skimmer. It can therefore be fired at using the firer&apos;s normal BS. All hits are treated as glancing hits. It can only be attack in close combat by attackers that can fly or have jump packs, in which case it is treated as a moving vehicle.
-If the vehicle is immobilised the model is destroyed.
-At the end of its own turn, the vehicle may disengage VTOL. It not reverts to being a flyer. It cannot return in the enemy turn immediately afer it leaves the table.</description>
+          <description>Rather than leave the table as per normal, the flyer may choose to engage its VTOL Hover mode to remain on the table. It remains stationary but can turn in any direction to bring its weapons to bear. It may fire all its weapons.
+For the purposes of being fired at, the vehicle counts as a moving Skimmer. It can therefore be fired at using the firer&apos;s normal BS. All hits are treated as glancing hits. It can only be attacked in close combat by attackers that can fly or have jump packs, in which case it is treated as a moving vehicle.
+If the vehicle is immobilized the model is destroyed.
+At the end of its own turn, the vehicle may disengage VTOL. It now reverts to being a flyer. It cannot return during the enemy’s turn immediately after it leaves the table.</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink id="aff9-5448-3e93-426b" name="Skimmer" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
         <infoLink id="e125-39ab-ac44-667b" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink name="Archaeopter" id="41b7-7e19-a36c-5f36" hidden="false" type="profile" targetId="e978-25e1-2142-e10f"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4717-b269-ba45-4e3e" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -1127,7 +1130,7 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="115"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="145"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4260-94c2-4540-3313" name="Skorpius Disintegrator" hidden="false" collective="false" import="true" type="upgrade">
@@ -1464,13 +1467,13 @@ Armour 12-10-10 = Total = 42</comment>
     <profile id="9ccb-78e3-d132-d286" name="Electro-Priest" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
       <characteristics>
         <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">3(6)</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">6</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
         <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">6</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
       </characteristics>
     </profile>
