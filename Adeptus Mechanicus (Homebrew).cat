@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f1b-a880-af7d-2195" name="Adeptus Mechanicus (Homebrew)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6f1b-a880-af7d-2195" name="Adeptus Mechanicus (Homebrew)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Rather than attempt to point everything based on arbitrary decisions, the Ad Mech list is based on using the 2003 Imperial Guard Codex with the regimental doctrines of Cyber-Enhancement, Carapace Armour, Sharpshooters, and Chem-Inhaler baked in, without limited access to certain specialized units.
 
 Vehicles all use the vehicle design rule if a comparable unit from the 2003 Imperial Guard Codex does not exist.</readme>
@@ -21,7 +21,7 @@ Vehicles all use the vehicle design rule if a comparable unit from the 2003 Impe
     </entryLink>
     <entryLink id="62fa-27ab-6fb9-4f70" name="Sicarian" hidden="false" collective="false" import="true" targetId="8bb6-55e6-ccc6-6a56" type="selectionEntry">
       <categoryLinks>
-        <categoryLink id="52a6-ab64-9f8c-1385" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="bcfe-eca1-e313-c31c" primary="true" name="Troops"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="6618-419d-4c9d-2daf" name="Tech-Priest Dominus" hidden="false" collective="false" import="true" targetId="7f36-c7e5-4d91-59bc" type="selectionEntry">
@@ -363,6 +363,9 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
                 <infoLink id="8b68-19a7-6e93-cf11" name="Sharpshooters" hidden="false" targetId="1a82-7408-f1a7-5ccb" type="rule"/>
                 <infoLink id="892f-79eb-0f59-1510" name="Kataphron" hidden="false" targetId="3fe2-351a-eb9a-3271" type="profile"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -473,7 +476,7 @@ Fully Armoured = 10
                   </modifiers>
                 </infoLink>
                 <infoLink id="52cd-72a9-240a-7b41" name="Kastelan Robot" hidden="false" targetId="14b0-1c38-6f6a-0d2f" type="profile">
-                  <comment>Normal stats if it is using the two power fists</comment>
+                  <comment>Normal stats if it is using the two flamers</comment>
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
@@ -525,6 +528,7 @@ Fully Armoured = 10
                 <selectionEntryGroup id="271a-4eb6-869c-688b" name="Carapace Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="9814-cf8f-5065-d50d">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b11f-1f97-2ab1-7ec4" type="max"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ff9-5b7d-df9e-4c00"/>
                   </constraints>
                   <selectionEntries>
                     <selectionEntry id="9814-cf8f-5065-d50d" name="Multi-melta" hidden="false" collective="false" import="true" type="upgrade">
@@ -799,7 +803,7 @@ Speed: Normal = 10</comment>
                 </infoLink>
                 <infoLink id="68da-9364-4083-7a4b" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
                 <infoLink id="a0d4-0867-7bd8-596a" name="Missile Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
-                <infoLink id="d09c-1b40-52c2-656a" name="Grenade Launcher (frag)" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
+                <infoLink id="d09c-1b40-52c2-656a" name="Missile Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
