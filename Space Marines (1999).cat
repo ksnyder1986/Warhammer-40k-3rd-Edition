@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="a527-734f-2081-58cd" name="Blood Angel" hidden="false"/>
     <categoryEntry id="5709-6bb9-f3f9-07f2" name="Sanguinary Priest" hidden="false"/>
@@ -1348,12 +1348,12 @@
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4ddc-8876-f834-c73d" type="atLeast"/>
           </conditions>
         </modifier>
-        <modifier type="increment" value="15" field="4ed5-2f92-9abc-2870">
+        <modifier type="increment" field="4ed5-2f92-9abc-2870" value="15">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0e77-e514-f572-9f22" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e77-e514-f572-9f22" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1367,14 +1367,14 @@
       <infoLinks>
         <infoLink id="8acb-e6f4-3ecc-180f" name="Rhino" hidden="false" targetId="870a-b8e6-ca97-deec" type="profile"/>
         <infoLink id="6924-8c76-ee9d-51e4" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
-        <infoLink name="Over-charged Engine" id="5ebb-dd05-f873-3d69" hidden="false" type="rule" targetId="0c19-02ea-045e-9fed">
+        <infoLink id="5ebb-dd05-f873-3d69" name="Over-charged Engine" hidden="false" targetId="0c19-02ea-045e-9fed" type="rule">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="0e77-e514-f572-9f22" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e77-e514-f572-9f22" type="notInstanceOf"/>
+                    <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1398,28 +1398,28 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0e77-e514-f572-9f22" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e77-e514-f572-9f22" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="increment" value="10" field="4ed5-2f92-9abc-2870">
+        <modifier type="increment" field="4ed5-2f92-9abc-2870" value="10">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="4ddc-8876-f834-c73d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4ddc-8876-f834-c73d" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>
       <infoLinks>
         <infoLink id="189f-97e6-2292-064f" name="Razorback" hidden="false" targetId="cc35-bece-fe42-a1be" type="profile"/>
-        <infoLink name="Over-charged Engine" id="d93e-fa51-7f08-a52c" hidden="false" type="rule" targetId="0c19-02ea-045e-9fed">
+        <infoLink id="d93e-fa51-7f08-a52c" name="Over-charged Engine" hidden="false" targetId="0c19-02ea-045e-9fed" type="rule">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="0e77-e514-f572-9f22" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e77-e514-f572-9f22" type="notInstanceOf"/>
+                    <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5245,9 +5245,9 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="notInstanceOf" value="0" field="selections" scope="primary-catalogue" childId="0e77-e514-f572-9f22" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="notInstanceOf" value="0" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e77-e514-f572-9f22" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="notInstanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5483,29 +5483,32 @@
     </selectionEntry>
     <selectionEntry id="d7d7-d12e-387b-1b3b" name="Land Raider Crusader (IA)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="notInstanceOf" value="0" field="selections" scope="primary-catalogue" childId="0e77-e514-f572-9f22" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="notInstanceOf" value="0" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="notInstanceOf" value="0" field="selections" scope="primary-catalogue" childId="7dbe-7b9c-89fc-d346" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e77-e514-f572-9f22" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dbe-7b9c-89fc-d346" type="notInstanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" value="1" field="05e7-27a3-dd35-231e">
+        <modifier type="set" field="05e7-27a3-dd35-231e" value="1">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0e77-e514-f572-9f22" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e77-e514-f572-9f22" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="-1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05e7-27a3-dd35-231e" type="max"/>
+      </constraints>
       <rules>
         <rule id="bfdb-e255-57b6-61f6" name="Deus Ex Machina (IA)" hidden="false">
           <description>If the crew are stunned then the Machine Spirit will take over temporarily. The Land Raider may be moved directly forward up to its maximum move.</description>
@@ -5547,9 +5550,6 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="255"/>
       </costs>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="05e7-27a3-dd35-231e"/>
-      </constraints>
     </selectionEntry>
     <selectionEntry id="1be4-df32-2640-9413" name="Land Raider Helios (IA)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -5826,9 +5826,9 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="notInstanceOf" value="0" field="selections" scope="primary-catalogue" childId="0e77-e514-f572-9f22" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="notInstanceOf" value="0" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e77-e514-f572-9f22" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8ac8-b0a2-9d27-1696" type="notInstanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5848,7 +5848,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8e8a-228d-df9b-1cdf" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
-        <categoryLink targetId="8dd2-2313-fb9d-0368" id="15a3-1255-001c-df38" primary="false" name="Dreadnought"/>
+        <categoryLink id="15a3-1255-001c-df38" name="Dreadnought" hidden="false" targetId="8dd2-2313-fb9d-0368" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="3362-1e1c-969d-831f" name="Left Arm" hidden="false" collective="false" import="true" defaultSelectionEntryId="7e78-d2ee-b4f3-463c">
@@ -6051,11 +6051,7 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="0e75-e899-877e-dd99" name="Drop Pod" hidden="false" targetId="e25a-8a70-e82b-2775" type="profile">
-          <modifiers>
-            <modifier type="set" field="ec07-2d55-2ba5-6080"/>
-          </modifiers>
-        </infoLink>
+        <infoLink id="0e75-e899-877e-dd99" name="Drop Pod" hidden="false" targetId="e25a-8a70-e82b-2775" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e5f5-3383-8a83-815d" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -8686,7 +8682,7 @@ However, if the model bearing the standard is slain in close combat, then the en
     <rule id="fced-61c2-a13a-ca80" name="Salamanders Mantle" hidden="false">
       <description>The character is immune to suffering instant death caused by being hit by an attack which has a Strength value double his Toughness. The character loses a single wound instead. Note that instant death can be suffered in other ways.</description>
     </rule>
-    <rule name="Over-charged Engine" id="0c19-02ea-045e-9fed" hidden="false"/>
+    <rule id="0c19-02ea-045e-9fed" name="Over-charged Engine" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="f33a-4335-a0ee-05bb" name="Leader" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
