@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7d13-8c3b-e563-4a4e" name="Adeptus Custodes (Homebrew)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7d13-8c3b-e563-4a4e" name="Adeptus Custodes (Homebrew)" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="33a1-ef6a-2eee-4f0d" name="Custodian" hidden="false"/>
     <categoryEntry id="602e-26bc-ee3c-0200" name="Sister of Silence" hidden="false"/>
@@ -1143,6 +1143,9 @@ Special Force Field = 35</comment>
                   <infoLinks>
                     <infoLink name="Lightning Claw" id="02d9-716f-cb56-9466" hidden="false" targetId="c7a3-7006-5226-8181" type="profile"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -1280,6 +1283,22 @@ Special Force Field = 35</comment>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
                   </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Power Lance" hidden="false" id="2622-25fd-43fd-3b0a" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c89-ccc4-46d1-76dd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Power Weapon" id="00e2-24f9-4c8b-60ad" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                  </costs>
+                  <rules>
+                    <rule name="Power Lance" id="18bc-6b80-6181-7de8" hidden="false">
+                      <description>The power lance grants +1 Initiative to any bike-mounted model that is charging or counter-attacking. Once an opponent gets inside their guard though, the improved weapon length becomes a disadvantage and they get a -1 Initative when they aren&apos;t charging or counter-attacking.</description>
+                    </rule>
+                  </rules>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -1498,6 +1517,9 @@ Special Force Field = 35</comment>
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
