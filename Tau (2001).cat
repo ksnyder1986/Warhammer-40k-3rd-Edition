@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="785b-e45d-f46b-fe58" name="Tau (2001)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="785b-e45d-f46b-fe58" name="Tau (2001)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="9822-4d10-9d64-e6a8" name="Shas&apos;el" hidden="false" collective="false" import="true" targetId="b044-07fe-a372-df49" type="selectionEntry"/>
     <entryLink id="b900-fb10-3205-ff40" name="Shas&apos;o" hidden="false" collective="false" import="true" targetId="72b4-c34f-a2ff-9323" type="selectionEntry"/>
@@ -23,6 +23,7 @@
     <entryLink id="9fd2-02cb-2208-94d5" name="Piranha (Homebrew)" hidden="false" collective="false" import="true" targetId="57fa-2e2e-e453-6313" type="selectionEntry"/>
     <entryLink id="e4b5-3c0a-1bc3-c02c" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" targetId="9c59-ab22-f60f-c9c9" type="selectionEntry"/>
     <entryLink id="917e-46e4-bd4e-e4ec" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" targetId="4725-b232-bbd7-82e3" type="selectionEntry"/>
+    <entryLink import="true" name="Gue&apos;vesa Team" hidden="false" id="9a3b-740c-cbf3-1c68" type="selectionEntry" targetId="2127-779a-69aa-5d70"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b044-07fe-a372-df49" name="Shas&apos;el" hidden="false" collective="false" import="true" type="unit">
@@ -1741,6 +1742,111 @@ Flyer = 40
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="225"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Gue&apos;vesa Team (Chapter Approved)" hidden="false" id="2127-779a-69aa-5d70">
+      <categoryLinks>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="8c98-f221-ad50-cf5c" primary="true" name="Troops"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Gue&apos;vesa" id="b8e6-6780-c742-6af3" hidden="false" collective="false" import="true" defaultSelectionEntryId="a295-a957-03df-8b48">
+          <constraints>
+            <constraint type="max" value="12" field="selections" scope="parent" shared="true" id="ed62-a362-6f38-01a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="6" field="selections" scope="parent" shared="true" id="6375-2672-28cb-3dae" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Gue&apos;vesa&apos;la" hidden="false" id="a295-a957-03df-8b48" collective="false">
+              <infoLinks>
+                <infoLink name="Gue&apos;vesa&apos;la" id="2254-f28c-fec6-e14a" hidden="false" targetId="5929-9f8d-02c7-5462" type="profile"/>
+                <infoLink name="Lasgun" id="3ba5-3b92-a62e-4561" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Gue&apos;vesa&apos;ui" hidden="false" id="220f-a098-8163-24bc" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94a9-dbad-dc31-49ce" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Gue&apos;vesa&apos;ui" id="ea0e-e31a-9244-336e" hidden="false" targetId="bc4b-42e7-4ecd-9b32" type="profile"/>
+                <infoLink name="Lasgun" id="60d5-9f1a-d25a-5910" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+              </infoLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Markerlight" hidden="false" id="20c5-253b-c048-8620" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2523-9416-d23f-2b60" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Markerlight" id="aca9-6134-0327-445d" hidden="false" targetId="93c5-ed67-a327-95e9" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Pulse Weapons" id="d701-888e-8f7c-7398" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Pulse Carbine" hidden="false" id="2cb1-573f-53af-1486" collective="false">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Pulse Carbine" id="ecef-91d8-7549-5ace" hidden="false" type="profile" targetId="b90e-cd3a-8611-3762"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pulse Rifle" hidden="false" id="5a9d-ab92-eece-655b" collective="false">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Pulse Rifle" id="140c-0037-13d9-fe64" hidden="false" type="profile" targetId="a939-0e4e-2430-0ef2"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0e54-5841-f3f6-9491" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <comment>http://uk.games-workshop.com/40kuniverse/warhammer40k/Chapter_Approved/assets/Tau_human_auxileries.pdf</comment>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="EMP Grenades" hidden="false" id="2bee-75b9-3efe-d3b2" collective="false">
+          <modifiers>
+            <modifier type="increment" value="3" field="4ed5-2f92-9abc-2870">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bac-25bf-e396-05af" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="EMP Grenades" id="06f4-f8c3-9a09-a890" hidden="false" targetId="2140-93ef-49c8-1008" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <rules>
+        <rule name="Traitors" id="1a07-0288-1bcc-259c" hidden="false">
+          <description>Although the humans who have joined the Tau empire bear no ill-will towards their former compatriots, the same cannot be said of Imperial troops fighting the auxiliaries. Imperial troops (Space Machines, Imperial Guard, Witch Hunters, Daemon Hunters, etc.) will always hit Gue&apos;vesa on a roll of 3+ in close combat, regardless of relative Weapon Skill.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="c406-53c8-88ca-ce9c" name="Hard-Wired Support Systems" hidden="false" collective="false" import="true">
@@ -2889,6 +2995,32 @@ The vehicle equipped with the missiles cannot launch them itself. They are alway
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance Blast</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Smart Bomb</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Gue&apos;vesa&apos;la" hidden="false" id="5929-9f8d-02c7-5462" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">7</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Gue&apos;vesa&apos;ui" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="bc4b-42e7-4ecd-9b32">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
