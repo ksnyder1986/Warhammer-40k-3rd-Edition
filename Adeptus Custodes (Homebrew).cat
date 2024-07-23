@@ -511,6 +511,8 @@
         <infoLink id="2b99-e58c-d51a-4f0e" name="Allarus Armour" hidden="false" targetId="c548-3d87-9ad0-5ab2" type="rule"/>
         <infoLink name="Fearless" id="ac1d-a19a-87c4-2d8b" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
         <infoLink name="Deep Strike" id="7305-060a-b319-d3bc" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
+        <infoLink name="Grenade Launcher (frag)" id="9b27-365b-ee5e-6301" hidden="false" type="profile" targetId="edff-5743-8a17-916e"/>
+        <infoLink name="Grenade Launcher (krak)" id="3541-f8ba-1900-d07a" hidden="false" type="profile" targetId="d236-a268-4f05-49f0"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e88f-92a3-bd94-5077" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
@@ -800,7 +802,7 @@ Special Force Field = 35</comment>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45"/>
       </costs>
       <rules>
-        <rule name="New Rule" id="4b19-ff08-5075-9a4a" hidden="false" page="Soulless">
+        <rule name="Soulless" id="4b19-ff08-5075-9a4a" hidden="false" page="Soulless">
           <description>The Knight-Centura’s null presence is extraordinarily strong and their presence disrupts the warp connection of psykers. After an opponent has successfully made a Psychic test, but before they have used the power you may attempt to nullify the power. Both players roll a D6 and add their model’s Leadership value to the score. If the Knight-Centura beats the opposing model’s score then the psychic power is nullified and may not be used that turn. If the opposing model’s score is equal or higher, it may use its psychic power as normal. The Knight-Centura may attempt to nullify a power each time an enemy model uses a psychic power.</description>
         </rule>
       </rules>
@@ -1354,7 +1356,6 @@ Special Force Field = 35</comment>
                 <selectionEntry type="upgrade" import="true" name="Power Lance" hidden="false" id="2622-25fd-43fd-3b0a" collective="false">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c89-ccc4-46d1-76dd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d484-90f9-5505-8f73" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <infoLinks>
                     <infoLink name="Power Weapon" id="00e2-24f9-4c8b-60ad" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
@@ -1478,6 +1479,18 @@ Special Force Field = 35</comment>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="e721-457f-9748-9127" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="f578-6d2b-f490-3370" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="d100-dd0c-5d9d-2dda" name="Refractor Field" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -1562,6 +1575,7 @@ Special Force Field = 35</comment>
                       <conditions>
                         <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="602e-26bc-ee3c-0200" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="f578-6d2b-f490-3370" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1595,6 +1609,9 @@ Special Force Field = 35</comment>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
               </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb89-731c-36fd-88d0"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
