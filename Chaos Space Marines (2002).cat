@@ -75,10 +75,19 @@
                     <condition type="greaterThan" value="10" field="selections" scope="parent" childId="7e1e-fb2b-76b8-185e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="2" field="770f-b152-8d7d-3d4a">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f147-e1d6-c212-d2e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="max" value="2" field="selections" scope="force" shared="true" id="770f-b152-8d7d-3d4a" percentValue="false" includeChildSelections="false" includeChildForces="false">
+                <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="770f-b152-8d7d-3d4a" percentValue="false" includeChildSelections="false" includeChildForces="false">
                   <comment>For death guard only</comment>
                 </constraint>
               </constraints>
@@ -402,7 +411,8 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Transport" id="39a1-5664-d17f-15ea" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0154-46b6-25c9-f75d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0154-46b6-25c9-f75d-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0154-46b6-25c9-f75d-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Chaos Rhino" hidden="false" id="fcdb-4304-065f-fdb8" collective="false" targetId="9c32-521d-4770-91b9" type="selectionEntry">
