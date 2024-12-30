@@ -60,9 +60,84 @@
         <categoryLink targetId="6d25-b346-c314-6911" id="c247-01b1-6fba-1e12" primary="true" name="Elites"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="b0b1-7da1-351d-acbe" name="Plague Marines" hidden="false" collective="false" import="true" targetId="5e2c-55a9-6755-8a23" type="selectionEntry"/>
-    <entryLink id="3898-b48e-eb3c-ae03" name="Noise Marines" hidden="false" collective="false" import="true" targetId="7ce0-d88a-abf0-8f50" type="selectionEntry"/>
-    <entryLink id="0e6a-4135-2c98-c529" name="Rubric Marines" hidden="false" collective="false" import="true" targetId="250f-5853-4341-ce44" type="selectionEntry"/>
+    <entryLink id="b0b1-7da1-351d-acbe" name="Plague Marines" hidden="false" collective="false" import="true" targetId="5e2c-55a9-6755-8a23" type="selectionEntry">
+      <comment>Troop Choice</comment>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Transport" id="d497-4788-83e4-4e52" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b27f-58d5-e3ef-0461" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Chaos Rhino" hidden="false" id="e398-0c66-7e78-d570" collective="false" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="greaterThan" value="10" field="selections" scope="parent" childId="7e1e-fb2b-76b8-185e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f147-e1d6-c212-d2e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="2" field="selections" scope="force" shared="true" id="770f-b152-8d7d-3d4a" percentValue="false" includeChildSelections="false" includeChildForces="false">
+                  <comment>For death guard only</comment>
+                </constraint>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="0323-dc21-f71b-dc94" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="14dc-309a-cef6-1cdd" primary="true" name="Troops"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3898-b48e-eb3c-ae03" name="Noise Marines" hidden="false" collective="false" import="true" targetId="7ce0-d88a-abf0-8f50" type="selectionEntry">
+      <comment>Troop Choice</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="2bd3-6edb-d462-4c45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="13dd-1ad0-60e8-1724" primary="true" name="Troops"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0e6a-4135-2c98-c529" name="Rubric Marines" hidden="false" collective="false" import="true" targetId="250f-5853-4341-ce44" type="selectionEntry">
+      <comment>Troop Choice</comment>
+      <categoryLinks>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="373e-d88e-ea82-c0d1" primary="true" name="Troops"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="96c6-bd96-8ef2-0815" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="c0b7-60b7-488d-1c6a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="0791-95a1-8f00-5768" name="Khorne Beserker Bikers" hidden="false" collective="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
       <comment>Elite Choice</comment>
       <categoryLinks>
@@ -89,15 +164,93 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="c90b-4891-530a-9dba" name="Noise Marine Bikers" hidden="false" collective="false" import="true" targetId="ec22-521e-9a8e-4e3c" type="selectionEntry"/>
+    <entryLink id="c90b-4891-530a-9dba" name="Noise Marine Bikers" hidden="false" collective="false" import="true" targetId="ec22-521e-9a8e-4e3c" type="selectionEntry">
+      <comment>Elite Choice</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4eb5-4eb0-befd-4b10" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1e04-4929-9719-63a1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c0b7-60b7-488d-1c6a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c55f-ec20-9309-e550" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="27ce-133c-8642-08c9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="ecb2-eb51-b170-bf0e" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="2bd3-6edb-d462-4c45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="fe24-cd14-71b6-14f3" primary="true" name="Elites"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="1078-84cf-c5b7-bd80" name="Iron Warrior Exchange Slots" hidden="false" collective="false" import="true" targetId="47e0-84a7-126d-212e" type="selectionEntry"/>
     <entryLink id="2fab-0c9d-4fe6-7caa" name="Night Lord Exchange Slots" hidden="false" collective="false" import="true" targetId="bd46-a480-9c57-9aae" type="selectionEntry"/>
     <entryLink id="cdeb-4b9d-a856-1368" name="Chaos Basilisk" hidden="false" collective="false" import="true" targetId="3159-1b38-f167-3f88" type="selectionEntry"/>
     <entryLink id="1c16-59b6-ce23-28f5" name="Chaos Vindicator" hidden="false" collective="false" import="true" targetId="928b-d7cd-5256-f224" type="selectionEntry"/>
     <entryLink id="6996-1234-6367-2518" name="Chaos Cultists" hidden="false" collective="false" import="true" targetId="5533-85b3-c57e-edc0" type="selectionEntry"/>
-    <entryLink id="09d1-86b0-b36f-1fc4" name="Rubric Terminators" hidden="false" collective="false" import="true" targetId="14d2-42b1-7ca9-a8bf" type="selectionEntry"/>
-    <entryLink id="a885-4679-852c-4fa9" name="Noise Marine Havocs" hidden="false" collective="false" import="true" targetId="996e-ebb3-c322-13a4" type="selectionEntry"/>
-    <entryLink id="eea7-5ce5-9b08-6656" name="Plague Marine Havocs" hidden="false" collective="false" import="true" targetId="3464-512a-2b16-b756" type="selectionEntry"/>
+    <entryLink id="09d1-86b0-b36f-1fc4" name="Rubric Terminators" hidden="false" collective="false" import="true" targetId="14d2-42b1-7ca9-a8bf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="0323-dc21-f71b-dc94" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1e04-4929-9719-63a1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c55f-ec20-9309-e550" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="27ce-133c-8642-08c9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="ecb2-eb51-b170-bf0e" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="a885-4679-852c-4fa9" name="Noise Marine Havocs" hidden="false" collective="false" import="true" targetId="996e-ebb3-c322-13a4" type="selectionEntry">
+      <comment>Heavy Support Choice</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="2bd3-6edb-d462-4c45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="d678-b1e5-9444-23c7" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="eea7-5ce5-9b08-6656" name="Plague Marine Havocs" hidden="false" collective="false" import="true" targetId="3464-512a-2b16-b756" type="selectionEntry">
+      <comment>Heavy Support Choice</comment>
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="b1e3-e0a7-9508-9c6f" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="0323-dc21-f71b-dc94" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="f535-0bea-a720-f7f4" name="Chosen" hidden="false" collective="false" import="true" targetId="a8f6-e018-b6b1-fc41" type="selectionEntry"/>
     <entryLink id="ba01-fb7b-5bf3-d02b" name="Word Bearers Elite Replacement Slot" hidden="false" collective="false" import="true" targetId="0b83-3e43-29c9-527e" type="selectionEntry"/>
     <entryLink id="688d-057f-1cca-a74d" name="Word Bearers Fast Attack Replacement Slot" hidden="false" collective="false" import="true" targetId="e012-9bdc-fec4-ada1" type="selectionEntry"/>
@@ -107,7 +260,6 @@
     <entryLink id="9770-3fa1-3a59-03c7" name="Lucius the Eternal" hidden="false" collective="false" import="true" targetId="83cf-ff36-d1f0-fddc" type="selectionEntry"/>
     <entryLink id="a2c1-36ff-aabc-7812" name="Typhus" hidden="false" collective="false" import="true" targetId="71da-1c7a-2eae-5da8" type="selectionEntry"/>
     <entryLink id="0335-c034-3998-9db2" name="Fabius Bile" hidden="false" collective="false" import="true" targetId="228f-2438-d2d1-998b" type="selectionEntry"/>
-    <entryLink id="6025-8e80-c914-99ec" name="Plague Marines" hidden="false" collective="false" import="true" targetId="f9e9-958f-7db5-57f0" type="selectionEntry"/>
     <entryLink id="0ee9-cc1e-1608-75e7" name="Forgefiend (Homebrew)" hidden="false" collective="false" import="true" targetId="c743-5d92-38d8-8ad9" type="selectionEntry"/>
     <entryLink id="476c-e0d7-8f1d-7c48" name="Maulerfiend (Homebrew)" hidden="false" collective="false" import="true" targetId="f92e-ed72-d3f4-0a71" type="selectionEntry"/>
     <entryLink id="bb5f-a0fc-b42e-35d3" name="Helldrake (Homebrew)" hidden="false" collective="false" import="true" targetId="bc00-24bd-ea7f-3134" type="selectionEntry"/>
@@ -120,7 +272,7 @@
         <categoryLink targetId="34e2-d53c-28ab-44cf" id="8dd9-7405-2cf6-271e" primary="true" name="Fast Attack"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set" value="false" field="hidden">
+        <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -139,21 +291,223 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="force" childId="2bd3-6edb-d462-4c45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="4eb5-4eb0-befd-4b10" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="2de8-5bdf-96cf-9315" primary="true" name="Troops"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Noise Marine Bikers" hidden="false" id="71c2-7a2c-b1a4-ff6f" collective="false" targetId="ec22-521e-9a8e-4e3c" type="selectionEntry">
+      <comment>Fast Attack Choice</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="2bd3-6edb-d462-4c45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="34e2-d53c-28ab-44cf" id="7465-4fa9-155b-3a3d" primary="true" name="Fast Attack"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Noise Marine Havocs" hidden="false" id="c1cd-0bdc-5952-806e" collective="false" targetId="996e-ebb3-c322-13a4" type="selectionEntry">
+      <comment>Elite Choice</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4eb5-4eb0-befd-4b10" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="force" childId="1e04-4929-9719-63a1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="force" childId="c0b7-60b7-488d-1c6a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="force" childId="c55f-ec20-9309-e550" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="force" childId="27ce-133c-8642-08c9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="force" childId="ecb2-eb51-b170-bf0e" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="force" childId="4eb5-4eb0-befd-4b10" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="2bd3-6edb-d462-4c45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="d656-cf44-3010-31cc" primary="true" name="Elites"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Noise Marines" hidden="false" id="d8b4-9396-6701-4c78" collective="false" targetId="7ce0-d88a-abf0-8f50" type="selectionEntry">
+      <comment>Elite Choice</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4eb5-4eb0-befd-4b10" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1e04-4929-9719-63a1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c0b7-60b7-488d-1c6a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c55f-ec20-9309-e550" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="27ce-133c-8642-08c9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="ecb2-eb51-b170-bf0e" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="2bd3-6edb-d462-4c45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="ccbe-0829-c060-64e7" primary="true" name="Elites"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Plague Marine Havocs" hidden="false" id="81be-ffe0-7a5c-cb1d" collective="false" targetId="3464-512a-2b16-b756" type="selectionEntry">
+      <comment>Elite Choice</comment>
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="bb3c-506d-f00e-f834" primary="true" name="Elites"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="96c6-bd96-8ef2-0815" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1e04-4929-9719-63a1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c0b7-60b7-488d-1c6a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c55f-ec20-9309-e550" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="27ce-133c-8642-08c9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="ecb2-eb51-b170-bf0e" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="0323-dc21-f71b-dc94" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Plague Marines" hidden="false" id="1d50-6a90-c53d-1e31" collective="false" targetId="5e2c-55a9-6755-8a23" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Transport" id="39a1-5664-d17f-15ea" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0154-46b6-25c9-f75d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Chaos Rhino" hidden="false" id="fcdb-4304-065f-fdb8" collective="false" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="greaterThan" value="10" field="selections" scope="parent" childId="7e1e-fb2b-76b8-185e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2003-82f9-0d1b-dc6d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <comment>Fast Attack for Death Guard</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="34e2-d53c-28ab-44cf" id="6267-a739-06a1-238a" primary="true" name="Fast Attack"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Rubric Marines" hidden="false" id="1e5d-dcb2-7212-8151" collective="false" targetId="250f-5853-4341-ce44" type="selectionEntry">
+      <comment>Elite Choice</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="0323-dc21-f71b-dc94" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1e04-4929-9719-63a1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c55f-ec20-9309-e550" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="27ce-133c-8642-08c9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="ecb2-eb51-b170-bf0e" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="96c6-bd96-8ef2-0815" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c0b7-60b7-488d-1c6a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="65db-d433-55c7-51aa" primary="true" name="Elites"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Plague Marines" hidden="false" id="8d71-5e76-552e-dbe8" collective="false" targetId="5e2c-55a9-6755-8a23" type="selectionEntry">
+      <comment>Elite Choice</comment>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Transport" id="f166-3046-40e4-fedf" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e798-6181-6b82-087a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Chaos Rhino" hidden="false" id="f919-3be9-16bc-6e08" collective="false" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="greaterThan" value="10" field="selections" scope="parent" childId="7e1e-fb2b-76b8-185e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e301-7a8d-18e8-edab" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="96c6-bd96-8ef2-0815" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="bf11-860d-bf55-80d2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1e04-4929-9719-63a1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c0b7-60b7-488d-1c6a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="c55f-ec20-9309-e550" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="27ce-133c-8642-08c9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="ecb2-eb51-b170-bf0e" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="0323-dc21-f71b-dc94" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="55a4-2625-4856-21ae" primary="true" name="Elites"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
@@ -1820,24 +2174,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="14d2-42b1-7ca9-a8bf" name="Rubric Terminators" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf11-860d-bf55-80d2" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="f8b5-a3dd-285a-383e" name="Favoured by Tzeentch" hidden="false" targetId="382b-b6e8-56f1-6975" type="rule">
           <modifiers>
@@ -5120,64 +5456,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="7ce0-d88a-abf0-8f50" name="Noise Marines" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="remove" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="0ef5-5056-d52e-3cfd">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="0ef5-5056-d52e-3cfd">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4eb5-4eb0-befd-4b10" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf11-860d-bf55-80d2" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9b41-cfd0-0af7-2496" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="7137-1107-d8e3-4721" name="Favoured by Slaanesh" hidden="false" targetId="b6ea-41df-7f4c-ab3d" type="rule">
           <modifiers>
@@ -5489,64 +5767,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="5e2c-55a9-6755-8a23" name="Plague Marines" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="remove" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="0ef5-5056-d52e-3cfd">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="0ef5-5056-d52e-3cfd">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="96c6-bd96-8ef2-0815" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf11-860d-bf55-80d2" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="c3a2-9e72-d0b4-32df" name="Favoured by Nurgle" hidden="false" targetId="1e3a-0139-4ffe-ca76" type="rule">
           <modifiers>
@@ -5739,26 +5959,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntryGroup>
-        <selectionEntryGroup id="2628-cf7a-5d8b-20ba" name="Transport" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3e8-5378-0768-2bb0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="3a07-bf3c-9980-312a" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7e1e-fb2b-76b8-185e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d52c-0dd6-8621-b767" type="max"/>
-                <constraint field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70fd-09d1-68e4-a08e" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="195f-673d-1fc5-e5fe" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
@@ -5774,64 +5974,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="250f-5853-4341-ce44" name="Rubric Marines" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf11-860d-bf55-80d2" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="96c6-bd96-8ef2-0815" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="0ef5-5056-d52e-3cfd">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="96c6-bd96-8ef2-0815" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="0ef5-5056-d52e-3cfd">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="96c6-bd96-8ef2-0815" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="96c6-bd96-8ef2-0815" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="8e6f-6bdc-bda9-5278" name="Favoured by Tzeentch" hidden="false" targetId="382b-b6e8-56f1-6975" type="rule">
           <modifiers>
@@ -6178,64 +6320,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="ec22-521e-9a8e-4e3c" name="Noise Marine Bikers" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="remove" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4eb5-4eb0-befd-4b10" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf11-860d-bf55-80d2" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="34e2-d53c-28ab-44cf">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="34e2-d53c-28ab-44cf">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="33f6-8943-3ebc-5bd0" name="Iron Steeds" hidden="false" targetId="c5cb-a25a-e57f-2322" type="rule"/>
         <infoLink id="e10f-40f6-9080-73f2" name="Favoured by Slaanesh" hidden="false" targetId="b6ea-41df-7f4c-ab3d" type="rule">
@@ -6458,64 +6542,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="3464-512a-2b16-b756" name="Plague Marine Havocs" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="aacb-8a81-62c0-3db8">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="aacb-8a81-62c0-3db8">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0323-dc21-f71b-dc94" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="96c6-bd96-8ef2-0815" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf11-860d-bf55-80d2" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="16e3-b2ee-5e56-e0a2" name="Favoured by Nurgle" hidden="false" targetId="1e3a-0139-4ffe-ca76" type="rule">
           <modifiers>
@@ -6669,64 +6695,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="996e-ebb3-c322-13a4" name="Noise Marine Havocs" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="aacb-8a81-62c0-3db8">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="6d25-b346-c314-6911">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4eb5-4eb0-befd-4b10" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf11-860d-bf55-80d2" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="aacb-8a81-62c0-3db8">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="a16e-d8d5-20df-14cf" name="Favoured by Slaanesh" hidden="false" targetId="b6ea-41df-7f4c-ab3d" type="rule">
           <modifiers>
@@ -8818,265 +8786,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="494b-d6c5-14b0-5d52" type="max"/>
       </constraints>
-      <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="f9e9-958f-7db5-57f0" name="Plague Marines" hidden="false" collective="false" import="true" type="unit">
-      <comment>Fast Attack Version</comment>
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2628-cf7a-5d8b-20ba" type="lessThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="96c6-bd96-8ef2-0815" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf11-860d-bf55-80d2" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e04-4929-9719-63a1" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c55f-ec20-9309-e550" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1568-261f-27d9-590d" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" field="8ec8-d165-d392-d5ae" value="0">
-          <conditions>
-            <condition field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2628-cf7a-5d8b-20ba" type="lessThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="-1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ec8-d165-d392-d5ae" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="140a-ae78-9d06-32d8" name="Favoured by Nurgle" hidden="false" targetId="1e3a-0139-4ffe-ca76" type="rule">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="f9e9-958f-7db5-57f0" value="7" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1123-9fda-e686-de59" type="notEqualTo"/>
-                        <condition field="selections" scope="f9e9-958f-7db5-57f0" value="14" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1123-9fda-e686-de59" type="notEqualTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="1f55-8433-14b2-0cda" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="48f0-a6c9-9a26-e9d9" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a252-72f8-4127-b7e9" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7d8-e776-ee71-dc58" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="4d7d-dfa9-783e-ab88" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6523-c04d-6b02-3640" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a252-72f8-4127-b7e9" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd72-dd84-8b44-ab18" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="4fb4-a380-00ba-a98d" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="1123-9fda-e686-de59" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="e53d-f737-c9a1-e51a">
-          <constraints>
-            <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0286-80f3-a14a-0944" type="max"/>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed91-4ccd-1b24-b50a" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="e53d-f737-c9a1-e51a" name="Chaos Space Marines" hidden="false" collective="false" import="true" type="model">
-              <infoLinks>
-                <infoLink id="c62e-326b-3b25-e9ed" name="Chaos Space Marine" hidden="false" targetId="6802-ae4c-4054-75eb" type="profile"/>
-                <infoLink id="c91c-3fd6-94a7-7f63" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink id="0ab9-768a-37cc-6915" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
-                <infoLink id="2da4-9c5f-e17d-4ba1" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="19"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a313-6436-2af4-6752" name="Aspiring Champion" hidden="false" collective="false" import="true" type="model">
-              <modifiers>
-                <modifier type="add" field="category" value="b1cf-c764-2ad0-c229"/>
-                <modifier type="set" field="4ed5-2f92-9abc-2870" value="19">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-                            <condition field="selections" scope="f9e9-958f-7db5-57f0" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a313-6436-2af4-6752" type="equalTo"/>
-                          </conditions>
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="f9e9-958f-7db5-57f0" value="7" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1123-9fda-e686-de59" type="equalTo"/>
-                                <condition field="selections" scope="f9e9-958f-7db5-57f0" value="14" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1123-9fda-e686-de59" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bde-bf7f-8300-7011" type="equalTo"/>
-                            <condition field="selections" scope="f9e9-958f-7db5-57f0" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a313-6436-2af4-6752" type="equalTo"/>
-                          </conditions>
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="f9e9-958f-7db5-57f0" value="6" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1123-9fda-e686-de59" type="equalTo"/>
-                                <condition field="selections" scope="f9e9-958f-7db5-57f0" value="13" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1123-9fda-e686-de59" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b137-e15b-00ae-bcaf" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6a02-63e6-7cab-aed0" name="Aspiring Champion" hidden="false" targetId="2ebf-2280-15b9-ed00" type="profile"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink id="957b-7e93-9112-55bc" name="Chaos Armory" hidden="false" collective="false" import="true" targetId="e9b3-4e07-ad9a-6235" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="32"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="2f41-520f-1f40-d523" name="Weapon Options" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca50-2e33-d262-657e" type="max"/>
-          </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="b859-15c2-4d88-8772" name="Special Weapons" hidden="false" collective="false" import="true">
-              <selectionEntries>
-                <selectionEntry id="a59d-46ca-b8b3-8f5c" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df0d-0f67-5008-5978" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="4945-8630-7947-4a72" name="Plasma Gun" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="3b6c-35cd-cf48-8c7d" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc03-0dbf-1e8a-cab1" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="becc-7e16-2288-1392" name="Meltagun" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e50a-3282-ee10-5c7e" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="443b-793e-db86-b2a9" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="ed96-b637-10f0-178f" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="622a-e845-8922-764e" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06d7-f84e-fbde-f1f1" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b86a-6631-4c01-ea21" name="Plasma Pistol" hidden="false" targetId="7b91-b670-d042-7c88" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="918b-84ef-2962-3626" name="Transport" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ae9-ac1a-1ba7-b930" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0a45-0f57-9cab-458b" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7e1e-fb2b-76b8-185e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0491-7315-b493-dfc6" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53c2-ee48-eff5-ee4c" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="35eb-b036-89cf-a863" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="59fe-260f-4028-0d9c" name="Mark of Nurgle" hidden="false" collective="false" import="true" targetId="4e40-db3e-6ca6-5e18" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4878-93e2-0e69-0738" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4db4-cb37-5cbc-5885" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
