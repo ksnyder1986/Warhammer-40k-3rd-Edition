@@ -2258,10 +2258,8 @@ However, if the model bearing the standard is slain in close combat, then the en
       <selectionEntryGroups>
         <selectionEntryGroup id="8bef-a5ef-007c-8a29" name="Bodyguard" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="4460-b4d3-e105-f93a" name="Wolf Guard" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="4460-b4d3-e105-f93a" name="Wolf Guard" hidden="false" collective="false" import="true" type="model" defaultAmount="1,1,1,1" flatten="false">
               <constraints>
-                <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dbb-8b3d-3367-c380" type="min"/>
-                <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6228-7e91-cd55-5a4c" type="max"/>
                 <constraint field="selections" scope="force" value="20" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="314f-709b-17d5-c193" type="max"/>
               </constraints>
               <infoLinks>
@@ -2414,6 +2412,10 @@ However, if the model bearing the standard is slain in close combat, then the en
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="6b84-245a-de92-2723" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="0109-3faa-e7ec-fae0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
