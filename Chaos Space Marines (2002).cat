@@ -66,6 +66,9 @@
         <selectionEntryGroup name="Transport" id="d497-4788-83e4-4e52" hidden="false" collective="false" import="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b27f-58d5-e3ef-0461" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="3d45-fb12-3f41-ef30" percentValue="false" includeChildSelections="true" includeChildForces="false">
+              <comment>For death guard only</comment>
+            </constraint>
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Chaos Rhino" hidden="false" id="e398-0c66-7e78-d570" collective="false" targetId="9c32-521d-4770-91b9" type="selectionEntry">
@@ -75,24 +78,23 @@
                     <condition type="greaterThan" value="10" field="selections" scope="parent" childId="7e1e-fb2b-76b8-185e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" value="2" field="770f-b152-8d7d-3d4a">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f147-e1d6-c212-d2e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="770f-b152-8d7d-3d4a" percentValue="false" includeChildSelections="false" includeChildForces="false">
-                  <comment>For death guard only</comment>
-                </constraint>
               </constraints>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2" field="3d45-fb12-3f41-ef30">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="force" childId="4bde-bf7f-8300-7011" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -4212,6 +4214,10 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf11-860d-bf55-80d2" type="equalTo"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0b7-60b7-488d-1c6a" type="equalTo"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1568-261f-27d9-590d" type="equalTo"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="4eb5-4eb0-befd-4b10" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="0323-dc21-f71b-dc94" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="2bd3-6edb-d462-4c45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="96c6-bd96-8ef2-0815" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4395,6 +4401,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="27ce-133c-8642-08c9" type="equalTo"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2bd3-6edb-d462-4c45" type="equalTo"/>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="1568-261f-27d9-590d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
