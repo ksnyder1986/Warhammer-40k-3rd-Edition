@@ -1367,7 +1367,7 @@
       <infoLinks>
         <infoLink id="8acb-e6f4-3ecc-180f" name="Rhino" hidden="false" targetId="870a-b8e6-ca97-deec" type="profile"/>
         <infoLink id="6924-8c76-ee9d-51e4" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
-        <infoLink id="5ebb-dd05-f873-3d69" name="Over-charged Engine" hidden="false" targetId="0c19-02ea-045e-9fed" type="rule">
+        <infoLink id="5ebb-dd05-f873-3d69" name="Over-charged Engine" hidden="false" targetId="cf39-fe5b-7f74-8313" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -1412,7 +1412,7 @@
       </modifiers>
       <infoLinks>
         <infoLink id="189f-97e6-2292-064f" name="Razorback" hidden="false" targetId="cc35-bece-fe42-a1be" type="profile"/>
-        <infoLink id="d93e-fa51-7f08-a52c" name="Over-charged Engine" hidden="false" targetId="0c19-02ea-045e-9fed" type="rule">
+        <infoLink id="d93e-fa51-7f08-a52c" name="Over-charged Engine" hidden="false" targetId="cf39-fe5b-7f74-8313" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -6326,31 +6326,93 @@ After the first turn of firing the Deathwind cannot fire again.</description>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Ossific Blades" id="61dc-83f6-b39e-d5fe" hidden="false">
+                  <description>Any hit rolls of 6 in close combat inflicts an automatic wound with no Armor Saves possible</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="15c3-ec03-9025-925c" name="Berserkers" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Berserkers" id="ff3e-9df3-45f7-ff76" hidden="false">
+                  <description>-All models gain +1 Attack and pass all Morale and Pinning tests.
+
+
+
+
+
+
+
+
+-Must also Assault the nearest enemy in range at the start of their Assault Phase
+
+
+
+
+
+
+
+
+-Must Sweeping Advance on successful Assault unless wearing Terminator Armor or having &quot;moral high ground&quot;</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="4ddc-8876-f834-c73d" name="Apparitions" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Apparitions" id="62e4-02fb-e74d-dadd" hidden="false">
+                  <description>Always deploys in Deep Strike before the game begins. May be set up anywhere on the battlefield not within the opponent&apos;s deployment zone.
+
+
+
+
+
+
+
+
+Infantry and Vehicles also receive a 6+ Invulnerable Save.</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="ede0-0b37-8811-4023" name="Aura of Doom" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Aura of Doom" id="a268-52cf-8ee3-1ae3" hidden="false">
+                  <description>Assaulting enemies must take a Leadership test. Units who automatically pass Morale checks do not test.</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="919e-2da6-2f65-7175" name="Immolation" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Immolation" id="a6d9-55df-a73a-a51d" hidden="false">
+                  <description>Always receives a 5+ Cover Save from enemy shooting and always counts as in cover when being charged by the enemy.
+
+
+
+
+No units other than Cursed Knights may take or enter a transport</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="911a-793b-d817-c409" name="Augmented Skeleton" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Augmented Skeleton" id="34b6-6975-cc0c-ff3d" hidden="false">
+                  <description>Every model gains +1 Toughness</description>
+                </rule>
+              </rules>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -7143,6 +7205,9 @@ Twin-linked Assault Cannon:52</comment>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Over-charged Engine" id="3c52-7bae-49a8-7035" hidden="false" type="rule" targetId="cf39-fe5b-7f74-8313"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="6ba4-06ff-28b7-669f" name="Reinforced Ceramite" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -8758,6 +8823,7 @@ In addition, one unit with a model within 6&quot; can re-roll any failed Assault
     <rule name="Storm Shield" id="9bbf-cb2e-4a41-dd4b" hidden="false">
       <description>Allows a 4+ invulnerable save against one opponent per turn in close combat. Cannot be combined with Rosarius or Iron Halo saves</description>
     </rule>
+    <rule name="Over-charged Engine" id="cf39-fe5b-7f74-8313" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="f33a-4335-a0ee-05bb" name="Leader" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
