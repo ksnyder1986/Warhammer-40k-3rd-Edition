@@ -1367,7 +1367,7 @@
       <infoLinks>
         <infoLink id="8acb-e6f4-3ecc-180f" name="Rhino" hidden="false" targetId="870a-b8e6-ca97-deec" type="profile"/>
         <infoLink id="6924-8c76-ee9d-51e4" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
-        <infoLink id="5ebb-dd05-f873-3d69" name="Over-charged Engine" hidden="false" targetId="0c19-02ea-045e-9fed" type="rule">
+        <infoLink id="5ebb-dd05-f873-3d69" name="Over-charged Engine" hidden="false" targetId="cf39-fe5b-7f74-8313" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -1412,7 +1412,7 @@
       </modifiers>
       <infoLinks>
         <infoLink id="189f-97e6-2292-064f" name="Razorback" hidden="false" targetId="cc35-bece-fe42-a1be" type="profile"/>
-        <infoLink id="d93e-fa51-7f08-a52c" name="Over-charged Engine" hidden="false" targetId="0c19-02ea-045e-9fed" type="rule">
+        <infoLink id="d93e-fa51-7f08-a52c" name="Over-charged Engine" hidden="false" targetId="cf39-fe5b-7f74-8313" type="rule">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -2297,6 +2297,8 @@
               <infoLinks>
                 <infoLink id="6cd2-f0b3-6b90-213d" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
                 <infoLink id="bd7e-9d66-ac6a-3831" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                <infoLink name="Bolt Pistol" id="d4ea-87b5-9e4f-920a" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                <infoLink name="Close Combat Weapon" id="70e3-d03d-6929-0e77" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
@@ -4929,7 +4931,7 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="2990-79dc-00cb-e5c4" name="Whirtwind" hidden="false" targetId="dd3b-11b5-eaee-9284" type="profile"/>
+        <infoLink id="2990-79dc-00cb-e5c4" name="Whirlwind" hidden="false" targetId="dd3b-11b5-eaee-9284" type="profile"/>
         <infoLink id="38b7-9ae6-d9fd-f1a8" name="Whirlwind" hidden="false" targetId="c03c-83ab-08de-2c28" type="profile"/>
       </infoLinks>
       <categoryLinks>
@@ -5582,7 +5584,7 @@
             <modifier type="set" field="name" value="2x Twin-Linked Lascannon"/>
           </modifiers>
         </infoLink>
-        <infoLink id="2e58-ed87-2a52-b92c" name="Whirtwind" hidden="false" targetId="dd3b-11b5-eaee-9284" type="profile"/>
+        <infoLink id="2e58-ed87-2a52-b92c" name="Whirlwind" hidden="false" targetId="dd3b-11b5-eaee-9284" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e70c-00bb-43ef-7cc9" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -6054,7 +6056,11 @@ After the first turn of firing the Deathwind cannot fire again.</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="0e75-e899-877e-dd99" name="Drop Pod" hidden="false" targetId="e25a-8a70-e82b-2775" type="profile"/>
+        <infoLink id="0e75-e899-877e-dd99" name="Drop Pod" hidden="false" targetId="e25a-8a70-e82b-2775" type="profile">
+          <modifiers>
+            <modifier type="set" field="ec07-2d55-2ba5-6080"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e5f5-3383-8a83-815d" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
@@ -6320,31 +6326,93 @@ After the first turn of firing the Deathwind cannot fire again.</description>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Ossific Blades" id="61dc-83f6-b39e-d5fe" hidden="false">
+                  <description>Any hit rolls of 6 in close combat inflicts an automatic wound with no Armor Saves possible</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="15c3-ec03-9025-925c" name="Berserkers" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Berserkers" id="ff3e-9df3-45f7-ff76" hidden="false">
+                  <description>-All models gain +1 Attack and pass all Morale and Pinning tests.
+
+
+
+
+
+
+
+
+-Must also Assault the nearest enemy in range at the start of their Assault Phase
+
+
+
+
+
+
+
+
+-Must Sweeping Advance on successful Assault unless wearing Terminator Armor or having &quot;moral high ground&quot;</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="4ddc-8876-f834-c73d" name="Apparitions" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Apparitions" id="62e4-02fb-e74d-dadd" hidden="false">
+                  <description>Always deploys in Deep Strike before the game begins. May be set up anywhere on the battlefield not within the opponent&apos;s deployment zone.
+
+
+
+
+
+
+
+
+Infantry and Vehicles also receive a 6+ Invulnerable Save.</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="ede0-0b37-8811-4023" name="Aura of Doom" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Aura of Doom" id="a268-52cf-8ee3-1ae3" hidden="false">
+                  <description>Assaulting enemies must take a Leadership test. Units who automatically pass Morale checks do not test.</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="919e-2da6-2f65-7175" name="Immolation" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Immolation" id="a6d9-55df-a73a-a51d" hidden="false">
+                  <description>Always receives a 5+ Cover Save from enemy shooting and always counts as in cover when being charged by the enemy.
+
+
+
+
+No units other than Cursed Knights may take or enter a transport</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry id="911a-793b-d817-c409" name="Augmented Skeleton" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <rules>
+                <rule name="Augmented Skeleton" id="34b6-6975-cc0c-ff3d" hidden="false">
+                  <description>Every model gains +1 Toughness</description>
+                </rule>
+              </rules>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -7113,6 +7181,34 @@ Twin-linked Assault Cannon:52</comment>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="a409-e559-3793-a572" name="Over-charged Engine" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0bd-2758-8540-c713" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="af87-d6ac-8955-8877" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a527-734f-2081-58cd" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f367-73f9-c12b-f078" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Over-charged Engine" id="3c52-7bae-49a8-7035" hidden="false" type="rule" targetId="cf39-fe5b-7f74-8313"/>
+          </infoLinks>
+        </selectionEntry>
         <selectionEntry id="6ba4-06ff-28b7-669f" name="Reinforced Ceramite" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -7189,7 +7285,9 @@ Twin-linked Assault Cannon:52</comment>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef55-4ccb-e9de-37a2" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="2638-b26b-e783-1b35" name="Artificer Armor" hidden="false" targetId="7a02-cc04-9d97-3493" type="rule"/>
+            <infoLink id="2638-b26b-e783-1b35" name="Artificer Armor" hidden="false" targetId="7a02-cc04-9d97-3493" type="rule">
+              <comment>Increases armour save to 2+</comment>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
@@ -7849,7 +7947,9 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c0f-9d08-5493-5f8c" type="max"/>
           </constraints>
           <rules>
-            <rule id="766c-ba97-486b-8290" name="Death Mask" hidden="false"/>
+            <rule id="766c-ba97-486b-8290" name="Death Mask" hidden="false">
+              <description>Any enemy that loses a close combat against the wearer suffers -1 to Ld when checking Morale.</description>
+            </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
@@ -8426,11 +8526,12 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50c0-27f2-d4b3-6bab" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="5bf3-c002-10c2-f098" name="Storm Shield" hidden="false" targetId="d2c6-0bb0-d830-4c62" type="rule"/>
+            <infoLink name="Storm Shield" id="6364-1deb-79ab-6518" hidden="false" type="rule" targetId="d2c6-0bb0-d830-4c62"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
           </costs>
+          <comment>May take 4+ invulnerable save in Assault against one opponent per-turn</comment>
         </selectionEntry>
         <selectionEntry id="a54c-8e67-ad4c-ff3e" name="Thunder Hammer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -8594,7 +8695,9 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="2927-357a-fc6c-42c3" name="Crozius Arcanum" hidden="false"/>
+    <rule id="2927-357a-fc6c-42c3" name="Crozius Arcanum" hidden="false">
+      <description>Uses Power Weapon profile</description>
+    </rule>
     <rule id="479f-929d-b531-a315" name="Rosarius" hidden="false">
       <description>Gain a 4+ invulnerable save.</description>
     </rule>
@@ -8611,7 +8714,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
       <description>When a unit including a model wearing Purity Seals falls back, roll one extra D6 for the fall back distance, and then pick the D6 results you want.</description>
     </rule>
     <rule id="c214-19e6-edea-0f81" name="Iron Halo" hidden="false">
-      <description>The iron halo grants a 4+ invilnerable save.</description>
+      <description>The iron halo grants a 4+ invulnerable save.</description>
     </rule>
     <rule id="00e2-88f3-119d-9df3" name="Auspex" hidden="false">
       <description>If enemy infiltrators set up within 4D6&quot; of a model with a auspex, then that model and the unit they are attached to is allowed to take a &quot;free&quot; shot at them. These shots are taken before the battle begins and may cause the infiltrators to fall back.</description>
@@ -8666,26 +8769,61 @@ However, if the model bearing the standard is slain in close combat, then the en
     <rule id="c585-ce6a-bf8d-27a5" name="Death Mask" hidden="false">
       <description>Any enemy unit that loses as close combat against a model wearing a Death Mask suffers -1 modifier to its Leadership test.</description>
     </rule>
-    <rule id="3043-42d1-b30e-28e4" name="Exsanguinator" hidden="false"/>
+    <rule id="3043-42d1-b30e-28e4" name="Exsanguinator" hidden="false">
+      <description>Allows attached squad to ignore first failed armor save each turn, but subsequent saves are negated on a D6 roll less than or equal to the bearer&apos;s Toughness. If higher, the bearer and failing models are wounded with no armor save allowed. (Does not negate instant death and cannot be used when in base-to-base contact)</description>
+    </rule>
     <rule id="d463-2905-bcde-0a33" name="Grail" hidden="false">
       <description>Any Blood Angels unit with a model within 6&quot; of a character with a Grail may roll an extra dice when making an advance after winning a close combat and discard the lowest.</description>
     </rule>
-    <rule id="1d4a-2b4c-e8a4-8d7d" name="Holy Shroud" hidden="false"/>
-    <rule id="6deb-edba-53ca-53b5" name="Lion Helm" hidden="false"/>
-    <rule id="73fd-818d-e387-e703" name="Sword of Secrets" hidden="false"/>
-    <rule id="38a3-2029-a26a-69de" name="Book of Salvation" hidden="false"/>
-    <rule id="7177-bf98-d1f1-c06b" name="Blades of Reason" hidden="false"/>
-    <rule id="eb88-3b95-a020-38c0" name="Cup of Retribution" hidden="false"/>
-    <rule id="2925-28e3-33e7-101b" name="Standard of Devastation" hidden="false"/>
-    <rule id="061d-26d8-4ad2-d2dc" name="Standard of Fortitude" hidden="false"/>
-    <rule id="f403-bb3d-e854-1b24" name="Standard of Retribution" hidden="false"/>
+    <rule id="1d4a-2b4c-e8a4-8d7d" name="Holy Shroud" hidden="false">
+      <description>Ignores negative Leadership modifiers for all units within 6&quot;</description>
+    </rule>
+    <rule id="6deb-edba-53ca-53b5" name="Lion Helm" hidden="false">
+      <description>Carried by helmet bearer within 2&quot; of unit. Grants 4+ invulnerable save to all models (including enemies) within 3&quot; against shooting attacks</description>
+    </rule>
+    <rule id="73fd-818d-e387-e703" name="Sword of Secrets" hidden="false">
+      <description>Power weapon, but can also be used with a Strength of 6</description>
+    </rule>
+    <rule id="38a3-2029-a26a-69de" name="Book of Salvation" hidden="false">
+      <description>If the bearer is slain, place the model on it&apos;s side. Any Dark Angels within 6&quot; must move to retrieve the book. Until recovered, all Space Marines become Stubborn, if not already, all may ignore the &quot;Intractable&quot; special rule, and all add +1 to Weapon Skill. If the Book is not retrieved by the end of the battle, the Space Marines lose the game.</description>
+    </rule>
+    <rule id="7177-bf98-d1f1-c06b" name="Blades of Reason" hidden="false">
+      <description>If the bearer survives to the end of the mission, roll a D6 for each enemy model slain. On a 6, they are captured adding +D6 Victory Points. (Cannot be used against Necrons or Tyranids)</description>
+    </rule>
+    <rule id="eb88-3b95-a020-38c0" name="Cup of Retribution" hidden="false">
+      <description>All Space Marines within 2D6&quot; gain +1 Attack bonus for the rest of the turn when revealed</description>
+    </rule>
+    <rule id="2925-28e3-33e7-101b" name="Standard of Devastation" hidden="false">
+      <description>Add +1 to the Space Marine combat resolution score of any assault that takes place within 6&quot; of the Sacred Banner.
+However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.
+
+
+In addition, one unit with a model within 6&quot; can shoot during the opponent&apos;s Assault Phase once per-battle</description>
+    </rule>
+    <rule id="061d-26d8-4ad2-d2dc" name="Standard of Fortitude" hidden="false">
+      <description>Add +1 to the Space Marine combat resolution score of any assault that takes place within 6&quot; of the Sacred Banner.
+However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.
+
+
+In addition, one unit with a model within 6&quot; can use rapid fire weapons after moving once per-battle</description>
+    </rule>
+    <rule id="f403-bb3d-e854-1b24" name="Standard of Retribution" hidden="false">
+      <description>Add +1 to the Space Marine combat resolution score of any assault that takes place within 6&quot; of the Sacred Banner.
+However, if the model bearing the standard is slain in close combat, then the enemy model that slew him captures the standard gains the +1 bonus to combat resolution from then on. It is possible for the model to change hands multiple times per game.
+
+
+In addition, one unit with a model within 6&quot; can re-roll any failed Assault hit rolls once per-battle</description>
+    </rule>
     <rule id="1eb7-6961-7e16-d0b6" name="Stubborn" hidden="false">
       <description>The unit will automatically pass any Morale checks they have to take, even if faced by a situation or opponent that would normally cause them to automatically fail. Note that they still must test for pinning as normal.</description>
     </rule>
     <rule id="fced-61c2-a13a-ca80" name="Salamanders Mantle" hidden="false">
       <description>The character is immune to suffering instant death caused by being hit by an attack which has a Strength value double his Toughness. The character loses a single wound instead. Note that instant death can be suffered in other ways.</description>
     </rule>
-    <rule id="0c19-02ea-045e-9fed" name="Over-charged Engine" hidden="false"/>
+    <rule name="Storm Shield" id="9bbf-cb2e-4a41-dd4b" hidden="false">
+      <description>Allows a 4+ invulnerable save against one opponent per turn in close combat. Cannot be combined with Rosarius or Iron Halo saves</description>
+    </rule>
+    <rule name="Over-charged Engine" id="cf39-fe5b-7f74-8313" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="f33a-4335-a0ee-05bb" name="Leader" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
