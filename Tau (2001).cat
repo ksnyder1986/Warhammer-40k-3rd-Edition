@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="785b-e45d-f46b-fe58" name="Tau (2001)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="785b-e45d-f46b-fe58" name="Tau (2001)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="9822-4d10-9d64-e6a8" name="Shas&apos;el" hidden="false" collective="false" import="true" targetId="b044-07fe-a372-df49" type="selectionEntry"/>
     <entryLink id="b900-fb10-3205-ff40" name="Shas&apos;o" hidden="false" collective="false" import="true" targetId="72b4-c34f-a2ff-9323" type="selectionEntry"/>
@@ -624,7 +624,7 @@
                   <modifierGroups>
                     <modifierGroup>
                       <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2e0f-4b47-dde2-849a" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6647-7d73-7497-614e" type="equalTo"/>
                       </conditions>
                       <modifiers>
                         <modifier type="set" field="eeda-4fb4-901e-b70d" value="5"/>
@@ -648,6 +648,28 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Ork Fighter (Farsight Enclave)" hidden="false" id="6647-7d73-7497-614e" collective="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="02dc-e73d-f9f7-357a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="5" field="4ed5-2f92-9abc-2870">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="12df-c1eb-fb98-6fc1" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e661-314d-471c-080d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry id="4a6e-34f4-77b7-2ab9" name="Kroot Carnivore Squad" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
