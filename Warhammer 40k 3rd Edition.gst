@@ -2763,7 +2763,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Dreadnoughts with close combat weapons double their Strength in close combat (max 10) and ignore armour saves. These weapons count as power fists but strike at the Dreadnought’s normal Initiative. &amp; If armed with two close combat weapons, the Dreadnought gains +1 Attack</characteristic>
       </characteristics>
     </profile>
     <profile id="ff9c-5b94-680f-36d5" name="Power Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
