@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c8cb-cc69-1e43-3319" name="Daemon Hunters (2003)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="c8cb-cc69-1e43-3319" name="Daemon Hunters (2003)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="0ebb-2b64-3f2d-fffb" name="Space Marine Ally" hidden="false"/>
     <categoryEntry id="258f-122f-d9a4-245c" name="Inducted Imperial Guard" hidden="false"/>
@@ -3998,22 +3998,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <categoryLink id="3482-074e-f53d-c2a6" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="3bf0-3c38-7546-e0f2" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd5b-20fa-08a0-e2a2" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="94a9-a171-5b6f-59ac" name="Storm Trooper" hidden="false" targetId="b29d-f044-3296-03b8" type="profile">
-              <modifiers>
-                <modifier type="set" field="abbf-0d11-fd86-d938" value="2"/>
-                <modifier type="set" field="name" value="Veteran Storm Trooper"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="d16d-b555-4a4c-e986" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
@@ -4047,6 +4031,29 @@ Hellfire Round: The shot wounds on a 2+.</description>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Veteran" hidden="false" id="687b-3bc2-8da3-22b5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ed7-5cb7-a7d5-b3e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Storm Trooper" id="ddcb-f13a-6837-ab0a" hidden="false" targetId="b29d-f044-3296-03b8" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="2" field="abbf-0d11-fd86-d938"/>
+                    <modifier type="set" value="Veteran Storm Trooper" field="name"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Hellgun" id="2dce-2080-be5a-6499" hidden="false" targetId="efe9-35a9-ba8f-99a9" type="profile"/>
+                <infoLink name="Frag Grenades" id="c692-dd6c-d42d-ee1b" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <entryLinks>
+                <entryLink import="true" name="Daemon Hunters Armoury" hidden="false" id="22e8-56d2-d538-ed51" collective="false" targetId="b583-3e64-2ee0-8583" type="selectionEntryGroup">
+                  <comment>According to the FAQ this guy really does have access to things like Power Armour and Lightning Claws.</comment>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4184,18 +4191,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="3eb5-8447-557f-456f" name="Daemon Hunters Armoury" hidden="false" collective="false" import="true" targetId="b583-3e64-2ee0-8583" type="selectionEntryGroup">
-          <comment>According to the FAQ this guy really does have access to things like Power Armour and Lightning Claws.</comment>
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3bf0-3c38-7546-e0f2" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
