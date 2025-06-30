@@ -7929,6 +7929,30 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dozer Blade" hidden="false" id="cf8d-1418-97dd-b6d6" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b60-9487-6d55-602a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <rules>
+            <rule name="Rough Terrain Modification" id="efb4-08ce-84c7-26a5" hidden="false">
+              <description>A vehicle that moves no more than 6&quot; may re-rolled failed Difficult Terrain tests</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="f536-8829-3d31-7f92" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="95b1-bedb-e542-5243" name="Inquisitor&apos;s Retinue" hidden="false" collective="false" import="true">
