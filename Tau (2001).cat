@@ -27,7 +27,6 @@
     <entryLink id="9fd2-02cb-2208-94d5" name="Piranha (Homebrew)" hidden="false" collective="false" import="true" targetId="57fa-2e2e-e453-6313" type="selectionEntry"/>
     <entryLink id="e4b5-3c0a-1bc3-c02c" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" targetId="9c59-ab22-f60f-c9c9" type="selectionEntry"/>
     <entryLink id="917e-46e4-bd4e-e4ec" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" targetId="4725-b232-bbd7-82e3" type="selectionEntry"/>
-    <entryLink import="true" name="Gue&apos;vesa Team" hidden="false" id="9a3b-740c-cbf3-1c68" type="selectionEntry" targetId="2127-779a-69aa-5d70"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b044-07fe-a372-df49" name="Shas&apos;el" hidden="false" collective="false" import="true" type="unit">
@@ -64,12 +63,12 @@
         <entryLink id="71d3-29e4-ee6d-b052" name="Crisis Battlesuit Bodyguard Team" hidden="false" collective="false" import="true" targetId="0a71-e2d2-9661-1972" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="72b4-c34f-a2ff-9323" name="Shas&apos;o" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="379d-62cf-478c-6287" name="Shas&apos;el" hidden="false" targetId="8e27-9a8b-df66-d886" type="profile"/>
+        <infoLink id="379d-62cf-478c-6287" name="Shas&apos;o" hidden="false" targetId="a44f-0e22-a1fa-66b5" type="profile"/>
         <infoLink id="4cc2-5ca2-82ab-bf34" name="Jetpack" hidden="false" targetId="489d-ec6a-0dcb-d81f" type="rule"/>
         <infoLink id="75c0-d9c7-57ce-67b9" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
       </infoLinks>
@@ -109,7 +108,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5c47-f243-8283-27cc" name="Ethereal" hidden="false" collective="false" import="true" type="unit">
@@ -630,7 +629,19 @@
           <selectionEntries>
             <selectionEntry id="9153-7e48-997c-92b4" name="Gun Drone" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="3780-734e-2006-7a80" name="Gun Drone" hidden="false" targetId="3fc2-241a-c6b0-45d6" type="profile"/>
+                <infoLink id="3780-734e-2006-7a80" name="Gun Drone" hidden="false" targetId="3fc2-241a-c6b0-45d6" type="profile">
+                  <modifierGroups>
+                    <modifierGroup>
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6647-7d73-7497-614e" type="equalTo"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" field="eeda-4fb4-901e-b70d" value="5"/>
+                        <modifier type="set" field="c704-6128-f143-935a" value="3"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
                 <infoLink id="03ca-79e3-8cb0-0076" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
                 <infoLink id="7dca-a526-9c03-4e32" name="Pulse Carbine" hidden="false" targetId="b90e-cd3a-8611-3762" type="profile"/>
                 <infoLink id="4fc7-1180-3588-58e7" name="Jetpack" hidden="false" targetId="9db9-94c1-ce97-f40a" type="rule"/>
@@ -646,6 +657,28 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Ork Fighter (Farsight Enclave)" hidden="false" id="6647-7d73-7497-614e" collective="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="02dc-e73d-f9f7-357a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="5" field="4ed5-2f92-9abc-2870">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="12df-c1eb-fb98-6fc1" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e661-314d-471c-080d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry id="4a6e-34f4-77b7-2ab9" name="Kroot Carnivore Squad" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2594,7 +2627,13 @@ Troops equipped with jetpacks may Deep Strike when the mission permits.
 An unbroken model with a jetpack that is not in close combat may always move 6&quot; in the Assault phase whether they are with 6&quot; of an enemy or not. This move may be in any direction. It does not have to be a charge towards the enemy, even if the jetpack wearer is within 6&quot; of an enemy model.</description>
     </rule>
     <rule id="5519-d934-3cfb-7a6a" name="Stealthsuit" hidden="false">
-      <description>Strealthsuits incorporate a holographic disruption field that makes it wearer hard to spot. Enemy models attempting to fire at Stealth armor troops count as if firing at night and must roll to check their spotting distance. If the Stealthsuit troopers are not within spotting range the unit misses its chance to fire while searching for a target and so may not choose a different target. Stealthsuit troopers count as being in cover if they are assaulted, but not if they charge. If firing at Stealthsuits while the Night Fighting scenario special rules are in effect, the rolled spotting distance is halved.</description>
+      <description>Stealthsuits incorporate a holographic disruption field that makes it wearer hard to spot. Enemy models attempting to fire at Stealth armor troops count as if firing at night and must roll to check their spotting distance. 
+
+
+If the Stealthsuit troopers are not within spotting range the unit misses its chance to fire while searching for a target and so may not choose a different target. 
+
+
+Stealthsuit troopers count as being in cover if they are assaulted, but not if they charge. If firing at Stealthsuits while the Night Fighting scenario special rules are in effect, the rolled spotting distance is halved.</description>
     </rule>
     <rule id="6061-4fc4-3974-c586" name="Sensor - Multi-tracker" hidden="false">
       <description>The multi-tracker enables the suit wearer to fire two Crisis or Broadsuit battlesuit weapon systems.</description>

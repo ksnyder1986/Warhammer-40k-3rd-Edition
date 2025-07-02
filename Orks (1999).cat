@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a32b-2b78-118a-10a5" name="Orks (1999)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="a32b-2b78-118a-10a5" name="Orks (1999)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7ae7-ec32-6af0-2290" name="Kult of Speed" hidden="false"/>
     <categoryEntry id="838f-024c-52e0-08f2" name="Deth Kopta" hidden="false"/>
@@ -2825,6 +2825,9 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Ork Vehicle Upgrades" hidden="false" id="a30d-778a-31e0-845d" type="selectionEntryGroup" targetId="7ab0-3a69-56f8-540b"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="b73d-0887-9593-4929" name="Killer Kan" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
@@ -5440,7 +5443,7 @@ The Ork vehicle may shoot in the shooting phase as normal and then resolves an a
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67ae-dfa7-2db7-8478" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="7d32-9486-c895-30c3" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
+            <infoLink id="7d32-9486-c895-30c3" name="Burna" hidden="false" targetId="958b-1f4c-9991-cbcc" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
@@ -6000,7 +6003,7 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           </profiles>
           <rules>
             <rule id="ecb9-bdbd-30f3-c9b1" name="Grot Orderly" hidden="false">
-              <description>Each Grot Oilder in base-to-base contact with a Mad Dok gives them a +1 bonus to the dice roll for using their Dok&apos;s Tools up to a maximum of +3. A roll of 1 still always inflicts a wound.</description>
+              <description>Each Grot Orderly in base-to-base contact with a Mad Dok gives them a +1 bonus to the dice roll for using their Dok&apos;s Tools up to a maximum of +3. A roll of 1 still always inflicts a wound.</description>
             </rule>
           </rules>
           <costs>
@@ -6159,7 +6162,7 @@ The ammo runt may not be chosen as a casualtiy caused by enemy shooting, but Bla
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fdd0-6bc8-710f-4b77" type="notInstanceOf"/>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b4e1-5f13-9303-52ad" type="notInstanceOf"/>
