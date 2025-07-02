@@ -2714,20 +2714,20 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
     </profile>
     <profile id="c7a3-7006-5226-8181" name="Lightning Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Counts as Power Weapon. May re-roll any failed wounds. Grants +1 Attack when dual-wielded</characteristic>
       </characteristics>
     </profile>
     <profile id="3d19-a53f-85b3-6cf3" name="Choppa" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Close Combat Weapon but enemy models cannot take a save better than 4+, regardless of their armour.</characteristic>
       </characteristics>
     </profile>
     <profile id="46d5-85f2-d932-f0a2" name="Close Combat Weapon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -2763,7 +2763,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Dreadnoughts with close combat weapons double their Strength in close combat (max 10) and ignore armour saves. These weapons count as power fists but strike at the Dreadnought’s normal Initiative. &amp; If armed with two close combat weapons, the Dreadnought gains +1 Attack</characteristic>
       </characteristics>
     </profile>
     <profile id="ff9c-5b94-680f-36d5" name="Power Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -3333,10 +3333,10 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     </profile>
     <profile id="b726-76b7-0d78-59d9" name="Pulse Laser" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
@@ -3354,7 +3354,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
         <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Doubles strength up to 10 &amp; ignores armor saves but attacks last. Any model wounded by it may not attack again until the end of the next Assault Phase. Vehicles struck are &quot;crew shaken&quot;</characteristic>
       </characteristics>
     </profile>
@@ -3363,7 +3363,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
         <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Doubles Strength up to 10 &amp; ignores armor saves, but attacks last</characteristic>
       </characteristics>
     </profile>
@@ -3376,12 +3376,12 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If one or more wounds are successful, roll a psychic test. On a success the opponent is slain outright.</characteristic>
       </characteristics>
     </profile>
-    <profile id="b063-0e0a-050c-3114" name="Chainfist" hidden="true" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile id="b063-0e0a-050c-3114" name="Chainfist" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13"/>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Doubles user&apos;s Strength up to 10. Roll 2D6 for armor penetration. Attacks last.</characteristic>
       </characteristics>
     </profile>
