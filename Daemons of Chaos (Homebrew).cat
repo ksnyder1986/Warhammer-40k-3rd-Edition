@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="270a-44e5-7495-3d31" name="Daemons of Chaos (Homebrew)" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="270a-44e5-7495-3d31" name="Daemons of Chaos (Homebrew)" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Bloodletters of Khorne" hidden="false" id="1596-d970-76b1-696f" collective="false">
       <rules>
@@ -55,6 +55,18 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="1746-6f05-8bf2-cbbb" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bloodthirster" hidden="false" id="a95b-d13b-a01b-f387" collective="false">
       <rules>
@@ -115,6 +127,18 @@
           </modifiers>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="1746-6f05-8bf2-cbbb" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Daemonettes of Slaanesh" hidden="false" id="99a6-b930-9195-b694" collective="false">
       <infoLinks>
@@ -162,6 +186,18 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="fc03-d54a-81f5-3ea8" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flesh Hounds of Khorne" hidden="false" id="3117-ee4c-cf81-f807" collective="false">
       <rules>
@@ -218,6 +254,18 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="1746-6f05-8bf2-cbbb" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Furies of Chaos" hidden="false" id="97a5-8540-5b48-4928" collective="false">
       <infoLinks>
@@ -376,13 +424,30 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Horrors of Tzeentch" hidden="false" id="2495-e3c2-fb41-d35d" collective="false">
       <modifiers>
         <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <infoLinks>
@@ -554,6 +619,18 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="fc03-d54a-81f5-3ea8" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lord of Change" hidden="false" id="6a8c-4cc4-5047-0eed" collective="false">
       <infoLinks>
@@ -704,6 +781,18 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mounted Daemonettes of Slaanesh" hidden="false" id="2a00-2cb3-f4b6-adee" collective="false">
       <infoLinks>
@@ -782,6 +871,18 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="fc03-d54a-81f5-3ea8" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Nurgling Swarms" hidden="false" id="297b-35b7-fa5b-3017" collective="false">
       <rules>
@@ -824,6 +925,18 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Plaguebearers of Nurgle" hidden="false" id="6b08-2120-38d4-1ecb" collective="false">
       <infoLinks>
@@ -888,6 +1001,18 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Screamers of Tzeentch" hidden="false" id="3b5c-24b6-abf6-398e" collective="false">
       <infoLinks>
@@ -923,6 +1048,18 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Be&apos;lakor the Dark Master" hidden="false" id="809b-d2b0-3687-745d">
       <infoLinks>
@@ -966,7 +1103,11 @@ Rage of Khorne 15</comment>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="230"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="a932-de4f-4e9b-8366" type="selectionEntry" targetId="0b0b-61a5-c42a-2fd6"/>
+        <entryLink import="true" name="General" hidden="false" id="a932-de4f-4e9b-8366" type="selectionEntry" targetId="0b0b-61a5-c42a-2fd6">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66d4-9262-b006-f367"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <rules>
         <rule name="Icon of Chaos Undivided" id="1eb7-59df-107e-ea5c" hidden="false">
@@ -982,130 +1123,6 @@ Rage of Khorne 15</comment>
       <categoryLinks>
         <categoryLink targetId="711e-d438-0bbd-8fba" id="b30b-e972-2c14-b1db" primary="false" name="Greater Daemon"/>
       </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="The Masque" hidden="false" id="4ba6-0ebd-0a82-e528">
-      <categoryLinks>
-        <categoryLink targetId="1746-6f05-8bf2-cbbb" id="8521-27b8-72f5-959e" primary="false" name="Mark of Slaanesh"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="cf6e-602c-7d85-4aca" type="selectionEntry" targetId="0b0b-61a5-c42a-2fd6">
-          <modifiers>
-            <modifier type="add" value="An army led by The Masque cannot have more than 3 Tzeentch Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="3" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="An army led by The Masque cannot have more than 3 Nurgle Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="3" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="An army led by The Masque cannot have any Khorne Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="fc03-d54a-81f5-3ea8" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Skulltaker" hidden="false" id="9433-d3dd-86f2-8c42">
-      <categoryLinks>
-        <categoryLink targetId="fc03-d54a-81f5-3ea8" id="c63a-7af0-931d-6447" primary="false" name="Mark of Khorne"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="21da-0156-53ed-ff0d" type="selectionEntry" targetId="0b0b-61a5-c42a-2fd6">
-          <modifiers>
-            <modifier type="add" value="An army led by Skulltaker cannot have more than 3 Tzeentch Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="3" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="An army led by Skulltaker cannot have more than 3 Nurgle Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="3" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="An army led by Skulltaker cannot have any Slaanesh Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="1746-6f05-8bf2-cbbb" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Ku&apos;gath, The Plaguefather" hidden="false" id="98ec-0f6c-b48a-011c">
-      <comment>Uses Rotigus Mini</comment>
-      <categoryLinks>
-        <categoryLink targetId="3c65-a03d-6aaf-f716" id="c854-40be-8e55-f58a" primary="false" name="Mark of Nurgle"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="c5d9-b213-3050-6e44" type="selectionEntry" targetId="0b0b-61a5-c42a-2fd6">
-          <modifiers>
-            <modifier type="add" value="An army led by Ku&apos;gath cannot have more than 3 Slaanesh Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="3" field="selections" scope="force" childId="1746-6f05-8bf2-cbbb" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="An army led by Ku&apos;gath cannot have more than 3 Khorne Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="3" field="selections" scope="force" childId="fc03-d54a-81f5-3ea8" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="An army led by Ku&apos;gath cannot have more any Tzeentch Daemon Units" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0b0b-61a5-c42a-2fd6" shared="true"/>
-                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Beasts of Nurgle" hidden="false" id="4900-093b-f834-b642">
       <categoryLinks>
@@ -1135,6 +1152,18 @@ Rage of Khorne 15</comment>
       <infoLinks>
         <infoLink name="Favoured by Nurgle" id="99ff-b2a1-4414-75ef" hidden="false" targetId="6ad3-86ea-9970-e0f2" type="rule"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Kairos Fateweaver" hidden="false" id="32b1-5116-72b7-3400">
       <categoryLinks>
@@ -1204,6 +1233,18 @@ Rage of Khorne 15</comment>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="305"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Bloodcrushers of Khorne" hidden="false" id="d0ba-3a8d-fbc5-65b3">
       <selectionEntryGroups>
@@ -1258,6 +1299,18 @@ Rage of Khorne 15</comment>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="1746-6f05-8bf2-cbbb" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Fiends of Slaanesh" hidden="false" id="816f-f6c3-ef1c-92a0">
       <categoryLinks>
@@ -1289,6 +1342,18 @@ Rage of Khorne 15</comment>
         <infoLink name="Summoned" id="98ab-aa90-19b5-ace3" hidden="false" type="rule" targetId="e7c2-4a6f-5a30-723f"/>
         <infoLink name="Warp Scream" id="5b40-4c6f-c1a7-2dab" hidden="false" targetId="dae6-60ce-da79-5a84" type="rule"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="fc03-d54a-81f5-3ea8" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plague Drones of Nurgle" hidden="false" id="0708-5b91-3a36-5209">
       <categoryLinks>
@@ -1334,6 +1399,18 @@ Rage of Khorne 15</comment>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Soul Grinder" hidden="false" id="6151-3741-2840-162d">
       <costs>
@@ -1597,6 +1674,18 @@ Rage of Khorne 15</comment>
                   <description>The Daemon Prince gains +1 Attack and Frenzy</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="1746-6f05-8bf2-cbbb" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Mark of Nurgle" hidden="false" id="83d1-a66f-bd24-c383">
               <categoryLinks>
@@ -1610,6 +1699,18 @@ Rage of Khorne 15</comment>
                   <description>The Daemon Prince gains +1 Toughness</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Mark of Tzeentch" hidden="false" id="9e23-05f7-65cc-ceed">
               <categoryLinks>
@@ -1623,6 +1724,18 @@ Rage of Khorne 15</comment>
                   <description>The Daemon Prince automatically passes as Psychic Tests they are required to take.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Mark of Slaanesh" hidden="false" id="1d4c-a586-375e-8317">
               <categoryLinks>
@@ -1639,6 +1752,18 @@ Rage of Khorne 15</comment>
                   <description>The Daemon Prince gains the Warp Scream ability</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="fc03-d54a-81f5-3ea8" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2347,6 +2472,18 @@ Rage of Khorne 15</comment>
           </modifiers>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="1746-6f05-8bf2-cbbb" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Herald of Tzeentch" hidden="false" id="2d13-125a-5c7a-5c6d">
       <categoryLinks>
@@ -2564,6 +2701,18 @@ Rage of Khorne 15</comment>
         <infoLink name="Doombolt" id="faff-3768-9a8a-e8ea" hidden="false" type="profile" targetId="e70e-a0cc-b761-d420"/>
         <infoLink name="Living Icons" id="c4d8-0ff9-48e7-d98d" hidden="false" type="rule" targetId="259b-b868-1be6-f879"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Herald of Nurgle" hidden="false" id="dca9-8e7c-5c99-980f">
       <categoryLinks>
@@ -2768,6 +2917,18 @@ Rage of Khorne 15</comment>
         <infoLink name="Nurgle&apos;s Rot" id="ec4f-7e87-2041-6086" hidden="false" type="rule" targetId="db9f-404e-be5e-0c3e"/>
         <infoLink name="Herald of Nurgle" id="193d-a524-603e-9a17" hidden="false" type="profile" targetId="ece2-50fd-d549-f580"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="cb46-4e50-50d8-195d" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Herald of Slaanesh" hidden="false" id="6a0e-d157-8d27-6bb9">
       <categoryLinks>
@@ -2888,6 +3049,18 @@ Rage of Khorne 15</comment>
         <infoLink name="Daemonic Talons" id="cefd-ae07-2013-1cc4" hidden="false" type="rule" targetId="f9b7-25cc-e7bd-6c85"/>
         <infoLink name="Living Icons" id="8f1f-26f0-dd91-1c97" hidden="false" type="rule" targetId="259b-b868-1be6-f879"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Slaanesh and Khorne daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="fc03-d54a-81f5-3ea8" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flamers of Tzeentch" hidden="false" id="4697-7f5b-f379-b1fb" collective="false">
       <infoLinks>
@@ -2934,6 +3107,18 @@ Rage of Khorne 15</comment>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Army cannot have both Nurgle and Tzeentch daemons" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="3c65-a03d-6aaf-f716" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="809b-d2b0-3687-745d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Hellcannon" hidden="false" id="2f04-457f-0522-3790">
       <costs>
@@ -3863,7 +4048,7 @@ Daemonic Aura (15)</comment>
       <modifiers>
         <modifier type="add" value="Be&apos;lakor can only be included in a army of 2000+ points." field="error">
           <conditions>
-            <condition type="lessThan" value="2000" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3925,7 +4110,7 @@ Daemonic Aura (15)</comment>
       <modifiers>
         <modifier type="add" value="Fateweaver can only be included in a army of 2000+ points." field="error">
           <conditions>
-            <condition type="lessThan" value="2000" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3933,11 +4118,6 @@ Daemonic Aura (15)</comment>
     <entryLink import="true" name="Keeper of Secrets" hidden="false" id="ad46-6300-9ff9-1c58" targetId="2b95-cc64-9b50-f6ad" type="selectionEntry">
       <categoryLinks>
         <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="f4c6-9c39-515a-a0f2" primary="true" name="HQ"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Ku&apos;gath, The Plaguefather" hidden="false" id="2582-8074-c819-2c83" targetId="98ec-0f6c-b48a-011c" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="631b-734f-c1b7-fccb" primary="true" name="HQ"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Lord of Change" hidden="false" id="d55f-206f-987c-be9d" targetId="6a8c-4cc4-5047-0eed" type="selectionEntry">
@@ -3979,16 +4159,6 @@ Daemonic Aura (15)</comment>
             <entryLink import="true" name="Herald of Nurgle" hidden="false" id="04e9-6c7e-edfd-2134" type="selectionEntry" targetId="dca9-8e7c-5c99-980f"/>
             <entryLink import="true" name="Herald of Slaanesh" hidden="false" id="65bb-0f80-4443-195e" type="selectionEntry" targetId="6a0e-d157-8d27-6bb9"/>
             <entryLink import="true" name="Herald of Tzeentch" hidden="false" id="6422-faef-e88f-91eb" type="selectionEntry" targetId="2d13-125a-5c7a-5c6d"/>
-            <entryLink import="true" name="The Masque" hidden="false" id="5406-e720-7b02-abbc" type="selectionEntry" targetId="4ba6-0ebd-0a82-e528">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="d492-bcfa-5924-a1ee" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Skulltaker" hidden="false" id="632f-15b9-d676-8e57" type="selectionEntry" targetId="9433-d3dd-86f2-8c42">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b833-341d-a648-e84d" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3997,4 +4167,15 @@ Daemonic Aura (15)</comment>
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
+  <rules>
+    <rule name="Ancient Enemies" id="dde7-f87f-d0a7-4fb8" hidden="false">
+      <description>The Ruinous Powers hold millennia spamming rivalries. These ancient jealousies prevent the Gods from working in harmony. An army must choose a general, either a Great Daemon, or in the absence of a single Herald, to lead. An army led by a Daemon of Khorne cannot include any Daemons of Slaanesh; likewise an army lead by a Daemon of Slaanesh cannot have any Khornate daemons. An army led by a Daemon of Tzeentch cannot contain any Daemons of Nurgle; likewise an army led by a Daemon of Nurgle cannot have any Tzeentch daemons. Additionally, an army cannot include more than 3 daemon units from each of the two Gods the general is not devoted to. For example, an army led by a Keeper of Secrets can have any number of Slaanesh daemons, a maximum of 3 Nurgle daemons, a maximum of 3 Tzeentch daemons, and no Khorne daemons. Note that any independent character daemons cannot join daemonic units of other Gods.</description>
+    </rule>
+    <rule name="Daemon Summoning" id="8ed7-6553-abf7-f9ee" hidden="false">
+      <description>Any unit with the Summoned special rule will be able to be summoned onto the battlefield with the following restriction. The Daemon of Chaos army must start the game with at least half of its units (rounding up) deployed on the table unless the mission allows fewer. All other eligible daemon units will start in reserve irrespective of whether the Reserves special rule is used in the mission being played.
+Starting with the second game turn roll a D6 for each Daemonic unit held in reserve at the start of the Daemon of Chaos player’s turn. If you roll greater than the number required, the unit becomes available. On the 2nd turn a 4+ is required, on the 3rd turn a 3+ is required, and on all other turns a 2+ is required.
+When a daemon unit becomes available place the large Ordnance blast template in base contact with a model carrying a Chaos Icon. Roll the scatter dice and 2D6. On a ‘Hit’ the template is not moved, otherwise move the template a number of inches equal to the result on the 2D6 in the direction of the arrow. The daemon units are then deployed on the area covered by the template. When placing the models, any that cannot be places such that they are partially touching the template or are more than 1” from an enemy model are destroyed. Once they have arrived, the daemon unit can move, assault, and shoot as normal.
+Note that unlike a Chaos Space Marine Army Great Daemons are not summoned onto the battlefield. </description>
+    </rule>
+  </rules>
 </catalogue>
