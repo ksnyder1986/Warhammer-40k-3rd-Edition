@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="a527-734f-2081-58cd" name="Blood Angel" hidden="false"/>
     <categoryEntry id="5709-6bb9-f3f9-07f2" name="Sanguinary Priest" hidden="false"/>
@@ -51,6 +51,7 @@
         </rule>
       </rules>
     </categoryEntry>
+    <categoryEntry name="Iron Hands" id="3bf5-6158-26f8-ea64" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="42a3-487a-8d98-5c47" name="Commander" hidden="false" collective="false" import="true" targetId="043b-1cc7-9a38-8133" type="selectionEntry"/>
@@ -3262,6 +3263,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7718-78e3-a94e-087a" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink targetId="b3bf-01b4-c272-3409" id="ebad-513a-94b4-6411" primary="false" name="Jump Pack Troops"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="76df-9c9d-3acb-3b71" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -3624,6 +3626,13 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="remove" value="b3bf-01b4-c272-3409" field="category">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="6f82-235d-a765-6ab6" childId="c15d-07b7-90a0-af85" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="b866-0628-5964-334c" name="Bike Squadron" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -4009,6 +4018,9 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="86cf-31f2-e698-7a81" id="87c0-991f-6cec-236f" primary="false" name="Bikes"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="26b2-8587-e170-87ee" name="Attack Bike Squadron" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -4131,6 +4143,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f405-1d68-20a9-b5a4" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
+        <categoryLink targetId="86cf-31f2-e698-7a81" id="ce97-fcd6-86c6-da81" primary="false" name="Bikes"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1d05-9874-2f55-a03d" name="Replace Bolt Pistol w/ Shotgun" hidden="false" collective="false" import="true" type="upgrade">
@@ -7337,6 +7350,11 @@ Twin-linked Assault Cannon:52</comment>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="5" field="4ed5-2f92-9abc-2870">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="3bf5-6158-26f8-ea64" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd6b-fb7d-b1bb-b42e" type="max"/>
@@ -7873,14 +7891,15 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
         <selectionEntry id="ff92-8ddc-3424-5923" name="Terminator Armor" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="3bf5-6158-26f8-ea64" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="10">
               <conditions>
@@ -7890,6 +7909,16 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <modifier type="set" field="4444-5be0-f0a3-99e7" value="1">
               <conditions>
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="86cf-31f2-e698-7a81" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="b3bf-01b4-c272-3409" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
