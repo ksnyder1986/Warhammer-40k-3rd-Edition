@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a32b-2b78-118a-10a5" name="Orks (1999)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="a32b-2b78-118a-10a5" name="Orks (1999)" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7ae7-ec32-6af0-2290" name="Kult of Speed" hidden="false"/>
     <categoryEntry id="838f-024c-52e0-08f2" name="Deth Kopta" hidden="false"/>
@@ -183,9 +183,9 @@
     </entryLink>
     <entryLink id="a4ef-80eb-a9cf-6d15" name="Warlord Nazdreg Ug Urdgrub" hidden="false" collective="false" import="true" targetId="a9e0-22b3-d3be-c67a" type="selectionEntry">
       <modifiers>
-        <modifier type="set" field="3b62-7efa-c895-a222" value="0">
+        <modifier type="add" value="2000+ points required to include Nazdreg" field="error">
           <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -200,9 +200,9 @@
     </entryLink>
     <entryLink id="d23c-63a0-968f-6bd6" name="Warlord Ghazghkull Mag Uruk Thraka" hidden="false" collective="false" import="true" targetId="63f3-37b6-de94-f5f6" type="selectionEntry">
       <modifiers>
-        <modifier type="set" field="56fb-fea3-003f-3200" value="0">
+        <modifier type="add" field="error" value="2000+ points required to include Ghazghkull">
           <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
+            <condition field="limit::4ed5-2f92-9abc-2870" scope="roster" value="2000" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="any" type="lessThan"/>
           </conditions>
         </modifier>
       </modifiers>

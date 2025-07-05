@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c1aa-7a7a-4831-e6fb" name="Dark Eldar (2001)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="c1aa-7a7a-4831-e6fb" name="Dark Eldar (2001)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="a236-2a94-733b-317a" name="Archon Lord" hidden="false" collective="false" import="true" targetId="7a61-a52d-11c2-0a92" type="selectionEntry">
       <categoryLinks>
@@ -1322,15 +1322,20 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     </selectionEntry>
     <selectionEntry id="e8e8-6964-113f-e463" name="Asdrubael Vect" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="6d07-74cb-3876-7799" value="0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" value="2000+ points required for Vect" field="error">
+          <conditions>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Vect cannot be in the same force as Kruellagh" field="error">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="28bb-2ff2-0f7f-da5b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Vect cannot be in the same force as Lelith" field="error">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="9af5-2fc3-2b24-d02c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1370,16 +1375,20 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     </selectionEntry>
     <selectionEntry id="28bb-2ff2-0f7f-da5b" name="Kruellagh" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="b363-b833-f588-9041" value="0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9af5-2fc3-2b24-d02c" type="equalTo"/>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" value="1500+ points required for Kruellagh" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Kruellagh cannot be in the same force as Vect" field="error">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="e8e8-6964-113f-e463" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Kruellagh cannot be in the same force as Lelith" field="error">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="9af5-2fc3-2b24-d02c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1420,16 +1429,20 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     </selectionEntry>
     <selectionEntry id="9af5-2fc3-2b24-d02c" name="Lelith Hesperax" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="cb66-1c6c-aa2c-2f79" value="0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28bb-2ff2-0f7f-da5b" type="equalTo"/>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e8-6964-113f-e463" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="add" value="1500+ points required for Lelith" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Lelith cannot be in the same force as Vect" field="error">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="e8e8-6964-113f-e463" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Lelith cannot be in the same force as Kruellagh" field="error">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="28bb-2ff2-0f7f-da5b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1468,7 +1481,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     </selectionEntry>
     <selectionEntry id="f65f-1eb2-82e4-a947" name="Urien Rakarth" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="0425-b888-7046-f4d5" value="0">
+        <modifier type="add" field="error" value="Urien can only be included in a force that also has an Archon">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>

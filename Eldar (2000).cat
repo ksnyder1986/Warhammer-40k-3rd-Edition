@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1369-4fc1-fe31-48dd" name="Eldar (2000)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1369-4fc1-fe31-48dd" name="Eldar (2000)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="5271-ffb6-46ff-8c2e" name="Iyanden" hidden="false"/>
     <categoryEntry id="5c43-dccf-e148-ab80" name="Saim-Hann" hidden="false"/>
@@ -37,6 +37,23 @@
       <categoryLinks>
         <categoryLink id="3dc0-c18b-c912-6c72" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="2000+ points required to include Eldrad" field="error">
+          <conditions>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Eldrad and Nuedha cannot be in the same force" field="error">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="a194-de6c-6011-05e1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Eldrad and Iyanna cannot be in the same force" field="error">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="cf16-775c-054d-e03c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="6c84-bbcb-8ee1-673f" name="Falcon" hidden="false" collective="false" import="true" targetId="f054-8d9e-24b2-66ed" type="selectionEntry">
       <categoryLinks>
@@ -102,6 +119,18 @@
       <categoryLinks>
         <categoryLink id="5d6f-0972-0529-90ec" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="Nuedha and Eldrad cannot be in the same force" field="error">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="e80d-5a31-a1ec-f90d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Nuedha and Iyanna cannot be in the same force" field="error">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="cf16-775c-054d-e03c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="ac03-cdfe-9c12-4163" name="Rangers" hidden="false" collective="false" import="true" targetId="9217-1abc-0930-901a" type="selectionEntry">
       <categoryLinks>
@@ -788,10 +817,14 @@
         </entryLink>
         <entryLink id="cf16-775c-054d-e03c" name="Iyanna Arienal, Spiritseer of Iyandan" hidden="false" collective="false" import="true" targetId="89c0-c22f-a947-63e0" type="selectionEntry">
           <modifiers>
-            <modifier type="set" field="f7d6-dfe5-2e67-4132" value="0">
+            <modifier type="add" value="Iyanna and Eldrad cannot be in the same force" field="error">
               <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e80d-5a31-a1ec-f90d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a194-de6c-6011-05e1" type="greaterThan"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="e80d-5a31-a1ec-f90d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="Iyanna and Nuada cannot be in the same force" field="error">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="a194-de6c-6011-05e1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1989,19 +2022,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e80d-5a31-a1ec-f90d" name="Eldrad Ulthran, Farseer of Ulthwe" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="a4ce-8a2f-473c-3dca" value="0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a194-de6c-6011-05e1" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf16-775c-054d-e03c" type="greaterThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4ce-8a2f-473c-3dca" type="max"/>
       </constraints>
@@ -2054,14 +2074,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a194-de6c-6011-05e1" name="Nuadha &apos;Fireheart&apos;, Wild Rider of Saim Hann" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="dc32-67e8-b9f5-9290" value="0">
-          <conditions>
-            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e80d-5a31-a1ec-f90d" type="greaterThan"/>
-            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf16-775c-054d-e03c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc32-67e8-b9f5-9290" type="max"/>
       </constraints>

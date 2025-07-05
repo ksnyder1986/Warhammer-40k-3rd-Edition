@@ -102,7 +102,15 @@
     </entryLink>
     <entryLink id="0410-9d0a-3e42-7786" name="Captain Cortez" hidden="false" collective="false" import="true" targetId="095c-81d6-2cb9-777e" type="selectionEntry"/>
     <entryLink id="7700-22b6-79ae-2146" name="Chief Librarian Tigurius" hidden="false" collective="false" import="true" targetId="5f4b-7f68-c2c9-adbf" type="selectionEntry"/>
-    <entryLink id="84a2-75be-64c7-d56a" name="Marneus Calgar" hidden="false" collective="false" import="true" targetId="9e80-340b-902a-19fb" type="selectionEntry"/>
+    <entryLink id="84a2-75be-64c7-d56a" name="Marneus Calgar" hidden="false" collective="false" import="true" targetId="9e80-340b-902a-19fb" type="selectionEntry">
+      <modifiers>
+        <modifier type="add" value="2000+ points required to include Calgar" field="error">
+          <conditions>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="247a-7438-69d4-776a" name="Baal Predator (IA)" hidden="false" collective="false" import="true" targetId="b919-b409-2216-d3d5" type="selectionEntry"/>
     <entryLink id="64c7-4a02-b6b9-e5a5" name="Whirlwind Hyperios (IA)" hidden="false" collective="false" import="true" targetId="1466-696f-2a85-14b5" type="selectionEntry">
       <modifiers>
@@ -4981,7 +4989,6 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ad23-c512-3d63-c3a4" type="equalTo"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="095c-81d6-2cb9-777e" type="equalTo"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bdd0-e9d7-b9ca-cd36" type="equalTo"/>
