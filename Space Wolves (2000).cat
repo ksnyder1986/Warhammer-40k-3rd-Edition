@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0885-d75b-33a6-169b" name="Space Wolves (2000)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0885-d75b-33a6-169b" name="Space Wolves (2000)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="2682-a24d-27d0-d11d" name="13th Company" hidden="false"/>
   </categoryEntries>
@@ -94,8 +94,24 @@
     <entryLink id="ae98-9681-8da2-dce0" name="Blood Claws Bike Pack" hidden="false" collective="false" import="true" targetId="7580-13ed-77ef-4cee" type="selectionEntry"/>
     <entryLink id="d0b4-0777-59d4-e59a" name="Long Fang Pack" page="" hidden="false" collective="false" import="true" targetId="b308-b104-9cf1-084e" type="selectionEntry"/>
     <entryLink id="ec24-e43c-b7df-57b5" name="Leman Russ Exterminator" page="l" hidden="false" collective="false" import="true" targetId="4c22-47a4-8177-f8f5" type="selectionEntry"/>
-    <entryLink id="0ead-aa56-5a80-f3f0" name="Wolf Lord Logar Grimnar" hidden="false" collective="false" import="true" targetId="7244-770d-e195-f39c" type="selectionEntry"/>
-    <entryLink id="fb51-9b1f-181e-7b6e" name="Wolf Lord Ragnar Blackmane" hidden="false" collective="false" import="true" targetId="62a9-130b-ccf7-841e" type="selectionEntry"/>
+    <entryLink id="0ead-aa56-5a80-f3f0" name="Wolf Lord Logar Grimnar" hidden="false" collective="false" import="true" targetId="7244-770d-e195-f39c" type="selectionEntry">
+      <modifiers>
+        <modifier type="add" value="2000+ points required to include Grimnar" field="error">
+          <conditions>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="fb51-9b1f-181e-7b6e" name="Wolf Lord Ragnar Blackmane" hidden="false" collective="false" import="true" targetId="62a9-130b-ccf7-841e" type="selectionEntry">
+      <modifiers>
+        <modifier type="add" value="1500+ points required to include Blackmane" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="206c-1bf7-6320-edb6" name="Wolf Priest Ulrik the Slayer" hidden="false" collective="false" import="true" targetId="de6e-4b00-dee0-5d95" type="selectionEntry"/>
     <entryLink id="7525-0bff-f7d8-a4c4" name="Hyperious Air Defence Battery (IA)" hidden="false" collective="false" import="true" targetId="fde5-3ce5-0c7a-820c" type="selectionEntry"/>
     <entryLink id="c179-1e01-c1d8-d07d" name="Imperial Navy Support (IA)" hidden="true" collective="false" import="true" targetId="3e43-ec0f-64ff-daaa" type="selectionEntry">
@@ -2611,13 +2627,6 @@ However, if the model bearing the standard is slain in close combat, then the en
       </costs>
     </selectionEntry>
     <selectionEntry id="7244-770d-e195-f39c" name="Wolf Lord Logar Grimnar" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="efa4-7bf1-f528-b71a" value="0">
-          <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efa4-7bf1-f528-b71a" type="max"/>
       </constraints>
@@ -2727,13 +2736,6 @@ However, if the model bearing the standard is slain in close combat, then the en
       </costs>
     </selectionEntry>
     <selectionEntry id="62a9-130b-ccf7-841e" name="Wolf Lord Ragnar Blackmane" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="df5f-65a9-8af5-0603" value="0">
-          <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df5f-65a9-8af5-0603" type="max"/>
       </constraints>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="04bd-002e-d5fe-e9a6" name="Imperial Guard (2003)" revision="5" battleScribeVersion="2.03" authorName="Kris Snyder" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="04bd-002e-d5fe-e9a6" name="Imperial Guard (2003)" revision="6" battleScribeVersion="2.03" authorName="Kris Snyder" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="3670-6ad0-8988-c35b" name="Officer" hidden="false"/>
     <categoryEntry id="5a7d-a0bb-d5e1-e79a" name="Standard Bearer" hidden="false"/>
@@ -225,24 +225,36 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="19af-5394-511e-5838" name="Lord Castellan Ursarkar E. Creed" hidden="false" collective="false" import="true" targetId="7378-a24b-e655-ba2b" type="selectionEntry">
-      <constraints>
-        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33bf-604d-058a-781a" type="max"/>
-      </constraints>
       <categoryLinks>
         <categoryLink id="a3db-d478-681f-c85f" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
         <categoryLink id="2a4c-7a94-d379-d3eb" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
         <categoryLink id="919f-c96f-3e10-3ad7" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="1500+ points required to add Creed" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="d31b-b340-bc5d-e971" name="Commissar Yarrick" hidden="false" collective="false" import="true" targetId="ff1f-4122-1b75-541e" type="selectionEntry">
-      <constraints>
-        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0bdd-7725-83c3-9521" type="max"/>
-      </constraints>
+      <modifiers>
+        <modifier type="add" value="2000+ points required to add Yarrick" field="error">
+          <conditions>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="c0c4-6fa8-95df-969d" name="Colonel-Commissar Ibram Gaunt" hidden="false" collective="false" import="true" targetId="fa26-0ec2-d7c8-1cde" type="selectionEntry">
-      <constraints>
-        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09cc-6399-e2bc-05b7" type="max"/>
-      </constraints>
+      <modifiers>
+        <modifier type="add" value="1500+ points required to add Gaunt" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="6904-dd64-42a3-cb09" name="Colonel Schaffer&apos;s Last Chancers" hidden="false" collective="false" import="true" targetId="716e-a8f1-ad1c-56d1" type="selectionEntry"/>
     <entryLink id="45d8-c175-e5cb-2354" name="Grenadiers" hidden="true" collective="false" import="true" targetId="54c0-9145-28d2-3ebf" type="selectionEntry">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <comment>2002 Chaos Space Marine Codex</comment>
   <categoryEntries>
     <categoryEntry id="039c-5796-7006-0975" name="Mark of Khorne" hidden="false"/>
@@ -266,10 +266,34 @@
     <entryLink id="ba01-fb7b-5bf3-d02b" name="Word Bearers Elite Replacement Slot" hidden="false" collective="false" import="true" targetId="0b83-3e43-29c9-527e" type="selectionEntry"/>
     <entryLink id="688d-057f-1cca-a74d" name="Word Bearers Fast Attack Replacement Slot" hidden="false" collective="false" import="true" targetId="e012-9bdc-fec4-ada1" type="selectionEntry"/>
     <entryLink id="bfa1-bbf2-1449-b0a4" name="Word Bearers Heavy Support Replacement Slot" hidden="false" collective="false" import="true" targetId="fe02-e269-a11c-5d16" type="selectionEntry"/>
-    <entryLink id="c175-59c7-b956-d3fc" name="Abaddon the Despoiler" hidden="false" collective="false" import="true" targetId="bdac-a8bf-59a7-6578" type="selectionEntry"/>
+    <entryLink id="c175-59c7-b956-d3fc" name="Abaddon the Despoiler" hidden="false" collective="false" import="true" targetId="bdac-a8bf-59a7-6578" type="selectionEntry">
+      <modifiers>
+        <modifier type="add" value="2000+ points required for Abaddon" field="error">
+          <conditions>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="2552-e6e9-fcb1-88bd" name="Ahriman of the Thousand Sons" hidden="false" collective="false" import="true" targetId="d982-9ee7-19b6-b32a" type="selectionEntry"/>
-    <entryLink id="9770-3fa1-3a59-03c7" name="Lucius the Eternal" hidden="false" collective="false" import="true" targetId="83cf-ff36-d1f0-fddc" type="selectionEntry"/>
-    <entryLink id="a2c1-36ff-aabc-7812" name="Typhus" hidden="false" collective="false" import="true" targetId="71da-1c7a-2eae-5da8" type="selectionEntry"/>
+    <entryLink id="9770-3fa1-3a59-03c7" name="Lucius the Eternal" hidden="false" collective="false" import="true" targetId="83cf-ff36-d1f0-fddc" type="selectionEntry">
+      <modifiers>
+        <modifier type="add" value="1500+ points required for Lucius" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink id="a2c1-36ff-aabc-7812" name="Typhus" hidden="false" collective="false" import="true" targetId="71da-1c7a-2eae-5da8" type="selectionEntry">
+      <modifiers>
+        <modifier type="add" value="1500+ points required for Typhus" field="error">
+          <conditions>
+            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="0335-c034-3998-9db2" name="Fabius Bile" hidden="false" collective="false" import="true" targetId="228f-2438-d2d1-998b" type="selectionEntry"/>
     <entryLink id="0ee9-cc1e-1608-75e7" name="Forgefiend (Homebrew)" hidden="false" collective="false" import="true" targetId="c743-5d92-38d8-8ad9" type="selectionEntry"/>
     <entryLink id="476c-e0d7-8f1d-7c48" name="Maulerfiend (Homebrew)" hidden="false" collective="false" import="true" targetId="f92e-ed72-d3f4-0a71" type="selectionEntry"/>
@@ -1297,7 +1321,7 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="2599-60c2-23ed-60fe" name="Great Unclear One" hidden="false" targetId="85c6-a98d-1fac-38ae" type="profile"/>
+        <infoLink id="2599-60c2-23ed-60fe" name="Great Unclean One" hidden="false" targetId="85c6-a98d-1fac-38ae" type="profile"/>
         <infoLink id="4815-2af4-0564-70c7" name="Possession" hidden="false" targetId="d1c9-1fdc-179b-02fa" type="rule"/>
         <infoLink id="8a5c-2779-2a54-9eb1" name="Daemonic Visage" hidden="false" targetId="e8ac-c6ca-da7f-8b78" type="rule"/>
         <infoLink id="0b63-86b5-a237-3574" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
@@ -4201,11 +4225,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
     </selectionEntry>
     <selectionEntry id="bdac-a8bf-59a7-6578" name="Abaddon the Despoiler" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="d7f0-aa2c-3a4a-4ff4" value="0">
-          <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="or">
@@ -4455,11 +4474,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4bde-bf7f-8300-7011" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="1d88-fae4-e4ba-4ad1" value="0">
-          <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="parent" value="1500" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d88-fae4-e4ba-4ad1" type="max"/>
@@ -4597,11 +4611,6 @@ Weapon Destroyed results may choose to remove this weapon.</description>
     </selectionEntry>
     <selectionEntry id="83cf-ff36-d1f0-fddc" name="Lucius the Eternal" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="9bfa-4397-d9d4-b2cd" value="0">
-          <conditions>
-            <condition field="4ed5-2f92-9abc-2870" scope="force" value="1500" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="and">
