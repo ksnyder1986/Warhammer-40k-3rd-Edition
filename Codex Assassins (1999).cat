@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="479b-b363-3deb-a09f" name="Codex Assassins (1999)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="479b-b363-3deb-a09f" name="Codex Assassins (1999)" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <forceEntries>
     <forceEntry id="0033-95b4-1719-832a" name="Assassin Attachment" hidden="false">
       <categoryLinks>
         <categoryLink id="8b0c-ef64-9605-0aec" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="278a-a9c3-1c89-27ce" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="278a-a9c3-1c89-27ce" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -14,14 +14,14 @@
   <sharedSelectionEntries>
     <selectionEntry id="5c19-3d1b-94d8-42c9" name="Officio Assassinorum Operative" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink id="69a1-ba2f-07a1-71ca" name="New CategoryLink" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
+        <categoryLink id="69a1-ba2f-07a1-71ca" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
         <categoryLink id="79f8-d994-7a33-ba9d" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="f0a4-9d4e-439f-9f94" name="Assassin Temple" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3b8-9532-2adf-7337" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c656-f126-c10b-687a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3b8-9532-2adf-7337" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c656-f126-c10b-687a" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="a562-56eb-f21e-950c" name="Culexus" hidden="false" collective="false" import="true" type="model">
@@ -71,7 +71,7 @@
                 <infoLink id="7257-56c2-df99-8bdc" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="105.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="105"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e49d-233f-fba2-259a" name="Eversor" hidden="false" collective="false" import="true" type="model">
@@ -97,7 +97,7 @@
                   <description>The Eversor never counts as moving when firing its executioner pistol.</description>
                 </rule>
                 <rule id="7af2-d0be-71c3-ac1a" name="Bio-Meltdown!" hidden="false">
-                  <description>If the Eversor is killed, place a Blast Marker center over the model. Any model touched by the templat takes an automatic Strength 5 hit. </description>
+                  <description>If the Eversor is killed, place a Blast Marker center over the model. Any model touched by the templat takes an automatic Strength 5 hit.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -115,7 +115,7 @@
                 <infoLink id="d258-6daa-746a-4916" name="Melta Bombs" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="95.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="95"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="5868-db06-0fd3-2231" name="Callidus" hidden="false" collective="false" import="true" type="model">
@@ -168,7 +168,7 @@
                 <infoLink id="a71f-c3e4-ce0d-4e65" name="Invulnerable Saving Throw" hidden="false" targetId="97b3-810d-a09e-872b" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4454-cd52-d8c1-eeb3" name="Vindicare" hidden="false" collective="false" import="true" type="model">
@@ -195,8 +195,11 @@
               <rules>
                 <rule id="6102-6145-5a72-af7e" name="Exitus Rifle" hidden="false">
                   <description>Always hits on a 2+. The rifle is may fire a special round instead of a normal shot. The special rounds are used one at a time and you must declare which you are using before you roll the dice. The round is can only be used once per game, and is lost even if the shot misses.
+
 Shield Breaker Round: The shot ignores any invulnerable save.
+
 Turbo-Penetrator Round: This inflicts 2 wounds. If fired at a vehicle, the has has an Armour Penetration of 3D6.
+
 Hellfire Round: The shot wounds on a 2+.</description>
                 </rule>
                 <rule id="ea26-042e-0c4a-7dd2" name="Spy Mask" hidden="false">
@@ -221,14 +224,14 @@ Hellfire Round: The shot wounds on a 2+.</description>
                 <infoLink id="5dc4-15a8-42c5-4b31" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="110.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="110"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
