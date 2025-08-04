@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="571f-bded-9f3f-e9f6" name="Imperial Guard (1999)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="571f-bded-9f3f-e9f6" name="Imperial Guard (1999)" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="d77a-7f37-0364-0a69" name="Officer" hidden="false"/>
     <categoryEntry id="d79c-fe5a-5220-47df" name="Catachan" hidden="false"/>
@@ -12,6 +12,7 @@
     <categoryEntry id="206d-ffb4-6782-8865" name="City Fighter" hidden="false"/>
     <categoryEntry id="7613-3eb3-5a57-1219" name="PDF" hidden="false"/>
     <categoryEntry id="71a1-ed13-f938-22b3" name="Cadian" hidden="false"/>
+    <categoryEntry name="Tank Ace" id="8725-16a8-ec26-b620" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="5ebf-ab63-cd5b-afcb" name="Command Platoon" hidden="false" collective="false" import="true" targetId="ca89-e1b0-8df2-731f" type="selectionEntry">
@@ -3522,7 +3523,25 @@
     <selectionEntry id="0d18-655f-f1b9-f451" name="Leman Russ Battle Tank" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
         <infoLink id="f4dd-8fd3-0311-f7df" name="Battle Cannon" hidden="false" targetId="3a2e-94e4-b9a3-bb11" type="profile"/>
-        <infoLink id="bac1-0487-7e5f-e997" name="Leman Russ Battle Tank" hidden="false" targetId="9e86-ec2d-9ff5-f5a4" type="profile"/>
+        <infoLink id="bac1-0487-7e5f-e997" name="Leman Russ Battle Tank" hidden="false" targetId="9e86-ec2d-9ff5-f5a4" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Leman Russ Battle Tank" id="4fc8-b9ef-191a-fbbf" hidden="false" targetId="9e86-ec2d-9ff5-f5a4" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="4" field="b109-f88e-dcc7-8a24"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="f967-11df-65f8-ab7b" name="Hull Weapon" hidden="false" collective="false" import="true">
@@ -3582,11 +3601,29 @@
     </selectionEntry>
     <selectionEntry id="a018-1f62-6d23-1e9b" name="Leman Russ Vanquisher" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="50d2-45bc-bebf-c272" name="Leman Russ Vanquisher" hidden="false" targetId="919f-bf50-b35d-742e" type="profile"/>
+        <infoLink id="50d2-45bc-bebf-c272" name="Leman Russ Vanquisher" hidden="false" targetId="919f-bf50-b35d-742e" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="9619-c0ad-314b-4a99" name="Vanquisher Cannon" hidden="false" targetId="6ed6-d055-77b9-709e" type="profile"/>
         <infoLink id="8675-4959-5360-f3a1" name="Storm Bolter" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile">
           <modifiers>
             <modifier type="set" field="name" value="Co-axial Storm Bolter"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Leman Russ Vanquisher" id="8d5f-6b24-60fb-dfa5" hidden="false" targetId="919f-bf50-b35d-742e" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="4" field="b109-f88e-dcc7-8a24"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3663,10 +3700,28 @@
     </selectionEntry>
     <selectionEntry id="8968-eb43-b88e-440c" name="Leman Russ Exterminator" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="f0f2-30c6-2339-86ca" name="Leman Russ Exterminator" hidden="false" targetId="bf20-9b0c-85a7-5632" type="profile"/>
+        <infoLink id="f0f2-30c6-2339-86ca" name="Leman Russ Exterminator" hidden="false" targetId="bf20-9b0c-85a7-5632" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="c341-4d1e-f619-ed13" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
           <modifiers>
             <modifier type="set" field="name" value="Twin-Linked Autocannon"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Leman Russ Exterminator" id="7070-7d69-bfd1-51b7" hidden="false" targetId="bf20-9b0c-85a7-5632" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="4" field="b109-f88e-dcc7-8a24"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -4148,8 +4203,26 @@
     </selectionEntry>
     <selectionEntry id="b618-6741-3be4-995d" name="Leman Russ Conqueror (IA)" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="fb1a-8c77-c330-615c" name="Leman Russ Conqueror" hidden="false" targetId="0ec0-ee8a-5b37-b647" type="profile"/>
+        <infoLink id="fb1a-8c77-c330-615c" name="Leman Russ Conqueror" hidden="false" targetId="0ec0-ee8a-5b37-b647" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="ca2c-ddf0-8122-0562" name="Conqueror Cannon" hidden="false" targetId="814e-4aa4-0908-6350" type="profile"/>
+        <infoLink name="Leman Russ Conqueror" id="8c4c-6e5e-97c1-a344" hidden="false" targetId="0ec0-ee8a-5b37-b647" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="4" field="b109-f88e-dcc7-8a24"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="816f-737f-0a07-3d6c" name="Hull Weapon" hidden="false" collective="false" import="true">
@@ -4221,8 +4294,26 @@
     </selectionEntry>
     <selectionEntry id="4ce5-a21f-645a-ebfa" name="Destroyer Tank Hunter (IA)" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="de7d-249e-be8d-c7d1" name="Destroyer Tank Hunter" hidden="false" targetId="b49b-2cfb-64d6-4c3f" type="profile"/>
+        <infoLink id="de7d-249e-be8d-c7d1" name="Destroyer Tank Hunter" hidden="false" targetId="b49b-2cfb-64d6-4c3f" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="0a10-b41d-9ffc-7989" name="Laser Destroyer" hidden="false" targetId="5fd0-8bc3-0bce-5e81" type="profile"/>
+        <infoLink name="Destroyer Tank Hunter" id="9446-8e02-c228-0312" hidden="false" targetId="b49b-2cfb-64d6-4c3f" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="4" field="b109-f88e-dcc7-8a24"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink id="d8b3-67bf-92a7-c609" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="c0af-40a7-0f54-9847" type="selectionEntryGroup"/>
@@ -4396,11 +4487,29 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="54dd-7b09-3039-1a31" name="Salamander" hidden="false" targetId="e46b-5e10-d5a2-ee74" type="profile"/>
+        <infoLink id="54dd-7b09-3039-1a31" name="Salamander" hidden="false" targetId="e46b-5e10-d5a2-ee74" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="5244-d36e-254b-5136" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
         <infoLink id="7045-219a-ce9b-9512" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
         <infoLink id="b393-30cc-1fa4-4ad4" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
         <infoLink id="6e28-7062-76c1-3cf5" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+        <infoLink name="Salamander" id="ef1f-dd11-0787-8041" hidden="false" targetId="e46b-5e10-d5a2-ee74" type="profile">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="8725-16a8-ec26-b620" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="4" field="b109-f88e-dcc7-8a24"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink id="549e-a4b9-af97-e25d" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="c0af-40a7-0f54-9847" type="selectionEntryGroup"/>
