@@ -227,6 +227,21 @@
     </entryLink>
     <entryLink id="d766-c132-e6f9-6dfd" name="Flakk Trukk (Homebrew)" hidden="false" collective="false" import="true" targetId="c01a-f670-c009-1fb4" type="selectionEntry"/>
     <entryLink id="3bf6-1168-8f9f-49da" name="Stompa (Homebrew)" hidden="false" collective="false" import="true" targetId="d74d-e6b5-8f89-cd59" type="selectionEntry"/>
+    <entryLink import="true" name="Attak Fighta (Homebrew)" hidden="false" id="58b4-c5df-981c-e922" type="selectionEntry" targetId="d35c-4cd0-4d45-dd39">
+      <categoryLinks>
+        <categoryLink targetId="34e2-d53c-28ab-44cf" id="1f00-962a-795b-b0ed" primary="true" name="Fast Attack"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Gorkanaut (Homebrew)" hidden="false" id="427d-8895-1670-f46a" type="selectionEntry" targetId="36cb-7dec-78c6-c34a">
+      <categoryLinks>
+        <categoryLink targetId="6b90-dc9c-1a49-3fdc" id="6931-01f5-700b-a229" primary="true" name="Super-Heavy"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Morkanaut (Homebrew)" hidden="false" id="f9c1-11cf-60a9-80a2" type="selectionEntry" targetId="7783-a4ed-6c10-41e5">
+      <categoryLinks>
+        <categoryLink targetId="6b90-dc9c-1a49-3fdc" id="eb3f-b549-59d4-86d4" primary="true" name="Super-Heavy"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b32d-5cad-2d37-2401" name="Warboss" hidden="false" collective="false" import="true" type="unit">
@@ -4794,7 +4809,7 @@
                 <infoLink id="0e02-ac08-d753-279c" name="Grot Bombs" hidden="false" targetId="4a24-7d6e-a253-5ace" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="5759-63ab-5871-513e" name="2x Rokkits" hidden="false" collective="false" import="true" type="upgrade">
@@ -4806,7 +4821,7 @@
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5013,12 +5028,11 @@
       <comment>Normal L.Vehicle Fast
 Armour: 10-10-10 = 0+20+10 = 30pts
 Open-Topped = 0 Pts
-Speed: Fast = 20pts
-</comment>
+Speed: Fast = 20pts</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5047,13 +5061,13 @@ Speed: Fast = 20pts
         <infoLink id="a8a7-7db2-7989-3e03" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="276f-721d-7a26-167f" name="New CategoryLink" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+        <categoryLink id="276f-721d-7a26-167f" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="b2b2-d587-1e32-90be" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="f665-e477-6bd9-5c8d">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2e8-2ae7-d966-e3b6" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9eb-346c-75b0-90e8" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2e8-2ae7-d966-e3b6" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9eb-346c-75b0-90e8" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="f665-e477-6bd9-5c8d" name="Big Shoota" hidden="false" collective="false" import="true" type="upgrade">
@@ -5061,7 +5075,7 @@ Speed: Fast = 20pts
                 <infoLink id="073b-0944-0a79-6e34" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8f9d-6399-b804-427a" name="Rokkit Launcha" hidden="false" collective="false" import="true" type="upgrade">
@@ -5069,7 +5083,7 @@ Speed: Fast = 20pts
                 <infoLink id="e715-c9fb-c983-bfe1" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5079,24 +5093,23 @@ Speed: Fast = 20pts
         <entryLink id="9cd1-14db-1a18-2bfd" name="Ork Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="7ab0-3a69-56f8-540b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d35c-4cd0-4d45-dd39" name="Attak Fighta (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="d35c-4cd0-4d45-dd39" name="Attack Fighta (Homebrew)" hidden="false" collective="false" import="true" type="unit">
       <comment>Normal Flyer
 Armor 10-10-10 = 0-20-10=30
 Flyer = 40
-2x TwinLinked Big Shootas = 44
-</comment>
+2x TwinLinked Big Shootas = 44</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
       <profiles>
-        <profile id="f5e8-a97f-1758-fc54" name="Attak Fighta" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+        <profile id="f5e8-a97f-1758-fc54" name="Attack Fighta" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
           <characteristics>
             <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
             <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
@@ -5117,7 +5130,7 @@ Flyer = 40
       <selectionEntryGroups>
         <selectionEntryGroup id="dd38-2ec0-16cf-cdef" name="Hard Points" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c568-1cc4-b163-ad1c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c568-1cc4-b163-ad1c" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="f08e-f305-ff5e-e256" name="2x Bombs" hidden="false" collective="false" import="true" type="upgrade">
@@ -5129,7 +5142,7 @@ Flyer = 40
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e0db-2520-67b0-25b1" name="2x Rokkits" hidden="false" collective="false" import="true" type="upgrade">
@@ -5141,15 +5154,18 @@ Flyer = 40
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20.0"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="115.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="115"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="fd71-7a00-cb0b-9e61" primary="true" name="Heavy Support"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="d74d-e6b5-8f89-cd59" name="Stompa (Homebrew)" hidden="false" collective="false" import="true" type="model">
       <comment>Walker - War Machine - Lumbering
@@ -5166,7 +5182,7 @@ Supa Gatler = 35 * 150% = 85pt</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5241,14 +5257,14 @@ Supa Gatler = 35 * 150% = 85pt</comment>
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="85e4-09e2-4570-2865" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+        <categoryLink id="85e4-09e2-4570-2865" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9c92-0858-4422-f488" name="Mega-Choppa" hidden="false" collective="false" import="true" type="upgrade">
           <comment>War Machine CCW = 10x4x4 = 160</comment>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0ae-2844-dff1-f8f2" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eda6-02db-5588-a2a9" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0ae-2844-dff1-f8f2" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eda6-02db-5588-a2a9" type="min"/>
           </constraints>
           <profiles>
             <profile id="4d42-e5c7-f3db-3254" name="Mega-Choppa" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -5262,12 +5278,12 @@ Supa Gatler = 35 * 150% = 85pt</comment>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80.0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="855.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1015"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="36cb-7dec-78c6-c34a" name="Gorkanaut (Homebrew)" hidden="false" collective="false" import="true" type="unit">
@@ -5280,11 +5296,11 @@ Claw of Gork: 80
 2x Rokkit Launchers: 30
 2x Twin-Linked Big Shootas: 45
 Skorcha: 15
-Gattling Mega-Shoota: 15+300% = 60</comment>
+Gattling Mega-Big Shoota: 15+300% = 60</comment>
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5336,10 +5352,10 @@ Gattling Mega-Shoota: 15+300% = 60</comment>
         <infoLink id="a86e-2d4d-7925-ef34" name="Skorcha" hidden="false" targetId="a162-3683-bca7-8f2c" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="cff2-a25e-90f7-f934" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+        <categoryLink id="cff2-a25e-90f7-f934" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="460.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="460"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7783-a4ed-6c10-41e5" name="Morkanaut (Homebrew)" hidden="false" collective="false" import="true" type="unit">
@@ -5362,7 +5378,7 @@ Kustom Mega Cannon: 20+150%+100%=70
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5414,10 +5430,10 @@ Kustom Mega Cannon: 20+150%+100%=70
         <infoLink id="2577-c8dd-a2d8-404a" name="Kustom Mega-Blasta" hidden="false" targetId="530b-6616-a80d-8699" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="b316-710c-544f-c9e1" name="New CategoryLink" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+        <categoryLink id="b316-710c-544f-c9e1" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="475.0"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="475"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
