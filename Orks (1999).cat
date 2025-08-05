@@ -225,6 +225,23 @@
         <categoryLink id="d768-80a0-f297-09a5" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="d766-c132-e6f9-6dfd" name="Flakk Trukk (Homebrew)" hidden="false" collective="false" import="true" targetId="c01a-f670-c009-1fb4" type="selectionEntry"/>
+    <entryLink id="3bf6-1168-8f9f-49da" name="Stompa (Homebrew)" hidden="false" collective="false" import="true" targetId="d74d-e6b5-8f89-cd59" type="selectionEntry"/>
+    <entryLink import="true" name="Attak Fighta (Homebrew)" hidden="false" id="58b4-c5df-981c-e922" type="selectionEntry" targetId="d35c-4cd0-4d45-dd39">
+      <categoryLinks>
+        <categoryLink targetId="34e2-d53c-28ab-44cf" id="1f00-962a-795b-b0ed" primary="true" name="Fast Attack"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Gorkanaut (Homebrew)" hidden="false" id="427d-8895-1670-f46a" type="selectionEntry" targetId="36cb-7dec-78c6-c34a">
+      <categoryLinks>
+        <categoryLink targetId="6b90-dc9c-1a49-3fdc" id="6931-01f5-700b-a229" primary="true" name="Super-Heavy"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Morkanaut (Homebrew)" hidden="false" id="f9c1-11cf-60a9-80a2" type="selectionEntry" targetId="7783-a4ed-6c10-41e5">
+      <categoryLinks>
+        <categoryLink targetId="6b90-dc9c-1a49-3fdc" id="eb3f-b549-59d4-86d4" primary="true" name="Super-Heavy"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b32d-5cad-2d37-2401" name="Warboss" hidden="false" collective="false" import="true" type="unit">
@@ -4730,13 +4747,13 @@
       <categoryLinks>
         <categoryLink id="4cf9-5e93-02ca-6630" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="b96f-1833-7612-1e08" name="Hard Points" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0881-55fa-5eb5-fec8" name="Hard Points" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5652-fb9f-3a16-aced" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c8dd-b58f-56b9-ccbf" name="2x Rokkits" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="da3b-6f4e-7ead-d00b" name="2x Big Bombs" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="225a-024f-9ebb-b50c" name="Rockits" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
                   <modifiers>
@@ -4760,7 +4777,7 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7d5e-3c17-e9e6-70b8" name="2x Grot Big Bombs" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="4e6b-9f0d-d612-ae52" name="2x Bombs" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="5c77-cff6-f796-8f56" name="Big Bomb" hidden="false" targetId="52ac-16f1-b437-6d96" type="profile">
                   <modifiers>
@@ -4785,12 +4802,34 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="7721-7cc7-7f22-7fd2" name="2x Grot Big Bombs" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="f621-38c0-3a21-2cbc" name="Big Bomb" hidden="false" targetId="52ac-16f1-b437-6d96" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="2x Grot Big Bombs"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="0e02-ac08-d753-279c" name="Grot Bombs" hidden="false" targetId="4a24-7d6e-a253-5ace" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5759-63ab-5871-513e" name="2x Rokkits" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a466-dab0-7775-b7ab" name="Rockits" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="2x Rokkits"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="135"/>
       </costs>
@@ -4986,6 +5025,418 @@
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="150"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c01a-f670-c009-1fb4" name="Flakk Trukk (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal L.Vehicle Fast
+Armour: 10-10-10 = 0+20+10 = 30pts
+Open-Topped = 0 Pts
+Speed: Fast = 20pts</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="fba2-eae7-9862-23a5" name="Flakk Trukk" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4d5b-a868-333a-deda" name="Flakka-gunz" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <comment>2x Autocannon with Anti-Aircraft Mount +50%</comment>
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 2</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Anti-Aircraft Mounts</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="409e-df9b-b82c-4b04" name="Fast" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+        <infoLink id="a8a7-7db2-7989-3e03" name="Open-Topped" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="276f-721d-7a26-167f" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b2b2-d587-1e32-90be" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="f665-e477-6bd9-5c8d">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2e8-2ae7-d966-e3b6" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9eb-346c-75b0-90e8" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f665-e477-6bd9-5c8d" name="Big Shoota" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="073b-0944-0a79-6e34" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8f9d-6399-b804-427a" name="Rokkit Launcha" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="e715-c9fb-c983-bfe1" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9cd1-14db-1a18-2bfd" name="Ork Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="7ab0-3a69-56f8-540b" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d35c-4cd0-4d45-dd39" name="Attack Fighta (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Normal Flyer
+Armor 10-10-10 = 0-20-10=30
+Flyer = 40
+2x TwinLinked Big Shootas = 44</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="f5e8-a97f-1758-fc54" name="Attack Fighta" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9b30-019c-601d-c60e" name="Flyers" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink id="7a63-461d-2657-a863" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Twin-Linked Big Shootas"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="8b46-c27c-1249-ef8e" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="dd38-2ec0-16cf-cdef" name="Hard Points" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c568-1cc4-b163-ad1c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f08e-f305-ff5e-e256" name="2x Bombs" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="2781-0c8a-af63-e3ad" name="Bomb" hidden="false" targetId="8fab-1e56-f345-a884" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="2x Bombs"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e0db-2520-67b0-25b1" name="2x Rokkits" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="9b28-3a19-b233-1dbc" name="Rockits" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="2x Rokkits"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="115"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="fd71-7a00-cb0b-9e61" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="d74d-e6b5-8f89-cd59" name="Stompa (Homebrew)" hidden="false" collective="false" import="true" type="model">
+      <comment>Walker - War Machine - Lumbering
+Armour 13-13-12 = 20 + 60 + 30 = 110
+Lumbering: 20pts
+Structure Points = 300
+
+3x Big Shootas = 45
+Deff Kannon = 35 * 150% * 150% = 140
+Skorcha = 15pts
+Twin-Linked Big Shoota= 20pts
+3x Mega Rokkits: 40x3 = 120pts
+Supa Gatler = 35 * 150% = 85pt</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="2b54-2631-e46e-742d" name="Stompa" hidden="false" typeId="8363-119d-bce3-2e3b" typeName="Super Heavy Walker">
+          <characteristics>
+            <characteristic name="WS" typeId="66aa-c126-e0da-eff1">4</characteristic>
+            <characteristic name="BS" typeId="caba-3888-54de-7384">2</characteristic>
+            <characteristic name="S" typeId="094c-cba6-7096-9805">10</characteristic>
+            <characteristic name="Front Armor" typeId="02e0-3eba-d3ed-75e0">13</characteristic>
+            <characteristic name="Side Armor" typeId="efff-2637-7f7f-8339">13</characteristic>
+            <characteristic name="Rear Armor" typeId="6b33-ddb1-a14c-9034">12</characteristic>
+            <characteristic name="I" typeId="e58a-0314-a94e-b641">2</characteristic>
+            <characteristic name="A" typeId="1735-ac9d-d5c1-ca2f">2</characteristic>
+            <characteristic name="Structure Points" typeId="b9dd-3e64-0507-92f1">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3192-76f6-7d7f-8b9d" name="Deff Kannon (Frag)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/Ordinance</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+          </characteristics>
+        </profile>
+        <profile id="67ab-6798-f9b3-c48a" name="Deff Kannon (Shell)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/Blast</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Shell shots from a Deff Kannon scatter like Ordnance, but still use the small Blast marker.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6674-3824-7647-164a" name="3x Supa Rokkits" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+          </characteristics>
+        </profile>
+        <profile id="8e81-9db5-319a-3599" name="Supa-Gatler" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">48&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy D3</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="27f9-542f-cf38-21b3" name="Transport" hidden="false">
+          <description>The Stompa can transport up to 20 models</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="a7af-79d9-e98a-d5a1" name="Super Heavy Tank" hidden="false" targetId="d831-af9c-0b53-6da3" type="rule"/>
+        <infoLink id="c561-ebfd-88a1-c4d4" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="3x Big Shootas"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="99d5-12fb-5f64-6197" name="Skorcha" hidden="false" targetId="a162-3683-bca7-8f2c" type="profile"/>
+        <infoLink id="1d94-d9e9-79d0-69a7" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="Twin-Linked Big Shoota"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="85e4-09e2-4570-2865" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9c92-0858-4422-f488" name="Mega-Choppa" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>War Machine CCW = 10x4x4 = 160</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0ae-2844-dff1-f8f2" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eda6-02db-5588-a2a9" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="4d42-e5c7-f3db-3254" name="Mega-Choppa" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Warmachine Close Combat Weapon</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1015"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="36cb-7dec-78c6-c34a" name="Gorkanaut (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Super Heavy Walker
+Armour 13-13-12: 20+60+30 = 110
+Lumbering = 20
+Structure Points: 100
+
+Claw of Gork: 80
+2x Rokkit Launchers: 30
+2x Twin-Linked Big Shootas: 45
+Skorcha: 15
+Gattling Mega-Big Shoota: 15+300% = 60</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="818c-39d1-7a74-261a" name="Gorkanaut" hidden="false" typeId="8363-119d-bce3-2e3b" typeName="Super Heavy Walker">
+          <characteristics>
+            <characteristic name="WS" typeId="66aa-c126-e0da-eff1">4</characteristic>
+            <characteristic name="BS" typeId="caba-3888-54de-7384">2</characteristic>
+            <characteristic name="S" typeId="094c-cba6-7096-9805">10</characteristic>
+            <characteristic name="Front Armor" typeId="02e0-3eba-d3ed-75e0">13</characteristic>
+            <characteristic name="Side Armor" typeId="efff-2637-7f7f-8339">13</characteristic>
+            <characteristic name="Rear Armor" typeId="6b33-ddb1-a14c-9034">12</characteristic>
+            <characteristic name="I" typeId="e58a-0314-a94e-b641">2</characteristic>
+            <characteristic name="A" typeId="1735-ac9d-d5c1-ca2f">2</characteristic>
+            <characteristic name="Structure Points" typeId="b9dd-3e64-0507-92f1">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c50c-e3df-fb00-12b5" name="Klaw of Gork" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Warmachine Close Combat Weapon</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f304-a18c-5c02-612a" name="Mega-Shoota" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 3D3</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="90c3-1129-c2eb-1e81" name="Super Heavy Tank" hidden="false" targetId="d831-af9c-0b53-6da3" type="rule"/>
+        <infoLink id="ee42-fbc8-5911-dac4" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Rokkit Launchas"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="78bf-200a-d0c1-8afa" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Twin-linked Big Shootas"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="a86e-2d4d-7925-ef34" name="Skorcha" hidden="false" targetId="a162-3683-bca7-8f2c" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cff2-a25e-90f7-f934" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="460"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7783-a4ed-6c10-41e5" name="Morkanaut (Homebrew)" hidden="false" collective="false" import="true" type="unit">
+      <comment>Super Heavy Walker
+Armour 13-13-12: 20+60+30 = 110
+Lumbering = 20
+Structure Points: 100
+
+Claw of Mork: 80
+2x Rokkit Launchers: 30
+2x Twin-Linked Big Shootas: 45
+Kustom Mega Blasta: 20
+Kustom Mega Cannon: 20+150%+100%=70
+
+230 + 80 = 310
++ 30 = 340
++ 45 = 385
++ 20 = 405
++ 70 = 475</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="31cd-fdbf-489d-81ac" name="Morkanaut" hidden="false" typeId="8363-119d-bce3-2e3b" typeName="Super Heavy Walker">
+          <characteristics>
+            <characteristic name="WS" typeId="66aa-c126-e0da-eff1">4</characteristic>
+            <characteristic name="BS" typeId="caba-3888-54de-7384">2</characteristic>
+            <characteristic name="S" typeId="094c-cba6-7096-9805">10</characteristic>
+            <characteristic name="Front Armor" typeId="02e0-3eba-d3ed-75e0">13</characteristic>
+            <characteristic name="Side Armor" typeId="efff-2637-7f7f-8339">13</characteristic>
+            <characteristic name="Rear Armor" typeId="6b33-ddb1-a14c-9034">12</characteristic>
+            <characteristic name="I" typeId="e58a-0314-a94e-b641">2</characteristic>
+            <characteristic name="A" typeId="1735-ac9d-d5c1-ca2f">2</characteristic>
+            <characteristic name="Structure Points" typeId="b9dd-3e64-0507-92f1">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0e92-8f66-d561-bd07" name="Klaw of Mork" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Warmachine Close Combat Weapon</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="598c-6137-2315-849b" name="Kustom Mega-Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/Blast</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="8280-505e-cf95-d82e" name="Super Heavy Tank" hidden="false" targetId="d831-af9c-0b53-6da3" type="rule"/>
+        <infoLink id="9ff5-6032-8dcf-4e76" name="Rokkit Launcha" hidden="false" targetId="56b9-9d7d-bfdf-0ef7" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Rokkit Launchas"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="b226-8f37-0722-cdc1" name="Big Shoota" hidden="false" targetId="b467-e518-11c9-c23a" type="profile">
+          <modifiers>
+            <modifier type="set" field="name" value="2x Twin-linked Big Shootas"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="2577-c8dd-a2d8-404a" name="Kustom Mega-Blasta" hidden="false" targetId="530b-6616-a80d-8699" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b316-710c-544f-c9e1" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="475"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

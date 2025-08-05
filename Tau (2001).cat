@@ -23,6 +23,9 @@
     <entryLink id="9fd2-02cb-2208-94d5" name="Piranha (Homebrew)" hidden="false" collective="false" import="true" targetId="57fa-2e2e-e453-6313" type="selectionEntry"/>
     <entryLink id="e4b5-3c0a-1bc3-c02c" name="Razorshark Strike Fighter (Homebrew)" hidden="false" collective="false" import="true" targetId="9c59-ab22-f60f-c9c9" type="selectionEntry"/>
     <entryLink id="917e-46e4-bd4e-e4ec" name="Sun Shark Bomber (Homebrew)" hidden="false" collective="false" import="true" targetId="4725-b232-bbd7-82e3" type="selectionEntry"/>
+    <entryLink id="ed3b-c812-6307-ecb9" name="KV128 Stormsurge (Homebrew)" hidden="false" collective="false" import="true" targetId="549c-d180-4df8-76dd" type="selectionEntry"/>
+    <entryLink id="2bc2-7a91-74b2-fd4c" name="XV95 Ghostkeel Battlesuit (Homebrew)" hidden="false" collective="false" import="true" targetId="4877-8550-03ff-5210" type="selectionEntry"/>
+    <entryLink id="0e1f-77ba-c241-28cb" name="XV104 Riptide Battlesuit (Homebrew)" hidden="false" collective="false" import="true" targetId="a15b-5d2d-93d4-724c" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b044-07fe-a372-df49" name="Shas&apos;el" hidden="false" collective="false" import="true" type="unit">
@@ -1785,6 +1788,398 @@ Flyer = 40
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="225"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="549c-d180-4df8-76dd" name="KV128 Stormsurge (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Warmachine Walker
+Armor 12-12-12: 10+40+30 = 80
+Normal: 20
+Structure Points: 100</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="a5e5-7ee3-a688-f7ff" name="KV128 Stormsurge" hidden="false" typeId="8363-119d-bce3-2e3b" typeName="Super Heavy Walker">
+          <characteristics>
+            <characteristic name="WS" typeId="66aa-c126-e0da-eff1">2</characteristic>
+            <characteristic name="BS" typeId="caba-3888-54de-7384">3</characteristic>
+            <characteristic name="S" typeId="094c-cba6-7096-9805">5</characteristic>
+            <characteristic name="Front Armor" typeId="02e0-3eba-d3ed-75e0">12</characteristic>
+            <characteristic name="Side Armor" typeId="efff-2637-7f7f-8339">12</characteristic>
+            <characteristic name="Rear Armor" typeId="6b33-ddb1-a14c-9034">12</characteristic>
+            <characteristic name="I" typeId="e58a-0314-a94e-b641">3</characteristic>
+            <characteristic name="A" typeId="1735-ac9d-d5c1-ca2f">1</characteristic>
+            <characteristic name="Structure Points" typeId="b9dd-3e64-0507-92f1">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ee1e-34e8-9420-4668" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9f04-6838-dc12-3be4" name="Pulse Cannon" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>Blast Railgun Solid Shot
+35+150% = 85</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5d6-8ac4-e819-d85b" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86e4-23f6-4e5e-8b83" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9a61-d859-b369-40db" name="Pulse Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/Blast</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="85"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="efa3-7614-d742-5376" name="Twin-Linked Smart Missle System" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>20+50%=30</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf4c-6c54-53ea-55ad" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6546-c227-ad55-5bdf" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="dcab-df20-42b7-fe14" name="Smart Missile System" hidden="false" targetId="a92d-c02e-9701-2405" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-Linked Smart Missile System"/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="93a4-1311-ca28-8eaa" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="297d-a29e-7340-f0e6" name="4x Hunter-Killer Missiles" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd36-c07e-1874-fa41" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adc7-da05-a5e2-d69c" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="929d-f3e2-1a4f-067d" name="Hunter-killer Missile" hidden="false" targetId="86d5-c5a0-fc04-7f5a" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8f0b-253c-73fc-fea7" name="Cluster Rockets" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>Gattling Long-Barrelled Smart Missile System
+20+100%+150% = 70</comment>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f44c-40c4-b6cc-9fb9" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbc6-2486-f62a-bdc9" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="246f-f6dc-d39a-b8d9" name="Cluster Rockets" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 4D3</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7c0e-c27f-3db3-4208" name="Auxiliary Weapon System" hidden="false" collective="false" import="true" defaultSelectionEntryId="4399-c7f6-7ae2-a1aa">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97e4-77ba-92bf-9c41" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3c1-adb9-bc28-9237" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4399-c7f6-7ae2-a1aa" name="Twin-Linked Flamer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="9ad6-1c3a-62fc-4938" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+                <infoLink name="Twin-Linked" id="f8f1-ab4a-fa66-389f" hidden="false" type="rule" targetId="ebe5-6318-0fba-b84c"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8e5f-6045-62a3-1cf2" name="Twin-Linked Burst Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="5007-7453-0f63-5a0c" name="Burst Cannon" hidden="false" targetId="9e5e-b881-3c15-e101" type="profile"/>
+                <infoLink name="Twin-Linked" id="a101-7b1b-d3aa-7757" hidden="false" type="rule" targetId="ebe5-6318-0fba-b84c"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="ed97-f1f4-9497-f68b" name="Tau Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="660d-edf9-04e6-9966" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="200"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a15b-5d2d-93d4-724c" name="XV104 Riptide Battlesuit (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal Walker
+Armor 12-12-11: 10+40+20 = 70
+Normal: 10
+Shield: 35</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="4e5e-3818-8523-6701" name="XV104 Riptide Battlesuit" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+          <characteristics>
+            <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">2</characteristic>
+            <characteristic name="BS" typeId="5734-f043-7bcc-cff2">3</characteristic>
+            <characteristic name="S" typeId="2870-c64f-81e5-a118">5</characteristic>
+            <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">12</characteristic>
+            <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">12</characteristic>
+            <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">12</characteristic>
+            <characteristic name="I" typeId="695a-ba63-65d1-3ce5">3</characteristic>
+            <characteristic name="A" typeId="bb33-7ddf-2296-174e">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="41b1-013e-ad54-2fff" name="Shield Generator" hidden="false">
+          <description>Any glancing or penetrating hits against the front or side armour of a Riptide Battlesuit are cancelled on a 4+. The Shield Generator is disabled after cancelling two hits.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="1e3d-9cd2-d5ea-d6a3" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="72ec-deee-64fb-0cd4" name="Shoulder Weapon System" hidden="false" collective="false" import="true" defaultSelectionEntryId="28ac-8671-2ea9-698d">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2000-87de-d225-b15d" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ad1-8c6e-42cc-e622" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="28ac-8671-2ea9-698d" name="Twin-Linked Plasma Rifle" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>15+50%=22</comment>
+              <infoLinks>
+                <infoLink id="98e7-35ea-04f6-06db" name="Plasma Rifle" hidden="false" targetId="44d4-12ec-d6b1-ef3c" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Plasma Rifle"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="70cb-84a5-392f-fa24" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="22"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5e13-eb59-5e6e-ae06" name="Twin-Linked Smart Missle System" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>20+50%=30</comment>
+              <infoLinks>
+                <infoLink id="2ed2-6fc8-9d5e-1c31" name="Smart Missile System" hidden="false" targetId="a92d-c02e-9701-2405" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Smart Missile System"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="46d5-5bcd-b5da-3d27" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="445a-5460-5025-f880" name="Twin-Linked Fusion Blaster" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>10+50%=15</comment>
+              <infoLinks>
+                <infoLink id="c813-39ce-0d51-de58" name="Fusion Blaster" hidden="false" targetId="8afa-9848-b02f-36b5" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Fusion Blaster"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="5028-bb09-768c-9f16" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9089-8b91-505b-ff89" name="Primary Weapon System" hidden="false" collective="false" import="true" defaultSelectionEntryId="f936-a3ff-9dc2-0c3d">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ddb-bd17-0ecd-a58c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="966f-b37b-2d97-3344" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f936-a3ff-9dc2-0c3d" name="Heavy Burst Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>2x(5+150%+100%)=35</comment>
+              <profiles>
+                <profile id="b376-d5b8-525b-3629" name="Heavy Burst Cannon" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 3</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f9c8-84d7-247c-b441" name="Ion Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="fc1d-0ead-5632-cde5" name="Ion Cannon" hidden="false" targetId="43b2-2313-d8ca-a57b" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="7737-27cc-624e-0c89" name="Tau Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="660d-edf9-04e6-9966" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="125"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4877-8550-03ff-5210" name="XV95 Ghostkeel Battlesuit (Homebrew)" hidden="false" collective="false" import="true" type="upgrade">
+      <comment>Normal Walker
+Armor 11-11-10: 5+15+10 = 30
+Fully Armour Upcharge: 10
+Normal: 10
+StealthSuit (Shroud from Necron): +25%</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca8-ace3-d503-7923" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="8fd5-1c51-b181-e38b" name="XV95 Ghostkeel Battlesuit" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
+          <characteristics>
+            <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">2</characteristic>
+            <characteristic name="BS" typeId="5734-f043-7bcc-cff2">3</characteristic>
+            <characteristic name="S" typeId="2870-c64f-81e5-a118">5</characteristic>
+            <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">11</characteristic>
+            <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">11</characteristic>
+            <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">10</characteristic>
+            <characteristic name="I" typeId="695a-ba63-65d1-3ce5">3</characteristic>
+            <characteristic name="A" typeId="bb33-7ddf-2296-174e">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="92b7-d4ab-3c2c-4860" name="Stealthsuit" hidden="false" targetId="5519-d934-3cfb-7a6a" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="29e4-d4d4-f403-86b7" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4f2d-1b57-804d-7879" name="Primary Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="6536-1265-31a6-a696">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f32e-b521-4b2a-44a6" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="232b-21d1-be42-f9b2" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6536-1265-31a6-a696" name="Burst Fusion Blaster" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>10+150%=25</comment>
+              <profiles>
+                <profile id="7e09-8100-f847-5113" name="Burst Fusion Blaster" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1/Blast</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Melta</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5ae0-be83-61bc-0fd4" name="Ion Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="e894-ea8f-1357-0155" name="Ion Cannon" hidden="false" targetId="43b2-2313-d8ca-a57b" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="3898-5244-b639-5c3f" name="Shoulder Weapon System" hidden="false" collective="false" import="true" defaultSelectionEntryId="40ab-ae9a-6194-34ca">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="491e-ec92-d598-0054" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b2b-c7b6-f57f-93d7" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="40ab-ae9a-6194-34ca" name="Twin-Linked Flamer" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>10+50%=15</comment>
+              <infoLinks>
+                <infoLink id="8ac9-59f7-4449-a1de" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Flamer"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="b840-cc8e-ca19-b620" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="09d7-2d8c-86af-dd1f" name="Twin-Linked Burst Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>5+50%=8</comment>
+              <infoLinks>
+                <infoLink id="98fe-9b94-516a-e5b2" name="Burst Cannon" hidden="false" targetId="9e5e-b881-3c15-e101" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Burst Cannon"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="b024-244e-cebf-ecc9" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5c7e-f8f1-94ac-c961" name="Twin-Linked Fusion Blaster" hidden="false" collective="false" import="true" type="upgrade">
+              <comment>10+50%=15</comment>
+              <infoLinks>
+                <infoLink id="330d-4bd7-a0fc-1595" name="Fusion Blaster" hidden="false" targetId="8afa-9848-b02f-36b5" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="name" value="Twin-Linked Fusion Blaster"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="17b9-ae83-3c27-707d" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6ea4-5275-e8f7-74f6" name="Tau Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="660d-edf9-04e6-9966" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="65"/>
+      </costs>
+    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gue&apos;vesa Team (Chapter Approved)" hidden="false" id="2127-779a-69aa-5d70">
       <categoryLinks>
         <categoryLink targetId="0ef5-5056-d52e-3cfd" id="8c98-f221-ad50-cf5c" primary="true" name="Troops"/>
@@ -1996,6 +2391,7 @@ Flyer = 40
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb65-7a01-3259-46bc" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="549c-d180-4df8-76dd" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2022,6 +2418,7 @@ Flyer = 40
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="62e3-1a2d-c1ac-213a" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4725-b232-bbd7-82e3" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c59-ab22-f60f-c9c9" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="549c-d180-4df8-76dd" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
