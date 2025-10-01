@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="188b-39f3-ae3a-00da" name="Dark Angels (1999)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="188b-39f3-ae3a-00da" name="Dark Angels (1999)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="0964-545e-7bcd-97c9" name="Dreadnought" hidden="false" collective="false" import="true" targetId="3f7e-ad94-b024-1a57" type="selectionEntry">
       <modifiers>
@@ -378,8 +378,6 @@
         <categoryLink id="c751-26e2-6cc4-d97c" name="Dark Angel" hidden="false" targetId="a0a1-0673-b637-2cc4" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink id="c2d8-a95c-88b6-b261" name="Ravenwing Force" hidden="false" collective="false" import="true" targetId="88c7-1832-1739-6b80" type="selectionEntry"/>
-    <entryLink id="f21c-38cd-5992-fe2c" name="Deathwing Force" hidden="false" collective="false" import="true" targetId="03af-c5b1-3f5a-553b" type="selectionEntry"/>
     <entryLink id="edf8-643d-1ce3-272c" name="Bike Squadron" hidden="false" collective="false" import="true" targetId="b866-0628-5964-334c" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -1675,7 +1673,7 @@
     </selectionEntry>
     <selectionEntry id="88c7-1832-1739-6b80" name="Ravenwing Force" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="2567-eb02-6c34-c991" value="0">
           <conditions>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="03af-c5b1-3f5a-553b" type="equalTo"/>
           </conditions>
@@ -1690,7 +1688,7 @@
     </selectionEntry>
     <selectionEntry id="03af-c5b1-3f5a-553b" name="Deathwing Force" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="5ad7-114a-45cc-4c1b" value="0">
           <conditions>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88c7-1832-1739-6b80" type="equalTo"/>
           </conditions>
@@ -2823,4 +2821,16 @@
   <catalogueLinks>
     <catalogueLink id="73c3-159f-7364-7056" name="Space Marines (1999)" targetId="9d6b-d195-877e-09cb" type="catalogue" importRootEntries="false"/>
   </catalogueLinks>
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Ravenwing/Deathwing" hidden="false" id="ea5e-852c-052f-dc3f">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="687c-8a1f-3f2d-9742"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="760e-9f6c-3d50-c5be"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Ravenwing Force" hidden="false" id="c2d8-a95c-88b6-b261" collective="false" targetId="88c7-1832-1739-6b80" type="selectionEntry"/>
+        <entryLink import="true" name="Deathwing Force" hidden="false" id="f21c-38cd-5992-fe2c" collective="false" targetId="03af-c5b1-3f5a-553b" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntry>
+  </selectionEntries>
 </catalogue>
