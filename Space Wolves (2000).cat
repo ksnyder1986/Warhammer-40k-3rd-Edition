@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0885-d75b-33a6-169b" name="Space Wolves (2000)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0885-d75b-33a6-169b" name="Space Wolves (2000)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="2682-a24d-27d0-d11d" name="13th Company" hidden="false"/>
   </categoryEntries>
@@ -92,7 +92,7 @@
     <entryLink id="4717-e8b7-874f-f081" name="Iron Priest" hidden="false" collective="false" import="true" targetId="8e67-eae0-b3a8-22be" type="selectionEntry"/>
     <entryLink id="746f-ae47-2a91-43ea" name="Blood Claws Pack" hidden="false" collective="false" import="true" targetId="c5d5-c966-393d-bcd7" type="selectionEntry"/>
     <entryLink id="ae98-9681-8da2-dce0" name="Blood Claws Bike Pack" hidden="false" collective="false" import="true" targetId="7580-13ed-77ef-4cee" type="selectionEntry"/>
-    <entryLink id="d0b4-0777-59d4-e59a" name="Long Fang Pack" page="" hidden="false" collective="false" import="true" targetId="b308-b104-9cf1-084e" type="selectionEntry"/>
+    <entryLink id="d0b4-0777-59d4-e59a" name="Long Fang Pack" hidden="false" collective="false" import="true" targetId="b308-b104-9cf1-084e" type="selectionEntry"/>
     <entryLink id="ec24-e43c-b7df-57b5" name="Leman Russ Exterminator" page="l" hidden="false" collective="false" import="true" targetId="4c22-47a4-8177-f8f5" type="selectionEntry"/>
     <entryLink id="0ead-aa56-5a80-f3f0" name="Wolf Lord Logar Grimnar" hidden="false" collective="false" import="true" targetId="7244-770d-e195-f39c" type="selectionEntry">
       <modifiers>
@@ -2456,17 +2456,17 @@ However, if the model bearing the standard is slain in close combat, then the en
       <selectionEntryGroups>
         <selectionEntryGroup id="9955-4478-6ce1-6bac" name="Pack Leaders" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="decrement" field="77b1-ef70-8e98-6b2f" value="1">
+            <modifier type="decrement" field="39d2-886c-79bd-beb4" value="1">
               <repeats>
                 <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4460-b4d3-e105-f93a" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77b1-ef70-8e98-6b2f" type="max"/>
+            <constraint type="max" value="20" field="selections" scope="parent" shared="true" id="39d2-886c-79bd-beb4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="9ae9-e694-a67f-246e" name="Wolf Guard" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9ae9-e694-a67f-246e" name="Wolf Guard" hidden="false" collective="false" import="true" type="model" sortIndex="0" defaultAmount="1">
               <infoLinks>
                 <infoLink id="b35e-b02f-c771-050e" name="Wolf Guard" hidden="false" targetId="34e6-4ed3-164d-191c" type="profile"/>
                 <infoLink id="e1df-f52b-6f46-2dfe" name="Space Wolves Special Rules" hidden="false" targetId="20dd-1d42-8acc-dd7b" type="infoGroup"/>
@@ -3092,14 +3092,14 @@ However, if the model bearing the standard is slain in close combat, then the en
     </selectionEntryGroup>
     <selectionEntryGroup id="5a9b-5373-8225-5958" name="Space Wolves Wargear" hidden="false" collective="false" import="true">
       <constraints>
-        <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="100" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc83-b759-489e-a7c0" type="max"/>
+        <constraint field="4ed5-2f92-9abc-2870" scope="self" value="100" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc83-b759-489e-a7c0" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="962e-66b6-c77a-0739" name="Terminator Armour" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="5">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3193,7 +3193,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="5">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -3410,7 +3410,7 @@ The model with the Mark receives D3 additional attacks in close combat and alway
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="10">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -3458,7 +3458,7 @@ The model with the Mark receives D3 additional attacks in close combat and alway
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="5">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3582,7 +3582,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="3">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -3654,7 +3654,7 @@ However, if the model bearing the standard is slain in close combat, then the en
             </modifier>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="20">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3726,7 +3726,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="15">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3744,7 +3744,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="10">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -3767,7 +3767,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="15">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3803,7 +3803,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="5">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3821,7 +3821,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="20">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3839,7 +3839,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="10">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3864,7 +3864,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="20">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3882,7 +3882,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="1">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -3905,7 +3905,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="5">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3924,7 +3924,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="10">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3943,7 +3943,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="10">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3962,7 +3962,7 @@ However, if the model bearing the standard is slain in close combat, then the en
           <modifiers>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="3">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -3994,7 +3994,7 @@ However, if the model bearing the standard is slain in close combat, then the en
             </modifier>
             <modifier type="set" field="4ed5-2f92-9abc-2870" value="3">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
