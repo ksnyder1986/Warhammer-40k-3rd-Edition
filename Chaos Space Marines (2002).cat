@@ -5174,7 +5174,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="391a-b370-6398-bcda" type="min"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e10a-cd27-5e84-8771" name="Choose One" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="e10a-cd27-5e84-8771" name="Choose One" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb62-dbab-a993-6ee2" type="max"/>
           </constraints>
@@ -9326,12 +9326,13 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="1854-0513-6f25-6e41" value="0">
+            <modifier type="add" field="error" value="The Chaos Lord may only have the Mark of Khorne is the army has the Book of Khorne or is the World Eaters Legion.">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="9fda-9a74-56c3-7c97" type="instanceOf"/>
                     <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ab9-f908-ab00-7315" type="notInstanceOf"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="1d3d-b09e-2e64-36ca" shared="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -9402,12 +9403,13 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="8f54-074f-8dbf-9580" value="0">
+            <modifier type="add" field="error" value="The Chaos Lord may only have the Mark of Nurgle is the army has the Book of Nurgle or is the Death Guard Legion.">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="9fda-9a74-56c3-7c97" type="instanceOf"/>
                     <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ab9-f908-ab00-7315" type="notInstanceOf"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="69f7-7a85-13fa-eeb4" shared="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -9477,12 +9479,13 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="07a9-ce10-384d-f4ae" value="0">
+            <modifier type="add" field="error" value="The Chaos Lord may only have the Mark of Slaanesh is the army has the Book of Slaanesh or is the Emperor&apos;s Children Legion.">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="9fda-9a74-56c3-7c97" type="instanceOf"/>
                     <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ab9-f908-ab00-7315" type="notInstanceOf"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="8a51-3987-58e1-5c44" shared="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -9554,12 +9557,13 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="42ac-1de0-91ba-65ea" value="0">
+            <modifier type="add" field="error" value="The Chaos Lord may only have the Mark of Tzeentch is the army has the Book of Tzeentch or is the Thousand Sons Legion.">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="9fda-9a74-56c3-7c97" type="instanceOf"/>
                     <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3ab9-f908-ab00-7315" type="notInstanceOf"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="44ca-fa7f-9f9a-5d33" shared="true"/>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="and">
