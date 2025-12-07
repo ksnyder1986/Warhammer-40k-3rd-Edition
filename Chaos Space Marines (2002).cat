@@ -545,11 +545,6 @@
         <categoryLink targetId="6d25-b346-c314-6911" id="55a4-2625-4856-21ae" primary="true" name="Elites"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Chaos Cultists (Chapter Approved)" hidden="false" id="480a-88ae-bc60-feba" collective="false" targetId="2fa5-dd30-4c8a-982f" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="e623-f400-124b-736b" primary="true" name="Troops"/>
-      </categoryLinks>
-    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="9fda-9a74-56c3-7c97" name="Chaos Lord" hidden="false" collective="false" import="true" type="unit">
@@ -7780,7 +7775,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
-                <selectionEntryGroup id="f885-d78e-60da-8192" name="Ranged Weapon" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="f885-d78e-60da-8192" name="Ranged Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="ef9a-4ccc-aafd-ef26">
                   <comment>Terminator Armour Ranged Weapon</comment>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ac3-6b80-0f23-9dc0" type="min"/>
@@ -9239,160 +9234,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Chaos Cultists (Chapter Approved)" hidden="false" id="2fa5-dd30-4c8a-982f" collective="false">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Cultists" id="fc71-ece8-f7b5-7a1d" hidden="false" collective="false" import="true" defaultSelectionEntryId="4eb6-7d68-0b23-5dd7">
-          <constraints>
-            <constraint type="max" value="50" field="selections" scope="parent" shared="true" id="b371-78b9-9782-e67a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="90ad-81e7-6792-098d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Cultist" hidden="false" id="80dc-7908-0f5b-115a" collective="false">
-              <infoLinks>
-                <infoLink name="Chaos Cultist (Chapter Approved)" id="71cc-57d8-ae2c-0031" hidden="false" targetId="9a1c-f961-d129-af8c" type="profile"/>
-                <infoLink name="Close Combat Weapon" id="0355-d940-5f0e-117f" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="model" import="true" name="Demogogue" hidden="false" id="b079-6479-14f2-5ee7" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24e7-36fe-5b3b-64c8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Demagogue" id="533a-55a3-bd77-3941" hidden="false" targetId="4998-7e6f-e060-0dc2" type="profile"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink import="true" name="Chaos Armory" hidden="false" id="c801-9b7b-f616-d46d" collective="false" targetId="e9b3-4e07-ad9a-6235" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="7"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="c18c-96fc-892c-7bd7" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="increment" value="1" field="df81-6912-7be9-e54f">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="df81-6912-7be9-e54f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Autopistol" hidden="false" id="5cd4-8e31-c84f-84a0" collective="false">
-              <infoLinks>
-                <infoLink name="Laspistol" id="ed5f-a8b9-26b9-4d01" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Autogun" hidden="false" id="39ba-04f3-6b79-fdbb" collective="false">
-              <infoLinks>
-                <infoLink name="Lasgun" id="5ac3-6c4b-e52f-5ab3" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="fb5d-4705-66e8-11a9" collective="false">
-              <infoLinks>
-                <infoLink name="Shotgun" id="723e-0a33-13da-6f14" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Special Weapons" id="5382-8b16-3c79-c561" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="increment" value="1" field="2efb-55de-3406-813d">
-              <repeats>
-                <repeat value="10" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="2efb-55de-3406-813d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Plasma Gun" hidden="false" id="5a7e-a2d6-b11d-5771" collective="false">
-              <infoLinks>
-                <infoLink name="Plasma Gun" id="94b6-6082-50a3-7b11" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Autocannon" hidden="false" id="c33c-47d8-afe0-9b73" collective="false">
-              <infoLinks>
-                <infoLink name="Autocannon" id="01e7-2531-0054-ad2f" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Heavy Stubber" hidden="false" id="2928-7a7f-9187-acbe" collective="false">
-              <infoLinks>
-                <infoLink name="Heavy Stubber" id="0060-657f-7dde-a080" hidden="false" targetId="e055-536f-8cdf-7ec4" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="4"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="eb21-9f17-866b-8ad6" collective="false">
-              <infoLinks>
-                <infoLink name="Grenade Launcher (frag)" id="7865-6197-0e3c-b949" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
-                <infoLink name="Grenade Launcher (krak)" id="dd57-d74d-2a6f-3862" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="b4c9-e726-aac5-dff9" collective="false">
-              <infoLinks>
-                <infoLink name="Heavy Bolter" id="4ebd-32d9-17c9-adb7" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="1f98-33c1-d5ab-f1f8" collective="false">
-              <infoLinks>
-                <infoLink name="Flamer" id="ff0f-d284-7c26-3e8b" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Meltagun" hidden="false" id="f078-b52d-3a91-659e" collective="false">
-              <infoLinks>
-                <infoLink name="Meltagun" id="e056-4d0b-2009-2865" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-      </costs>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="4171-c75d-6633-1a19" name="Marks of Chaos" hidden="false" collective="false" import="true">
@@ -9443,11 +9284,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
               </repeats>
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="3c96-248b-affd-e504" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="5" field="4ed5-2f92-9abc-2870">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="b079-6479-14f2-5ee7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -9526,11 +9362,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="3c96-248b-affd-e504" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="5" field="4ed5-2f92-9abc-2870">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="b079-6479-14f2-5ee7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1854-0513-6f25-6e41" type="max"/>
@@ -9605,11 +9436,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
               </repeats>
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="3c96-248b-affd-e504" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="5" field="4ed5-2f92-9abc-2870">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="b079-6479-14f2-5ee7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -9687,11 +9513,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="4ed5-2f92-9abc-2870">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="b079-6479-14f2-5ee7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07a9-ce10-384d-f4ae" type="max"/>
@@ -9767,11 +9588,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
               </repeats>
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="3c96-248b-affd-e504" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="10" field="4ed5-2f92-9abc-2870">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="b079-6479-14f2-5ee7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -12529,26 +12345,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Marks of Chaos" hidden="false" id="793c-3886-3436-f68b" type="selectionEntryGroup" targetId="4171-c75d-6633-1a19">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="b079-6479-14f2-5ee7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="set" value="40" field="2e56-536c-765a-2150">
-          <conditions>
-            <condition type="instanceOf" value="0" field="selections" scope="parent" childId="b079-6479-14f2-5ee7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="4ed5-2f92-9abc-2870" scope="parent" shared="true" id="2e56-536c-765a-2150" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup id="9043-4141-f921-9506" name="Veteran Skills" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
       <modifiers>
@@ -14267,32 +14064,6 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <characteristic name="I" typeId="e58a-0314-a94e-b641">3</characteristic>
         <characteristic name="A" typeId="1735-ac9d-d5c1-ca2f">4</characteristic>
         <characteristic name="Structure Points" typeId="b9dd-3e64-0507-92f1">3</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Chaos Cultist (Chapter Approved)" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="9a1c-f961-d129-af8c">
-      <characteristics>
-        <characteristic name="WS" typeId="c704-6128-f143-935a">2</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">2</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
-        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">7</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Demagogue" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="4998-7e6f-e060-0dc2">
-      <characteristics>
-        <characteristic name="WS" typeId="c704-6128-f143-935a">2</characteristic>
-        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">2</characteristic>
-        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
-        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
-        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
-        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
-        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
-        <characteristic name="Sv" typeId="b309-5233-122f-82bb">-</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
