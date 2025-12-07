@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="a527-734f-2081-58cd" name="Blood Angel" hidden="false"/>
     <categoryEntry id="5709-6bb9-f3f9-07f2" name="Sanguinary Priest" hidden="false"/>
@@ -7310,7 +7310,7 @@ Twin-linked Assault Cannon:52</comment>
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -7349,7 +7349,7 @@ Twin-linked Assault Cannon:52</comment>
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -7375,10 +7375,15 @@ Twin-linked Assault Cannon:52</comment>
         </selectionEntry>
         <selectionEntry id="403e-3c0d-aceb-6f11" name="Chapter Banner" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="lessThan"/>
-              </conditions>
+            <modifier type="add" field="error" value="List must contain 2000 points.">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="2000" field="4ed5-2f92-9abc-2870" scope="force" childId="model" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="403e-3c0d-aceb-6f11" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -7425,7 +7430,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -7446,15 +7451,16 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
         </selectionEntry>
         <selectionEntry id="6d6d-f259-07ca-81a1" name="Holy Relic" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
+            <modifier type="add" field="error" value="List must contain at least 3000 points">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="4ed5-2f92-9abc-2870" scope="force" value="3000" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="any" type="lessThan"/>
-                    <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="403e-3c0d-aceb-6f11" type="greaterThan"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="6d6d-f259-07ca-81a1" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+              <comment>List must contain at least 3000 points</comment>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -7481,6 +7487,17 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8f0b-3e54-c10f-0a71" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="add" value="List cannot contain both a Holy Relic and Chapter Banner" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="403e-3c0d-aceb-6f11" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="6d6d-f259-07ca-81a1" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <comment>List cannot contain both a Holy Relic and Chapter Banner</comment>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5561-b6e6-4567-d108" type="max"/>
@@ -7500,7 +7517,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -7532,10 +7549,10 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b15c-c24e-b923-d196" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b15c-c24e-b923-d196" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -7561,7 +7578,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -7597,7 +7614,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                   </conditions>
@@ -7645,7 +7662,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -7710,7 +7727,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                   </conditions>
@@ -7740,7 +7757,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                   </conditions>
@@ -7780,7 +7797,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                   </conditions>
@@ -7815,7 +7832,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                   </conditions>
@@ -7845,10 +7862,10 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dbad-96a4-9698-3c23" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbad-96a4-9698-3c23" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -7965,7 +7982,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -8026,7 +8043,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                   </conditions>
@@ -8056,7 +8073,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                   </conditions>
@@ -8097,7 +8114,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -8183,7 +8200,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -8220,7 +8237,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -8423,7 +8440,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -8449,7 +8466,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo"/>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="notInstanceOf"/>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="notInstanceOf"/>
                   </conditions>
@@ -8474,7 +8491,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -8534,7 +8551,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
@@ -8688,7 +8705,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
                       <comment>Termi can&apos;t equip</comment>
                     </condition>
                     <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
