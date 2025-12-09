@@ -33,6 +33,7 @@
     <publication id="8ac4-ee68-a57a-42b4" name="Codex Catachan 3rd Edition" shortName="Catachan"/>
     <publication id="514c-2f6d-fd13-c8e1" name="Codex Chaos Space Marines 3rd Edition" shortName="CSM 3Ed"/>
     <publication id="64f6-e768-7e7d-5053" name="Codex Tyranids 3rd Edition" shortName="Tyranids"/>
+    <publication name="Citadel Journal 29" id="24fb-795a-bd0d-1088" hidden="false"/>
   </publications>
   <costTypes>
     <costType id="4ed5-2f92-9abc-2870" name="pts" defaultCostLimit="-1" hidden="false"/>
