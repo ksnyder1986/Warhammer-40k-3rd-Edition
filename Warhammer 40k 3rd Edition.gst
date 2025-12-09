@@ -2307,7 +2307,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1 Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Grenade Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Grenade Launchers can fire either frag or krak rounds. Choose which to shoot before rolling to hit.</characteristic>
       </characteristics>
     </profile>
     <profile id="d236-a268-4f05-49f0" name="Grenade Launcher (krak)" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -2316,7 +2316,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
         <characteristic name="S" typeId="24d8-2110-08fa-d844">6</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Grenade Launchers can fire either frag or krak rounds. Choose which to shot before rolling to hit.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Grenade Launchers can fire either frag or krak rounds. Choose which to shoot before rolling to hit.</characteristic>
       </characteristics>
     </profile>
     <profile id="b9aa-366b-bd62-4692" name="Heavy Bolter" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
