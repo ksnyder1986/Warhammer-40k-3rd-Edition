@@ -921,7 +921,8 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9fda-9a74-56c3-7c97" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="569e-2525-31c0-69d3" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="9fda-9a74-56c3-7c97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -933,9 +934,37 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="b78c-eda3-ab4c-ff6c" name="Daemonic Essence" hidden="false" targetId="d822-e8e2-15a4-a999" type="rule"/>
+        <infoLink id="b78c-eda3-ab4c-ff6c" name="Daemonic Essence" hidden="false" targetId="d822-e8e2-15a4-a999" type="rule">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="50d3-637a-30cf-76da" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="569e-2525-31c0-69d3" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3c96-248b-affd-e504" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink id="7872-4e46-34a7-934f" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
-        <infoLink id="5248-c046-659c-e96c" name="Slow and Purposeful" hidden="false" targetId="dfb3-f2d0-e017-ab77" type="rule"/>
+        <infoLink id="5248-c046-659c-e96c" name="Slow and Purposeful" hidden="false" targetId="dfb3-f2d0-e017-ab77" type="rule">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="50d3-637a-30cf-76da" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="569e-2525-31c0-69d3" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3c96-248b-affd-e504" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
@@ -13161,7 +13190,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
       <description>Ignored Instant Death rule</description>
     </rule>
     <rule id="6672-774e-5795-93bd" name="Spiky Bits" hidden="false">
-      <description>Re-roll mise in each round of close combat</description>
+      <description>Re-roll misses in each round of close combat</description>
     </rule>
     <rule id="6488-c43f-8b5a-933b" name="Demagogue" hidden="false">
       <description>All Chaos units (other than Daemons) within 6&quot; of the orator will automatically pass any Moral checks.</description>
