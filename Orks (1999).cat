@@ -242,6 +242,11 @@
         <categoryLink targetId="6b90-dc9c-1a49-3fdc" id="eb3f-b549-59d4-86d4" primary="true" name="Super-Heavy"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Big Squiggoth (IA)" hidden="false" id="e6d7-16d9-3664-d40b" type="selectionEntry" targetId="4fb4-db5f-551f-a05d">
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="5d1d-3536-e8a4-c91a" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b32d-5cad-2d37-2401" name="Warboss" hidden="false" collective="false" import="true" type="unit">
@@ -5442,6 +5447,102 @@ Kustom Mega Cannon: 20+150%+100%=70
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="475"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="4fb4-db5f-551f-a05d" name="Big Squiggoth (IA)" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3261-6601-5bfe-f5d0" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule id="64bb-3ebd-a651-5a30" name="Transport" hidden="false">
+          <description>A Squiggoth may carry up to 10 Orks in the howdah. Orks being transported may leave the Squiggoth as if they were exiting an open-topped vehicle.</description>
+        </rule>
+        <rule id="cbf3-605a-d567-e85b" name="Monstrous Creature" hidden="false">
+          <description>Rolls 2D6 for vehicle armour penetration and ignores armour saving throws.</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="80a3-8b15-5fe0-b245" name="Big Gun" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f06a-a0d4-c11d-1372" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0aa7-46e5-4661-050f" name="Lobbas" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="ac7b-465c-7caa-a73f" name="Lobba" hidden="false" targetId="db47-7114-1dc5-719f" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f52c-4cbc-aa61-e618" name="Zzap Gunz" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="4585-941f-3bf6-a86a" name="Zzap Gun" hidden="false" targetId="1687-221e-1a62-e1f6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d1ca-c91b-857e-7217" name="Kannons" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a96c-e124-4024-7995" name="Kannon (Frag)" hidden="false" targetId="4b41-49f9-53bf-b6d2" type="profile"/>
+                <infoLink id="ae54-4e0c-3523-436e" name="Kannon (Shell)" hidden="false" targetId="19db-f2cc-cdd7-d751" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8b9b-f485-1bae-24f3" name="Weapons" hidden="false" collective="false" import="true">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="fa6d-3e72-b533-4055" name="Big Gun" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5ca-52b3-4e3e-e603" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="0711-96a1-4d2f-2d9a" name="Lobbas" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="d1ee-c019-9fe5-eac3" name="Lobba" hidden="false" targetId="db47-7114-1dc5-719f" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="2a18-3b09-e58d-cdbc" name="Zzap Gunz" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="7ba2-fbac-e687-1d16" name="Zzap Gun" hidden="false" targetId="1687-221e-1a62-e1f6" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="6b91-31b8-31f6-a7c9" name="Kannons" hidden="false" collective="false" import="true" type="upgrade">
+                  <infoLinks>
+                    <infoLink id="b334-326f-480a-be02" name="Kannon (Frag)" hidden="false" targetId="4b41-49f9-53bf-b6d2" type="profile"/>
+                    <infoLink id="80b5-88c8-0393-9c7a" name="Kannon (Shell)" hidden="false" targetId="19db-f2cc-cdd7-d751" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Big Squiggoth" id="63df-5c51-b348-9171" hidden="false" type="profile" targetId="b762-0608-3b08-319a"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="78e3-14a6-126d-c7cc" primary="false" name="Heavy Support"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3fb8-65fc-3904-2e54" name="Ork Armoury" hidden="false" collective="false" import="true">
@@ -7509,6 +7610,19 @@ Hits against the Gunz is treated like a vehicle with an armor value of 10, but a
         <characteristic name="A" typeId="abbf-0d11-fd86-d938">4</characteristic>
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">7</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="b762-0608-3b08-319a" name="Big Squiggoth" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Unit">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">2</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">2</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">7</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">6</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">4</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">1</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">7</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
