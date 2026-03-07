@@ -230,13 +230,6 @@
         <categoryLink id="2a4c-7a94-d379-d3eb" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
         <categoryLink id="919f-c96f-3e10-3ad7" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="add" value="1500+ points required to add Creed" field="error">
-          <conditions>
-            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </entryLink>
     <entryLink id="d31b-b340-bc5d-e971" name="Commissar Yarrick" hidden="false" collective="false" import="true" targetId="ff1f-4122-1b75-541e" type="selectionEntry">
       <modifiers>
@@ -5680,6 +5673,17 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="125"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="1500+ points required to add Creed" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1500" field="4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="ff1f-4122-1b75-541e" name="Commissar Yarrick" hidden="false" collective="false" import="true" type="model">
       <rules>
