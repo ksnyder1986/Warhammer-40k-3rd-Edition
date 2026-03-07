@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <comment>2002 Chaos Space Marine Codex</comment>
   <categoryEntries>
     <categoryEntry id="039c-5796-7006-0975" name="Mark of Khorne" hidden="false"/>
@@ -10,6 +10,11 @@
     <categoryEntry id="50e1-b8c9-703d-63a5" name="Terminator" hidden="false"/>
     <categoryEntry id="f3e2-ff54-76cd-f482" name="Daemon Prince" hidden="false"/>
     <categoryEntry id="d832-0917-094f-7627" name="Sorceror" hidden="false"/>
+    <categoryEntry name="Daemon Weapon" id="96b0-a09e-9384-b8e3" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="76a1-a48a-2315-597a" includeChildSelections="true"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <entryLinks>
     <entryLink id="50d3-637a-30cf-76da" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="9fda-9a74-56c3-7c97" type="selectionEntry"/>
@@ -5060,7 +5065,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03c5-a9f5-95b1-1dc2" type="max"/>
-        <constraint field="selections" scope="force" value="-1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d85e-a9de-45c0-562c" type="min"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d85e-a9de-45c0-562c" type="min"/>
       </constraints>
       <rules>
         <rule id="7fe4-1bbe-872c-bbbd" name="Chosen" hidden="false">
@@ -11058,34 +11063,24 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         <selectionEntry id="45d8-ab04-0eb3-6a18" name="Berserker Glaive" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="039c-5796-7006-0975" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="039c-5796-7006-0975" shared="false" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="039c-5796-7006-0975" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3c96-248b-affd-e504" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="d05d-70a3-6ec6-4da2" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc6b-6c8c-6e5c-23ca" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d05d-70a3-6ec6-4da2" type="max"/>
+            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d05d-70a3-6ec6-4da2" type="max"/>
           </constraints>
           <profiles>
             <profile id="b59a-965e-a9d6-dfb0" name="Berserker Glaive" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11109,33 +11104,26 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="c659-30d2-a386-5bc8" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="48d5-61dc-0e41-92b4" name="Lash of Torment" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9b41-cfd0-0af7-2496" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="8d30-2432-ff37-2d65" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="9b41-cfd0-0af7-2496" shared="false" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="9b41-cfd0-0af7-2496" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="845a-067b-06e4-db93" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d30-2432-ff37-2d65" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="f1f3-dc3b-5dfc-7564" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <infoLinks>
             <infoLink id="0d2b-081a-6857-0c4f" name="Daemon Weapon" hidden="false" targetId="f4a4-cde3-aa56-bd53" type="rule"/>
@@ -11145,33 +11133,26 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="a975-7a1a-2a79-4497" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="1201-bf86-2b1a-7d7d" name="Needle of Desire" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9b41-cfd0-0af7-2496" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="d07e-2eed-8e42-b51c" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="9b41-cfd0-0af7-2496" shared="false" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="9b41-cfd0-0af7-2496" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ae9-0127-82af-ca3b" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d07e-2eed-8e42-b51c" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="4346-60e7-8c5a-f638" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile id="c0ed-c1ff-9768-d0ac" name="Needle of Desire" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11195,38 +11176,31 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="ea65-ace4-8852-2b13" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="9b8a-24d4-a8d5-5a34" name="Manreaper" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b1cf-c764-2ad0-c229" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="b1cf-c764-2ad0-c229" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="b1cf-c764-2ad0-c229" shared="false" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="71da-1c7a-2eae-5da8" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="9224-efe1-d38e-e4c3" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9224-efe1-d38e-e4c3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe65-bf6b-46a0-29a5" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2191-cbd9-25df-c068" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <infoLinks>
             <infoLink id="edf1-bfcd-32a2-831e" name="Daemon Weapon" hidden="false" targetId="f4a4-cde3-aa56-bd53" type="rule"/>
@@ -11235,33 +11209,26 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="1214-de64-0e3f-d2c3" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="1840-bebe-b93e-cfa0" name="Pandemic Staff" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b1cf-c764-2ad0-c229" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="0b03-328f-c800-8789" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="b1cf-c764-2ad0-c229" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="b1cf-c764-2ad0-c229" shared="false" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83a2-2a65-1150-e7da" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b03-328f-c800-8789" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="853c-521c-836c-f90a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile id="594a-c119-76d1-5f42" name="Pandemic Staff" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11280,18 +11247,26 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="5e62-007e-80d3-fb21" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="8512-bc4c-44b5-80df" name="Bedlam Staff" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98bc-5939-38d6-c754" type="equalTo"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="98bc-5939-38d6-c754" shared="false" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="98bc-5939-38d6-c754" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf18-a6b6-86e8-1090" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5093-0668-e8f4-ccd2" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="49a7-7016-7d4a-ce8b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile id="17ee-4c58-b6a3-0b12" name="Bedlam Staff" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11315,33 +11290,26 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="d4a0-2cb6-1296-9a7a" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="1222-54ef-00f1-e66e" name="Warp Blade" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="98bc-5939-38d6-c754" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="6bdf-f0bd-3429-1ae8" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="98bc-5939-38d6-c754" shared="false" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="98bc-5939-38d6-c754" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9964-2deb-b8ed-de3a" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bdf-f0bd-3429-1ae8" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="eccb-e3b8-a941-8550" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile id="9db0-1dce-488e-ad50" name="Warp Blade" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11365,28 +11333,14 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="0789-3237-1b3a-d530" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="a9b5-d57f-3b34-af8a" name="Dark Blade" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="0cab-9efb-2eee-6f78" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="445c-2989-c9b5-72b4" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cab-9efb-2eee-6f78" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="7612-6a0b-0a4b-8f9b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile id="1c42-d011-cbba-ea1a" name="Dark Blade" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11405,11 +11359,14 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="dd30-6a07-dccd-8a27" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="a175-d31e-8b41-0be2" name="Dreadaxe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="421c-8474-3372-c59e" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f4d-261d-08d9-4230" type="max"/>
+            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5f4d-261d-08d9-4230" type="max"/>
           </constraints>
           <profiles>
             <profile id="15e0-8502-74d9-680d" name="Dreadaxe" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11428,28 +11385,14 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="2af5-bc36-605e-755d" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="f0de-74a6-3caf-90ae" name="Ether Lance" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="1a92-4152-ebd7-f73e" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18a1-bfb8-ad0b-2655" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a92-4152-ebd7-f73e" type="max"/>
+            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a92-4152-ebd7-f73e" type="max"/>
           </constraints>
           <profiles>
             <profile id="653b-02a0-3c14-cde6" name="Ether Lance" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11470,26 +11413,9 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           </costs>
         </selectionEntry>
         <selectionEntry id="1db9-7c7c-9c62-e7ad" name="Kai Gun" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="6808-322d-3a0b-4312" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a92d-930c-b001-5782" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94e7-688c-3298-77bb" type="max"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6808-322d-3a0b-4312" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="501d-dd45-e24c-90bf" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile id="002b-c01d-405f-e716" name="Kai Gun" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -11508,6 +11434,9 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="3ce2-4da0-ae5b-5ecd" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="a92d-930c-b001-5782" name="Accursed Crozius" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -11526,26 +11455,11 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5015-aeb7-40a5-2277" type="equalTo"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="7208-573b-a678-d5ed" value="0">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45d8-ab04-0eb3-6a18" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1840-bebe-b93e-cfa0" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8512-bc4c-44b5-80df" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1201-bf86-2b1a-7d7d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a175-d31e-8b41-0be2" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b8a-24d4-a8d5-5a34" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0de-74a6-3caf-90ae" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1222-54ef-00f1-e66e" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db9-7c7c-9c62-e7ad" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a9b5-d57f-3b34-af8a" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48d5-61dc-0e41-92b4" type="greaterThan"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47eb-9239-c36e-724f" type="max"/>
             <constraint field="selections" scope="parent" value="-1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b723-b41a-82af-ac33" type="min"/>
-            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7208-573b-a678-d5ed" type="max"/>
+            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7208-573b-a678-d5ed" type="max"/>
           </constraints>
           <rules>
             <rule id="558f-a4b9-6ba3-29c6" name="Accursed Crozius" hidden="false">
@@ -11559,6 +11473,9 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
+          <categoryLinks>
+            <categoryLink targetId="96b0-a09e-9384-b8e3" id="65de-3ece-df7a-f705" primary="false" name="Daemon Weapon"/>
+          </categoryLinks>
         </selectionEntry>
         <selectionEntry id="7f80-a73f-0a76-6f93" name="Daemonic Fire" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
