@@ -230,13 +230,6 @@
         <categoryLink id="2a4c-7a94-d379-d3eb" name="Infantry" hidden="false" targetId="6953-6bba-0bb9-d49d" primary="false"/>
         <categoryLink id="919f-c96f-3e10-3ad7" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="add" value="1500+ points required to add Creed" field="error">
-          <conditions>
-            <condition type="lessThan" value="1500" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </entryLink>
     <entryLink id="d31b-b340-bc5d-e971" name="Commissar Yarrick" hidden="false" collective="false" import="true" targetId="ff1f-4122-1b75-541e" type="selectionEntry">
       <modifiers>
@@ -5680,6 +5673,17 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="125"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="1500+ points required to add Creed" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1500" field="4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="ff1f-4122-1b75-541e" name="Commissar Yarrick" hidden="false" collective="false" import="true" type="model">
       <rules>
@@ -7643,43 +7647,6 @@
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
-                <selectionEntryGroup name="Weapon" id="1f09-a444-0413-9085" hidden="false" collective="false" import="true" defaultSelectionEntryId="f19b-ec23-c1a9-1a38">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="751a-6a50-5f3f-a590" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c5d-e4a3-2fad-1a64" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Laspistol &amp; CCW" hidden="false" id="adc6-0290-2f26-3056" collective="false">
-                      <infoLinks>
-                        <infoLink name="Close Combat Weapon" id="e71b-b711-a5ff-e60a" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-                        <infoLink name="Laspistol" id="ace8-5a51-c1e9-644b" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="c574-c737-a9e5-2d82" collective="false">
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="equalTo" value="1" field="selections" scope="force" childId="ace2-9e38-47ea-3a36" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="force" childId="320c-3f78-e844-e38f" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                      <infoLinks>
-                        <infoLink name="Lasgun" id="e8fe-4c93-727e-0f5d" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
@@ -8964,9 +8931,12 @@
       <entryLinks>
         <entryLink id="e98c-dc73-dbec-3e3c" name="Commissars" hidden="false" collective="false" import="true" targetId="f4c2-1a41-63e6-f5db" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bad-35b1-e0c8-80a4" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ece-1c1d-5d91-a7ed" type="min"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e63e-0a68-5b79-6ed5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="50" field="4ed5-2f92-9abc-2870"/>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <costs>
