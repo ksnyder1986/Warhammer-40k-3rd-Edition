@@ -38,6 +38,7 @@
     <publication name="Citadel Journal 44" id="67e9-d643-5499-a9c5" hidden="false" shortName="Citadel Journal 44" publisher="The Citadel Journal" publicationDate="2001">
       <comment>Citadel Journal 44</comment>
     </publication>
+    <publication name="White Dwarf 304" id="4e98-876c-e24d-4d7d" hidden="false" shortName="WD304" publisher="White Dwarf" publicationDate="April 2005"/>
   </publications>
   <costTypes>
     <costType id="4ed5-2f92-9abc-2870" name="pts" defaultCostLimit="-1" hidden="false"/>
