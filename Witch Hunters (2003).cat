@@ -913,6 +913,7 @@
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Priest" hidden="false" id="2198-38b3-8a73-584d" type="selectionEntry" targetId="3adf-82c9-2af9-31f3"/>
+    <entryLink import="true" name="Frateris Militia/Zealots (Chapter Approved)" hidden="false" id="3cf1-2715-886f-83dd" type="selectionEntry" targetId="4ee5-341a-0a38-88b4"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="27ee-b0a2-0c2a-b518" name="Ordo Hereticus Inquisitor Lord" hidden="false" collective="false" import="true" type="unit">
@@ -7171,8 +7172,544 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <modifiers>
         <modifier type="set" value="5" field="43be-aa30-febc-f629">
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="self" childId="entry" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="2198-38b3-8a73-584d" shared="true"/>
           </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Frateris Militia/Zealots (Chapter Approved)" hidden="false" id="4ee5-341a-0a38-88b4" publicationId="4e98-876c-e24d-4d7d" page="55">
+      <categoryLinks>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="18ea-ec22-0bf6-eb9b" primary="true" name="Troops"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Zealots" id="2f08-3f20-d8b1-f05d" hidden="false" defaultSelectionEntryId="03da-6ee9-efa0-bb99" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Zealot" hidden="false" id="03da-6ee9-efa0-bb99" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Zealot" id="7cee-aef2-51ca-5ad3" hidden="false" type="profile" targetId="a2a9-badb-1dd0-f535"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Mob Weapons (Melee)" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="d8d3-25ca-c9e3-d329" page="55" publicationId="4e98-876c-e24d-4d7d">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">As Model</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">+1 Attack</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Mob Weapons (Range)" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="8aa4-228c-4d24-a1b6" page="55" publicationId="4e98-876c-e24d-4d7d">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Fanatic" hidden="false" id="f8d4-54bd-2498-11f0" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Fanatic" id="139d-ce24-7044-c626" hidden="false" type="profile" targetId="8068-db08-3c4c-2334"/>
+                <infoLink name="Close Combat Weapon" id="1aa8-2d54-0d7d-bf92" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2">
+                  <modifiers>
+                    <modifier type="set" value="Mob Weapons" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="e53e-73f3-f643-0138"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="e53e-73f3-f643-0138">
+                  <repeats>
+                    <repeat value="5" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Demagogue" hidden="false" id="8be4-1caf-bd41-8bd9" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Demagogue" id="025a-de86-a1ac-9865" hidden="false" type="profile" targetId="a330-0c35-d782-41b0"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c61c-be2e-8142-6ce0"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Witch Hunters Armoury" hidden="false" id="3804-1b74-1c95-7e7f" type="selectionEntryGroup" targetId="b583-3e64-2ee0-8583">
+                  <constraints>
+                    <constraint type="max" value="25" field="4ed5-2f92-9abc-2870" scope="parent" shared="true" id="767c-0d2e-605f-1e18"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="56b0-6f84-7f36-003a"/>
+            <constraint type="max" value="20" field="selections" scope="parent" shared="true" id="3769-e513-057d-2000"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Weapon Options" id="f992-9b93-1577-3802" hidden="false" publicationId="4e98-876c-e24d-4d7d" page="55" sortIndex="2">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Special Weapons" id="67cb-91d3-9af6-50a0" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Plasma Gun" hidden="false" id="32c3-24ab-0aae-7824">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Plasma Gun" id="c784-7495-c7a3-31c9" hidden="false" type="profile" targetId="112a-baea-9eeb-b1b5"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Meltagun" hidden="false" id="4709-1ca5-0521-57fd">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Meltagun" id="d832-4134-4bd2-30c3" hidden="false" type="profile" targetId="737d-c7ef-4cb5-e6fa"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Heavy Stubber" hidden="false" id="189a-3f18-88c4-f3bf">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Heavy Stubber" id="c635-2533-4a64-cd09" hidden="false" type="profile" targetId="e055-536f-8cdf-7ec4"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="299d-fd61-cc9e-f731">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Grenade Launcher (frag)" id="4c4b-8988-ddc2-dd6e" hidden="false" type="profile" targetId="edff-5743-8a17-916e"/>
+                    <infoLink name="Grenade Launcher (krak)" id="1567-c0d0-b4df-280d" hidden="false" type="profile" targetId="d236-a268-4f05-49f0"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="a2d3-0f06-bd05-4f23">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Flamer" id="a930-b05b-4601-a8b2" hidden="false" type="profile" targetId="9177-ce8a-92e3-157e"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dac3-ce28-24de-514a"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Exterminators" hidden="false" id="758e-accd-27f7-4c79">
+              <rules>
+                <rule name="Exterminators" id="09dd-fe29-52ff-b3b5" hidden="false" publicationId="4e98-876c-e24d-4d7d" page="55">
+                  <description>Exterminators may be used once per battle the first time the Zealots charge an enemy. They are used in the first round of the assault at Initiative 8 and their use does not prevent the model from making attacks at their normal Initiative later in the combat. 
+
+
+For each model equipped with Exterminators rolls a single D6. The number needed to hit is dependent on the number of Exterminators in the unit at the time they are used. Each hit causes a Strength 4 hit with an Armour Piecing value of 5.
+
+
+Number of Models
+1-5: 6+ to hit
+6-10: 5+ to hit
+11-15: 4+ to hit
+16+: 3+ to hit</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4261-05cd-115c-d1c4"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="3" field="4ed5-2f92-9abc-2870">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Eviscerators" hidden="false" id="3bf4-bdbf-592a-579f">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="d11f-726a-f4d7-e222"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="d11f-726a-f4d7-e222">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="4ee5-341a-0a38-88b4" childId="f8d4-54bd-2498-11f0" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Eviscerator" id="b4a1-436c-ab3f-4443" hidden="false" type="profile" targetId="19a8-49f0-b33a-df2f"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Priest" hidden="false" id="dc08-9dcf-d56a-e92f" type="selectionEntry" targetId="3adf-82c9-2af9-31f3" sortIndex="3"/>
+      </entryLinks>
+      <rules>
+        <rule name="Here Comes the Pain" id="a2f4-0574-455e-772c" hidden="false" publicationId="4e98-876c-e24d-4d7d" page="55">
+          <description>Whenever a unit of Zealots is forced to take a Morale test, Pinning check, or Leadership check for any reason, treat any negative modifiers as positive modifiers to their Leadership. Enemy models or items of wargear that affect Leadership, such as Warp Amps also affect the Zealots this way. Units like Pariahs which reduce Leadership to a specific value affect Zealots, but they still get their modifiers. Note that the Leadership of Zealots can never rise above 10.</description>
+        </rule>
+      </rules>
+      <modifiers>
+        <modifier type="add" value="Zealots cannot be used for mandatory selections in force org" field="error">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="2" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="4" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="3" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="6" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="7da2-40c9-890c-3239" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Standard Missions must have 2 troops that are not Zealots</comment>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="2" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="4" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="3" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="6" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="949f-fced-04a6-c467" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Apoc Missions must have 2 troops that are not Zealots</comment>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="3" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="2" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="4" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="3f32-74fc-e29a-38e3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Attacker in Battles must have 1 troops that are not Zealots</comment>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="2" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="4" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="3" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="6" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="5d5f-cfa8-2970-4a50" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Defenders in Battles must have 2 troops that are not Zealots</comment>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="3" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="2" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="4" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="f0b5-294d-9445-a1b7" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Attacker in Raids must have 1 troops that are not Zealots</comment>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="2" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="4" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="3" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="6" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="b1dd-a74a-0fe1-35b8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Defenders in Raids must have 2 troops that are not Zealots</comment>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="3" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="2" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="4" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="172d-d416-c92b-3694" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Attacker in Breakthroughs must have 1 troops that are not Zealots</comment>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="2" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="4" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="3" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="5" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="6" field="selections" scope="force" childId="0ef5-5056-d52e-3cfd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="90e9-2e2f-1754-4917" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Defenders in Breakthroughs must have 2 troops that are not Zealots</comment>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="force" childId="39f0-aa54-c246-1ac7" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="3cf1-2715-886f-83dd" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <comment>Standard Missions must have 2 troops that are not Zealots</comment>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -10492,6 +11029,45 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">2D6 Armour Pen with 3&quot;</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Zealot" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="a2a9-badb-1dd0-f535" publicationId="4e98-876c-e24d-4d7d" page="55">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">7</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">6+</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Fanatic" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="8068-db08-3c4c-2334" publicationId="4e98-876c-e24d-4d7d" page="55">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">3</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">7</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">6+</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Demagogue" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="a330-0c35-d782-41b0" publicationId="4e98-876c-e24d-4d7d" page="55">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+        <characteristic name="BS" typeId="7928-3a9b-6080-ed95">3</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+        <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+        <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
+        <characteristic name="I" typeId="eeda-4fb4-901e-b70d">3</characteristic>
+        <characteristic name="A" typeId="abbf-0d11-fd86-d938">2</characteristic>
+        <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">8</characteristic>
+        <characteristic name="Sv" typeId="b309-5233-122f-82bb">6+</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
