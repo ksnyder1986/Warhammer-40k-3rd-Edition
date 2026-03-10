@@ -35,6 +35,7 @@
     <publication id="64f6-e768-7e7d-5053" name="Codex Tyranids 3rd Edition" shortName="Tyranids"/>
     <publication name="Citadel Journal 29" id="24fb-795a-bd0d-1088" hidden="false"/>
     <publication name="White Dwarf 281" id="267e-a57c-ba7a-1ad1" hidden="false"/>
+    <publication name="White Dwarf 304" id="4e98-876c-e24d-4d7d" hidden="false" shortName="WD304" publisher="White Dwarf" publicationDate="April 2005"/>
   </publications>
   <costTypes>
     <costType id="4ed5-2f92-9abc-2870" name="pts" defaultCostLimit="-1" hidden="false"/>
