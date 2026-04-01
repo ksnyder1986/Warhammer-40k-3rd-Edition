@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="785b-e45d-f46b-fe58" name="Tau (2001)" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="785b-e45d-f46b-fe58" name="Tau (2001)" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="9822-4d10-9d64-e6a8" name="Shas&apos;el" hidden="false" collective="false" import="true" targetId="b044-07fe-a372-df49" type="selectionEntry"/>
     <entryLink id="b900-fb10-3205-ff40" name="Shas&apos;o" hidden="false" collective="false" import="true" targetId="72b4-c34f-a2ff-9323" type="selectionEntry"/>
@@ -1526,9 +1526,6 @@ Additionally, any Tau unit joined by Aun&apos;shi gain +1 I and +1 A in close co
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
-      <categoryLinks>
-        <categoryLink targetId="aacb-8a81-62c0-3db8" id="dab3-2a14-9375-306d" primary="true" name="Heavy Support"/>
-      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="3e9c-f3f1-1647-b580" name="Sky Ray (IA)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2315,6 +2312,7 @@ StealthSuit (Shroud from Necron): +25%</comment>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99e3-0af2-7077-9223" type="max"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="17d6-fadc-1753-b299"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="45d0-882a-e386-953a" name="Multi-tracker" hidden="false" collective="false" import="true" type="upgrade">
@@ -2755,10 +2753,10 @@ StealthSuit (Shroud from Necron): +25%</comment>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="9c66-e014-8f91-3644" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="c8e0-90e5-af7e-07b2" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="6950-bfa6-8d1d-7794" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="8f0b-9c8c-e544-6806" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c66-e014-8f91-3644" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8e0-90e5-af7e-07b2" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6950-bfa6-8d1d-7794" type="greaterThan"/>
+                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8f0b-9c8c-e544-6806" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2766,63 +2764,6 @@ StealthSuit (Shroud from Necron): +25%</comment>
             <modifier type="decrement" field="8a60-b903-222a-2ba6" value="1"/>
             <modifier type="decrement" field="c1d8-151b-903c-de05" value="1"/>
           </modifiers>
-          <comment>Twin-linked weapons take two options</comment>
-        </modifierGroup>
-        <modifierGroup>
-          <conditionGroups>
-            <conditionGroup type="count" min="2" max="2">
-              <conditions>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="9c66-e014-8f91-3644" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="c8e0-90e5-af7e-07b2" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="6950-bfa6-8d1d-7794" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="8f0b-9c8c-e544-6806" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-          <modifiers>
-            <modifier type="decrement" field="8a60-b903-222a-2ba6" value="1"/>
-          </modifiers>
-          <comment>Can&apos;t have two Twin-links weapons</comment>
-        </modifierGroup>
-        <modifierGroup>
-          <conditionGroups>
-            <conditionGroup type="count" max="3" min="3">
-              <conditions>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="452a-6345-ec1b-2b42" shared="true"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="b3f2-e468-282b-cb8f" shared="true"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="60b5-2db1-14e8-e4c6" shared="true"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="38e1-ce83-2ad3-58ac" shared="true"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="d506-d857-901b-fc21" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-          <modifiers>
-            <modifier type="add" value="{this} is not allowed to have more then two weapons" field="error"/>
-            <modifier type="decrement" value="1" field="8a60-b903-222a-2ba6"/>
-          </modifiers>
-          <comment>Can&apos;t have three weapons</comment>
-        </modifierGroup>
-        <modifierGroup>
-          <conditionGroups>
-            <conditionGroup type="count" min="3" max="3">
-              <conditions>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="9c66-e014-8f91-3644" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="c8e0-90e5-af7e-07b2" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="6950-bfa6-8d1d-7794" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="8f0b-9c8c-e544-6806" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="452a-6345-ec1b-2b42" shared="true"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="b3f2-e468-282b-cb8f" shared="true"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="60b5-2db1-14e8-e4c6" shared="true"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="38e1-ce83-2ad3-58ac" shared="true"/>
-                <condition type="greaterThan" value="0" field="selections" scope="parent" childId="d506-d857-901b-fc21" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-          <modifiers>
-            <modifier type="decrement" field="8a60-b903-222a-2ba6" value="1"/>
-            <modifier type="add" value="{this} is not allowed to have more then two weapons" field="error"/>
-          </modifiers>
-          <comment>Can&apos;t have two Twin-links weapons</comment>
         </modifierGroup>
       </modifierGroups>
       <constraints>
@@ -2830,7 +2771,7 @@ StealthSuit (Shroud from Necron): +25%</comment>
         <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1d8-151b-903c-de05" type="min"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="d506-d857-901b-fc21" name="Flamer" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+        <selectionEntry id="d506-d857-901b-fc21" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92cd-de53-fbdd-faf4" type="max"/>
           </constraints>
@@ -2841,7 +2782,7 @@ StealthSuit (Shroud from Necron): +25%</comment>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="38e1-ce83-2ad3-58ac" name="Burst Cannon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+        <selectionEntry id="38e1-ce83-2ad3-58ac" name="Burst Cannon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a4a-d9da-8da2-ab72" type="max"/>
           </constraints>
@@ -2852,7 +2793,23 @@ StealthSuit (Shroud from Necron): +25%</comment>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="452a-6345-ec1b-2b42" name="Plasma Rifle" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
+        <selectionEntry id="6950-bfa6-8d1d-7794" name="Twin-linked Burst Cannon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="976d-8dc1-a230-ba5f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b8f5-dafa-0f16-34e5" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+            <infoLink id="8601-3b3c-66a9-aa85" name="Burst Cannon" hidden="false" targetId="9e5e-b881-3c15-e101" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-Linked Burst Cannon"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="452a-6345-ec1b-2b42" name="Plasma Rifle" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce21-3ecf-4611-19de" type="max"/>
           </constraints>
@@ -2863,7 +2820,23 @@ StealthSuit (Shroud from Necron): +25%</comment>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b3f2-e468-282b-cb8f" name="Fusion Blaster" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+        <selectionEntry id="8f0b-9c8c-e544-6806" name="Twin-linked Plasma Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7391-cd0c-514d-da35" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="c4b5-7275-36a1-e622" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+            <infoLink id="1c02-d74c-6e30-c203" name="Plasma Rifle" hidden="false" targetId="44d4-12ec-d6b1-ef3c" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-Linked Plasma Rifle"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="24"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b3f2-e468-282b-cb8f" name="Fusion Blaster" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca33-ce45-b2cd-7214" type="max"/>
           </constraints>
@@ -2874,7 +2847,23 @@ StealthSuit (Shroud from Necron): +25%</comment>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="60b5-2db1-14e8-e4c6" name="Missle Pod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+        <selectionEntry id="9c66-e014-8f91-3644" name="Twin-linked Fusion Blaster" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdb1-0cba-270f-7dbf" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="9a1e-a8da-5cca-974e" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+            <infoLink id="6491-37d9-1a67-6a9e" name="Fusion Blaster" hidden="false" targetId="8afa-9848-b02f-36b5" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-Linked Fusion Blaster"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="60b5-2db1-14e8-e4c6" name="Missle Pod" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aad3-5aec-fd84-ea31" type="max"/>
           </constraints>
@@ -2885,7 +2874,23 @@ StealthSuit (Shroud from Necron): +25%</comment>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="14"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9395-2d65-6a1e-98b8" name="Shield Generator" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
+        <selectionEntry id="c8e0-90e5-af7e-07b2" name="Twin-linked Missle Pod" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3142-8723-6ab3-8b4c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="ddce-6d20-16fd-c9e5" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+            <infoLink id="e9e6-606a-2219-1393" name="Missle Pod" hidden="false" targetId="0f38-81fa-b5b9-0663" type="profile">
+              <modifiers>
+                <modifier type="set" field="name" value="Twin-Linked Missle Pod"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="21"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9395-2d65-6a1e-98b8" name="Shield Generator" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d460-58f2-1012-ebe4" type="max"/>
           </constraints>
@@ -2898,55 +2903,20 @@ StealthSuit (Shroud from Necron): +25%</comment>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Target Lock" hidden="false" id="8ae6-2a90-7cad-8367" type="selectionEntry" targetId="4c94-be3e-7ed0-c002" sortIndex="4">
+        <entryLink import="true" name="Target Lock" hidden="false" id="8ae6-2a90-7cad-8367" type="selectionEntry" targetId="4c94-be3e-7ed0-c002">
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Multi-tracker" hidden="false" id="072b-4448-30c4-5866" type="selectionEntry" targetId="45d0-882a-e386-953a" sortIndex="2">
+        <entryLink import="true" name="Multi-tracker" hidden="false" id="072b-4448-30c4-5866" type="selectionEntry" targetId="45d0-882a-e386-953a">
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Drone Controller" hidden="false" id="7e9e-bfb9-552e-876c" type="selectionEntry" targetId="8a75-730b-faf4-efad" sortIndex="1">
+        <entryLink import="true" name="Drone Controller" hidden="false" id="7e9e-bfb9-552e-876c" type="selectionEntry" targetId="8a75-730b-faf4-efad">
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
-        </entryLink>
-        <entryLink import="true" name="Plasma Rifle" hidden="false" id="8f0b-9c8c-e544-6806" type="selectionEntry" targetId="452a-6345-ec1b-2b42" sortIndex="13">
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="21"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="Twin-linked Plasma Rifle" field="name"/>
-          </modifiers>
-          <infoLinks>
-            <infoLink name="Twin-Linked" id="c4b5-7275-36a1-e622" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-          </infoLinks>
-        </entryLink>
-        <entryLink import="true" name="Fusion Blaster" hidden="false" id="9c66-e014-8f91-3644" type="selectionEntry" sortIndex="11" targetId="b3f2-e468-282b-cb8f">
-          <infoLinks>
-            <infoLink name="Twin-Linked" id="9a1e-a8da-5cca-974e" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="Twin-linked Fusion Blaster" field="name"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Missle Pod" hidden="false" id="c8e0-90e5-af7e-07b2" type="selectionEntry" targetId="60b5-2db1-14e8-e4c6" sortIndex="12">
-          <infoLinks>
-            <infoLink name="Twin-Linked" id="ddce-6d20-16fd-c9e5" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="Twin-linked Missle Pod" field="name"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Burst Cannon" hidden="false" id="6950-bfa6-8d1d-7794" type="selectionEntry" targetId="38e1-ce83-2ad3-58ac" sortIndex="10">
-          <modifiers>
-            <modifier type="set" value="Twin-linked Burst Cannon" field="name"/>
-          </modifiers>
-          <infoLinks>
-            <infoLink name="Twin-Linked" id="b8f5-dafa-0f16-34e5" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-          </infoLinks>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
