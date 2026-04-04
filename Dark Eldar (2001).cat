@@ -906,57 +906,63 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               </costs>
             </selectionEntry>
           </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1556-d675-0192-2c4c" name="Weapons" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd9a-92f2-b307-0b19" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="b95c-ac66-394e-e263" name="Shredder" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="c125-e7b5-06ae-66c5" name="Shredder" hidden="false" targetId="f097-1dd4-942c-3206" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7042-57db-0e73-3d06" name="Blaster" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="4c23-d1d6-0ce2-14c2" name="Blaster" hidden="false" targetId="c161-89b0-1ad0-f8d3" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9d80-251e-17f4-8399" name="Weapons" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="281e-5e3f-6cd2-1f33" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c7f0-3679-7559-23b0" name="Dark Lance" hidden="false" collective="false" import="true" type="upgrade">
-              <rules>
-                <rule id="6b9d-e992-73eb-6c74" name="Lance" hidden="false">
-                  <description>A lance weapons counts Armor values higher than 12 as 12.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="a5d9-4688-e683-19bb" name="Dark Lance" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ce36-694f-8113-1a61" name="Splinter Cannon" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="957d-565b-5159-e28d" name="Splinter Cannon" hidden="false" targetId="dc54-e209-b701-3881" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapons" id="1556-d675-0192-2c4c" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd9a-92f2-b307-0b19" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Shredder" hidden="false" id="b95c-ac66-394e-e263" collective="false">
+                  <infoLinks>
+                    <infoLink name="Shredder" id="c125-e7b5-06ae-66c5" hidden="false" targetId="f097-1dd4-942c-3206" type="profile"/>
+                    <infoLink name="Warrior" id="1a7e-0593-0bfc-1f48" hidden="false" targetId="cd5e-2c2b-9efa-5231" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Blaster" hidden="false" id="7042-57db-0e73-3d06" collective="false">
+                  <infoLinks>
+                    <infoLink name="Blaster" id="4c23-d1d6-0ce2-14c2" hidden="false" targetId="c161-89b0-1ad0-f8d3" type="profile"/>
+                    <infoLink name="Warrior" id="36c4-d2e1-3246-d218" hidden="false" targetId="cd5e-2c2b-9efa-5231" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="13"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Weapons" id="9d80-251e-17f4-8399" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="281e-5e3f-6cd2-1f33" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Dark Lance" hidden="false" id="c7f0-3679-7559-23b0" collective="false">
+                  <rules>
+                    <rule name="Lance" id="6b9d-e992-73eb-6c74" hidden="false">
+                      <description>A lance weapons counts Armor values higher than 12 as 12.</description>
+                    </rule>
+                  </rules>
+                  <infoLinks>
+                    <infoLink name="Dark Lance" id="a5d9-4688-e683-19bb" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
+                    <infoLink name="Warrior" id="57de-963f-954a-c431" hidden="false" targetId="cd5e-2c2b-9efa-5231" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Splinter Cannon" hidden="false" id="ce36-694f-8113-1a61" collective="false">
+                  <infoLinks>
+                    <infoLink name="Splinter Cannon" id="957d-565b-5159-e28d" hidden="false" targetId="dc54-e209-b701-3881" type="profile"/>
+                    <infoLink name="Warrior" id="ebbc-2d76-4a32-b93e" hidden="false" targetId="cd5e-2c2b-9efa-5231" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
