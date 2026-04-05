@@ -1245,6 +1245,29 @@ In addition to this, any model that may usually take a plasma pistol may instead
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Boarding Shields" hidden="false" id="95ef-f003-992b-1e70" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f31a-5903-81a3-c939"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="f31a-5903-81a3-c939">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="982a-882e-5534-9a80" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Boarding Shield" id="b623-7fbb-8afe-de9e" hidden="false" type="rule" targetId="e6cf-92a2-fe08-ae07"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="faa2-3c85-df57-e7e5" name="Space Marines" hidden="false" collective="false" import="true" sortIndex="2">
@@ -1401,6 +1424,26 @@ In addition to this, any model that may usually take a plasma pistol may instead
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Stubborn" hidden="false" id="060a-83ca-ea38-0815" collective="false">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="a0a1-0673-b637-2cc4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb79-9ca6-d75a-7be2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
                   </costs>
@@ -2932,6 +2975,29 @@ In addition to this, any model that may usually take a plasma pistol may instead
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Boarding Shields" hidden="false" id="db5d-ff66-1c72-a462" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="2"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="cea4-0c13-3a39-c1df"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="cea4-0c13-3a39-c1df">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="982a-882e-5534-9a80" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Boarding Shield" id="a5c0-49cd-ee25-5711" hidden="false" type="rule" targetId="e6cf-92a2-fe08-ae07"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="8883-c7bf-4824-77b0" name="Space Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="6a66-8e4b-a91f-5440" sortIndex="2">
@@ -3097,7 +3163,7 @@ In addition to this, any model that may usually take a plasma pistol may instead
                       <modifiers>
                         <modifier type="set" value="true" field="hidden">
                           <conditions>
-                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c644-6c81-7124-50da" shared="true"/>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="982a-882e-5534-9a80" shared="true"/>
                           </conditions>
                         </modifier>
                       </modifiers>
@@ -3972,7 +4038,7 @@ In addition to this, any model that may usually take a plasma pistol may instead
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c644-6c81-7124-50da" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="982a-882e-5534-9a80" shared="true"/>
               </conditions>
             </modifier>
             <modifier type="increment" value="1" field="eef4-8505-cf8b-e3c9">
@@ -4412,7 +4478,7 @@ In addition to this, any model that may usually take a plasma pistol may instead
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c644-6c81-7124-50da" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="982a-882e-5534-9a80" shared="true"/>
               </conditions>
             </modifier>
             <modifier type="increment" value="1" field="d832-6a69-1c61-7d19">
@@ -12339,7 +12405,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c644-6c81-7124-50da" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="982a-882e-5534-9a80" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
