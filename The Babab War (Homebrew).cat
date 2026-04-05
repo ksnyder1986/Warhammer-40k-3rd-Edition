@@ -4129,6 +4129,9 @@
       <categoryLinks>
         <categoryLink targetId="0ef5-5056-d52e-3cfd" id="1c52-5f23-9ede-864c" primary="true" name="Troops"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="216e-0de6-e595-27a3"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="High Chaplain Thulsa Kane" hidden="true" id="b8a2-daee-b2f7-dc1a" type="selectionEntry" targetId="e2b3-3bd6-c54d-2230">
       <modifiers>
@@ -5341,6 +5344,24 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Blood Angels Librarian" hidden="true" id="f4f0-8048-3572-45be" type="selectionEntry" targetId="44f9-6c25-c16b-e254">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="b246-18f2-96a4-e9a3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="c644-6c81-7124-50da" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="b246-18f2-96a4-e9a3" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Astral Claws Corpse-Taker Apothecary Section" hidden="false" id="6a93-7193-97bc-f312">
@@ -5472,6 +5493,28 @@
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
                   </costs>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Stubborn" hidden="false" id="6d25-97d2-e925-be3d" collective="false">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                                <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="a0a1-0673-b637-2cc4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f4c2-bf47-b27b-2901" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
@@ -5694,7 +5737,7 @@
                 <infoLink name="Space Marine" id="3971-4862-17ed-ff5d" hidden="false" type="profile" targetId="9514-67fd-b082-445f"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon" id="d142-4dc2-f1e5-8cf5" hidden="false" defaultSelectionEntryId="76b1-5575-b376-2212" sortIndex="2">
+                <selectionEntryGroup name="Weapon" id="d142-4dc2-f1e5-8cf5" hidden="false" defaultSelectionEntryId="4a88-8b01-2e95-9583" sortIndex="2">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ccf2-e6a0-f52b-19ee-min"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ccf2-e6a0-f52b-19ee-max"/>
@@ -5759,7 +5802,6 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
               </costs>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c9e-cec2-cddf-bf74-min"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c9e-cec2-cddf-bf74-max"/>
               </constraints>
               <infoLinks>
@@ -5791,27 +5833,6 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24da-6315-e90f-e4b3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Attack Bike with Heavy Bolter" hidden="false" id="ad03-647c-27c7-e320" collective="false">
-              <modifiers>
-                <modifier type="set" value="63" field="4ed5-2f92-9abc-2870">
-                  <conditions>
-                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="8ac8-b0a2-9d27-1696" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <infoLinks>
-                <infoLink name="Attack Bike" id="9869-140a-d036-a2c7" hidden="false" targetId="94d0-1b6d-2894-6089" type="profile"/>
-                <infoLink name="Heavy Bolter" id="2a80-b47d-99e9-ab54" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
-                <infoLink name="Boltgun" id="b5d7-37ed-fde0-be06" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
-                  <modifiers>
-                    <modifier type="set" value="Twin-linked Boltgun" field="name"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry type="model" import="true" name="Attack Bike with Multi-melta" hidden="false" id="6fa1-23e3-198a-c887" collective="false">
               <modifiers>
                 <modifier type="set" value="78" field="4ed5-2f92-9abc-2870">
@@ -5825,12 +5846,12 @@
                 <infoLink name="Multi-melta" id="455c-c18d-0df0-48b2" hidden="false" targetId="7077-4e34-5c92-5320" type="profile"/>
                 <infoLink name="Boltgun" id="82ba-1e83-ed4d-6f70" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
                   <modifiers>
-                    <modifier type="set" value="Twin-linked Boltgun" field="name"/>
+                    <modifier type="set" value="Twin-Linked Bolter" field="name"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="65"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5921,9 +5942,6 @@ The unit will automatically pass any Morale checks they have to take, even if fa
           </rules>
         </selectionEntry>
       </selectionEntries>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="7ff5-ee26-b841-ec8c" includeChildSelections="true"/>
-      </constraints>
       <modifiers>
         <modifier type="add" value="Chapter Master Lufgt Huran cannot be taken in a force less than 1500pts." field="error">
           <conditions>
@@ -6528,7 +6546,7 @@ The unit will automatically pass any Morale checks they have to take, even if fa
           <modifiers>
             <modifier type="increment" value="1" field="4ed5-2f92-9abc-2870">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="8883-c7bf-4824-77b0" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6546,7 +6564,7 @@ The unit will automatically pass any Morale checks they have to take, even if fa
           <modifiers>
             <modifier type="increment" value="2" field="4ed5-2f92-9abc-2870">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="8883-c7bf-4824-77b0" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6564,7 +6582,7 @@ The unit will automatically pass any Morale checks they have to take, even if fa
           <modifiers>
             <modifier type="increment" value="3" field="4ed5-2f92-9abc-2870">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="8883-c7bf-4824-77b0" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6587,7 +6605,7 @@ The unit will automatically pass any Morale checks they have to take, even if fa
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="6818-ade4-abe2-aa63" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="aa84-11cd-2a66-f4e0" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -9867,9 +9885,9 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
       <selectionEntryGroups>
         <selectionEntryGroup name="Detachment Members" id="9ed9-9850-051c-2ff6" hidden="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Leader" id="da7e-c7ab-5b41-71a7" hidden="false" defaultSelectionEntryId="f66a-89b0-1c4e-3a88">
+            <selectionEntryGroup name="Leader" id="da7e-c7ab-5b41-71a7" hidden="false" defaultSelectionEntryId="f66a-89b0-1c4e-3a88" collapsible="true">
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Tribune Prefect" hidden="false" id="65c9-cde5-e6cb-a705">
+                <selectionEntry type="model" import="true" name="Tribune Prefect" hidden="false" id="65c9-cde5-e6cb-a705" collapsible="true">
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="31"/>
                   </costs>
@@ -9903,7 +9921,7 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
                     </rule>
                   </rules>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Commander" hidden="false" id="f66a-89b0-1c4e-3a88">
+                <selectionEntry type="model" import="true" name="Commander" hidden="false" id="f66a-89b0-1c4e-3a88" collapsible="true">
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16"/>
                   </costs>
@@ -9929,7 +9947,7 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
                     <categoryLink targetId="3670-6ad0-8988-c35b" id="6542-878c-e5d6-418d" primary="false" name="Officer"/>
                   </categoryLinks>
                   <entryLinks>
-                    <entryLink import="true" name="Imperial Guard Armory" hidden="false" id="98e3-82fc-f51f-fafc" type="selectionEntryGroup" targetId="901c-b78b-9079-8fc1"/>
+                    <entryLink import="true" name="Imperial Guard Armory" hidden="false" id="98e3-82fc-f51f-fafc" type="selectionEntryGroup" targetId="901c-b78b-9079-8fc1" collapsible="true"/>
                   </entryLinks>
                   <rules>
                     <rule name="Field Command" id="8b49-1a10-419f-829a" hidden="false">
@@ -9943,13 +9961,13 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a259-825d-bef0-6ce8-max"/>
               </constraints>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Bodyguards" id="86a2-e884-f4af-47ac" hidden="false" defaultSelectionEntryId="628b-7147-7aa6-45f9">
+            <selectionEntryGroup name="Bodyguards" id="86a2-e884-f4af-47ac" hidden="false" defaultSelectionEntryId="628b-7147-7aa6-45f9" collapsible="true">
               <constraints>
                 <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="5ce3-c88b-5753-a44d"/>
                 <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="e727-cee6-9042-a12f"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Bodyguard" hidden="false" id="628b-7147-7aa6-45f9">
+                <selectionEntry type="model" import="true" name="Bodyguard" hidden="false" id="628b-7147-7aa6-45f9" collapsible="true">
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
                   </costs>
@@ -9990,7 +10008,7 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Lifeward" hidden="false" id="7a98-7d71-c917-f096">
+                <selectionEntry type="model" import="true" name="Lifeward" hidden="false" id="7a98-7d71-c917-f096" collapsible="true">
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
                   </costs>
@@ -10174,7 +10192,7 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
         </selectionEntryGroup>
         <selectionEntryGroup name="Transport" id="65d7-86d1-0937-be4e" hidden="false" sortIndex="1">
           <entryLinks>
-            <entryLink import="true" name="Chimera" hidden="false" id="4943-cae8-244e-5c1d" type="selectionEntry" targetId="c74d-d67b-4511-8b3a">
+            <entryLink import="true" name="Chimera" hidden="false" id="4943-cae8-244e-5c1d" type="selectionEntry" targetId="c74d-d67b-4511-8b3a" collapsible="true">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Second Line" hidden="false" id="814f-dac2-6d62-7aac">
                   <costs>
@@ -10186,7 +10204,7 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
                 </selectionEntry>
               </selectionEntries>
             </entryLink>
-            <entryLink import="true" name="Taurox (Homebrew)" hidden="false" id="928c-2863-d9f2-8355" type="selectionEntry" targetId="4fcb-7628-5a3f-287f">
+            <entryLink import="true" name="Taurox (Homebrew)" hidden="false" id="928c-2863-d9f2-8355" type="selectionEntry" targetId="4fcb-7628-5a3f-287f" collapsible="true">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Second Line" hidden="false" id="e202-cad5-1be0-9855">
                   <costs>
