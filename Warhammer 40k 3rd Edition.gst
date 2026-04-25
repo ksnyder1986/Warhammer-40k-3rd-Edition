@@ -986,7 +986,7 @@
       </modifiers>
       <rules>
         <rule id="8284-3c96-b0b9-db3f" name="True Grit" hidden="false">
-          <description>May treat Bolters as a Bolt Pistol in close combat and will therefore be allowed to roll an extra Attack dice as if they were armed with a second close combat weapon. However, the model using their bolter in this manner may not receive the extra attack bonush for charging.</description>
+          <description>May treat Bolters as a Bolt Pistol in close combat and will therefore be allowed to roll an extra Attack dice as if they were armed with a second close combat weapon. However, the model using their bolter in this manner may not receive the extra attack bonus for charging.</description>
         </rule>
         <rule id="f233-37b5-8abb-bbd2" name="Deep Strike" hidden="false">
           <description>Unless mounted in a Rhino, Deathwatch Kill Teams may always start the game in reserve and arrive by Deep Strike.</description>
@@ -1312,7 +1312,7 @@
                           </constraints>
                           <rules>
                             <rule id="7738-203c-f3f1-079b" name="Iron Halo" hidden="false">
-                              <description>The iron halo grants a 4+ invilnerable save.</description>
+                              <description>The iron halo grants a 4+ invulnerable save.</description>
                             </rule>
                           </rules>
                           <costs>
@@ -2550,7 +2550,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                                 <rule name="Daemonic Steed" id="b2b0-be45-c39f-5404" hidden="false">
                                   <description>The model now moves as Cavalry and gains Daemonic Resilience</description>
                                 </rule>
-                                <rule name="Daemonic Reslilience" id="bd37-c8de-72d9-b338" hidden="false">
+                                <rule name="Daemonic Resilience" id="bd37-c8de-72d9-b338" hidden="false">
                                   <description>+1 Toughness</description>
                                 </rule>
                               </rules>
@@ -2574,7 +2574,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemonic Talons" id="8039-505f-f906-a882" hidden="false">
-                                  <description>Any rolls to hit of a 6 causes an automatic wound with no armour saves allowed. Against vehicles, a roll of 6 allows the model to roll an addtional dice to determine the total Armour Penetration score.</description>
+                                  <description>Any rolls to hit of a 6 causes an automatic wound with no armour saves allowed. Against vehicles, a roll of 6 allows the model to roll an additional dice to determine the total Armour Penetration score.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2632,7 +2632,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemon Weapon" id="a108-531b-cf02-6059" hidden="false">
-                                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                                  <description>In any turn the bearer inflicts at least one casualty with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2657,7 +2657,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemon Weapon" id="8449-5cfc-c3d4-e0c4" hidden="false">
-                                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                                  <description>In any turn the bearer inflicts at least one casualty with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2682,7 +2682,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemon Weapon" id="f745-91bb-2aad-8762" hidden="false">
-                                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                                  <description>In any turn the bearer inflicts at least one casualty with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2707,7 +2707,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemon Weapon" id="8d90-79ce-0c46-b116" hidden="false">
-                                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                                  <description>In any turn the bearer inflicts at least one casualty with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2957,7 +2957,7 @@ Such is his skill with his pistols that he continues to fight with them in close
               </costs>
               <rules>
                 <rule name="Siege Specialists" id="2ce4-5cbd-694d-37db" hidden="false">
-                  <description>+1 on Armour Penetration rolls against enemy bunkers and tank traps. When crossing minefileds only trigger a mine on a 6.</description>
+                  <description>+1 on Armour Penetration rolls against enemy bunkers and tank traps. When crossing minefields only trigger a mine on a 6.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -3434,7 +3434,7 @@ TARGETING FLYERS:
     <rule id="300e-775c-430f-4b5d" name="Terrifying" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
       <comment>Vehicle Battle Honor</comment>
       <description>Tanks: Any unit testing for tank shock inflicted by this vehicle suffers an additional -1 modifier to its Leadership. 
-Others: The vehile causes tank shock if it moves through the enemy, just like Tanks.</description>
+Others: The vehicle causes tank shock if it moves through the enemy, just like Tanks.</description>
     </rule>
     <rule id="d668-4bd9-175d-8a61" name="Fast" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
       <comment>Vehicle Battle Honor</comment>
@@ -3769,7 +3769,7 @@ Range: Battlefield
 Effect: Used before determining who goes first. If successful, the user&apos;s force may re-roll to determine who gets the first move. If failed, the user&apos;s force goes second. NOTE: Only used in missions where dice rolls determine who goes first.</description>
     </rule>
     <rule id="2d1a-ee41-20f6-a6c8" name="Deathwatch" hidden="false">
-      <description>Deathwatch squad members and characters are never subject to the Special rules which apply to specific Chapters (i.e. Space Wolves&apos; counter attack, Blood Angels&apos; Black Rage, Black Templars&apos; vows, etc.) and which affect their fighting abilities or battlefield behaviour. Must be equiped with bolters or combi-weapons.</description>
+      <description>Deathwatch squad members and characters are never subject to the Special rules which apply to specific Chapters (i.e. Space Wolves&apos; counter attack, Blood Angels&apos; Black Rage, Black Templars&apos; vows, etc.) and which affect their fighting abilities or battlefield behaviour. Must be equipped with bolters or combi-weapons.</description>
     </rule>
     <rule id="0f7e-d79a-ce04-7d3d" name="Smoke &amp; Blind Grenades" hidden="false">
       <description>One use only.
