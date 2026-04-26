@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c8cb-cc69-1e43-3319" name="Daemon Hunters (2003)" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="c8cb-cc69-1e43-3319" name="Daemon Hunters (2003)" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="0ebb-2b64-3f2d-fffb" name="Space Marine Ally" hidden="false"/>
     <categoryEntry id="258f-122f-d9a4-245c" name="Inducted Imperial Guard" hidden="false"/>
@@ -6868,6 +6868,48 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sword of St. Aquitaine" hidden="false" id="4d85-ea96-1ef1-565c">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1789-3ad9-70b2-415e" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
+          <rules>
+            <rule name="Daemon Weapon" id="b6ab-89e9-ae92-7640" hidden="false">
+              <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink name="Power Weapon" id="b8de-a6e9-cc69-2cae" hidden="false" type="profile" targetId="5774-7187-2616-dd8a">
+              <modifiers>
+                <modifier type="set" value="Sword of St. Aquitaine" field="name"/>
+                <modifier type="set" value="If the Sword of St. Aquitaine causes a wound, and the bearer passes the Daemon Weapon Mastery test, he may force the entirety of the next game turn to be fought using the Night Fight rules." field="492d-1f80-b777-26f2"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Blade of Phaedron" hidden="false" id="1824-1245-310b-ca7d">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="029d-4d07-d36b-cdbe" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+          <rules>
+            <rule name="Daemon Weapon" id="2e31-0d99-e15a-d28e" hidden="false">
+              <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink name="Close Combat Weapon" id="8017-90ef-dd1d-62e1" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2">
+              <modifiers>
+                <modifier type="set" value="Blade of Phaedron" field="name"/>
+                <modifier type="set" value="The Blade of Phaedron wounds all Daemons on a 2+ and the bearer gains +D3 attacks when charging a Daemon instead of the usual +1." field="492d-1f80-b777-26f2"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="b42e-346d-68ea-45a2" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
@@ -7128,9 +7170,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="b583-3e64-2ee0-8583" name="Daemon Hunters Armoury" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="b583-3e64-2ee0-8583" name="Daemon Hunters Armoury" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntryGroups>
-        <selectionEntryGroup id="b05d-3a63-96c6-3229" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="b05d-3a63-96c6-3229" name="Weapons" hidden="false" collective="false" import="true" sortIndex="1">
           <modifiers>
             <modifier type="set" field="c520-4cfc-d837-d665" value="1">
               <conditions>
@@ -7158,7 +7200,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="49f3-4361-8641-6677" name="Daemon Hunters Wargear" hidden="false" collective="false" import="true" targetId="c0c1-7945-2013-7015" type="selectionEntryGroup">
+        <entryLink id="49f3-4361-8641-6677" name="Daemon Hunters Wargear" hidden="false" collective="false" import="true" targetId="c0c1-7945-2013-7015" type="selectionEntryGroup" sortIndex="2">
           <constraints>
             <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="100" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5be-e833-eb59-13e2" type="max"/>
           </constraints>
@@ -7277,7 +7319,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="c0c1-7945-2013-7015" name="Daemon Hunters Wargear" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="c0c1-7945-2013-7015" name="Daemon Hunters Wargear" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
         <selectionEntry id="f1e3-3324-ccc0-e58a" name="Bionics" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7933,9 +7975,22 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Grimoire Pandaemonica" hidden="false" id="951c-b07e-c2ee-33c4">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="591e-f5ac-6897-28d4" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
+          <rules>
+            <rule name="Grimoire Pandaemonica" id="f6d3-4170-c27c-ce89" hidden="false">
+              <description>The bearer of the Grimoiro Pandaemonica may force his opponent to reroll a single Daemonic Possession or a single Daemonic Summoning roll each game turn.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0563-f3dc-3db7-5c09" name="Daemon Hunters Vehicle Upgrades" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="0563-f3dc-3db7-5c09" name="Daemon Hunters Vehicle Upgrades" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
         <selectionEntry id="3dd4-be65-9b0a-077e" name="Extra Armor" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
