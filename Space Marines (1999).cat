@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="a527-734f-2081-58cd" name="Blood Angel" hidden="false"/>
     <categoryEntry id="5709-6bb9-f3f9-07f2" name="Sanguinary Priest" hidden="false"/>
@@ -52,6 +52,7 @@
       </rules>
     </categoryEntry>
     <categoryEntry name="Iron Hands" id="3bf5-6158-26f8-ea64" hidden="false"/>
+    <categoryEntry name="Relictor" id="71f1-cbf9-c4ed-47ac" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="42a3-487a-8d98-5c47" name="Commander" hidden="false" collective="false" import="true" targetId="043b-1cc7-9a38-8133" type="selectionEntry"/>
@@ -8597,6 +8598,64 @@ If Ancient Helveticus is killed, these benefits no longer apply for whoever pick
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Chaos Relic" hidden="false" id="cea6-461f-9a78-4c1c">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="0eec-eeaf-3921-3ea9" includeChildSelections="true"/>
+      </constraints>
+      <rules>
+        <rule name="Chaos Relic" id="f5bb-361f-6ef5-941d" hidden="false">
+          <description>Before the game begins roll a D6 to determine which banner the relic represents.
+1 - Icon of Chaos Undivided
+2 - Icon of Chaos Undivided
+3 - Banner of Rage
+4 - Plague Banner
+5 - Rapturous Standard
+6 - Blasted Standard</description>
+        </rule>
+      </rules>
+      <comment>Relictors</comment>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="71f1-cbf9-c4ed-47ac" shared="true" childName="Relictor"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoGroups>
+        <infoGroup name="Chaos Banner Rules" id="96b9-36de-c80b-1579" hidden="false">
+          <profiles>
+            <profile name="Rapturous Standard" typeId="7279-038a-b87a-ed0c" typeName="Abilities" hidden="false" id="1c4d-2720-9b4c-8a3a">
+              <characteristics>
+                <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Once per game at the start of the Shooting Phase any model within 6&quot; gains the Feel no Pain special ability for the remainder of the turn.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Banner of Rage" typeId="7279-038a-b87a-ed0c" typeName="Abilities" hidden="false" id="4a72-fea3-6fc4-b19f">
+              <characteristics>
+                <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Once per battle release its power. In any Assault phase the models in the same unit as the model bearing the Banner gain +1 A.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Icon of Chaos Undivided" typeId="7279-038a-b87a-ed0c" typeName="Abilities" hidden="false" id="395b-08c6-b2d3-e6b4">
+              <characteristics>
+                <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Any unit or model 6&quot; becomes Fearless.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Plague Banner" typeId="7279-038a-b87a-ed0c" typeName="Abilities" hidden="false" id="e968-dbac-bb4b-81a5">
+              <characteristics>
+                <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Once per battle cause any one enemy unit within 6&quot; to take D6 wounds with no armour or cover saves possible.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Blasted Standard" typeId="7279-038a-b87a-ed0c" typeName="Abilities" hidden="false" id="6c71-8da3-ece5-1fa2">
+              <characteristics>
+                <characteristic name="Description" typeId="a08a-36f8-2fd3-b843">Once per battle in the player&apos;s Shooting Phase the standard can be aimed at any enemy unit with a model with 6&quot; of the Icon Bearer and may even target a unit in close combat. The spell inflicts 2D6 S6 AP4 hits.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="bfc9-22b8-1379-3112" name="Space Marine Armory" hidden="false" collective="false" import="true">
@@ -9987,6 +10046,18 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Chaos Relic" hidden="false" id="a747-b3ef-639d-5bd4" type="selectionEntry" targetId="cea6-461f-9a78-4c1c">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="6c91-d214-036a-50a2" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Relictors</comment>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="de15-e12d-186e-ce84" name="Single-Handed Weapons" hidden="false" collective="false" import="true">
       <constraints>
