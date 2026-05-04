@@ -6872,6 +6872,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1789-3ad9-70b2-415e" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
@@ -6893,6 +6900,13 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="029d-4d07-d36b-cdbe" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
           </costs>
@@ -7979,12 +7993,58 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="591e-f5ac-6897-28d4" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
           <rules>
             <rule name="Grimoire Pandaemonica" id="f6d3-4170-c27c-ce89" hidden="false">
               <description>The bearer of the Grimoiro Pandaemonica may force his opponent to reroll a single Daemonic Possession or a single Daemonic Summoning roll each game turn.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Books of Pain" hidden="false" id="cbf1-4248-05d7-c587">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9277-75f2-a3b9-4237" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="341c-1d2c-25d8-af97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="27ee-b0a2-0c2a-b518" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="0ab5-d725-1cf5-ba03" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
+          <rules>
+            <rule name="Books of Pain" id="44e2-2123-11d4-f451" hidden="false">
+              <description>The Books of Pain can be used once per game, at the beginning of any movement phase. All units, friend or foe (including the bearer&apos;s own) with a model within 3&quot; of the bearer count as pinned until the beginning of the owner&apos;s next turn.</description>
             </rule>
           </rules>
         </selectionEntry>
