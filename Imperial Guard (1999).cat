@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="571f-bded-9f3f-e9f6" name="Imperial Guard (1999)" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="571f-bded-9f3f-e9f6" name="Imperial Guard (1999)" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="d77a-7f37-0364-0a69" name="Officer" hidden="false"/>
     <categoryEntry id="d79c-fe5a-5220-47df" name="Catachan" hidden="false"/>
@@ -597,7 +597,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab49-9a69-eff0-03de" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="dc24-7ac6-76f4-98ac" name="Captain" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="dc24-7ac6-76f4-98ac" name="Captain" hidden="false" collective="false" import="true" type="model" sortIndex="1">
               <infoLinks>
                 <infoLink id="7de2-0764-4db5-1ddb" name="Captain" hidden="false" targetId="c623-489e-d7a0-0a93" type="profile">
                   <modifiers>
@@ -640,7 +640,7 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="22e2-b37e-95af-b21f" name="Colonel" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="22e2-b37e-95af-b21f" name="Colonel" hidden="false" collective="false" import="true" type="model" sortIndex="2">
               <infoLinks>
                 <infoLink id="6883-af01-d8bf-aa26" name="Colonel" hidden="false" targetId="6cd0-8cde-3bf9-8d07" type="profile">
                   <modifiers>
@@ -684,6 +684,10 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Captain Al&apos;Rahem (WD 227)" hidden="false" id="82a9-26d8-a60c-f78f" type="selectionEntry" targetId="b3de-a1cc-c249-c0d6" sortIndex="3"/>
+            <entryLink import="true" name="Captain Chenkov (WD 227)" hidden="false" id="b5f4-5a0a-c901-99fd" type="selectionEntry" targetId="66f7-7b13-d981-d828" sortIndex="3"/>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="38cc-dc4f-7777-d2c3" name="Guardsmen" hidden="false" collective="false" import="true" defaultSelectionEntryId="a714-271f-13d0-ffef" collapsible="true">
           <modifiers>
@@ -1611,6 +1615,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b4e0-3413-8291-9e7e" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
+        <categoryLink targetId="be45-5314-4388-5bfd" id="85cc-1cb8-1c9c-e5f3" primary="true" name="No Force Org"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b89b-7aff-cb7b-37fe" name="Deathworld Veteran" hidden="false" collective="false" import="true" type="upgrade">
@@ -4016,6 +4021,9 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="be45-5314-4388-5bfd" id="42e0-ea02-a456-c15a" primary="true" name="No Force Org"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="a5dd-e7c1-f7d2-0ade" name="Colonel Schaeffer&apos;s Last Chancers" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -6459,6 +6467,86 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Captain Al&apos;Rahem (WD 227)" hidden="false" id="b3de-a1cc-c249-c0d6">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="65"/>
+      </costs>
+      <profiles>
+        <profile name="Captain Al&apos;Rahem" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="1516-5762-5d58-ba17">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Plasma Pistol" id="71d4-0644-34f7-3e27" hidden="false" type="profile" targetId="7b91-b670-d042-7c88"/>
+        <infoLink name="Power Weapon" id="cc3f-ae8b-1b95-cb52" hidden="false" type="profile" targetId="5774-7187-2616-dd8a"/>
+      </infoLinks>
+      <rules>
+        <rule name="Captain Al&apos;Rahem" id="1f29-489d-6930-5b1a" hidden="false">
+          <description>Enemy suffer an additional -1 Ld if they lose an assault against Al&apos;Rahem.</description>
+        </rule>
+      </rules>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1b81-7680-d464-ea85" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Captain Chenkov (WD 227)" hidden="false" id="66f7-7b13-d981-d828">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60"/>
+      </costs>
+      <profiles>
+        <profile name="Captain Chenkov" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="a974-4191-157f-d693">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Bolt Pistol" id="d4c5-16b3-de2d-642e" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a"/>
+        <infoLink name="Power Weapon" id="ccf9-a1dd-cd19-c376" hidden="false" type="profile" targetId="5774-7187-2616-dd8a"/>
+        <infoLink name="Frag Grenades" id="92bf-968e-0761-74ce" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+        <infoLink name="Krak Grenades" id="3e15-b31a-888c-dc15" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+      </infoLinks>
+      <rules>
+        <rule name="Captain Chenkov" id="3805-0c32-8bca-8b27" hidden="false">
+          <description>All Imperial Guard units with a model within 12&quot; of Chenkov may re-roll failed morale tests.</description>
+        </rule>
+      </rules>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="60b1-e531-d6ee-121e" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
