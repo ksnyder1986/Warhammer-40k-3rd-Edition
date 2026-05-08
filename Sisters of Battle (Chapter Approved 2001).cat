@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f711-3772-cc5d-47dd" name="Sisters of Battle (Chapter Approved 2001)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="f711-3772-cc5d-47dd" name="Sisters of Battle (Chapter Approved 2001)" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="f3cc-7f9b-fb5d-c740" name="Imperial Guard" hidden="false">
       <modifiers>
@@ -84,6 +84,7 @@
     <entryLink id="68f9-9950-d4a8-6804" name="Infantry Squad" hidden="false" collective="false" import="true" targetId="584a-7ef5-fc9e-34b4" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="4088-b004-fead-8f11" name="Imperial Guard" hidden="false" targetId="f3cc-7f9b-fb5d-c740" primary="false"/>
+        <categoryLink targetId="be45-5314-4388-5bfd" id="0608-33ff-8ae9-b27b" primary="true" name="No Force Org"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="41e2-016c-249b-343b" name="Armoured Fist Squad" hidden="false" collective="false" import="true" targetId="f2ac-82ed-d154-87aa" type="selectionEntry">
@@ -92,11 +93,13 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="6a57-fd37-d23d-8367" name="Imperial Guard" hidden="false" targetId="f3cc-7f9b-fb5d-c740" primary="false"/>
+        <categoryLink targetId="be45-5314-4388-5bfd" id="9f21-1bd0-64e5-b5ff" primary="true" name="No Force Org"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="c2d4-9a0d-b92a-3a9a" name="Storm Troopers" hidden="false" collective="false" import="true" targetId="e7cd-a8b8-db28-d34e" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="76d7-4838-e996-11a5" name="Imperial Guard" hidden="false" targetId="f3cc-7f9b-fb5d-c740" primary="false"/>
+        <categoryLink targetId="be45-5314-4388-5bfd" id="f060-17b2-5fd3-a4b8" primary="true" name="No Force Org"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -873,6 +876,10 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Uriah Jacobus (WD 227)" hidden="false" id="2432-f951-6689-62e9" type="selectionEntry" targetId="e6fb-834a-beee-211e"/>
+            <entryLink import="true" name="Redemptor Kyrinov (WD 227)" hidden="false" id="96f7-48eb-560a-802e" type="selectionEntry" targetId="b079-fc7d-d2e8-e71b"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1738,6 +1745,103 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Uriah Jacobus (WD 227)" hidden="false" id="e6fb-834a-beee-211e">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="64"/>
+      </costs>
+      <profiles>
+        <profile name="Uriah Jacobus" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="00e5-f206-6375-b796">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Shotgun" id="0d84-8701-7e4d-38de" hidden="false" type="profile" targetId="9882-0cca-b1d2-8e0b"/>
+        <infoLink name="Close Combat Weapon" id="0359-09f5-bff8-1d75" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
+        <infoLink name="Frag Grenades" id="e1d7-a535-4618-7645" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+        <infoLink name="Krak Grenades" id="f92e-e090-5bba-9708" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+        <infoLink name="Fearless" id="3bbd-9aea-b5ee-79d4" hidden="false" type="rule" targetId="b137-13a1-eb97-c5e5"/>
+      </infoLinks>
+      <rules>
+        <rule name="Rosarius" id="0d13-630d-5624-0f84" hidden="false">
+          <description>4+ Invulnerable Save</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="56ca-d133-9466-d491" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Redemptor Kyrinov (WD 227)" hidden="false" id="b079-fc7d-d2e8-e71b">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="61"/>
+      </costs>
+      <profiles>
+        <profile name="Redemptor Kyrinov" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="cc27-e539-697e-07f7">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">3(4)</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mace of Valaan" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="e90a-0528-740c-e93b">
+          <characteristics>
+            <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+            <characteristic name="S" typeId="24d8-2110-08fa-d844">User +1</characteristic>
+            <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+            <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+            <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Power Weapon</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Master-crafted Weapons" id="258d-d000-9000-9dca" hidden="false" targetId="bfa6-639a-4ff4-e20e" type="rule"/>
+        <infoLink name="Bolt Pistol" id="7668-7847-e190-3ee5" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a">
+          <modifiers>
+            <modifier type="set" value="Master-crafted Bolt Pistol" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <rules>
+        <rule name="Rosarius" id="d47b-db90-395d-1a40" hidden="false">
+          <description>4+ Invulnerable Save</description>
+        </rule>
+        <rule name="Redemptor Kyrinov" id="c436-4bf5-f597-753d" hidden="false">
+          <description>Enemy within 6&quot; suffer -1 Ld.</description>
+        </rule>
+      </rules>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b1e4-0ee8-4a2c-491f" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
