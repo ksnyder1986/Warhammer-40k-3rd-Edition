@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0885-d75b-33a6-169b" name="Space Wolves (2000)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0885-d75b-33a6-169b" name="Space Wolves (2000)" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="2682-a24d-27d0-d11d" name="13th Company" hidden="false"/>
   </categoryEntries>
@@ -208,11 +208,20 @@
     <entryLink id="c462-02ff-d9a8-1838" name="Emperor&apos;s Champion" hidden="false" collective="false" import="true" targetId="ad23-c512-3d63-c3a4" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="name" value="Emperor&apos;s Champion (Chapter Approved)"/>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd02-5d20-85ac-d996" type="max"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink targetId="be45-5314-4388-5bfd" id="f490-79ad-dd65-86e2" primary="true" name="No Force Org"/>
+      </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Bjorn the Fell-Handed" hidden="false" id="0da8-1124-74bb-26f2" type="selectionEntry" targetId="e34d-b2bf-6604-c6bc"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="5a50-b1c6-a93a-cc0d" name="Wolf Lord" hidden="false" collective="false" import="true" type="unit">
@@ -3071,6 +3080,49 @@ However, if the model bearing the standard is slain in close combat, then the en
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="200"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Bjorn the Fell-Handed (WD227)" hidden="false" id="e34d-b2bf-6604-c6bc">
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="148"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="9d89-1490-1e77-1ea8" primary="true" name="Elites"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="08b3-3dfe-5d53-3442" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Bjorn the Fell-Handed" typeId="5119-5456-6e97-4fc2" typeName="Walker" hidden="false" id="29f3-3d2a-8e1a-d1ae">
+          <characteristics>
+            <characteristic name="WS" typeId="46fa-bb2a-a0f5-6b3f">5</characteristic>
+            <characteristic name="BS" typeId="5734-f043-7bcc-cff2">4</characteristic>
+            <characteristic name="S" typeId="2870-c64f-81e5-a118">6(10)</characteristic>
+            <characteristic name="Front Armor" typeId="cb1a-f3fe-1dc0-5708">12</characteristic>
+            <characteristic name="Side Armor" typeId="25a2-b98c-a034-c6f6">12</characteristic>
+            <characteristic name="Rear Armor" typeId="b798-62af-f346-b1c1">10</characteristic>
+            <characteristic name="I" typeId="695a-ba63-65d1-3ce5">4</characteristic>
+            <characteristic name="A" typeId="bb33-7ddf-2296-174e">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Assault Cannon" id="3b06-bbfc-d8fe-6021" hidden="false" type="profile" targetId="3f9c-e7c1-c442-3b7c"/>
+        <infoLink name="Dreadnought Close Combat Weapons" id="1d22-0912-27a4-bbf3" hidden="false" type="profile" targetId="c7f7-e5ab-17a7-1cf9"/>
+        <infoLink name="Heavy Flamer" id="4858-db74-da6b-1aa4" hidden="false" type="profile" targetId="6d36-2c09-dfc3-f257"/>
+        <infoLink name="Smoke Launchers" id="e4b0-fcb5-6c89-d4b0" hidden="false" type="rule" targetId="42cc-b2d9-b9f3-90ea"/>
+      </infoLinks>
+      <rules>
+        <rule name="Bjorn the Fell-Handed" id="8113-6ee1-62ff-0c3d" hidden="false">
+          <description>Deduct 1 from all rolls on damage table for hits on Bjorn. Treat a 0 as having no effect.</description>
+        </rule>
+      </rules>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

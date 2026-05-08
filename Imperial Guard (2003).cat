@@ -462,12 +462,6 @@
         <categoryLink targetId="aacb-8a81-62c0-3db8" id="0020-3ada-05e1-9fd8" primary="true" name="Heavy Support"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Valkrie (IA)" hidden="false" id="7d57-d050-853d-8251" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e">
-      <categoryLinks>
-        <categoryLink targetId="aacb-8a81-62c0-3db8" id="4bfb-a22e-c19e-7e51" primary="true" name="Heavy Support"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Rogal Dorn Battle Tank (Homebrew)" hidden="false" id="2a81-0771-1bb3-6f88" type="selectionEntry" targetId="6c7f-0481-5c89-073c"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f6c9-305b-8827-2cb6" name="Command Platoon" hidden="false" collective="false" import="true" type="unit">
@@ -924,6 +918,32 @@
             <entryLink id="0082-8d24-5ff8-5aef" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Dedicated Transport" id="b200-917b-5595-1804" hidden="false" collective="false" import="true" sortIndex="3">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71e2-da5b-3628-4632" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="c34c-2110-db95-fa98" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e"/>
+          </entryLinks>
+          <comment>Valkryie</comment>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
@@ -1034,7 +1054,7 @@
         </infoLink>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="cae9-70d4-e7d7-847b" name="Guardsmen" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cae9-70d4-e7d7-847b" name="Guardsmen" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <conditionGroups>
@@ -1343,6 +1363,32 @@
             <entryLink id="d4a7-384b-4755-0423" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="e9c0-41de-faca-454d" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Dedicated Transport" id="d287-9d8e-0cfc-9292" hidden="false" collective="false" import="true" sortIndex="4">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="06ab-2596-81ee-4439" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="8fac-84cf-8712-927c" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e"/>
+          </entryLinks>
+          <comment>Valkryie</comment>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1747,6 +1793,32 @@
             <entryLink id="089e-a688-edb9-59b7" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="598f-42ee-fa6f-ef9e" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Dedicated Transport" id="477e-dc3f-7336-135e" hidden="false" collective="false" import="true" sortIndex="4">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7b6a-3318-e722-389a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="7d11-b5d8-1a4d-4dc6" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e"/>
+          </entryLinks>
+          <comment>Valkryie</comment>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -3022,6 +3094,20 @@
           <entryLinks>
             <entryLink id="7a17-5122-3b66-d8f8" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="f4a3-15ef-190a-3e97" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="a058-b3f4-e0f6-d1a7" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3108,6 +3194,20 @@
           <entryLinks>
             <entryLink id="8a91-6c7e-0f16-f5b1" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="ed98-1892-60c6-740c" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="e24e-14cf-64f9-d512" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3337,6 +3437,7 @@
           <entryLinks>
             <entryLink id="553f-3311-aef2-5899" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="6a1b-6f88-0dcc-1b15" name="Taurox Prime (Homebrew)" hidden="false" collective="false" import="true" targetId="c704-d712-a01b-2eed" type="selectionEntry"/>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="37b8-893d-ce29-aafe" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3874,7 +3975,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c7cf-4fe7-778a-3a5c" name="Heavy Weapon" hidden="false" collective="false" import="true" sortIndex="3">
+        <selectionEntryGroup id="c7cf-4fe7-778a-3a5c" name="Heavy Weapon" hidden="false" collective="false" import="true" sortIndex="3" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="711a-1526-b060-65e7" type="max"/>
           </constraints>
@@ -3959,7 +4060,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="2d13-bb5e-5b50-421c" name="Special Weapon" hidden="false" collective="false" import="true" sortIndex="2">
+        <selectionEntryGroup id="2d13-bb5e-5b50-421c" name="Special Weapon" hidden="false" collective="false" import="true" sortIndex="2" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bf8-d496-51a0-5905" type="max"/>
           </constraints>
@@ -3999,7 +4100,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="2983-cc0a-5e86-b0ba" name="Sergeant" hidden="false" collective="false" import="true" defaultSelectionEntryId="459c-f931-8e0f-5ec2" sortIndex="3">
+        <selectionEntryGroup id="2983-cc0a-5e86-b0ba" name="Sergeant" hidden="false" collective="false" import="true" defaultSelectionEntryId="459c-f931-8e0f-5ec2" sortIndex="3" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1091-e7b8-de16-764a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a98-8080-bc7a-f4a8" type="min"/>
@@ -4168,7 +4269,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="0f3c-05d4-55d4-0d55" name="Dedicated Transport" hidden="false" collective="false" import="true" sortIndex="4">
+        <selectionEntryGroup id="0f3c-05d4-55d4-0d55" name="Dedicated Transport" hidden="false" collective="false" import="true" sortIndex="4" collapsible="true">
           <modifiers>
             <modifier type="set" field="92c6-a5d5-2261-87cf" value="1">
               <conditionGroups>
@@ -4199,6 +4300,32 @@
             <entryLink id="8bf0-93cf-b363-e216" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="0218-b18d-d6d3-6327" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Dedicated Transport" id="401f-8db3-ef5f-ff25" hidden="false" collective="false" import="true" sortIndex="4" collapsible="true">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1df4-59eb-8e98-ae15" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="e4c4-ca28-9e57-1376" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e"/>
+          </entryLinks>
+          <comment>Valkryie</comment>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -7864,6 +7991,20 @@
           <entryLinks>
             <entryLink id="2e1a-7fe7-0d39-3de0" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="6c90-b557-b42e-297c" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="efe4-1488-986b-286b" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -7878,7 +8019,7 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a651-fdc7-5148-ec7e" name="Platoon Command Squad" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="a651-fdc7-5148-ec7e" name="Platoon Command Squad" hidden="false" collective="false" import="true" type="upgrade" collapsible="true">
       <modifiers>
         <modifier type="increment" field="4ed5-2f92-9abc-2870" value="10">
           <comment>Chem-Inhalers</comment>
@@ -8761,6 +8902,20 @@
           <entryLinks>
             <entryLink id="c916-2149-307d-aaf9" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="c7db-a7d0-117e-c3d0" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="7674-8430-5876-9908" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -8924,6 +9079,7 @@
           <entryLinks>
             <entryLink id="f163-6308-011f-d65a" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="2833-b267-90ff-319b" name="Taurox Prime (Homebrew)" hidden="false" collective="false" import="true" targetId="c704-d712-a01b-2eed" type="selectionEntry"/>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="6d5d-5215-05d9-0319" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -9622,6 +9778,32 @@
             <entryLink id="d33b-366d-50fd-ae1a" name="Chimera" hidden="false" collective="false" import="true" targetId="c74d-d67b-4511-8b3a" type="selectionEntry"/>
             <entryLink id="da6f-e6d7-55de-f6af" name="Taurox (Homebrew)" hidden="false" collective="false" import="true" targetId="4fcb-7628-5a3f-287f" type="selectionEntry"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Dedicated Transport" id="70f5-b0dc-96b1-870e" hidden="false" collective="false" import="true" sortIndex="5">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d32b-ff40-9e22-37a9" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="d492-26c5-9d9b-8e96" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e69-aac3-2412-76b3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="2b81-cf48-6194-912a" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e"/>
+          </entryLinks>
+          <comment>Valkryie</comment>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
