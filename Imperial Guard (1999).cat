@@ -466,6 +466,7 @@
     </entryLink>
     <entryLink import="true" name="Cypher (White Dwarf 281)" hidden="false" id="31ec-d3ea-8f9d-153f" type="selectionEntry" targetId="8fef-9ae0-66c3-1628"/>
     <entryLink import="true" name="Fallen Angels (White Dwarf 281)" hidden="false" id="7069-b229-76b3-a93f" type="selectionEntry" targetId="0f82-b6c4-2a66-d15f"/>
+    <entryLink import="true" name="Rogal Dorn Battle Tank (Homebrew)" hidden="false" id="7cb3-1b65-c0bd-360c" type="selectionEntry" targetId="9c71-ea05-fb97-b9fc"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="8dda-efc4-a1ae-094c" name="Command HQ" hidden="false" collective="false" import="true" type="unit">
@@ -597,7 +598,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab49-9a69-eff0-03de" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="dc24-7ac6-76f4-98ac" name="Captain" hidden="false" collective="false" import="true" type="model" sortIndex="1">
+            <selectionEntry id="dc24-7ac6-76f4-98ac" name="Captain" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="7de2-0764-4db5-1ddb" name="Captain" hidden="false" targetId="c623-489e-d7a0-0a93" type="profile">
                   <modifiers>
@@ -640,7 +641,7 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="22e2-b37e-95af-b21f" name="Colonel" hidden="false" collective="false" import="true" type="model" sortIndex="2">
+            <selectionEntry id="22e2-b37e-95af-b21f" name="Colonel" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="6883-af01-d8bf-aa26" name="Colonel" hidden="false" targetId="6cd0-8cde-3bf9-8d07" type="profile">
                   <modifiers>
@@ -684,10 +685,6 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
-          <entryLinks>
-            <entryLink import="true" name="Captain Al&apos;Rahem (WD 227)" hidden="false" id="82a9-26d8-a60c-f78f" type="selectionEntry" targetId="b3de-a1cc-c249-c0d6" sortIndex="3"/>
-            <entryLink import="true" name="Captain Chenkov (WD 227)" hidden="false" id="b5f4-5a0a-c901-99fd" type="selectionEntry" targetId="66f7-7b13-d981-d828" sortIndex="3"/>
-          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="38cc-dc4f-7777-d2c3" name="Guardsmen" hidden="false" collective="false" import="true" defaultSelectionEntryId="a714-271f-13d0-ffef" collapsible="true">
           <modifiers>
@@ -1615,7 +1612,6 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b4e0-3413-8291-9e7e" name="Officer" hidden="false" targetId="d77a-7f37-0364-0a69" primary="false"/>
-        <categoryLink targetId="be45-5314-4388-5bfd" id="85cc-1cb8-1c9c-e5f3" primary="true" name="No Force Org"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b89b-7aff-cb7b-37fe" name="Deathworld Veteran" hidden="false" collective="false" import="true" type="upgrade">
@@ -4021,9 +4017,6 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
       </costs>
-      <categoryLinks>
-        <categoryLink targetId="be45-5314-4388-5bfd" id="42e0-ea02-a456-c15a" primary="true" name="No Force Org"/>
-      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="a5dd-e7c1-f7d2-0ade" name="Colonel Schaeffer&apos;s Last Chancers" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -4399,7 +4392,7 @@
           <description>The Stormsword can ignore low walls, hedges, bushes and rubble. Going through other difficult terrain they test as normal, but if they roll a 1 they lose D3&quot; of movement, just as if they had suffered an Engines Damaged result, instead of being immobilised.</description>
         </rule>
         <rule id="eb24-fa00-b574-ae7b" name="Lumbering Vehicle" hidden="false">
-          <description>The stormsword can move up to 6&quot; a turn. It must always move straight ahead, but can pivot by up to 90 degrees at the end of the move.</description>
+          <description>The Baneblade can move up to 6&quot; a turn. It must always move straight ahead, but can pivot by up to 90 degrees at the end of the move.</description>
         </rule>
         <rule id="d93b-00cc-1025-f641" name="Ordnance" hidden="false">
           <description>May fire Ordnance and still fire other weapons. It may fire Ordnance even if it moved.</description>
@@ -6468,85 +6461,153 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Captain Al&apos;Rahem (WD 227)" hidden="false" id="b3de-a1cc-c249-c0d6">
-      <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="65"/>
-      </costs>
+    <selectionEntry type="unit" import="true" name="Rogal Dorn Battle Tank (Homebrew)" hidden="false" id="9c71-ea05-fb97-b9fc">
+      <comment>Rogal Dorm Battle Tank
+- Normal Tank
+- 14-14-13 (30+80+40 = 150pts)
+- Lumbering (10pts)</comment>
       <profiles>
-        <profile name="Captain Al&apos;Rahem" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="1516-5762-5d58-ba17">
+        <profile name="Rogal Dorn Battle Tank" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle" hidden="false" id="ce72-80b4-9927-60cf">
           <characteristics>
-            <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
-            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
-            <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
-            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
-            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
-            <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
-            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
-            <characteristic name="Sv" typeId="b309-5233-122f-82bb">5+</characteristic>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">14</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">14</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">13</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Plasma Pistol" id="71d4-0644-34f7-3e27" hidden="false" type="profile" targetId="7b91-b670-d042-7c88"/>
-        <infoLink name="Power Weapon" id="cc3f-ae8b-1b95-cb52" hidden="false" type="profile" targetId="5774-7187-2616-dd8a"/>
-      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="1241-8da4-14e4-f20c" type="selectionEntryGroup" targetId="c0af-40a7-0f54-9847"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Turret Weapon" id="aa73-e7b2-ea7c-860b" hidden="false" defaultSelectionEntryId="4711-cdef-e457-1407">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Twin-Linked Battle Cannon" hidden="false" id="4711-cdef-e457-1407">
+              <infoLinks>
+                <infoLink name="Battle Cannon" id="9076-0a9a-60c9-fecf" hidden="false" type="profile" targetId="3a2e-94e4-b9a3-bb11"/>
+              </infoLinks>
+              <rules>
+                <rule name="Twin-Linked Blast Weapon" id="96cd-c13d-caf0-102e" hidden="false">
+                  <description>The scatter dice and distance may be rerolled, but the second outcome must be </description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vanquisher Cannon and Coaxial Autocannon" hidden="false" id="5979-e9d7-baef-d5c2">
+              <infoLinks>
+                <infoLink name="Vanquisher Cannon" id="b38b-1562-00bc-55e4" hidden="false" type="profile" targetId="6ed6-d055-77b9-709e"/>
+                <infoLink name="Autocannon" id="18e8-a826-d163-5061" hidden="false" type="profile" targetId="6128-e2af-037e-4d1a"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9815-97ae-d18d-4421-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9815-97ae-d18d-4421-max"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Hull Weapon" id="617f-840f-9b06-96b3" hidden="false" defaultSelectionEntryId="5bcd-d744-376f-767f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51fc-f33d-bc1f-dcc7-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51fc-f33d-bc1f-dcc7-max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Conqueror Cannon" hidden="false" id="d473-5f24-df7d-d866">
+              <infoLinks>
+                <infoLink name="Conqueror Cannon" id="a855-c853-fff5-5618" hidden="false" type="profile" targetId="814e-4aa4-0908-6350"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gatling Heavy Bolter" hidden="false" id="5bcd-d744-376f-767f">
+              <infoLinks>
+                <infoLink name="Heavy Bolter" id="90db-b238-c39f-536f" hidden="false" type="profile" targetId="b9aa-366b-bd62-4692">
+                  <modifiers>
+                    <modifier type="set" value="Gatling Heavy Bolter" field="name"/>
+                    <modifier type="set" value="Heavy 3D3" field="d3f6-19e8-ac9e-ae13"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Sponson Weapons" id="be86-c607-55b3-e208" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d67-c6f3-3308-363d"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Two Heavy Bolters" hidden="false" id="f4b9-bdb1-22eb-990b">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Heavy Bolter" id="b3aa-110d-74f7-58a6" hidden="false" type="profile" targetId="b9aa-366b-bd62-4692"/>
+                <infoLink name="Heavy Bolter" id="ac3f-5d39-1624-c7cb" hidden="false" type="profile" targetId="b9aa-366b-bd62-4692"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Two Multi-meltas" hidden="false" id="4da5-895e-d386-caf7">
+              <infoLinks>
+                <infoLink name="Multi-melta" id="4fdd-9d36-d471-72da" hidden="false" type="profile" targetId="7077-4e34-5c92-5320"/>
+                <infoLink name="Multi-melta" id="1327-f136-3eb9-e392" hidden="false" type="profile" targetId="7077-4e34-5c92-5320"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Glacius Weapons" id="f737-24b4-367d-991b" hidden="false" defaultSelectionEntryId="none">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Two Heavy Stubbers" hidden="false" id="e57d-be93-0ee4-4ac7">
+              <infoLinks>
+                <infoLink name="Heavy Stubber" id="0860-b35f-ab20-751e" hidden="false" type="profile" targetId="e055-536f-8cdf-7ec4"/>
+                <infoLink name="Heavy Stubber" id="117f-c1db-1ed2-a88a" hidden="false" type="profile" targetId="e055-536f-8cdf-7ec4"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Two Meltaguns" hidden="false" id="1ff8-3bdc-1158-89d2">
+              <infoLinks>
+                <infoLink name="Meltagun" id="5917-a15c-1bb5-15ba" hidden="false" type="profile" targetId="737d-c7ef-4cb5-e6fa"/>
+                <infoLink name="Meltagun" id="25b0-ab86-ba1f-7118" hidden="false" type="profile" targetId="737d-c7ef-4cb5-e6fa"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="48c4-7bbe-b0f2-c176"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <rules>
-        <rule name="Captain Al&apos;Rahem" id="1f29-489d-6930-5b1a" hidden="false">
-          <description>Enemy suffer an additional -1 Ld if they lose an assault against Al&apos;Rahem.</description>
+        <rule name="Lumbering Vehicle" id="d2a5-bfe0-4eb7-581c" hidden="false">
+          <description>The Rogal Dorn can move up to 6&quot; a turn. It must always move straight ahead, but can pivot by up to 90 degrees at the end of the move.</description>
         </rule>
       </rules>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1b81-7680-d464-ea85" includeChildSelections="true"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Captain Chenkov (WD 227)" hidden="false" id="66f7-7b13-d981-d828">
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="de48-5f0c-969c-aaad" primary="true" name="Heavy Support"/>
+      </categoryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="160"/>
       </costs>
-      <profiles>
-        <profile name="Captain Chenkov" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="a974-4191-157f-d693">
-          <characteristics>
-            <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
-            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
-            <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
-            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
-            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
-            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
-            <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
-            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
-            <characteristic name="Sv" typeId="b309-5233-122f-82bb">4+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Bolt Pistol" id="d4c5-16b3-de2d-642e" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a"/>
-        <infoLink name="Power Weapon" id="ccf9-a1dd-cd19-c376" hidden="false" type="profile" targetId="5774-7187-2616-dd8a"/>
-        <infoLink name="Frag Grenades" id="92bf-968e-0761-74ce" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
-        <infoLink name="Krak Grenades" id="3e15-b31a-888c-dc15" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
-      </infoLinks>
-      <rules>
-        <rule name="Captain Chenkov" id="3805-0c32-8bca-8b27" hidden="false">
-          <description>All Imperial Guard units with a model within 12&quot; of Chenkov may re-roll failed morale tests.</description>
-        </rule>
-      </rules>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="force" childId="e6d5-bc03-5827-d5da" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="eca8-ace3-d503-7923" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="60b1-e531-d6ee-121e" includeChildSelections="true"/>
-      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
