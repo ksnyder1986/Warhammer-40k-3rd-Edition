@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6f1b-a880-af7d-2195" name="Adeptus Mechanicus (Homebrew)" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6f1b-a880-af7d-2195" name="Adeptus Mechanicus (Homebrew)" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Rather than attempt to point everything based on arbitrary decisions, the Ad Mech list is based on using the 2003 Imperial Guard Codex with the regimental doctrines of Cyber-Enhancement, Carapace Armour, Sharpshooters, and Chem-Inhaler baked in, without limited access to certain specialized units.
 
 Vehicles all use the vehicle design rule if a comparable unit from the 2003 Imperial Guard Codex does not exist.</readme>
@@ -56,28 +56,12 @@ Vehicles all use the vehicle design rule if a comparable unit from the 2003 Impe
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="4a1e-aa8d-557f-d504" name="Skitarii" hidden="false" collective="false" import="true" type="unit">
-      <comment>Skitarri Rangers and Skitarri Vanguard combined into a single entry</comment>
+      <comment>Skitarii Rangers and Skitarii Vanguard combined into a single entry</comment>
       <categoryLinks>
         <categoryLink id="60f5-05df-4119-3799" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9fb9-aef6-fb8b-ae90" name="Skitarii Alpha" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38f4-81b6-d295-44b0" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="58af-4891-88b1-b078" name="Skitarri Alpha" hidden="false" targetId="947b-6854-b79e-d786" type="profile"/>
-            <infoLink id="040b-d4aa-d443-456c" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
-            <infoLink id="7b3c-6458-9ffd-1645" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink id="01ea-3f5e-a2a4-0e1d" name="Adeptus Mechanicus Armoury" hidden="false" collective="false" import="true" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0a7e-514d-fb58-a6cc" name="Frag Genades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0a7e-514d-fb58-a6cc" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -116,6 +100,22 @@ Total = 12 Each</comment>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Skitarii Alpha" hidden="false" id="9fb9-aef6-fb8b-ae90" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38f4-81b6-d295-44b0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Skitarri Alpha" id="58af-4891-88b1-b078" hidden="false" targetId="947b-6854-b79e-d786" type="profile"/>
+                <infoLink name="Laspistol" id="040b-d4aa-d443-456c" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink name="Close Combat Weapon" id="7b3c-6458-9ffd-1645" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Adeptus Mechanicus Armoury" hidden="false" id="01ea-3f5e-a2a4-0e1d" collective="false" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -213,7 +213,7 @@ Total = 12 Each</comment>
         <categoryLink targetId="3c96-248b-affd-e504" id="4e37-cbbc-6e2a-16ec" primary="false" name="Independent Character"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e1e2-4ba1-2662-37dc" name="Servitors" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="e1e2-4ba1-2662-37dc" name="Servitors" hidden="false" collective="false" import="true" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a48-5ab8-2f16-3b60" type="max"/>
           </constraints>
@@ -277,14 +277,14 @@ Total = 12 Each</comment>
       </constraints>
       <rules>
         <rule id="3328-92b6-3f5f-79c3" name="Blessing of the Machine-God" hidden="false">
-          <description>If the Enginseer starts the turn in contact with a damaged vehicle he may attempt to make a repair. If the vehicle is Immoblisied or has a Weapon Destroyed, one of these is repaired on a roll of 6+. The Techpriest gains +1 on this roll for each Technical Servitor he has with him.</description>
+          <description>If the Enginseer starts the turn in contact with a damaged vehicle he may attempt to make a repair. If the vehicle is immobilized or has a Weapon Destroyed, one of these is repaired on a roll of 6+. The Techpriest gains +1 on this roll for each Technical Servitor he has with him.</description>
         </rule>
       </rules>
       <categoryLinks>
         <categoryLink id="defd-3197-e1d4-2e69" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="98a8-134a-20c3-ce1f" name="Servitors" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="98a8-134a-20c3-ce1f" name="Servitors" hidden="false" collective="false" import="true" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59cf-bd51-fd7a-e660" type="max"/>
           </constraints>
@@ -436,7 +436,7 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
       </costs>
     </selectionEntry>
     <selectionEntry id="e6e9-c049-2c76-dc74" name="Kastelan Maniple" hidden="false" collective="false" import="true" type="unit">
-      <comment>These will just be smaller versions of dreadnaughts. Sorta of like KillaKans</comment>
+      <comment>These will just be smaller versions of dreadnoughts. Sorta of like KillaKans</comment>
       <categoryLinks>
         <categoryLink id="ffc3-1913-94d2-6e79" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
@@ -447,7 +447,7 @@ The extra arm for these guys do nothing (they heavy stubber is just for looks)</
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f201-6be6-7a0f-08ff" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="89b2-fa17-2281-e398" name="Kastelan Robot" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="89b2-fa17-2281-e398" name="Kastelan Robot" hidden="false" collective="false" import="true" type="model" collapsible="true" defaultAmount="1,1">
               <comment>Walker - Small - 12 - 11 - 10
 Armour = 10 + 30 + 10 = 50
 Speed = Normal = 5
@@ -555,22 +555,6 @@ Fully Armoured = 10
         <infoLink id="abcc-0e98-5c33-2af6" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="69f0-7689-1168-4387" name="Sicarian Alpha" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57f0-c88a-070d-ccb6" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="2129-e6bd-bc04-d597" name="Sicarian Alpha" hidden="false" targetId="ab66-8258-f2e2-c002" type="profile"/>
-            <infoLink id="f90a-3fe2-4a61-7900" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
-            <infoLink id="2121-0c41-5ef3-de12" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink id="ece2-2474-9cae-79c6" name="Adeptus Mechanicus Armoury" hidden="false" collective="false" import="true" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="efa1-8117-7f46-6521" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
@@ -615,7 +599,7 @@ Fully Armoured = 10
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90ad-1a0b-5168-d2e0" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="17cf-4a39-09a9-4256" name="Sicarian" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="17cf-4a39-09a9-4256" name="Sicarian" hidden="false" collective="false" import="true" type="model">
               <comment>Base 8
 Sharpshooters does not work on BS 4
 Cyber-Enhancement 2
@@ -642,6 +626,22 @@ Total: 15</comment>
                   <description>Sicarian units adds 1 to any Cover Save they are already allowed. They do not gain a Cover Save in open terrain or other terrain that does not normally grant a Cover Save.</description>
                 </rule>
               </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Sicarian Alpha" hidden="false" id="69f0-7689-1168-4387" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57f0-c88a-070d-ccb6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Sicarian Alpha" id="2129-e6bd-bc04-d597" hidden="false" targetId="ab66-8258-f2e2-c002" type="profile"/>
+                <infoLink name="Laspistol" id="f90a-3fe2-4a61-7900" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink name="Close Combat Weapon" id="2121-0c41-5ef3-de12" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Adeptus Mechanicus Armoury" hidden="false" id="ece2-2474-9cae-79c6" collective="false" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="21"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -772,7 +772,7 @@ Speed: Normal = 10</comment>
               </costs>
             </selectionEntry>
             <selectionEntry id="e473-a70d-d12b-9c1e" name="Rocket Launcher &amp; Twin-Linked Autocannon" hidden="false" collective="false" import="true" type="upgrade">
-              <comment>35 for autocannon and 40 for missle launcher</comment>
+              <comment>35 for autocannon and 40 for missile launcher</comment>
               <rules>
                 <rule id="e20d-317b-4602-a455" name="Gattling" hidden="false">
                   <description>Any weapons with gatling takes D3 shots for each shot they would normally fire. Weapons with a template must place additional templates touching the first using the rules for mortars and other Guess range weapons.</description>
@@ -852,24 +852,6 @@ Open-Topped = -5 points</comment>
         <categoryLink targetId="6d25-b346-c314-6911" id="3c8a-7af7-9f95-daa2" primary="true" name="Elites"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="fe71-63bc-11c3-66ab" name="Pteraxii Alpha" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe31-4251-4f16-80ba" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="d87e-53b3-f7f7-75a8" name="Pteraxii Alpha" hidden="false" targetId="b357-ae20-0726-11ac" type="profile"/>
-            <infoLink id="5f86-f2a8-e943-c5c8" name="Hellpistol" hidden="false" targetId="0eed-9652-00e8-9584" type="profile"/>
-            <infoLink id="76ca-ea69-6eeb-b555" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-            <infoLink id="3485-b994-7096-0864" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
-            <infoLink id="bd50-cdaa-7e00-0c16" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink id="4010-b1d8-1bf7-0091" name="Adeptus Mechanicus Armoury" hidden="false" collective="false" import="true" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="81c1-d262-e87e-b25f" name="Meltabombs" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="4">
@@ -914,6 +896,24 @@ Cyber Enhancement 2</comment>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="14"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="model" import="true" name="Pteraxii Alpha" hidden="false" id="fe71-63bc-11c3-66ab" collective="false" collapsible="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe31-4251-4f16-80ba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Pteraxii Alpha" id="d87e-53b3-f7f7-75a8" hidden="false" targetId="b357-ae20-0726-11ac" type="profile"/>
+                <infoLink name="Hellpistol" id="5f86-f2a8-e943-c5c8" hidden="false" targetId="0eed-9652-00e8-9584" type="profile"/>
+                <infoLink name="Close Combat Weapon" id="76ca-ea69-6eeb-b555" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink name="Frag Grenades" id="3485-b994-7096-0864" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
+                <infoLink name="Krak Grenades" id="bd50-cdaa-7e00-0c16" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Adeptus Mechanicus Armoury" hidden="false" id="4010-b1d8-1bf7-0091" collective="false" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -946,22 +946,6 @@ Cyber Enhancement 2</comment>
         <categoryLink id="65b6-4eab-5749-072c" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="381e-3751-a2e7-f500" name="Skitarii Alpha" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfbf-f905-7a05-8c43" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="88df-4cea-e6cb-311a" name="Serberys Alpha" hidden="false" targetId="39b9-a017-ade8-a295" type="profile"/>
-            <infoLink id="87ab-1c56-e67e-5715" name="Laspistol" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
-            <infoLink id="bde1-3902-16f8-984b" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink id="7f7d-6f51-a319-e8ca" name="Adeptus Mechanicus Armoury" hidden="false" collective="false" import="true" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="4a60-b183-0f5d-5083" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
@@ -1034,6 +1018,22 @@ Total 13</comment>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="13"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Skitarii Alpha" hidden="false" id="381e-3751-a2e7-f500" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cfbf-f905-7a05-8c43" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Serberys Alpha" id="88df-4cea-e6cb-311a" hidden="false" targetId="39b9-a017-ade8-a295" type="profile"/>
+                <infoLink name="Laspistol" id="87ab-1c56-e67e-5715" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink name="Close Combat Weapon" id="bde1-3902-16f8-984b" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Adeptus Mechanicus Armoury" hidden="false" id="7f7d-6f51-a319-e8ca" collective="false" targetId="0cb7-d01d-3ebd-7816" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="19"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1213,7 +1213,7 @@ Armour 12-10-10 = Total = 42</comment>
         <categoryLink id="e51e-3bfa-7ffc-11a2" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="cafe-03b8-ed72-7a04" name="Ironstrider" hidden="false" collective="false" import="true" targetId="734d-98bd-a75e-2a73" type="selectionEntry">
+        <entryLink id="cafe-03b8-ed72-7a04" name="Ironstrider" hidden="false" collective="false" import="true" targetId="734d-98bd-a75e-2a73" type="selectionEntry" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f7b-3682-7e45-1fff" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6b7-55c6-a012-0486" type="min"/>
@@ -1235,7 +1235,7 @@ Armour 12-10-10 = Total = 42</comment>
         <infoLink id="14a6-2b18-9966-14df" name="Independent Character" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1350-9486-0980-bb1c" name="Servitors" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="1350-9486-0980-bb1c" name="Servitors" hidden="false" collective="false" import="true" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd59-f75b-53bf-df1b" type="max"/>
           </constraints>
@@ -1298,7 +1298,7 @@ Armour 12-10-10 = Total = 42</comment>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="f1e6-9c47-7479-2f26" name="Wargear" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f1e6-9c47-7479-2f26" name="Wargear" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Artificer Armour" hidden="false" id="b139-02d0-1e3a-bfd9">
           <constraints>
@@ -1498,7 +1498,7 @@ Armour 12-10-10 = Total = 42</comment>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0cb7-d01d-3ebd-7816" name="Adeptus Mechanicus Armoury" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="0cb7-d01d-3ebd-7816" name="Adeptus Mechanicus Armoury" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntryGroups>
         <selectionEntryGroup id="668f-8702-0c7d-2448" name="Weapons" hidden="false" collective="false" import="true">
           <constraints>
@@ -1518,7 +1518,7 @@ Armour 12-10-10 = Total = 42</comment>
         <entryLink id="b102-117c-2623-322e" name="Wargear" hidden="false" collective="false" import="true" targetId="f1e6-9c47-7479-2f26" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="29d5-4770-ae49-ddc7" name="Single-Handed Weapons" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="29d5-4770-ae49-ddc7" name="Single-Handed Weapons" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Close Combat Weapon" hidden="false" id="a746-b43e-a1ab-06f5">
           <constraints>
@@ -1577,7 +1577,7 @@ Armour 12-10-10 = Total = 42</comment>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="49af-0b03-64a2-48f1" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="49af-0b03-64a2-48f1" name="Two-Handed Weapons" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="09fc-b42b-1265-1e1a">
           <constraints>
@@ -1841,11 +1841,10 @@ Armour 12-10-10 = Total = 42</comment>
     </profile>
     <profile id="f426-f3c5-1f74-a330" name="Skorpius Disintegrator" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
       <characteristics>
-        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
-        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">10</characteristic>
-        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">10</characteristic>
-        <characteristic name="BS" typeId="ae25-5be4-5470-2204">3</characteristic>
-        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">12</characteristic>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">12</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
       </characteristics>
     </profile>
     <profile id="62c3-f3f3-b6e6-5354" name="Ironstrider" hidden="false" typeId="5119-5456-6e97-4fc2" typeName="Walker">
@@ -1950,9 +1949,9 @@ Armour 12-10-10 = Total = 42</comment>
     <profile id="bc4b-e2d4-302e-9abf" name="Servo-Arm" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">Melee</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Makes a single attack, hitting on a 4+. independently of the Techpriests attacks. Ignores all armour saves.</characteristic>
       </characteristics>
     </profile>

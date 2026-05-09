@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <comment>2002 Chaos Space Marine Codex</comment>
   <categoryEntries>
     <categoryEntry id="039c-5796-7006-0975" name="Mark of Khorne" hidden="false"/>
@@ -9,7 +9,7 @@
     <categoryEntry id="e9f2-4b8e-c0b1-bb50" name="Mark of Chaos Undivided" hidden="false"/>
     <categoryEntry id="50e1-b8c9-703d-63a5" name="Terminator" hidden="false"/>
     <categoryEntry id="f3e2-ff54-76cd-f482" name="Daemon Prince" hidden="false"/>
-    <categoryEntry id="d832-0917-094f-7627" name="Sorceror" hidden="false"/>
+    <categoryEntry id="d832-0917-094f-7627" name="Sorcerer" hidden="false"/>
     <categoryEntry name="Daemon Weapon" id="96b0-a09e-9384-b8e3" hidden="false">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="76a1-a48a-2315-597a" includeChildSelections="true"/>
@@ -601,12 +601,12 @@
         <categoryLink id="1907-89ae-9906-8b7e" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="d033-ab62-4056-2af0" name="Sorcerer Lord" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d033-ab62-4056-2af0" name="Sorcerer Lord" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <modifiers>
             <modifier type="add" field="category" value="d832-0917-094f-7627"/>
             <modifier type="add" field="category" value="3cb1-645b-8bbb-3d49"/>
             <modifier type="set" field="hidden" value="true">
-              <comment>Mark of Tzeentch already adds Sorceror to the Lord. Prevents adding the same ability twice. Models with Mark of Khorne cannot become Sorceror&apos;s.</comment>
+              <comment>Mark of Tzeentch already adds Sorcerer to the Lord. Prevents adding the same ability twice. Models with Mark of Khorne cannot become Sorcerer&apos;s.</comment>
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -624,7 +624,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8161-649a-fa68-058d" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8161-649a-fa68-058d" name="Retinue" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6" collapsible="true">
           <modifiers>
             <modifier type="set" field="c9e7-e477-3c55-fb40" value="0">
               <conditions>
@@ -805,7 +805,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f735-ce4c-efa4-5d4e" name="Demagogue" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f735-ce4c-efa4-5d4e" name="Demagogue" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <comment>Mark of Tzeentch already adds Sorceror to the Lord. Prevents adding the same ability twice. Models with Mark of Khorne cannot become Sorceror&apos;s.</comment>
@@ -826,12 +826,12 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="78a1-34d3-16fa-2334" name="Chaos Armory" hidden="false" collective="false" import="true" targetId="e9b3-4e07-ad9a-6235" type="selectionEntryGroup"/>
-        <entryLink id="561d-a82f-3839-f8b2" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="4171-c75d-6633-1a19" type="selectionEntryGroup"/>
-        <entryLink id="5aee-5a4c-c25c-21ea" name="Dark Apostle" hidden="false" collective="false" import="true" targetId="5015-aeb7-40a5-2277" type="selectionEntry">
+        <entryLink id="78a1-34d3-16fa-2334" name="Chaos Armory" hidden="false" collective="false" import="true" targetId="e9b3-4e07-ad9a-6235" type="selectionEntryGroup" sortIndex="5"/>
+        <entryLink id="561d-a82f-3839-f8b2" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="4171-c75d-6633-1a19" type="selectionEntryGroup" sortIndex="4"/>
+        <entryLink id="5aee-5a4c-c25c-21ea" name="Dark Apostle" hidden="false" collective="false" import="true" targetId="5015-aeb7-40a5-2277" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <comment>Mark of Tzeentch already adds Sorceror to the Lord. Prevents adding the same ability twice. Models with Mark of Khorne cannot become Sorceror&apos;s.</comment>
+              <comment>Mark of Tzeentch already adds Sorcerer to the Lord. Prevents adding the same ability twice. Models with Mark of Khorne cannot become Sorcerer&apos;s.</comment>
               <conditions>
                 <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
               </conditions>
@@ -874,7 +874,7 @@
 - Gain Fearless.
 - Must charge any enemy in range at the start of the Assault phase.
 - At start of the Movement phase, roll a D6 for each unit with Blood Frenzy (do not roll for vehicles, Dreadnoughts, bikes or models using Daemonic Flight). On a 1 or 2 they advance a normal move +1D6&quot; towards the nearest enemy instead of moving normally. If mounted in a transport they will disembark before moving.
-- Units that make the compulsary move from Blood Frenzy may not fire any weapons.
+- Units that make the compulsory move from Blood Frenzy may not fire any weapons.
 - If victorious in an assault they must sweeping advance unless the models are equipped with Terminator armour or they won due to &apos;moral high ground.&apos;
 - A character with Blood Frenzy may not join a unit without it and a character without Bloody Frenzy may not join a unit with it.</description>
         </rule>
@@ -914,7 +914,7 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="cea7-7496-6f6f-478a" name="Daemonic Reslilience" hidden="false" targetId="f08b-40f4-0069-5126" type="rule"/>
+        <infoLink id="cea7-7496-6f6f-478a" name="Daemonic Resilience" hidden="false" targetId="f08b-40f4-0069-5126" type="rule"/>
         <infoLink id="1154-f632-5e75-3db0" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
       </infoLinks>
       <costs>
@@ -1017,7 +1017,7 @@
         <categoryLink id="fad6-5863-26ad-6f61" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6ff4-c88e-3609-5df8" name="Chaos Sorcerer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6ff4-c88e-3609-5df8" name="Chaos Sorcerer" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <modifiers>
             <modifier type="add" field="category" value="d832-0917-094f-7627"/>
             <modifier type="add" field="category" value="3cb1-645b-8bbb-3d49"/>
@@ -1040,7 +1040,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e365-2460-ff1b-ff86" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e365-2460-ff1b-ff86" name="Retinue" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6" collapsible="true">
           <modifiers>
             <modifier type="set" field="6ea1-6bf8-2d7f-1c6f" value="0">
               <conditions>
@@ -1220,10 +1220,9 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7f1d-8e34-78fe-5d60" name="Demagogue" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7f1d-8e34-78fe-5d60" name="Demagogue" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <comment>Mark of Tzeentch already adds Sorceror to the Lord. Prevents adding the same ability twice. Models with Mark of Khorne cannot become Sorceror&apos;s.</comment>
               <conditions>
                 <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5015-aeb7-40a5-2277" type="equalTo"/>
               </conditions>
@@ -1241,12 +1240,11 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="deca-dcf8-ec79-d737" name="Chaos Armory" hidden="false" collective="false" import="true" targetId="e9b3-4e07-ad9a-6235" type="selectionEntryGroup"/>
-        <entryLink id="c090-d383-c9de-332c" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="4171-c75d-6633-1a19" type="selectionEntryGroup"/>
-        <entryLink id="c5e1-bf3d-9133-ce7f" name="Dark Apostle" hidden="false" collective="false" import="true" targetId="5015-aeb7-40a5-2277" type="selectionEntry">
+        <entryLink id="deca-dcf8-ec79-d737" name="Chaos Armory" hidden="false" collective="false" import="true" targetId="e9b3-4e07-ad9a-6235" type="selectionEntryGroup" sortIndex="5"/>
+        <entryLink id="c090-d383-c9de-332c" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="4171-c75d-6633-1a19" type="selectionEntryGroup" sortIndex="4"/>
+        <entryLink id="c5e1-bf3d-9133-ce7f" name="Dark Apostle" hidden="false" collective="false" import="true" targetId="5015-aeb7-40a5-2277" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <comment>Mark of Tzeentch already adds Sorceror to the Lord. Prevents adding the same ability twice. Models with Mark of Khorne cannot become Sorceror&apos;s.</comment>
               <conditions>
                 <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecb2-eb51-b170-bf0e" type="equalTo"/>
               </conditions>
@@ -1445,7 +1443,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="73e1-8d7f-d186-83fb" name="Independent Character" hidden="false" targetId="3c96-248b-affd-e504" primary="false"/>
-        <categoryLink id="f25c-7a86-01d4-3322" name="Sorceror" hidden="false" targetId="d832-0917-094f-7627" primary="false"/>
+        <categoryLink id="f25c-7a86-01d4-3322" name="Sorcerer" hidden="false" targetId="d832-0917-094f-7627" primary="false"/>
         <categoryLink id="8c35-4416-64b6-b636" name="Mark of Slaanesh" hidden="false" targetId="9b41-cfd0-0af7-2496" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -1458,7 +1456,7 @@
     <selectionEntry id="9c32-521d-4770-91b9" name="Chaos Rhino" hidden="false" collective="false" import="true" type="upgrade">
       <rules>
         <rule id="2248-1665-8d8d-5f24" name="Reliability" hidden="false">
-          <description>If a Rhino is immobilised and spends a Chaos turn without firing any weapons its drive may be able to effect a temporary repair that turn. On a D6 roll of 6 the vehicle will be free to move in its next Movement phase.</description>
+          <description>If a Rhino is immobilized and spends a Chaos turn without firing any weapons its drive may be able to effect a temporary repair that turn. On a D6 roll of 6 the vehicle will be free to move in its next Movement phase.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1592,7 +1590,7 @@
         <categoryLink id="d5c3-59d9-6705-2d2f" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="c7d2-21ab-5ada-c73c" name="Khornate Chainaxes" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c7d2-21ab-5ada-c73c" name="Khornate Chainaxes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -1617,7 +1615,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="5fda-5e80-e269-e5aa" name="Possessed" hidden="false" collective="false" import="true" defaultSelectionEntryId="c24d-2aa3-9e62-b49d">
+        <selectionEntryGroup id="5fda-5e80-e269-e5aa" name="Possessed" hidden="false" collective="false" import="true" defaultSelectionEntryId="c24d-2aa3-9e62-b49d" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f21b-4c90-5787-c8af" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d0b-fc57-7107-b34d" type="min"/>
@@ -1808,7 +1806,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="24b3-3238-01ce-2144" name="Daemonic Gift" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="24b3-3238-01ce-2144" name="Daemonic Gift" hidden="false" collective="false" import="true" sortIndex="2" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f93c-8159-26c9-2cdd" type="max"/>
           </constraints>
@@ -1892,8 +1890,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a824-fe9e-82e4-f65c" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="4171-c75d-6633-1a19" type="selectionEntryGroup"/>
-        <entryLink id="2071-b732-e23c-a9df" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+        <entryLink id="a824-fe9e-82e4-f65c" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="4171-c75d-6633-1a19" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="2071-b732-e23c-a9df" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry" sortIndex="4">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -2014,7 +2012,7 @@
         <categoryLink id="fa66-64ca-06b5-5986" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="fc5f-95fe-637d-1aa9" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fc5f-95fe-637d-1aa9" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -2032,7 +2030,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1cfc-c177-a142-3b72" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1cfc-c177-a142-3b72" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -2050,7 +2048,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6faa-9b63-c18b-ccd7" name="Enhanced Warriors" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6faa-9b63-c18b-ccd7" name="Enhanced Warriors" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <comment>Note: According to CA: 2003, page 94 only non-marked CSM can be enhanced</comment>
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3">
@@ -2076,7 +2074,7 @@
             <rule id="a3ac-d921-89c5-71f7" name="Enhanced Warriors" hidden="false">
               <description>Fabius Bile can &apos;enhance&apos; Chaos Space Marine Squads under his command for +3 pts per model. Before each battle, after both sides have set up but before the first turn, roll a D6 for each enhanced squad and consult the below:
 1 - Beserk Rage! Make an armour save for each warrior, removing any who fail. Those who are removed count as casualties for the purposes of Victory points. All survivors are +1 Strength
-2-5 - Stable Mutitation. The enchanced warriors are +1 Strength and +1 Initiative
+2-5 - Stable Mutation. The enhanced warriors are +1 Strength and +1 Initiative
 6 - Created a Monster! Each warrior adds +1 Strength, +1 Initiative and +1 Attack. Unfortunately, all these warriors will perish at the end of the game and so even the survivors will count as casualties for the purposes of Victory points.</description>
             </rule>
           </rules>
@@ -2086,7 +2084,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7e1e-fb2b-76b8-185e" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="c8b6-7ea5-f349-ed82">
+        <selectionEntryGroup id="7e1e-fb2b-76b8-185e" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="c8b6-7ea5-f349-ed82" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6138-0fc3-cd67-7de5" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23bc-7acb-052c-819e" type="min"/>
@@ -2119,7 +2117,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="28a9-950c-70b6-42ef" name="Weapon Options" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="28a9-950c-70b6-42ef" name="Weapon Options" hidden="false" collective="false" import="true" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d55-8d5e-8b73-78f8" type="max"/>
           </constraints>
@@ -2216,8 +2214,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8b51-a2cb-885c-5be3" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="170d-1b2c-2e97-0148" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+        <entryLink id="8b51-a2cb-885c-5be3" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="170d-1b2c-2e97-0148" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry" sortIndex="8">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -2229,7 +2227,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d23-a065-3793-f616" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="aa0f-f088-08fa-7dae" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry">
+        <entryLink id="aa0f-f088-08fa-7dae" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -2274,7 +2272,7 @@
         <categoryLink id="f81c-8923-8341-4f1c" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0d42-914f-d982-8ad5" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="a48f-08e5-9790-9c3e">
+        <selectionEntryGroup id="0d42-914f-d982-8ad5" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="a48f-08e5-9790-9c3e" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aab2-19fc-a690-c76c" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7e3-ef4a-0a9f-1fbd" type="min"/>
@@ -2363,7 +2361,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6098-e142-aeaf-b5dd" name="Mark of Tzeentch" hidden="false" collective="false" import="true" targetId="44ca-fa7f-9f9a-5d33" type="selectionEntry">
+        <entryLink id="6098-e142-aeaf-b5dd" name="Mark of Tzeentch" hidden="false" collective="false" import="true" targetId="44ca-fa7f-9f9a-5d33" type="selectionEntry" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="527c-9b1f-dfdf-884a" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adcd-be0a-53d6-e056" type="max"/>
@@ -2801,7 +2799,7 @@
         <categoryLink id="ebb9-36b1-0725-5fda" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4d1c-197e-e69b-1f2c" name="Raptors" hidden="false" collective="false" import="true" defaultSelectionEntryId="5d43-3497-895c-f991">
+        <selectionEntryGroup id="4d1c-197e-e69b-1f2c" name="Raptors" hidden="false" collective="false" import="true" defaultSelectionEntryId="5d43-3497-895c-f991" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1bf-7164-a786-c840" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cc2-5fb8-cd4f-9b1c" type="min"/>
@@ -2835,7 +2833,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="473b-6e2b-93bf-72d7" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="473b-6e2b-93bf-72d7" name="Weapons" hidden="false" collective="false" import="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0029-684e-bd51-31c1" type="max"/>
           </constraints>
@@ -2876,7 +2874,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="243d-c38e-efa3-c0c5" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry">
+        <entryLink id="243d-c38e-efa3-c0c5" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -2888,7 +2886,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ed1-2bb1-ed81-4600" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="53a7-0ab2-0068-47d1" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup">
+        <entryLink id="53a7-0ab2-0068-47d1" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -2945,7 +2943,7 @@
         <categoryLink id="a271-2469-b1ea-3349" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6ac3-f1ed-d20a-5a48" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6ac3-f1ed-d20a-5a48" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -2963,7 +2961,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1c3a-4729-7c2f-c23c" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1c3a-4729-7c2f-c23c" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -2983,7 +2981,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1b0f-6916-7cb9-2a08" name="Bikers" hidden="false" collective="false" import="true" defaultSelectionEntryId="8bd2-93a8-d788-7ad7">
+        <selectionEntryGroup id="1b0f-6916-7cb9-2a08" name="Bikers" hidden="false" collective="false" import="true" defaultSelectionEntryId="8bd2-93a8-d788-7ad7" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8845-ea52-1210-fdf1" type="min"/>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f4a-637d-e1b7-4d27" type="max"/>
@@ -3024,7 +3022,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="3da3-607e-06be-1c23" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="3da3-607e-06be-1c23" name="Weapons" hidden="false" collective="false" import="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb01-ad12-05e8-4e94" type="max"/>
           </constraints>
@@ -3048,8 +3046,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="92f2-32d5-f17c-db1c" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="abdf-e652-7c3f-4598" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry">
+        <entryLink id="92f2-32d5-f17c-db1c" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="2"/>
+        <entryLink id="abdf-e652-7c3f-4598" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -3302,7 +3300,7 @@
         <categoryLink id="2229-5c18-8436-53e4" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2c5d-71c9-0c2b-1ea0" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="00af-3dbb-91b6-15ec">
+        <selectionEntryGroup id="2c5d-71c9-0c2b-1ea0" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="00af-3dbb-91b6-15ec" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23f1-b127-e3d6-6f48" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af47-a680-be05-762a" type="min"/>
@@ -3362,7 +3360,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="0aaf-09fe-85e3-7c75" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="0aaf-09fe-85e3-7c75" name="Weapons" hidden="false" collective="false" import="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28f9-5a21-f1cb-ace4" type="max"/>
           </constraints>
@@ -3452,13 +3450,13 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="976a-eb0a-8868-243c" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+        <entryLink id="976a-eb0a-8868-243c" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e93-df48-8461-8acd" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="23ec-2cd3-16b9-7052" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="6969-a308-8213-d029" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry">
+        <entryLink id="23ec-2cd3-16b9-7052" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="6969-a308-8213-d029" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -3483,7 +3481,7 @@
         <categoryLink id="4074-5921-1fd2-7fe9" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="db81-13fb-701c-87f3" name="Turret Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="db81-13fb-701c-87f3" name="Turret Weapon" hidden="false" collective="false" import="true" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f9d-497e-0959-2347" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5dd-8c37-77d1-0de4" type="min"/>
@@ -3533,7 +3531,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="16ae-1c3d-ecf1-2d83" name="Side Sponsons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="16ae-1c3d-ecf1-2d83" name="Side Sponsons" hidden="false" collective="false" import="true" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="001a-dc1c-7b5c-3540" type="max"/>
           </constraints>
@@ -3578,7 +3576,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7b6e-39b8-d74e-31ef" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup"/>
+        <entryLink id="7b6e-39b8-d74e-31ef" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup" sortIndex="3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="85"/>
@@ -3631,7 +3629,7 @@
         <categoryLink id="8ac1-b9bd-b3be-416a" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9fe6-43e8-2312-a31e" name="Arm Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="9fe6-43e8-2312-a31e" name="Arm Weapon" hidden="false" collective="false" import="true" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea1d-034f-350c-70cc" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a23-5baf-c23c-0b2d" type="max"/>
@@ -3794,7 +3792,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="07ec-c520-509a-2cd7" name="Arm Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="07ec-c520-509a-2cd7" name="Arm Weapon" hidden="false" collective="false" import="true" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8967-b24d-7da4-96cb" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23e6-fbde-9263-de3b" type="max"/>
@@ -3893,7 +3891,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="51c4-6efe-ea38-50eb" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup"/>
+        <entryLink id="51c4-6efe-ea38-50eb" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup" sortIndex="2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
@@ -3941,7 +3939,7 @@
         <categoryLink id="dfdb-2814-cb4b-46ab" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a692-c040-e320-87de" name="Indirect Fire" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a692-c040-e320-87de" name="Indirect Fire" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0eed-c1ea-55a9-6302" type="max"/>
           </constraints>
@@ -3956,7 +3954,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e12c-e3b5-d605-6797" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="3be9-4326-377a-911f">
+        <selectionEntryGroup id="e12c-e3b5-d605-6797" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="3be9-4326-377a-911f" sortIndex="1">
           <selectionEntries>
             <selectionEntry id="3be9-4326-377a-911f" name="Reaper Autocannon" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
@@ -3992,7 +3990,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f84c-5411-c31f-5b3b" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="bded-c459-5eaa-2ce7">
+        <selectionEntryGroup id="f84c-5411-c31f-5b3b" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="bded-c459-5eaa-2ce7" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b088-fd4f-6066-6c48" type="max"/>
           </constraints>
@@ -4028,7 +4026,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="201b-806f-26e2-52b4" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup"/>
+        <entryLink id="201b-806f-26e2-52b4" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup" sortIndex="3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="150"/>
@@ -4046,7 +4044,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="3f8b-6ba6-0c89-82a5" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ba25-e51c-4774-5693" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ba25-e51c-4774-5693" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -4064,7 +4062,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="af1e-5c7d-d1b0-6e97" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="af1e-5c7d-d1b0-6e97" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -4082,7 +4080,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f4c1-4002-6e57-b7f1" name="Melta Bombs" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f4c1-4002-6e57-b7f1" name="Melta Bombs" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -4102,7 +4100,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3aa6-8256-6558-0c34" name="Cultists" hidden="false" collective="false" import="true" defaultSelectionEntryId="e96c-e4ff-980b-e7be">
+        <selectionEntryGroup id="3aa6-8256-6558-0c34" name="Cultists" hidden="false" collective="false" import="true" defaultSelectionEntryId="e96c-e4ff-980b-e7be" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8116-e64d-7395-0b46" type="max"/>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="835c-3926-4e40-996e" type="min"/>
@@ -4136,7 +4134,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f344-550e-89bd-4c42" name="Cult Skills" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f344-550e-89bd-4c42" name="Cult Skills" hidden="false" collective="false" import="true" collapsible="true" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d58-febd-5717-8564" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67ce-2b2e-b744-8595" type="min"/>
@@ -4173,7 +4171,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="b2f8-66f1-eb8a-757a" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry">
+        <entryLink id="b2f8-66f1-eb8a-757a" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -4332,7 +4330,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="c25c-44b4-4a4c-81ca" name="Terminator" hidden="false" targetId="50e1-b8c9-703d-63a5" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="721b-1524-ad48-6af0" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="721b-1524-ad48-6af0" name="Retinue" hidden="false" collective="false" import="true" type="upgrade" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b221-49a5-18fe-1d38" type="max"/>
           </constraints>
@@ -4541,7 +4539,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="5da6-c965-dee8-5d6d" name="Sorceror" hidden="false" targetId="d832-0917-094f-7627" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="c94f-6fd8-0a3d-047d" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c94f-6fd8-0a3d-047d" name="Retinue" hidden="false" collective="false" import="true" type="upgrade" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf4e-983a-8cc9-e315" type="max"/>
           </constraints>
@@ -4688,7 +4686,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="8512-9c9a-07b3-d312" name="Sorceror" hidden="false" targetId="d832-0917-094f-7627" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="b219-e6f3-aa43-c500" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b219-e6f3-aa43-c500" name="Retinue" hidden="false" collective="false" import="true" type="upgrade" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03e4-ef3a-055f-0d52" type="max"/>
           </constraints>
@@ -4856,7 +4854,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="f736-abf7-ed1a-8b20" name="Sorceror" hidden="false" targetId="d832-0917-094f-7627" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="4898-226e-14e6-6241" name="Retinue" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4898-226e-14e6-6241" name="Retinue" hidden="false" collective="false" import="true" type="upgrade" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f68-b910-f2c0-3e1b" type="max"/>
           </constraints>
@@ -5341,7 +5339,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="ce6e-3707-c780-1d82" name="Mark of Khorne" hidden="false" targetId="039c-5796-7006-0975" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="b854-1fae-91e9-a9f1" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b854-1fae-91e9-a9f1" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -5359,7 +5357,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ec92-c641-7950-b9df" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ec92-c641-7950-b9df" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -5377,7 +5375,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="94b5-48da-13b3-c8d3" name="Khornate Chainaxes" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="94b5-48da-13b3-c8d3" name="Khornate Chainaxes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -5402,7 +5400,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="8826-ca25-1b98-9524" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="1f22-136b-e90a-5a64">
+        <selectionEntryGroup id="8826-ca25-1b98-9524" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="1f22-136b-e90a-5a64" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6277-67bd-b47c-eba4" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e045-90c8-573c-6f51" type="min"/>
@@ -5474,7 +5472,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="e95a-275e-fc2e-8fb7" name="Weapon Options" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="e95a-275e-fc2e-8fb7" name="Weapon Options" hidden="false" collective="false" import="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e84-1ebe-ce8b-2995" type="max"/>
           </constraints>
@@ -5494,8 +5492,8 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="881f-4bdd-68a1-f28e" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="86bb-d254-52c2-bebb" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+        <entryLink id="881f-4bdd-68a1-f28e" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="86bb-d254-52c2-bebb" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry" sortIndex="5">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -5507,7 +5505,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9ef-c55a-718b-d181" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="9739-dc3b-6e43-b26c" name="Mark of Khorne" hidden="false" collective="false" import="true" targetId="958a-4953-9c9c-2605" type="selectionEntry">
+        <entryLink id="9739-dc3b-6e43-b26c" name="Mark of Khorne" hidden="false" collective="false" import="true" targetId="958a-4953-9c9c-2605" type="selectionEntry" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f71d-e664-9814-db20" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7891-b4fb-6de1-daa2" type="min"/>
@@ -5544,7 +5542,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </infoLink>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="cb1a-7d67-d79e-03c4" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cb1a-7d67-d79e-03c4" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -5562,7 +5560,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1446-90e1-0356-56b3" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1446-90e1-0356-56b3" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -5580,7 +5578,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="631f-983d-221a-8ab3" name="Sonic Blasters" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="631f-983d-221a-8ab3" name="Sonic Blasters" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -5610,7 +5608,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2351-bc38-f00e-7405" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="dce7-14ba-dd34-174c">
+        <selectionEntryGroup id="2351-bc38-f00e-7405" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="dce7-14ba-dd34-174c" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3876-2237-4608-874f" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cff0-78cb-1918-ac18" type="min"/>
@@ -5684,7 +5682,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="44b8-1088-0e5d-9ef0" name="Weapon Options" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="44b8-1088-0e5d-9ef0" name="Weapon Options" hidden="false" collective="false" import="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db75-825e-8396-42ad" type="max"/>
           </constraints>
@@ -5805,8 +5803,8 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="43c3-16d6-1863-95bf" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="18d9-d1b8-2181-ef65" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+        <entryLink id="43c3-16d6-1863-95bf" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="18d9-d1b8-2181-ef65" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry" sortIndex="5">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -5818,7 +5816,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64c6-027e-843a-e7a0" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="8ef9-df3b-ff65-d64d" name="Mark of Slaanesh" hidden="false" collective="false" import="true" targetId="8a51-3987-58e1-5c44" type="selectionEntry">
+        <entryLink id="8ef9-df3b-ff65-d64d" name="Mark of Slaanesh" hidden="false" collective="false" import="true" targetId="8a51-3987-58e1-5c44" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="718f-848c-4c2b-0704" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="378d-b0aa-8bc4-e927" type="min"/>
@@ -5857,7 +5855,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="d489-de98-9784-f912" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="7c79-467c-989c-69f3" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7c79-467c-989c-69f3" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -5875,7 +5873,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b3e4-6564-628b-b607" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b3e4-6564-628b-b607" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -5895,7 +5893,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a252-72f8-4127-b7e9" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="7104-1835-0942-6613">
+        <selectionEntryGroup id="a252-72f8-4127-b7e9" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="7104-1835-0942-6613" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecd2-3206-af75-7f4c" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77bc-5d10-8f18-9ddd" type="min"/>
@@ -5967,7 +5965,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="3f54-a5b2-810c-ae15" name="Weapon Options" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="3f54-a5b2-810c-ae15" name="Weapon Options" hidden="false" collective="false" import="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88ee-7cc2-2e65-5dc3" type="max"/>
           </constraints>
@@ -6024,8 +6022,8 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="195f-673d-1fc5-e5fe" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="fe67-ab9c-2a4c-f19a" name="Mark of Nurgle" hidden="false" collective="false" import="true" targetId="4e40-db3e-6ca6-5e18" type="selectionEntry">
+        <entryLink id="195f-673d-1fc5-e5fe" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="fe67-ab9c-2a4c-f19a" name="Mark of Nurgle" hidden="false" collective="false" import="true" targetId="4e40-db3e-6ca6-5e18" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c698-26da-717b-88b8" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd76-cdb5-154e-ba81" type="max"/>
@@ -6064,7 +6062,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="fa0e-3fb1-41c8-94ab" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="5b0e-b4cb-19d2-cdb5" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5b0e-b4cb-19d2-cdb5" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -6082,7 +6080,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d282-aa44-a068-4137" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d282-aa44-a068-4137" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -6102,7 +6100,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d663-052e-db16-643c" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="025f-fd4f-438b-955b">
+        <selectionEntryGroup id="d663-052e-db16-643c" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="025f-fd4f-438b-955b" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="186e-dcc1-d2b1-2c3f" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb74-6450-690c-65cd" type="min"/>
@@ -6177,7 +6175,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="9e99-1fe4-23bb-3c39" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+        <entryLink id="9e99-1fe4-23bb-3c39" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry" sortIndex="4">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -6189,7 +6187,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4a2-3ab2-3b7e-91ff" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="2eb7-2ce5-7ec0-8233" name="Mark of Tzeentch" hidden="false" collective="false" import="true" targetId="44ca-fa7f-9f9a-5d33" type="selectionEntry">
+        <entryLink id="2eb7-2ce5-7ec0-8233" name="Mark of Tzeentch" hidden="false" collective="false" import="true" targetId="44ca-fa7f-9f9a-5d33" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02b5-3cb5-cb60-1e29" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="115a-a4f0-a487-90f5" type="max"/>
@@ -6227,7 +6225,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <infoLink id="a07f-35e8-2d62-3c01" name="Iron Steeds" hidden="false" targetId="c5cb-a25a-e57f-2322" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="7f4e-7fa6-c099-7de9" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7f4e-7fa6-c099-7de9" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -6245,7 +6243,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="85c6-9662-ac81-37f7" name="Khornate Chainaxes" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="85c6-9662-ac81-37f7" name="Khornate Chainaxes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -6268,7 +6266,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b094-45c0-3fea-84f1" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b094-45c0-3fea-84f1" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -6288,7 +6286,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7022-c6e9-d26d-8882" name="Bikers" hidden="false" collective="false" import="true" defaultSelectionEntryId="f6da-9d58-221c-1461">
+        <selectionEntryGroup id="7022-c6e9-d26d-8882" name="Bikers" hidden="false" collective="false" import="true" defaultSelectionEntryId="f6da-9d58-221c-1461" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9c1-aec6-627e-4372" type="min"/>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4e8-b597-9412-a527" type="max"/>
@@ -6370,8 +6368,8 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0d49-054c-3cc4-c2f1" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="f5b3-1a24-0cc7-50e3" name="Mark of Khorne" hidden="false" collective="false" import="true" targetId="958a-4953-9c9c-2605" type="selectionEntry">
+        <entryLink id="0d49-054c-3cc4-c2f1" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="4"/>
+        <entryLink id="f5b3-1a24-0cc7-50e3" name="Mark of Khorne" hidden="false" collective="false" import="true" targetId="958a-4953-9c9c-2605" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="061a-cced-bacc-df97" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f576-c30e-94eb-2596" type="min"/>
@@ -6413,7 +6411,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="ea6c-31cc-6ce2-cf4f" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="d1b9-1a70-28e2-11c6" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d1b9-1a70-28e2-11c6" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -6431,7 +6429,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="685f-f00c-c5ed-226e" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="685f-f00c-c5ed-226e" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -6449,7 +6447,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b94b-1713-47d5-4890" name="Sonic Blasters" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b94b-1713-47d5-4890" name="Sonic Blasters" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <modifiers>
             <modifier type="increment" field="83d0-13be-6c75-3bf6" value="1">
               <repeats>
@@ -6469,7 +6467,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f063-ae96-635e-0bd2" name="Bikers" hidden="false" collective="false" import="true" defaultSelectionEntryId="e945-0383-e2d4-abbb">
+        <selectionEntryGroup id="f063-ae96-635e-0bd2" name="Bikers" hidden="false" collective="false" import="true" defaultSelectionEntryId="e945-0383-e2d4-abbb" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d67-cc1d-6a87-5b7a" type="min"/>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c0b-d125-abb0-6104" type="max"/>
@@ -6551,7 +6549,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f143-3d81-f385-9bff" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f143-3d81-f385-9bff" name="Weapons" hidden="false" collective="false" import="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7eb7-1bbc-5bba-4612" type="max"/>
           </constraints>
@@ -6592,8 +6590,8 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="4c2e-08d6-47e7-c657" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="55fc-bebd-e431-b1e3" name="Mark of Slaanesh" hidden="false" collective="false" import="true" targetId="8a51-3987-58e1-5c44" type="selectionEntry">
+        <entryLink id="4c2e-08d6-47e7-c657" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="55fc-bebd-e431-b1e3" name="Mark of Slaanesh" hidden="false" collective="false" import="true" targetId="8a51-3987-58e1-5c44" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4b2-c124-d60f-4d68" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa82-ca2b-91e2-2338" type="min"/>
@@ -6632,7 +6630,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="e9f0-acdb-039d-8875" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c026-256e-d46e-0d3a" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="0110-e329-a833-ff66">
+        <selectionEntryGroup id="c026-256e-d46e-0d3a" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="0110-e329-a833-ff66" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d64-5f21-c657-7da0" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aae7-694b-e725-4999" type="min"/>
@@ -6704,7 +6702,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="c85c-1cf9-f6be-61e5" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="c85c-1cf9-f6be-61e5" name="Weapons" hidden="false" collective="false" import="true" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3b3-f5dc-d1f0-a01e" type="max"/>
           </constraints>
@@ -6740,13 +6738,13 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="610b-04ca-0bb9-31a7" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+        <entryLink id="610b-04ca-0bb9-31a7" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c373-ae16-441d-bb6b" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="d925-742b-15a2-ef2c" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="4666-f3e7-0820-211e" name="Mark of Nurgle" hidden="false" collective="false" import="true" targetId="4e40-db3e-6ca6-5e18" type="selectionEntry">
+        <entryLink id="d925-742b-15a2-ef2c" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="2"/>
+        <entryLink id="4666-f3e7-0820-211e" name="Mark of Nurgle" hidden="false" collective="false" import="true" targetId="4e40-db3e-6ca6-5e18" type="selectionEntry" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6c5-1530-17c2-e5ba" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9566-3c64-2fdf-48b8" type="min"/>
@@ -6786,7 +6784,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink id="03ae-23b6-1508-ad0b" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="e7ce-fe00-c42d-2f6b" name="Sonic Blasters" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e7ce-fe00-c42d-2f6b" name="Sonic Blasters" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="92c1-27ee-98cf-3c30" value="1">
               <repeats>
@@ -6811,7 +6809,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7b31-5177-50ce-0865" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="857b-b992-beea-e257">
+        <selectionEntryGroup id="7b31-5177-50ce-0865" name="Chaos Marines" hidden="false" collective="false" import="true" defaultSelectionEntryId="857b-b992-beea-e257" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e49d-3895-4c0d-fc14" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e058-e066-a87e-01fb" type="min"/>
@@ -6885,7 +6883,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="20de-dac7-cb3f-11a9" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="20de-dac7-cb3f-11a9" name="Weapons" hidden="false" collective="false" import="true" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4b2-3314-794e-58b7" type="max"/>
           </constraints>
@@ -6971,13 +6969,13 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="495d-50a6-138c-6414" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+        <entryLink id="495d-50a6-138c-6414" name="Chaos Rhino" hidden="false" collective="false" import="true" targetId="9c32-521d-4770-91b9" type="selectionEntry" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d25-df07-a11b-0c58" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="890a-0aa9-e5bb-fae2" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup"/>
-        <entryLink id="dd08-02c6-55d7-53f1" name="Mark of Slaanesh" hidden="false" collective="false" import="true" targetId="8a51-3987-58e1-5c44" type="selectionEntry">
+        <entryLink id="890a-0aa9-e5bb-fae2" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="2"/>
+        <entryLink id="dd08-02c6-55d7-53f1" name="Mark of Slaanesh" hidden="false" collective="false" import="true" targetId="8a51-3987-58e1-5c44" type="selectionEntry" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a753-b46e-f912-79a0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ffe-7e6b-dc9a-4036" type="min"/>
@@ -7256,7 +7254,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </infoLink>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="e076-1a2d-018a-4b1e" name="Favoured Aspiring Champion Discount" hidden="true" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e076-1a2d-018a-4b1e" name="Favoured Aspiring Champion Discount" hidden="true" collective="false" import="true" type="upgrade" sortIndex="1">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -7453,9 +7451,9 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="71cd-1a5e-c211-d5f5" name="Marines" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="71cd-1a5e-c211-d5f5" name="Marines" hidden="false" collective="false" import="true" sortIndex="2">
           <selectionEntries>
-            <selectionEntry id="6f6b-b2ba-889f-839a" name="Chosen Marine" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="6f6b-b2ba-889f-839a" name="Chosen Marine" hidden="false" collective="false" import="true" type="model" collapsible="true">
               <modifiers>
                 <modifier type="add" field="category" value="9b41-cfd0-0af7-2496">
                   <conditions>
@@ -7636,7 +7634,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 </infoLink>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="ddac-3299-9ced-83a3" name="Aspiring Champion" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="ddac-3299-9ced-83a3" name="Aspiring Champion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26c8-0878-3594-71d7" type="max"/>
                   </constraints>
@@ -7644,7 +7642,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="ac36-f3f6-8c22-b250" name="Chosen Terminator Armour" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="ac36-f3f6-8c22-b250" name="Chosen Terminator Armour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d31-3c7d-fbb0-b6fd" type="max"/>
                   </constraints>
@@ -7655,7 +7653,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="19"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="4991-451e-14d2-3ac2" name="Sorcerer" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="4991-451e-14d2-3ac2" name="Sorcerer" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <modifiers>
                     <modifier type="add" field="category" value="d832-0917-094f-7627"/>
                     <modifier type="set" field="hidden" value="true">
@@ -7680,7 +7678,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
-                <selectionEntryGroup id="a068-5719-ba3b-8bf1" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="4b4d-414b-97c2-fa80">
+                <selectionEntryGroup id="a068-5719-ba3b-8bf1" name="Melee Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="4b4d-414b-97c2-fa80" sortIndex="4">
                   <comment>Melee Weapons</comment>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="750d-a82b-a84b-2f92" type="max"/>
@@ -7811,7 +7809,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
-                <selectionEntryGroup id="f885-d78e-60da-8192" name="Ranged Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="ef9a-4ccc-aafd-ef26">
+                <selectionEntryGroup id="f885-d78e-60da-8192" name="Ranged Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="ef9a-4ccc-aafd-ef26" sortIndex="5">
                   <comment>Terminator Armour Ranged Weapon</comment>
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ac3-6b80-0f23-9dc0" type="min"/>
@@ -8549,7 +8547,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
-                <selectionEntryGroup id="65c7-bff1-6da7-18cb" name="Special Icon" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="65c7-bff1-6da7-18cb" name="Special Icon" hidden="false" collective="false" import="true" sortIndex="8" collapsible="true">
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditionGroups>
@@ -8659,7 +8657,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
-                <selectionEntryGroup id="c5d7-8274-ece8-4657" name="Grenades" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="c5d7-8274-ece8-4657" name="Grenades" hidden="false" collective="false" import="true" sortIndex="6">
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditionGroups>
@@ -8698,7 +8696,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="398b-2c8a-91f7-01b7" name="Chaos Armory" hidden="false" collective="false" import="true" targetId="e9b3-4e07-ad9a-6235" type="selectionEntryGroup">
+                <entryLink id="398b-2c8a-91f7-01b7" name="Chaos Armory" hidden="false" collective="false" import="true" targetId="e9b3-4e07-ad9a-6235" type="selectionEntryGroup" sortIndex="7">
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
@@ -8707,7 +8705,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink id="8d55-b804-00e4-5c78" name="Psychic Abilities &amp; Equipment" hidden="false" collective="false" import="true" targetId="0249-e80c-1238-d54b" type="selectionEntryGroup">
+                <entryLink id="8d55-b804-00e4-5c78" name="Psychic Abilities &amp; Equipment" hidden="false" collective="false" import="true" targetId="0249-e80c-1238-d54b" type="selectionEntryGroup" sortIndex="9">
                   <comment>Gain access to Tzeentch powers if non-aspiring champion</comment>
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
@@ -8731,8 +8729,8 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="cfec-acb3-e686-5b26" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="4171-c75d-6633-1a19" type="selectionEntryGroup"/>
-        <entryLink id="8a2c-85be-d50e-8f7b" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup">
+        <entryLink id="cfec-acb3-e686-5b26" name="Marks of Chaos" hidden="false" collective="false" import="true" targetId="4171-c75d-6633-1a19" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="8a2c-85be-d50e-8f7b" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="4">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -8881,7 +8879,7 @@ Daemonic Possession=20</comment>
         <categoryLink id="730e-0807-7ae2-4b69" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="822f-5741-03e6-8bea" name="Mouth Plasma Cannon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="822f-5741-03e6-8bea" name="Mouth Plasma Cannon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a688-d79d-5b60-5743" type="max"/>
           </constraints>
@@ -8894,7 +8892,7 @@ Daemonic Possession=20</comment>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="8cda-1be9-e183-86ba" name="Arm Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="8cda-1be9-e183-86ba" name="Arm Weapons" hidden="false" collective="false" import="true" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="424e-46ff-459b-60fa" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3776-f46a-5706-180f" type="min"/>
@@ -8933,7 +8931,7 @@ Daemonic Possession=20</comment>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="1d30-40ba-7a79-13a1" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup"/>
+        <entryLink id="1d30-40ba-7a79-13a1" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup" sortIndex="3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="106"/>
@@ -9272,7 +9270,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="4171-c75d-6633-1a19" name="Marks of Chaos" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="4171-c75d-6633-1a19" name="Marks of Chaos" hidden="false" collective="false" import="true" collapsible="true">
       <comment>How to code god rivalries?</comment>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f79f-d423-65b9-b20a" type="max"/>
@@ -9965,7 +9963,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="d6ad-8c39-d887-e2db" name="Wargear" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="d6ad-8c39-d887-e2db" name="Wargear" hidden="false" collective="false" import="true" collapsible="true">
       <modifiers>
         <modifier type="set" field="9bc1-b018-18fa-2b4b" value="150">
           <conditions>
@@ -10303,7 +10301,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0249-e80c-1238-d54b" name="Psychic Abilities &amp; Equipment" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="0249-e80c-1238-d54b" name="Psychic Abilities &amp; Equipment" hidden="false" collective="false" import="true" collapsible="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -10621,7 +10619,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="3c21-bdf4-cd4b-4a26" name="Daemonic Gifts" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="3c21-bdf4-cd4b-4a26" name="Daemonic Gifts" hidden="false" collective="false" import="true" collapsible="true">
       <modifiers>
         <modifier type="set" field="cb08-6a74-b230-d96f" value="100">
           <conditions>
@@ -12266,9 +12264,9 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="e9b3-4e07-ad9a-6235" name="Chaos Armory" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="e9b3-4e07-ad9a-6235" name="Chaos Armory" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntryGroups>
-        <selectionEntryGroup id="78f8-16a1-6193-baf9" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="78f8-16a1-6193-baf9" name="Weapons" hidden="false" collective="false" import="true" sortIndex="1" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e843-5d92-c18d-dda3" type="max"/>
           </constraints>
@@ -12279,7 +12277,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a731-1442-1d4c-71a2" name="Wargear" hidden="false" collective="false" import="true" targetId="d6ad-8c39-d887-e2db" type="selectionEntryGroup">
+        <entryLink id="a731-1442-1d4c-71a2" name="Wargear" hidden="false" collective="false" import="true" targetId="d6ad-8c39-d887-e2db" type="selectionEntryGroup" sortIndex="2" collapsible="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -12288,7 +12286,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="b05d-6ebe-8353-a703" name="Psychic Abilities &amp; Equipment" hidden="false" collective="false" import="true" targetId="0249-e80c-1238-d54b" type="selectionEntryGroup">
+        <entryLink id="b05d-6ebe-8353-a703" name="Psychic Abilities &amp; Equipment" hidden="false" collective="false" import="true" targetId="0249-e80c-1238-d54b" type="selectionEntryGroup" sortIndex="3" collapsible="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -12299,7 +12297,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="9043-4141-f921-9506" name="Veteran Skills" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
+    <selectionEntryGroup id="9043-4141-f921-9506" name="Veteran Skills" hidden="false" collective="false" import="true" defaultSelectionEntryId="none" collapsible="true">
       <modifiers>
         <modifier type="set" field="2142-9b02-9447-c65a" value="1">
           <conditionGroups>
@@ -12684,7 +12682,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="f364-8b4b-0063-e9ed" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f364-8b4b-0063-e9ed" name="Chaos Vehicle Upgrades" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
         <selectionEntry id="c1c3-36f0-1a4d-1723" name="Blasphemous Rune" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>

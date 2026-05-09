@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="04bd-002e-d5fe-e9a6" name="Imperial Guard (2003)" revision="12" battleScribeVersion="2.03" authorName="Kris Snyder" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="04bd-002e-d5fe-e9a6" name="Imperial Guard (2003)" revision="17" battleScribeVersion="2.03" authorName="Kris Snyder" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="3670-6ad0-8988-c35b" name="Officer" hidden="false"/>
     <categoryEntry id="5a7d-a0bb-d5e1-e79a" name="Standard Bearer" hidden="false"/>
@@ -457,6 +457,17 @@
     </entryLink>
     <entryLink import="true" name="Cypher (White Dwarf 281)" hidden="false" id="4ca5-f4e1-1688-bb54" type="selectionEntry" targetId="8fef-9ae0-66c3-1628"/>
     <entryLink import="true" name="Fallen Angels (White Dwarf 281)" hidden="false" id="f175-a48d-3d20-d135" type="selectionEntry" targetId="0f82-b6c4-2a66-d15f"/>
+    <entryLink import="true" name="Griffon (IA)" hidden="false" id="a658-baa5-72c8-1689" type="selectionEntry" targetId="0aa4-275b-24ff-710b">
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="0020-3ada-05e1-9fd8" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Valkrie (IA)" hidden="false" id="7d57-d050-853d-8251" type="selectionEntry" targetId="15fa-a2a9-33a2-7a5e">
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="4bfb-a22e-c19e-7e51" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Rogal Dorn Battle Tank (Homebrew)" hidden="false" id="2a81-0771-1bb3-6f88" type="selectionEntry" targetId="6c7f-0481-5c89-073c"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f6c9-305b-8827-2cb6" name="Command Platoon" hidden="false" collective="false" import="true" type="unit">
@@ -5596,11 +5607,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bd69-5faa-e4ed-c076" name="Basilisk" hidden="false" collective="false" import="true" type="model">
-      <rules>
-        <rule id="6cb0-ef09-7050-5ec5" name="Indirect Fire" hidden="false">
-          <description>May fire the earthshaker in Indirect File mode instead of direct fire. A weapon that does so changes its range to G36&quot;-240&quot;.</description>
-        </rule>
-      </rules>
       <infoLinks>
         <infoLink id="be71-dbb1-43fb-465d" name="Basilisk" hidden="false" targetId="dc37-efd3-1bf6-6cc9" type="profile"/>
         <infoLink id="1372-cdbe-4abe-75f1" name="Earthshaker" hidden="false" targetId="0d02-965c-b2d8-eab5" type="profile"/>
@@ -5613,6 +5619,21 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Indirect Fire" hidden="false" id="13eb-eef7-3782-4f38">
+          <rules>
+            <rule name="Indirect Fire" id="6cb0-ef09-7050-5ec5" hidden="false">
+              <description>May fire the earthshaker in Indirect File mode instead of direct fire. A weapon that does so changes its range to G36&quot;-240&quot;.</description>
+            </rule>
+          </rules>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="27a0-2371-6160-4e10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry id="7378-a24b-e655-ba2b" name="Lord Castellan Ursarkar E. Creed" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -8779,8 +8800,8 @@
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="4">
               <repeats>
-                <repeat field="selections" scope="45d8-c175-e5cb-2354" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ae31-c8c8-f45e-60f3" repeats="1" roundUp="false"/>
-                <repeat field="selections" scope="54c0-9145-28d2-3ebf" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3af3-ca0d-2b82-6802" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="45d8-c175-e5cb-2354" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="02b2-6ba9-c7b6-cfdd" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="54c0-9145-28d2-3ebf" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7df9-8f37-97d4-6fa7" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -10334,6 +10355,16 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Add Towing Carriage" hidden="false" id="c26c-eab8-a5ef-6017" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a299-352d-66b3-59b5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry id="580e-5f01-017e-c7fa" name="Hydra (IA)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -10502,15 +10533,6 @@
             <modifier type="set" field="name" value="2x Lascannon"/>
           </modifiers>
         </infoLink>
-        <infoLink id="c629-5c1d-710e-579f" name="Long Barrelled Autocannon" hidden="false" targetId="48dc-47d4-5d34-3078" type="profile">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="03b5-5686-c89c-c6fd" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="5ff1-cff8-8ecb-319f" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
         <infoLink id="69c6-2f2f-972c-62e5" name="Rockits" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
           <modifiers>
@@ -10524,14 +10546,6 @@
         </infoLink>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="03b5-5686-c89c-c6fd" name="Strike Variant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee15-b5ce-a9ed-4312" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="cbfd-cc83-6643-1436" name="Wing Mounted Hellstrike Missiles" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc5c-3109-61fc-4ddb" type="max"/>
@@ -10554,6 +10568,49 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="145"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Variants" id="f6fe-ba67-7549-ac47" hidden="false" defaultSelectionEntryId="16b2-2cff-8252-74bd" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Strike Variant" hidden="false" id="03b5-5686-c89c-c6fd" collective="false" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee15-b5ce-a9ed-4312" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Rockits" id="77e5-9f81-797f-7ce2" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Hellstrike Missiles" field="name"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Rockits" id="dd6d-ad38-397b-971b" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Hellstrike Missiles" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Standard" hidden="false" id="16b2-2cff-8252-74bd" sortIndex="1">
+              <infoLinks>
+                <infoLink name="Long Barrelled Autocannon" id="c629-5c1d-710e-579f" hidden="false" targetId="48dc-47d4-5d34-3078" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="03b5-5686-c89c-c6fd" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8bf1-a2f5-1dd7-88ea"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f406-2405-461f-aef2"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="416c-65a1-3ce3-3cce" name="Marauder Bomber (IA)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -10781,6 +10838,9 @@ Sentry Mode: The gun will fire at the nearest enemy target within 12&quot; that 
                   </costs>
                 </selectionEntry>
               </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="096b-31ad-b3ca-ab0c"/>
+              </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -11748,7 +11808,7 @@ Transport = 10</comment>
         <categoryLink id="5421-17ef-3128-fec7" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="c767-4c61-5bc5-3c35" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="0ad0-e8db-2347-229f" type="selectionEntryGroup"/>
+        <entryLink id="c767-4c61-5bc5-3c35" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="0ad0-e8db-2347-229f" type="selectionEntryGroup" collapsible="true"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="113"/>
@@ -11776,7 +11836,7 @@ Transport = 10</comment>
         <categoryLink id="7da1-9df7-1a5e-f3c7" name="Vehicle" hidden="false" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c2b0-b1bb-fc7c-92eb" name="Side Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="4f08-029c-0114-0bfc" sortIndex="1">
+        <selectionEntryGroup id="c2b0-b1bb-fc7c-92eb" name="Side Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="4f08-029c-0114-0bfc" sortIndex="1" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43be-8bf5-8617-ba78" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="920b-edea-9733-6f60" type="min"/>
@@ -11808,7 +11868,7 @@ Transport = 10</comment>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="b145-6d7a-762b-dc40" name="Turret Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="69c5-5c33-d1f0-5d51" sortIndex="2">
+        <selectionEntryGroup id="b145-6d7a-762b-dc40" name="Turret Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="69c5-5c33-d1f0-5d51" sortIndex="2" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a217-7031-2eea-c4a2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa2c-e67e-5e5d-103e" type="min"/>
@@ -11843,7 +11903,7 @@ Transport = 10</comment>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="78be-2ff4-3a4f-7284" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="0ad0-e8db-2347-229f" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="78be-2ff4-3a4f-7284" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="0ad0-e8db-2347-229f" type="selectionEntryGroup" sortIndex="3" collapsible="true"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
@@ -11939,6 +11999,154 @@ On a roll of 6 or more, the Deathstrike Missile can be fired. A natural roll of 
 Fully Armoured Upcharge for &lt; 43 armour = 20
 Normal Speed = 10
 Heavy Bolter=15</comment>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Rogal Dorn Battle Tank (Homebrew)" hidden="false" id="6c7f-0481-5c89-073c">
+      <comment>Rogal Dorm Battle Tank
+- Normal Tank
+- 14-14-13 (30+80+40 = 150pts)
+- Lumbering (10pts)</comment>
+      <profiles>
+        <profile name="Rogal Dorn Battle Tank" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle" hidden="false" id="2405-75d3-6549-2c80">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">14</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">14</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">13</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Vehicle Upgrades" hidden="false" id="73e2-b6d8-f56c-5f71" type="selectionEntryGroup" targetId="0ad0-e8db-2347-229f"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Turret Weapon" id="86b3-65b1-b742-d99f" hidden="false" defaultSelectionEntryId="4711-cdef-e457-1407">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Twin-Linked Battle Cannon" hidden="false" id="193d-b088-1fbd-e930">
+              <infoLinks>
+                <infoLink name="Battle Cannon" id="6117-f524-4747-6eef" hidden="false" type="profile" targetId="3a2e-94e4-b9a3-bb11"/>
+              </infoLinks>
+              <rules>
+                <rule name="Twin-Linked Blast Weapon" id="40f3-1095-090d-1a12" hidden="false">
+                  <description>The scatter dice and distance may be rerolled, but the second outcome must be </description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vanquisher Cannon and Coaxial Autocannon" hidden="false" id="ed41-0537-acd2-2c2a">
+              <infoLinks>
+                <infoLink name="Vanquisher Cannon" id="155e-9a1e-0a1a-1e75" hidden="false" type="profile" targetId="6ed6-d055-77b9-709e"/>
+                <infoLink name="Autocannon" id="f9fc-c496-506c-ddff" hidden="false" type="profile" targetId="6128-e2af-037e-4d1a"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d88-b008-70b4-6e88-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d88-b008-70b4-6e88-max"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Hull Weapon" id="3b9a-efc8-f936-b5bf" hidden="false" defaultSelectionEntryId="5bcd-d744-376f-767f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce27-c75a-0d6a-6a8b-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce27-c75a-0d6a-6a8b-max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Conqueror Cannon" hidden="false" id="bde5-e101-c95b-bb9e">
+              <infoLinks>
+                <infoLink name="Conqueror Cannon" id="6cae-a716-d416-adb1" hidden="false" type="profile" targetId="814e-4aa4-0908-6350"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gatling Heavy Bolter" hidden="false" id="503c-5e9b-1ed8-6e85">
+              <infoLinks>
+                <infoLink name="Heavy Bolter" id="8ad8-e32b-a053-07e4" hidden="false" type="profile" targetId="b9aa-366b-bd62-4692">
+                  <modifiers>
+                    <modifier type="set" value="Gatling Heavy Bolter" field="name"/>
+                    <modifier type="set" value="Heavy 3D3" field="d3f6-19e8-ac9e-ae13"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Sponson Weapons" id="391b-22c7-971c-f596" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d52d-8763-99b7-2255"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Two Heavy Bolters" hidden="false" id="d976-048a-3661-edcb">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Heavy Bolter" id="1648-b323-ef47-49a5" hidden="false" type="profile" targetId="b9aa-366b-bd62-4692"/>
+                <infoLink name="Heavy Bolter" id="b523-8bae-7d2d-91b9" hidden="false" type="profile" targetId="b9aa-366b-bd62-4692"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Two Multi-meltas" hidden="false" id="7d8b-a628-52ca-b59e">
+              <infoLinks>
+                <infoLink name="Multi-melta" id="be51-09d4-07e9-a136" hidden="false" type="profile" targetId="7077-4e34-5c92-5320"/>
+                <infoLink name="Multi-melta" id="38a0-8fd4-67b1-62f7" hidden="false" type="profile" targetId="7077-4e34-5c92-5320"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Glacius Weapons" id="b4d4-f579-97eb-2735" hidden="false" defaultSelectionEntryId="none">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Two Heavy Stubbers" hidden="false" id="946b-1793-b1b7-3e74">
+              <infoLinks>
+                <infoLink name="Heavy Stubber" id="d8bc-8127-059c-caea" hidden="false" type="profile" targetId="e055-536f-8cdf-7ec4"/>
+                <infoLink name="Heavy Stubber" id="5518-263e-dc2a-8f13" hidden="false" type="profile" targetId="e055-536f-8cdf-7ec4"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Two Meltaguns" hidden="false" id="d970-f723-6bb0-ecbc">
+              <infoLinks>
+                <infoLink name="Meltagun" id="f29f-c201-d657-a18f" hidden="false" type="profile" targetId="737d-c7ef-4cb5-e6fa"/>
+                <infoLink name="Meltagun" id="0a55-3c03-08ba-0734" hidden="false" type="profile" targetId="737d-c7ef-4cb5-e6fa"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e5ba-88fb-3a6c-e692"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <rules>
+        <rule name="Lumbering Vehicle" id="71e7-162b-dd0b-fccd" hidden="false">
+          <description>The Rogal Dorn can move up to 6&quot; a turn. It must always move straight ahead, but can pivot by up to 90 degrees at the end of the move.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink name="Heavy Support" hidden="false" id="7d14-b790-4cd5-1bdf" targetId="aacb-8a81-62c0-3db8" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="160"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="eca8-ace3-d503-7923" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -14282,9 +14490,9 @@ Incompatible with: Warrior Weapons, Light Infantry</description>
     <profile id="424f-b4b1-2884-2086" name="Servo-Arm" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">Melee</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Makes a single attack, hitting on a 4+. independently of the Techpriests attacks. Ignores all armour saves.</characteristic>
       </characteristics>
     </profile>

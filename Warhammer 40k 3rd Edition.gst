@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="10" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="8" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <publications>
     <publication id="263c-b15e-84a3-a711" name="Codex Necrons 3rd Edition" shortName="Necrons" publisher="Codex Necrons" publicationDate="2002"/>
@@ -169,21 +169,35 @@
           <modifiers>
             <modifier type="increment" field="6d1d-6801-aa7b-ea91" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
               <comment>Space Wolves</comment>
             </modifier>
             <modifier type="increment" field="79c8-d712-b3f8-3fbc" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
               <comment>Space Wolves</comment>
             </modifier>
-            <modifier type="decrement" field="79c8-d712-b3f8-3fbc" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
-              <comment>Space Wolves</comment>
+            <modifier type="decrement" field="79c8-d712-b3f8-3fbc" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="decrement" value="1" field="6d1d-6801-aa7b-ea91">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -260,20 +274,35 @@
         <categoryLink id="f801-8c9d-fa6d-39e7" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
-            <modifier type="increment" field="dce7-0551-bd25-f2fe" value="1">
+            <modifier type="increment" value="1" field="3957-703a-aa85-c7ee">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="3957-703a-aa85-c7ee" value="1">
+            <modifier type="increment" value="1" field="dce7-0551-bd25-f2fe">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="dce7-0551-bd25-f2fe" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
+            <modifier type="decrement" value="2" field="dce7-0551-bd25-f2fe">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="decrement" value="1" field="3957-703a-aa85-c7ee">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -367,18 +396,33 @@
           <modifiers>
             <modifier type="increment" field="e4d2-bf42-4306-3692" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="ffdf-c34b-d8bc-f20a" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="e4d2-bf42-4306-3692" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
+            <modifier type="decrement" field="e4d2-bf42-4306-3692" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="decrement" value="1" field="ffdf-c34b-d8bc-f20a">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -458,18 +502,33 @@
           <modifiers>
             <modifier type="increment" field="1a75-3bac-a46a-34de" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="f10d-43f1-775e-1609" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="f10d-43f1-775e-1609" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
+            <modifier type="decrement" field="f10d-43f1-775e-1609" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="decrement" value="1" field="1a75-3bac-a46a-34de">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -548,23 +607,23 @@
           <modifiers>
             <modifier type="increment" field="47e4-9690-9cca-4e26" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="71fe-e8b3-a2c2-dbd1" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="71fe-e8b3-a2c2-dbd1" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="47e4-9690-9cca-4e26" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
+            <modifier type="decrement" field="71fe-e8b3-a2c2-dbd1" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -643,18 +702,23 @@
           <modifiers>
             <modifier type="increment" field="2e45-726c-b86c-a2ad" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="0392-cebf-ecde-bc99" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="0392-cebf-ecde-bc99" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
+            <modifier type="decrement" field="2e45-726c-b86c-a2ad" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -739,23 +803,23 @@
           <modifiers>
             <modifier type="increment" field="004b-86dd-21b7-fdee" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="e2c7-2639-d9b7-fc65" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="004b-86dd-21b7-fdee" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="e2c7-2639-d9b7-fc65" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
+            <modifier type="decrement" field="004b-86dd-21b7-fdee" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -834,18 +898,23 @@
           <modifiers>
             <modifier type="increment" field="837d-76da-f810-d300" value="1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" field="837d-76da-f810-d300" value="1">
-              <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" field="8ba2-d07d-e18e-de87" value="1">
-              <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" type="greaterThan"/>
-              </conditions>
+              <repeats>
+                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="8ba2-d07d-e18e-de87" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="0885-d75b-33a6-169b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7cfb-de89-0eb9-2589" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -919,7 +988,7 @@
       </modifiers>
       <rules>
         <rule id="8284-3c96-b0b9-db3f" name="True Grit" hidden="false">
-          <description>May treat Bolters as a Bolt Pistol in close combat and will therefore be allowed to roll an extra Attack dice as if they were armed with a second close combat weapon. However, the model using their bolter in this manner may not receive the extra attack bonush for charging.</description>
+          <description>May treat Bolters as a Bolt Pistol in close combat and will therefore be allowed to roll an extra Attack dice as if they were armed with a second close combat weapon. However, the model using their bolter in this manner may not receive the extra attack bonus for charging.</description>
         </rule>
         <rule id="f233-37b5-8abb-bbd2" name="Deep Strike" hidden="false">
           <description>Unless mounted in a Rhino, Deathwatch Kill Teams may always start the game in reserve and arrive by Deep Strike.</description>
@@ -1245,7 +1314,7 @@
                           </constraints>
                           <rules>
                             <rule id="7738-203c-f3f1-079b" name="Iron Halo" hidden="false">
-                              <description>The iron halo grants a 4+ invilnerable save.</description>
+                              <description>The iron halo grants a 4+ invulnerable save.</description>
                             </rule>
                           </rules>
                           <costs>
@@ -2483,7 +2552,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                                 <rule name="Daemonic Steed" id="b2b0-be45-c39f-5404" hidden="false">
                                   <description>The model now moves as Cavalry and gains Daemonic Resilience</description>
                                 </rule>
-                                <rule name="Daemonic Reslilience" id="bd37-c8de-72d9-b338" hidden="false">
+                                <rule name="Daemonic Resilience" id="bd37-c8de-72d9-b338" hidden="false">
                                   <description>+1 Toughness</description>
                                 </rule>
                               </rules>
@@ -2507,7 +2576,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemonic Talons" id="8039-505f-f906-a882" hidden="false">
-                                  <description>Any rolls to hit of a 6 causes an automatic wound with no armour saves allowed. Against vehicles, a roll of 6 allows the model to roll an addtional dice to determine the total Armour Penetration score.</description>
+                                  <description>Any rolls to hit of a 6 causes an automatic wound with no armour saves allowed. Against vehicles, a roll of 6 allows the model to roll an additional dice to determine the total Armour Penetration score.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2565,7 +2634,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemon Weapon" id="a108-531b-cf02-6059" hidden="false">
-                                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                                  <description>In any turn the bearer inflicts at least one casualty with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2590,7 +2659,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemon Weapon" id="8449-5cfc-c3d4-e0c4" hidden="false">
-                                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                                  <description>In any turn the bearer inflicts at least one casualty with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2615,7 +2684,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemon Weapon" id="f745-91bb-2aad-8762" hidden="false">
-                                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                                  <description>In any turn the bearer inflicts at least one casualty with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2640,7 +2709,7 @@ Such is his skill with his pistols that he continues to fight with them in close
                               </costs>
                               <rules>
                                 <rule name="Daemon Weapon" id="8d90-79ce-0c46-b116" hidden="false">
-                                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                                  <description>In any turn the bearer inflicts at least one casualty with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
                                 </rule>
                               </rules>
                             </selectionEntry>
@@ -2890,7 +2959,7 @@ Such is his skill with his pistols that he continues to fight with them in close
               </costs>
               <rules>
                 <rule name="Siege Specialists" id="2ce4-5cbd-694d-37db" hidden="false">
-                  <description>+1 on Armour Penetration rolls against enemy bunkers and tank traps. When crossing minefileds only trigger a mine on a 6.</description>
+                  <description>+1 on Armour Penetration rolls against enemy bunkers and tank traps. When crossing minefields only trigger a mine on a 6.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -3367,7 +3436,7 @@ TARGETING FLYERS:
     <rule id="300e-775c-430f-4b5d" name="Terrifying" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
       <comment>Vehicle Battle Honor</comment>
       <description>Tanks: Any unit testing for tank shock inflicted by this vehicle suffers an additional -1 modifier to its Leadership. 
-Others: The vehile causes tank shock if it moves through the enemy, just like Tanks.</description>
+Others: The vehicle causes tank shock if it moves through the enemy, just like Tanks.</description>
     </rule>
     <rule id="d668-4bd9-175d-8a61" name="Fast" publicationId="8acd-6511-d7f4-63c7" page="163" hidden="false">
       <comment>Vehicle Battle Honor</comment>
@@ -3702,7 +3771,7 @@ Range: Battlefield
 Effect: Used before determining who goes first. If successful, the user&apos;s force may re-roll to determine who gets the first move. If failed, the user&apos;s force goes second. NOTE: Only used in missions where dice rolls determine who goes first.</description>
     </rule>
     <rule id="2d1a-ee41-20f6-a6c8" name="Deathwatch" hidden="false">
-      <description>Deathwatch squad members and characters are never subject to the Special rules which apply to specific Chapters (i.e. Space Wolves&apos; counter attack, Blood Angels&apos; Black Rage, Black Templars&apos; vows, etc.) and which affect their fighting abilities or battlefield behaviour. Must be equiped with bolters or combi-weapons.</description>
+      <description>Deathwatch squad members and characters are never subject to the Special rules which apply to specific Chapters (i.e. Space Wolves&apos; counter attack, Blood Angels&apos; Black Rage, Black Templars&apos; vows, etc.) and which affect their fighting abilities or battlefield behaviour. Must be equipped with bolters or combi-weapons.</description>
     </rule>
     <rule id="0f7e-d79a-ce04-7d3d" name="Smoke &amp; Blind Grenades" hidden="false">
       <description>One use only.
