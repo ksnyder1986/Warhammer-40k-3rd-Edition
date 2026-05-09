@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1369-4fc1-fe31-48dd" name="Eldar (2000)" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1369-4fc1-fe31-48dd" name="Eldar (2000)" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="5271-ffb6-46ff-8c2e" name="Iyanden" hidden="false"/>
     <categoryEntry id="5c43-dccf-e148-ab80" name="Saim-Hann" hidden="false"/>
@@ -37,6 +37,23 @@
       <categoryLinks>
         <categoryLink id="3dc0-c18b-c912-6c72" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="2000+ points required to include Eldrad" field="error">
+          <conditions>
+            <condition type="lessThan" value="2000" field="limit::4ed5-2f92-9abc-2870" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Eldrad and Nuedha cannot be in the same force" field="error">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="a194-de6c-6011-05e1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Eldrad and Iyanna cannot be in the same force" field="error">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="cf16-775c-054d-e03c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="6c84-bbcb-8ee1-673f" name="Falcon" hidden="false" collective="false" import="true" targetId="f054-8d9e-24b2-66ed" type="selectionEntry">
       <categoryLinks>
@@ -102,6 +119,18 @@
       <categoryLinks>
         <categoryLink id="5d6f-0972-0529-90ec" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="Nuedha and Eldrad cannot be in the same force" field="error">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="e80d-5a31-a1ec-f90d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Nuedha and Iyanna cannot be in the same force" field="error">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="cf16-775c-054d-e03c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink id="ac03-cdfe-9c12-4163" name="Rangers" hidden="false" collective="false" import="true" targetId="9217-1abc-0930-901a" type="selectionEntry">
       <categoryLinks>
@@ -226,10 +255,10 @@
         <infoLink id="6458-4fea-8ff8-8b7f" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
       </infoLinks>
       <entryLinks>
-        <entryLink id="41be-ee5d-ad2f-a55f" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup"/>
-        <entryLink id="b8d9-faaf-f08e-627d" name="Farseer Psychic Powers" hidden="false" collective="false" import="true" targetId="6f8b-71e8-4378-aba2" type="selectionEntryGroup"/>
-        <entryLink id="b79d-6b65-676c-76d4" name="Warlock Bodyguard" hidden="false" collective="false" import="true" targetId="8461-d2e6-c311-fe84" type="selectionEntryGroup"/>
-        <entryLink id="ad02-cf73-6c98-783e" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="41be-ee5d-ad2f-a55f" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup" sortIndex="2"/>
+        <entryLink id="b8d9-faaf-f08e-627d" name="Farseer Psychic Powers" hidden="false" collective="false" import="true" targetId="6f8b-71e8-4378-aba2" type="selectionEntryGroup" sortIndex="1"/>
+        <entryLink id="b79d-6b65-676c-76d4" name="Warlock Bodyguard" hidden="false" collective="false" import="true" targetId="8461-d2e6-c311-fe84" type="selectionEntryGroup" sortIndex="3" collapsible="true"/>
+        <entryLink id="ad02-cf73-6c98-783e" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" collapsible="true" sortIndex="4">
           <modifiers>
             <modifier type="set" field="8041-82ea-8c83-5111" value="0">
               <conditions>
@@ -254,7 +283,7 @@
         <infoLink id="a19e-ac94-c1ac-d2d7" name="Eldar Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="001c-de12-f16e-8bf4" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7c5d-a5bc-e50e-d90f">
+        <selectionEntryGroup id="001c-de12-f16e-8bf4" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7c5d-a5bc-e50e-d90f" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd98-569c-9b34-50d2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6db9-6c55-5657-841e" type="min"/>
@@ -283,7 +312,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="46dc-b34a-1680-edae" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7fca-e3e3-26a1-e550">
+        <selectionEntryGroup id="46dc-b34a-1680-edae" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7fca-e3e3-26a1-e550" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f5b-1227-b9f0-3208" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5dab-fc61-16ac-c45f" type="min"/>
@@ -306,12 +335,12 @@
               <infoLinks>
                 <infoLink id="9b9d-64e0-2e28-cbc2" name="Missile Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile">
                   <modifiers>
-                    <modifier type="set" field="name" value="Twin-linked Missle Launcher (frag)"/>
+                    <modifier type="set" field="name" value="Twin-linked Missile Launcher (frag)"/>
                   </modifiers>
                 </infoLink>
                 <infoLink id="d92b-81c7-44b2-ea17" name="Missile Launcher (krak)" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile">
                   <modifiers>
-                    <modifier type="set" field="name" value="Twin-linked Missle Launcher (krak)"/>
+                    <modifier type="set" field="name" value="Twin-linked Missile Launcher (krak)"/>
                   </modifiers>
                 </infoLink>
                 <infoLink id="1796-17a4-b43a-0629" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
@@ -362,7 +391,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="f956-5c14-2885-01a2" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup"/>
+        <entryLink id="f956-5c14-2885-01a2" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup" sortIndex="2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="110"/>
@@ -374,7 +403,7 @@
         <infoLink id="2f3b-9b89-ecfb-d168" name="Warp Jump Generators" hidden="false" targetId="0943-8bb7-8cc4-65f6" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="c587-5f3e-4fa0-de75" name="Warp Spider" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="c587-5f3e-4fa0-de75" name="Warp Spider" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5506-565a-ae1a-d134" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28af-3b1c-89e8-5a82" type="min"/>
@@ -386,7 +415,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="22"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="52c9-b67e-1f72-628c" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="52c9-b67e-1f72-628c" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0224-9ead-3980-70f2" type="max"/>
           </constraints>
@@ -457,7 +486,7 @@
         <infoLink id="ffc7-a86c-5378-2668" name="Mandiblaster" hidden="false" targetId="9e7b-1795-0925-caca" type="profile"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="dd8d-87de-2293-adbe" name="Scorpion" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="dd8d-87de-2293-adbe" name="Scorpion" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5b6-fd9f-80c9-1e85" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbab-015c-4b11-8309" type="min"/>
@@ -469,7 +498,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3cfc-2988-227b-a510" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3cfc-2988-227b-a510" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e058-fa20-1071-d68d" type="max"/>
           </constraints>
@@ -530,7 +559,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b45f-ae33-d9f0-e00f" name="Plasma and Haywire Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b45f-ae33-d9f0-e00f" name="Plasma and Haywire Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3">
               <repeats>
@@ -551,7 +580,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="f6de-bfac-f4e4-c449" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="f6de-bfac-f4e4-c449" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" collapsible="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ff4-fb65-1004-1798" type="max"/>
           </constraints>
@@ -569,7 +598,7 @@
         <infoLink id="38e4-c52c-9615-33cf" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="d88d-6c9f-57ac-7401" name="Banshees" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="d88d-6c9f-57ac-7401" name="Banshees" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c586-de90-5540-27ba" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="655e-51e4-bc84-09c0" type="min"/>
@@ -581,7 +610,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3bcd-be55-8313-d4f5" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3bcd-be55-8313-d4f5" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b73-e23e-623b-7fc0" type="max"/>
           </constraints>
@@ -643,7 +672,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="023f-8efa-5ce3-02df" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="023f-8efa-5ce3-02df" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" sortIndex="3" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75da-1b56-e710-3f86" type="max"/>
           </constraints>
@@ -660,7 +689,7 @@
         <infoLink id="5b43-9d3f-1380-274d" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="0291-38ed-4c68-5dc8" name="Fire Dragon" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="0291-38ed-4c68-5dc8" name="Fire Dragon" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="802a-c39c-781f-0cd1" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f675-4672-f5e6-e715" type="min"/>
@@ -672,7 +701,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="17"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d0d5-c5c6-477a-567e" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d0d5-c5c6-477a-567e" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71f0-72a7-385e-a81d" type="max"/>
           </constraints>
@@ -724,7 +753,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b00f-713d-322b-a83b" name="Plasma and Haywire Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b00f-713d-322b-a83b" name="Plasma and Haywire Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -745,7 +774,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="527c-457a-f6ca-27ea" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="527c-457a-f6ca-27ea" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" collapsible="true" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd50-64de-bd80-17cb" type="max"/>
           </constraints>
@@ -763,7 +792,7 @@
         <infoLink id="44ee-9255-d341-deb1" name="Wraithsight" hidden="false" targetId="59d1-dec4-4d80-b9cc" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="28d7-9a64-49e2-ce6c" name="Wraithguards" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="28d7-9a64-49e2-ce6c" name="Wraithguards" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e620-eb93-dd1b-e2f0" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71d9-9a2e-4af6-50b4" type="min"/>
@@ -774,7 +803,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="8987-9c4e-1d9b-9ee9" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="8987-9c4e-1d9b-9ee9" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" collapsible="true" sortIndex="3">
           <modifiers>
             <modifier type="set" field="ca1b-a3df-9d5b-2015" value="0">
               <conditions>
@@ -786,12 +815,16 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca1b-a3df-9d5b-2015" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="cf16-775c-054d-e03c" name="Iyanna Arienal, Spiritseer of Iyandan" hidden="false" collective="false" import="true" targetId="89c0-c22f-a947-63e0" type="selectionEntry">
+        <entryLink id="cf16-775c-054d-e03c" name="Iyanna Arienal, Spiritseer of Iyandan" hidden="false" collective="false" import="true" targetId="89c0-c22f-a947-63e0" type="selectionEntry" sortIndex="2">
           <modifiers>
-            <modifier type="set" field="f7d6-dfe5-2e67-4132" value="0">
+            <modifier type="add" value="Iyanna and Eldrad cannot be in the same force" field="error">
               <conditions>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e80d-5a31-a1ec-f90d" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a194-de6c-6011-05e1" type="greaterThan"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="e80d-5a31-a1ec-f90d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="Iyanna and Nuada cannot be in the same force" field="error">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="a194-de6c-6011-05e1" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -838,7 +871,7 @@
         <infoLink id="9a1d-b657-877a-bd01" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="e718-736f-b5c1-c39c" name="Guardians" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="e718-736f-b5c1-c39c" name="Guardians" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="095f-7c7c-ff4f-7f82" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1783-3ba0-f696-dc48" type="min"/>
@@ -847,7 +880,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="757f-d623-d09f-8baf" name="Plasma and Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="757f-d623-d09f-8baf" name="Plasma and Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -866,7 +899,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f127-e378-a76d-e253" name="Haywire Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f127-e378-a76d-e253" name="Haywire Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="3">
               <repeats>
@@ -884,7 +917,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="af98-5a82-f42c-8cdf" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="af98-5a82-f42c-8cdf" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -904,7 +937,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d64e-ec19-8c2f-25f7" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="d64e-ec19-8c2f-25f7" name="Weapons" hidden="false" collective="false" import="true" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b259-a4ac-13d6-2135" type="max"/>
           </constraints>
@@ -929,7 +962,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="b50b-e076-4a55-d8ea" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="b50b-e076-4a55-d8ea" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" collapsible="true" sortIndex="4">
           <modifiers>
             <modifier type="set" field="9f10-2ab9-8756-6d41" value="0">
               <conditions>
@@ -952,7 +985,7 @@
         <infoLink id="1489-c800-7eb6-b8c4" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="1202-3c4d-81c1-5a52" name="Dire Avenger" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="1202-3c4d-81c1-5a52" name="Dire Avenger" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="872f-a74f-83c0-f49e" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69e7-2322-919a-c5b9" type="min"/>
@@ -964,7 +997,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="62f4-d1bf-a5dc-7cff" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="62f4-d1bf-a5dc-7cff" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dda-3606-b234-221e" type="max"/>
           </constraints>
@@ -996,12 +1029,12 @@
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup id="3f2e-3649-6db6-3aea" name="Replace Shuriken Catepult" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="3f2e-3649-6db6-3aea" name="Replace Shuriken Catapult" hidden="false" collective="false" import="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f2a-5085-f5b1-de8c" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="fe2e-5089-5bef-984e" name="Suriken Pistol and Power Weapon" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="fe2e-5089-5bef-984e" name="Shuriken Pistol and Power Weapon" hidden="false" collective="false" import="true" type="upgrade">
                   <infoLinks>
                     <infoLink id="e104-3a4d-d439-d696" name="Shuriken Pistol" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
                     <infoLink id="389a-b847-e3f4-c3f9" name="Power Weapon" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
@@ -1010,7 +1043,7 @@
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="fa99-e4c1-e6e0-097d" name="Suriken Pistol and Diresword" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="fa99-e4c1-e6e0-097d" name="Shuriken Pistol and Diresword" hidden="false" collective="false" import="true" type="upgrade">
                   <infoLinks>
                     <infoLink id="49f6-479c-f35d-daaf" name="Shuriken Pistol" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
                     <infoLink id="4721-07bf-b392-10a7" name="Diresword" hidden="false" targetId="bcd4-96c8-0ff6-eafd" type="profile"/>
@@ -1028,7 +1061,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="05fb-644d-b001-f300" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="05fb-644d-b001-f300" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" sortIndex="3" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0629-3c62-4cc4-36af" type="max"/>
           </constraints>
@@ -1045,7 +1078,7 @@
         <infoLink id="66d9-57ef-fb6e-c251" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="41a0-4115-4f37-d624" name="Guardians" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="41a0-4115-4f37-d624" name="Guardians" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2184-0223-2465-ab82" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e540-b01b-0ae3-9edb" type="min"/>
@@ -1054,7 +1087,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b94d-08cc-9199-49f9" name="Plasma Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b94d-08cc-9199-49f9" name="Plasma Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -1074,30 +1107,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a02e-6144-ed3d-daed" name="Weapons" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="737a-a682-2f27-a21f" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="cea8-3bf7-d0c6-bc3c" name="Fusion Gun" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="a622-c98c-318c-de02" name="Fusion Gun" hidden="false" targetId="f79d-d9c2-c8b4-aa03" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="4"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8c7f-ea72-08e6-a792" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="d28f-9eff-dae8-547f" name="Flamer" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="142a-0752-0c66-5ecb" name="Heavy Weapon Platform" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="142a-0752-0c66-5ecb" name="Heavy Weapon Platform" hidden="false" collective="false" import="true" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b31-6633-456c-f70a" type="max"/>
           </constraints>
@@ -1147,7 +1157,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="de39-b499-44b1-2fd0" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="de39-b499-44b1-2fd0" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" sortIndex="4" collapsible="true">
           <modifiers>
             <modifier type="set" field="abfb-df00-e4b9-9d44" value="0">
               <conditionGroups>
@@ -1182,7 +1192,7 @@
         <infoLink id="e5ca-9971-2877-61fa" name="Shuriken Pistol" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="4ef1-ed2b-a6ba-09f2" name="Jetbikes" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="4ef1-ed2b-a6ba-09f2" name="Jetbikes" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47af-cc50-a43c-f534" type="max"/>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0fcb-70be-c8b7-f266" type="min"/>
@@ -1191,7 +1201,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="88ed-1826-abe9-6065" name="Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="88ed-1826-abe9-6065" name="Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="set" field="3102-a623-c393-560d" value="1">
               <conditionGroups>
@@ -1231,7 +1241,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="28ec-aaf5-cd5b-6294" name="Nuadha &apos;Fireheart&apos;, Wild Rider of Saim Hann" hidden="false" collective="false" import="true" targetId="a194-de6c-6011-05e1" type="selectionEntry">
+        <entryLink id="28ec-aaf5-cd5b-6294" name="Nuadha &apos;Fireheart&apos;, Wild Rider of Saim Hann" hidden="false" collective="false" import="true" targetId="a194-de6c-6011-05e1" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd18-e0ca-d2ea-b150" type="max"/>
           </constraints>
@@ -1255,7 +1265,7 @@
         <infoLink id="4538-71ba-4de4-140f" name="Shining Spear" hidden="false" targetId="846b-0595-b7c3-90aa" type="profile"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="b076-d73d-d99f-9591" name="Shining Spear" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="b076-d73d-d99f-9591" name="Shining Spear" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65ae-fd62-83e5-6eb7" type="max"/>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ecd-caa3-b8c7-4495" type="min"/>
@@ -1264,7 +1274,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ce4b-5a63-182f-41f2" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ce4b-5a63-182f-41f2" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <infoLinks>
             <infoLink id="1aa5-9c03-c2a6-e11f" name="Shining Spear Exarch" hidden="false" targetId="5e3d-1a59-4e17-bb2a" type="profile"/>
           </infoLinks>
@@ -1328,7 +1338,7 @@
     </selectionEntry>
     <selectionEntry id="7dbe-8d04-8340-79dc" name="Vyper Squadron" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="eff5-fe68-ef74-45db" name="Vyper" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="eff5-fe68-ef74-45db" name="Vyper" hidden="false" collective="false" import="true" type="model" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a721-2fa0-220b-c580" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1314-cfce-a0bb-e8f1" type="min"/>
@@ -1367,7 +1377,7 @@
             </infoLink>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="4e7d-a702-b985-8180" name="Replace Shuriken Cannon" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="4e7d-a702-b985-8180" name="Replace Shuriken Cannon" hidden="false" collective="false" import="true" sortIndex="1">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cf3-1e91-8add-e72f" type="max"/>
               </constraints>
@@ -1407,7 +1417,7 @@
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
-            <selectionEntryGroup id="561a-8245-0314-9b8e" name="Replace Twin-linked Shuriken Catapult" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="561a-8245-0314-9b8e" name="Replace Twin-linked Shuriken Catapult" hidden="false" collective="false" import="true" sortIndex="2">
               <selectionEntries>
                 <selectionEntry id="6d8e-38b0-a1d2-d847" name="Shuriken Cannon" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
@@ -1424,7 +1434,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="1692-6ee8-1b50-6c78" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup"/>
+            <entryLink id="1692-6ee8-1b50-6c78" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup" sortIndex="3"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
@@ -1445,7 +1455,7 @@
         <infoLink id="cec1-b260-d579-e8a2" name="Fleet of Foot" hidden="false" targetId="7a77-8498-1878-5086" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="f45a-71d9-c01f-1879" name="Swooping Hawk" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="f45a-71d9-c01f-1879" name="Swooping Hawk" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7af-cbf0-abbf-21e2" type="max"/>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c81-23a6-8325-b45b" type="min"/>
@@ -1454,7 +1464,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="21"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3846-7710-ac87-3295" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3846-7710-ac87-3295" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b70-6a94-564f-a44a" type="max"/>
           </constraints>
@@ -1536,7 +1546,7 @@
         <infoLink id="120b-b014-b9b2-4634" name="Pulse Laser" hidden="false" targetId="b726-76b7-0d78-59d9" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="895f-3d51-1ea6-33e9" name="Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="895f-3d51-1ea6-33e9" name="Weapon" hidden="false" collective="false" import="true" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97ca-763a-23bb-86ac" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef11-c0c7-b860-1adc" type="min"/>
@@ -1585,7 +1595,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9a7c-4982-0d4c-eda1" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="9325-7c2c-a5fd-0fc3">
+        <selectionEntryGroup id="9a7c-4982-0d4c-eda1" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="9325-7c2c-a5fd-0fc3" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05b8-c6e5-32d4-4e5e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac18-2743-6e7a-d454" type="min"/>
@@ -1616,7 +1626,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0163-3428-094c-4aba" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup"/>
+        <entryLink id="0163-3428-094c-4aba" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup" sortIndex="3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120"/>
@@ -1630,7 +1640,7 @@
         <infoLink id="1a99-675a-0dbb-4767" name="Prism Cannon" hidden="false" targetId="e44b-58e1-770a-1893" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="14fe-18e2-35f7-d49e" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="83e1-074f-fe1b-fada">
+        <selectionEntryGroup id="14fe-18e2-35f7-d49e" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="83e1-074f-fe1b-fada" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be09-2eac-9c88-d460" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4f9-7047-6504-9b57" type="min"/>
@@ -1661,7 +1671,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="94e6-7339-0bfb-ab7a" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup"/>
+        <entryLink id="94e6-7339-0bfb-ab7a" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="ad83-1ee9-ea12-cb0b" type="selectionEntryGroup" sortIndex="2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="115"/>
@@ -1735,7 +1745,7 @@
         <infoLink id="2502-2881-40d1-9825" name="Eldar Energy Field" hidden="false" targetId="7c2f-b369-5f7f-da26" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="8ee5-33c0-c17d-c7bd" name="War Walker" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="8ee5-33c0-c17d-c7bd" name="War Walker" hidden="false" collective="false" import="true" type="model" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa84-bdb0-e1c6-02b3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e57e-20c5-262c-2423" type="min"/>
@@ -1861,7 +1871,7 @@
         <infoLink id="2d48-3961-3388-b278" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9296-365c-5b35-b22e" name="Heavy Weapon Platform" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="9296-365c-5b35-b22e" name="Heavy Weapon Platform" hidden="false" collective="false" import="true" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f99b-057f-4a8e-f28f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bf2-b919-59a2-6e50" type="min"/>
@@ -1903,7 +1913,7 @@
         <infoLink id="5a25-83e6-b2f8-6642" name="Reaper Launcher" hidden="false" targetId="bed6-4f6f-cf45-0fbb" type="profile"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="ccb4-a091-431b-9ccf" name="Dark Reaper" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="ccb4-a091-431b-9ccf" name="Dark Reaper" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fb6-e37a-b65f-7844" type="max"/>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5da7-ff2b-bb9c-f7b3" type="min"/>
@@ -1915,7 +1925,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="37"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2e0f-23c3-067b-5d82" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2e0f-23c3-067b-5d82" name="Exarch Upgrade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d712-bbe2-b8fa-6e1d" type="max"/>
           </constraints>
@@ -1978,7 +1988,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="1ced-282e-0f59-664f" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry">
+        <entryLink id="1ced-282e-0f59-664f" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" sortIndex="3" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd7d-9bd9-1c9a-096e" type="max"/>
           </constraints>
@@ -1989,19 +1999,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e80d-5a31-a1ec-f90d" name="Eldrad Ulthran, Farseer of Ulthwe" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="a4ce-8a2f-473c-3dca" value="0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="4ed5-2f92-9abc-2870" scope="force" value="2000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a194-de6c-6011-05e1" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf16-775c-054d-e03c" type="greaterThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4ce-8a2f-473c-3dca" type="max"/>
       </constraints>
@@ -2054,14 +2051,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a194-de6c-6011-05e1" name="Nuadha &apos;Fireheart&apos;, Wild Rider of Saim Hann" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="dc32-67e8-b9f5-9290" value="0">
-          <conditions>
-            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e80d-5a31-a1ec-f90d" type="greaterThan"/>
-            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf16-775c-054d-e03c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dc32-67e8-b9f5-9290" type="max"/>
       </constraints>
@@ -2622,7 +2611,7 @@
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="3546-7848-f4db-e586" name="Warlock Psychic Powers" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="3546-7848-f4db-e586" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51eb-0c17-4162-3c63" type="max"/>
       </constraints>
@@ -2678,9 +2667,9 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="c347-83e2-7f11-3074" name="Eldar Armoury" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="c347-83e2-7f11-3074" name="Eldar Armoury" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntryGroups>
-        <selectionEntryGroup id="0632-e0b5-7b1b-7ec6" name="Weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="0632-e0b5-7b1b-7ec6" name="Weapons" hidden="false" collective="false" import="true" collapsible="true" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4f7-4bb5-b015-d505" type="max"/>
           </constraints>
@@ -2731,7 +2720,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9df7-06ad-936b-6b1c" name="Wargear" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="9df7-06ad-936b-6b1c" name="Wargear" hidden="false" collective="false" import="true" collapsible="true" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d47-b26e-3591-8711" type="max"/>
           </constraints>
@@ -2818,7 +2807,7 @@
         <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a0c-59e3-910e-01b0" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="98a5-16a6-7525-aa8e" name="Warlock" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="98a5-16a6-7525-aa8e" name="Warlock" hidden="false" collective="false" import="true" type="model" collapsible="true" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c641-7a39-1122-6435" type="max"/>
           </constraints>
@@ -2826,14 +2815,14 @@
             <infoLink id="b7d8-574f-1ea6-51f7" name="Warlock" hidden="false" targetId="f970-9da9-42db-9f1d" type="profile"/>
           </infoLinks>
           <entryLinks>
-            <entryLink id="8f72-9849-8c6f-90de" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
-            <entryLink id="304c-824b-027d-3b05" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup"/>
+            <entryLink id="8f72-9849-8c6f-90de" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup" sortIndex="2" collapsible="true"/>
+            <entryLink id="304c-824b-027d-3b05" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup" sortIndex="1"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a421-09aa-6c08-ebe2" name="Jetbike Warlock" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="a421-09aa-6c08-ebe2" name="Jetbike Warlock" hidden="false" collective="false" import="true" type="model" sortIndex="2" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="83d9-1882-1c33-592b" type="max"/>
           </constraints>
@@ -2847,14 +2836,14 @@
             <infoLink id="de97-dfa9-acdb-6211" name="Jetbike Walock" hidden="false" targetId="3e94-e809-5707-130a" type="profile"/>
           </infoLinks>
           <entryLinks>
-            <entryLink id="4794-cc47-86a9-6552" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
-            <entryLink id="f8e7-4ec9-e5da-2689" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup"/>
+            <entryLink id="4794-cc47-86a9-6552" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup" sortIndex="2" collapsible="true"/>
+            <entryLink id="f8e7-4ec9-e5da-2689" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup" sortIndex="1"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="36"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="edd8-87c5-b1a4-4892" name="Spiritseer" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="edd8-87c5-b1a4-4892" name="Spiritseer" hidden="false" collective="false" import="true" type="model" sortIndex="3" collapsible="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -2872,7 +2861,7 @@
             <infoLink id="c80a-61f1-dd20-ecbb" name="Rune Armour" hidden="false" targetId="96ee-79a8-217a-28a7" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="4c4c-e9bd-8af2-b6fc" name="Weapons" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="4c4c-e9bd-8af2-b6fc" name="Weapons" hidden="false" collective="false" import="true" collapsible="true" sortIndex="1">
               <constraints>
                 <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="741e-da7b-be3a-266c" type="max"/>
               </constraints>
@@ -2925,7 +2914,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="c999-047b-5f46-0355" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
+            <entryLink id="c999-047b-5f46-0355" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup" sortIndex="2"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="19"/>
@@ -2933,7 +2922,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="ad83-1ee9-ea12-cb0b" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="ad83-1ee9-ea12-cb0b" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
         <selectionEntry id="613e-e3a4-b0be-0fc1" name="Crystal Targeting Matrix" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3022,7 +3011,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="6f8b-71e8-4378-aba2" name="Farseer Psychic Powers" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="6f8b-71e8-4378-aba2" name="Farseer Psychic Powers" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="481e-d646-f6bf-8577" type="max"/>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d97-8deb-ec44-3746" type="min"/>
