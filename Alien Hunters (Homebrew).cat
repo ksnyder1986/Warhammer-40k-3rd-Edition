@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="95da-c4de-2646-fbff" name="Alien Hunters (Homebrew)" revision="2" battleScribeVersion="2.03" authorName="Kris" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="95da-c4de-2646-fbff" name="Xenohunters (Homebrew)" revision="3" battleScribeVersion="2.03" authorName="Kris" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>This list is inspired on the Witch Hunter and Daemon Hunter armies for 3rd edition, combined with information found in Chapter Approved, Citadel Journal, White Dwarfs and the 7th Edition Codex.</readme>
   <categoryEntries>
     <categoryEntry id="400a-5925-01df-da4a" name="Deathwatch" hidden="false"/>
@@ -1928,6 +1928,11 @@
         <categoryLink id="8009-efb5-e468-6a4b" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Deathwatch Thunderhawk" hidden="false" id="0799-5054-5f37-fe8d" type="selectionEntry" targetId="be1b-e6f6-c506-b5d7">
+      <categoryLinks>
+        <categoryLink targetId="6b90-dc9c-1a49-3fdc" id="8ce6-3571-5b2b-0235" primary="true" name="Super-Heavy"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="025b-45e6-34ab-0a5b" name="Ordo Xenos Inquisitor Lord" hidden="false" collective="false" import="true" type="unit">
@@ -2276,7 +2281,7 @@
           <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
         </rule>
         <rule id="f765-2842-b9c9-e41a" name="The Voice" hidden="false">
-          <description>Use this Psyker phase in the shooting phase by targetting an enemy unit within 24&quot;. If the psychic test is passed, roll D6 for both Eisenhorn and the target unit, adding the Leadership of both units. If Eisenhorn&apos;s total exceeds the target unit, all shooting attacks at that unit are at +1 to hit for the whole of the Shooting Phase.</description>
+          <description>Use this Psyker phase in the shooting phase by targeting an enemy unit within 24&quot;. If the psychic test is passed, roll D6 for both Eisenhorn and the target unit, adding the Leadership of both units. If Eisenhorn&apos;s total exceeds the target unit, all shooting attacks at that unit are at +1 to hit for the whole of the Shooting Phase.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2726,7 +2731,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="6a97-8955-504a-fa9b" name="Deathwatch Marines" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="808d-810d-598e-9416" name="Deathwatch Space Marine" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="808d-810d-598e-9416" name="Deathwatch Space Marine" hidden="false" collective="false" import="true" type="model" defaultAmount="1,1,1,1">
               <constraints>
                 <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98ea-923b-5a3f-b196" type="min"/>
                 <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d8a-b70d-6142-35e6" type="max"/>
@@ -2744,8 +2749,34 @@
                 <infoLink id="2740-3c6c-122e-b803" name="Frag Grenades" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
                 <infoLink id="158b-375f-fc43-c2e6" name="Krak Grenades" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
                 <infoLink id="648c-bbeb-04ac-07c9" name="True Grit" hidden="false" targetId="8e43-d9a7-176d-f419" type="rule"/>
-                <infoLink id="5b16-ed0d-22b0-c70c" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
-                <infoLink id="0bf8-466c-f1a8-bdb6" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="5b16-ed0d-22b0-c70c" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="cd71-95da-d99b-9e95" shared="true" childName="Weapon Options"/>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="bf76-01df-f08e-6162" shared="true" childName="Pair of Lightning Claws"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="0bf8-466c-f1a8-bdb6" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="d2db-ac37-f72b-252d" shared="true" childName="Veteran Weapon"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Melta Bombs" id="40df-cad1-c111-d3f0" hidden="false" type="profile" targetId="87d0-8c40-7bcb-8cbb"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="16b5-89cb-2d61-f422" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
@@ -2843,9 +2874,9 @@
                         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
                       </costs>
                     </selectionEntry>
-                    <selectionEntry id="7605-112f-6926-c3cc" name="Bolter 2/ M.40 Targeter" hidden="false" collective="false" import="true" type="upgrade">
+                    <selectionEntry id="7605-112f-6926-c3cc" name="Bolter w/ M.40 Targeter" hidden="false" collective="false" import="true" type="upgrade">
                       <profiles>
-                        <profile id="0b1a-bc1a-bcb7-7ea2" name="Bolter 2/ M.40 Targeter" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+                        <profile id="0b1a-bc1a-bcb7-7ea2" name="Bolter w/ M.40 Targeter" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
                           <characteristics>
                             <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
                             <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
@@ -2890,7 +2921,7 @@
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="218e-bad6-b40b-e671" name="Veteran Sergeant" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="218e-bad6-b40b-e671" name="Veteran Sergeant" hidden="false" import="true" type="model" collapsible="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ced-3057-d78d-ce6f" type="max"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f9a-423d-fae0-58c5" type="min"/>
@@ -2900,11 +2931,33 @@
                 <infoLink id="57f4-c8ee-9ef6-e20a" name="True Grit" hidden="false" targetId="8e43-d9a7-176d-f419" type="rule"/>
               </infoLinks>
               <entryLinks>
-                <entryLink id="3376-a0c6-e081-dfed" name="Deathwatch Armoury" hidden="false" collective="false" import="true" targetId="2ee3-aeb9-9475-18c3" type="selectionEntryGroup"/>
+                <entryLink id="3376-a0c6-e081-dfed" name="Deathwatch Armoury" hidden="false" collective="false" import="true" targetId="2ee3-aeb9-9475-18c3" type="selectionEntryGroup" collapsible="true"/>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
               </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapons" id="82d8-e1ba-b919-5b34" hidden="false" defaultSelectionEntryId="5daf-8ac1-cc3e-c3a6">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Boltgun and Close Combat Weapon" hidden="false" id="5daf-8ac1-cc3e-c3a6">
+                      <infoLinks>
+                        <infoLink name="Boltgun" id="f92f-62c8-3f75-6140" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                        <infoLink name="Close Combat Weapon" id="dd6a-c7fc-dbcf-d764" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Bolt Pistol and Close Combat Weapon" hidden="false" id="4d2e-e4c0-3e6d-3e6b">
+                      <infoLinks>
+                        <infoLink name="Bolt Pistol" id="aa18-ba75-2091-3f37" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                        <infoLink name="Close Combat Weapon" id="1bba-1d17-e560-3a5e" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6631-e854-250e-af0d-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6631-e854-250e-af0d-max"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2934,7 +2987,7 @@
         <categoryLink id="0217-2e67-abb7-f6dc" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ade6-2fdc-8414-aec9" name="Left Arm" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="ade6-2fdc-8414-aec9" name="Left Arm" hidden="false" collective="false" import="true" defaultSelectionEntryId="819d-73e4-75e3-1e43">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e08a-8a02-5058-04a4" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d21-82d6-2f04-d17e" type="min"/>
@@ -2969,7 +3022,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="d3ee-e4c7-73ce-e677" name="Right Arm" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="d3ee-e4c7-73ce-e677" name="Right Arm" hidden="false" collective="false" import="true" defaultSelectionEntryId="7c04-f65f-84d9-0c24">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="050a-315d-2a45-3180" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e917-287c-7a45-fc17" type="min"/>
@@ -3059,7 +3112,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="1c85-5fab-fea0-6317" name="Terminators" hidden="false" collective="false" import="true" defaultSelectionEntryId="71a9-6ba7-3673-595f">
           <selectionEntries>
-            <selectionEntry id="71a9-6ba7-3673-595f" name="Deathwatch Terminator" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="71a9-6ba7-3673-595f" name="Deathwatch Terminator" hidden="false" collective="false" import="true" type="model" collapsible="true" step="" defaultAmount="1,1,1">
               <constraints>
                 <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb38-8d88-41dc-843f" type="min"/>
                 <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8844-ce56-910a-c63f" type="max"/>
@@ -3174,7 +3227,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="1e69-ac3b-c03c-739f" name="Deathwatch Special Ammo" hidden="false" collective="false" import="true" targetId="28b8-2af4-e87c-8047" type="selectionEntryGroup"/>
+        <entryLink id="1e69-ac3b-c03c-739f" name="Deathwatch Special Ammo" hidden="false" collective="false" import="true" targetId="65b9-f25b-96d0-6437" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
@@ -3344,7 +3397,7 @@
         <entryLink id="8b05-349b-e775-f7e4" name="Deathwatch Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="e674-0c6f-19bc-1152" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="130"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="125"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f47-7c6f-22de-4316" name="Deathwatch Bikers" hidden="false" collective="false" import="true" type="upgrade">
@@ -3381,6 +3434,20 @@
                 </infoLink>
                 <infoLink id="fb01-d58c-77d3-1d93" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
                 <infoLink id="44aa-ede0-3525-1796" name="True Grit" hidden="false" targetId="8e43-d9a7-176d-f419" type="rule"/>
+                <infoLink name="Bolt Pistol" id="2312-a8ef-1aca-779b" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="6061-e337-db66-d2c0" shared="true" childName="Veteran Weapon"/>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5b2-f227-590a-5e22" shared="true" childName="Weapon Options"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <categoryLinks>
                 <categoryLink id="931d-ace3-93ea-88bb" name="Bikes" hidden="false" targetId="86cf-31f2-e698-7a81" primary="false"/>
@@ -4233,11 +4300,11 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="680"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4902-d863-d129-6744" name="Corvus Blackstar" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="4902-d863-d129-6744" name="Deathwatch Corvus Blackstar" hidden="false" collective="false" import="true" type="unit">
       <comment>Base 142 from vehicle design rules</comment>
       <rules>
         <rule id="2bf5-9c38-83ad-3a24" name="Ceramite Shielding" hidden="false">
-          <description>The Thunderhawk&apos;s reentry shielding makes it resistant to melta weapons. Melta weapons, including melta bombs, never roll a extra dice for armour penetration due to being at half range against a Thunderhawk.</description>
+          <description>The Blackstar&apos;s reentry shielding makes it resistant to melta weapons. Melta weapons, including melta bombs, never roll a extra dice for armour penetration due to being at half range against a Blackstar.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -4308,7 +4375,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="142"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b102-de7a-a275-157d" name="Deathwatch Assault Veterans" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="b102-de7a-a275-157d" name="Deathwatch Assault Squad" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink id="915d-12f8-d547-dfa1" name="Deathwatch" hidden="false" targetId="400a-5925-01df-da4a" primary="false"/>
       </categoryLinks>
@@ -4335,6 +4402,36 @@ Hellfire Round: The shot wounds on a 2+.</description>
                 </infoLink>
                 <infoLink id="0a40-d6a4-2b96-653f" name="Jump Packs" hidden="false" targetId="2563-092a-a5bc-992f" type="rule"/>
                 <infoLink id="625f-1a13-bf97-1a31" name="And They Shall Know No Fear" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
+                <infoLink name="Bolt Pistol" id="b484-d6c9-070b-fddc" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="974a-ba2e-8132-ccec" shared="true" childName="Plasma Pistol"/>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="c766-fb8e-459d-2b6b" shared="true" childName="Pair of Lightning Claws"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Close Combat Weapon" id="39d1-a586-5c88-eb6c" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="8fcb-6a04-5abd-c2b0" shared="true" childName="Veteran Weapon"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Frag Grenades" id="d23f-7ac4-e178-b560" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+                <infoLink name="Krak Grenades" id="b735-0e3d-91fa-1fae" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+                <infoLink name="Melta Bombs" id="2ba9-f97c-1f38-7b0a" hidden="false" type="profile" targetId="87d0-8c40-7bcb-8cbb"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="2a6e-4533-3100-a351" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
@@ -4430,6 +4527,12 @@ Hellfire Round: The shot wounds on a 2+.</description>
               <infoLinks>
                 <infoLink id="1093-77aa-45ff-de37" name="Deathwatch Veteran" hidden="false" targetId="6baf-93ee-a2f0-f500" type="profile"/>
                 <infoLink id="d2f6-c27f-3bde-7c9d" name="True Grit" hidden="false" targetId="8e43-d9a7-176d-f419" type="rule"/>
+                <infoLink name="Bolt Pistol" id="814e-8a03-d7e9-f8b1" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a"/>
+                <infoLink name="Close Combat Weapon" id="c873-1230-f899-cf9a" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
+                <infoLink name="Jump Packs" id="4dd5-6c05-a633-cdc0" hidden="false" targetId="2563-092a-a5bc-992f" type="rule"/>
+                <infoLink name="Frag Grenades" id="5bc0-7fbf-1d9e-3ea3" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+                <infoLink name="Krak Grenades" id="e848-1941-c5d1-9f78" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+                <infoLink name="Melta Bombs" id="2502-6876-0afc-c0f0" hidden="false" type="profile" targetId="87d0-8c40-7bcb-8cbb"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="4bb0-e474-7bb2-e188" name="Deathwatch Armoury" hidden="false" collective="false" import="true" targetId="2ee3-aeb9-9475-18c3" type="selectionEntryGroup"/>
@@ -4441,9 +4544,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="38df-68c2-8250-3422" name="Deathwatch Special Ammo" hidden="false" collective="false" import="true" targetId="28b8-2af4-e87c-8047" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
@@ -9231,12 +9331,14 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9520-cd95-dbde-98dc" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="bbb3-1176-212e-ede4" name="Xenophile" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="bbb3-1176-212e-ede4" name="Xenologist" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e7d-3adf-bc41-46e5" type="max"/>
               </constraints>
               <rules>
-                <rule id="8feb-5797-6e63-5265" name="Xenophile" hidden="false"/>
+                <rule id="8feb-5797-6e63-5265" name="Xenologist" hidden="false">
+                  <description>Each Xenologist has studied the Xeno extensively to understand their strength&apos;s and weaknesses. For each Xenologist in the Inquisitor&apos;s retinue, choose 1 Xeno unit in an opposing army at the start of the game. The Inquisitor and each member of the Inquisitor&apos;s retinue gain +1 on rolls to wound models in that unit. Note, Xeno units are defined by any unit that is not &quot;Human&quot; or &quot;Daemonic&quot;. Therefore, units chosen from Codex Imperial Guard, Codex Space Marines, Codex Chaos Space Marines, Codex Daemons of Chaos, etc. cannot be chosen.</description>
+                </rule>
               </rules>
               <infoLinks>
                 <infoLink id="ad89-c962-2447-e316" name="Henchman" hidden="false" targetId="f1c0-f909-74b0-8a4b" type="profile">
@@ -10667,7 +10769,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
                 <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
                 <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
                 <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
-                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 3</characteristic>
                 <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
               </characteristics>
             </profile>
@@ -10693,7 +10795,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
                 <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
                 <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
                 <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
-                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
                 <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
               </characteristics>
             </profile>
@@ -10719,7 +10821,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
                 <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
                 <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
                 <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
-                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
                 <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Re-roll failed rolls to wound</characteristic>
               </characteristics>
             </profile>
@@ -10729,6 +10831,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <comment>Boltguns</comment>
     </selectionEntryGroup>
     <selectionEntryGroup id="02f3-0c60-0986-0a27" name="Allied Contingents" hidden="false" collective="false" import="true">
       <constraints>
@@ -11592,6 +11695,92 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Deathwatch Special Ammo" id="65b9-f25b-96d0-6437" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beee-a302-ac01-decd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Metal Storm Ammunition" hidden="false" id="2f89-9dfe-71c4-05c1" collective="false">
+          <modifiers>
+            <modifier type="increment" value="5" field="4ed5-2f92-9abc-2870">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7938-85b6-e7e4-30f1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Metal Storm Ammunition" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="c24c-f14b-89aa-9a8f">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Kraken Bolts" hidden="false" id="1cb1-38a1-4775-94d3" collective="false">
+          <modifiers>
+            <modifier type="increment" value="5" field="4ed5-2f92-9abc-2870">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac1d-306a-e1ea-a629" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Kraken Bolts" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="e31b-e1dc-c5da-3734">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Inferno Bolts" hidden="false" id="1f66-a870-1f8b-b623" collective="false">
+          <modifiers>
+            <modifier type="increment" value="5" field="4ed5-2f92-9abc-2870">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5cda-6765-cf6e-9469" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Inferno Bolts" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="4bbb-f16c-ceb2-9e48">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Re-roll failed rolls to wound</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>Storm Bolters</comment>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
