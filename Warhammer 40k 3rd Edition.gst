@@ -171,11 +171,13 @@
               <repeats>
                 <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
+              <comment>Space Wolves</comment>
             </modifier>
             <modifier type="increment" field="79c8-d712-b3f8-3fbc" value="1">
               <repeats>
                 <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
               </repeats>
+              <comment>Space Wolves</comment>
             </modifier>
             <modifier type="decrement" field="79c8-d712-b3f8-3fbc" value="2">
               <conditionGroups>
@@ -4222,8 +4224,8 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
     <profile id="c7a3-7006-5226-8181" name="Lightning Claw" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Counts as Power Weapon. May re-roll any failed wounds. Grants +1 Attack when dual-wielded</characteristic>
       </characteristics>
@@ -4867,9 +4869,9 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
     </profile>
     <profile id="a161-ed4b-bcb7-0a01" name="Power Fist" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="deb8-131d-bdcf-1376"/>
-        <characteristic name="S" typeId="24d8-2110-08fa-d844"/>
-        <characteristic name="AP" typeId="25ce-028f-0aae-2855"/>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Doubles Strength up to 10 &amp; ignores armor saves, but attacks last</characteristic>
       </characteristics>
@@ -5172,6 +5174,15 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="4e7a-e5ed-bd58-12a7" name="Hand Flamer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
