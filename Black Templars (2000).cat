@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7dbe-7b9c-89fc-d346" name="Black Templars (2000)" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7dbe-7b9c-89fc-d346" name="Black Templars (2000)" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="ba81-18ab-3ca6-29e5" name="Emperor&apos;s Champion" hidden="false" collective="false" import="true" targetId="ad23-c512-3d63-c3a4" type="selectionEntry">
       <constraints>
@@ -269,7 +269,7 @@
         <categoryLink id="1401-210f-90c5-946a" name="Black Templar" hidden="false" targetId="0e24-d2c1-5ce8-e7cb" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="4ac4-c193-bbeb-932a" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4ac4-c193-bbeb-932a" name="Krak Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -287,7 +287,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="530c-27f0-d535-2665" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="530c-27f0-d535-2665" name="Frag Grenades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="1">
               <repeats>
@@ -305,7 +305,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0d99-9d5a-e446-6370" name="Purity Seals" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0d99-9d5a-e446-6370" name="Purity Seals" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -320,7 +320,7 @@
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3af3-df07-15d7-e620" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3af3-df07-15d7-e620" name="Smoke Grenades (Chapter Approved)" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <modifiers>
             <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
               <repeats>
@@ -345,7 +345,7 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="bf73-8892-26b5-4d0e" name="Initiates" hidden="false" collective="false" import="true" defaultSelectionEntryId="9af4-0c5e-a2a2-fb67">
+        <selectionEntryGroup id="bf73-8892-26b5-4d0e" name="Initiates" hidden="false" collective="false" import="true" defaultSelectionEntryId="9af4-0c5e-a2a2-fb67" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e5a-b804-e6f4-71bd" type="min"/>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="587f-a0ec-cf40-2a02" type="max"/>
@@ -354,9 +354,33 @@
             <selectionEntry id="9af4-0c5e-a2a2-fb67" name="Initiate" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="47dc-3016-14a2-f1e7" name="Initiate" hidden="false" targetId="958b-031a-c028-b157" type="profile"/>
-                <infoLink id="e18c-b40f-f512-7719" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
-                <infoLink id="5f5e-b4ca-ca3f-09c7" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink id="7a5a-242b-184e-ba27" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink id="e18c-b40f-f512-7719" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="e05f-9f28-d960-2276" childId="f30d-7b82-99ab-9bfa" shared="true" childName="Boltguns"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="5f5e-b4ca-ca3f-09c7" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="e05f-9f28-d960-2276" childId="4cc1-a071-e69a-4d80" shared="true" childName="Bolt Pistols and Close Combat Weapons"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="7a5a-242b-184e-ba27" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="e05f-9f28-d960-2276" childId="4cc1-a071-e69a-4d80" shared="true" childName="Bolt Pistols and Close Combat Weapons"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
@@ -385,7 +409,7 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="da78-ffb4-4b93-629c" name="Neophytes" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="da78-ffb4-4b93-629c" name="Neophytes" hidden="false" collective="false" import="true" sortIndex="4">
           <selectionEntries>
             <selectionEntry id="a2d4-4896-3cf7-911d" name="Neophyte" hidden="false" collective="false" import="true" type="model">
               <constraints>
@@ -393,9 +417,33 @@
               </constraints>
               <infoLinks>
                 <infoLink id="f40b-2c11-aa16-c5d2" name="Neophyte" hidden="false" targetId="c268-5b2e-90c2-7db6" type="profile"/>
-                <infoLink id="e901-b052-7c8e-8cd8" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-                <infoLink id="12f6-0e86-dc59-8bd5" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink id="9f45-ef38-d8ce-75e2" name="Shotgun" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
+                <infoLink id="e901-b052-7c8e-8cd8" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="e05f-9f28-d960-2276" childId="e089-7e2c-ce3a-5023" shared="true" childName="Bolt Pistols and Close Combat Weapons"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="12f6-0e86-dc59-8bd5" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="e05f-9f28-d960-2276" childId="e089-7e2c-ce3a-5023" shared="true" childName="Bolt Pistols and Close Combat Weapons"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="9f45-ef38-d8ce-75e2" name="Shotgun" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="e05f-9f28-d960-2276" childId="1d93-c11d-474a-da76" shared="true" childName="Shotguns"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11"/>
@@ -403,7 +451,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="308c-d2ef-9caf-f735" name="Initiate Special Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="308c-d2ef-9caf-f735" name="Initiate Special Weapon" hidden="false" collective="false" import="true" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="093d-3cd3-d3e9-5499" type="max"/>
           </constraints>
@@ -469,7 +517,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="a384-6271-f7fb-b129" name="Initiate Special Weapon" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="a384-6271-f7fb-b129" name="Initiate Special Weapon" hidden="false" collective="false" import="true" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf27-cdfb-053a-7939" type="max"/>
           </constraints>
@@ -500,7 +548,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="0e78-71c0-9748-d2aa" name="Transport" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="0e78-71c0-9748-d2aa" name="Transport" hidden="false" collective="false" import="true" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e75c-7b41-7ded-fbfd" type="max"/>
           </constraints>
@@ -524,6 +572,26 @@
               </modifiers>
             </entryLink>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Initiate Basic Weapons" id="cf10-be9d-bfb0-456a" hidden="false" sortIndex="3">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bolt Pistols and Close Combat Weapons" hidden="false" id="4cc1-a071-e69a-4d80"/>
+            <selectionEntry type="upgrade" import="true" name="Boltguns" hidden="false" id="f30d-7b82-99ab-9bfa"/>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5088-f227-5414-da45-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5088-f227-5414-da45-max"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Neophyte Basic Weapons" id="a6c9-08fb-7cdc-7a8a" hidden="false" sortIndex="5">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bolt Pistols and Close Combat Weapons" hidden="false" id="e089-7e2c-ce3a-5023"/>
+            <selectionEntry type="upgrade" import="true" name="Shotguns" hidden="false" id="1d93-c11d-474a-da76"/>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec23-c347-f01e-cf4e-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec23-c347-f01e-cf4e-max"/>
+          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
