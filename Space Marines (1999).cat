@@ -97,9 +97,7 @@ Note that Fast Attack units do not have the Intractable rule.</description>
       </infoLinks>
       <rules>
         <rule name="Shadow Killers" id="2b14-fb73-01c6-8c74" hidden="false">
-          <description>Mantis Warrior infantry units in Power or Artificer Armour gain the Move Through Cover Veteran Skill at no additional cost. Roll an extra D6 when moving through difficult terrain. 
-
-</description>
+          <description>Mantis Warrior infantry units in Power or Artificer Armour gain the Move Through Cover Veteran Skill at no additional cost. Roll an extra D6 when moving through difficult terrain.</description>
         </rule>
         <rule name="Ambush" id="8b5e-fbb0-36b3-7ca8" hidden="false">
           <description>If a Mantis Warrior squad which has the majority of its unit in cover completes a charge move, they gain +1 WS and +1 Initiative for the remainder of that Assault Phase.</description>
@@ -322,6 +320,7 @@ In addition to this, any model that may usually take a plasma pistol may instead
         </rule>
       </rules>
     </categoryEntry>
+    <categoryEntry name="Apothecary" id="25e1-76ae-f902-c820" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="42a3-487a-8d98-5c47" name="Commander" hidden="false" collective="false" import="true" targetId="043b-1cc7-9a38-8133" type="selectionEntry"/>
@@ -454,7 +453,7 @@ In addition to this, any model that may usually take a plasma pistol may instead
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Ancient Helveticus (Chapter Approved)" hidden="false" id="073f-8fd6-8a92-d774" type="selectionEntry" targetId="f98d-e661-a9b7-39af"/>
-    <entryLink import="true" name="Captain Invictus (Chapter Approved)" hidden="false" id="ffcb-c8b5-375e-09b0" type="selectionEntry" targetId="f95f-54de-870f-a05e"/>
+    <entryLink import="true" name="Captain Invictus" hidden="false" id="ffcb-c8b5-375e-09b0" type="selectionEntry" targetId="f95f-54de-870f-a05e"/>
     <entryLink import="true" name="1st Company Space Marine Veteran Squad" hidden="false" id="207f-5707-089a-102a" type="selectionEntry" targetId="9915-58ba-ca4b-c19d"/>
     <entryLink import="true" name="1st Company Terminator Assault Squad" hidden="false" id="9e9f-360a-5f93-de89" type="selectionEntry" targetId="13a8-e789-aea5-f204"/>
     <entryLink import="true" name="1st Company Terminator Squad" hidden="false" id="3cf0-81dd-ec27-0424" type="selectionEntry" targetId="3739-5420-30b9-df87"/>
@@ -1585,6 +1584,9 @@ In addition to this, any model that may usually take a plasma pistol may instead
                   </modifiers>
                 </selectionEntry>
               </selectionEntries>
+              <categoryLinks>
+                <categoryLink targetId="25e1-76ae-f902-c820" id="73cf-9f7b-9002-171f" primary="false" name="Apothecary"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="aa72-2b72-a70f-7283" name="Techmarine" hidden="false" collective="false" import="true" type="model">
               <modifiers>
@@ -11391,7 +11393,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5709-6bb9-f3f9-07f2" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="63f7-a02b-edf8-fde2" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="25e1-76ae-f902-c820" type="notInstanceOf" childName="Apothecary"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11518,7 +11520,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5709-6bb9-f3f9-07f2" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="63f7-a02b-edf8-fde2" type="notInstanceOf"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="25e1-76ae-f902-c820" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Apothecary"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
