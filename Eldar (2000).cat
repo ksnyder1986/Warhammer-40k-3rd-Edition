@@ -6,6 +6,8 @@
     <categoryEntry id="9079-4caf-1cdf-e94e" name="Alaitoc" hidden="false"/>
     <categoryEntry id="5911-bde3-daff-e07a" name="Biel-tan" hidden="false"/>
     <categoryEntry id="2585-cdc1-80b7-c393" name="Ulthwe" hidden="false"/>
+    <categoryEntry name="Seer Council" id="2169-8d5b-499e-5bc6" hidden="true"/>
+    <categoryEntry name="Jetbike Guardians" id="51f4-6f47-39de-5197" hidden="true"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7e16-88e2-6207-9eb6" name="Asurmen" hidden="false" collective="false" import="true" targetId="7f19-b30b-de19-562f" type="selectionEntry">
@@ -257,11 +259,7 @@
       <entryLinks>
         <entryLink id="41be-ee5d-ad2f-a55f" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup" sortIndex="2"/>
         <entryLink id="b8d9-faaf-f08e-627d" name="Farseer Psychic Powers" hidden="false" collective="false" import="true" targetId="6f8b-71e8-4378-aba2" type="selectionEntryGroup" sortIndex="1"/>
-        <entryLink id="b79d-6b65-676c-76d4" name="Warlock Bodyguard" hidden="false" collective="false" import="true" targetId="8461-d2e6-c311-fe84" type="selectionEntryGroup" sortIndex="3" collapsible="true">
-          <entryLinks>
-            <entryLink import="true" name="Warlock" hidden="false" id="aa50-8db0-1f13-09a0" type="selectionEntry" targetId="ec2f-166f-1795-507b" defaultAmount="0"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink id="b79d-6b65-676c-76d4" name="Warlock Bodyguard" hidden="false" collective="false" import="true" targetId="8461-d2e6-c311-fe84" type="selectionEntryGroup" sortIndex="3" collapsible="true"/>
         <entryLink id="ad02-cf73-6c98-783e" name="Wave Serpent" hidden="false" collective="false" import="true" targetId="d7ab-d578-0ff9-f627" type="selectionEntry" collapsible="true" sortIndex="4">
           <modifiers>
             <modifier type="set" field="8041-82ea-8c83-5111" value="0">
@@ -278,6 +276,9 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="2169-8d5b-499e-5bc6" id="3c24-71a2-ddf5-aff3" primary="false" name="Seer Council"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="d7ab-d578-0ff9-f627" name="Wave Serpent" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -837,6 +838,11 @@
             <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7d6-dfe5-2e67-4132" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Warlock" hidden="false" id="933e-8dac-8c66-132c" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d9ad-1274-09fc-9401"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
@@ -978,7 +984,11 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f10-2ab9-8756-6d41" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Warlock" hidden="false" id="e680-2de9-4028-1d95" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1"/>
+        <entryLink import="true" name="Warlock" hidden="false" id="e680-2de9-4028-1d95" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f885-bf83-c284-02b5"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
@@ -1179,7 +1189,11 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abfb-df00-e4b9-9d44" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Warlock" hidden="false" id="ffd0-6e3c-75b6-0da4" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1"/>
+        <entryLink import="true" name="Warlock" hidden="false" id="ffd0-6e3c-75b6-0da4" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b8a-dfc4-d97a-04d2"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
@@ -1252,11 +1266,18 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd18-e0ca-d2ea-b150" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Warlock" hidden="false" id="df3f-74fd-1284-fdbc" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1"/>
+        <entryLink import="true" name="Warlock" hidden="false" id="df3f-74fd-1284-fdbc" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a72-4b43-a29c-10c1"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="51f4-6f47-39de-5197" id="90d7-602c-1c71-2838" primary="false" name="Jetbike Guardians"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="ac77-965d-6973-5c3a" name="Shining Spears" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -2591,7 +2612,20 @@
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="0f94-6042-0450-0c3e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Warlock" id="4fc4-ed8d-0a6e-3def" hidden="false" targetId="f970-9da9-42db-9f1d" type="profile"/>
+        <infoLink name="Warlock" id="4fc4-ed8d-0a6e-3def" hidden="false" targetId="f970-9da9-42db-9f1d" type="profile">
+          <modifiers>
+            <modifier type="set" value="3+" field="b309-5233-122f-82bb">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="1842-c3b0-00aa-1b77" shared="true" childName="Jetbike"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="3(4)" field="e5f6-94c4-de8c-5fa8">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="1842-c3b0-00aa-1b77" shared="true" childName="Jetbike"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Warlock Psychic Powers" hidden="false" id="48df-3327-2e88-6121" collective="false" targetId="3546-7848-f4db-e586" type="selectionEntryGroup" sortIndex="2" collapsible="true"/>
@@ -2605,6 +2639,16 @@
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="force" childId="cc6c-88bb-a192-34d4" shared="true" roundUp="false" childName="Farseer" includeChildSelections="true"/>
           </repeats>
+        </modifier>
+        <modifier type="set" value="-1" field="0f94-6042-0450-0c3e">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="00db-baa2-10b1-b4c6" shared="true" childName="Ulthwe Strike Force (Eye of Terror 2003)"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d1e2-e6ed-e01f-ae6f" shared="true" childName="Ulthwe The Damned (2000)"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -2623,22 +2667,24 @@
               </modifiers>
             </infoLink>
             <infoLink name="Twin-Linked" id="d755-7275-72a6-f0a8" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+            <infoLink name="Jetbikes" id="7faa-6722-bc43-1109" hidden="false" type="rule" targetId="4556-3c66-6ed4-87a0"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="1" field="e173-efcd-09f1-d2c1">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9a65-700b-d909-e56a" shared="true" childName="Guardian Jetbike Squadron"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="51f4-6f47-39de-5197" shared="true" childName="Jetbike Guardians"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="0" field="0740-1e97-98e2-50d0">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="165b-56e9-5ba9-0a7e" shared="true" childName="Guardian Storm Squad"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="0740-1e97-98e2-50d0">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3331-9e91-18c4-3976" shared="true" childName="Guardian Defender Squad"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="51f4-6f47-39de-5197" shared="true" childName="Jetbike Guardians"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2169-8d5b-499e-5bc6" shared="true" childName="Seer Council"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2169-8d5b-499e-5bc6" shared="true" childName="Seer Council"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -2921,6 +2967,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Warlock" hidden="false" id="7fe0-a13f-fc35-63e2" type="selectionEntry" targetId="ec2f-166f-1795-507b" defaultAmount="0"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ad83-1ee9-ea12-cb0b" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
