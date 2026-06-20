@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="8" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="10" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <publications>
     <publication id="263c-b15e-84a3-a711" name="Codex Necrons 3rd Edition" shortName="Necrons" publisher="Codex Necrons" publicationDate="2002"/>
@@ -3291,7 +3291,9 @@ Weapon Destroyed results may choose to remove this weapon.</description>
     <rule id="ebe5-6318-0fba-b84c" name="Twin-Linked" hidden="false">
       <description>May re-roll missed to-hits once per attack.</description>
     </rule>
-    <rule id="e65f-0536-e057-e2d2" name="Combi Weapons" hidden="false"/>
+    <rule id="e65f-0536-e057-e2d2" name="Combi Weapons" hidden="false" publicationId="a32d-d82d-5f82-b13a" page="34">
+      <description>These are basically two weapons joined together, giving the wielder a choice of two weapons to fire instead of one. A wielder who is armed with a combi-weapon may choose which of the weapons it is going to use in the shooting phase. The regular weapon may be fired any number of times. but the other weapon may only be fired once per battle. Note that you may not choose to fire both weapons at once.</description>
+    </rule>
     <rule id="cedc-c0a1-ffd3-1b51" name="Frag Grenades" hidden="false"/>
     <rule id="9db9-94c1-ce97-f40a" name="Jetpack" hidden="false">
       <description>Can either:
@@ -3777,6 +3779,9 @@ Effect: Used before determining who goes first. If successful, the user&apos;s f
       <description>One use only.
 
 Blind/smoke grenades are used in the Shooting phase instead of the unit firing any weapons. Mark the unit as using its blind/smoke grenades by placing cotton wool around them. A unit cannot assault on the same turn it uses blind/smoke grenades. The blind/smoke screen lasts until the start of the player&apos;s next turn and until then the unit counts as in cover with a 5+ cover save. Because they count as being in cover, models in the unit will also strike first if assaulting, unless the enemy is armed with something like frag grenades, or has an ability that allows them to always strike first.</description>
+    </rule>
+    <rule name="Kombi-Weapons" id="ae7f-b375-c29b-5232" hidden="false" publicationId="7f3a-bc20-c411-2e02" page="34">
+      <description>A kombi-weapon is two weapons nailed/wired/welded together, and gives the Ork a choice of two weapons to fire with. An ork that is armed with Kombi-weapon may choose to fire one of the weapons during the shooting phase. The shoota may be fired any number of times, but the other weapon is only allowed to be fired once per battle. Note that you may not choose to fire both of these weapons at the same time. a kombi-weapon may be upgraded with kustom jobs, but the customising only applies to the shoota part of the weapon.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
