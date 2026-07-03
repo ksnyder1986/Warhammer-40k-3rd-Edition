@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="14" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <comment>2002 Chaos Space Marine Codex</comment>
   <categoryEntries>
     <categoryEntry id="039c-5796-7006-0975" name="Mark of Khorne" hidden="false"/>
@@ -1636,8 +1636,24 @@
               </modifiers>
               <infoLinks>
                 <infoLink id="9158-7375-0368-93d4" name="Possessed" hidden="false" targetId="9ae1-72d0-dc61-c419" type="profile"/>
-                <infoLink id="2564-f952-1f04-c24d" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-                <infoLink id="6664-f76a-d149-979a" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                <infoLink id="2564-f952-1f04-c24d" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="f72c-540d-728f-1ced" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" childName="Daemonic Talons"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="6664-f76a-d149-979a" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="f72c-540d-728f-1ced" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" childName="Daemonic Talons"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="ce49-2e3f-d909-31a7" name="Psychic Abilities &amp; Equipment" hidden="false" collective="false" import="true" targetId="0249-e80c-1238-d54b" type="selectionEntryGroup">
@@ -7453,7 +7469,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       <selectionEntryGroups>
         <selectionEntryGroup id="71cd-1a5e-c211-d5f5" name="Marines" hidden="false" collective="false" import="true" sortIndex="2">
           <selectionEntries>
-            <selectionEntry id="6f6b-b2ba-889f-839a" name="Chosen Marine" hidden="false" collective="false" import="true" type="model" collapsible="true">
+            <selectionEntry id="6f6b-b2ba-889f-839a" name="Chosen Marine" hidden="false" collective="false" import="true" type="model" collapsible="true" defaultAmount="1,1,1,1,1">
               <modifiers>
                 <modifier type="add" field="category" value="9b41-cfd0-0af7-2496">
                   <conditions>
@@ -7983,7 +7999,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                         <constraint field="selections" scope="6604-4630-4d70-1c9b" value="0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="f3c3-31d1-5ae1-935f" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="20ef-9828-40ab-2127" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
+                        <infoLink id="20ef-9828-40ab-2127" name="Heavy Flamer" hidden="false" targetId="6d36-2c09-dfc3-f257" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
@@ -8286,7 +8302,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                             <repeat field="selections" scope="6604-4630-4d70-1c9b" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f60f-73dd-cfca-b9d0" repeats="1" roundUp="false"/>
                             <repeat field="selections" scope="6604-4630-4d70-1c9b" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dde1-769d-6e7d-d0da" repeats="1" roundUp="false"/>
                             <repeat field="selections" scope="6604-4630-4d70-1c9b" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0eb6-7dda-ae6e-e999" repeats="1" roundUp="false"/>
-                            <repeat field="selections" scope="6604-4630-4d70-1c9b" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="995d-5fee-3c56-fa5b" repeats="1" roundUp="false"/>
+                            <repeat field="selections" scope="6604-4630-4d70-1c9b" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f11a-d081-d34d-c7b0" repeats="1" roundUp="false" childName="Plasma Pistol"/>
                             <repeat field="selections" scope="6604-4630-4d70-1c9b" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b610-e5cd-d1c6-afe4" repeats="1" roundUp="false"/>
                             <repeat field="selections" scope="6604-4630-4d70-1c9b" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7d96-cb4d-f078-3f25" repeats="1" roundUp="false"/>
                             <repeat field="selections" scope="6604-4630-4d70-1c9b" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="37de-dc13-6279-8846" repeats="1" roundUp="false"/>
@@ -8612,9 +8628,13 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     <selectionEntry id="d318-e3f0-acd4-f8fc" name="Plague Banner" hidden="false" collective="false" import="true" type="upgrade">
                       <modifiers>
                         <modifier type="set" field="hidden" value="true">
-                          <conditions>
-                            <condition field="selections" scope="6604-4630-4d70-1c9b" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e40-db3e-6ca6-5e18" type="equalTo"/>
-                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="0" field="selections" scope="6604-4630-4d70-1c9b" childId="4e40-db3e-6ca6-5e18" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
                         </modifier>
                       </modifiers>
                       <infoLinks>
@@ -8627,10 +8647,13 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     <selectionEntry id="81c2-9d88-76ca-2ff3" name="Rapturous Standard" hidden="false" collective="false" import="true" type="upgrade">
                       <modifiers>
                         <modifier type="set" field="hidden" value="true">
-                          <conditions>
-                            <condition field="selections" scope="6604-4630-4d70-1c9b" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a51-3987-58e1-5c44" type="equalTo"/>
-                            <condition field="selections" scope="6f6b-b2ba-889f-839a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac36-f3f6-8c22-b250" type="equalTo"/>
-                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="0" field="selections" scope="6604-4630-4d70-1c9b" childId="8a51-3987-58e1-5c44" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
                         </modifier>
                       </modifiers>
                       <infoLinks>
@@ -8643,9 +8666,13 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     <selectionEntry id="c3a8-f077-52d0-7ab4" name="Blasted Standard" hidden="false" collective="false" import="true" type="upgrade">
                       <modifiers>
                         <modifier type="set" field="hidden" value="true">
-                          <conditions>
-                            <condition field="selections" scope="6604-4630-4d70-1c9b" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="44ca-fa7f-9f9a-5d33" type="equalTo"/>
-                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="0" field="selections" scope="6604-4630-4d70-1c9b" childId="44ca-fa7f-9f9a-5d33" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
                         </modifier>
                       </modifiers>
                       <infoLinks>
@@ -9828,6 +9855,13 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="parent" childId="3ac4-ed07-8709-aa03" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" childName="Daemonic Talons"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="45ea-5eef-bc54-b99f" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
       <constraints>
@@ -9962,6 +9996,13 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="parent" childId="3ac4-ed07-8709-aa03" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" childName="Daemonic Talons"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="d6ad-8c39-d887-e2db" name="Wargear" hidden="false" collective="false" import="true" collapsible="true">
       <modifiers>
@@ -9977,7 +10018,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="75" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bc1-b018-18fa-2b4b" type="max"/>
+        <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="75" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9bc1-b018-18fa-2b4b" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="3647-3d3d-283b-5135" name="Master-Crafted Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -10633,7 +10674,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="50" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb08-6a74-b230-d96f" type="max"/>
+        <constraint field="4ed5-2f92-9abc-2870" scope="parent" value="50" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb08-6a74-b230-d96f" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="e50a-4bdf-af2d-e3c0" name="Daemonic Aura" hidden="false" collective="false" import="true" type="upgrade">
@@ -11471,7 +11512,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
             <infoLink id="5d75-464e-ebba-fe03" name="Daemon Weapon" hidden="false" targetId="f4a4-cde3-aa56-bd53" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
           </costs>
           <categoryLinks>
             <categoryLink targetId="96b0-a09e-9384-b8e3" id="65de-3ece-df7a-f705" primary="false" name="Daemon Weapon"/>
@@ -12345,6 +12386,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="3" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbb0-bb6e-9504-3027" type="max"/>
@@ -12418,6 +12469,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="3" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="651c-d8c1-83a3-6cb0" type="max"/>
@@ -12460,6 +12521,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                     <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aacc-a833-d81a-25ed" type="greaterThan"/>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ec22-521e-9a8e-4e3c" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9238-83a9-94fd-dd48" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -12510,6 +12581,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="1" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="587f-9e8f-c738-35f9" type="max"/>
@@ -12534,6 +12615,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6604-4630-4d70-1c9b" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="2" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -12571,6 +12662,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27ce-133c-8642-08c9" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="1" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fba3-6e18-bd63-cc2e" type="max"/>
@@ -12606,6 +12707,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="2" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a781-0083-c16e-a8c7" type="max"/>
@@ -12630,6 +12741,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6604-4630-4d70-1c9b" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="3" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -12663,6 +12784,16 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c96-248b-affd-e504" type="instanceOf"/>
                     <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6604-4630-4d70-1c9b" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="4ed5-2f92-9abc-2870">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3c96-248b-affd-e504" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="unit" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="unit"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

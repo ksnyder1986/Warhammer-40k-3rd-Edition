@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1369-4fc1-fe31-48dd" name="Eldar (2000)" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1369-4fc1-fe31-48dd" name="Eldar (2000)" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="5271-ffb6-46ff-8c2e" name="Iyanden" hidden="false"/>
     <categoryEntry id="5c43-dccf-e148-ab80" name="Saim-Hann" hidden="false"/>
     <categoryEntry id="9079-4caf-1cdf-e94e" name="Alaitoc" hidden="false"/>
     <categoryEntry id="5911-bde3-daff-e07a" name="Biel-tan" hidden="false"/>
     <categoryEntry id="2585-cdc1-80b7-c393" name="Ulthwe" hidden="false"/>
+    <categoryEntry name="Seer Council" id="2169-8d5b-499e-5bc6" hidden="true"/>
+    <categoryEntry name="Jetbike Guardians" id="51f4-6f47-39de-5197" hidden="true"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7e16-88e2-6207-9eb6" name="Asurmen" hidden="false" collective="false" import="true" targetId="7f19-b30b-de19-562f" type="selectionEntry">
@@ -274,6 +276,9 @@
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="2169-8d5b-499e-5bc6" id="3c24-71a2-ddf5-aff3" primary="false" name="Seer Council"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="d7ab-d578-0ff9-f627" name="Wave Serpent" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -833,6 +838,11 @@
             <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7d6-dfe5-2e67-4132" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Warlock" hidden="false" id="933e-8dac-8c66-132c" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d9ad-1274-09fc-9401"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
@@ -972,6 +982,11 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f10-2ab9-8756-6d41" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Warlock" hidden="false" id="e680-2de9-4028-1d95" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f885-bf83-c284-02b5"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -1174,6 +1189,11 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abfb-df00-e4b9-9d44" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Warlock" hidden="false" id="ffd0-6e3c-75b6-0da4" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b8a-dfc4-d97a-04d2"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
@@ -1246,10 +1266,18 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd18-e0ca-d2ea-b150" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Warlock" hidden="false" id="df3f-74fd-1284-fdbc" type="selectionEntry" targetId="ec2f-166f-1795-507b" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a72-4b43-a29c-10c1"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="51f4-6f47-39de-5197" id="90d7-602c-1c71-2838" primary="false" name="Jetbike Guardians"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry id="ac77-965d-6973-5c3a" name="Shining Spears" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -2579,6 +2607,89 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="360"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Warlock" hidden="false" id="ec2f-166f-1795-507b" collective="false" collapsible="true">
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="0f94-6042-0450-0c3e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Warlock" id="4fc4-ed8d-0a6e-3def" hidden="false" targetId="f970-9da9-42db-9f1d" type="profile">
+          <modifiers>
+            <modifier type="set" value="3+" field="b309-5233-122f-82bb">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="1842-c3b0-00aa-1b77" shared="true" childName="Jetbike"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="3(4)" field="e5f6-94c4-de8c-5fa8">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="1842-c3b0-00aa-1b77" shared="true" childName="Jetbike"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Warlock Psychic Powers" hidden="false" id="48df-3327-2e88-6121" collective="false" targetId="3546-7848-f4db-e586" type="selectionEntryGroup" sortIndex="2" collapsible="true"/>
+        <entryLink import="true" name="Eldar Armoury" hidden="false" id="2264-cbf1-a04b-71ef" collective="false" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup" sortIndex="1"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11"/>
+      </costs>
+      <modifiers>
+        <modifier type="increment" value="5" field="0f94-6042-0450-0c3e">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="force" childId="cc6c-88bb-a192-34d4" shared="true" roundUp="false" childName="Farseer" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="-1" field="0f94-6042-0450-0c3e">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="00db-baa2-10b1-b4c6" shared="true" childName="Ulthwe Strike Force (Eye of Terror 2003)"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d1e2-e6ed-e01f-ae6f" shared="true" childName="Ulthwe The Damned (2000)"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Jetbike" hidden="false" id="1842-c3b0-00aa-1b77">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0740-1e97-98e2-50d0"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e173-efcd-09f1-d2c1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Shuriken Cannon" id="0842-85cb-527c-db36" hidden="false" targetId="925b-d150-8e56-0832" type="profile">
+              <modifiers>
+                <modifier type="set" value="Twin-linked Shuriken Catapult" field="name"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Twin-Linked" id="d755-7275-72a6-f0a8" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
+            <infoLink name="Jetbikes" id="7faa-6722-bc43-1109" hidden="false" type="rule" targetId="4556-3c66-6ed4-87a0"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="1" field="e173-efcd-09f1-d2c1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="51f4-6f47-39de-5197" shared="true" childName="Jetbike Guardians"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="51f4-6f47-39de-5197" shared="true" childName="Jetbike Guardians"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2169-8d5b-499e-5bc6" shared="true" childName="Seer Council"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2169-8d5b-499e-5bc6" shared="true" childName="Seer Council"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3546-7848-f4db-e586" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" collapsible="true">
@@ -2698,15 +2809,9 @@
             <selectionEntry id="23d1-28cb-2144-81fc" name="Eldar Jetbike" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="1432-55e2-6ff8-fb55" value="0">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a421-09aa-6c08-ebe2" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2585-cdc1-80b7-c393" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98a5-16a6-7525-aa8e" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="2585-cdc1-80b7-c393" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <constraints>
@@ -2769,6 +2874,13 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="ec2f-166f-1795-507b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Warlock"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -2777,42 +2889,6 @@
         <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a0c-59e3-910e-01b0" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="98a5-16a6-7525-aa8e" name="Warlock" hidden="false" collective="false" import="true" type="model" collapsible="true" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c641-7a39-1122-6435" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b7d8-574f-1ea6-51f7" name="Warlock" hidden="false" targetId="f970-9da9-42db-9f1d" type="profile"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink id="8f72-9849-8c6f-90de" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup" sortIndex="2" collapsible="true"/>
-            <entryLink id="304c-824b-027d-3b05" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup" sortIndex="1"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="11"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a421-09aa-6c08-ebe2" name="Jetbike Warlock" hidden="false" collective="false" import="true" type="model" sortIndex="2" collapsible="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="83d9-1882-1c33-592b" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b931-bd8e-8f9a-ec09" name="Shuriken Cannon" hidden="false" targetId="925b-d150-8e56-0832" type="profile">
-              <modifiers>
-                <modifier type="set" field="name" value="Twin-linked Shuriken Catapult"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="620a-c883-c860-f01a" name="Twin-Linked" hidden="false" targetId="ebe5-6318-0fba-b84c" type="rule"/>
-            <infoLink id="de97-dfa9-acdb-6211" name="Jetbike Walock" hidden="false" targetId="3e94-e809-5707-130a" type="profile"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink id="4794-cc47-86a9-6552" name="Warlock Psychic Powers" hidden="false" collective="false" import="true" targetId="3546-7848-f4db-e586" type="selectionEntryGroup" sortIndex="2" collapsible="true"/>
-            <entryLink id="f8e7-4ec9-e5da-2689" name="Eldar Armoury" hidden="false" collective="false" import="true" targetId="c347-83e2-7f11-3074" type="selectionEntryGroup" sortIndex="1"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="36"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="edd8-87c5-b1a4-4892" name="Spiritseer" hidden="false" collective="false" import="true" type="model" sortIndex="3" collapsible="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -2891,6 +2967,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Warlock" hidden="false" id="7fe0-a13f-fc35-63e2" type="selectionEntry" targetId="ec2f-166f-1795-507b" defaultAmount="0"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ad83-1ee9-ea12-cb0b" name="Eldar Vehicle Upgrades" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
