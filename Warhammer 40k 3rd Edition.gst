@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="9" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="10" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <publications>
     <publication id="263c-b15e-84a3-a711" name="Codex Necrons 3rd Edition" shortName="Necrons" publisher="Codex Necrons" publicationDate="2002"/>
@@ -3291,7 +3291,9 @@ Weapon Destroyed results may choose to remove this weapon.</description>
     <rule id="ebe5-6318-0fba-b84c" name="Twin-Linked" hidden="false">
       <description>May re-roll missed to-hits once per attack.</description>
     </rule>
-    <rule id="e65f-0536-e057-e2d2" name="Combi Weapons" hidden="false"/>
+    <rule id="e65f-0536-e057-e2d2" name="Combi Weapons" hidden="false" publicationId="a32d-d82d-5f82-b13a" page="34">
+      <description>These are basically two weapons joined together, giving the wielder a choice of two weapons to fire instead of one. A wielder who is armed with a combi-weapon may choose which of the weapons it is going to use in the shooting phase. The regular weapon may be fired any number of times. but the other weapon may only be fired once per battle. Note that you may not choose to fire both weapons at once.</description>
+    </rule>
     <rule id="cedc-c0a1-ffd3-1b51" name="Frag Grenades" hidden="false"/>
     <rule id="9db9-94c1-ce97-f40a" name="Jetpack" hidden="false">
       <description>Can either:
