@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c8cb-cc69-1e43-3319" name="Daemon Hunters (2003)" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="c8cb-cc69-1e43-3319" name="Daemon Hunters (2003)" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="0ebb-2b64-3f2d-fffb" name="Space Marine Ally" hidden="false"/>
     <categoryEntry id="258f-122f-d9a4-245c" name="Inducted Imperial Guard" hidden="false"/>
     <categoryEntry id="9b26-b663-04dc-1998" name="Officer" hidden="false"/>
     <categoryEntry id="8e77-c08a-2671-f7e7" name="Grey Knight" hidden="false"/>
+    <categoryEntry name="Dark Artefacts" id="83c9-ca1d-9f1d-0072" hidden="true">
+      <comment>Dark Artefacts</comment>
+      <description>Dark Artefacts</description>
+      <modifiers>
+        <modifier type="set" value="0" field="211c-365d-21cf-764b">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="8e77-c08a-2671-f7e7" shared="true" includeChildSelections="true" childName="Grey Knight"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="211c-365d-21cf-764b" message="Warning: Grey Knights wouldn&apos;t approve of using {self}."/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="39f0-aa54-c246-1ac7" name="Daemon Hunter Allies" hidden="false">
@@ -6475,6 +6489,91 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="141"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sword of St. Aquitaine" hidden="false" id="36c9-3c4c-c3d9-2faa">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a20c-9b3c-2998-6302" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+      </costs>
+      <rules>
+        <rule name="Daemon Weapon" id="1bb2-9d80-562c-70bf" hidden="false">
+          <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink name="Power Weapon" id="1386-9287-dc24-16af" hidden="false" type="profile" targetId="5774-7187-2616-dd8a">
+          <modifiers>
+            <modifier type="set" value="Sword of St. Aquitaine" field="name"/>
+            <modifier type="set" value="If the Sword of St. Aquitaine causes a wound, and the bearer passes the Daemon Weapon Mastery test, he may force the entirety of the next game turn to be fought using the Night Fight rules." field="492d-1f80-b777-26f2"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="83c9-ca1d-9f1d-0072" id="8e5a-98e8-0430-dfe5" primary="false" name="Dark Artefacts"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blade of Phaedron" hidden="false" id="e312-c1d6-95ae-1a10">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="338c-5b83-2799-de2d" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+      </costs>
+      <rules>
+        <rule name="Daemon Weapon" id="406b-1b11-b50a-3584" hidden="false">
+          <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink name="Close Combat Weapon" id="d1f9-bd24-81fa-c8ba" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2">
+          <modifiers>
+            <modifier type="set" value="Blade of Phaedron" field="name"/>
+            <modifier type="set" value="The Blade of Phaedron wounds all Daemons on a 2+ and the bearer gains +D3 attacks when charging a Daemon instead of the usual +1." field="492d-1f80-b777-26f2"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="83c9-ca1d-9f1d-0072" id="39b4-7b9c-7cfb-95a8" primary="false" name="Dark Artefacts"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Grimoire Pandaemonica" hidden="false" id="3e99-22bb-419c-d3dc">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="d577-be5d-855d-acda" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+      </costs>
+      <rules>
+        <rule name="Grimoire Pandaemonica" id="abf9-7af7-ad37-675a" hidden="false">
+          <description>The bearer of the Grimoiro Pandaemonica may force his opponent to reroll a single Daemonic Possession or a single Daemonic Summoning roll each game turn.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink targetId="83c9-ca1d-9f1d-0072" id="6007-66a0-8c72-51aa" primary="false" name="Dark Artefacts"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="596c-257e-bb0f-6cb0" name="One-Handed Weapons" hidden="false" collective="false" import="true">
@@ -6868,63 +6967,11 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Sword of St. Aquitaine" hidden="false" id="4d85-ea96-1ef1-565c">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1789-3ad9-70b2-415e" includeChildSelections="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
-          </costs>
-          <rules>
-            <rule name="Daemon Weapon" id="b6ab-89e9-ae92-7640" hidden="false">
-              <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink name="Power Weapon" id="b8de-a6e9-cc69-2cae" hidden="false" type="profile" targetId="5774-7187-2616-dd8a">
-              <modifiers>
-                <modifier type="set" value="Sword of St. Aquitaine" field="name"/>
-                <modifier type="set" value="If the Sword of St. Aquitaine causes a wound, and the bearer passes the Daemon Weapon Mastery test, he may force the entirety of the next game turn to be fought using the Night Fight rules." field="492d-1f80-b777-26f2"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Blade of Phaedron" hidden="false" id="1824-1245-310b-ca7d">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="029d-4d07-d36b-cdbe" includeChildSelections="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
-          </costs>
-          <rules>
-            <rule name="Daemon Weapon" id="2e31-0d99-e15a-d28e" hidden="false">
-              <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink name="Close Combat Weapon" id="8017-90ef-dd1d-62e1" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2">
-              <modifiers>
-                <modifier type="set" value="Blade of Phaedron" field="name"/>
-                <modifier type="set" value="The Blade of Phaedron wounds all Daemons on a 2+ and the bearer gains +D3 attacks when charging a Daemon instead of the usual +1." field="492d-1f80-b777-26f2"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Sword of St. Aquitaine" hidden="false" id="3420-3e5b-482d-8765" type="selectionEntry" targetId="36c9-3c4c-c3d9-2faa"/>
+        <entryLink import="true" name="Blade of Phaedron" hidden="false" id="455d-f5a0-0828-c110" type="selectionEntry" targetId="e312-c1d6-95ae-1a10"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b42e-346d-68ea-45a2" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
       <constraints>
@@ -7989,26 +8036,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Grimoire Pandaemonica" hidden="false" id="951c-b07e-c2ee-33c4">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="591e-f5ac-6897-28d4" includeChildSelections="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="8e77-c08a-2671-f7e7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
-          </costs>
-          <rules>
-            <rule name="Grimoire Pandaemonica" id="f6d3-4170-c27c-ce89" hidden="false">
-              <description>The bearer of the Grimoiro Pandaemonica may force his opponent to reroll a single Daemonic Possession or a single Daemonic Summoning roll each game turn.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Books of Pain" hidden="false" id="cbf1-4248-05d7-c587">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9277-75f2-a3b9-4237" includeChildSelections="true"/>
@@ -8047,8 +8074,14 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
               <description>The Books of Pain can be used once per game, at the beginning of any movement phase. All units, friend or foe (including the bearer&apos;s own) with a model within 3&quot; of the bearer count as pinned until the beginning of the owner&apos;s next turn.</description>
             </rule>
           </rules>
+          <categoryLinks>
+            <categoryLink targetId="83c9-ca1d-9f1d-0072" id="83ab-b87b-cb25-a776" primary="false" name="Dark Artefacts"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Grimoire Pandaemonica" hidden="false" id="d767-e1b2-2ea1-93ef" type="selectionEntry" targetId="3e99-22bb-419c-d3dc"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="0563-f3dc-3db7-5c09" name="Daemon Hunters Vehicle Upgrades" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
@@ -9336,7 +9369,35 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Artekus Scourge" hidden="false" id="c55f-bb56-0e71-cb4d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="abe0-f979-dad1-f51b" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+              </costs>
+              <rules>
+                <rule name="Daemon Weapon" id="4a6f-9654-d363-0560" hidden="false">
+                  <description>In any turn the bearer inflicts at least one casuality with the Daemon weapon, the wielder must take a Leadership test at the end of the turn. If the test is failed the wielder suffers a Perils of the Warp attack.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Power Weapon" id="3b99-1347-7bbe-81a7" hidden="false" type="profile" targetId="5774-7187-2616-dd8a">
+                  <modifiers>
+                    <modifier type="set" value="Artekus Scourge" field="name"/>
+                    <modifier type="set" value="If the Scourge wounds a model with more than one wound, it must roll under its Ld on 3D6 or be instantly removed as a casualty." field="492d-1f80-b777-26f2"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink targetId="83c9-ca1d-9f1d-0072" id="88e8-0b7b-7d30-39c1" primary="false" name="Dark Artefacts"/>
+              </categoryLinks>
+            </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Sword of St. Aquitaine" hidden="false" id="0f33-3d9e-8d56-4cbf" type="selectionEntry" targetId="36c9-3c4c-c3d9-2faa"/>
+            <entryLink import="true" name="Blade of Phaedron" hidden="false" id="579c-c9cd-8a22-8038" type="selectionEntry" targetId="e312-c1d6-95ae-1a10"/>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="9baf-a1d8-1b2b-fc1d" name="Two-Handed Weapons" hidden="false" collective="false" import="true">
           <constraints>
@@ -9502,7 +9563,26 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shard of the Monolith" hidden="false" id="f2c3-8bb9-1c20-5a85">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3cb7-fbd0-4bf7-a420" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+              <rules>
+                <rule name="Shard of the Monolith" id="cccd-91b8-c9ef-966f" hidden="false">
+                  <description>The bearer of the Shard of the Monolith gains +1 S and +1 I. He must always move towards and assault the nearest enemy if possible and must always perform a sweeping advance if possible.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink targetId="83c9-ca1d-9f1d-0072" id="c67d-20c5-bc79-ec03" primary="false" name="Dark Artefacts"/>
+              </categoryLinks>
+            </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Grimoire Pandaemonica" hidden="false" id="f784-cfd7-6621-a09c" type="selectionEntry" targetId="3e99-22bb-419c-d3dc"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
