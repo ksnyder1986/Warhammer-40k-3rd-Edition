@@ -322,6 +322,7 @@ In addition to this, any model that may usually take a plasma pistol may instead
       </rules>
     </categoryEntry>
     <categoryEntry name="Apothecary" id="25e1-76ae-f902-c820" hidden="false"/>
+    <categoryEntry name="DW Command Squad" id="d99a-2923-e740-0464" hidden="true"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="42a3-487a-8d98-5c47" name="Commander" hidden="false" collective="false" import="true" targetId="043b-1cc7-9a38-8133" type="selectionEntry"/>
@@ -11812,9 +11813,14 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
               </conditions>
             </modifier>
             <modifier type="set" field="4444-5be0-f0a3-99e7" value="1">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="parent" childId="d0ac-cb49-d41e-bba3" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="d99a-2923-e740-0464" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="DW Command Squad"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -11844,6 +11850,11 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <modifier type="set" value="23" field="4ed5-2f92-9abc-2870">
               <conditions>
                 <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="b931-27cc-5a8c-b7e4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="parent" childId="d99a-2923-e740-0464" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="DW Command Squad"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -12164,7 +12175,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -12187,7 +12198,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
@@ -12210,7 +12221,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
