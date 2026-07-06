@@ -39,6 +39,7 @@
       <comment>Citadel Journal 44</comment>
     </publication>
     <publication name="White Dwarf 304" id="4e98-876c-e24d-4d7d" hidden="false" shortName="WD304" publisher="White Dwarf" publicationDate="April 2005"/>
+    <publication name="Imperial Armor III" id="444a-9c67-bea1-590a" hidden="false" shortName="Imperial Armor III" publisher="Imperial Armor Volume Three - The Taro Campaign" publicationDate="October 2005"/>
   </publications>
   <costTypes>
     <costType id="4ed5-2f92-9abc-2870" name="pts" defaultCostLimit="-1" hidden="false"/>
