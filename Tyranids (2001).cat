@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8dbc-55e2-a3e5-a400" name="Tyranids (2001)" revision="7" battleScribeVersion="2.03" authorName="Snyder" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="8dbc-55e2-a3e5-a400" name="Tyranids (2001)" revision="8" battleScribeVersion="2.03" authorName="Snyder" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="e504-ec2b-fa1a-4ab3" name="Seeding Swarm" hidden="false"/>
     <categoryEntry name="Heavy Weapon Warrior" id="e357-2c92-38de-0df5" hidden="true"/>
@@ -508,8 +508,6 @@
       <infoLinks>
         <infoLink id="5165-3ccd-32ab-772c" name="Lash Whip" hidden="false" targetId="0b27-f22b-fa4a-6d79" type="rule"/>
         <infoLink id="68a7-0529-4072-b5c1" name="Rending Claws" hidden="false" targetId="8560-537e-b897-32f0" type="rule"/>
-        <infoLink id="1a23-f2e2-ccea-8f01" name="Spinefist" hidden="false" targetId="aaf0-7127-7a65-c920" type="profile"/>
-        <infoLink id="83e0-f18b-5c1e-e67c" name="Tyrant Guard" hidden="false" targetId="b662-ea3a-8f6e-b32d" type="profile"/>
         <infoLink id="9e4c-a4f4-08cf-efbf" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -523,6 +521,10 @@
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Spinefist" id="1a23-f2e2-ccea-8f01" hidden="false" targetId="aaf0-7127-7a65-c920" type="profile"/>
+                <infoLink name="Tyrant Guard" id="83e0-f18b-5c1e-e67c" hidden="false" targetId="b662-ea3a-8f6e-b32d" type="profile"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -626,7 +628,6 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="b0c3-b2cc-833f-e3e2" name="Lictor" hidden="false" targetId="15a9-f419-78d8-59e9" type="profile"/>
         <infoLink id="748e-eb34-b1b2-ffa3" name="Scything Talons" hidden="false" targetId="959a-831b-05aa-b8cf" type="rule"/>
         <infoLink id="b6bc-a4e7-943f-b963" name="Rending Claws" hidden="false" targetId="8560-537e-b897-32f0" type="rule"/>
         <infoLink id="e275-fd50-21f1-f083" name="Flesh Hooks" hidden="false" targetId="38cf-0395-332e-7590" type="rule"/>
@@ -651,6 +652,9 @@
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="80"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Lictor" id="b0c3-b2cc-833f-e3e2" hidden="false" targetId="15a9-f419-78d8-59e9" type="profile"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -697,15 +701,6 @@
     </selectionEntry>
     <selectionEntry id="2183-b5ee-51a1-f263" name="Warrior Brood" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="a201-6ef1-2504-6c18" name="Warrior" hidden="false" targetId="80f1-78a4-718e-5502" type="profile">
-          <modifiers>
-            <modifier type="set" field="b309-5233-122f-82bb" value="4+">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c15-e9a9-947f-4a6c" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="f270-9214-a029-41bd" name="Synapse Creature" hidden="false" targetId="c531-2ba5-638d-73d5" type="rule"/>
         <infoLink id="9f84-40cd-f03a-b32b" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
       </infoLinks>
@@ -820,6 +815,17 @@
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="22"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Warrior" id="a201-6ef1-2504-6c18" hidden="false" targetId="80f1-78a4-718e-5502" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="b309-5233-122f-82bb">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="8c15-e9a9-947f-4a6c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -930,25 +936,6 @@
         <infoLink id="5573-48f4-eaa4-1790" name="Rending Claws" hidden="false" targetId="8560-537e-b897-32f0" type="rule"/>
         <infoLink id="f8df-47f2-d968-8b7c" name="Infiltrators" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
         <infoLink id="f011-890e-277c-4d91" name="Brood Telepathy" hidden="false" targetId="48ef-8ce6-3e12-9b20" type="rule"/>
-        <infoLink id="4a9d-9282-99de-2382" name="Genestealer" hidden="false" targetId="c968-4f41-c847-224b" type="profile">
-          <modifiers>
-            <modifier type="set" field="b309-5233-122f-82bb" value="5+">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dad9-9f20-e7b4-4ee8" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="abbf-0d11-fd86-d938" value="2+1">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4bc3-320b-f65a-96fa" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="df03-6292-d3f5-f778" value="5">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a5d0-e399-a8ef-6e48" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="4777-4a09-21af-61c3" name="Genestealers" hidden="false" collective="false" import="true" defaultSelectionEntryId="4690-8002-554e-c550" sortIndex="1">
@@ -961,6 +948,27 @@
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="16"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Genestealer" id="4a9d-9282-99de-2382" hidden="false" targetId="c968-4f41-c847-224b" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="5+" field="b309-5233-122f-82bb">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="dad9-9f20-e7b4-4ee8" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="2+1" field="abbf-0d11-fd86-d938">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="4bc3-320b-f65a-96fa" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="5" field="df03-6292-d3f5-f778">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5d0-e399-a8ef-6e48" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1089,8 +1097,6 @@
     </selectionEntry>
     <selectionEntry id="f92d-d366-4ca0-5f4a" name="Termagant Brood" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="70c9-10c2-610c-9134" name="Termagant" hidden="false" targetId="180b-61d2-d71f-78d9" type="profile"/>
-        <infoLink id="4bf5-82dd-65bc-e2cf" name="Fleshborer" hidden="false" targetId="36de-021e-7ce1-8b11" type="profile"/>
         <infoLink id="0378-7202-cd8f-566e" name="Fleet of Claw" hidden="false" targetId="e0d3-28a5-37fb-1bb4" type="rule"/>
         <infoLink id="7f5f-9ec8-f460-77ea" name="Instinctive Behavior" hidden="false" targetId="dea2-e710-8473-b3ed" type="rule"/>
         <infoLink id="90e4-d280-8ed8-f329" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
@@ -1102,10 +1108,14 @@
             <constraint field="selections" scope="parent" value="8" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3941-2729-7579-b85a" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="8877-737a-1e83-be83" name="Termagant" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="8877-737a-1e83-be83" name="Termagant" hidden="false" collective="false" import="true" type="model">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="7"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Fleshborer" id="4bf5-82dd-65bc-e2cf" hidden="false" targetId="36de-021e-7ce1-8b11" type="profile"/>
+                <infoLink name="Termagant" id="70c9-10c2-610c-9134" hidden="false" targetId="180b-61d2-d71f-78d9" type="profile"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1150,30 +1160,32 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f4a8-7f8b-6899-61ff" name="Hormagant Brood" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="f4a8-7f8b-6899-61ff" name="Hormagaunt Brood" hidden="false" collective="false" import="true" type="unit">
       <rules>
         <rule id="ed66-2bdd-c5f3-e7d7" name="Bounding Leap" hidden="false">
           <description>In the Assault phase the unit may assault up to 12&quot;. They also advance and fall back 3D6&quot;. Also they get their full number of attacks in close combat while only be within 2&quot; of an enemy model.</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="41a0-62b4-8adb-06ab" name="Hormagaunt" hidden="false" targetId="a12d-b276-0d58-9a22" type="profile"/>
         <infoLink id="4fba-7ac1-a728-2187" name="Scything Talons" hidden="false" targetId="959a-831b-05aa-b8cf" type="rule"/>
         <infoLink id="4843-747d-83b0-8181" name="Fleet of Claw" hidden="false" targetId="e0d3-28a5-37fb-1bb4" type="rule"/>
         <infoLink id="18f9-753c-7bcc-d7d0" name="Instinctive Behavior" hidden="false" targetId="dea2-e710-8473-b3ed" type="rule"/>
         <infoLink id="b555-8207-25e4-d682" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="122c-febc-301a-0e0e" name="Hormagants" hidden="false" collective="false" import="true" defaultSelectionEntryId="b4e7-86fb-fb1a-6911" sortIndex="1">
+        <selectionEntryGroup id="122c-febc-301a-0e0e" name="Hormagaunts" hidden="false" collective="false" import="true" defaultSelectionEntryId="b4e7-86fb-fb1a-6911" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="32" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8163-10ac-034f-ac95" type="max"/>
             <constraint field="selections" scope="parent" value="8" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5ca-a1ce-c9fd-89c4" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="b4e7-86fb-fb1a-6911" name="Hormagant" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b4e7-86fb-fb1a-6911" name="Hormagaunt" hidden="false" collective="false" import="true" type="model">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Hormagaunt" id="41a0-62b4-8adb-06ab" hidden="false" targetId="a12d-b276-0d58-9a22" type="profile"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1231,7 +1243,6 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="c86f-7123-0867-67a1" name="Ripper Swarm" hidden="false" targetId="0d41-e675-9d52-593d" type="profile"/>
         <infoLink id="838c-51c1-598d-0bb4" name="Instinctive Behavior" hidden="false" targetId="dea2-e710-8473-b3ed" type="rule"/>
         <infoLink id="a535-a1e3-55be-b55c" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
       </infoLinks>
@@ -1242,10 +1253,13 @@
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b1a-f4f6-04e4-3ab0" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c216-469e-c778-886b" name="Ripper Swarm" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c216-469e-c778-886b" name="Ripper Swarm" hidden="false" collective="false" import="true" type="model">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Ripper Swarm" id="c86f-7123-0867-67a1" hidden="false" targetId="0d41-e675-9d52-593d" type="profile"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1292,7 +1306,6 @@
     </selectionEntry>
     <selectionEntry id="da56-1de7-9711-7572" name="Ravener" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="ad2a-3bd9-4284-45ee" name="Ravener" hidden="false" targetId="57ac-c851-91e5-2ac3" type="profile"/>
         <infoLink id="ca8c-bf9c-a905-3277" name="Fast" hidden="false" targetId="e5e5-27a4-5fa3-484b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -1371,6 +1384,9 @@
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Ravener" id="ad2a-3bd9-4284-45ee" hidden="false" targetId="57ac-c851-91e5-2ac3" type="profile"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1425,8 +1441,6 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="44ae-51b3-94d8-1ecc" name="Gargoyle" hidden="false" targetId="c3d2-4b27-25dc-cc65" type="profile"/>
-        <infoLink id="2a63-78e9-2071-e50d" name="Fleshborer" hidden="false" targetId="36de-021e-7ce1-8b11" type="profile"/>
         <infoLink id="230d-54c8-ffec-8b13" name="Bio-plasma" hidden="false" targetId="5611-7e2e-662f-0506" type="rule"/>
         <infoLink id="099f-d38c-c6b6-6bf1" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
         <infoLink id="250b-d97f-5460-a760" name="Instinctive Behavior" hidden="false" targetId="dea2-e710-8473-b3ed" type="rule"/>
@@ -1443,6 +1457,10 @@
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Gargoyle" id="44ae-51b3-94d8-1ecc" hidden="false" targetId="c3d2-4b27-25dc-cc65" type="profile"/>
+                <infoLink name="Fleshborer" id="2a63-78e9-2071-e50d" hidden="false" targetId="36de-021e-7ce1-8b11" type="profile"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1754,7 +1772,7 @@
     </selectionEntry>
     <selectionEntry id="e799-65c1-7b1b-6a1e" name="Biovores" hidden="false" collective="false" import="true" type="unit">
       <selectionEntries>
-        <selectionEntry id="cef4-64d2-cf55-2780" name="Biovore" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1" collapsible="true">
+        <selectionEntry id="cef4-64d2-cf55-2780" name="Biovore" hidden="false" collective="false" import="true" type="model" sortIndex="1" collapsible="true">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0bce-523e-e7a7-3492" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb30-4498-9318-7a95" type="min"/>
@@ -2096,37 +2114,8 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="636"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9c27-a7dd-097f-d8e5" name="Mutable Guant Brood" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="9c27-a7dd-097f-d8e5" name="Mutable Gaunt Brood" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="3cbe-0933-fdcf-97db" name="Mutable Gaunt" hidden="false" targetId="c35b-0bd8-6815-64c8" type="profile">
-          <modifiers>
-            <modifier type="set" field="c704-6128-f143-935a" value="4">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d707-6825-dae3-0805" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="7928-3a9b-6080-ed95" value="4">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f539-1052-433b-348d" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="eeda-4fb4-901e-b70d" value="4">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b62-0ea2-56d8-5ae9" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="df03-6292-d3f5-f778" value="4">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6493-18f5-1446-fef1" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="b309-5233-122f-82bb" value="5+">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0d39-388e-9bca-74ab" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="d120-d306-7c04-7559" name="Fleet of Claw" hidden="false" targetId="e0d3-28a5-37fb-1bb4" type="rule"/>
         <infoLink id="1be7-6655-ffb6-f70b" name="Instinctive Behavior" hidden="false" targetId="dea2-e710-8473-b3ed" type="rule"/>
         <infoLink id="6aae-b5cd-b723-2d6d" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
@@ -2259,6 +2248,37 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="4"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Mutable Gaunt" id="3cbe-0933-fdcf-97db" hidden="false" targetId="c35b-0bd8-6815-64c8" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="4" field="c704-6128-f143-935a">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="d707-6825-dae3-0805" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="4" field="7928-3a9b-6080-ed95">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="f539-1052-433b-348d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="4" field="eeda-4fb4-901e-b70d">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="4b62-0ea2-56d8-5ae9" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="4" field="df03-6292-d3f5-f778">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="6493-18f5-1446-fef1" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="5+" field="b309-5233-122f-82bb">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="0d39-388e-9bca-74ab" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2523,6 +2543,9 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Spinefist" id="0ae9-56a0-4364-f553" hidden="false" targetId="aaf0-7127-7a65-c920" type="profile"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry id="246e-24c4-e0d5-957d" name="Devourer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -2531,6 +2554,9 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Devourer" id="1593-c989-203c-7617" hidden="false" targetId="243f-37a7-c6b8-6f4c" type="profile"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry id="f01b-91bf-d4b7-f584" name="Fleshborer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -2539,6 +2565,9 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Fleshborer" id="cae9-a08b-453f-fd02" hidden="false" targetId="36de-021e-7ce1-8b11" type="profile"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry id="80dd-02f9-12c9-8221" name="Scything Talons" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -2547,6 +2576,9 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Scything Talons" id="40d5-996f-8780-2de9" hidden="false" targetId="959a-831b-05aa-b8cf" type="rule"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2568,35 +2600,6 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="5795-f95a-b88c-60d0" name="Mutable Ripper Swarm" hidden="false" targetId="9aae-4be0-6ba3-5918" type="profile">
-          <modifiers>
-            <modifier type="set" field="c704-6128-f143-935a" value="4">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b233-f409-80d1-4033" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="7928-3a9b-6080-ed95" value="2">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1bbc-65e9-02af-fae4" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="b309-5233-122f-82bb" value="5+">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db00-bd88-f4b8-4a55" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="df03-6292-d3f5-f778" value="4">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a883-de7b-c48f-4eff" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="eeda-4fb4-901e-b70d" value="3">
-              <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b808-a487-3607-561d" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="ddf8-4841-3671-a034" name="Instinctive Behavior" hidden="false" targetId="dea2-e710-8473-b3ed" type="rule"/>
         <infoLink id="6ced-99a3-ab9e-28d8" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
       </infoLinks>
@@ -2607,7 +2610,7 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fce-39aa-789e-c5b1" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c570-61e0-7a5f-052c" name="Ripper Swarm" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c570-61e0-7a5f-052c" name="Ripper Swarm" hidden="false" collective="false" import="true" type="model">
               <modifiers>
                 <modifier type="increment" field="4ed5-2f92-9abc-2870" value="2">
                   <conditions>
@@ -2653,6 +2656,37 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Mutable Ripper Swarm" id="5795-f95a-b88c-60d0" hidden="false" targetId="9aae-4be0-6ba3-5918" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="4" field="c704-6128-f143-935a">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="b233-f409-80d1-4033" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="2" field="7928-3a9b-6080-ed95">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="1bbc-65e9-02af-fae4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="5+" field="b309-5233-122f-82bb">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="db00-bd88-f4b8-4a55" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="4" field="df03-6292-d3f5-f778">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="a883-de7b-c48f-4eff" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="3" field="eeda-4fb4-901e-b70d">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="b808-a487-3607-561d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2663,9 +2697,9 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
           <selectionEntries>
             <selectionEntry id="d41e-ec2c-0f5c-8c1c" name="Leaping" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                <modifier type="add" field="error" value="Cannot have both Leaping and Wings">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a79e-bd81-f6dd-3205" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cdc3-cab6-31de-ced9" type="greaterThan" childName="Winged"/>
                   </conditions>
                 </modifier>
                 <modifier type="add" value="Fast Attack Ripper Broods must have Winged or Leaping option" field="error">
@@ -2694,9 +2728,9 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
             </selectionEntry>
             <selectionEntry id="cdc3-cab6-31de-ced9" name="Winged" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                <modifier type="add" field="error" value="Cannot have both Leaping and Wings">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="604b-ef1b-daa6-4526" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d41e-ec2c-0f5c-8c1c" type="greaterThan" traverseAssociationGroup="true" childName="Leaping"/>
                   </conditions>
                 </modifier>
                 <modifier type="set" value="true" field="hidden">
@@ -3205,35 +3239,6 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
     </selectionEntry>
     <selectionEntry id="dcfb-1ac8-a2e3-d4a4" name="Mutable Warrior Brood" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="f8dd-c1ed-932f-0d14" name="Mutable Warrior" hidden="false" targetId="c741-1dd7-cffa-8018" type="profile">
-          <modifiers>
-            <modifier type="set" field="c704-6128-f143-935a" value="5">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9692-9822-741f-1dab" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="b309-5233-122f-82bb" value="4+">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fdb-651f-d25f-9a0c" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="eeda-4fb4-901e-b70d" value="5">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e73c-738a-3454-039e" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="7928-3a9b-6080-ed95" value="3">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c934-7638-529a-b6f7" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="df03-6292-d3f5-f778" value="5">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="871e-f143-9590-4d54" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink id="5081-2ceb-501b-486a" name="Synapse Creature" hidden="false" targetId="c531-2ba5-638d-73d5" type="rule"/>
         <infoLink id="62be-e8c0-fe62-30a6" name="Shoot the Big Ones!" hidden="false" targetId="e5fa-b52a-258b-5e3d" type="rule"/>
       </infoLinks>
@@ -3441,6 +3446,37 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Mutable Warrior" id="f8dd-c1ed-932f-0d14" hidden="false" targetId="c741-1dd7-cffa-8018" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="5" field="c704-6128-f143-935a">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="9692-9822-741f-1dab" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="4+" field="b309-5233-122f-82bb">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="4fdb-651f-d25f-9a0c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="5" field="eeda-4fb4-901e-b70d">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="e73c-738a-3454-039e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="3" field="7928-3a9b-6080-ed95">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="c934-7638-529a-b6f7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="5" field="df03-6292-d3f5-f778">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="871e-f143-9590-4d54" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -3509,6 +3545,15 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
                   <repeats>
                     <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="0" field="selections" scope="primary-category" childId="34e2-d53c-28ab-44cf" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Fast Attack"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
