@@ -6037,6 +6037,33 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Transport" id="4939-c8c0-4ceb-c163" hidden="false" collective="false" import="true" sortIndex="5">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c14-ef47-c0a1-39c9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Chaos Rhino" hidden="false" id="4f0a-f112-b1dc-46a4" collective="false" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="greaterThan" value="10" field="selections" scope="parent" childId="7e1e-fb2b-76b8-185e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bafe-5beb-9ae2-b2e6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="0f19-9487-acbb-e047" shared="true" childName="Chaos Space Marines (2002)" includeChildSelections="true" includeChildForces="true" traverseAssociationGroup="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Lost and Damned list. Hidden in the CSM forces.</comment>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="195f-673d-1fc5-e5fe" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3"/>
