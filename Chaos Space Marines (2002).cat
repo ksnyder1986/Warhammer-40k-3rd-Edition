@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="14" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <comment>2002 Chaos Space Marine Codex</comment>
   <categoryEntries>
     <categoryEntry id="039c-5796-7006-0975" name="Mark of Khorne" hidden="false"/>
@@ -930,6 +930,7 @@
               <conditions>
                 <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="569e-2525-31c0-69d3" type="instanceOf"/>
                 <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="9fda-9a74-56c3-7c97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3c96-248b-affd-e504" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1959,7 +1960,6 @@
                 <infoLink id="64b3-0639-6f12-c4dc" name="Fearless" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
                 <infoLink id="15e6-e087-605d-8dba" name="Deep Strike" hidden="false" targetId="5715-6219-5059-9bcf" type="rule"/>
                 <infoLink id="ce6a-0339-c381-c5f1" name="Slow and Purposeful" hidden="false" targetId="dfb3-f2d0-e017-ab77" type="rule"/>
-                <infoLink id="cb53-f46a-cbcc-bbbc" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
                 <infoLink id="6f07-82dc-5912-5895" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
                 <infoLink id="0e38-e1da-472e-8fce" name="Missile Launcher (frag)" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
                 <infoLink id="475e-8cb8-a5b0-73d2" name="Heavy Bolter" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile"/>
@@ -1975,6 +1975,7 @@
                 </infoLink>
                 <infoLink id="0fef-4a75-a7d4-2a44" name="Power Fist" hidden="false" targetId="a161-ed4b-bcb7-0a01" type="profile"/>
                 <infoLink id="98d2-f107-dc48-9d20" name="Lascannon" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile"/>
+                <infoLink name="Flamer" id="e0e5-7104-5a0b-53b0" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70"/>
@@ -6036,6 +6037,33 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Transport" id="4939-c8c0-4ceb-c163" hidden="false" collective="false" import="true" sortIndex="5">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c14-ef47-c0a1-39c9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Chaos Rhino" hidden="false" id="4f0a-f112-b1dc-46a4" collective="false" targetId="9c32-521d-4770-91b9" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="greaterThan" value="10" field="selections" scope="parent" childId="7e1e-fb2b-76b8-185e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bafe-5beb-9ae2-b2e6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="0f19-9487-acbb-e047" shared="true" childName="Chaos Space Marines (2002)" includeChildSelections="true" includeChildForces="true" traverseAssociationGroup="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Lost and Damned list. Hidden in the CSM forces.</comment>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="195f-673d-1fc5-e5fe" name="Veteran Skills" hidden="false" collective="false" import="true" targetId="9043-4141-f921-9506" type="selectionEntryGroup" sortIndex="3"/>
@@ -7964,7 +7992,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                         <constraint field="selections" scope="6604-4630-4d70-1c9b" value="0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="8544-a387-9e13-a605" type="max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink id="343c-9bf3-dca9-3cf4" name="Autocannon" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
+                        <infoLink id="343c-9bf3-dca9-3cf4" name="Reaper Autocannon" hidden="false" targetId="7b70-6863-9fe8-a089" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
