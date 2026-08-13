@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="11" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="12" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" categoriesLabel="">
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <publications>
     <publication id="263c-b15e-84a3-a711" name="Codex Necrons 3rd Edition" shortName="Necrons" publisher="Codex Necrons" publicationDate="2002"/>
@@ -148,6 +148,7 @@
     <categoryEntry id="3cb1-645b-8bbb-3d49" name="Psyker" hidden="false"/>
     <categoryEntry id="6b90-dc9c-1a49-3fdc" name="Super-Heavy" hidden="false"/>
     <categoryEntry id="9bbd-df2b-520d-778d" name="Space Wolf" hidden="false"/>
+    <categoryEntry name="DW Special Weapon User" id="7257-1919-a6a4-e5b2" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="7da2-40c9-890c-3239" name="1-Standard Missions" hidden="false">
@@ -1415,6 +1416,18 @@
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntryGroup>
+                <selectionEntryGroup name="Weapon Options" id="1495-1d5e-3ebc-8fb6" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c273-cf7d-a939-3e05" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Special Bolter Ammo" hidden="false" id="cae3-fb61-02ae-9be3" type="selectionEntryGroup" targetId="d1ae-412e-11af-2265">
+                      <modifiers>
+                        <modifier type="add" value="Ammo should only be used if the Deathwatch Captain is using a Bolt Pistol or Bolter from the armoury." field="info"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
@@ -1552,6 +1565,9 @@
                           </costs>
                         </selectionEntry>
                       </selectionEntries>
+                      <categoryLinks>
+                        <categoryLink targetId="7257-1919-a6a4-e5b2" id="b686-5b7f-e64c-bf07" primary="false" name="DW Special Weapon User"/>
+                      </categoryLinks>
                     </selectionEntryGroup>
                     <selectionEntryGroup id="8c1d-7067-07c6-0783" name="Veteran Weapons" hidden="false" collective="false" import="true">
                       <modifiers>
@@ -1598,63 +1614,14 @@
                           </costs>
                         </selectionEntry>
                       </selectionEntries>
-                    </selectionEntryGroup>
-                    <selectionEntryGroup id="21d7-c030-23fc-b4b0" name="Special Bolter Ammo" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff8a-8abc-807d-a6f0" type="max"/>
-                      </constraints>
-                      <selectionEntries>
-                        <selectionEntry id="184c-86c6-8076-8515" name="Metal Storm Bolts" hidden="false" collective="false" import="true" type="upgrade">
-                          <profiles>
-                            <profile id="5c28-b562-6e20-0434" name="Metal Storm Bolts" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-                              <characteristics>
-                                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
-                                <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
-                                <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
-                                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
-                                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
-                              </characteristics>
-                            </profile>
-                          </profiles>
-                          <costs>
-                            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="ccc4-7e05-2e57-652e" name="Inferno Bolts" hidden="false" collective="false" import="true" type="upgrade">
-                          <profiles>
-                            <profile id="771e-95d6-b677-8024" name="Inferno Bolts" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-                              <characteristics>
-                                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
-                                <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
-                                <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
-                                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
-                                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Reroll Failed Wounds</characteristic>
-                              </characteristics>
-                            </profile>
-                          </profiles>
-                          <costs>
-                            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="0051-b262-77e0-1d5b" name="Kraken Bolts" hidden="false" collective="false" import="true" type="upgrade">
-                          <profiles>
-                            <profile id="0363-2376-73ca-2ae1" name="Kraken Bolts" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
-                              <characteristics>
-                                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
-                                <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
-                                <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
-                                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
-                                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
-                              </characteristics>
-                            </profile>
-                          </profiles>
-                          <costs>
-                            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
+                      <categoryLinks>
+                        <categoryLink targetId="7257-1919-a6a4-e5b2" id="4201-cbcd-409b-5f1c" primary="false" name="DW Special Weapon User"/>
+                      </categoryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
+                  <entryLinks>
+                    <entryLink import="true" name="Special Bolter Ammo" hidden="false" id="b6d2-9214-5db4-9a05" type="selectionEntryGroup" targetId="d1ae-412e-11af-2265"/>
+                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
@@ -5194,4 +5161,130 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
       </characteristics>
     </profile>
   </sharedProfiles>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Special Bolter Ammo" id="d1ae-412e-11af-2265" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8492-7da2-16b2-8ac9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Metal Storm Bolts" hidden="false" id="86d6-9064-d340-2367" collective="false">
+          <profiles>
+            <profile name="Metal Storm Bolts" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="fe0c-ba58-2cab-d1f0">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">18&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+          <modifiers>
+            <modifier type="add" value="May not use different ammo types across the unit." field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="d1ae-412e-11af-2265" childId="86d6-9064-d340-2367" shared="true" childName="Metal Storm Bolts" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="1004-74e9-5ee6-c51f" childId="d7f1-6f41-1867-232e" shared="true" childName="Kraken Bolts" includeChildSelections="true"/>
+                        <condition type="greaterThan" value="0" field="selections" scope="1004-74e9-5ee6-c51f" childId="241c-a67a-32bc-2eba" shared="true" childName="Inferno Bolts" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Inferno Bolts" hidden="false" id="241c-a67a-32bc-2eba" collective="false">
+          <profiles>
+            <profile name="Inferno Bolts" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="a4bd-72e3-87e5-9ca8">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Reroll Failed Wounds</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+          <modifiers>
+            <modifier type="add" value="May not use different ammo types across the unit." field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="d1ae-412e-11af-2265" childId="241c-a67a-32bc-2eba" shared="true" childName="Inferno Bolts" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="1004-74e9-5ee6-c51f" childId="d7f1-6f41-1867-232e" shared="true" childName="Kraken Bolts" includeChildSelections="true"/>
+                        <condition type="greaterThan" value="0" field="selections" scope="1004-74e9-5ee6-c51f" childId="86d6-9064-d340-2367" shared="true" childName="Metal Storm Bolts" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Kraken Bolts" hidden="false" id="d7f1-6f41-1867-232e" collective="false">
+          <profiles>
+            <profile name="Kraken Bolts" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="469c-58f9-5ab1-62e8">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">30&quot;</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+          <modifiers>
+            <modifier type="add" value="May not use different ammo types across the unit." field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="d1ae-412e-11af-2265" childId="d7f1-6f41-1867-232e" shared="true" childName="Kraken Bolts" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="1004-74e9-5ee6-c51f" childId="241c-a67a-32bc-2eba" shared="true" childName="Inferno Bolts" includeChildSelections="true"/>
+                        <condition type="greaterThan" value="0" field="selections" scope="1004-74e9-5ee6-c51f" childId="86d6-9064-d340-2367" shared="true" childName="Metal Storm Bolts" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Deathwatch members armed with Special or Veteran weapons cannot have special bolter ammo." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7257-1919-a6a4-e5b2" shared="true" childName="DW Special Weapon User"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d1ae-412e-11af-2265" shared="true" childName="Special Bolter Ammo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </gameSystem>
