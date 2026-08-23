@@ -2790,6 +2790,15 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Autohits</characteristic>
       </characteristics>
     </profile>
+    <profile name="Corvus Blackstar" typeId="5535-2b48-81ee-04ce" typeName="Transport" hidden="false" id="df78-f3fd-a43d-fa50">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="70ae-7a97-7e70-93ea">12</characteristic>
+        <characteristic name="Side Armor" typeId="bcca-0b51-9187-2e4e">12</characteristic>
+        <characteristic name="Rear Armor" typeId="929b-c9cc-001b-3705">11</characteristic>
+        <characteristic name="BS" typeId="ae25-5be4-5470-2204">4</characteristic>
+        <characteristic name="Capacity" typeId="ec07-2d55-2ba5-6080">12</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Ordo Xenos Inquisitor Lord" hidden="false" id="2f5b-253a-02ea-74d9">
@@ -8274,6 +8283,352 @@ Hellfire Round: The shot wounds on a 2+.</description>
           </conditions>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Corvus Blackstar" hidden="false" id="4902-d863-d129-6744" collective="false">
+      <comment>Base 142 from vehicle design rules</comment>
+      <rules>
+        <rule name="Ceramite Shielding" id="2bf5-9c38-83ad-3a24" hidden="false">
+          <description>The Blackstar&apos;s reentry shielding makes it resistant to melta weapons. Melta weapons, including melta bombs, never roll a extra dice for armour penetration due to being at half range against a Blackstar.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink name="Corvus Blackstar" id="6148-05d4-6b0c-0a4e" hidden="false" targetId="df78-f3fd-a43d-fa50" type="profile"/>
+        <infoLink name="VTOL Hover Mode" id="9a33-9719-1d5b-40ba" hidden="false" targetId="71e6-4ef5-7178-3676" type="rule"/>
+        <infoLink name="Flyers" id="e301-7b23-61cc-a377" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink name="Skimmer" id="1a30-7989-66ff-b727" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="ef3a-c9be-37aa-ba4f" primary="false" name="Deathwatch"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="4x Hellstrike Missiles" hidden="false" id="d3f2-e2a7-f372-1403" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab45-fe3c-9330-af72" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be80-d1dc-079a-c88e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Rockits" id="7b07-da52-27f5-125a" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+              <modifiers>
+                <modifier type="set" value="4x Hellstrike Missiles" field="name"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="10e7-d6cf-48a2-7368" hidden="false" collective="false" import="true" defaultSelectionEntryId="75ea-71f9-341a-6ff9">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1231-d6cf-cbff-f6d4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fa7-0fbb-4928-6446" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Twin-linked Assault Cannon" hidden="false" id="75ea-71f9-341a-6ff9" collective="false">
+              <infoLinks>
+                <infoLink name="Assault Cannon" id="256f-1228-35b0-36df" hidden="false" targetId="3f9c-e7c1-c442-3b7c" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Twin-Linked Assault Cannon" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="53"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Twin-linked Lascannon" hidden="false" id="9048-f3d7-a4d8-f532" collective="false">
+              <infoLinks>
+                <infoLink name="Lascannon" id="a044-4875-90c6-b475" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Twin-Linked Lascannon" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="53"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Navy Vehicle Upgrades" hidden="false" id="5fe4-db20-7508-9599" collective="false" targetId="af51-b222-5ced-6781" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="142"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Inquisitor Gregor Eisenhorn" hidden="false" id="cbb8-266b-5683-c883" collective="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="2f5b-253a-02ea-74d9" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Ordo Xenos Inquisitor Lord"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="c9fd-e7f8-8ed2-7da9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Gregor Eisenhorn" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="4a90-2ea8-2599-f32b">
+          <characteristics>
+            <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+            <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+            <characteristic name="S" typeId="df03-6292-d3f5-f778">3</characteristic>
+            <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">3</characteristic>
+            <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+            <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+            <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+            <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+            <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Iron Will" id="4ca8-0f9e-a374-90ea" hidden="false">
+          <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
+        </rule>
+        <rule name="The Voice" id="f765-2842-b9c9-e41a" hidden="false">
+          <description>Use this Psyker phase in the shooting phase by targeting an enemy unit within 24&quot;. If the psychic test is passed, roll D6 for both Eisenhorn and the target unit, adding the Leadership of both units. If Eisenhorn&apos;s total exceeds the target unit, all shooting attacks at that unit are at +1 to hit for the whole of the Shooting Phase.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink name="Laspistol" id="082c-91a3-21c5-9525" hidden="false" targetId="95a9-d270-d218-1772" type="profile">
+          <modifiers>
+            <modifier type="set" value="Naval Pattern Scipio Stub Pistol " field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Power Weapon" id="70e7-a170-1f62-3b8f" hidden="false" targetId="5774-7187-2616-dd8a" type="profile">
+          <modifiers>
+            <modifier type="set" value="Barbarisater" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Force Weapon" id="bbc1-5f23-f558-ed94" hidden="false" targetId="e5ab-52f0-b14b-e93c" type="profile">
+          <modifiers>
+            <modifier type="set" value="Rune Staff" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Smite" id="b1ad-6484-f10d-2ea5" hidden="false" targetId="e5da-cc84-7701-ff64" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Retinue" hidden="false" id="8f05-a040-b0c3-e955" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c6ee-c7c4-4099-e95b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c8b-499b-0009-5327" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alizebeth Bequin" hidden="false" id="afb8-83de-8d21-0c4b" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c701-6a78-b028-c158" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e629-5a68-db3b-91b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Blank" id="3121-d6c2-6f04-4930" hidden="false">
+                  <description>While Alizebeth is alive, any psychic powers targeting Eisenhorn or his retinue, or include them in their area of effect, fails on a 4+.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Laspistol" id="a7a4-dd8b-70ab-845a" hidden="false" targetId="95a9-d270-d218-1772" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Duel Laspistols" field="name"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Henchman" id="d3dc-7f8f-02d2-9c4f" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Alizebeth Bequin" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gideon Ravenor" hidden="false" id="b7a2-b1a2-6ab7-1cbb" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a68b-f88e-8c21-6a8d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8133-80c1-ae48-a756" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Henchman" id="8668-6071-aa2e-815e" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Gideon Ravenor" field="name"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Laspistol" id="e314-7c31-bbd3-b20b" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                <infoLink name="Power Weapon" id="f07e-ab80-7b8f-4e55" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
+                <infoLink name="Smite" id="83a3-e2f0-8cca-e877" hidden="false" targetId="e5da-cc84-7701-ff64" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="26"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Godwyn Fischig" hidden="false" id="ebc2-0286-b03e-9745" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="07a2-5899-e58c-b5b4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5525-5e55-f038-3c6b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Stunner" id="ce30-8a47-c4bf-a142" hidden="false">
+                  <description>A model that suffers a wound from Godwyn Fischig has their WS reduced to 1 and movement rate reduced to 0&quot; until the next Alien Hunter&apos;s turn.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Henchman" id="21bf-56c3-77a3-4047" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Godwyn Fischig" field="name"/>
+                    <modifier type="set" value="4" field="c704-6128-f143-935a"/>
+                    <modifier type="set" value="4+" field="b309-5233-122f-82bb"/>
+                    <modifier type="set" value="4" field="7928-3a9b-6080-ed95"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Shotgun" id="f18a-56c0-a9b7-46b4" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="14"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Harlon Nayl" hidden="false" id="7642-91f8-95ed-bca2" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8515-85d9-7454-be9d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f3e2-deb1-522d-6f83" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Henchman" id="3085-c2f5-6107-c93f" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Harlon Nayl" field="name"/>
+                    <modifier type="set" value="4" field="e5f6-94c4-de8c-5fa8"/>
+                    <modifier type="set" value="4" field="df03-6292-d3f5-f778"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Lasgun" id="b687-baff-f70d-190b" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Autogun" field="name"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Close Combat Weapon" id="8e4f-6367-f405-889e" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Kara Swole" hidden="false" id="4498-90a0-0ae5-412a" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5c9-5717-2af7-fabe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="204d-d9e9-a50f-ee14" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Kara Swole" id="c797-501f-3e50-c964" hidden="false">
+                  <description>Kara Swole always has a 4+ cover save. Models in base-to-base contact with Kara Swole halves their WS (rounding up)</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Henchman" id="9103-ba88-5eb2-39ed" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Kara Swole" field="name"/>
+                    <modifier type="set" value="4" field="eeda-4fb4-901e-b70d"/>
+                    <modifier type="set" value="4" field="c704-6128-f143-935a"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Close Combat Weapon" id="dad2-3c0d-266b-4696" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink name="Laspistol" id="ee19-b0e9-ee3b-83dd" hidden="false" targetId="95a9-d270-d218-1772" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Autopistol" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Lucius Devlan" hidden="false" id="cd06-d7e8-8c47-b118" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5981-50bc-6d82-a27e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a34b-9d0b-f2f1-3d7f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Lucius Devlan" id="ba5e-cc57-96b6-74f1" hidden="false">
+                  <description>Lucius Devlan fields two autopistols, which act as a twin-linked autopistol.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Henchman" id="f0f5-2e28-b6fa-8bd3" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Lucius Devian" field="name"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Laspistol" id="b258-4fea-d89b-cf2e" hidden="false" targetId="95a9-d270-d218-1772" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Duel Autopistols" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="12"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Uber Aemos" hidden="false" id="06a2-3d1c-1983-84d8" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a86-d6c5-feb3-0553" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="82aa-9b64-ecaa-1583" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Uber Aemos" id="8f10-3020-4e61-48f5" hidden="false">
+                  <description>As long as Aemos is alive, Eisenhorn and all members of his retinue have +1 BS.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Henchman" id="fa27-c84c-9f7e-e224" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Uber Aemos" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Guncutter" hidden="false" id="12e6-5e2c-661a-a2cd" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9d84-98b3-ab0f-dc2f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Guncutter" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle" hidden="false" id="5828-d93b-57ba-d64b">
+              <characteristics>
+                <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+                <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+                <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+                <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Flyers" id="df37-575c-e02a-9236" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+            <infoLink name="Skimmer" id="fec8-09aa-7fdb-6982" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+            <infoLink name="Autocannon" id="c489-7726-b6bd-4362" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile">
+              <modifiers>
+                <modifier type="set" value="2x Autocannons" field="name"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="VTOL Hover Mode" id="ac23-99ad-b06f-8c4d" hidden="false" targetId="71e6-4ef5-7178-3676" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="126"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
