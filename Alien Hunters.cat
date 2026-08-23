@@ -34,11 +34,14 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
     <categoryEntry name="Radical" id="7b73-3645-34bc-1c3d" hidden="false"/>
     <categoryEntry name="Inducted Imperial Guard" id="9378-6e46-bd71-6b8f" hidden="false"/>
     <categoryEntry name="Space Marine Ally" id="aee9-fa95-eb84-4519" hidden="false"/>
+    <categoryEntry name="Alien Hunter Troop Choices" id="b59e-e3c9-8a4f-4b32" hidden="true"/>
+    <categoryEntry name="Alien Hunter Heavy Choices" id="5544-1919-07c4-fba5" hidden="true"/>
+    <categoryEntry name="Alien Hunter Elite Choices" id="ba91-25f8-5631-fc2f" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Inquisitor&apos;s Retinue" id="fe05-06b2-a662-cc8b" hidden="false">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Henchmen" id="c481-a9f1-a450-f1f7" hidden="false" collective="false" import="true">
+        <selectionEntryGroup name="Henchmen" id="c481-a9f1-a450-f1f7" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
           <modifiers>
             <modifier type="set" value="12" field="8dee-4539-6492-4566">
               <conditions>
@@ -52,7 +55,7 @@ At the end of its own turn, the vehicle may disengage VTOL. It not reverts to be
             </modifier>
           </modifiers>
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="abfb-2ba4-13ce-1c08" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="abfb-2ba4-13ce-1c08" percentValue="false" includeChildSelections="false" includeChildForces="false" message="{unit} must be have at least {value} members in their retinue."/>
             <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="8dee-4539-6492-4566" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
@@ -215,7 +218,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="4ae0-7992-7658-ff73" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Crusader" hidden="false" id="85d9-1cba-677c-d24a" collective="false">
+                <selectionEntry type="model" import="true" name="Crusader" hidden="false" id="85d9-1cba-677c-d24a" collective="false">
                   <rules>
                     <rule name="Suppression Shield" id="c86e-9f39-8c03-c60d" hidden="false"/>
                   </rules>
@@ -235,7 +238,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Veteran Guardsman" hidden="false" id="0ef2-d5cc-c379-34cc" collective="false">
+                <selectionEntry type="model" import="true" name="Veteran Guardsman" hidden="false" id="0ef2-d5cc-c379-34cc" collective="false">
                   <infoLinks>
                     <infoLink name="Henchman" id="ff31-8ff9-6eec-3d86" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
                       <modifiers>
@@ -320,7 +323,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Combat Servitor" hidden="false" id="ba30-e571-15a5-02f4" collective="false">
+                <selectionEntry type="model" import="true" name="Combat Servitor" hidden="false" id="ba30-e571-15a5-02f4" collective="false">
                   <infoLinks>
                     <infoLink name="Henchman" id="521b-97b2-4a4a-044d" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
                       <modifiers>
@@ -339,7 +342,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Gun Servitor" hidden="false" id="0356-392a-4cb8-b835" collective="false">
+                <selectionEntry type="model" import="true" name="Gun Servitor" hidden="false" id="0356-392a-4cb8-b835" collective="false">
                   <infoLinks>
                     <infoLink name="Henchman" id="b317-32b9-a70c-0930" hidden="false" targetId="fcce-0043-5799-a60d" type="profile">
                       <modifiers>
@@ -396,6 +399,31 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Biologis Adept" hidden="false" id="b454-52c6-b44a-b59c" type="selectionEntry" targetId="05e2-aef9-5183-347a">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="2f5b-253a-02ea-74d9" shared="true" childName="Ordo Xenos Inquisitor Lord"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31ab-864c-948f-aa20"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Transport" id="839f-06e4-ff98-8e9b" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4728-1fe0-38b0-cf8a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Alien Hunter Chimera" hidden="false" id="0eba-0a3c-872e-9ec0" collective="false" targetId="77f0-f28e-dc4a-aa8f" type="selectionEntry"/>
+            <entryLink import="true" name="Alien Hunter Land Raider" hidden="false" id="a19a-409c-78b0-0eeb" collective="false" targetId="a35a-0cc3-0da0-466d" type="selectionEntry"/>
+            <entryLink import="true" name="Alien Hunter Rhino" hidden="false" id="64ca-61a0-1527-fe14" collective="false" targetId="9f1d-656a-5e1a-d8f7" type="selectionEntry"/>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="5ebc-dfcb-dcf7-e987" type="selectionEntry" targetId="77d6-d91a-9664-0190"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -965,15 +993,122 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Chainfist" hidden="false" id="5b66-c030-863b-722f">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lightning Claw" hidden="false" id="8f38-d3a5-e9d4-5f28">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lightning Claw, Pair" hidden="false" id="82b5-9306-3ac8-099c">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Needle Pistol" hidden="false" id="ca48-039e-5214-c358">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Null Rod" hidden="false" id="5160-178c-83b9-0202">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="e515-43b4-61bc-23fe">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Storm Shield" hidden="false" id="e665-b89d-1ed6-c32b">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Thunder Hammer" hidden="false" id="0586-5840-6c7d-64d0">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Xenophase Blade" hidden="false" id="13aa-b994-9c72-baed">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Psychic Powers" id="303f-8d77-2f63-62c9" hidden="false" collective="false" import="true" collapsible="true">
       <modifiers>
-        <modifier type="increment" value="1" field="0801-108a-fbb5-e6eb"/>
+        <modifier type="increment" value="1" field="0801-108a-fbb5-e6eb">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="parent" childId="e0d3-739a-9026-4668" shared="true" roundUp="false" childName="The Familiar"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0801-108a-fbb5-e6eb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Emperor&apos;s Guidance" hidden="false" id="859a-a644-05e5-af24">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b34-a94b-951e-8f33" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hammerhand" hidden="false" id="a252-e261-452d-95e4">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a4ae-0e64-2b5e-6c58" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="His Will Be Done" hidden="false" id="1c55-a781-e9f5-0b9d">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b729-9ac1-c030-bb32" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Scourging" hidden="false" id="c1bd-8802-edec-da8c">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8570-7fc8-7e3f-8529" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Psychic Communion" hidden="false" id="4f02-3610-f225-c4cb">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51d2-3e73-5bae-421e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Psychic Invasion" hidden="false" id="fd38-8695-8c25-567c">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b01-607c-7787-6139" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Word of the Emperor" hidden="false" id="6dc5-940f-c558-a5f7">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa2b-50e9-d489-674a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Single-Handed Weapons (IG)" id="4bf8-5963-b146-f0bf" hidden="false" collective="false" import="true">
       <constraints>
@@ -1432,38 +1567,6 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb0d-77d4-3b30-cf52" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Blessed Weapon" hidden="false" id="f7c7-3035-25b6-839d" collective="false">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="f9ca-5d42-058f-b429" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="c538-fd25-61e6-ca37" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5ea3-906c-c243-a107" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8677-1290-4ff3-87fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Blessed Weapon" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="04f4-2676-ec49-51e3">
-              <characteristics>
-                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-                <characteristic name="S" typeId="24d8-2110-08fa-d844">User + 2</characteristic>
-                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
-                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignore armour. re-roll one miss.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bolter" hidden="false" id="28cc-a0c8-a16d-0787" collective="false">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5607-e417-6f4b-1b5d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -1485,42 +1588,6 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Power Stake" hidden="false" id="0544-8178-fc1c-a008" collective="false">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="341c-1d2c-25d8-af97" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="27ee-b0a2-0c2a-b518" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="0ab5-d725-1cf5-ba03" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="745d-c31b-5674-a9c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Power Stake" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="dab4-e1be-53a8-a5e1">
-              <characteristics>
-                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-                <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
-                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
-                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignore Armour. 2+ to wound psykers.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
           </costs>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="487b-a46d-858c-22bd" collective="false">
@@ -1545,68 +1612,6 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Mancatcher" hidden="false" id="19ce-6397-0ae7-6d06" collective="false">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="0ab5-d725-1cf5-ba03" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9ce-2533-35f0-6015" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Eviscerator" hidden="false" id="385a-327f-89ab-53e9" collective="false">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6287-7e25-382a-88dd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Eviscerator" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="f2d6-3daf-d880-f3d8">
-              <characteristics>
-                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
-                <characteristic name="S" typeId="24d8-2110-08fa-d844">User x2</characteristic>
-                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
-                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Ignores all armour saves. Rolls 2D6 + Strength when penetrating armour.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Combi-Crossbow" hidden="false" id="8361-63ac-aebf-a5fc" collective="false">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="853f-a855-be58-f5a3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Combi-Crossbow" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="f64d-349c-2d8e-a40c">
-              <characteristics>
-                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
-                <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
-                <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
-                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
-                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule name="Combi-Crossbow" id="2f90-295b-782c-215d" hidden="false">
-              <description>Any psyker hit by the Combi-crossbow is wounded on a 2+ and recieves no armour saves.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Combi-Melta" hidden="false" id="c201-b7be-e159-942e" collective="false">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd62-cf06-2e83-a12b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -1629,6 +1634,26 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Bolter with M.40 Targetter" hidden="false" id="5b7e-8322-70dd-a7eb">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Bolter with Specialist Ammo" hidden="false" id="5f2e-fe75-91ff-6485">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Combi-Needle Pistol" hidden="false" id="f300-57b7-1a0d-545c">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Combi-Grenade Launcher" hidden="false" id="3aa1-0e86-c7c4-6a56">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2091,6 +2116,9 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
           </rules>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Xenos Artefacts" hidden="false" id="98e0-ad83-e04f-5cd8" type="selectionEntryGroup" targetId="157b-54a2-175d-9638" sortIndex="1"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Alien Hunters Vehicle Upgrades" id="27d0-afe4-bb00-2151" hidden="false" collective="false" import="true" collapsible="true">
       <selectionEntries>
@@ -2220,6 +2248,129 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
           </constraints>
         </entryLink>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Xenos Artefacts" id="157b-54a2-175d-9638" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Chronometron" hidden="false" id="7d50-9b47-22d4-2ad5">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f4a-34d3-b1db-b900"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Gaze of Flame" hidden="false" id="7527-9e97-1e5b-c446">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="551f-bfff-b5ca-5b8b"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Neural Shredder" hidden="false" id="1cfc-3857-f029-effa">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6099-cc2a-5a83-3de4"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Shadowfield" hidden="false" id="7211-b97d-6f6d-c119">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7061-03c4-4e1e-947e"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Solar Pulse" hidden="false" id="b0c4-825b-01df-22dd">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c71b-2b9e-18d0-ac04"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spirit Stones" hidden="false" id="c846-e97b-2a96-a492">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8108-99c5-2e5d-f2af"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Void Sabre" hidden="false" id="8a50-5690-f028-5793">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78e8-6c49-ac8b-50a4"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="5637-57af-0978-1fc2" shared="true" childName="Inquisitor"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="bb42-b139-e132-cd80" shared="true" childName="Inquisitor Lord"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="Deathwatch will not work with Radical Inquisitors" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="157b-54a2-175d-9638" shared="true" childName="Xenos Artefacts"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="fb40-23ff-db43-ac2f" shared="true" childName="Deathwatch" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Deathwatch Terminator Weapon" id="b98c-467d-f3a3-8b30" hidden="false" defaultSelectionEntryId="de27-878e-ab67-c8ea">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Storm Bolter and Powerfist" hidden="false" id="078e-d3cf-150d-9d8f"/>
+        <selectionEntry type="upgrade" import="true" name="Storm Bolter and Power Weapon" hidden="false" id="5610-4a11-c1e5-2cd9"/>
+        <selectionEntry type="upgrade" import="true" name="Storm Bolter and Chainfist" hidden="false" id="74f7-2c6f-20d9-7e9c">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Thunder Hammer and Storm Shield" hidden="false" id="bbb2-af16-ba50-c0ff"/>
+        <selectionEntry type="upgrade" import="true" name="Pair of Lightning Claws" hidden="false" id="7eae-3035-f956-9c92"/>
+      </selectionEntries>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d512-b70d-c11f-bfa3-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d512-b70d-c11f-bfa3-max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Special Weapons" id="2483-a946-7994-15db" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Assault Cannon and Powerfist" hidden="false" id="13ef-09a7-1b3e-b606">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cyclone Missile Launcher and Storm Bolter" hidden="false" id="bad8-71cc-256a-6642">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Flamer and Powerfist" hidden="false" id="6d6a-4a50-5311-457e">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="root-entry" shared="true" id="4d2b-1a8c-f082-f1fc" includeChildSelections="true" message="{root-entry} may only have maximum of 2 heavy weapons across the unit."/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
@@ -2630,67 +2781,210 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
       </characteristics>
     </profile>
+    <profile name="Smite" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="e5da-cc84-7701-ff64">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1 Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Autohits</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Ordo Xenos Inquisitor Lord" hidden="false" id="2f5b-253a-02ea-74d9">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Minor Psychic Power" hidden="false" id="9015-2ee7-4dda-cc0b" collective="false">
-          <infoLinks>
-            <infoLink name="Minor Psychic Power" id="2957-7bae-1753-ce75" hidden="false" targetId="69af-f095-551d-130c" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Inquisitor&apos;s Retinue" hidden="false" id="74f5-ec2c-e782-0bae" collective="false" targetId="fe05-06b2-a662-cc8b" type="selectionEntryGroup"/>
-        <entryLink import="true" name="Psychic Powers" hidden="false" id="7042-0936-d90a-5598" collective="false" targetId="303f-8d77-2f63-62c9" type="selectionEntryGroup"/>
-        <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="6c94-6856-d8d2-a1c0" collective="false" targetId="27a0-9cff-9897-d169" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Inquisitor Lord" hidden="false" id="3748-dc80-a8ad-1646" type="selectionEntry" targetId="bb42-b139-e132-cd80"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="927e-1c3e-8da9-c32f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <infoLinks>
-        <infoLink name="Inquisitor Lord" id="7e79-4ae1-c207-9b8c" hidden="false" targetId="75e5-6dc4-a7aa-df69" type="profile"/>
-      </infoLinks>
-      <rules>
-        <rule name="Iron Will" id="2eca-c8c9-0906-8f93" hidden="false">
-          <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
-        </rule>
-      </rules>
+      <categoryLinks>
+        <categoryLink targetId="3c96-248b-affd-e504" id="aeee-c862-91ba-f216" primary="false" name="Independent Character"/>
+        <categoryLink targetId="3cb1-645b-8bbb-3d49" id="a898-0fbd-b291-efeb" primary="false" name="Psyker"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deathwatch Captain" hidden="false" id="6901-980c-4b19-1320">
-      <entryLinks>
-        <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="005d-5cd0-706f-3ec7" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169"/>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Deathwatch Master" hidden="false" id="1a3a-12b4-1d45-47b2"/>
-    <selectionEntry type="model" import="true" name="Biologis Adepts" hidden="false" id="05e2-aef9-5183-347a"/>
-    <selectionEntry type="unit" import="true" name="Ordo Xenos Inquisitor" hidden="false" id="7765-d1cc-97d7-ab17">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="9781-37dd-a0ca-9c52" primary="false" name="Deathwatch"/>
+      </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Minor Psychic Power" hidden="false" id="d18b-8f39-89cf-f1f6" collective="false">
+        <selectionEntry type="model" import="true" name="Captain" hidden="false" id="fa2a-0cac-4372-44d6">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="81c0-3e85-aa5b-a53b-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81c0-3e85-aa5b-a53b-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="005d-5cd0-706f-3ec7" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169" sortIndex="2"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Librarian" hidden="false" id="5be4-0ea8-0d29-d802" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="46a4-4672-5cc6-c5bd"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Smite" id="1611-6149-acb6-9166" hidden="false" type="profile" targetId="e5da-cc84-7701-ff64"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
           <infoLinks>
-            <infoLink name="Minor Psychic Power" id="9789-9638-fabc-1bfc" hidden="false" targetId="69af-f095-551d-130c" type="rule"/>
+            <infoLink name="Deathwatch Captain" id="d78a-cd37-733e-8549" hidden="false" type="profile" targetId="0474-0b5f-b7ce-a269"/>
+            <infoLink name="Boltgun" id="55ba-5dee-34af-21da" hidden="false" type="profile" targetId="60bf-18fd-f6e6-6eb4"/>
+            <infoLink name="Close Combat Weapon" id="7a2d-cdc1-317d-6eb3" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Inquisitor&apos;s Retinue" hidden="false" id="b661-b48d-67c8-e842" collective="false" targetId="fe05-06b2-a662-cc8b" type="selectionEntryGroup"/>
-        <entryLink import="true" name="Psychic Powers" hidden="false" id="67d4-a032-6e37-3be1" collective="false" targetId="303f-8d77-2f63-62c9" type="selectionEntryGroup"/>
-        <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="8b19-e9bd-6cb3-a80e" collective="false" targetId="27a0-9cff-9897-d169" type="selectionEntryGroup"/>
-      </entryLinks>
+      <modifiers>
+        <modifier type="add" value="3cb1-645b-8bbb-3d49" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="5be4-0ea8-0d29-d802" shared="true" childName="Librarian" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Deathwatch Librarian Captain" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="5be4-0ea8-0d29-d802" shared="true" childName="Librarian" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
-        <infoLink name="Inquisitor" id="4718-ee32-ff27-8587" hidden="false" targetId="fb71-3aef-b9f0-aa58" type="profile"/>
+        <infoLink name="Deathwatch" id="128b-957c-2ebb-eb3e" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+        <infoLink name="Independent Character" id="9cdb-dc39-0c00-986a" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Master" hidden="false" id="1a3a-12b4-1d45-47b2">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="28fe-63ad-41e4-b6f9" primary="false" name="Deathwatch"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Master" hidden="false" id="7859-8bc3-a557-c721">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8245-126f-68cb-606e-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8245-126f-68cb-606e-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="863a-f99d-abca-449f" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169" sortIndex="2"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Librarian" hidden="false" id="1dc6-f0af-ebae-6e2e" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba78-c804-3672-dc09"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Smite" id="763e-247e-f4bd-7138" hidden="false" type="profile" targetId="e5da-cc84-7701-ff64"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <infoLinks>
+            <infoLink name="Deathwatch Master" id="964f-bd8a-3d56-83fb" hidden="false" type="profile" targetId="58c5-33d3-66a9-7569"/>
+            <infoLink name="Boltgun" id="50b5-a1ca-e610-c6a8" hidden="false" type="profile" targetId="60bf-18fd-f6e6-6eb4"/>
+            <infoLink name="Close Combat Weapon" id="27b5-0ae4-7081-cc27" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="3cb1-645b-8bbb-3d49" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="1dc6-f0af-ebae-6e2e" shared="true" childName="Librarian" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Deathwatch Librarian Master" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="1dc6-f0af-ebae-6e2e" shared="true" childName="Librarian" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="a993-2a1b-acd6-08c8" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+        <infoLink name="Independent Character" id="cbfc-2deb-8b40-bd44" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Biologis Adept" hidden="false" id="05e2-aef9-5183-347a">
+      <constraints>
+        <constraint type="max" value="5" field="selections" scope="force" shared="true" id="21a1-84d0-453e-1b62" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c63-e4ec-6446-38b6"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Biologis Adept" id="de38-7b58-723a-c11c" hidden="false" type="profile" targetId="2156-be6d-b930-9caf"/>
+        <infoLink name="Laspistol" id="08f1-a742-3b37-cf75" hidden="false" type="profile" targetId="95a9-d270-d218-1772"/>
+        <infoLink name="Close Combat Weapon" id="3fe4-9b8f-edf4-f075" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
       </infoLinks>
       <rules>
-        <rule name="Iron Will" id="29c6-9a03-5558-4a75" hidden="false">
-          <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
+        <rule name="Narthecium" id="d8ef-5817-2503-f1e4" hidden="false">
+          <description>The Narthecium allows the medic to ignore the first failed saving throw each turn in the unit containing the Apothecary. This may not be used on any model who suffered &apos;Instant Death&apos; or hit by a weapon that allows no saves. It cannot be used if the Apothecary is in base to base contact with an enemy model.</description>
+        </rule>
+        <rule name="Sample Collectors" id="4b3a-4191-2a94-0757" hidden="false">
+          <description>The adepts of the Adeptus Mechanicus‘ Divisio Biologis
+are on the constant search for foreign bio-samples and will take any chance to collect new ones. A unit containing a Biologis Adept must pass a Leadership test in order to pursue a foe defeated in close combat or make a sweeping advance. If the test is failed the unit must consolidate. If the enemy were Xenos then no Leadership test is taken, and the unit must consolidate.</description>
         </rule>
       </rules>
+      <entryLinks>
+        <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="2ddc-218d-2aa0-dec8" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Options" id="e56f-881b-9028-c170" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Signum" hidden="false" id="6b22-851d-ef9b-4794">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="348e-88b8-5e6e-ca61"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+              <rules>
+                <rule name="Signum" id="421f-609a-5d1f-120a" hidden="false">
+                  <description>Each turn, you may re-roll one missed to hit shooting dice for the Command squad the Techmarine belongs to.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Servo-Arm" hidden="false" id="9c6a-c551-2f91-eb68">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ca5-2622-aadc-dc12"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <profiles>
+                <profile name="Servo-Arm" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="1a51-35a7-360e-21c5">
+                  <characteristics>
+                    <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                    <characteristic name="S" typeId="24d8-2110-08fa-d844">Melee</characteristic>
+                    <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                    <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
+                    <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Makes a single attack, hitting on a 4+. independently of the Techpriests attacks. Ignores all armour saves.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ordo Xenos Inquisitor" hidden="false" id="7765-d1cc-97d7-ab17">
+      <entryLinks>
+        <entryLink import="true" name="Inquisitor&apos;s Retinue" hidden="false" id="b661-b48d-67c8-e842" collective="false" targetId="fe05-06b2-a662-cc8b" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Inquisitor" hidden="false" id="7e72-1fb0-1221-5cc0" type="selectionEntry" targetId="5637-57af-0978-1fc2"/>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="3cb1-645b-8bbb-3d49" id="b1f9-4fd1-678c-f85a" primary="false" name="Psyker"/>
+        <categoryLink targetId="3c96-248b-affd-e504" id="99a6-8f49-7f02-60ec" primary="false" name="Independent Character"/>
+        <categoryLink targetId="ba91-25f8-5631-fc2f" id="5440-528b-716c-b063" primary="false" name="Alien Hunter Elite Choices"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deathcult Assassins" hidden="false" id="fff5-d484-2fc9-c03d">
       <selectionEntryGroups>
@@ -2716,20 +3010,341 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="ba91-25f8-5631-fc2f" id="1aa6-0739-1ef8-4b54" primary="false" name="Alien Hunter Elite Choices"/>
+      </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Deathwatch Terminator Kill Team" hidden="false" id="7f5c-a5e2-8857-cb61"/>
-    <selectionEntry type="unit" import="true" name="Xenarite Heretek" hidden="false" id="41f4-f4f7-c030-5074"/>
-    <selectionEntry type="unit" import="true" name="Deathwatch Veteran Kill Team" hidden="false" id="3fe2-8c57-a101-4709"/>
-    <selectionEntry type="unit" import="true" name="Deathwatch Veteran Bike Squad" hidden="false" id="c504-b0f0-9805-5ab0"/>
-    <selectionEntry type="unit" import="true" name="Deathwatch Fire Support Team" hidden="false" id="9051-85de-0b11-ba22"/>
-    <selectionEntry type="unit" import="true" name="Deathwatch Dreadnought" hidden="false" id="fc57-007f-d1d1-58e8"/>
-    <selectionEntry type="unit" import="true" name="Deathwatch Landraider" hidden="false" id="ce4e-6c4d-96da-5634"/>
-    <selectionEntry type="unit" import="true" name="Deathwatch Landraider Crusader" hidden="false" id="3128-58cd-1ecc-9fa0"/>
-    <selectionEntry type="unit" import="true" name="Orbital Strike" hidden="false" id="1408-0bba-0c12-7be6"/>
-    <selectionEntry type="unit" import="true" name="Deathwatch Vanguard Veteran Kill Team" hidden="false" id="b74a-4282-9163-6d3e"/>
+    <selectionEntry type="unit" import="true" name="Deathwatch Terminator Kill Team" hidden="false" id="7f5c-a5e2-8857-cb61">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="d60c-29a3-7e58-b41a" primary="false" name="Deathwatch"/>
+        <categoryLink targetId="ba91-25f8-5631-fc2f" id="b8d0-49ef-c179-9662" primary="false" name="Alien Hunter Elite Choices"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="d5f2-6bbd-b597-e389" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Terminators" id="fae9-d22c-2dcc-49f8" hidden="false" defaultSelectionEntryId="dcbe-f48a-f354-2f8f">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Terminator" hidden="false" id="dcbe-f48a-f354-2f8f" defaultAmount="1,1,1,1">
+              <infoLinks>
+                <infoLink name="Deathwatch Terminator" id="d06e-c381-fe0c-edd1" hidden="false" type="profile" targetId="4d40-e161-1f5a-30a7"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Deathwatch Terminator Weapon" hidden="false" id="47a3-4142-b6f4-81d6" type="selectionEntryGroup" targetId="b98c-467d-f3a3-8b30"/>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Terminator Sergeant" hidden="false" id="fc5a-e581-8941-39dd">
+              <infoLinks>
+                <infoLink name="Deathwatch Terminator" id="2067-86d1-3e8f-4f20" hidden="false" type="profile" targetId="4d40-e161-1f5a-30a7"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a5a3-d88c-daa3-b7fa-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5a3-d88c-daa3-b7fa-max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="cbcc-e86f-f511-3935" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169"/>
+                <entryLink import="true" name="Deathwatch Terminator Weapon" hidden="false" id="ba0d-0846-b75d-03ca" type="selectionEntryGroup" targetId="b98c-467d-f3a3-8b30"/>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="0e48-afae-e0fd-f3b5"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="3852-beca-822d-4c6c"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Xenarite Heretek" hidden="false" id="41f4-f4f7-c030-5074">
+      <categoryLinks>
+        <categoryLink targetId="ba91-25f8-5631-fc2f" id="138f-a8a1-23d4-8309" primary="false" name="Alien Hunter Elite Choices"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Heretek" hidden="false" id="5f5e-b4b0-209a-ff5b" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c14b-9a58-71a9-220f-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c14b-9a58-71a9-220f-max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Heretek" id="48a4-927a-78e6-18e6" hidden="false" type="profile" targetId="949b-3dac-1dd4-ea6f"/>
+            <infoLink name="Laspistol" id="7dc0-7899-3c10-51a3" hidden="false" type="profile" targetId="95a9-d270-d218-1772"/>
+            <infoLink name="Close Combat Weapon" id="c638-69e2-cecd-12d3" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
+          </infoLinks>
+          <rules>
+            <rule name="Auspex" id="07aa-26cb-fb45-f757" hidden="false">
+              <description>If enemy infiltrators set up within 4D6&quot; of a model with a auspex, then that model and the unit they are attached to is allowed to take a &quot;free&quot; shot at them. These shots are taken before the battle begins and may cause the infiltrators to fall back.</description>
+            </rule>
+            <rule name="Signum" id="ce8b-52c0-b4aa-2d05" hidden="false">
+              <description>Each turn, you may re-roll one missed to hit shooting dice for the Command squad the Techmarine belongs to.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile name="Servo-Arm" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="f822-3e40-1de2-735a">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">Melee</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">User x2</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Makes a single attack, hitting on a 4+. independently of the Techpriests attacks. Ignores all armour saves.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Experimental Servitors" hidden="false" id="9a48-a7c8-6566-c3a8" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7d83-bd47-7922-d738"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Servitor" id="d1ce-a655-2c84-0f82" hidden="false" type="profile" targetId="c4c4-84c2-c240-53cf"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon" id="595e-c094-c528-a85d" hidden="false" defaultSelectionEntryId="none">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eeb9-bfc1-d22c-f2ac-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eeb9-bfc1-d22c-f2ac-max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Bright Lance" hidden="false" id="7211-bc9a-f653-8fd5">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="45"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Bright Lance" id="50f7-71bd-d950-0694" hidden="false" type="profile" targetId="6f4e-bc15-c01c-501a"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Smart Missile System" hidden="false" id="e52c-28b3-933f-ed7f">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Smart Missile System" id="a3d2-b985-33f5-e6e3" hidden="false" type="profile" targetId="a92d-c02e-9701-2405"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Gauss Cannon" hidden="false" id="480c-bd78-8761-3ba2">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Gauss Cannon" id="9227-ecf4-e77b-1014" hidden="false" type="profile" targetId="96af-6622-de74-9cb8"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Veteran Kill Team" hidden="false" id="3fe2-8c57-a101-4709">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="4ef4-4b74-2622-2295" primary="false" name="Deathwatch"/>
+        <categoryLink targetId="b59e-e3c9-8a4f-4b32" id="787d-eb97-8a9a-9a3a" primary="false" name="Mandatory Troop Choices"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Biologis Adept" hidden="false" id="0a4e-0723-a2e2-9995" type="selectionEntry" targetId="05e2-aef9-5183-347a"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="cd91-094c-f3b6-b0fa" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Transport" id="9cd8-4c29-69bf-584d" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="06e5-2491-c4d2-4fe3"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Alien Hunter Rhino" hidden="false" id="f3cd-4072-3ee6-c12a" type="selectionEntry" targetId="9f1d-656a-5e1a-d8f7"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Veteran" hidden="false" id="a5ca-b540-ab15-1ebf" step="" defaultAmount="1,1,1,1,1">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="a1ef-a52d-6393-c3b4"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="fc2b-a339-ce8d-354e"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Deathwatch Veteran" id="4ebc-a069-38f9-280c" hidden="false" type="profile" targetId="f2b8-6ab1-c564-0fb8">
+              <modifiers>
+                <modifier type="set" value="2" field="abbf-0d11-fd86-d938">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="a5ca-b540-ab15-1ebf" childId="9a36-839d-d372-b7e4" shared="true" childName="Terminator Honors"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Deathwatch Veteran with Terminator Honors" field="name">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="a5ca-b540-ab15-1ebf" childId="9a36-839d-d372-b7e4" shared="true" childName="Terminator Honors"/>
+                  </conditions>
+                  <comment>Veteran with Terminator Honors</comment>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Boltgun" id="c72b-3a0c-6787-5f4b" hidden="false" type="profile" targetId="60bf-18fd-f6e6-6eb4">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="a5ca-b540-ab15-1ebf" childId="7dc4-cde7-3994-f5e4" shared="true" childName="Special Weapons"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Close Combat Weapon" id="5885-31c0-1204-1e92" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
+            <infoLink name="Frag Grenades" id="032d-8c83-95b5-ba0a" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Melta Bombs" id="648a-ab28-a683-3a36" hidden="false" type="profile" targetId="87d0-8c40-7bcb-8cbb"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Special Weapons" id="7dc4-cde7-3994-f5e4" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="5e16-300f-0712-8a84">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Bolter w/ M.40 Targeter" hidden="false" id="dc74-a2b6-7197-ee00" step="">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Plasma Gun" hidden="false" id="3145-30e2-f17e-d105">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Meltagun" hidden="false" id="1fae-5d6a-481b-4d10">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Missile Launcher" hidden="false" id="5c7b-01c8-0a90-3a7d">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Infernus Heavy Bolter" hidden="false" id="e471-dd1f-214c-90a7">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Frag Cannon" hidden="false" id="3962-b7f2-c4e1-f8b4">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c61d-d6b0-2ddb-3571"/>
+                <constraint type="max" value="2" field="selections" scope="root-entry" shared="true" id="9edf-27d1-c2fd-8d8f" includeChildSelections="true" message="Maximum of 2 Special Weapons across the {root-entry}"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Terminator Honors" hidden="false" id="9a36-839d-d372-b7e4">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a63-ad2f-b519-2398"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Specialist Ammunition" hidden="false" id="b07a-e850-5763-bbf0">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d5ec-bde6-4eb6-0337"/>
+              </constraints>
+              <modifiers>
+                <modifier type="add" value="Veteran must be equipped with a bolter or combi-bolter to use Specialist Ammo (excluding the bolter with M.40 Targetter)." field="error">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="a5ca-b540-ab15-1ebf" childId="b07a-e850-5763-bbf0" shared="true" childName="Specialist Ammunition"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7dc4-cde7-3994-f5e4" shared="true" childName="Special Weapons"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="8882-2c3b-b3e1-d4fd" shared="true" childName="Bolt Pistol"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="28cc-a0c8-a16d-0787" shared="true" childName="Bolter"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="143a-8a3d-4f37-448c" shared="true" childName="Combi-Flamer"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="c201-b7be-e159-942e" shared="true" childName="Combi-Melta"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="f300-57b7-1a0d-545c" shared="true" childName="Combi-Needle Pistol"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="3aa1-0e86-c7c4-6a56" shared="true" childName="Combi-Grenade Launcher"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="7af6-d777-dd95-704c" shared="true" childName="Combi-Plasma Gun"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="487b-a46d-858c-22bd" shared="true" childName="Storm Bolter"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="51cc-81f6-546e-64a0" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="a5ca-b540-ab15-1ebf" childId="9a36-839d-d372-b7e4" shared="true" childName="Terminator Honors"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Veteran Bike Squad" hidden="false" id="c504-b0f0-9805-5ab0">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="deee-9d08-4525-af74" primary="false" name="Deathwatch"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="7450-b60e-1efb-756e" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Fire Support Team" hidden="false" id="9051-85de-0b11-ba22">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="e5c0-9152-d7d8-f604" primary="false" name="Deathwatch"/>
+        <categoryLink targetId="5544-1919-07c4-fba5" id="5005-04cb-7b86-ec59" primary="false" name="Alien Hunter Heavy Choices"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Biologis Adept" hidden="false" id="ea56-0899-fd9d-e220" type="selectionEntry" targetId="05e2-aef9-5183-347a"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="e7b2-6d4b-8326-15e5" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Dreadnought" hidden="false" id="fc57-007f-d1d1-58e8">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="2d77-4a9c-b477-a655" primary="false" name="Deathwatch"/>
+        <categoryLink targetId="5544-1919-07c4-fba5" id="f50d-cef2-589b-b662" primary="false" name="Alien Hunter Heavy Choices"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="800d-4cdf-5454-846d" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Landraider" hidden="false" id="ce4e-6c4d-96da-5634">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="2158-bc89-70c2-3cc0" primary="false" name="Deathwatch"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="f844-0da8-0420-5247" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Landraider Crusader" hidden="false" id="3128-58cd-1ecc-9fa0">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="9c18-03fa-e4fd-f725" primary="false" name="Deathwatch"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="138a-d56b-24dd-9ba1" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Orbital Strike" hidden="false" id="1408-0bba-0c12-7be6">
+      <categoryLinks>
+        <categoryLink targetId="5544-1919-07c4-fba5" id="193a-4dd4-1f8b-7d45" primary="false" name="Alien Hunter Heavy Choices"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathwatch Vanguard Veteran Kill Team" hidden="false" id="b74a-4282-9163-6d3e">
+      <categoryLinks>
+        <categoryLink targetId="fb40-23ff-db43-ac2f" id="ed57-a0e9-3a2a-6e24" primary="false" name="Deathwatch"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Deathwatch" id="4ec2-df1e-88ab-2866" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
+      </infoLinks>
+    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Armoured Fist Squad" hidden="false" id="c812-df73-29d4-5235" collective="false">
       <categoryLinks>
-        <categoryLink name="Troops" hidden="false" id="dd0d-1e98-264e-bd57" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
         <categoryLink targetId="9378-6e46-bd71-6b8f" id="38dc-585e-4f6e-5dac" primary="false" name="Inducted Imperial Guard"/>
       </categoryLinks>
       <selectionEntries>
@@ -2943,6 +3558,72 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="7da2-40c9-890c-3239" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="949f-fced-04a6-c467" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="5d5f-cfa8-2970-4a50" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="f0b5-294d-9445-a1b7" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="b1dd-a74a-0fe1-35b8" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="7da2-40c9-890c-3239" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="90e9-2e2f-1754-4917" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Imperial Guard Chimera" hidden="false" id="89d5-7f29-611a-3fcb" collective="false" collapsible="true">
       <rules>
@@ -2957,6 +3638,7 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
       <categoryLinks>
         <categoryLink name="Vehicle" hidden="false" id="6fd7-9a8c-d74b-5462" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
         <categoryLink targetId="9378-6e46-bd71-6b8f" id="368e-bfd7-aa77-0066" primary="false" name="Inducted Imperial Guard"/>
+        <categoryLink targetId="a090-a855-c7de-f5c3" id="8eb3-c740-1a16-e8d1" primary="false" name="Dedicated Transport"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Turret Weapon" id="e1e8-b3e8-387a-6164" hidden="false" collective="false" import="true">
@@ -3066,7 +3748,6 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Fast Attack" hidden="false" id="af91-aec9-69f3-4e77" targetId="34e2-d53c-28ab-44cf" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="9c9b-a1ea-3392-94a5" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntries>
@@ -3233,7 +3914,6 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
         <infoLink name="Bikes" id="9714-7cca-db3e-2c15" hidden="false" targetId="6bd6-e738-e144-6db9" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Fast Attack" hidden="false" id="3109-0b4f-fe70-33ec" targetId="34e2-d53c-28ab-44cf" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="c2f3-0bb6-383b-c993" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntries>
@@ -3468,7 +4148,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <infoLink name="And They Shall Know No Fear" id="3494-47df-fdd5-5f8c" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Heavy Support" hidden="false" id="fb0d-7fa8-9ebc-a5e6" targetId="aacb-8a81-62c0-3db8" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="eba7-86be-181e-1860" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntries>
@@ -3642,6 +4321,23 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Space Marine Rhino" hidden="false" id="13a5-ee1c-780c-d4d7" collective="false">
       <rules>
@@ -3654,8 +4350,8 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <infoLink name="Storm Bolter" id="2d83-c73a-a2cc-e034" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Dedicated Transport" hidden="false" id="f00a-2d71-aff5-4da8" targetId="a090-a855-c7de-f5c3" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="4938-f7a8-c069-6a80" primary="false" name="Space Marine Ally"/>
+        <categoryLink targetId="a090-a855-c7de-f5c3" id="9713-8212-2d30-4562" primary="false" name="Dedicated Transport"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Space Marine Vehicle Upgrades" hidden="false" id="f36b-80b7-9d75-a16b" collective="false" targetId="43f4-ee4f-b543-bd1a" type="selectionEntryGroup"/>
@@ -3669,8 +4365,8 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <infoLink name="Razorback" id="5080-2611-ddb5-0ec9" hidden="false" targetId="046b-a706-f115-9545" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Dedicated Transport" hidden="false" id="94f8-443d-f59a-6c1d" targetId="a090-a855-c7de-f5c3" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="cb7d-5059-e5fc-fc20" primary="false" name="Space Marine Ally"/>
+        <categoryLink targetId="a090-a855-c7de-f5c3" id="0bf0-edc0-97e1-fd63" primary="false" name="Dedicated Transport"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Turret Weapon" id="899b-ae03-7dd7-edee" hidden="false" collective="false" import="true">
@@ -3739,7 +4435,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <infoLink name="Dreadnought" id="f6fb-d981-bb54-a006" hidden="false" targetId="4b00-8b2c-de24-8193" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Elites" hidden="false" id="5b37-0933-4cda-9918" targetId="6d25-b346-c314-6911" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="8063-f8c9-3fc4-02ac" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -3856,13 +4551,29 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Infantry Platoon" hidden="false" id="04ea-5f6e-bccb-a2ef" collective="false">
       <constraints>
         <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="e773-8a1b-028a-72ef" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <categoryLinks>
-        <categoryLink name="Troops" hidden="false" id="62ee-7d54-176f-d576" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
         <categoryLink targetId="9378-6e46-bd71-6b8f" id="5ed9-2a71-a682-1acf" primary="false" name="Inducted Imperial Guard"/>
       </categoryLinks>
       <entryLinks>
@@ -3882,6 +4593,72 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="7da2-40c9-890c-3239" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="949f-fced-04a6-c467" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="5d5f-cfa8-2970-4a50" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="f0b5-294d-9445-a1b7" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="b1dd-a74a-0fe1-35b8" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="7da2-40c9-890c-3239" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="90e9-2e2f-1754-4917" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Infantry Squad" hidden="false" id="ee97-12fc-a601-31fd" collective="false">
       <categoryLinks>
@@ -4447,10 +5224,10 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Inquisitorial Storm Troopers" hidden="false" id="86cd-9a69-527a-a9e8" collective="false">
       <categoryLinks>
-        <categoryLink name="Troops" hidden="false" id="e804-d226-7df7-536b" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink targetId="b59e-e3c9-8a4f-4b32" id="ca11-6f85-5771-6d98" primary="false" name="Mandatory Troop Choices"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Krak Grenades" hidden="false" id="cfe3-348a-0816-f07e" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Krak Grenades" hidden="false" id="cfe3-348a-0816-f07e" collective="false" sortIndex="3">
           <modifiers>
             <modifier type="increment" value="2" field="4ed5-2f92-9abc-2870">
               <repeats>
@@ -4467,7 +5244,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Storm Troopers" id="57e9-369b-c310-795e" hidden="false" collective="false" import="true" defaultSelectionEntryId="584f-34cb-ab6f-bdc3">
+        <selectionEntryGroup name="Storm Troopers" id="57e9-369b-c310-795e" hidden="false" collective="false" import="true" defaultSelectionEntryId="584f-34cb-ab6f-bdc3" sortIndex="1">
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="e29e-5323-3378-6bd0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="3446-76c2-d64e-ca8d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4505,7 +5282,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="d4b6-ffc8-ff90-66f0" hidden="false" collective="false" import="true">
+        <selectionEntryGroup name="Weapons" id="d4b6-ffc8-ff90-66f0" hidden="false" collective="false" import="true" sortIndex="4">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="40dd-e347-1c1c-64c5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -4545,92 +5322,20 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Transport" id="4dba-25f2-7cfc-973a" hidden="false" collective="false" import="true">
+        <selectionEntryGroup name="Transport" id="4dba-25f2-7cfc-973a" hidden="false" collective="false" import="true" sortIndex="5">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ac1-6dd8-a51d-74e4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Valkrie (IA)" hidden="false" id="fd8e-d3ee-2936-1b96" collective="false">
-              <profiles>
-                <profile name="Valkyrie" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle" hidden="false" id="a857-07f1-a40e-5474">
-                  <characteristics>
-                    <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
-                    <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
-                    <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
-                    <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <rules>
-                <rule name="Heavy Lift" id="35c4-be9e-2a71-7738" hidden="false">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="db87-6e4f-2cc5-f5fa" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Hardpoint"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <description>A Valkyrie can cary a Tarantula Sentry Gun or Cyclops Demolition Vehicle if it is not armed with Hellstrike Missiles or Multiple Rocket Pods</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink name="Flyers" id="e37c-966b-0e7e-6747" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
-                <infoLink name="Skimmer" id="c787-3889-b393-5505" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
-                <infoLink name="VTOL Hover Mode" id="a744-2e6c-64df-0b45" hidden="false" targetId="71e6-4ef5-7178-3676" type="rule"/>
-                <infoLink name="Multi-laser" id="ee6f-b9bd-bcca-c193" hidden="false" targetId="63ed-7ae2-0dce-e02e" type="profile"/>
-                <infoLink name="Heavy Bolter" id="b2b4-5216-489a-7b69" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
-                  <modifiers>
-                    <modifier type="set" value="2x Door Mounted Heavy Bolters" field="name"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Hardpoint" id="db87-6e4f-2cc5-f5fa" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c91-d617-e15b-c4fd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="2x Multiple Rocket Pods" hidden="false" id="e237-751e-bda6-f911" collective="false">
-                      <infoLinks>
-                        <infoLink name="Multiple Rockit Pods" id="e44d-65db-b0f7-5b43" hidden="false" targetId="e434-66a1-6cb9-9e3d" type="profile">
-                          <modifiers>
-                            <modifier type="set" value="2x Multiple Rockit Pods" field="name"/>
-                          </modifiers>
-                        </infoLink>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="2x Hellstrike Missiles" hidden="false" id="1ad7-ac82-81c8-6160" collective="false">
-                      <infoLinks>
-                        <infoLink name="Rockits" id="3bea-99fe-9476-b577" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
-                          <modifiers>
-                            <modifier type="set" value="2x Hellstrike Missiles" field="name"/>
-                          </modifiers>
-                        </infoLink>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <entryLinks>
-                <entryLink import="true" name="Navy Vehicle Upgrades" hidden="false" id="8f16-bd2b-eeab-935f" collective="false" targetId="af51-b222-5ced-6781" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
             <entryLink import="true" name="Alien Hunter Rhino" hidden="false" id="9ddb-a591-a602-4632" collective="false" targetId="9f1d-656a-5e1a-d8f7" type="selectionEntry"/>
             <entryLink import="true" name="Alien Hunter Chimera" hidden="false" id="5c90-1d92-a0cb-9ccc" collective="false" targetId="77f0-f28e-dc4a-aa8f" type="selectionEntry"/>
+            <entryLink import="true" name="Valkrie (IA)" hidden="false" id="7f2b-14cb-bac4-a7d1" type="selectionEntry" targetId="77d6-d91a-9664-0190"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Biologis Adept" hidden="false" id="fbf9-2581-f3ee-a574" type="selectionEntry" targetId="05e2-aef9-5183-347a" sortIndex="2"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
@@ -4646,7 +5351,8 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <infoLink name="Storm Bolter" id="4395-60e5-cd25-0688" hidden="false" targetId="4c6c-9de1-00a8-8016" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Dedicated Transport" hidden="false" id="85d6-5e21-4f25-dfba" targetId="a090-a855-c7de-f5c3" primary="true"/>
+        <categoryLink name="Dedicated Transport" hidden="false" id="85d6-5e21-4f25-dfba" targetId="a090-a855-c7de-f5c3" primary="false"/>
+        <categoryLink targetId="ca5d-3c3b-217c-c72d" id="ddd6-a243-e878-368b" primary="false" name="Vehicle"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Alien Hunters Vehicle Upgrades" hidden="false" id="1cb6-03d0-94ed-da6d" collective="false" targetId="27d0-afe4-bb00-2151" type="selectionEntryGroup"/>
@@ -4654,8 +5360,18 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="0" field="dac8-c3c1-abcd-e195">
+          <conditions>
+            <condition type="greaterThan" value="12" field="selections" scope="root-entry" childId="model" shared="true" childName="model" includeChildSelections="true" includeChildForces="false" traverseAssociationGroup="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dac8-c3c1-abcd-e195" message="Rhinos can only hold 10 models. There are more than 10 models in the {root-entry} selection."/>
+      </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Alien Hunter Chimera" hidden="false" id="77f0-f28e-dc4a-aa8f" collective="false">
+    <selectionEntry type="unit" import="true" name="Alien Hunter Chimera" hidden="false" id="77f0-f28e-dc4a-aa8f" collective="false">
       <rules>
         <rule name="Firepoints" id="dcc6-4cc0-42c9-7c8b" hidden="false">
           <description>The Chimera is fitted with six hull lasguns for passengers to use. Up to six passangers can use them to fire at single target. Additionally, one model may fire a weapon from the top hatch using their own weapon, but doing so turns the Chimera into an open topped vehicle until the next turn.</description>
@@ -4667,6 +5383,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Vehicle" hidden="false" id="789a-9599-28c2-8e4e" targetId="ca5d-3c3b-217c-c72d" primary="false"/>
+        <categoryLink targetId="a090-a855-c7de-f5c3" id="7b80-17df-4432-3aa3" primary="false" name="Dedicated Transport"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Turret Weapon" id="3d7f-fa08-85f0-1ca2" hidden="false" collective="false" import="true">
@@ -4752,8 +5469,18 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="70"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe4e-bbae-70d0-9744" message="Chimeras can only hold 12 models. There are more than 12 models in the {root-entry} selection."/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="fe4e-bbae-70d0-9744">
+          <conditions>
+            <condition type="greaterThan" value="12" field="selections" scope="root-entry" childId="model" shared="true" childName="model" includeChildSelections="true" includeChildForces="false" traverseAssociationGroup="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Alien Hunter Land Raider" hidden="false" id="a35a-0cc3-0da0-466d" collective="false">
+    <selectionEntry type="unit" import="true" name="Alien Hunter Land Raider" hidden="false" id="a35a-0cc3-0da0-466d" collective="false">
       <rules>
         <rule name="Deus Ex Machina (IA)" id="5222-0412-6007-5b41" hidden="false">
           <description>If the crew are stunned then the Machine Spirit will take over temporarily. The Land Raider may be moved directly forward up to its maximum move.</description>
@@ -4777,7 +5504,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Troops" hidden="false" id="b999-67bc-f072-29ff" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
+        <categoryLink targetId="ca5d-3c3b-217c-c72d" id="a36c-652f-8c46-0d92" primary="false" name="Vehicle"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Alien Hunters Vehicle Upgrades" hidden="false" id="130e-41c3-aa6a-c54c" collective="false" targetId="27d0-afe4-bb00-2151" type="selectionEntryGroup"/>
@@ -4785,10 +5512,19 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="250"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa75-5db5-ec5d-1c6f" message="Land Raiders can only hold 10 models. There are more than 10 models in the {root-entry} selection."/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="aa75-5db5-ec5d-1c6f">
+          <conditions>
+            <condition type="greaterThan" value="10" field="selections" scope="root-entry" childId="model" shared="true" childName="model" includeChildSelections="true" includeChildForces="false" traverseAssociationGroup="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Land Speeder Squadron" hidden="false" id="db85-0f20-c007-1fc6" collective="false">
       <categoryLinks>
-        <categoryLink name="Fast Attack" hidden="false" id="4646-e1f8-661d-33bc" targetId="34e2-d53c-28ab-44cf" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="221a-0ae3-8de6-17be" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntries>
@@ -4862,7 +5598,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <infoLink name="Land Speeder" id="e2fe-8d94-4e36-fe06" hidden="false" targetId="1c18-00ad-83ac-a46b" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Fast Attack" hidden="false" id="2ad0-a0a7-e907-305c" targetId="34e2-d53c-28ab-44cf" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="e736-1a10-fe79-3a39" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -4907,7 +5642,6 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <infoLink name="Leman Russ Battle Tank" id="6dbb-4ccc-6767-28cf" hidden="false" targetId="b6ce-21ea-3d88-54b4" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Heavy Support" hidden="false" id="e559-c513-3b41-5550" targetId="aacb-8a81-62c0-3db8" primary="true"/>
         <categoryLink targetId="9378-6e46-bd71-6b8f" id="dbfa-95f7-4de0-2a83" primary="false" name="Inducted Imperial Guard"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -4965,6 +5699,23 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Leman Russ Conqueror (IA)" hidden="false" id="b2ae-7337-ff3c-8f53" collective="false">
       <modifiers>
@@ -4972,6 +5723,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -5042,6 +5808,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="145"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="8d04-3748-bda7-36d0" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Leman Russ Demolisher" hidden="false" id="9eff-b46c-8f49-44c6" collective="false">
       <profiles>
@@ -5133,6 +5902,26 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="150"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="0378-6b6b-d618-59c5" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Leman Russ Executioner (IA)" hidden="false" id="5d9a-1e9f-6f08-a7c7" collective="false">
       <modifiers>
@@ -5140,6 +5929,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -5210,6 +6014,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="165"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="59c0-456a-acab-76aa" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Leman Russ Exterminator (IA)" hidden="false" id="297f-d7c5-e7d1-f03f" collective="false">
       <modifiers>
@@ -5217,6 +6024,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -5291,6 +6113,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="fb42-8154-2992-2e76" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Leman Russ Vanquisher (IA)" hidden="false" id="7b89-a5c8-df18-fea0" collective="false">
       <modifiers>
@@ -5298,6 +6123,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -5383,6 +6223,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="175"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="e4f3-c1de-467d-3bc8" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Lightning (IA)" hidden="false" id="0168-d110-efc7-cec1" collective="false">
       <modifiers>
@@ -5390,6 +6233,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -5461,6 +6319,9 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="145"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="285c-fb66-a6cc-3ce1" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Medusa (IA)" hidden="false" id="07a9-f490-6f44-670c" collective="false">
       <modifiers>
@@ -5468,6 +6329,21 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -5496,11 +6372,14 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="135"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="639f-6781-aef1-e2d5" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Officio Assassinorum Operative" hidden="false" id="a7c0-85dd-3bf6-278d" collective="false">
       <categoryLinks>
-        <categoryLink name="Elites" hidden="false" id="25ce-5e1a-05a0-fb96" targetId="6d25-b346-c314-6911" primary="true"/>
         <categoryLink name="Independent Character" hidden="false" id="357b-99c2-cdb4-3f73" targetId="3c96-248b-affd-e504" primary="false"/>
+        <categoryLink targetId="ba91-25f8-5631-fc2f" id="34f1-4914-29b7-325c" primary="false" name="Alien Hunter Elite Choices"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Assassin Temple" id="1f88-928a-532e-0092" hidden="false" collective="false" import="true">
@@ -5727,7 +6606,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Heavy Support" hidden="false" id="7bbf-af0c-5778-4376" targetId="aacb-8a81-62c0-3db8" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="b690-ad7d-921b-80d1" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -5761,6 +6639,23 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="120"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Predator Destructor" hidden="false" id="8364-1be6-5688-633f" collective="false">
       <infoLinks>
@@ -5768,7 +6663,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <infoLink name="Autocannon" id="cfa0-6936-f013-1a22" hidden="false" targetId="6128-e2af-037e-4d1a" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Heavy Support" hidden="false" id="4574-919f-8ac6-8ae2" targetId="aacb-8a81-62c0-3db8" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="9759-1525-b623-03af" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -5802,6 +6696,23 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rough Rider Squadron" hidden="false" id="6a22-0c08-047f-c5b5" collective="false">
       <rules>
@@ -5813,7 +6724,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <infoLink name="Cavalry" id="86ee-ffdb-e02c-4ae6" hidden="false" targetId="0e80-1d1e-f91a-11fe" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Fast Attack" hidden="false" id="7eac-7673-c3b4-55d6" targetId="34e2-d53c-28ab-44cf" primary="true"/>
         <categoryLink targetId="9378-6e46-bd71-6b8f" id="58d0-1268-5fb4-dd28" primary="false" name="Inducted Imperial Guard"/>
       </categoryLinks>
       <selectionEntries>
@@ -6140,6 +7050,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="b7a0-b0d4-6f9b-2d36" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Scout Squad" hidden="false" id="2cc9-942d-99de-c04f" collective="false">
       <infoLinks>
@@ -6148,7 +7061,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <infoLink name="Move Through Cover" id="8f40-681e-ba68-96e2" hidden="false" targetId="3a88-67df-4004-176b" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Troops" hidden="false" id="eea6-c3cc-9535-32d5" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="79d5-0072-850d-0aad" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntries>
@@ -6384,6 +7296,72 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="7da2-40c9-890c-3239" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="949f-fced-04a6-c467" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="5d5f-cfa8-2970-4a50" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="f0b5-294d-9445-a1b7" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="b1dd-a74a-0fe1-35b8" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="7da2-40c9-890c-3239" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="90e9-2e2f-1754-4917" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sentinel" hidden="false" id="c728-94b5-c1d7-ade9" collective="false">
       <rules>
@@ -6450,7 +7428,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sentinel Squadron" hidden="false" id="cda5-a079-0eab-2090" collective="false">
       <categoryLinks>
-        <categoryLink name="Fast Attack" hidden="false" id="7559-39ad-b94a-9bfb" targetId="34e2-d53c-28ab-44cf" primary="true"/>
         <categoryLink targetId="9378-6e46-bd71-6b8f" id="819b-df18-7abb-0412" primary="false" name="Inducted Imperial Guard"/>
       </categoryLinks>
       <entryLinks>
@@ -6489,7 +7466,6 @@ Hellfire Round: The shot wounds on a 2+.</description>
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Heavy Support" hidden="false" id="63a7-38ed-3c74-c5eb" targetId="aacb-8a81-62c0-3db8" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="f139-a31b-7430-5565" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntries>
@@ -6513,13 +7489,29 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="250"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Space Marine Tactical Squad" hidden="false" id="91c6-09ee-c119-cc27" collective="false">
       <infoLinks>
         <infoLink name="And They Shall Know No Fear" id="0b6d-6ac1-cf57-cf79" hidden="false" targetId="3f9b-513f-8f10-5cc6" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="Troops" hidden="false" id="7ee5-56ed-42a6-dc37" targetId="0ef5-5056-d52e-3cfd" primary="true"/>
         <categoryLink targetId="aee9-fa95-eb84-4519" id="17e7-8827-d3bb-0876" primary="false" name="Space Marine Ally"/>
       </categoryLinks>
       <selectionEntries>
@@ -6744,6 +7736,72 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="7da2-40c9-890c-3239" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="949f-fced-04a6-c467" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="5d5f-cfa8-2970-4a50" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="f0b5-294d-9445-a1b7" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="b1dd-a74a-0fe1-35b8" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="7da2-40c9-890c-3239" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="90e9-2e2f-1754-4917" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="2" field="selections" scope="force" childId="b59e-e3c9-8a4f-4b32" shared="true" childName="Mandatory Troop Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Thunderbolt (IA)" hidden="false" id="b766-38af-7330-f10e" collective="false">
       <modifiers>
@@ -6751,6 +7809,21 @@ Hellfire Round: The shot wounds on a 2+.</description>
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -6829,6 +7902,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="180"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="0e7b-f3f0-1cf4-43a1" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Thunderer Siege Tank (IA)" hidden="false" id="0a27-1c11-04d2-6592" collective="false">
       <modifiers>
@@ -6836,6 +7912,21 @@ Hellfire Round: The shot wounds on a 2+.</description>
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="force" childId="3261-6601-5bfe-f5d0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements." field="warning">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="3f32-74fc-e29a-38e3" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5544-1919-07c4-fba5" shared="true" childName="Alien Hunter Heavy Choices" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -6862,6 +7953,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140"/>
       </costs>
+      <categoryLinks>
+        <categoryLink targetId="9378-6e46-bd71-6b8f" id="1d34-17ff-86bd-7bfe" primary="false" name="Inducted Imperial Guard"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Vulture (IA)" hidden="false" id="db87-d71d-38c5-1aca" collective="false">
       <modifiers>
@@ -7039,10 +8133,300 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Inquisitor" hidden="false" id="5637-57af-0978-1fc2">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="143b-b62a-134d-a8e9-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="143b-b62a-134d-a8e9-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Inquisitor" id="be74-3bd2-43c3-7efc" hidden="false" targetId="fb71-3aef-b9f0-aa58" type="profile"/>
+        <infoLink name="Independent Character" id="7838-a91e-db9e-3145" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Minor Psychic Power" hidden="false" id="1295-c56b-d427-9067" collective="false">
+          <infoLinks>
+            <infoLink name="Minor Psychic Power" id="4c99-9ed0-ae19-422b" hidden="false" targetId="69af-f095-551d-130c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="5d07-7c01-8058-e3a0" collective="false" targetId="27a0-9cff-9897-d169" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Psychic Powers" hidden="false" id="a782-51d0-7da3-e10a" collective="false" targetId="303f-8d77-2f63-62c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <rules>
+        <rule name="Iron Will" id="cb06-4a3d-a6b3-2ad6" hidden="false">
+          <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Inquisitor Lord" hidden="false" id="bb42-b139-e132-cd80">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ec5-f9db-8da7-14e0-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ec5-f9db-8da7-14e0-max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Inquisitor Lord" id="2418-b866-baf0-06f9" hidden="false" targetId="75e5-6dc4-a7aa-df69" type="profile"/>
+        <infoLink name="Independent Character" id="8bac-7ecf-a37b-0c9c" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Minor Psychic Power" hidden="false" id="1999-04b9-1a0d-3e38" collective="false">
+          <infoLinks>
+            <infoLink name="Minor Psychic Power" id="3839-fdac-8c63-2218" hidden="false" targetId="69af-f095-551d-130c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="4c83-37e6-307e-0625" collective="false" targetId="27a0-9cff-9897-d169" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Psychic Powers" hidden="false" id="9d05-efcd-6e9e-4c21" collective="false" targetId="303f-8d77-2f63-62c9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <rules>
+        <rule name="Iron Will" id="de8b-7d70-9bb9-ec23" hidden="false">
+          <description>An Inquisitor Lord can choose whether to pass or fail any Morale or Pinning test he is called upton to make. Even if failure is normally automatic, the Lord may still choose whether to pass or fail the test.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Valkrie (IA)" hidden="false" id="77d6-d91a-9664-0190" collective="false">
+      <profiles>
+        <profile name="Valkyrie" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle" hidden="false" id="75c1-ea53-5dad-bb1d">
+          <characteristics>
+            <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">11</characteristic>
+            <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">11</characteristic>
+            <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+            <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Heavy Lift" id="2fd9-e9a6-268c-fc38" hidden="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="5efd-5b9e-ea82-28e4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <description>A Valkyrie can cary a Tarantula Sentry Gun or Cyclops Demolition Vehicle if it is not armed with Hellstrike Missiles or Multiple Rocket Pods</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink name="Flyers" id="e654-caa4-2a50-0629" hidden="false" targetId="3f21-57bb-fb07-54c5" type="rule"/>
+        <infoLink name="Skimmer" id="d869-d347-6875-5319" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink name="VTOL Hover Mode" id="f495-a0bb-9896-83b8" hidden="false" targetId="71e6-4ef5-7178-3676" type="rule"/>
+        <infoLink name="Multi-laser" id="2594-4f7e-7ad5-1f50" hidden="false" targetId="63ed-7ae2-0dce-e02e" type="profile"/>
+        <infoLink name="Heavy Bolter" id="c782-f86c-a9b7-dccf" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
+          <modifiers>
+            <modifier type="set" value="2x Door Mounted Heavy Bolters" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Hardpoint" id="5efd-5b9e-ea82-28e4" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dfd8-fdcc-7797-0e7d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="2x Multiple Rocket Pods" hidden="false" id="9161-1b0b-6cd3-1765" collective="false">
+              <infoLinks>
+                <infoLink name="Multiple Rockit Pods" id="5454-3d17-55c2-dd06" hidden="false" targetId="e434-66a1-6cb9-9e3d" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="2x Multiple Rockit Pods" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="2x Hellstrike Missiles" hidden="false" id="4807-d8ec-2908-2724" collective="false">
+              <infoLinks>
+                <infoLink name="Rockits" id="1a64-7679-c2bb-536b" hidden="false" targetId="8128-a576-6e0a-07da" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="2x Hellstrike Missiles" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Navy Vehicle Upgrades" hidden="false" id="a4f1-42de-8e74-6976" collective="false" targetId="af51-b222-5ced-6781" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb48-8bd1-6618-d180" message="Valkries can only hold 12 models. There are more than 12 models in the {root-entry} selection."/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="bb48-8bd1-6618-d180">
+          <conditions>
+            <condition type="greaterThan" value="12" field="selections" scope="root-entry" childId="model" shared="true" childName="model" includeChildSelections="true" includeChildForces="false" traverseAssociationGroup="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
-    <entryLink import="true" name="Deathwatch Master" hidden="false" id="c842-6fac-3e97-274b" type="selectionEntry" targetId="1a3a-12b4-1d45-47b2"/>
-    <entryLink import="true" name="Deathwatch Captain" hidden="false" id="a440-5a03-1b60-d1fb" type="selectionEntry" targetId="6901-980c-4b19-1320"/>
-    <entryLink import="true" name="Inquisitorial Storm Troopers" hidden="false" id="b141-cccd-af99-9549" type="selectionEntry" targetId="86cd-9a69-527a-a9e8"/>
+    <entryLink import="true" name="Deathwatch Master" hidden="false" id="c842-6fac-3e97-274b" type="selectionEntry" targetId="1a3a-12b4-1d45-47b2">
+      <categoryLinks>
+        <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="0cd5-690e-cd1c-57ec" primary="true" name="HQ"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Captain" hidden="false" id="a440-5a03-1b60-d1fb" type="selectionEntry" targetId="6901-980c-4b19-1320">
+      <categoryLinks>
+        <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="7ca6-3155-9601-c884" primary="true" name="HQ"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Inquisitorial Storm Troopers" hidden="false" id="b141-cccd-af99-9549" type="selectionEntry" targetId="86cd-9a69-527a-a9e8">
+      <categoryLinks>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="af75-a75a-c1d2-1037" primary="true" name="Troops"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Ordo Xenos Inquisitor Lord" hidden="false" id="d01b-b43d-4e1f-7241" type="selectionEntry" targetId="2f5b-253a-02ea-74d9">
+      <categoryLinks>
+        <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="5b2e-2874-bcad-6a68" primary="true" name="HQ"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Ordo Xenos Inquisitor" hidden="false" id="f7f2-7ba0-0830-8058" type="selectionEntry" targetId="7765-d1cc-97d7-ab17">
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="3823-eb0f-9cc3-35c0" primary="true" name="Elites"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Deathcult Assassins" hidden="false" id="815c-b5af-20a3-226f" type="selectionEntry" targetId="fff5-d484-2fc9-c03d">
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="6e35-3829-8e5e-d30d" primary="true" name="Elites"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="Death-Cult Assassins may only be chosen if an Inquisitor or Inquisitor Lord is also part of the force." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="fff5-d484-2fc9-c03d" shared="true" childName="Deathcult Assassins" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="2f5b-253a-02ea-74d9" shared="true" includeChildSelections="true" childName="Ordo Xenos Inquisitor Lord"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="7765-d1cc-97d7-ab17" shared="true" includeChildSelections="true" childName="Ordo Xenos Inquisitor"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Officio Assassinorum Operative" hidden="false" id="21ad-b46c-9fcc-8842" type="selectionEntry" targetId="a7c0-85dd-3bf6-278d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="075f-3bf1-65c9-5cbf" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="add" value="Officio Assassinorum may only be chosen if an Inquisitor or Inquisitor Lord is also part of the force." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="a7c0-85dd-3bf6-278d" shared="true" childName="Officio Assassinorum Operative" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="2f5b-253a-02ea-74d9" shared="true" includeChildSelections="true" childName="Ordo Xenos Inquisitor Lord"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="7765-d1cc-97d7-ab17" shared="true" includeChildSelections="true" childName="Ordo Xenos Inquisitor"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Terminator Kill Team" hidden="false" id="4cac-6a2b-45e5-da73" type="selectionEntry" targetId="7f5c-a5e2-8857-cb61">
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="6a2f-fe65-2b02-6411" primary="true" name="Elites"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Xenarite Heretek" hidden="false" id="d4e1-82bb-8eca-2acb" type="selectionEntry" targetId="41f4-f4f7-c030-5074">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="beb1-cc8b-15ed-18b4" includeChildSelections="true"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink targetId="6d25-b346-c314-6911" id="25e4-e3c6-c247-4eed" primary="true" name="Elites"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="Xenarite Hereteks may only be chosen if an Inquisitor or Inquisitor Lord is also part of the force." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d4e1-82bb-8eca-2acb" shared="true" childName="Xenarite Heretek" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="2f5b-253a-02ea-74d9" shared="true" includeChildSelections="true" childName="Ordo Xenos Inquisitor Lord"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="7765-d1cc-97d7-ab17" shared="true" includeChildSelections="true" childName="Ordo Xenos Inquisitor"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="Deathwatch will not work with Radical Inquisitors that employ Xenarite Hereteks." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="41f4-f4f7-c030-5074" shared="true" childName="Xenarite Heretek" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="fb40-23ff-db43-ac2f" shared="true" childName="Deathwatch" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Veteran Kill Team" hidden="false" id="1b60-286e-71fa-1fef" type="selectionEntry" targetId="3fe2-8c57-a101-4709">
+      <categoryLinks>
+        <categoryLink targetId="0ef5-5056-d52e-3cfd" id="72c9-461c-0b5e-e139" primary="true" name="Troops"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Veteran Bike Squad" hidden="false" id="72fe-56a3-d1a5-eaf8" type="selectionEntry" targetId="c504-b0f0-9805-5ab0">
+      <categoryLinks>
+        <categoryLink targetId="34e2-d53c-28ab-44cf" id="067d-3157-bcd2-7363" primary="true" name="Fast Attack"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Vanguard Veteran Kill Team" hidden="false" id="637f-0e3d-7f6a-052c" type="selectionEntry" targetId="b74a-4282-9163-6d3e">
+      <categoryLinks>
+        <categoryLink targetId="34e2-d53c-28ab-44cf" id="b335-2fa2-ed67-1a3b" primary="true" name="Fast Attack"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Fire Support Team" hidden="false" id="3089-3784-dba8-8b66" type="selectionEntry" targetId="9051-85de-0b11-ba22">
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="7436-3ff0-c6b3-f4a8" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Dreadnought" hidden="false" id="1b7e-c4c9-bff3-9b8d" type="selectionEntry" targetId="fc57-007f-d1d1-58e8">
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="16e5-9b2a-6753-fe30" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Landraider" hidden="false" id="d029-fa84-3271-a693" type="selectionEntry" targetId="ce4e-6c4d-96da-5634">
+      <categoryLinks>
+        <categoryLink targetId="5544-1919-07c4-fba5" id="83e8-c139-cde8-ec4f" primary="false" name="Alien Hunter Heavy Choices"/>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="e0ab-c197-a452-0fd1" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Deathwatch Landraider Crusader" hidden="false" id="054a-7f1a-3822-867f" type="selectionEntry" targetId="3128-58cd-1ecc-9fa0">
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="4d69-1563-9686-d70d" primary="true" name="Heavy Support"/>
+        <categoryLink targetId="5544-1919-07c4-fba5" id="96f6-f8f1-0dd6-b8be" primary="false" name="Alien Hunter Heavy Choices"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Orbital Strike" hidden="false" id="d886-f339-4011-bdeb" type="selectionEntry" targetId="1408-0bba-0c12-7be6">
+      <categoryLinks>
+        <categoryLink targetId="aacb-8a81-62c0-3db8" id="8405-1240-49e4-42e8" primary="true" name="Heavy Support"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="7174-c653-3ca0-0c55" includeChildSelections="true"/>
+      </constraints>
+    </entryLink>
   </entryLinks>
+  <sharedInfoGroups>
+    <infoGroup name="Deathwatch" id="8517-3f49-0164-eb63" hidden="false">
+      <infoLinks>
+        <infoLink name="And They Shall Know No Fear" id="d987-6b21-6f69-b2ce" hidden="false" type="rule" targetId="5423-6125-61a4-95b6"/>
+        <infoLink name="True Grit" id="abe3-be27-b139-13da" hidden="false" type="rule" targetId="41e4-240d-5ed7-57de"/>
+        <infoLink name="Strike Force" id="68b2-d6b2-7c1c-5f56" hidden="false" type="rule" targetId="ed4d-ac72-3e35-682b"/>
+      </infoLinks>
+    </infoGroup>
+  </sharedInfoGroups>
 </catalogue>
