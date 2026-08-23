@@ -2117,7 +2117,7 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Xenos Artefacts" hidden="false" id="98e0-ad83-e04f-5cd8" type="selectionEntryGroup" targetId="157b-54a2-175d-9638" sortIndex="1"/>
+        <entryLink import="true" name="Xenos Artefacts" hidden="false" id="98e0-ad83-e04f-5cd8" type="selectionEntryGroup" targetId="157b-54a2-175d-9638" sortIndex="1" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Alien Hunters Vehicle Upgrades" id="27d0-afe4-bb00-2151" hidden="false" collective="false" import="true" collapsible="true">
@@ -3145,7 +3145,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
     <selectionEntry type="unit" import="true" name="Deathwatch Veteran Kill Team" hidden="false" id="3fe2-8c57-a101-4709">
       <categoryLinks>
         <categoryLink targetId="fb40-23ff-db43-ac2f" id="4ef4-4b74-2622-2295" primary="false" name="Deathwatch"/>
-        <categoryLink targetId="b59e-e3c9-8a4f-4b32" id="787d-eb97-8a9a-9a3a" primary="false" name="Mandatory Troop Choices"/>
+        <categoryLink targetId="b59e-e3c9-8a4f-4b32" id="787d-eb97-8a9a-9a3a" primary="false" name="Alien Hunter Troop Choices"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Biologis Adept" hidden="false" id="0a4e-0723-a2e2-9995" type="selectionEntry" targetId="05e2-aef9-5183-347a"/>
@@ -3160,11 +3160,12 @@ are on the constant search for foreign bio-samples and will take any chance to 
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Alien Hunter Rhino" hidden="false" id="f3cd-4072-3ee6-c12a" type="selectionEntry" targetId="9f1d-656a-5e1a-d8f7"/>
+            <entryLink import="true" name="Deathwatch Corvus Blackstar" hidden="false" id="b898-6020-aa75-14a0" type="selectionEntry" targetId="4902-d863-d129-6744"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Veteran" hidden="false" id="a5ca-b540-ab15-1ebf" step="" defaultAmount="1,1,1,1,1">
+        <selectionEntry type="model" import="true" name="Veteran" hidden="false" id="a5ca-b540-ab15-1ebf" defaultAmount="1,1,1,1,1" collapsible="true">
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="a1ef-a52d-6393-c3b4"/>
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="fc2b-a339-ce8d-354e"/>
@@ -3199,14 +3200,14 @@ are on the constant search for foreign bio-samples and will take any chance to 
             <infoLink name="Melta Bombs" id="648a-ab28-a683-3a36" hidden="false" type="profile" targetId="87d0-8c40-7bcb-8cbb"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Special Weapons" id="7dc4-cde7-3994-f5e4" hidden="false">
+            <selectionEntryGroup name="Special Weapons" id="7dc4-cde7-3994-f5e4" hidden="false" sortIndex="4" collapsible="true">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="5e16-300f-0712-8a84">
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Bolter w/ M.40 Targeter" hidden="false" id="dc74-a2b6-7197-ee00" step="">
+                <selectionEntry type="upgrade" import="true" name="Bolter w/ M.40 Targeter" hidden="false" id="dc74-a2b6-7197-ee00">
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
                   </costs>
@@ -3244,7 +3245,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
             </selectionEntryGroup>
           </selectionEntryGroups>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Terminator Honors" hidden="false" id="9a36-839d-d372-b7e4">
+            <selectionEntry type="upgrade" import="true" name="Terminator Honors" hidden="false" id="9a36-839d-d372-b7e4" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
@@ -3252,7 +3253,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a63-ad2f-b519-2398"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Specialist Ammunition" hidden="false" id="b07a-e850-5763-bbf0">
+            <selectionEntry type="upgrade" import="true" name="Specialist Ammunition" hidden="false" id="b07a-e850-5763-bbf0" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
               </costs>
@@ -3281,7 +3282,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="51cc-81f6-546e-64a0" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169">
+            <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="51cc-81f6-546e-64a0" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169" sortIndex="3">
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -5233,7 +5234,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Inquisitorial Storm Troopers" hidden="false" id="86cd-9a69-527a-a9e8" collective="false">
       <categoryLinks>
-        <categoryLink targetId="b59e-e3c9-8a4f-4b32" id="ca11-6f85-5771-6d98" primary="false" name="Mandatory Troop Choices"/>
+        <categoryLink targetId="b59e-e3c9-8a4f-4b32" id="ca11-6f85-5771-6d98" primary="false" name="Alien Hunter Troop Choices"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Krak Grenades" hidden="false" id="cfe3-348a-0816-f07e" collective="false" sortIndex="3">
@@ -5372,7 +5373,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
       <modifiers>
         <modifier type="set" value="0" field="dac8-c3c1-abcd-e195">
           <conditions>
-            <condition type="greaterThan" value="12" field="selections" scope="root-entry" childId="model" shared="true" childName="model" includeChildSelections="true" includeChildForces="false" traverseAssociationGroup="false"/>
+            <condition type="greaterThan" value="10" field="selections" scope="root-entry" childId="model" shared="true" childName="model" includeChildSelections="true" includeChildForces="false" traverseAssociationGroup="false"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8334,7 +8335,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="53"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Twin-linked Lascannon" hidden="false" id="9048-f3d7-a4d8-f532" collective="false">
@@ -8346,7 +8347,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
                 </infoLink>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="53"/>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -8358,6 +8359,16 @@ Hellfire Round: The shot wounds on a 2+.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="142"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="0" field="2647-a7a3-157e-4e7d">
+          <conditions>
+            <condition type="greaterThan" value="12" field="selections" scope="root-entry" childId="model" shared="true" childName="model" includeChildSelections="true" includeChildForces="false" traverseAssociationGroup="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2647-a7a3-157e-4e7d" message="Corvus Blackstars can only hold 12 models. There are more than 12 models in the {root-entry} selection."/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Inquisitor Gregor Eisenhorn" hidden="false" id="cbb8-266b-5683-c883" collective="false">
       <modifiers>
