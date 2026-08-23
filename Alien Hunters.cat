@@ -26,7 +26,7 @@
       <description>Rather than leave the table as per normal, the flyer may choose to engage is VTOL Hover mode to remain on the table. It remains stationary, but can turn in any direction to bring its weapons to bear. It may fire all of its weapons.
 For the purposes of being fired at, the vehicle counts as a moving Skimmer. It can therefore be fired at using the firer&apos;s normal BS. All hits are treated as glancing hits. It can only be attack in close combat by attackers that can fly or have jump packs, in which case it is treated as a moving vehicle.
 If the vehicle is immobilised the model is destroyed.
-At the end of its own turn, the vehicle may disengage VTOL. It not reverts to being a flyer. It cannot return in the enemy turn immediately afer it leaves the table.</description>
+At the end of its own turn, the vehicle may disengage VTOL. It now reverts to being a flyer. It cannot return in the enemy turn immediately after it leaves the table.</description>
     </rule>
   </sharedRules>
   <categoryEntries>
@@ -3352,6 +3352,161 @@ are on the constant search for foreign bio-samples and will take any chance to 
       <infoLinks>
         <infoLink name="Deathwatch" id="4ec2-df1e-88ab-2866" hidden="false" type="infoGroup" targetId="8517-3f49-0164-eb63"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Veteran" hidden="false" id="bb4e-32da-74fc-15ab" defaultAmount="1,1,1,1,1" collapsible="true">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="d2e2-ff4a-c254-e44c"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="d44c-5d9a-9a4a-6629"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Deathwatch Veteran" id="f811-59bb-cef7-dd03" hidden="false" type="profile" targetId="f2b8-6ab1-c564-0fb8">
+              <modifiers>
+                <modifier type="set" value="2" field="abbf-0d11-fd86-d938">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="bb4e-32da-74fc-15ab" childId="a521-436f-caa8-4816" shared="true" childName="Terminator Honors"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Deathwatch Veteran with Terminator Honors" field="name">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="bb4e-32da-74fc-15ab" childId="a521-436f-caa8-4816" shared="true" childName="Terminator Honors"/>
+                  </conditions>
+                  <comment>Veteran with Terminator Honors</comment>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Boltgun" id="f5a5-8c00-dce1-9658" hidden="false" type="profile" targetId="60bf-18fd-f6e6-6eb4">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="bb4e-32da-74fc-15ab" childId="3203-6039-2dc7-2c40" shared="true" childName="Special Weapons"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="b74a-4282-9163-6d3e" childId="340d-7cca-8d6e-5f2e" shared="true" childName="Replace Boltguns with Bolt Pistols"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Close Combat Weapon" id="d012-dbf9-1f28-2db1" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
+            <infoLink name="Frag Grenades" id="a271-d201-a81a-d4ac" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Melta Bombs" id="e876-b072-17bd-342d" hidden="false" type="profile" targetId="87d0-8c40-7bcb-8cbb"/>
+            <infoLink name="Bolt Pistol" id="b15e-4009-3712-a65a" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="bb4e-32da-74fc-15ab" childId="3203-6039-2dc7-2c40" shared="true" childName="Special Weapons"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="b74a-4282-9163-6d3e" childId="340d-7cca-8d6e-5f2e" shared="true" childName="Replace Boltguns with Bolt Pistols"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Jetpack" id="e44d-f6aa-1f33-3a01" hidden="false" type="rule" targetId="9db9-94c1-ce97-f40a"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Special Weapons" id="3203-6039-2dc7-2c40" hidden="false" sortIndex="4" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="f4fe-4557-50ce-4cb8">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Bolter w/ M.40 Targeter" hidden="false" id="2f33-47f8-9526-e68c">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Plasma Gun" hidden="false" id="32e2-82c9-59aa-db75">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Meltagun" hidden="false" id="2023-ec2a-2025-4433">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Missile Launcher" hidden="false" id="3659-10e5-4d9a-d29a">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Infernus Heavy Bolter" hidden="false" id="2182-ec7f-51a4-7a1c">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Frag Cannon" hidden="false" id="6389-1538-09d4-7c31">
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2a1-61a9-fee3-a9ef"/>
+                <constraint type="max" value="2" field="selections" scope="root-entry" shared="true" id="f45f-10a2-34e8-ddb3" includeChildSelections="true" message="Maximum of 2 Special Weapons across the {root-entry}"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Terminator Honors" hidden="false" id="a521-436f-caa8-4816" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a770-529f-3af6-e278"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Specialist Ammunition" hidden="false" id="5d18-f5b3-9515-3b26" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ab8-16fe-c616-61f2"/>
+              </constraints>
+              <modifiers>
+                <modifier type="add" value="Veteran must be equipped with a bolter or combi-bolter to use Specialist Ammo (excluding the bolter with M.40 Targetter)." field="error">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="bb4e-32da-74fc-15ab" childId="5d18-f5b3-9515-3b26" shared="true" childName="Specialist Ammunition"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3203-6039-2dc7-2c40" shared="true" childName="Special Weapons"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="8882-2c3b-b3e1-d4fd" shared="true" childName="Bolt Pistol"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="28cc-a0c8-a16d-0787" shared="true" childName="Bolter"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="143a-8a3d-4f37-448c" shared="true" childName="Combi-Flamer"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="c201-b7be-e159-942e" shared="true" childName="Combi-Melta"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="f300-57b7-1a0d-545c" shared="true" childName="Combi-Needle Pistol"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="3aa1-0e86-c7c4-6a56" shared="true" childName="Combi-Grenade Launcher"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="7af6-d777-dd95-704c" shared="true" childName="Combi-Plasma Gun"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="487b-a46d-858c-22bd" shared="true" childName="Storm Bolter"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="28"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Alien Hunters Armoury" hidden="false" id="6822-4222-7cfe-d25b" type="selectionEntryGroup" targetId="27a0-9cff-9897-d169" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="bb4e-32da-74fc-15ab" childId="a521-436f-caa8-4816" shared="true" childName="Terminator Honors"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Replace Boltguns with Bolt Pistols" hidden="false" id="340d-7cca-8d6e-5f2e">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="61ad-cb6d-ddc1-fcbc"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Armoured Fist Squad" hidden="false" id="c812-df73-29d4-5235" collective="false">
       <categoryLinks>
@@ -8286,7 +8441,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deathwatch Corvus Blackstar" hidden="false" id="4902-d863-d129-6744" collective="false">
-      <comment>Base 142 from vehicle design rules</comment>
+      <comment>Base 142 from vehicle design rules. Round down to 140 for simplicity.</comment>
       <rules>
         <rule name="Ceramite Shielding" id="2bf5-9c38-83ad-3a24" hidden="false">
           <description>The Blackstar&apos;s reentry shielding makes it resistant to melta weapons. Melta weapons, including melta bombs, never roll a extra dice for armour penetration due to being at half range against a Blackstar.</description>
@@ -8357,7 +8512,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <entryLink import="true" name="Navy Vehicle Upgrades" hidden="false" id="5fe4-db20-7508-9599" collective="false" targetId="af51-b222-5ced-6781" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="142"/>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="140"/>
       </costs>
       <modifiers>
         <modifier type="set" value="0" field="2647-a7a3-157e-4e7d">
