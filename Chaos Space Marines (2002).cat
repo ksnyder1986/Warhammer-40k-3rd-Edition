@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0f19-9487-acbb-e047" name="Chaos Space Marines (2002)" revision="16" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <comment>2002 Chaos Space Marine Codex</comment>
   <categoryEntries>
     <categoryEntry id="039c-5796-7006-0975" name="Mark of Khorne" hidden="false"/>
@@ -3048,16 +3048,25 @@
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Meltagun" id="2be6-84f6-2dc5-76a6" hidden="false" type="profile" targetId="737d-c7ef-4cb5-e6fa"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry id="7157-72c2-dca8-8bc9" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Plasma Gun" id="e46e-66c3-2cb5-e89f" hidden="false" type="profile" targetId="112a-baea-9eeb-b1b5"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry id="b576-c7ef-65c6-37aa" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Flamer" id="3253-292e-ab71-97b3" hidden="false" type="profile" targetId="9177-ce8a-92e3-157e"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4048,6 +4057,11 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="150"/>
       </costs>
+      <rules>
+        <rule name="Daemonic Possession" id="6170-7aae-de3b-b2c2" hidden="false">
+          <description>A Daemon controls the vehicle and may ignore &apos;shaken&apos; and &apos;stunned&apos; results.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry id="5533-85b3-c57e-edc0" name="Chaos Cultists" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -12872,6 +12886,11 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="893f-8699-a721-0be9" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Chaos Defiler"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c34b-0769-54f4-5a73" type="max"/>
@@ -12954,6 +12973,13 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="893f-8699-a721-0be9" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Chaos Defiler"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="03f3-4b8b-189e-fabe" name="Living Vehicle" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -12968,6 +12994,13 @@ Weapon Destroyed results may choose to remove this weapon.</description>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="893f-8699-a721-0be9" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Chaos Defiler"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="4fe6-588e-f717-660c" name="Mutated Hull" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
