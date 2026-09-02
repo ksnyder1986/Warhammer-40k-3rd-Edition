@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="12" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" categoriesLabel="">
+<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="13" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <publications>
     <publication id="263c-b15e-84a3-a711" name="Codex Necrons 3rd Edition" shortName="Necrons" publisher="Codex Necrons" publicationDate="2002"/>
@@ -154,34 +154,24 @@
     <forceEntry id="7da2-40c9-890c-3239" name="1-Standard Missions" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="d4a3-35ce-7202-922e" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
-          <modifiers>
-            <modifier type="set" field="de34-49f5-ca37-bd3c" value="1">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de34-49f5-ca37-bd3c" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="9c02-ec48-1124-380f" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="1a2a-02ea-1b93-ecd6" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="0561-fef4-ad1a-f2ef" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="9c02-ec48-1124-380f" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
-            <modifier type="increment" field="6d1d-6801-aa7b-ea91" value="1">
+            <modifier type="increment" value="1" field="6d1d-6801-aa7b-ea91">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
               <comment>Space Wolves</comment>
             </modifier>
-            <modifier type="increment" field="79c8-d712-b3f8-3fbc" value="1">
+            <modifier type="increment" value="1" field="79c8-d712-b3f8-3fbc">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
               <comment>Space Wolves</comment>
             </modifier>
-            <modifier type="decrement" field="79c8-d712-b3f8-3fbc" value="2">
+            <modifier type="decrement" value="2" field="79c8-d712-b3f8-3fbc">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -203,77 +193,78 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d1d-6801-aa7b-ea91" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79c8-d712-b3f8-3fbc" type="max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6d1d-6801-aa7b-ea91" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="79c8-d712-b3f8-3fbc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="6521-d14c-a203-f2d5" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+        <categoryLink name="Elites" hidden="false" id="d4a3-35ce-7202-922e" targetId="6d25-b346-c314-6911" primary="false">
           <modifiers>
-            <modifier type="set" field="ae5b-73d9-d0ec-69a7" value="3">
+            <modifier type="set" value="1" field="de34-49f5-ca37-bd3c">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="4414-75cd-8e06-e4a5" value="0">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4414-75cd-8e06-e4a5" type="min"/>
-            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae5b-73d9-d0ec-69a7" type="max"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="de34-49f5-ca37-bd3c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="e22b-c7c6-f647-feb7" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+        <categoryLink name="Troops" hidden="false" id="6521-d14c-a203-f2d5" targetId="0ef5-5056-d52e-3cfd" primary="false">
           <modifiers>
-            <modifier type="set" field="c14e-b716-0787-1cc9" value="2">
+            <modifier type="set" value="3" field="ae5b-73d9-d0ec-69a7">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="8e87-f8f1-633e-271c" value="6">
+            <modifier type="set" value="0" field="4414-75cd-8e06-e4a5">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c14e-b716-0787-1cc9" type="min"/>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e87-f8f1-633e-271c" type="max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4414-75cd-8e06-e4a5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="ae5b-73d9-d0ec-69a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="49cd-5f5d-2ea1-0222" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+        <categoryLink name="Fast Attack" hidden="false" id="e22b-c7c6-f647-feb7" targetId="34e2-d53c-28ab-44cf" primary="false">
           <modifiers>
-            <modifier type="set" field="f89d-290e-70c3-64ca" value="1">
+            <modifier type="set" value="2" field="c14e-b716-0787-1cc9">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="6" field="8e87-f8f1-633e-271c">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f89d-290e-70c3-64ca" type="max"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c14e-b716-0787-1cc9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="8e87-f8f1-633e-271c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="0561-fef4-ad1a-f2ef" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="49cd-5f5d-2ea1-0222" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <modifiers>
+            <modifier type="set" value="1" field="f89d-290e-70c3-64ca">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="f89d-290e-70c3-64ca" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="949f-fced-04a6-c467" name="2-Apoc Missions" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="c3f7-5895-ade5-8674" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
-          <modifiers>
-            <modifier type="set" field="79b1-ccaf-d2c5-9d2b" value="1">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79b1-ccaf-d2c5-9d2b" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="f801-8c9d-fa6d-39e7" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="fb38-d64b-4ae8-d9d5" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="0547-3077-0e08-1f63" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="f801-8c9d-fa6d-39e7" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
             <modifier type="increment" value="1" field="3957-703a-aa85-c7ee">
@@ -308,105 +299,107 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3957-703a-aa85-c7ee" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dce7-0551-bd25-f2fe" type="max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3957-703a-aa85-c7ee" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dce7-0551-bd25-f2fe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="43d9-ad22-a680-d127" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+        <categoryLink name="Elites" hidden="false" id="c3f7-5895-ade5-8674" targetId="6d25-b346-c314-6911" primary="false">
           <modifiers>
-            <modifier type="set" field="c158-7146-2304-00d1" value="0">
+            <modifier type="set" value="1" field="79b1-ccaf-d2c5-9d2b">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="b7ac-405f-3cc9-6972" value="3">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c158-7146-2304-00d1" type="min"/>
-            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7ac-405f-3cc9-6972" type="max"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="79b1-ccaf-d2c5-9d2b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="bb74-4f6a-0881-dae1" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+        <categoryLink name="Troops" hidden="false" id="43d9-ad22-a680-d127" targetId="0ef5-5056-d52e-3cfd" primary="false">
           <modifiers>
-            <modifier type="set" field="c271-5dd7-cbe6-921d" value="2">
+            <modifier type="set" value="0" field="c158-7146-2304-00d1">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="6663-4d34-9b7a-4273" value="6">
+            <modifier type="set" value="3" field="b7ac-405f-3cc9-6972">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6663-4d34-9b7a-4273" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c271-5dd7-cbe6-921d" type="min"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c158-7146-2304-00d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="b7ac-405f-3cc9-6972" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="d21f-5bbf-4583-8a99" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+        <categoryLink name="Fast Attack" hidden="false" id="bb74-4f6a-0881-dae1" targetId="34e2-d53c-28ab-44cf" primary="false">
           <modifiers>
-            <modifier type="set" field="d540-a457-070f-5fb2" value="1">
+            <modifier type="set" value="2" field="c271-5dd7-cbe6-921d">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="6" field="6663-4d34-9b7a-4273">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d540-a457-070f-5fb2" type="max"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="6663-4d34-9b7a-4273" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c271-5dd7-cbe6-921d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="0547-3077-0e08-1f63" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
-        <categoryLink id="6396-e5a7-b57a-66e4" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="d21f-5bbf-4583-8a99" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <modifiers>
+            <modifier type="set" value="1" field="d540-a457-070f-5fb2">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="d540-a457-070f-5fb2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Super-Heavy" hidden="false" id="6396-e5a7-b57a-66e4" targetId="6b90-dc9c-1a49-3fdc" primary="false"/>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="8b56-2596-2bfa-9f1b" name="9-Unrestricted" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="e788-9490-7c59-274b" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false"/>
-        <categoryLink id="36df-6db3-867c-8690" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="4583-68c5-9308-3228" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="58d8-2eb2-9d85-68f4" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="36df-6db3-867c-8690" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
         </categoryLink>
-        <categoryLink id="edaf-2b40-06c9-15ac" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false"/>
-        <categoryLink id="7e36-fb64-6321-6a2f" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false"/>
-        <categoryLink id="ab1f-e078-11fb-c46f" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false"/>
-        <categoryLink id="58d8-2eb2-9d85-68f4" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
-        <categoryLink id="6dfb-7f6b-7c09-7e91" name="Super-Heavy" hidden="false" targetId="6b90-dc9c-1a49-3fdc" primary="false"/>
+        <categoryLink name="Elites" hidden="false" id="e788-9490-7c59-274b" targetId="6d25-b346-c314-6911" primary="false"/>
+        <categoryLink name="Troops" hidden="false" id="edaf-2b40-06c9-15ac" targetId="0ef5-5056-d52e-3cfd" primary="false"/>
+        <categoryLink name="Fast Attack" hidden="false" id="7e36-fb64-6321-6a2f" targetId="34e2-d53c-28ab-44cf" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="ab1f-e078-11fb-c46f" targetId="aacb-8a81-62c0-3db8" primary="false"/>
+        <categoryLink name="Super-Heavy" hidden="false" id="6dfb-7f6b-7c09-7e91" targetId="6b90-dc9c-1a49-3fdc" primary="false"/>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="3f32-74fc-e29a-38e3" name="3A-Battle Attacker" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="1cf2-6528-1f81-871e" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
-          <modifiers>
-            <modifier type="set" field="582b-d1ef-880e-5a17" value="1">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="582b-d1ef-880e-5a17" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="26d1-77bc-1a33-8119" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="228a-9358-5f06-9611" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="df4a-a18d-0436-c92a" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="26d1-77bc-1a33-8119" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
-            <modifier type="increment" field="e4d2-bf42-4306-3692" value="1">
+            <modifier type="increment" value="1" field="e4d2-bf42-4306-3692">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="ffdf-c34b-d8bc-f20a" value="1">
+            <modifier type="increment" value="1" field="ffdf-c34b-d8bc-f20a">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="e4d2-bf42-4306-3692" value="2">
+            <modifier type="decrement" value="2" field="e4d2-bf42-4306-3692">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -428,91 +421,92 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffdf-c34b-d8bc-f20a" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4d2-bf42-4306-3692" type="max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ffdf-c34b-d8bc-f20a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e4d2-bf42-4306-3692" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="1278-8a0a-1feb-a124" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+        <categoryLink name="Elites" hidden="false" id="1cf2-6528-1f81-871e" targetId="6d25-b346-c314-6911" primary="false">
           <modifiers>
-            <modifier type="set" field="5652-470a-d717-b3cc" value="0">
+            <modifier type="set" value="1" field="582b-d1ef-880e-5a17">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="cac5-3f28-c637-f2a3" value="3">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5652-470a-d717-b3cc" type="min"/>
-            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cac5-3f28-c637-f2a3" type="max"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="582b-d1ef-880e-5a17" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="5186-4358-de7f-7031" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+        <categoryLink name="Troops" hidden="false" id="1278-8a0a-1feb-a124" targetId="0ef5-5056-d52e-3cfd" primary="false">
           <modifiers>
-            <modifier type="set" field="1833-9f65-64d8-c3c7" value="6">
+            <modifier type="set" value="0" field="5652-470a-d717-b3cc">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="09c7-ef75-df76-cf31" value="2">
+            <modifier type="set" value="3" field="cac5-3f28-c637-f2a3">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1833-9f65-64d8-c3c7" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09c7-ef75-df76-cf31" type="min"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5652-470a-d717-b3cc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="cac5-3f28-c637-f2a3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="ca8b-e4f5-c0d0-1490" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+        <categoryLink name="Fast Attack" hidden="false" id="5186-4358-de7f-7031" targetId="34e2-d53c-28ab-44cf" primary="false">
           <modifiers>
-            <modifier type="set" field="c6c7-55b5-c4ed-489a" value="1">
+            <modifier type="set" value="6" field="1833-9f65-64d8-c3c7">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="09c7-ef75-df76-cf31">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6c7-55b5-c4ed-489a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f9a-5919-6d60-45d5" type="min"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1833-9f65-64d8-c3c7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="09c7-ef75-df76-cf31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="df4a-a18d-0436-c92a" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="ca8b-e4f5-c0d0-1490" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <modifiers>
+            <modifier type="set" value="1" field="c6c7-55b5-c4ed-489a">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="c6c7-55b5-c4ed-489a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8f9a-5919-6d60-45d5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="5d5f-cfa8-2970-4a50" name="3D-Battle Defender" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="afa3-08e9-5b3f-b7ca" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
-          <modifiers>
-            <modifier type="set" field="3269-af73-e42b-6671" value="1">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3269-af73-e42b-6671" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="d1de-50cf-619d-864f" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="6145-9e4b-400e-1541" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="a63a-a4f4-10cc-79cd" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="d1de-50cf-619d-864f" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
-            <modifier type="increment" field="1a75-3bac-a46a-34de" value="1">
+            <modifier type="increment" value="1" field="1a75-3bac-a46a-34de">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="true"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="f10d-43f1-775e-1609" value="1">
+            <modifier type="increment" value="1" field="f10d-43f1-775e-1609">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="true"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="f10d-43f1-775e-1609" value="2">
+            <modifier type="decrement" value="2" field="f10d-43f1-775e-1609">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -534,90 +528,91 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a75-3bac-a46a-34de" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f10d-43f1-775e-1609" type="max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a75-3bac-a46a-34de" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f10d-43f1-775e-1609" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="eb64-685e-82f7-48a3" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+        <categoryLink name="Elites" hidden="false" id="afa3-08e9-5b3f-b7ca" targetId="6d25-b346-c314-6911" primary="false">
           <modifiers>
-            <modifier type="set" field="54b3-4d13-ea86-7fab" value="0">
+            <modifier type="set" value="1" field="3269-af73-e42b-6671">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="0f7e-c748-2823-5f36" value="3">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54b3-4d13-ea86-7fab" type="min"/>
-            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f7e-c748-2823-5f36" type="max"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3269-af73-e42b-6671" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="f3f6-47b1-09df-f5ed" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+        <categoryLink name="Troops" hidden="false" id="eb64-685e-82f7-48a3" targetId="0ef5-5056-d52e-3cfd" primary="false">
           <modifiers>
-            <modifier type="set" field="1c94-e417-3141-8ee5" value="6">
+            <modifier type="set" value="0" field="54b3-4d13-ea86-7fab">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="64a3-44d9-d0fc-4f3a" value="2">
+            <modifier type="set" value="3" field="0f7e-c748-2823-5f36">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c94-e417-3141-8ee5" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64a3-44d9-d0fc-4f3a" type="min"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="54b3-4d13-ea86-7fab" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="0f7e-c748-2823-5f36" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="5892-944b-5717-6b60" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+        <categoryLink name="Fast Attack" hidden="false" id="f3f6-47b1-09df-f5ed" targetId="34e2-d53c-28ab-44cf" primary="false">
           <modifiers>
-            <modifier type="set" field="f869-0cca-ee96-c53d" value="1">
+            <modifier type="set" value="6" field="1c94-e417-3141-8ee5">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="64a3-44d9-d0fc-4f3a">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f869-0cca-ee96-c53d" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c94-e417-3141-8ee5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="64a3-44d9-d0fc-4f3a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="a63a-a4f4-10cc-79cd" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="5892-944b-5717-6b60" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <modifiers>
+            <modifier type="set" value="1" field="f869-0cca-ee96-c53d">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="f869-0cca-ee96-c53d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="f0b5-294d-9445-a1b7" name="4A-Raid Attacker" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="ac99-94ae-0204-d610" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
-          <modifiers>
-            <modifier type="set" field="eb67-55a4-8348-64e6" value="1">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb67-55a4-8348-64e6" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="fe0a-de5b-3419-374f" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="ccc9-c481-2515-c357" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="3c0e-4dcf-8f9a-fc4b" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="fe0a-de5b-3419-374f" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
-            <modifier type="increment" field="47e4-9690-9cca-4e26" value="1">
+            <modifier type="increment" value="1" field="47e4-9690-9cca-4e26">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="true"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="71fe-e8b3-a2c2-dbd1" value="1">
+            <modifier type="increment" value="1" field="71fe-e8b3-a2c2-dbd1">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="true"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="71fe-e8b3-a2c2-dbd1" value="2">
+            <modifier type="decrement" value="2" field="71fe-e8b3-a2c2-dbd1">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -629,90 +624,91 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71fe-e8b3-a2c2-dbd1" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47e4-9690-9cca-4e26" type="min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="71fe-e8b3-a2c2-dbd1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="47e4-9690-9cca-4e26" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="fe7c-c4dc-0163-4ccc" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+        <categoryLink name="Elites" hidden="false" id="ac99-94ae-0204-d610" targetId="6d25-b346-c314-6911" primary="false">
           <modifiers>
-            <modifier type="set" field="2724-949b-2595-c0ab" value="0">
+            <modifier type="set" value="1" field="eb67-55a4-8348-64e6">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="d425-8d65-05e4-d647" value="3">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2724-949b-2595-c0ab" type="min"/>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d425-8d65-05e4-d647" type="max"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="eb67-55a4-8348-64e6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="9b2f-c8c9-f318-31f8" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+        <categoryLink name="Troops" hidden="false" id="fe7c-c4dc-0163-4ccc" targetId="0ef5-5056-d52e-3cfd" primary="false">
           <modifiers>
-            <modifier type="set" field="da2a-d8dc-04c8-f4e9" value="6">
+            <modifier type="set" value="0" field="2724-949b-2595-c0ab">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="ac20-300d-4940-097c" value="2">
+            <modifier type="set" value="3" field="d425-8d65-05e4-d647">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da2a-d8dc-04c8-f4e9" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac20-300d-4940-097c" type="min"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2724-949b-2595-c0ab" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="d425-8d65-05e4-d647" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="df83-b739-e368-5360" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+        <categoryLink name="Fast Attack" hidden="false" id="9b2f-c8c9-f318-31f8" targetId="34e2-d53c-28ab-44cf" primary="false">
           <modifiers>
-            <modifier type="set" field="f731-8ccb-6d84-fd38" value="1">
+            <modifier type="set" value="6" field="da2a-d8dc-04c8-f4e9">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="ac20-300d-4940-097c">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f731-8ccb-6d84-fd38" type="max"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="da2a-d8dc-04c8-f4e9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ac20-300d-4940-097c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="3c0e-4dcf-8f9a-fc4b" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="df83-b739-e368-5360" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <modifiers>
+            <modifier type="set" value="1" field="f731-8ccb-6d84-fd38">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f731-8ccb-6d84-fd38" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="b1dd-a74a-0fe1-35b8" name="4D-Raid Defender" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="cbb8-aedd-2f13-0783" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
-          <modifiers>
-            <modifier type="set" field="e506-f3a8-2fe5-2d95" value="1">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e506-f3a8-2fe5-2d95" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="8b17-55e9-bdf7-7ae8" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="1112-0727-fabb-c990" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="3eae-54d4-9ba3-13cd" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="8b17-55e9-bdf7-7ae8" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
-            <modifier type="increment" field="2e45-726c-b86c-a2ad" value="1">
+            <modifier type="increment" value="1" field="2e45-726c-b86c-a2ad">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="0392-cebf-ecde-bc99" value="1">
+            <modifier type="increment" value="1" field="0392-cebf-ecde-bc99">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="2e45-726c-b86c-a2ad" value="1">
+            <modifier type="decrement" value="1" field="2e45-726c-b86c-a2ad">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -724,96 +720,91 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e45-726c-b86c-a2ad" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0392-cebf-ecde-bc99" type="min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e45-726c-b86c-a2ad" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0392-cebf-ecde-bc99" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="11e6-9f9e-a189-8d28" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+        <categoryLink name="Elites" hidden="false" id="cbb8-aedd-2f13-0783" targetId="6d25-b346-c314-6911" primary="false">
           <modifiers>
-            <modifier type="set" field="0cdc-0e3c-c3cd-ae48" value="3">
+            <modifier type="set" value="1" field="e506-f3a8-2fe5-2d95">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="49d1-3ae2-17b2-0ec2" value="0">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49d1-3ae2-17b2-0ec2" type="min"/>
-            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cdc-0e3c-c3cd-ae48" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e506-f3a8-2fe5-2d95" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="1915-959e-90d1-4fb4" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+        <categoryLink name="Troops" hidden="false" id="11e6-9f9e-a189-8d28" targetId="0ef5-5056-d52e-3cfd" primary="false">
           <modifiers>
-            <modifier type="set" field="ce62-bdd1-f774-7e08" value="6">
+            <modifier type="set" value="3" field="0cdc-0e3c-c3cd-ae48">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="6262-fd93-e0d4-bc9d" value="2">
+            <modifier type="set" value="0" field="49d1-3ae2-17b2-0ec2">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce62-bdd1-f774-7e08" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6262-fd93-e0d4-bc9d" type="min"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="49d1-3ae2-17b2-0ec2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="0cdc-0e3c-c3cd-ae48" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="cfe7-fb49-2f5c-e908" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+        <categoryLink name="Fast Attack" hidden="false" id="1915-959e-90d1-4fb4" targetId="34e2-d53c-28ab-44cf" primary="false">
           <modifiers>
-            <modifier type="set" field="2c4b-215d-07a6-4bac" value="1">
+            <modifier type="set" value="6" field="ce62-bdd1-f774-7e08">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="6262-fd93-e0d4-bc9d">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c4b-215d-07a6-4bac" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce62-bdd1-f774-7e08" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6262-fd93-e0d4-bc9d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="3eae-54d4-9ba3-13cd" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="cfe7-fb49-2f5c-e908" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <modifiers>
+            <modifier type="set" value="1" field="2c4b-215d-07a6-4bac">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2c4b-215d-07a6-4bac" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="172d-d416-c92b-3694" name="5A-Breakthrough Attacker" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="5802-6a53-04a1-da4b" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
-          <modifiers>
-            <modifier type="set" field="96a4-1591-dafa-b3bc" value="0">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="730f-46ca-7528-3ce7" value="1">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="730f-46ca-7528-3ce7" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96a4-1591-dafa-b3bc" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="25f7-5155-8ed0-1bed" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="6eba-31f2-87bd-6a00" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="5be7-5104-446a-b85d" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="25f7-5155-8ed0-1bed" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
-            <modifier type="increment" field="004b-86dd-21b7-fdee" value="1">
+            <modifier type="increment" value="1" field="004b-86dd-21b7-fdee">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="e2c7-2639-d9b7-fc65" value="1">
+            <modifier type="increment" value="1" field="e2c7-2639-d9b7-fc65">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="true"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="004b-86dd-21b7-fdee" value="2">
+            <modifier type="decrement" value="2" field="004b-86dd-21b7-fdee">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -825,90 +816,97 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="004b-86dd-21b7-fdee" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2c7-2639-d9b7-fc65" type="min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="004b-86dd-21b7-fdee" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e2c7-2639-d9b7-fc65" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="6fc1-9e2a-d387-f61f" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+        <categoryLink name="Elites" hidden="false" id="5802-6a53-04a1-da4b" targetId="6d25-b346-c314-6911" primary="false">
           <modifiers>
-            <modifier type="set" field="b675-01dc-6f08-9320" value="0">
+            <modifier type="set" value="0" field="96a4-1591-dafa-b3bc">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="5497-f143-2cd0-eb3b" value="3">
+            <modifier type="set" value="1" field="730f-46ca-7528-3ce7">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b675-01dc-6f08-9320" type="min"/>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5497-f143-2cd0-eb3b" type="max"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="730f-46ca-7528-3ce7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="96a4-1591-dafa-b3bc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="6672-273c-cb32-648b" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+        <categoryLink name="Troops" hidden="false" id="6fc1-9e2a-d387-f61f" targetId="0ef5-5056-d52e-3cfd" primary="false">
           <modifiers>
-            <modifier type="set" field="e51a-6fda-2f35-f70d" value="6">
+            <modifier type="set" value="0" field="b675-01dc-6f08-9320">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="ffad-4c26-c493-8a9a" value="2">
+            <modifier type="set" value="3" field="5497-f143-2cd0-eb3b">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e51a-6fda-2f35-f70d" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffad-4c26-c493-8a9a" type="min"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b675-01dc-6f08-9320" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="5497-f143-2cd0-eb3b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="374c-7702-f4aa-2ae1" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+        <categoryLink name="Fast Attack" hidden="false" id="6672-273c-cb32-648b" targetId="34e2-d53c-28ab-44cf" primary="false">
           <modifiers>
-            <modifier type="set" field="6380-614a-df74-1f96" value="1">
+            <modifier type="set" value="6" field="e51a-6fda-2f35-f70d">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="ffad-4c26-c493-8a9a">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6380-614a-df74-1f96" type="max"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e51a-6fda-2f35-f70d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ffad-4c26-c493-8a9a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="5be7-5104-446a-b85d" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="374c-7702-f4aa-2ae1" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <modifiers>
+            <modifier type="set" value="1" field="6380-614a-df74-1f96">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="6380-614a-df74-1f96" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="90e9-2e2f-1754-4917" name="5D-Breakthrough Defender" hidden="false">
       <comment>Imperial Guard (2003)</comment>
       <categoryLinks>
-        <categoryLink id="f1f2-c92c-18bb-b3d3" name="Elites" hidden="false" targetId="6d25-b346-c314-6911" primary="false">
-          <modifiers>
-            <modifier type="set" field="ee32-676f-9d7c-6efd" value="1">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee32-676f-9d7c-6efd" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="eb23-98a8-1fda-6586" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="false">
+        <categoryLink name="Configuration" hidden="false" id="8abb-a7a6-4df1-10d6" targetId="18d4-c759-8e80-4eb6"/>
+        <categoryLink name="No Force Org" hidden="false" id="7f83-a5cd-0aab-99f5" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="HQ" hidden="false" id="eb23-98a8-1fda-6586" targetId="a8a7-7a4b-5f7e-2138" primary="false">
           <comment>Note that Space Wolves get a special HQ selection process. They must have 1 HQ per 750 points.</comment>
           <modifiers>
-            <modifier type="increment" field="837d-76da-f810-d300" value="1">
+            <modifier type="increment" value="1" field="837d-76da-f810-d300">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="false" percentValue="true" includeChildSelections="false" includeChildForces="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="8ba2-d07d-e18e-de87" value="1">
+            <modifier type="increment" value="1" field="8ba2-d07d-e18e-de87">
               <repeats>
-                <repeat field="4ed5-2f92-9abc-2870" scope="force" value="750" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9bbd-df2b-520d-778d" repeats="1" roundUp="false"/>
+                <repeat value="750" repeats="1" field="4ed5-2f92-9abc-2870" scope="force" childId="9bbd-df2b-520d-778d" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="true"/>
               </repeats>
             </modifier>
-            <modifier type="decrement" field="8ba2-d07d-e18e-de87" value="1">
+            <modifier type="decrement" value="1" field="8ba2-d07d-e18e-de87">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -920,64 +918,79 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ba2-d07d-e18e-de87" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="837d-76da-f810-d300" type="min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ba2-d07d-e18e-de87" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="837d-76da-f810-d300" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="5181-07bb-6fd2-c730" name="Troops" hidden="false" targetId="0ef5-5056-d52e-3cfd" primary="false">
+        <categoryLink name="Elites" hidden="false" id="f1f2-c92c-18bb-b3d3" targetId="6d25-b346-c314-6911" primary="false">
           <modifiers>
-            <modifier type="set" field="3044-9e6f-b97e-0ed6" value="3">
+            <modifier type="set" value="1" field="ee32-676f-9d7c-6efd">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="39b4-b70b-f8d6-5d5b" value="0">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39b4-b70b-f8d6-5d5b" type="min"/>
-            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3044-9e6f-b97e-0ed6" type="max"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ee32-676f-9d7c-6efd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="70aa-e29a-65b9-baad" name="Fast Attack" hidden="false" targetId="34e2-d53c-28ab-44cf" primary="false">
+        <categoryLink name="Troops" hidden="false" id="5181-07bb-6fd2-c730" targetId="0ef5-5056-d52e-3cfd" primary="false">
           <modifiers>
-            <modifier type="set" field="068e-8717-6e50-bb79" value="6">
+            <modifier type="set" value="3" field="3044-9e6f-b97e-0ed6">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="cc3b-2d97-2f2b-15ec" value="2">
+            <modifier type="set" value="0" field="39b4-b70b-f8d6-5d5b">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="068e-8717-6e50-bb79" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc3b-2d97-2f2b-15ec" type="min"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="39b4-b70b-f8d6-5d5b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="3044-9e6f-b97e-0ed6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="d69b-3fc9-7777-b048" name="Heavy Support" hidden="false" targetId="aacb-8a81-62c0-3db8" primary="false">
+        <categoryLink name="Fast Attack" hidden="false" id="70aa-e29a-65b9-baad" targetId="34e2-d53c-28ab-44cf" primary="false">
           <modifiers>
-            <modifier type="set" field="af9a-899a-8bbb-130a" value="1">
+            <modifier type="set" value="6" field="068e-8717-6e50-bb79">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f78-c07f-9062-0d43" type="instanceOf"/>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="cc3b-2d97-2f2b-15ec">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af9a-899a-8bbb-130a" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="068e-8717-6e50-bb79" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cc3b-2d97-2f2b-15ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="7f83-a5cd-0aab-99f5" name="No Force Org" hidden="false" targetId="be45-5314-4388-5bfd" primary="false"/>
+        <categoryLink name="Heavy Support" hidden="false" id="d69b-3fc9-7777-b048" targetId="aacb-8a81-62c0-3db8" primary="false">
+          <modifiers>
+            <modifier type="set" value="1" field="af9a-899a-8bbb-130a">
+              <conditions>
+                <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="7f78-c07f-9062-0d43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="af9a-899a-8bbb-130a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
   <entryLinks>
-    <entryLink id="abd1-8783-0ec3-a496" name="Additional Options" hidden="false" collective="false" import="true" targetId="955f-86dd-474a-8af4" type="selectionEntry"/>
+    <entryLink id="abd1-8783-0ec3-a496" name="Additional Options" hidden="false" collective="false" import="true" targetId="955f-86dd-474a-8af4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="18d4-c759-8e80-4eb6" id="6951-94e2-34aa-fad1" primary="true" name="Configuration"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="1004-74e9-5ee6-c51f" name="Deathwatch Kill Team (Chapter Approved)" hidden="false" collective="false" import="true" type="unit">
@@ -1748,7 +1761,7 @@
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="955f-86dd-474a-8af4" name="Additional Options" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="955f-86dd-474a-8af4" name="Additional Options" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d061-b8ab-72d5-b785" type="max"/>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea0f-d883-f6c4-7a27" type="min"/>
