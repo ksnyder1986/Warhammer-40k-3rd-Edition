@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Alien Hunters (Homebrew)" id="08d9-58f2-33e3-5203" authorName="Hans Olo" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="12" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Alien Hunters (Homebrew)" id="08d9-58f2-33e3-5203" authorName="Hans Olo" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="12" library="false" revision="4" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Deathwatch" id="fb40-23ff-db43-ac2f" hidden="false"/>
     <categoryEntry name="Radical" id="7b73-3645-34bc-1c3d" hidden="false"/>
@@ -7,7 +7,7 @@
     <categoryEntry name="Space Marine Ally" id="aee9-fa95-eb84-4519" hidden="false"/>
     <categoryEntry name="Alien Hunter Troop Choices" id="b59e-e3c9-8a4f-4b32" hidden="true"/>
     <categoryEntry name="Alien Hunter Heavy Choices" id="5544-1919-07c4-fba5" hidden="true"/>
-    <categoryEntry name="Alien Hunter Elite Choices" id="ba91-25f8-5631-fc2f" hidden="false"/>
+    <categoryEntry name="Alien Hunter Elite Choices" id="ba91-25f8-5631-fc2f" hidden="true"/>
     <categoryEntry name="Imperial Guard Troop Choice" id="d4ac-2322-7cad-5fd2" hidden="true"/>
     <categoryEntry name="Space Marine Troop Choice" id="2abb-32b2-f1b9-33e3" hidden="true"/>
   </categoryEntries>
@@ -49,6 +49,7 @@
                 <condition childId="fff5-d484-2fc9-c03d" childName="Deathcult Assassins" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
                 <condition childId="2f5b-253a-02ea-74d9" childName="Ordo Xenos Inquisitor Lord" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="7765-d1cc-97d7-ab17" childName="Ordo Xenos Inquisitor" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="cbb8-266b-5683-c883" childName="Inquisitor Gregor Eisenhorn" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -70,6 +71,7 @@
                 <condition childId="a7c0-85dd-3bf6-278d" childName="Officio Assassinorum Operative" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
                 <condition childId="2f5b-253a-02ea-74d9" childName="Ordo Xenos Inquisitor Lord" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="7765-d1cc-97d7-ab17" childName="Ordo Xenos Inquisitor" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="cbb8-266b-5683-c883" childName="Inquisitor Gregor Eisenhorn" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -340,6 +342,11 @@
     <entryLink name="Inquisitor Gregor Eisenhorn" id="0150-bc9c-769d-0e62" hidden="false" import="true" targetId="cbb8-266b-5683-c883" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="HQ" id="9ed7-33f6-e612-afed" hidden="false" primary="true" targetId="a8a7-7a4b-5f7e-2138"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink name="Deathwatch Corvus Blackstar" id="2230-bc6b-af68-e7c9" hidden="false" import="true" targetId="4902-d863-d129-6744" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Heavy Support" id="ca5b-1697-716d-56f3" hidden="false" primary="true" targetId="aacb-8a81-62c0-3db8"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -1057,6 +1064,9 @@ At the end of its own turn, the vehicle may disengage VTOL. It now reverts to be
       </modifiers>
       <selectionEntries>
         <selectionEntry name="Captain" id="fa2a-0cac-4372-44d6" hidden="false" import="true" type="model">
+          <categoryLinks>
+            <categoryLink name="Deathwatch" id="c147-13b6-0bd4-8919" hidden="false" primary="false" targetId="fb40-23ff-db43-ac2f"/>
+          </categoryLinks>
           <constraints>
             <constraint id="81c0-3e85-aa5b-a53b-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
             <constraint id="81c0-3e85-aa5b-a53b-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
@@ -1110,6 +1120,9 @@ At the end of its own turn, the vehicle may disengage VTOL. It now reverts to be
       </modifiers>
       <selectionEntries>
         <selectionEntry name="Master" id="7859-8bc3-a557-c721" hidden="false" import="true" type="model">
+          <categoryLinks>
+            <categoryLink name="Deathwatch" id="628d-12f5-5fed-9407" hidden="false" primary="false" targetId="fb40-23ff-db43-ac2f"/>
+          </categoryLinks>
           <constraints>
             <constraint id="8245-126f-68cb-606e-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
             <constraint id="8245-126f-68cb-606e-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
@@ -1150,7 +1163,9 @@ At the end of its own turn, the vehicle may disengage VTOL. It now reverts to be
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
       </costs>
       <entryLinks>
-        <entryLink name="Alien Hunters Armoury" id="2ddc-218d-2aa0-dec8" hidden="false" import="true" targetId="27a0-9cff-9897-d169" type="selectionEntryGroup"/>
+        <entryLink name="Alien Hunters Armoury" id="2ddc-218d-2aa0-dec8" hidden="false" import="true" targetId="27a0-9cff-9897-d169" type="selectionEntryGroup">
+          <comment>Does not have a point limit in the codex like the acolyte does. I am assuming this is not a typo.</comment>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Biologis Adept" id="de38-7b58-723a-c11c" hidden="false" targetId="2156-be6d-b930-9caf" type="profile"/>
@@ -1254,12 +1269,15 @@ are on the constant search for foreign bio-samples and will take any chance to 
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Terminators" id="fae9-d22c-2dcc-49f8" defaultSelectionEntryId="dcbe-f48a-f354-2f8f" hidden="false">
+          <categoryLinks>
+            <categoryLink name="Deathwatch" id="fe7d-03fc-10c4-8c36" hidden="false" primary="false" targetId="fb40-23ff-db43-ac2f"/>
+          </categoryLinks>
           <constraints>
             <constraint id="0e48-afae-e0fd-f3b5" field="selections" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="3852-beca-822d-4c6c" field="selections" scope="parent" shared="true" type="max" value="10"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry name="Terminator" id="dcbe-f48a-f354-2f8f" defaultAmount="1,1,1,1" hidden="false" import="true" type="model">
+            <selectionEntry name="Terminator" id="dcbe-f48a-f354-2f8f" defaultAmount="1,1,1,1" hidden="false" import="true" step="1" type="model">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="42"/>
               </costs>
@@ -1270,7 +1288,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
                 <infoLink name="Deathwatch Terminator" id="d06e-c381-fe0c-edd1" hidden="false" targetId="4d40-e161-1f5a-30a7" type="profile"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry name="Terminator Sergeant" id="fc5a-e581-8941-39dd" hidden="false" import="true" type="model">
+            <selectionEntry name="Terminator Sergeant" id="fc5a-e581-8941-39dd" hidden="false" import="true" step="1" type="model">
               <constraints>
                 <constraint id="a5a3-d88c-daa3-b7fa-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
                 <constraint id="a5a3-d88c-daa3-b7fa-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
@@ -1363,7 +1381,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
                 </selectionEntry>
                 <selectionEntry name="Gauss Cannon" id="480c-bd78-8761-3ba2" hidden="false" import="true" type="upgrade">
                   <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="40"/>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
                   </costs>
                   <infoLinks>
                     <infoLink name="Gauss Cannon" id="9227-ecf4-e77b-1014" hidden="false" targetId="96af-6622-de74-9cb8" type="profile"/>
@@ -1387,7 +1405,10 @@ are on the constant search for foreign bio-samples and will take any chance to 
         <infoLink name="Deathwatch" id="cd91-094c-f3b6-b0fa" hidden="false" targetId="8517-3f49-0164-eb63" type="infoGroup"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Veteran" id="a5ca-b540-ab15-1ebf" collapsible="true" defaultAmount="1,1,1,1,1" hidden="false" import="true" type="model">
+        <selectionEntry name="Veteran" id="a5ca-b540-ab15-1ebf" defaultAmount="1,1,1,1,1" hidden="false" import="true" step="1" type="model">
+          <categoryLinks>
+            <categoryLink name="Deathwatch" id="48f4-642d-abca-67fb" hidden="false" primary="false" targetId="fb40-23ff-db43-ac2f"/>
+          </categoryLinks>
           <constraints>
             <constraint id="a1ef-a52d-6393-c3b4" field="selections" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="fc2b-a339-ce8d-354e" field="selections" scope="parent" shared="true" type="max" value="10"/>
@@ -1551,7 +1572,6 @@ are on the constant search for foreign bio-samples and will take any chance to 
           </constraints>
           <entryLinks>
             <entryLink name="Alien Hunter Rhino" id="f3cd-4072-3ee6-c12a" hidden="false" import="true" targetId="9f1d-656a-5e1a-d8f7" type="selectionEntry"/>
-            <entryLink name="Deathwatch Corvus Blackstar" id="b898-6020-aa75-14a0" hidden="false" import="true" targetId="4902-d863-d129-6744" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1564,7 +1584,10 @@ are on the constant search for foreign bio-samples and will take any chance to 
         <infoLink name="Deathwatch" id="7450-b60e-1efb-756e" hidden="false" targetId="8517-3f49-0164-eb63" type="infoGroup"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Veteran" id="398d-fd52-b2cc-d2ef" collapsible="true" defaultAmount="1,1,1,1,1" hidden="false" import="true" type="model">
+        <selectionEntry name="Veteran" id="398d-fd52-b2cc-d2ef" collapsible="true" defaultAmount="1,1,1" hidden="false" import="true" step="1" type="model">
+          <categoryLinks>
+            <categoryLink name="Deathwatch" id="ffe2-e021-cede-d0e7" hidden="false" primary="false" targetId="fb40-23ff-db43-ac2f"/>
+          </categoryLinks>
           <constraints>
             <constraint id="bc1b-c5c9-45bc-a064" field="selections" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="4dd4-2cce-7c43-4877" field="selections" scope="parent" shared="true" type="max" value="5"/>
@@ -1691,7 +1714,10 @@ are on the constant search for foreign bio-samples and will take any chance to 
         <infoLink name="Deathwatch" id="e7b2-6d4b-8326-15e5" hidden="false" targetId="8517-3f49-0164-eb63" type="infoGroup"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Veteran" id="f285-e472-3738-b9f6" collapsible="true" defaultAmount="1,1,1,1,1" hidden="false" import="true" type="model">
+        <selectionEntry name="Veteran" id="f285-e472-3738-b9f6" collapsible="true" defaultAmount="1,1,1,1,1" hidden="false" import="true" step="1" type="model">
+          <categoryLinks>
+            <categoryLink name="Deathwatch" id="624c-08bc-d52c-feca" hidden="false" primary="false" targetId="fb40-23ff-db43-ac2f"/>
+          </categoryLinks>
           <constraints>
             <constraint id="07dd-b64d-7e51-7177" field="selections" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="2fe1-fb4e-ded5-b0b7" field="selections" scope="parent" shared="true" type="max" value="10"/>
@@ -1794,7 +1820,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
                 </selectionEntry>
                 <selectionEntry name="Missile Launcher" id="3f8b-80e8-aa8d-dbf4" hidden="false" import="true" type="upgrade">
                   <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
                   </costs>
                   <infoLinks>
                     <infoLink name="Missile Launcher (frag)" id="910d-d0ae-a390-56f4" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
@@ -1803,7 +1829,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
                 </selectionEntry>
                 <selectionEntry name="Infernus Heavy Bolter" id="edfc-e79a-efe3-71bb" hidden="false" import="true" type="upgrade">
                   <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
                   </costs>
                   <infoLinks>
                     <infoLink name="Heavy Bolter w/ Hellfire Ammo" id="3fbb-9ebe-001b-0e28" hidden="false" targetId="a939-dd6f-7a21-da6b" type="profile"/>
@@ -1812,7 +1838,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
                 </selectionEntry>
                 <selectionEntry name="Frag Cannon" id="7712-7c8a-859c-bf2d" hidden="false" import="true" type="upgrade">
                   <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="35"/>
                   </costs>
                   <infoLinks>
                     <infoLink name="Frag Cannon (Frag Round)" id="a2c0-8150-c267-b808" hidden="false" targetId="afdb-4fac-8cd5-9504" type="profile"/>
@@ -1831,7 +1857,6 @@ are on the constant search for foreign bio-samples and will take any chance to 
           </constraints>
           <entryLinks>
             <entryLink name="Alien Hunter Rhino" id="8601-28c1-0bbe-ed53" hidden="false" import="true" targetId="9f1d-656a-5e1a-d8f7" type="selectionEntry"/>
-            <entryLink name="Deathwatch Corvus Blackstar" id="3271-42f2-8bc7-b98b" hidden="false" import="true" targetId="4902-d863-d129-6744" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1852,7 +1877,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
         <infoLink name="Dreadnought" id="80bb-a99e-db89-3160" hidden="false" targetId="4b00-8b2c-de24-8193" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Left Arm" id="3c16-6e78-f26c-44da" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Left Arm" id="3c16-6e78-f26c-44da" collective="false" defaultSelectionEntryId="9b5a-23b8-49e4-d628" hidden="false" import="true">
           <constraints>
             <constraint id="7b9a-26c0-88d5-5ebd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="b10c-b65d-12e7-7195" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -1887,7 +1912,7 @@ are on the constant search for foreign bio-samples and will take any chance to 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Right Arm" id="47fe-ba4d-cd64-9ff9" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Right Arm" id="47fe-ba4d-cd64-9ff9" collective="false" defaultSelectionEntryId="none" hidden="false" import="true">
           <constraints>
             <constraint id="35f2-6652-4f37-cb82" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="22db-f3d5-9316-e59a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -2146,7 +2171,10 @@ are on the constant search for foreign bio-samples and will take any chance to 
         <infoLink name="Deathwatch" id="4ec2-df1e-88ab-2866" hidden="false" targetId="8517-3f49-0164-eb63" type="infoGroup"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Veteran" id="bb4e-32da-74fc-15ab" collapsible="true" defaultAmount="1,1,1,1,1" hidden="false" import="true" type="model">
+        <selectionEntry name="Veteran" id="bb4e-32da-74fc-15ab" collapsible="true" defaultAmount="1,1,1,1,1" hidden="false" import="true" step="1" type="model">
+          <categoryLinks>
+            <categoryLink name="Deathwatch" id="58df-71a4-d02c-951e" hidden="false" primary="false" targetId="fb40-23ff-db43-ac2f"/>
+          </categoryLinks>
           <constraints>
             <constraint id="d2e2-ff4a-c254-e44c" field="selections" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="d44c-5d9a-9a4a-6629" field="selections" scope="parent" shared="true" type="max" value="10"/>
@@ -2185,11 +2213,6 @@ are on the constant search for foreign bio-samples and will take any chance to 
               <modifiers>
                 <modifier field="hidden" type="set" value="true">
                   <conditions>
-                    <condition childId="3203-6039-2dc7-2c40" childName="Special Weapons" field="selections" scope="bb4e-32da-74fc-15ab" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </modifier>
-                <modifier field="hidden" type="set" value="true">
-                  <conditions>
                     <condition childId="340d-7cca-8d6e-5f2e" childName="Replace Boltguns with Bolt Pistols" field="selections" scope="b74a-4282-9163-6d3e" shared="true" type="atLeast" value="1"/>
                   </conditions>
                 </modifier>
@@ -2200,11 +2223,6 @@ are on the constant search for foreign bio-samples and will take any chance to 
             <infoLink name="Melta Bombs" id="e876-b072-17bd-342d" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
             <infoLink name="Bolt Pistol" id="b15e-4009-3712-a65a" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile">
               <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditions>
-                    <condition childId="3203-6039-2dc7-2c40" childName="Special Weapons" field="selections" scope="bb4e-32da-74fc-15ab" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </modifier>
                 <modifier field="hidden" type="set" value="true">
                   <conditions>
                     <condition childId="340d-7cca-8d6e-5f2e" childName="Replace Boltguns with Bolt Pistols" field="selections" scope="b74a-4282-9163-6d3e" shared="true" type="equalTo" value="0"/>
@@ -2240,7 +2258,6 @@ are on the constant search for foreign bio-samples and will take any chance to 
                 <modifier field="error" type="add" value="Veteran must be equipped with a bolter or combi-bolter to use Specialist Ammo (excluding the bolter with M.40 Targetter).">
                   <conditions>
                     <condition childId="5d18-f5b3-9515-3b26" childName="Specialist Ammunition" field="selections" scope="bb4e-32da-74fc-15ab" shared="true" type="atLeast" value="1"/>
-                    <condition childId="3203-6039-2dc7-2c40" childName="Special Weapons" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
                     <condition childId="28cc-a0c8-a16d-0787" childName="Bolter" field="selections" scope="parent" shared="true" type="equalTo" value="0"/>
                     <condition childId="143a-8a3d-4f37-448c" childName="Combi-Flamer" field="selections" scope="parent" shared="true" type="equalTo" value="0"/>
                     <condition childId="c201-b7be-e159-942e" childName="Combi-Melta" field="selections" scope="parent" shared="true" type="equalTo" value="0"/>
@@ -2252,75 +2269,6 @@ are on the constant search for foreign bio-samples and will take any chance to 
               </modifiers>
             </selectionEntry>
           </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Special Weapons" id="3203-6039-2dc7-2c40" collapsible="true" hidden="false" sortIndex="4">
-              <constraints>
-                <constraint id="c2a1-61a9-fee3-a9ef" field="selections" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="f45f-10a2-34e8-ddb3" field="selections" includeChildSelections="true" message="Maximum of 2 Special Weapons across the {root-entry}" scope="root-entry" shared="true" type="max" value="2"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry name="Flamer" id="f4fe-4557-50ce-4cb8" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="3"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Flamer" id="3f17-6a80-cc7d-d6ad" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Bolter w/ M.40 Targeter" id="2f33-47f8-9526-e68c" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Bolter w/ M.40 Targeter" id="b802-88e1-f469-0769" hidden="false" targetId="72fd-9aad-2503-52ef" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Plasma Gun" id="32e2-82c9-59aa-db75" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="6"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Plasma Gun" id="b10f-d50a-1dc9-9ed7" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Meltagun" id="2023-ec2a-2025-4433" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Meltagun" id="3c2e-89dc-d2dd-64a4" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Missile Launcher" id="3659-10e5-4d9a-d29a" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Missile Launcher (frag)" id="8bf0-52ca-23cf-c78e" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
-                    <infoLink name="Missile Launcher (krak)" id="5e93-4df8-0db2-f2b0" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Infernus Heavy Bolter" id="2182-ec7f-51a4-7a1c" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Heavy Bolter w/ Hellfire Ammo" id="f8ac-1092-7094-14e8" hidden="false" targetId="a939-dd6f-7a21-da6b" type="profile"/>
-                    <infoLink name="Heavy Bolter w/ Suspensors" id="fdb7-234e-3c78-e488" hidden="false" targetId="f471-891a-3e26-bdbf" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Frag Cannon" id="6389-1538-09d4-7c31" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Frag Cannon (Frag Round)" id="59bc-dd81-1291-29a0" hidden="false" targetId="afdb-4fac-8cd5-9504" type="profile"/>
-                    <infoLink name="Frag Cannon (Solid Shell)" id="243c-ec68-f647-21c8" hidden="false" targetId="e11a-88ff-3227-b106" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry name="Replace Boltguns with Bolt Pistols" id="340d-7cca-8d6e-5f2e" hidden="false" import="true" type="upgrade">
           <constraints>
@@ -7376,6 +7324,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Inquisitor" id="5637-57af-0978-1fc2" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Psyker" id="dc30-4902-548c-5311" hidden="false" primary="false" targetId="3cb1-645b-8bbb-3d49"/>
+      </categoryLinks>
       <constraints>
         <constraint id="143b-b62a-134d-a8e9-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
         <constraint id="143b-b62a-134d-a8e9-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
@@ -7388,7 +7339,20 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <entryLink name="Psychic Powers" id="a782-51d0-7da3-e10a" collective="false" hidden="false" import="true" targetId="303f-8d77-2f63-62c9" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Inquisitor" id="be74-3bd2-43c3-7efc" hidden="false" targetId="fb71-3aef-b9f0-aa58" type="profile"/>
+        <infoLink name="Inquisitor" id="be74-3bd2-43c3-7efc" hidden="false" targetId="fb71-3aef-b9f0-aa58" type="profile">
+          <modifiers>
+            <modifier field="7928-3a9b-6080-ed95" type="set" value="5">
+              <conditions>
+                <condition childId="46f2-7367-df3f-9d52" childName="The Sage" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="c704-6128-f143-935a" type="set" value="5">
+              <conditions>
+                <condition childId="70de-ca5f-67c5-fed2" childName="The Warrior" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Independent Character" id="7838-a91e-db9e-3145" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
       </infoLinks>
       <rules>
@@ -7408,6 +7372,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Inquisitor Lord" id="bb42-b139-e132-cd80" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Psyker" id="6f50-779a-3b26-97a6" hidden="false" primary="false" targetId="3cb1-645b-8bbb-3d49"/>
+      </categoryLinks>
       <constraints>
         <constraint id="6ec5-f9db-8da7-14e0-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
         <constraint id="6ec5-f9db-8da7-14e0-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
@@ -7420,7 +7387,20 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <entryLink name="Psychic Powers" id="9d05-efcd-6e9e-4c21" collective="false" hidden="false" import="true" targetId="303f-8d77-2f63-62c9" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Inquisitor Lord" id="2418-b866-baf0-06f9" hidden="false" targetId="75e5-6dc4-a7aa-df69" type="profile"/>
+        <infoLink name="Inquisitor Lord" id="2418-b866-baf0-06f9" hidden="false" targetId="75e5-6dc4-a7aa-df69" type="profile">
+          <modifiers>
+            <modifier field="7928-3a9b-6080-ed95" type="set" value="5">
+              <conditions>
+                <condition childId="46f2-7367-df3f-9d52" childName="The Sage" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="c704-6128-f143-935a" type="set" value="5">
+              <conditions>
+                <condition childId="70de-ca5f-67c5-fed2" childName="The Warrior" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Independent Character" id="8bac-7ecf-a37b-0c9c" hidden="false" targetId="4a60-7f7e-c37f-a4d6" type="rule"/>
       </infoLinks>
       <rules>
@@ -7464,6 +7444,11 @@ Hellfire Round: The shot wounds on a 2+.</description>
         <modifier field="bb48-8bd1-6618-d180" type="set" value="0">
           <conditions>
             <condition childId="model" childName="model" field="selections" includeChildForces="false" includeChildSelections="true" scope="root-entry" shared="true" traverseAssociationGroup="false" type="greaterThan" value="12"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="3261-6601-5bfe-f5d0" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7609,6 +7594,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Inquisitor Gregor Eisenhorn" id="cbb8-266b-5683-c883" collective="false" hidden="false" import="true" type="upgrade">
+      <comment>Unit added by Kris Snyder, not in homebrew codex.</comment>
       <constraints>
         <constraint id="e629-7d96-51bb-b9ce" field="selections" includeChildSelections="false" message="Eisenhorn must be the only Inquisitor Lord in the army." scope="force" shared="true" type="max" value="1"/>
       </constraints>
@@ -7920,7 +7906,7 @@ Hellfire Round: The shot wounds on a 2+.</description>
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry name="The Xenologist" id="24fc-aacc-fd0a-7220" collective="false" hidden="false" import="true" type="model">
+            <selectionEntry name="The Xenologist" id="24fc-aacc-fd0a-7220" collective="false" hidden="false" import="true" step="1" type="model">
               <constraints>
                 <constraint id="067d-25df-2822-c89a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
               </constraints>
@@ -7937,9 +7923,9 @@ Hellfire Round: The shot wounds on a 2+.</description>
                 <infoLink name="Laspistol" id="6dc7-144f-1d16-79b9" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Xeno Specaility" id="96a8-24f3-a874-f6c3" hidden="false">
+                <selectionEntryGroup name="Xeno Specialty" id="96a8-24f3-a874-f6c3" defaultSelectionEntryId="none" hidden="false">
                   <constraints>
-                    <constraint id="376d-fa1e-98f7-9952-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="376d-fa1e-98f7-9952-min" field="selections" message="The Xenologist must select a Xeno Specialty" scope="parent" shared="true" type="min" value="1"/>
                     <constraint id="376d-fa1e-98f7-9952-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
                   <selectionEntries>
@@ -8005,6 +7991,12 @@ Hellfire Round: The shot wounds on a 2+.</description>
                 <infoLink name="Close Combat Weapon" id="c253-7d05-ce65-cd46" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                 <infoLink name="Laspistol" id="4bad-a851-bafa-8516" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
               </infoLinks>
+              <rules>
+                <rule name="Sage" id="40f8-d308-a82e-cbc7" hidden="false">
+                  <description>If accompanied by a Sage, the Inquisitor benefits from +1 BS. 
+If the Inquisitor has more than one Sage in its retinue, the Inquisitor or a member of its retinue may re-roll a failed roll to hit during the Shooting phase, though they must accept the second result.</description>
+                </rule>
+              </rules>
             </selectionEntry>
             <selectionEntry name="The Pathfinder" id="9387-702f-39ad-73b0" collective="false" hidden="false" import="true" type="model">
               <constraints>
@@ -8048,7 +8040,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                 <infoLink name="Laspistol" id="8100-8c63-a8d0-4d53" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry name="The Acolyte" id="d155-bf7b-9860-5de5" collective="false" hidden="false" import="true" type="model">
+            <selectionEntry name="The Acolyte" id="d155-bf7b-9860-5de5" collective="false" hidden="false" import="true" step="1" type="model">
               <constraints>
                 <constraint id="ac1f-982d-7307-2496" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
               </constraints>
@@ -8071,10 +8063,15 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                 <infoLink name="Close Combat Weapon" id="06a8-5c2a-aaa4-89fd" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                 <infoLink name="Laspistol" id="5f2d-abfd-5630-f8a6" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
               </infoLinks>
+              <rules>
+                <rule name="Acolyte" id="2c92-b83c-661f-62c3" hidden="false">
+                  <description>If an Inquisitor with an Acolyte Henchman suffers a wound, it may allocate the wound to the Acolyte, but it may only allocate one wound per Acolyte in any given phase. This must be done before any saving throws are attempted. </description>
+                </rule>
+              </rules>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup name="The Warrior" id="70de-ca5f-67c5-fed2" collective="false" hidden="false" import="true">
+            <selectionEntryGroup name="The Warrior" id="70de-ca5f-67c5-fed2" collective="false" defaultSelectionEntryId="none" hidden="false" import="true">
               <constraints>
                 <constraint id="4ae0-7992-7658-ff73" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
               </constraints>
@@ -8099,7 +8096,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                     <rule name="Suppression Shield" id="c86e-9f39-8c03-c60d" hidden="false"/>
                   </rules>
                 </selectionEntry>
-                <selectionEntry name="Veteran Guardsman" id="0ef2-d5cc-c379-34cc" collective="false" hidden="false" import="true" type="model">
+                <selectionEntry name="Veteran Guardsman" id="0ef2-d5cc-c379-34cc" collective="false" hidden="false" import="true" step="1" type="model">
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
                   </costs>
@@ -8116,7 +8113,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                     <infoLink name="Targeter" id="2c20-8177-a047-e2cf" hidden="false" targetId="dfea-2b5d-a45d-9753" type="rule"/>
                   </infoLinks>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon" id="6234-8557-33b0-5aa5" collective="false" defaultSelectionEntryId="9bf6-baff-21e9-0076" hidden="false" import="true">
+                    <selectionEntryGroup name="Weapon" id="6234-8557-33b0-5aa5" collective="false" defaultSelectionEntryId="none" hidden="false" import="true">
                       <constraints>
                         <constraint id="faf3-3d58-a3f2-f221" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                         <constraint id="b9da-a123-680c-5897" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -8220,7 +8217,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
                     <infoLink name="Targeter" id="419e-386d-1d82-4b56" hidden="false" targetId="dfea-2b5d-a45d-9753" type="rule"/>
                   </infoLinks>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Weapon" id="e9cb-57ea-b757-c38a" collective="false" hidden="false" import="true">
+                    <selectionEntryGroup name="Weapon" id="e9cb-57ea-b757-c38a" collective="false" defaultSelectionEntryId="none" hidden="false" import="true">
                       <constraints>
                         <constraint id="f027-26f6-ae13-1aef" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                         <constraint id="ba77-680a-5190-1489" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -8783,9 +8780,14 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
           </infoLinks>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -8801,9 +8803,14 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
           </infoLinks>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -8819,9 +8826,14 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
           </infoLinks>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -8830,7 +8842,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
             <constraint id="a387-602c-5e1c-12f1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
           </costs>
           <infoLinks>
             <infoLink name="Power Weapon" id="fe9d-ca88-b4aa-d816" hidden="false" targetId="5774-7187-2616-dd8a" type="profile"/>
@@ -8849,7 +8861,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="3cb1-645b-8bbb-3d49" childName="Psyker" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="3cb1-645b-8bbb-3d49" childName="Psyker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -8872,7 +8884,7 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
             </modifier>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -8890,14 +8902,14 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry name="Lightning Claw, Pair" id="82b5-9306-3ac8-099c" hidden="false" import="true" type="upgrade">
           <constraints>
-            <constraint id="823f-4e31-37d0-4e0d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="823f-4e31-37d0-4e0d" field="selections" includeChildForces="false" includeChildSelections="false" message="Pair of Lightning Claws uses both hands. You cannot add any additional weapons." percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
@@ -8908,7 +8920,12 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+              </conditions>
+            </modifier>
+            <modifier field="823f-4e31-37d0-4e0d" type="set" value="0">
+              <conditions>
+                <condition childId="04a6-1f9f-3643-480f" childName="Weapons" field="selections" scope="parent" shared="true" type="greaterThan" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -8950,8 +8967,8 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="341c-1d2c-25d8-af97" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="27ee-b0a2-0c2a-b518" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="2f5b-253a-02ea-74d9" childName="Ordo Xenos Inquisitor Lord" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="7765-d1cc-97d7-ab17" childName="Ordo Xenos Inquisitor" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8960,6 +8977,16 @@ If accompanied by two or more Pathfinders the Inquisitor may make a Scout move a
               <conditions>
                 <condition childId="0ab5-d725-1cf5-ba03" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
               </conditions>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="5637-57af-0978-1fc2" childName="Inquisitor" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="bb42-b139-e132-cd80" childName="Inquisitor Lord" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <rules>
@@ -8982,7 +9009,7 @@ However, the character with this item and the squad they are with may not use an
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -9000,7 +9027,7 @@ However, the character with this item and the squad they are with may not use an
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -9018,7 +9045,7 @@ However, the character with this item and the squad they are with may not use an
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -9041,7 +9068,7 @@ However, the character with this item and the squad they are with may not use an
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -9055,7 +9082,7 @@ However, the character with this item and the squad they are with may not use an
       <modifiers>
         <modifier field="0801-108a-fbb5-e6eb" type="increment" value="1">
           <repeats>
-            <repeat childId="e0d3-739a-9026-4668" childName="The Familiar" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+            <repeat childId="e0d3-739a-9026-4668" childName="The Familiar" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="root-entry" shared="true" value="1"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -9133,7 +9160,7 @@ a “hit” is not scored with the first roll.</description>
           </costs>
           <rules>
             <rule name="Psychic Communion" id="9761-f123-75ae-4cbc" hidden="false">
-              <description>Psychic Communion is used at the start of the Movement phase before reserve rolls are made. If successful, you may re-roll the Scatter die of any units that Deep Strike during this phase. </description>
+              <description>Psychic Communion is used at the start of the Movement phase before reserve rolls are made. If successful, you may re-roll the Scatter die of any units that Deep Strike during this phase.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -9638,9 +9665,14 @@ The main effect of this spell is far greater though. While they are psychically 
           </infoLinks>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -9654,6 +9686,7 @@ The main effect of this spell is far greater though. While they are psychically 
           <infoLinks>
             <infoLink name="Boltgun" id="2064-d3b5-34cd-298e" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
             <infoLink name="Flamer" id="7092-8967-10c1-ad7a" hidden="false" targetId="9177-ce8a-92e3-157e" type="profile"/>
+            <infoLink name="Combi Weapons" id="0229-ec5d-b99e-4c3f" hidden="false" targetId="e65f-0536-e057-e2d2" type="rule"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry name="Storm Bolter" id="487b-a46d-858c-22bd" collective="false" hidden="false" import="true" type="upgrade">
@@ -9695,6 +9728,7 @@ The main effect of this spell is far greater though. While they are psychically 
           <infoLinks>
             <infoLink name="Boltgun" id="f788-8d0b-bb4f-e0ec" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
             <infoLink name="Meltagun" id="17f2-68cb-9975-8970" hidden="false" targetId="737d-c7ef-4cb5-e6fa" type="profile"/>
+            <infoLink name="Combi Weapons" id="6c12-c084-e95f-c63c" hidden="false" targetId="e65f-0536-e057-e2d2" type="rule"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry name="Combi-Plasma Gun" id="7af6-d777-dd95-704c" collective="false" hidden="false" import="true" type="upgrade">
@@ -9707,6 +9741,7 @@ The main effect of this spell is far greater though. While they are psychically 
           <infoLinks>
             <infoLink name="Plasma Gun" id="2090-b21d-1422-fd28" hidden="false" targetId="112a-baea-9eeb-b1b5" type="profile"/>
             <infoLink name="Boltgun" id="ffa3-845c-8b1b-2270" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+            <infoLink name="Combi Weapons" id="7b63-ba96-771e-3daa" hidden="false" targetId="e65f-0536-e057-e2d2" type="rule"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry name="Bolter with M.40 Targetter" id="5b7e-8322-70dd-a7eb" hidden="false" import="true" type="upgrade">
@@ -9722,13 +9757,18 @@ The main effect of this spell is far greater though. While they are psychically 
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildForces="false" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
             <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -9748,13 +9788,18 @@ The main effect of this spell is far greater though. While they are psychically 
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notInstanceOf" value="0"/>
+                <condition childId="fb40-23ff-db43-ac2f" childName="Deathwatch" field="selections" includeChildForces="false" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="0"/>
               </conditions>
             </modifier>
             <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -9768,6 +9813,7 @@ The main effect of this spell is far greater though. While they are psychically 
           <infoLinks>
             <infoLink name="Boltgun" id="1bac-8b18-c4d6-7b99" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
             <infoLink name="Needle Pistol" id="652a-adda-fc32-f42c" hidden="false" targetId="ab52-55da-ce92-ddf1" type="profile"/>
+            <infoLink name="Combi Weapons" id="bc0c-25c1-147b-16b0" hidden="false" targetId="e65f-0536-e057-e2d2" type="rule"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry name="Combi-Grenade Launcher" id="3aa1-0e86-c7c4-6a56" hidden="false" import="true" type="upgrade">
@@ -9781,6 +9827,7 @@ The main effect of this spell is far greater though. While they are psychically 
             <infoLink name="Boltgun" id="8a8b-97c3-1fb2-9655" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
             <infoLink name="Grenade Launcher (frag)" id="102f-dacf-d151-d77f" hidden="false" targetId="edff-5743-8a17-916e" type="profile"/>
             <infoLink name="Grenade Launcher (krak)" id="1c81-b323-3d93-e3b7" hidden="false" targetId="d236-a268-4f05-49f0" type="profile"/>
+            <infoLink name="Combi Weapons" id="d865-4e57-da38-1b23" hidden="false" targetId="e65f-0536-e057-e2d2" type="rule"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -9827,7 +9874,7 @@ The main effect of this spell is far greater though. While they are psychically 
     </selectionEntryGroup>
     <selectionEntryGroup name="Alien Hunters Wargear" id="90a2-557b-e25b-e2c8" collapsible="true" collective="false" hidden="false" import="true">
       <entryLinks>
-        <entryLink name="Xenos Artefacts" id="98e0-ad83-e04f-5cd8" flatten="true" hidden="false" import="true" sortIndex="1" targetId="157b-54a2-175d-9638" type="selectionEntryGroup"/>
+        <entryLink name="Xenos Artefacts" id="98e0-ad83-e04f-5cd8" hidden="false" import="true" sortIndex="1" targetId="157b-54a2-175d-9638" type="selectionEntryGroup"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry name="Bionics" id="afcd-40dc-3e4a-155b" collective="false" hidden="false" import="true" type="upgrade">
@@ -9888,6 +9935,16 @@ The main effect of this spell is far greater though. While they are psychically 
                 <condition childId="d155-bf7b-9860-5de5" childName="The Acolyte" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
               </conditions>
             </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="5637-57af-0978-1fc2" childName="Inquisitor" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="bb42-b139-e132-cd80" childName="Inquisitor Lord" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <rules>
             <rule name="Digital Weapons" id="e636-9f03-30c8-f694" hidden="false">
@@ -9905,6 +9962,18 @@ The main effect of this spell is far greater though. While they are psychically 
           <infoLinks>
             <infoLink name="Frag Grenades" id="8c1b-9a02-fbb2-6d1e" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry name="Jump Pack" id="32de-1366-2292-c353" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>
@@ -9921,8 +9990,8 @@ The main effect of this spell is far greater though. While they are psychically 
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="6901-980c-4b19-1320" childName="Deathwatch Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
-                    <condition childId="1a3a-12b4-1d45-47b2" childName="Deathwatch Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="fa2a-0cac-4372-44d6" childName="Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="7859-8bc3-a557-c721" childName="Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -9939,6 +10008,18 @@ The main effect of this spell is far greater though. While they are psychically 
           <infoLinks>
             <infoLink name="Krak Grenades" id="6875-0dc0-1adb-91d1" hidden="false" targetId="9c1b-bf93-059b-27f5" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry name="Master-crafted Weapon" id="5907-1475-c917-6020" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>
@@ -9963,6 +10044,18 @@ The main effect of this spell is far greater though. While they are psychically 
           <infoLinks>
             <infoLink name="Melta Bombs" id="9315-fab3-785b-e4d7" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry name="Power Armour" id="158a-65cf-3bf3-7e1a" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>
@@ -10011,6 +10104,16 @@ The main effect of this spell is far greater though. While they are psychically 
                 <condition childId="d155-bf7b-9860-5de5" childName="The Acolyte" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
               </conditions>
             </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="5637-57af-0978-1fc2" childName="Inquisitor" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="bb42-b139-e132-cd80" childName="Inquisitor Lord" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <rules>
             <rule name="Psychic Hood" id="e452-807f-182a-036c" hidden="false">
@@ -10049,6 +10152,16 @@ The main effect of this spell is far greater though. While they are psychically 
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="5637-57af-0978-1fc2" childName="Inquisitor" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="bb42-b139-e132-cd80" childName="Inquisitor Lord" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <rules>
             <rule name="Rosarius" id="e4e0-f116-b4bd-13e0" hidden="false">
@@ -10082,8 +10195,8 @@ The main effect of this spell is far greater though. While they are psychically 
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="6901-980c-4b19-1320" childName="Deathwatch Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
-                    <condition childId="1a3a-12b4-1d45-47b2" childName="Deathwatch Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="fa2a-0cac-4372-44d6" childName="Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="7859-8bc3-a557-c721" childName="Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10108,10 +10221,20 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="6901-980c-4b19-1320" childName="Deathwatch Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
-                    <condition childId="1a3a-12b4-1d45-47b2" childName="Deathwatch Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="fa2a-0cac-4372-44d6" childName="Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="7859-8bc3-a557-c721" childName="Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                     <condition childId="2f5b-253a-02ea-74d9" childName="Ordo Xenos Inquisitor Lord" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                     <condition childId="7765-d1cc-97d7-ab17" childName="Ordo Xenos Inquisitor" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10147,6 +10270,16 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
                 <condition childId="d155-bf7b-9860-5de5" childName="The Acolyte" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
               </conditions>
             </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="5637-57af-0978-1fc2" childName="Inquisitor" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="bb42-b139-e132-cd80" childName="Inquisitor Lord" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <rules>
             <rule name="Inquisitorial Mandate" id="4ba4-5fc5-4605-7d30" hidden="false">
@@ -10166,8 +10299,18 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="6901-980c-4b19-1320" childName="Deathwatch Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
-                    <condition childId="1a3a-12b4-1d45-47b2" childName="Deathwatch Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="fa2a-0cac-4372-44d6" childName="Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="7859-8bc3-a557-c721" childName="Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7fd1-40c9-6c66-fc22" childName="Terminator Armour" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="notEqualTo" value="0"/>
+                    <condition childId="fc5a-e581-8941-39dd" childName="Terminator Sergeant" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10204,8 +10347,8 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="6901-980c-4b19-1320" childName="Deathwatch Captain" field="selections" scope="root-entry" shared="true" type="notInstanceOf" value="1"/>
-                    <condition childId="1a3a-12b4-1d45-47b2" childName="Deathwatch Master" field="selections" scope="root-entry" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="fa2a-0cac-4372-44d6" childName="Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="7859-8bc3-a557-c721" childName="Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10230,8 +10373,8 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="6901-980c-4b19-1320" childName="Deathwatch Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
-                    <condition childId="1a3a-12b4-1d45-47b2" childName="Deathwatch Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="fa2a-0cac-4372-44d6" childName="Captain" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="7859-8bc3-a557-c721" childName="Master" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                     <condition childId="2f5b-253a-02ea-74d9" childName="Ordo Xenos Inquisitor Lord" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                     <condition childId="7765-d1cc-97d7-ab17" childName="Ordo Xenos Inquisitor" field="selections" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
@@ -10367,7 +10510,9 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
       <entryLinks>
         <entryLink name="Alien Hunters Wargear" id="c9a7-2806-1e25-0e06" collective="false" hidden="false" import="true" targetId="90a2-557b-e25b-e2c8" type="selectionEntryGroup">
           <constraints>
-            <constraint id="7504-9c31-1c99-6ba6" field="4ed5-2f92-9abc-2870" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="100"/>
+            <constraint id="7504-9c31-1c99-6ba6" field="4ed5-2f92-9abc-2870" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="100">
+              <comment>Assuming the same Max 100 pts that is in the Daemon Hunter&apos;s codex this homebrew codex is based on.</comment>
+            </constraint>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -10434,12 +10579,32 @@ Strength is at least twice the character‘s Toughness, taking a single wound in
           </rules>
         </selectionEntry>
         <selectionEntry name="Neural Shredder" id="1cfc-3857-f029-effa" hidden="false" import="true" type="upgrade">
+          <comment>This artifact counts as a one-handed weapon</comment>
           <constraints>
-            <constraint id="6099-cc2a-5a83-3de4" field="selections" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="6099-cc2a-5a83-3de4" field="selections" message="The Neural Shredder counts as a one-handed weapon. The model already has two weapons purchased from the armoury." scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
           </costs>
+          <modifiers>
+            <modifier field="6099-cc2a-5a83-3de4" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="04a6-1f9f-3643-480f" childName="Weapons" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="8a50-5690-f028-5793" childName="Void Sabre" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition childId="04a6-1f9f-3643-480f" childName="Weapons" field="selections" scope="parent" shared="true" type="atLeast" value="2"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile name="Neural Shredder" id="f297-6453-2374-88a9" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
               <characteristics>
@@ -10488,17 +10653,37 @@ any unit it has joined). If a unit cannot see the character as a result they may
           </costs>
           <rules>
             <rule name="Spirt Stones" id="af7c-ec27-eabb-46aa" hidden="false">
-              <description>A psyker with spirit stones can use two psychic powers per turn, but not the same power twice. </description>
+              <description>A psyker with spirit stones can use two psychic powers per turn, but not the same power twice.</description>
             </rule>
           </rules>
         </selectionEntry>
         <selectionEntry name="Void Sabre" id="8a50-5690-f028-5793" hidden="false" import="true" type="upgrade">
+          <comment>This artifact counts as a one-handed weapon.</comment>
           <constraints>
-            <constraint id="78e8-6c49-ac8b-50a4" field="selections" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="78e8-6c49-ac8b-50a4" field="selections" message="The Void Sabre counts as a one-handed weapon. The model already has two weapons purchased from the armoury." scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
           </costs>
+          <modifiers>
+            <modifier field="78e8-6c49-ac8b-50a4" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="04a6-1f9f-3643-480f" childName="Weapons" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="1cfc-3857-f029-effa" childName="Neural Shredder" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition childId="04a6-1f9f-3643-480f" childName="Weapons" field="selections" scope="parent" shared="true" type="atLeast" value="2"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile name="Void Sabre" id="6aaa-5263-617d-f590" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
               <characteristics>
@@ -10518,7 +10703,7 @@ any unit it has joined). If a unit cannot see the character as a result they may
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Deathwatch Terminator Weapon" id="b98c-467d-f3a3-8b30" defaultSelectionEntryId="de27-878e-ab67-c8ea" hidden="false">
+    <selectionEntryGroup name="Deathwatch Terminator Weapon" id="b98c-467d-f3a3-8b30" defaultSelectionEntryId="078e-d3cf-150d-9d8f" hidden="false">
       <constraints>
         <constraint id="d512-b70d-c11f-bfa3-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
         <constraint id="d512-b70d-c11f-bfa3-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
