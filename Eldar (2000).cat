@@ -915,7 +915,7 @@ Ignores Armour Saves. A multi-wound model that suffers a wound from a diresword 
   </sharedProfiles>
   <sharedRules>
     <rule name="Rune Armour" id="96ee-79a8-217a-28a7" hidden="false">
-      <description>A model wearing rune armour has a 4+ invulnerable saving throw. If the move is mounted on a jetbike it may take either the normal 3+ armour saving throw or a 4+ rune armour invulnerable save.</description>
+      <description>A model wearing rune armour has a 4+ invulnerable saving throw. If the model is mounted on a jetbike it may take either the normal 3+ armour saving throw or a 4+ rune armour invulnerable save.</description>
     </rule>
     <rule name="Warp Jump Generators" id="0943-8bb7-8cc4-65f6" hidden="false">
       <description>A model with a Warp Jump Generator may moves up to 12&quot; in the movement phase, ignoring all terrain during the move, but may not finish the move in impassable terrain. 
@@ -1618,7 +1618,7 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink name="Iyanna Arienal, Spiritseer of Iyandan" id="cf16-775c-054d-e03c" collective="false" hidden="false" import="true" sortIndex="2" targetId="89c0-c22f-a947-63e0" type="selectionEntry">
+        <entryLink name="Iyanna Arienal, Spiritseer of Iyandan" id="cf16-775c-054d-e03c" collective="false" hidden="false" import="true" sortIndex="1" targetId="89c0-c22f-a947-63e0" type="selectionEntry">
           <constraints>
             <constraint id="2c53-5189-c1a3-9dc6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="f7d6-dfe5-2e67-4132" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="1"/>
@@ -1651,7 +1651,7 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
         <infoLink name="Wraithsight" id="44ee-9255-d341-deb1" hidden="false" targetId="59d1-dec4-4d80-b9cc" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Wraithguards" id="28d7-9a64-49e2-ce6c" collective="false" hidden="false" import="true" sortIndex="1" type="upgrade">
+        <selectionEntry name="Wraithguards" id="28d7-9a64-49e2-ce6c" collective="false" hidden="false" import="true" sortIndex="2" type="upgrade">
           <constraints>
             <constraint id="e620-eb93-dd1b-e2f0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
             <constraint id="71d9-9a2e-4af6-50b4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
@@ -2872,7 +2872,7 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry name="Iyanna Arienal, Spiritseer of Iyandan" id="89c0-c22f-a947-63e0" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Iyanna Arienal, Spiritseer of Iyandan" id="89c0-c22f-a947-63e0" collective="false" hidden="false" import="true" type="model">
       <constraints>
         <constraint id="64ee-53d0-979b-88be" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
@@ -2885,6 +2885,7 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
         <infoLink name="Armour of Vaul" id="21d9-8a45-442b-2f87" hidden="false" targetId="b544-c18c-b0cb-90a5" type="rule"/>
         <infoLink name="Destructor" id="d3ad-a31f-743b-f370" hidden="false" targetId="8cc5-9daf-3100-4784" type="profile"/>
         <infoLink name="Enhance" id="0f3c-9266-139e-c652" hidden="false" targetId="4d75-e148-e135-7ceb" type="profile"/>
+        <infoLink name="Iyanna Arienal" id="eedf-1ba0-2636-2b24" hidden="false" targetId="a5f6-e957-9e22-352b" type="profile"/>
       </infoLinks>
       <rules>
         <rule name="Spiritseer" id="d750-cb29-05e9-c934" hidden="false">
@@ -3445,6 +3446,29 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
                 <condition childId="1842-c3b0-00aa-1b77" childName="Jetbike" field="selections" scope="self" shared="true" type="equalTo" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="5331-6f75-4f69-e3b1" childName="Spiritseer" field="selections" scope="self" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Spiritseer" id="afda-16de-9fc5-87aa" hidden="false" targetId="580e-736c-c766-e957" type="profile">
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="5331-6f75-4f69-e3b1" childName="Spiritseer" field="selections" scope="self" shared="true" type="equalTo" value="0"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Rune Armour" id="5eeb-36ce-03c1-3cb4" hidden="false" targetId="96ee-79a8-217a-28a7" type="rule">
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="5331-6f75-4f69-e3b1" childName="Spiritseer" field="selections" scope="self" shared="true" type="equalTo" value="0"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3464,9 +3488,31 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="A Warlock cannot be taken in a Wraithguard unit if Iyanna is already attached.">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="89c0-c22f-a947-63e0" childName="Iyanna Arienal, Spiritseer of Iyandan" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+                <condition childId="ec2f-166f-1795-507b" childName="Warlock" field="selections" scope="parent" shared="true" type="greaterThan" value="0"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <rules>
+        <rule name="Ghostvoice" id="0387-267f-8333-f9a6" hidden="false">
+          <description>Any Wraithguard unit with a model within 6&quot; of a Spiritseer does not have to test for Wraithsight, just as if a Warlock was accompanying the unit.</description>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="5331-6f75-4f69-e3b1" childName="Spiritseer" field="selections" scope="self" shared="true" type="equalTo" value="0"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </rule>
+      </rules>
       <selectionEntries>
-        <selectionEntry name="Jetbike" id="1842-c3b0-00aa-1b77" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Jetbike" id="1842-c3b0-00aa-1b77" hidden="false" import="true" sortIndex="4" type="upgrade">
           <constraints>
             <constraint id="0740-1e97-98e2-50d0" field="selections" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="e173-efcd-09f1-d2c1" field="selections" scope="parent" shared="true" type="min" value="0"/>
@@ -3499,6 +3545,26 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry name="Spiritseer" id="5331-6f75-4f69-e3b1" collapsible="true" collective="false" hidden="false" import="true" sortIndex="3" type="upgrade">
+          <constraints>
+            <constraint id="bb71-425e-cadf-def1" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="5271-ffb6-46ff-8c2e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
+              </conditions>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="28b2-329c-ceb4-2957" childName="Wraithguard" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -3703,87 +3769,125 @@ The Avatar; vehicles; jetbikes; any model with a saving throw better than 4+ (wi
         <constraint id="3a0c-59e3-910e-01b0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="5"/>
       </constraints>
       <entryLinks>
-        <entryLink name="Warlock" id="7fe0-a13f-fc35-63e2" defaultAmount="0" hidden="false" import="true" targetId="ec2f-166f-1795-507b" type="selectionEntry"/>
-      </entryLinks>
-      <selectionEntries>
-        <selectionEntry name="Spiritseer" id="edd8-87c5-b1a4-4892" collapsible="true" collective="false" hidden="false" import="true" sortIndex="3" type="model">
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="19"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Warlock Psychic Powers" id="c999-047b-5f46-0355" collective="false" hidden="false" import="true" sortIndex="2" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
-          </entryLinks>
+        <entryLink name="Warlock" id="7fe0-a13f-fc35-63e2" defaultAmount="0" hidden="false" import="true" targetId="ec2f-166f-1795-507b" type="selectionEntry">
           <infoLinks>
-            <infoLink name="Spiritseer" id="6590-6d28-a5a6-7720" hidden="false" targetId="580e-736c-c766-e957" type="profile"/>
-            <infoLink name="Rune Armour" id="c80a-61f1-dd20-ecbb" hidden="false" targetId="96ee-79a8-217a-28a7" type="rule"/>
+            <infoLink name="Spiritseer" id="e1f0-c3f2-d3c1-6c28" hidden="false" targetId="580e-736c-c766-e957" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="2667-d2c3-afcd-48d7" childName="Spiritseer" field="selections" scope="parent" shared="true" type="equalTo" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Rune Armour" id="a537-c26d-6035-8284" hidden="false" targetId="96ee-79a8-217a-28a7" type="rule">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="2667-d2c3-afcd-48d7" childName="Spiritseer" field="selections" scope="parent" shared="true" type="equalTo" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="5271-ffb6-46ff-8c2e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <rules>
-            <rule name="Ghostvoice" id="6310-6e21-bdad-436c" hidden="false">
+            <rule name="Ghostvoice" id="7e6a-2430-7ffd-0e69" hidden="false">
               <description>Any Wraithguard unit with a model within 6&quot; of a Spiritseer does not have to test for Wraithsight, just as if a Warlock was accompanying the unit.</description>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="2667-d2c3-afcd-48d7" childName="Spiritseer" field="selections" scope="parent" shared="true" type="equalTo" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </rule>
           </rules>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Weapons" id="4c4c-e9bd-8af2-b6fc" collapsible="true" collective="false" hidden="false" import="true" sortIndex="1">
-              <constraints>
-                <constraint id="741e-da7b-be3a-266c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry name="Close Combat Weapon" id="fbaa-261d-4c7b-25c4" collective="false" hidden="false" import="true" type="upgrade">
+          <selectionEntries>
+            <selectionEntry name="Spiritseer" id="2667-d2c3-afcd-48d7" collapsible="true" collective="false" hidden="false" import="true" sortIndex="3" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="19"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Warlock Psychic Powers" id="9da3-ac12-8e7b-4e7b" collective="false" hidden="false" import="true" sortIndex="2" targetId="3546-7848-f4db-e586" type="selectionEntryGroup"/>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Spiritseer" id="8f0e-86bd-6ec2-2bb4" hidden="false" targetId="580e-736c-c766-e957" type="profile"/>
+                <infoLink name="Rune Armour" id="013d-e0d2-afc0-6fda" hidden="false" targetId="96ee-79a8-217a-28a7" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="5271-ffb6-46ff-8c2e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="28b2-329c-ceb4-2957" childName="Wraithguard" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Ghostvoice" id="b91c-e394-932d-3590" hidden="false">
+                  <description>Any Wraithguard unit with a model within 6&quot; of a Spiritseer does not have to test for Wraithsight, just as if a Warlock was accompanying the unit.</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapons" id="1039-a633-46e2-71df" collapsible="true" collective="false" hidden="false" import="true" sortIndex="1">
                   <constraints>
-                    <constraint id="3f9d-a734-148b-9084" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="abf6-f9c8-7e8c-5f0e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
                   </constraints>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Close Combat Weapon" id="4bec-2f4f-aed3-651b" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Shuriken Pistol" id="9cd7-54b5-050c-4e77" collective="false" hidden="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint id="9856-d85a-dfa8-3e2d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Shuriken Pistol" id="0ede-f8ac-6187-8ead" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Singing Spear" id="76f0-5dab-1f24-a489" collective="false" hidden="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint id="e1a1-bce2-b2b6-230c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Singing Spear" id="486a-ef96-6af1-f615" hidden="false" targetId="7ade-f891-a783-1696" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry name="Witch Blade" id="e16c-28c7-6131-f806" collective="false" hidden="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint id="1b5d-b6f0-8578-2a73" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Witch Blade" id="c58c-58c8-483f-8b1b" hidden="false" targetId="68b3-4ac1-8050-e948" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-        </selectionEntry>
-      </selectionEntries>
+                  <selectionEntries>
+                    <selectionEntry name="Close Combat Weapon" id="8c1e-f0b4-432b-d59a" collective="false" hidden="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint id="15f9-2f54-81b3-d3bf" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Close Combat Weapon" id="ff36-b212-c688-6535" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Shuriken Pistol" id="9e3a-1549-d550-97ab" collective="false" hidden="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint id="8fb0-50b8-f312-29c2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Shuriken Pistol" id="d5f3-aafc-2ca3-d553" hidden="false" targetId="1213-0a13-18ca-92f6" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Singing Spear" id="5270-559f-e18a-96ed" collective="false" hidden="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint id="96c0-64df-8b6f-2515" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Singing Spear" id="b312-9377-f3ea-f94a" hidden="false" targetId="7ade-f891-a783-1696" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Witch Blade" id="5c5b-6ba1-2628-62d3" collective="false" hidden="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint id="4ebe-c8be-c6be-051e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Witch Blade" id="08bb-4fc6-51e3-ba00" hidden="false" targetId="68b3-4ac1-8050-e948" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Eldar Vehicle Upgrades" id="ad83-1ee9-ea12-cb0b" collapsible="true" collective="false" hidden="false" import="true">
       <selectionEntries>
