@@ -679,10 +679,38 @@
               <infoLinks>
                 <infoLink name="Agitator" id="b107-3fe1-ba67-6323" hidden="false" targetId="78a4-358c-922a-d850" type="profile"/>
               </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="3fbe-d470-66f5-c185" defaultSelectionEntryId="a2ea-ef59-5565-7350" hidden="false">
+                  <constraints>
+                    <constraint id="d81c-cbf8-d59f-a553" field="selections" message="The Agitator should select one weapon loadout. " scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier field="info" type="add" value="Agitator should select a weapon loadout, but not required if choosing weapons from the armoury instead."/>
+                  </modifiers>
+                  <selectionEntries>
+                    <selectionEntry name="Lasgun/Autogun" id="18c9-4a2e-48b3-40a6" hidden="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink name="Lasgun" id="f125-c36a-5790-01a0" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Laspistol and CCW" id="a299-bb5e-c845-624a" hidden="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink name="Close Combat Weapon" id="afa6-5cc9-b28a-a06d" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                        <infoLink name="Laspistol" id="aa19-7820-d2ec-35aa" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Shotgun" id="8ba8-e023-417e-b0f8" hidden="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink name="Shotgun" id="88ce-2faa-cada-8b10" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapon Option" id="11f3-7874-d6ec-3bbe" collapsible="true" collective="false" hidden="false" import="true" sortIndex="4">
+        <selectionEntryGroup name="Weapon Option" id="11f3-7874-d6ec-3bbe" collapsible="true" collective="false" hidden="false" import="true" sortIndex="5">
           <constraints>
             <constraint id="cdfc-c347-030b-4903" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -738,7 +766,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapon Option" id="ab5d-003b-b579-596b" collapsible="true" collective="false" hidden="false" import="true" sortIndex="5">
+        <selectionEntryGroup name="Weapon Option" id="ab5d-003b-b579-596b" collapsible="true" collective="false" hidden="false" import="true" sortIndex="6">
           <constraints>
             <constraint id="3f50-66d1-1246-c2d5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -782,6 +810,62 @@
               <infoLinks>
                 <infoLink name="Missile Launcher (frag)" id="b795-0d9b-65c2-687e" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
                 <infoLink name="Missile Launcher (krak)" id="44c3-0ee8-4253-fc7d" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Primary Weapons" id="ae73-e77b-6f35-3e0a" defaultSelectionEntryId="a2ea-ef59-5565-7350" hidden="false" sortIndex="4">
+          <constraints>
+            <constraint id="caee-106b-c93c-fa79-min" field="selections" message="Choose the primary weapon of each traitor. There are currently {value} traitors that need weapons and {current} chosen." scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="caee-106b-c93c-fa79-max" field="selections" message="Choose the primary weapon of each traitor. There are currently {value} traitors that need weapons and {current} chosen." scope="parent" shared="true" type="max" value="0"/>
+          </constraints>
+          <modifiers>
+            <modifier field="caee-106b-c93c-fa79-min" type="increment" value="1">
+              <repeats>
+                <repeat childId="60d7-37b7-2d0a-a7d0" childName="Traitor" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="caee-106b-c93c-fa79-max" type="increment" value="1">
+              <repeats>
+                <repeat childId="60d7-37b7-2d0a-a7d0" childName="Traitor" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="caee-106b-c93c-fa79-min" type="decrement" value="1">
+              <repeats>
+                <repeat childId="11f3-7874-d6ec-3bbe" childName="Weapon Option" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="caee-106b-c93c-fa79-max" type="decrement" value="1">
+              <repeats>
+                <repeat childId="11f3-7874-d6ec-3bbe" childName="Weapon Option" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="caee-106b-c93c-fa79-min" type="decrement" value="1">
+              <repeats>
+                <repeat childId="ab5d-003b-b579-596b" childName="Weapon Option" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="caee-106b-c93c-fa79-max" type="decrement" value="1">
+              <repeats>
+                <repeat childId="ab5d-003b-b579-596b" childName="Weapon Option" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry name="Lasgun/Autogun" id="96d0-6991-24fe-cdb9" hidden="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink name="Lasgun" id="db9e-8efb-61fd-15c6" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Laspistol and CCW" id="3727-c216-4f99-3c57" hidden="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink name="Close Combat Weapon" id="b5b1-a414-c39b-b9c2" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink name="Laspistol" id="f496-3d85-46b6-d5b1" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Shotgun" id="6f9f-dc55-fc98-ebce" hidden="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink name="Shotgun" id="2cdb-f3a9-5c6a-4f60" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
@@ -1488,7 +1572,6 @@
               </costs>
               <infoLinks>
                 <infoLink name="Traitor" id="2c57-8ff8-9cba-551b" hidden="false" targetId="ab28-2e23-82d1-9d5f" type="profile"/>
-                <infoLink name="Lasgun" id="1ee3-97a3-07c1-ec62" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
                 <infoLink name="Frag Grenades" id="9177-1628-4b3b-b8dc" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
               </infoLinks>
             </selectionEntry>
@@ -1505,10 +1588,38 @@
               <infoLinks>
                 <infoLink name="Agitator" id="b612-ccd9-c1db-7cd6" hidden="false" targetId="78a4-358c-922a-d850" type="profile"/>
               </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="fba0-825d-0abf-69e6" defaultSelectionEntryId="a2ea-ef59-5565-7350" hidden="false">
+                  <constraints>
+                    <constraint id="1b54-d59e-2536-fa95" field="selections" message="The Agitator should select one weapon loadout. " scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier field="info" type="add" value="Agitator should select a weapon loadout, but not required if choosing weapons from the armoury instead."/>
+                  </modifiers>
+                  <selectionEntries>
+                    <selectionEntry name="Lasgun/Autogun" id="fb1d-8eb7-99e5-d3c9" hidden="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink name="Lasgun" id="fe17-1cb1-ac48-b620" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Laspistol and CCW" id="3817-969a-02a1-2990" hidden="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink name="Close Combat Weapon" id="927d-d2a5-e69d-ed1b" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                        <infoLink name="Laspistol" id="a3f2-7fd7-3e99-6b46" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Shotgun" id="2105-6efc-413a-c0d7" hidden="false" import="true" type="upgrade">
+                      <infoLinks>
+                        <infoLink name="Shotgun" id="79b8-70d8-21c5-897d" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Transport" id="3136-79c3-fd75-767d" collapsible="true" collective="false" hidden="false" import="true" sortIndex="6">
+        <selectionEntryGroup name="Transport" id="3136-79c3-fd75-767d" collapsible="true" collective="false" hidden="false" import="true" sortIndex="7">
           <constraints>
             <constraint id="f773-9f20-c0ab-0a4b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="024e-2fe9-052e-dcbe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -1525,7 +1636,7 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapon Option" id="498d-bc50-ddb7-8518" collapsible="true" collective="false" hidden="false" import="true" sortIndex="4">
+        <selectionEntryGroup name="Weapon Option" id="498d-bc50-ddb7-8518" collapsible="true" collective="false" hidden="false" import="true" sortIndex="5">
           <constraints>
             <constraint id="a40a-c9b6-37d7-ca9d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -1581,7 +1692,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapon Option" id="004b-7b9a-40ea-c14a" collapsible="true" collective="false" hidden="false" import="true" sortIndex="5">
+        <selectionEntryGroup name="Weapon Option" id="004b-7b9a-40ea-c14a" collapsible="true" collective="false" hidden="false" import="true" sortIndex="6">
           <constraints>
             <constraint id="e6e9-ddb1-45df-2440" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -1625,6 +1736,62 @@
               <infoLinks>
                 <infoLink name="Missile Launcher (frag)" id="77e2-dfe3-5936-1cc6" hidden="false" targetId="aa04-2d5e-da7e-2d25" type="profile"/>
                 <infoLink name="Missile Launcher (krak)" id="95de-5a30-e633-31fc" hidden="false" targetId="4e6c-7b62-ba6d-05cf" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Primary Weapons" id="7635-b125-29ec-63c0" defaultSelectionEntryId="a2ea-ef59-5565-7350" hidden="false" sortIndex="4">
+          <constraints>
+            <constraint id="e5bf-dcfc-5934-f735-min" field="selections" message="Choose the primary weapon of each traitor. There are currently {value} traitors that need weapons and {current} chosen." scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="e5bf-dcfc-5934-f735-max" field="selections" message="Choose the primary weapon of each traitor. There are currently {value} traitors that need weapons and {current} chosen." scope="parent" shared="true" type="max" value="0"/>
+          </constraints>
+          <modifiers>
+            <modifier field="e5bf-dcfc-5934-f735-min" type="increment" value="1">
+              <repeats>
+                <repeat childId="a230-fd72-7dbf-d607" childName="Traitor" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="e5bf-dcfc-5934-f735-max" type="increment" value="1">
+              <repeats>
+                <repeat childId="a230-fd72-7dbf-d607" childName="Traitor" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="e5bf-dcfc-5934-f735-min" type="decrement" value="1">
+              <repeats>
+                <repeat childId="498d-bc50-ddb7-8518" childName="Weapon Option" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="e5bf-dcfc-5934-f735-max" type="decrement" value="1">
+              <repeats>
+                <repeat childId="498d-bc50-ddb7-8518" childName="Weapon Option" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="e5bf-dcfc-5934-f735-min" type="decrement" value="1">
+              <repeats>
+                <repeat childId="004b-7b9a-40ea-c14a" childName="Weapon Option" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="e5bf-dcfc-5934-f735-max" type="decrement" value="1">
+              <repeats>
+                <repeat childId="004b-7b9a-40ea-c14a" childName="Weapon Option" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry name="Lasgun/Autogun" id="a2ea-ef59-5565-7350" hidden="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink name="Lasgun" id="e7d6-e3d5-faad-01c1" hidden="false" targetId="ce92-3ccf-ee54-f6b1" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Laspistol and CCW" id="4958-f3d2-d62a-6ece" hidden="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink name="Close Combat Weapon" id="cad1-84ff-9627-5e41" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink name="Laspistol" id="645b-3df9-04da-38f9" hidden="false" targetId="95a9-d270-d218-1772" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Shotgun" id="873d-5785-6be5-6caf" hidden="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink name="Shotgun" id="669b-c3f2-7680-2c6d" hidden="false" targetId="9882-0cca-b1d2-8e0b" type="profile"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
