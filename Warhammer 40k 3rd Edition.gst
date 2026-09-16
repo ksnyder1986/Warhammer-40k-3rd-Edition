@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 3rd Edition" id="96e2-b781-50d7-3d18" authorName="Snyder" battleScribeVersion="2.03" revision="14" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 3rd Edition" id="96e2-b781-50d7-3d18" authorName="Snyder" battleScribeVersion="2.03" revision="15" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <categoryEntries>
     <categoryEntry name="HQ" id="a8a7-7a4b-5f7e-2138" hidden="false"/>
@@ -3045,7 +3045,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
             <constraint id="2656-4893-44d6-ebaa" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry name="Deathwatch Captain" id="3a31-f192-74c6-5228" collective="false" hidden="false" import="true" type="model">
+            <selectionEntry name="Deathwatch Captain" id="3a31-f192-74c6-5228" collective="false" hidden="false" import="true" step="1" type="model">
               <constraints>
                 <constraint id="847d-b1e8-b1f0-b8da" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                 <constraint id="aea0-ce9a-ace3-0e05" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -3472,13 +3472,39 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
-            <selectionEntry name="Deathwatch Space Marine" id="fbe4-73d3-df6b-230c" collective="false" hidden="false" import="true" type="model">
+            <selectionEntry name="Deathwatch Space Marine" id="fbe4-73d3-df6b-230c" collective="false" defaultAmount="1,1,1,1" hidden="false" import="true" step="1" type="model">
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
               </costs>
               <infoLinks>
-                <infoLink name="Boltgun" id="dba5-aa2b-7eea-b1aa" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
-                <infoLink name="Close Combat Weapon" id="ebea-80ff-2e28-9337" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                <infoLink name="Boltgun" id="dba5-aa2b-7eea-b1aa" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="96b4-ed13-0bc9-dd90" childName="Special Weapon" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="b6d2-9214-5db4-9a05" childName="Special Bolter Ammo" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="b3d6-f480-9ebd-31af" childName="Pair of Lightning Claws" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Close Combat Weapon" id="ebea-80ff-2e28-9337" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="8c1d-7067-07c6-0783" childName="Veteran Weapons" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink name="Frag Grenades" id="251e-c43c-ae62-a497" hidden="false" targetId="9dd4-e950-2419-5934" type="profile"/>
                 <infoLink name="Melta Bombs" id="570f-0a31-a05b-fbf0" hidden="false" targetId="87d0-8c40-7bcb-8cbb" type="profile"/>
               </infoLinks>
@@ -3498,7 +3524,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
                   <modifiers>
                     <modifier field="hidden" type="set" value="true">
                       <conditions>
-                        <condition childId="8697-f18c-8800-4356" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="8697-f18c-8800-4356" childName="Veteran" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="self" shared="true" type="equalTo" value="1"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -3553,7 +3579,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
                           </costs>
                           <infoLinks>
                             <infoLink name="Heavy Bolter w/ Hellfire Ammo" id="9701-d018-b60f-7400" hidden="false" targetId="a939-dd6f-7a21-da6b" type="profile"/>
-                            <infoLink name="Heavy Bolter w/Suspensors" id="0bab-f7e7-f3ab-e8e4" hidden="false" targetId="f471-891a-3e26-bdbf" type="profile"/>
+                            <infoLink name="Heavy Bolter w/ Suspensors" id="0bab-f7e7-f3ab-e8e4" hidden="false" targetId="f471-891a-3e26-bdbf" type="profile"/>
                           </infoLinks>
                         </selectionEntry>
                         <selectionEntry name="Bolter w/ M.40 Targeter" id="0f0a-431b-fa7e-72e6" collective="false" hidden="false" import="true" type="upgrade">
@@ -3561,7 +3587,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
                             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
                           </costs>
                           <infoLinks>
-                            <infoLink name="Bolter 2/ M.40 Targeter" id="18d1-9e07-e289-23d0" hidden="false" targetId="72fd-9aad-2503-52ef" type="profile"/>
+                            <infoLink name="Bolter w/ M.40 Targeter" id="18d1-9e07-e289-23d0" hidden="false" targetId="72fd-9aad-2503-52ef" type="profile"/>
                           </infoLinks>
                         </selectionEntry>
                         <selectionEntry name="Plasma Gun" id="276a-2870-2a0c-9638" collective="false" hidden="false" import="true" type="upgrade">
@@ -5254,7 +5280,11 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
           </costs>
           <infoLinks>
-            <infoLink name="Metal Storm Bolts" id="d143-684d-d892-9ac0" hidden="false" targetId="56f5-e29b-8ead-8a5a" type="profile"/>
+            <infoLink name="Metal Storm Bolts" id="d143-684d-d892-9ac0" hidden="false" targetId="56f5-e29b-8ead-8a5a" type="profile">
+              <modifiers>
+                <modifier field="name" type="set" value="Bolter w/ Metal Storm Bolts"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier field="error" type="add" value="May not use different ammo types across the unit.">
@@ -5281,7 +5311,11 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
           </costs>
           <infoLinks>
-            <infoLink name="Inferno Bolts" id="bad1-6d18-19a9-ce63" hidden="false" targetId="a000-7c2d-beb6-bf71" type="profile"/>
+            <infoLink name="Inferno Bolts" id="bad1-6d18-19a9-ce63" hidden="false" targetId="a000-7c2d-beb6-bf71" type="profile">
+              <modifiers>
+                <modifier field="name" type="set" value="Bolter w/ Inferno Bolts"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier field="error" type="add" value="May not use different ammo types across the unit.">
@@ -5308,7 +5342,11 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
           </costs>
           <infoLinks>
-            <infoLink name="Kraken Bolts" id="dbc8-308e-4a80-f727" hidden="false" targetId="b03b-8fea-9f75-3700" type="profile"/>
+            <infoLink name="Kraken Bolts" id="dbc8-308e-4a80-f727" hidden="false" targetId="b03b-8fea-9f75-3700" type="profile">
+              <modifiers>
+                <modifier field="name" type="set" value="Bolter w/ Kraken Bolts"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier field="error" type="add" value="May not use different ammo types across the unit.">
