@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Tyranids (2001)" id="8dbc-55e2-a3e5-a400" authorName="Snyder" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="10" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Tyranids (2001)" id="8dbc-55e2-a3e5-a400" authorName="Snyder" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="11" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Seeding Swarm" id="e504-ec2b-fa1a-4ab3" hidden="false"/>
     <categoryEntry name="Heavy Weapon Warrior" id="e357-2c92-38de-0df5" hidden="true"/>
@@ -3108,6 +3108,7 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
                 <modifier field="error" type="add" value="Cannot have both Leaping and Wings">
                   <conditions>
                     <condition childId="cdc3-cab6-31de-ced9" childName="Winged" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="d41e-ec2c-0f5c-8c1c" childName="Leaping" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
                   </conditions>
                 </modifier>
                 <modifier field="error" type="add" value="Fast Attack Ripper Broods must have Winged or Leaping option">
@@ -3139,6 +3140,7 @@ If the Harridan is hit by a blast weapon while the Gargoyles are attacked then t
                 <modifier field="error" type="add" value="Cannot have both Leaping and Wings">
                   <conditions>
                     <condition childId="d41e-ec2c-0f5c-8c1c" childName="Leaping" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" traverseAssociationGroup="true" type="greaterThan" value="0"/>
+                    <condition childId="cdc3-cab6-31de-ced9" childName="Winged" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="greaterThan" value="0"/>
                   </conditions>
                 </modifier>
                 <modifier field="hidden" type="set" value="true">
