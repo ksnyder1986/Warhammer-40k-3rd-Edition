@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Daemon Hunters (2003)" id="c8cb-cc69-1e43-3319" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="13" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Daemon Hunters (2003)" id="c8cb-cc69-1e43-3319" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="14" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Space Marine Ally" id="0ebb-2b64-3f2d-fffb" hidden="false"/>
     <categoryEntry name="Inducted Imperial Guard" id="258f-122f-d9a4-245c" hidden="false"/>
@@ -19,6 +19,11 @@
         </modifier>
       </modifiers>
     </categoryEntry>
+    <categoryEntry name="Imperial Guard Troop Choice" id="5fb5-d0cf-0e9b-d5bf" hidden="true"/>
+    <categoryEntry name="Space Marine Troop Choice" id="a66d-9ea5-ce5a-97e3" hidden="true"/>
+    <categoryEntry name="Daemon Hunter Troop Choices" id="ebe1-01f4-6d6e-b94a" hidden="true"/>
+    <categoryEntry name="Daemon Hunter Heavy Choices" id="5d17-1a6a-8a1c-d432" hidden="true"/>
+    <categoryEntry name="Daemon Hunter Elites Choices" id="9660-3c8c-d81a-81c4" hidden="true"/>
   </categoryEntries>
   <entryLinks>
     <entryLink name="Ordo Malleus Inquisitor Lord" id="3c44-fa7f-3dbe-92e7" collective="false" hidden="false" import="true" targetId="27ee-b0a2-0c2a-b518" type="selectionEntry">
@@ -26,9 +31,20 @@
         <constraint id="e999-7392-96d5-e675" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
     </entryLink>
-    <entryLink name="Ordo Malleus Inquisitor" id="260e-f26e-682c-14cd" collective="false" hidden="false" import="true" targetId="341c-1d2c-25d8-af97" type="selectionEntry"/>
-    <entryLink name="Inquisitorial Storm Troopers" id="bd6c-f61d-ecac-a92d" collective="false" hidden="false" import="true" targetId="d993-03c9-2f08-148a" type="selectionEntry"/>
+    <entryLink name="Ordo Malleus Inquisitor" id="260e-f26e-682c-14cd" collective="false" hidden="false" import="true" targetId="341c-1d2c-25d8-af97" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Elite Choices" id="eed4-dad9-27d7-e622" hidden="false" primary="false" targetId="9660-3c8c-d81a-81c4"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink name="Inquisitorial Storm Troopers" id="bd6c-f61d-ecac-a92d" collective="false" hidden="false" import="true" targetId="d993-03c9-2f08-148a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Troop Choices" id="6880-027d-fba6-767e" hidden="false" primary="false" targetId="ebe1-01f4-6d6e-b94a"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink name="Death-cult Assassins" id="5e42-da57-cc81-1d69" collective="false" hidden="false" import="true" targetId="43a5-94d3-829a-f765" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Elite Choices" id="d068-d4e4-3aca-23d3" hidden="false" primary="false" targetId="9660-3c8c-d81a-81c4"/>
+      </categoryLinks>
       <constraints>
         <constraint id="b315-9e1c-d7e0-4325" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="-1"/>
       </constraints>
@@ -46,6 +62,9 @@
       </modifiers>
     </entryLink>
     <entryLink name="Officio Assassinorum Operative" id="d4ac-9410-cafd-4a1e" collective="false" hidden="false" import="true" targetId="bb35-7be3-e49a-948b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Elite Choices" id="1752-3fff-773e-1ebb" hidden="false" primary="false" targetId="9660-3c8c-d81a-81c4"/>
+      </categoryLinks>
       <constraints>
         <constraint id="35bc-b333-7162-ec92" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="-1"/>
       </constraints>
@@ -63,15 +82,85 @@
       </modifiers>
     </entryLink>
     <entryLink name="Space Marine Tactical Squad" id="e256-e07e-c7d7-9565" collective="false" hidden="true" import="true" targetId="bae5-57a7-1274-2455" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Space Marine Troop Choice" id="df3e-fd17-45dc-078b" hidden="false" primary="false" targetId="a66d-9ea5-ce5a-97e3"/>
+      </categoryLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="false">
           <conditions>
             <condition childId="bc88-7358-80ab-4c19" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
           </conditions>
         </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="949f-fced-04a6-c467" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="5d5f-cfa8-2970-4a50" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="f0b5-294d-9445-a1b7" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="b1dd-a74a-0fe1-35b8" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="90e9-2e2f-1754-4917" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink name="Scout Squad" id="7e8c-30f4-ee46-4b1d" collective="false" hidden="true" import="true" targetId="7327-bb79-feec-855d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Space Marine Troop Choice" id="a755-9a13-ea32-c196" hidden="false" primary="false" targetId="a66d-9ea5-ce5a-97e3"/>
+      </categoryLinks>
       <constraints>
         <constraint id="70df-d18f-795a-a64d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
@@ -81,23 +170,221 @@
             <condition childId="bc88-7358-80ab-4c19" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
           </conditions>
         </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="949f-fced-04a6-c467" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="5d5f-cfa8-2970-4a50" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="f0b5-294d-9445-a1b7" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="b1dd-a74a-0fe1-35b8" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="90e9-2e2f-1754-4917" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink name="Armoured Fist Squad" id="a8dd-a75b-fbcb-b64d" collective="false" hidden="true" import="true" targetId="bc8a-b970-530a-0bf3" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Imperial Guard Troop Choice" id="3372-0443-8a51-e9ee" hidden="false" primary="false" targetId="5fb5-d0cf-0e9b-d5bf"/>
+      </categoryLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="false">
           <conditions>
             <condition childId="1686-72da-a629-b31e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
           </conditions>
         </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="949f-fced-04a6-c467" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="5d5f-cfa8-2970-4a50" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="f0b5-294d-9445-a1b7" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="b1dd-a74a-0fe1-35b8" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="90e9-2e2f-1754-4917" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink name="Infantry Platoon" id="418f-e4e7-5190-5c39" collective="false" hidden="true" import="true" targetId="63ec-c342-8998-62bf" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Imperial Guard Troop Choice" id="f717-44a8-d598-d592" hidden="false" primary="false" targetId="5fb5-d0cf-0e9b-d5bf"/>
+      </categoryLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="false">
           <conditions>
             <condition childId="1686-72da-a629-b31e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
           </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="949f-fced-04a6-c467" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="5d5f-cfa8-2970-4a50" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="f0b5-294d-9445-a1b7" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="b1dd-a74a-0fe1-35b8" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="90e9-2e2f-1754-4917" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="ebe1-01f4-6d6e-b94a" childName="Daemon Hunter Troop Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -117,27 +404,11 @@
         </modifier>
         <modifier field="error" type="add" value="Must include 2+ inducted Space Marine troop units before selection">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="a66d-9ea5-ce5a-97e3" childName="Space Marine Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -159,27 +430,11 @@
         </modifier>
         <modifier field="error" type="add" value="Must include 2+ inducted Space Marine troop units before selection">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="a66d-9ea5-ce5a-97e3" childName="Space Marine Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -201,27 +456,11 @@
         </modifier>
         <modifier field="error" type="add" value="Must include 2+ inducted Space Marine troop units before selection">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="a66d-9ea5-ce5a-97e3" childName="Space Marine Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -243,27 +482,11 @@
         </modifier>
         <modifier field="error" type="add" value="Must include 2+ inducted Space Marine troop units before selection">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="a66d-9ea5-ce5a-97e3" childName="Space Marine Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -283,29 +506,13 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="error" type="add" value="Must include 2+ inducted Imperial Guard troop units before selection">
+        <modifier field="error" type="add" value="You must include two Inducted Imperial Guard troop choices before adding {root-entry}">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="5fb5-d0cf-0e9b-d5bf" childName="Imperial Guard Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -325,29 +532,13 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="error" type="add" value="Must include 2+ inducted Imperial Guard troop units before selection">
+        <modifier field="error" type="add" value="You must include two Inducted Imperial Guard troop choices before adding {root-entry}">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="5fb5-d0cf-0e9b-d5bf" childName="Imperial Guard Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -369,24 +560,23 @@
         </modifier>
         <modifier field="error" type="add" value="Must include 2+ inducted Space Marine troop units before selection">
           <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="a66d-9ea5-ce5a-97e3" childName="Space Marine Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
+          <conditionGroups>
             <conditionGroup type="or">
               <conditionGroups>
                 <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
                   <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9660-3c8c-d81a-81c4" childName="Daemon Hunter Elites Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -411,24 +601,23 @@
         </modifier>
         <modifier field="error" type="add" value="Must include 2+ inducted Space Marine troop units before selection">
           <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="a66d-9ea5-ce5a-97e3" childName="Space Marine Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
+          <conditionGroups>
             <conditionGroup type="or">
               <conditionGroups>
                 <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
                   <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9660-3c8c-d81a-81c4" childName="Daemon Hunter Elites Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -453,24 +642,23 @@
         </modifier>
         <modifier field="error" type="add" value="Must include 2+ inducted Space Marine troop units before selection">
           <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="a66d-9ea5-ce5a-97e3" childName="Space Marine Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
+          <conditionGroups>
             <conditionGroup type="or">
               <conditionGroups>
                 <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
                   <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9660-3c8c-d81a-81c4" childName="Daemon Hunter Elites Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -496,29 +684,13 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="error" type="add" value="Must include 2+ inducted Imperial Guard troop units before selection">
+        <modifier field="error" type="add" value="You must include two Inducted Imperial Guard troop choices before adding {root-entry}">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="5fb5-d0cf-0e9b-d5bf" childName="Imperial Guard Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -541,29 +713,13 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="error" type="add" value="Must include 2+ inducted Imperial Guard troop units before selection">
+        <modifier field="error" type="add" value="You must include two Inducted Imperial Guard troop choices before adding {root-entry}">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="5fb5-d0cf-0e9b-d5bf" childName="Imperial Guard Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -588,6 +744,9 @@
       </modifiers>
     </entryLink>
     <entryLink name="Grey Knight Purgation Squad" id="5b90-89c3-f5a2-988e" collective="false" hidden="false" import="true" targetId="3ea9-bc10-33a5-ae2a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Heavy Choices" id="b6f7-c3db-f64e-714b" hidden="false" primary="false" targetId="5d17-1a6a-8a1c-d432"/>
+      </categoryLinks>
       <modifiers>
         <modifier field="error" type="add" value="Grey Knights cannot be used with Daemonhosts due to heresy!">
           <conditions>
@@ -597,6 +756,9 @@
       </modifiers>
     </entryLink>
     <entryLink name="Grey Knight Terminators" id="f553-93d4-6f22-ec54" collective="false" hidden="false" import="true" targetId="bc58-3d57-04fc-e60f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Elite Choices" id="21d9-e44e-fa57-35cb" hidden="false" primary="false" targetId="9660-3c8c-d81a-81c4"/>
+      </categoryLinks>
       <modifiers>
         <modifier field="error" type="add" value="Grey Knights cannot be used with Daemonhosts due to heresy!">
           <conditions>
@@ -608,6 +770,7 @@
     <entryLink name="Grey Knights" id="7790-1839-b119-9f28" collective="false" hidden="false" import="true" targetId="a595-9a73-545c-932e" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="Troops" id="f837-9fca-c767-4c30" hidden="false" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
+        <categoryLink name="Daemon Hunter Troop Choices" id="b98e-b765-6b2e-111d" hidden="false" primary="false" targetId="ebe1-01f4-6d6e-b94a"/>
       </categoryLinks>
       <modifiers>
         <modifier field="error" type="add" value="Grey Knights cannot be used with Daemonhosts due to heresy!">
@@ -618,6 +781,9 @@
       </modifiers>
     </entryLink>
     <entryLink name="Grey Knights Dreadnought" id="88fd-adf2-65b8-2cd3" collective="false" hidden="false" import="true" targetId="f536-8829-3d31-7f92" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Heavy Choices" id="1e13-cb2f-7986-7c17" hidden="false" primary="false" targetId="5d17-1a6a-8a1c-d432"/>
+      </categoryLinks>
       <modifiers>
         <modifier field="error" type="add" value="Grey Knights cannot be used with Daemonhosts due to heresy!">
           <conditions>
@@ -638,6 +804,9 @@
       </modifiers>
     </entryLink>
     <entryLink name="Grey Knights Land Raider" id="497b-b007-4e99-8d17" collective="false" hidden="false" import="true" targetId="2984-3183-a9c0-7270" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Heavy Choices" id="f6ed-6696-de55-1e64" hidden="false" primary="false" targetId="5d17-1a6a-8a1c-d432"/>
+      </categoryLinks>
       <modifiers>
         <modifier field="error" type="add" value="Grey Knights cannot be used with Daemonhosts due to heresy!">
           <conditions>
@@ -658,6 +827,9 @@
       </modifiers>
     </entryLink>
     <entryLink name="Grey Knights Land Raider Crusader" id="3d19-8e04-3135-fabf" collective="false" hidden="false" import="true" targetId="e9de-342c-e2ef-90ab" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Heavy Choices" id="48d0-065d-9626-2156" hidden="false" primary="false" targetId="5d17-1a6a-8a1c-d432"/>
+      </categoryLinks>
       <modifiers>
         <modifier field="error" type="add" value="Grey Knights cannot be used with Daemonhosts due to heresy!">
           <conditions>
@@ -678,6 +850,9 @@
       </modifiers>
     </entryLink>
     <entryLink name="Daemonhosts" id="723c-942c-4f21-ec39" collective="false" hidden="false" import="true" targetId="2eda-f8b1-d925-0a07" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Daemon Hunter Elite Choices" id="05c8-b12e-635f-5f16" hidden="false" primary="false" targetId="9660-3c8c-d81a-81c4"/>
+      </categoryLinks>
       <constraints>
         <constraint id="e1c0-92dd-41bc-d4c7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
@@ -822,24 +997,23 @@
         </modifier>
         <modifier field="error" type="add" value="Must include 2+ inducted Space Marine troop units before selection">
           <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="a66d-9ea5-ce5a-97e3" childName="Space Marine Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
+          <conditionGroups>
             <conditionGroup type="or">
               <conditionGroups>
                 <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
                   <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="bae5-57a7-1274-2455" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="7327-bb79-feec-855d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9660-3c8c-d81a-81c4" childName="Daemon Hunter Elites Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -888,29 +1062,13 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="error" type="add" value="Must include 2+ inducted Imperial Guard troop units before selection">
+        <modifier field="error" type="add" value="You must include two Inducted Imperial Guard troop choices before adding {root-entry}">
           <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="5fb5-d0cf-0e9b-d5bf" childName="Imperial Guard Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -961,26 +1119,25 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="error" type="add" value="Must include 2+ inducted Imperial Guard troop units before selection">
+        <modifier field="error" type="add" value="You must include two Inducted Imperial Guard troop choices before adding {root-entry}">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" childName="any" field="selections" includeChildSelections="true" scope="self" shared="true" type="atLeast" value="1"/>
+                <condition childId="5fb5-d0cf-0e9b-d5bf" childName="Imperial Guard Troop Choice" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="2"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="warning" type="add" value="Note this unit isn&apos;t counted towards mandatory force org requirements.">
           <conditionGroups>
             <conditionGroup type="or">
               <conditionGroups>
                 <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 heavy</comment>
                   <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="63ec-c342-8998-62bf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                    <condition childId="bc8a-b970-530a-0bf3" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9660-3c8c-d81a-81c4" childName="Daemon Hunter Elites Choices" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -4314,8 +4471,8 @@ Daemons re-enter from the table edge and cannot claim mission objectives.</descr
     </selectionEntry>
     <selectionEntry name="Dreadnought" id="6852-d18d-8c5c-5c96" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Elites" id="87eb-1dd3-3f3b-19e6" hidden="false" primary="true" targetId="6d25-b346-c314-6911"/>
         <categoryLink name="Space Marine Ally" id="856c-a5f0-7c8c-c4e7" hidden="false" primary="false" targetId="0ebb-2b64-3f2d-fffb"/>
+        <categoryLink name="Heavy Support" id="e499-d778-4d62-c7dd" hidden="false" primary="true" targetId="aacb-8a81-62c0-3db8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="75"/>
@@ -7084,7 +7241,7 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
         <categoryLink name="HQ" id="856b-e0fa-f81b-acd2" hidden="false" primary="true" targetId="a8a7-7a4b-5f7e-2138"/>
       </categoryLinks>
       <constraints>
-        <constraint id="c6be-ba2f-c25a-dbac" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="c6be-ba2f-c25a-dbac" field="selections" includeChildForces="false" includeChildSelections="false" message="Force must be 1500+ points for Coteaz to be taken." percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="185"/>
@@ -9454,9 +9611,19 @@ During the Imperial Guard Shooting Phase the Cyclops can be detonated. Place the
           </costs>
         </selectionEntry>
         <selectionEntry name="Space Marine" id="bc88-7358-80ab-4c19" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="af47-e78e-a10e-9335" field="selections" message="Space Marine Allies cannot be taken when Grey Knights are in the force." scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
+          <modifiers>
+            <modifier field="af47-e78e-a10e-9335" type="set" value="0">
+              <conditions>
+                <condition childId="8e77-c08a-2671-f7e7" childName="Grey Knight" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
