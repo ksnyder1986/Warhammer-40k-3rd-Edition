@@ -907,7 +907,7 @@
         <characteristicType name="Description" id="a08a-36f8-2fd3-b843"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Walker" id="5119-5456-6e97-4fc2">
+    <profileType name="Walker" id="5119-5456-6e97-4fc2" kind="vehicle">
       <characteristicTypes>
         <characteristicType name="WS" id="46fa-bb2a-a0f5-6b3f"/>
         <characteristicType name="BS" id="5734-f043-7bcc-cff2"/>
@@ -919,7 +919,7 @@
         <characteristicType name="A" id="bb33-7ddf-2296-174e"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Transport" id="5535-2b48-81ee-04ce">
+    <profileType name="Transport" id="5535-2b48-81ee-04ce" kind="vehicle">
       <characteristicTypes>
         <characteristicType name="Front Armor" id="70ae-7a97-7e70-93ea"/>
         <characteristicType name="Side Armor" id="bcca-0b51-9187-2e4e"/>
@@ -928,7 +928,7 @@
         <characteristicType name="Capacity" id="ec07-2d55-2ba5-6080"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Super Heavy Vehicle" id="36b6-ef06-48e4-cd45">
+    <profileType name="Super Heavy Vehicle" id="36b6-ef06-48e4-cd45" kind="vehicle">
       <characteristicTypes>
         <characteristicType name="Front Armor" id="85f4-de3e-abeb-67f7"/>
         <characteristicType name="Side Armor" id="8ec2-d2f2-3bed-35ef"/>
@@ -938,7 +938,7 @@
         <characteristicType name="Capacity" id="e1d2-e9ec-26d6-1f11"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Super Heavy Walker" id="8363-119d-bce3-2e3b">
+    <profileType name="Super Heavy Walker" id="8363-119d-bce3-2e3b" kind="vehicle">
       <characteristicTypes>
         <characteristicType name="WS" id="66aa-c126-e0da-eff1"/>
         <characteristicType name="BS" id="caba-3888-54de-7384"/>
