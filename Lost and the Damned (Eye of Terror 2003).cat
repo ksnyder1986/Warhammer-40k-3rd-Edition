@@ -1,9 +1,148 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Lost and the Damned (Eye of Terror 2003)" id="3ab9-f908-ab00-7315" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="12" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Lost and the Damned (Eye of Terror 2003)" id="3ab9-f908-ab00-7315" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="13" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink name="Imperial Guard (2003)" id="d38c-1030-29ba-9c09" importRootEntries="false" targetId="04bd-002e-d5fe-e9a6" type="catalogue"/>
     <catalogueLink name="Chaos Space Marines (2002)" id="3b31-afa4-fef9-c24f" importRootEntries="false" targetId="0f19-9487-acbb-e047" type="catalogue"/>
   </catalogueLinks>
+  <categoryEntries>
+    <categoryEntry name="Max Strength Traitors" id="da37-ecf0-576c-8d3a" hidden="true">
+      <constraints>
+        <constraint id="8eef-d016-8a94-db2a" field="selections" includeChildSelections="true" message="Due to the mission type and the Troop choices in the army so far, at least {value} Traitor units must be at max strength. Currently there are {current}." scope="force" shared="true" type="min" value="0"/>
+      </constraints>
+      <modifiers>
+        <modifier field="8eef-d016-8a94-db2a" type="set" value="2">
+          <comment>This sets the Min to 2 when there 2 traitor units chosen and there are no other troops chosen.</comment>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="2"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="2"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="949f-fced-04a6-c467" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="2"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="5d5f-cfa8-2970-4a50" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="2"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="b1dd-a74a-0fe1-35b8" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="2"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="90e9-2e2f-1754-4917" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="8eef-d016-8a94-db2a" type="set" value="1">
+          <comment>This sets the Min to 1 when at least one more troop was chosen (except for the missions requiring 1 troop...then when no other troops were chosen)</comment>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <comment>Standard Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="any" field="selections" scope="7da2-40c9-890c-3239" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Apoc Missions require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="949f-fced-04a6-c467" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="3f32-74fc-e29a-38e3" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Battle Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="5d5f-cfa8-2970-4a50" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Attackers require 1 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildForces="true" includeChildSelections="true" scope="f0b5-294d-9445-a1b7" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Raid Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="b1dd-a74a-0fe1-35b8" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Attacker require 1 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="172d-d416-c92b-3694" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <comment>Breakthrough Defender require 2 troops</comment>
+                  <conditions>
+                    <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                    <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="any" field="selections" includeChildSelections="true" scope="90e9-2e2f-1754-4917" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="8eef-d016-8a94-db2a" type="set" value="1">
+          <comment>This sets the Min to 1 when only 1 traitor was chosen and no other troops (so the warning message isn&apos;t weird).</comment>
+          <conditions>
+            <condition childId="4620-717e-bda2-802e" childName="Traitors" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="1"/>
+            <condition childId="6d8b-4fb5-e31a-e146" childName="Non-Traitor Troops" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="Non-Traitor Troops" id="6d8b-4fb5-e31a-e146" hidden="true"/>
+  </categoryEntries>
   <entryLinks>
     <entryLink name="Greater Daemon" id="3a49-abe0-b64b-d809" collective="false" hidden="false" import="true" targetId="9c6d-d5f0-5bc8-1962" type="selectionEntry"/>
     <entryLink name="Bloodletters Daemon Pack" id="ebee-a4b3-7a4c-a6a6" collective="false" hidden="false" import="true" targetId="aaae-ce39-0fdc-6a0f" type="selectionEntry">
@@ -11,7 +150,11 @@
         <categoryLink name="Elites" id="2eb6-8188-0eb5-5d9e" hidden="false" primary="true" targetId="6d25-b346-c314-6911"/>
       </categoryLinks>
     </entryLink>
-    <entryLink name="Gibbering Hordes" id="6bf6-875a-e6ec-5f55" collective="false" hidden="false" import="true" targetId="4285-18fc-2bae-83af" type="selectionEntry"/>
+    <entryLink name="Gibbering Hordes" id="6bf6-875a-e6ec-5f55" collective="false" hidden="false" import="true" targetId="4285-18fc-2bae-83af" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Non-Traitor Troops" id="9860-9e3d-42ce-b29d" hidden="false" primary="false" targetId="6d8b-4fb5-e31a-e146"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink name="Daemonette Daemon Pack" id="ad62-5055-646d-ba60" collective="false" hidden="false" import="true" targetId="867a-f2a6-0a64-7648" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="Elites" id="9ba9-648b-6de3-f506" hidden="false" primary="true" targetId="6d25-b346-c314-6911"/>
@@ -48,8 +191,16 @@
         <categoryLink name="Fast Attack" id="cd44-7bbb-9028-2598" hidden="false" primary="true" targetId="34e2-d53c-28ab-44cf"/>
       </categoryLinks>
     </entryLink>
-    <entryLink name="Mutants" id="a312-3096-2978-42fa" collective="false" hidden="false" import="true" targetId="2691-f02b-d1da-cfaf" type="selectionEntry"/>
-    <entryLink name="Plague Zombies" id="6b86-d628-f2ec-e9b8" collective="false" hidden="false" import="true" targetId="4494-ae63-6b0e-5303" type="selectionEntry"/>
+    <entryLink name="Mutants" id="a312-3096-2978-42fa" collective="false" hidden="false" import="true" targetId="2691-f02b-d1da-cfaf" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Non-Traitor Troops" id="374e-0142-2445-7bdf" hidden="false" primary="false" targetId="6d8b-4fb5-e31a-e146"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink name="Plague Zombies" id="6b86-d628-f2ec-e9b8" collective="false" hidden="false" import="true" targetId="4494-ae63-6b0e-5303" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Non-Traitor Troops" id="5d75-7100-036d-20cf" hidden="false" primary="false" targetId="6d8b-4fb5-e31a-e146"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink name="Chaos Spawn" id="d2cf-167a-01a6-4945" collective="false" hidden="false" import="true" targetId="d645-2655-05a9-9a2f" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="Heavy Support" id="635d-e56a-29e5-ee10" hidden="false" primary="true" targetId="aacb-8a81-62c0-3db8"/>
@@ -60,6 +211,7 @@
     <entryLink name="Blood Pact Death Brigade (Chapter Approved)" id="ccef-9f23-9b3e-ceff" hidden="false" import="true" targetId="6a05-41a8-9d4c-0e11" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="Troops" id="5637-48f3-a8e8-4ab8" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
+        <categoryLink name="Non-Traitor Troops" id="7cbc-8cb0-45f7-d0ca" hidden="false" primary="false" targetId="6d8b-4fb5-e31a-e146"/>
       </categoryLinks>
     </entryLink>
     <entryLink name="Blood Pact Death Brigade (Chapter Approved)" id="dc5a-7569-9a45-b44d" hidden="false" import="true" targetId="b512-7349-8676-a54c" type="selectionEntry">
@@ -69,7 +221,11 @@
     </entryLink>
     <entryLink name="Mounted Daemonette Daemon Pack" id="d5dc-59b0-8866-7321" hidden="false" import="true" targetId="ee9c-7446-f48a-f942" type="selectionEntry"/>
     <entryLink name="Cypher (White Dwarf 281)" id="8971-4424-72a6-8aba" hidden="false" import="true" targetId="8fef-9ae0-66c3-1628" type="selectionEntry"/>
-    <entryLink name="Fallen Angels (White Dwarf 281)" id="d730-8644-ceb0-c26c" hidden="false" import="true" targetId="0f82-b6c4-2a66-d15f" type="selectionEntry"/>
+    <entryLink name="Fallen Angels (White Dwarf 281)" id="d730-8644-ceb0-c26c" hidden="false" import="true" targetId="0f82-b6c4-2a66-d15f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Non-Traitor Troops" id="0c67-5c91-d202-9608" hidden="false" primary="false" targetId="6d8b-4fb5-e31a-e146"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <selectionEntries>
     <selectionEntry name="Traitor Recon" id="9e50-2aca-32a9-0a24" collective="false" hidden="false" import="true" type="unit">
@@ -208,6 +364,7 @@
     <selectionEntry name="Chaos Space Marine Allies (Troops)" id="1791-5943-072c-f282" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Troops" id="b986-ac19-9290-451f" hidden="false" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
+        <categoryLink name="Non-Traitor Troops" id="7153-f212-57c1-7700" hidden="false" primary="false" targetId="6d8b-4fb5-e31a-e146"/>
       </categoryLinks>
       <constraints>
         <constraint id="7414-c84c-9668-e68e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="2"/>
@@ -617,6 +774,13 @@
       <infoLinks>
         <infoLink name="Infiltrators" id="44ac-fd2f-cb21-297c" hidden="false" targetId="b4ea-750c-d9a4-e398" type="rule"/>
       </infoLinks>
+      <modifiers>
+        <modifier field="category" type="add" value="da37-ecf0-576c-8d3a">
+          <conditions>
+            <condition childId="model" childName="model" field="selections" scope="root-entry" shared="true" type="equalTo" value="15"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry name="Icon Bearer" id="0a38-4428-3e44-74c9" collective="false" hidden="false" import="true" sortIndex="3" type="upgrade">
           <constraints>
@@ -651,7 +815,9 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Traitors" id="4556-4702-707f-c194" collapsible="true" collective="false" defaultSelectionEntryId="60d7-37b7-2d0a-a7d0" hidden="false" import="true" sortIndex="1">
           <constraints>
-            <constraint id="1522-6001-9130-faca" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
+            <constraint id="1522-6001-9130-faca" field="selections" includeChildForces="false" includeChildSelections="false" message="Compulsory Traitor units must be at Max Strength." percentValue="false" scope="parent" shared="true" type="min" value="5">
+              <comment>Compulsory Traitor units must be at Max Strength.</comment>
+            </constraint>
             <constraint id="b89c-3169-dd43-08ee" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="15"/>
           </constraints>
           <selectionEntries>
