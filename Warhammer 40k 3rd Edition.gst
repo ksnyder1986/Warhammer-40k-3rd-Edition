@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 3rd Edition" id="96e2-b781-50d7-3d18" authorName="Snyder" battleScribeVersion="2.03" revision="15" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 3rd Edition" id="96e2-b781-50d7-3d18" authorName="Snyder" battleScribeVersion="2.03" revision="16" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <categoryEntries>
     <categoryEntry name="HQ" id="a8a7-7a4b-5f7e-2138" hidden="false"/>
@@ -973,7 +973,7 @@
     <publication name="Codex Orks 3rd Edition" id="7f3a-bc20-c411-2e02" shortName="Orks"/>
     <publication name="Codex Space Marines 3rd Edition" id="a32d-d82d-5f82-b13a" shortName="Space Marines"/>
     <publication name="Codex Tau Empire 3rd Edition" id="3d8e-2aa5-a1d3-b4d4" shortName="Tau"/>
-    <publication name="Cpdex Space Wolves 3rd Edition" id="f79b-7033-9d04-3162" shortName="Space Wolves"/>
+    <publication name="Codex Space Wolves 3rd Edition" id="f79b-7033-9d04-3162" shortName="Space Wolves"/>
     <publication name="Codex Witch Hunters 3rd Edition" id="3bd9-41d8-79ac-3cb0" shortName="Witch Hunters"/>
     <publication name="Eye of Terror" id="4577-599e-e7f7-d154" shortName="Eye of Terror"/>
     <publication name="Imperial Armor 1" id="82e6-04f1-b8fa-c616" publicationDate="2000" shortName="Imperial Armor 1"/>
@@ -1197,7 +1197,7 @@
         <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Sniper Rifles aways hit on a 2+ and its Strength always equals the Toughness of the target. Units suffering casualties from a sniper rifles must test to avoid pinning as for a barrage. A sniper rifle only has an armor penetration of D6 against a vehicle. Additionally, if a 6 is rolled for the to hit roll, the shot counts as having AP 1.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Sniper Rifles always hit on a 2+ and its Strength always equals the Toughness of the target. Units suffering casualties from a sniper rifles must test to avoid pinning as for a barrage. A sniper rifle only has an armor penetration of D6 against a vehicle. Additionally, if a 6 is rolled for the to hit roll, the shot counts as having AP 1.</characteristic>
       </characteristics>
     </profile>
     <profile name="Storm Bolter" id="4c6c-9de1-00a8-8016" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1394,7 +1394,7 @@
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">S-1</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2A</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 2</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
@@ -1403,7 +1403,7 @@
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">S+1</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault A</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
@@ -1883,7 +1883,7 @@ If a gauss weapon inflicts a glancing hit on a vehicle in which only glancing hi
         <characteristic name="S" typeId="24d8-2110-08fa-d844">-</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds a victom on a D6 roll of 2+. If the target is killed place a Blast marker centered on the exploding model and roll to hit other models using the rules for blast weapons. The attacks have a Strength equal to the exploding model&apos;s Toughness and AP value equal to the victom&apos;s saving throw. Stingers count as having a Strength of 1 if fired at a vehicle.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wounds a victim on a D6 roll of 2+. If the target is killed place a Blast marker centered on the exploding model and roll to hit other models using the rules for blast weapons. The attacks have a Strength equal to the exploding model&apos;s Toughness and AP value equal to the victim&apos;s saving throw. Stingers count as having a Strength of 1 if fired at a vehicle.</characteristic>
       </characteristics>
     </profile>
     <profile name="Horrorfex" id="9311-d17f-a81d-d04b" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1969,7 +1969,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="S" typeId="24d8-2110-08fa-d844">X</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">6</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Sniper Rifles aways hit on a 2+ and its Strength always equals the Toughness of the target. Units suffering casualties from a sniper rifles must test to avoid pinning as for a barrage. A sniper rifle only has an armor penetration of D6 against a vehicle.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Sniper Rifles always hit on a 2+ and its Strength always equals the Toughness of the target. Units suffering casualties from a sniper rifles must test to avoid pinning as for a barrage. A sniper rifle only has an armor penetration of D6 against a vehicle.</characteristic>
       </characteristics>
     </profile>
     <profile name="Wraithcannon" id="3da4-191b-40b4-847a" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -2126,7 +2126,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">S</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault A</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
@@ -2279,7 +2279,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">10</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Orgnance 1/Blast</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
@@ -2351,7 +2351,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">54&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance1/Blast</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Ordnance 1/Blast</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Titan Killer</characteristic>
       </characteristics>
     </profile>
@@ -2360,7 +2360,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">72&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">9</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
-        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heacy 1/Blast</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1/Blast</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
