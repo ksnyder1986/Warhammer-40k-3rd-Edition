@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Chaos Space Marines (2002)" id="0f19-9487-acbb-e047" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="17" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Chaos Space Marines (2002)" id="0f19-9487-acbb-e047" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="19" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <comment>2002 Chaos Space Marine Codex</comment>
   <categoryEntries>
     <categoryEntry name="Mark of Khorne" id="039c-5796-7006-0975" hidden="false"/>
@@ -15,6 +15,11 @@
         <constraint id="76a1-a48a-2315-597a" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry name="Leader - Undivided" id="ee97-54e9-623c-c524" hidden="false"/>
+    <categoryEntry name="Leader - Khorne" id="4e12-8e60-3389-b1e1" hidden="false"/>
+    <categoryEntry name="Leader - Nurgle" id="a2ce-8cc6-991e-9da6" hidden="false"/>
+    <categoryEntry name="Leader - Tzeentch" id="0da2-a933-99df-1a6d" hidden="false"/>
+    <categoryEntry name="Leader - Slaanesh" id="5ea5-737a-c89a-09e8" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink name="Chaos Lord" id="50d3-637a-30cf-76da" collective="false" hidden="false" import="true" targetId="9fda-9a74-56c3-7c97" type="selectionEntry"/>
@@ -52,7 +57,11 @@
     <entryLink name="Chaos Predator" id="9b30-7f51-cfc4-279b" collective="false" hidden="false" import="true" targetId="40bd-3a33-716d-f2c6" type="selectionEntry"/>
     <entryLink name="Chaos Havocs" id="3241-6857-1e1a-f404" collective="false" hidden="false" import="true" targetId="3fa5-f9d1-67cf-b133" type="selectionEntry"/>
     <entryLink name="Chaos Dreadnought" id="56d6-06ef-3251-2423" collective="false" hidden="false" import="true" targetId="f787-e645-f731-b130" type="selectionEntry"/>
-    <entryLink name="Chaos Land Raider" id="aa4f-15c4-4a6c-ad1a" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry"/>
+    <entryLink name="Chaos Land Raider" id="aa4f-15c4-4a6c-ad1a" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Heavy Support" id="b6b5-6ae6-679a-8d30" hidden="false" primary="true" targetId="aacb-8a81-62c0-3db8"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink name="Chaos Defiler" id="04e7-829b-b373-281e" collective="false" hidden="false" import="true" targetId="893f-8699-a721-0be9" type="selectionEntry"/>
     <entryLink name="Book of Chaos" id="596d-f19a-2a03-7545" collective="false" hidden="false" import="true" targetId="91d3-a774-ec62-0bfe" type="selectionEntry">
       <categoryLinks>
@@ -79,6 +88,7 @@
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="4eb5-4eb0-befd-4b10" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -97,6 +107,7 @@
               <conditions>
                 <condition childId="0323-dc21-f71b-dc94" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -150,6 +161,7 @@
               <conditions>
                 <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -168,6 +180,7 @@
               <conditions>
                 <condition childId="96c6-bd96-8ef2-0815" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="c0b7-60b7-488d-1c6a" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="0da2-a933-99df-1a6d" childName="Leader - Tzeentch" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -194,6 +207,7 @@
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="4eb5-4eb0-befd-4b10" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -220,6 +234,7 @@
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -263,6 +278,7 @@
               <conditions>
                 <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -281,6 +297,7 @@
               <conditions>
                 <condition childId="0323-dc21-f71b-dc94" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -338,6 +355,7 @@
               <conditions>
                 <condition childId="4eb5-4eb0-befd-4b10" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -356,6 +374,7 @@
               <conditions>
                 <condition childId="4eb5-4eb0-befd-4b10" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -374,6 +393,7 @@
               <conditions>
                 <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+                <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -400,6 +420,7 @@
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -426,6 +447,7 @@
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -452,6 +474,7 @@
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="0323-dc21-f71b-dc94" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -517,6 +540,7 @@
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="96c6-bd96-8ef2-0815" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="c0b7-60b7-488d-1c6a" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="0da2-a933-99df-1a6d" childName="Leader - Tzeentch" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -543,6 +567,7 @@
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="0323-dc21-f71b-dc94" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1353,7 +1378,7 @@
       <description>Any model within 6&quot; of a model with Nurgle&apos;s Rot must roll a D6 at the end of the Chaos Shooting phase. On a roll of 6 the unit takes a wound, with armour and invulnerable saves as normal.</description>
     </rule>
     <rule name="Daemonic Venom" id="85d4-f5c5-831a-2689" hidden="false">
-      <description>Always wounds on a 4+</description>
+      <description>The model may have no other weapons but counts as having a pair of close combat weapons representing raking claws and fangs. When rolling to wound the model will never require more than 4+ irrespective of relative Strength and Toughness.</description>
     </rule>
     <rule name="Collar of Khorne" id="1fbc-f6af-2d3a-3c2e" hidden="false">
       <description>Force weapons lose their special rule against the bearer, and any psychic abilities that target the wearer or include him in their area of effect are nullified on a D6 roll of 2+</description>
@@ -1368,7 +1393,7 @@
       <description>When the unit charges, all models are at +1 I and +1 S</description>
     </rule>
     <rule name="Siege Specialists" id="5527-08ad-de84-2f08" hidden="false">
-      <description>+1 on Armour Penetration rolls against enemy bunkers and tank traps. When crossing minefileds only trigger a mine on a 6.</description>
+      <description>+1 on Armour Penetration rolls against enemy bunkers and tank traps. When crossing minefields only trigger a mine on a 6.</description>
     </rule>
     <rule name="Daemonic Rune" id="7a9e-fdb4-a566-6f98" hidden="false">
       <description>Ignored Instant Death rule</description>
@@ -1418,7 +1443,7 @@
       <description>Always active. For every close combat attack the wounds the psyker, but is stopped by his Armour save, he may make an additional attack after all other attacks have been resolved but before combat results are determined.</description>
     </rule>
     <rule name="Talisman of Tzeentch" id="5b12-b1bc-c56b-aacf" hidden="false">
-      <description>Opposing psykers suffer a -1 modifier to their Leadership for psyychic tests if the army includes a model with this talisman. The ability does not stack with other Talismans.</description>
+      <description>Opposing psykers suffer a -1 modifier to their Leadership for psychic tests if the army includes a model with this talisman. The ability does not stack with other Talismans. If both players have this gift they cancel each other out and the normal rules apply.</description>
     </rule>
     <rule name="Mass Mutation" id="4275-903e-e63f-fc4e" hidden="false">
       <description>The power is used in the Shooting phase. If the test is passed, the unit of Chosen, Possessed, Marines, or Havocs joined by the Sorcerer gains an ability determined randomly by the table below for a single turn:
@@ -1430,7 +1455,7 @@
 6 - Gain +1 A</description>
     </rule>
     <rule name="Gift of Chaos" id="d8fe-9262-6b98-6c8d" hidden="false">
-      <description>Pick an enemy or friendly model within 2&quot; of the Sorcerer and then take a Psychic test. If the test is successful, for a D6. If you roll over the victim&apos;s Toughness, or roll a natural 6, the victom is transformed into a Chaos Space, with no armour save allowed.</description>
+      <description>Pick an enemy or friendly model within 2&quot; of the Sorcerer and then take a Psychic test. If the test is successful, for a D6. If you roll over the victim&apos;s Toughness, or roll a natural 6, the victim is transformed into a Chaos Spawn, with no armour save allowed.</description>
     </rule>
     <rule name="The Twisting Path" id="3761-7c2c-7bc7-e3c8" hidden="false">
       <description>This power is used in the Shooting Phase, has a range of 12&quot; and requires LOS. The target unit makes a Leadership test and if they fail they are pinned until the start of the next Chaos turn.
@@ -1458,7 +1483,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
       <description>A Greater Daemon must possess another model to enter the battlefield.</description>
     </rule>
     <rule name="Iron Steeds" id="c5cb-a25a-e57f-2322" hidden="false">
-      <description>Chaos Bikers get +1 T. Additionally, their bikers are covered in spikes, granding them +1 A. Chaos Space Marine Bikers gain no benefit from the Daemonc Resilience ability.</description>
+      <description>Chaos Bikers get +1 T. Additionally, their bikers are covered in spikes, granting them +1 A. Chaos Space Marine Bikers gain no benefit from the Daemonic Resilience ability.</description>
     </rule>
     <rule name="Banner of Rage" id="0a48-ed75-7aed-27ce" hidden="false">
       <description>As well as functioning as a Icon, the banner may once per battle release its power. In any Assault phase the models in the same unit as the model bearing the Banner gain +1 A.</description>
@@ -1536,7 +1561,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
       <description>During the Chaos player&apos;s shooting phase, instead of using their normal weapons they make an attack as if they had the Daemonic Fire gift</description>
     </rule>
     <rule name="Psychic Duel" id="b1cf-a68e-c8c0-52f9" hidden="false">
-      <description>During the Chaos player&apos;s shooting phase, choose one enemy psyker on the battlefield. That psyker will be at -1 Leadership for Psychic tests for the next player turn. This modifier is cumulative with the Talisman of Tzeentch.</description>
+      <description>During the Chaos player&apos;s shooting phase, choose one enemy psyker on the battlefield. That psyker will be at -1 Leadership for Psychic tests for the next player turn. This modifer is cumulative with the Talisman of Tzeentch.</description>
     </rule>
     <rule name="Reckoning of Tzeentch" id="e5e3-a24e-9514-de50" hidden="false">
       <description>During the Chaos player&apos;s shooting phase, the psyker and any squad he is accompanied by may re-roll missed to hit rolls this shooting phase.</description>
@@ -1561,7 +1586,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <categoryLink name="HQ" id="1907-89ae-9906-8b7e" hidden="false" primary="true" targetId="a8a7-7a4b-5f7e-2138"/>
       </categoryLinks>
       <constraints>
-        <constraint id="af4c-d4e8-40d1-5466" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="false" type="max" value="1"/>
+        <constraint id="af4c-d4e8-40d1-5466" field="selections" includeChildForces="false" includeChildSelections="true" message="A Chaos Army can only have one Chaos Lord. Note that Abaddon, Ahriman, Fabius Bile, Lucius and Typhus count as Chaos Lords according to their unit entries." percentValue="false" scope="force" shared="false" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="60"/>
@@ -1578,6 +1603,39 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
               <comment>Mark of Tzeentch already adds Sorcerer to the Lord. Prevents adding the same ability twice. Models with Mark of Khorne cannot become Sorcerer&apos;s.</comment>
               <conditions>
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Army Leader" id="fe40-8c55-3f7d-59e3" hidden="false" import="true" sortIndex="2" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <constraints>
+            <constraint id="f51a-6c8c-e82e-2ea2-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="f51a-6c8c-e82e-2ea2-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="category" type="add" value="ee97-54e9-623c-c524">
+              <conditions>
+                <condition childId="9b8a-997c-dbf1-f05b" childName="Mark of Chaos Undivided" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="add" value="4e12-8e60-3389-b1e1">
+              <conditions>
+                <condition childId="1d3d-b09e-2e64-36ca" childName="Mark of Khorne" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="add" value="a2ce-8cc6-991e-9da6">
+              <conditions>
+                <condition childId="69f7-7a85-13fa-eeb4" childName="Mark of Nurgle" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="add" value="0da2-a933-99df-1a6d">
+              <conditions>
+                <condition childId="31ac-7b66-9ff3-25bf" childName="Mark of Tzeentch" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="add" value="5ea5-737a-c89a-09e8">
+              <conditions>
+                <condition childId="0a96-19af-e052-1138" childName="Mark of Slaanesh" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1673,7 +1731,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
                 <constraint id="f53d-fc1d-0aad-72f7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <entryLinks>
-                <entryLink name="Chaos Land Raider" id="25bc-b5ef-970b-6969" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+                <entryLink name="Chaos Land Raider" id="25bc-b5ef-970b-6969" collective="false" hidden="false" import="true" targetId="fa36-6237-9cf3-0f4d" type="selectionEntry">
                   <constraints>
                     <constraint id="299f-4b78-5154-b4a9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
@@ -1874,6 +1932,12 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
           </conditions>
         </modifier>
+        <modifier field="error" type="add" value="Khorne units may not be included in a force with a Slaanesh army leader.">
+          <conditions>
+            <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+            <condition childId="958a-4953-9c9c-2605" childName="Mark of Khorne" field="selections" scope="root-entry" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <rules>
         <rule name="Blood Frenzy" id="2c4e-acc9-3592-e41d" hidden="false">
@@ -1902,6 +1966,12 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             <condition childId="4eb5-4eb0-befd-4b10" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
           </conditions>
         </modifier>
+        <modifier field="error" type="add" value="Slaanesh units may not be included in a force with a Khorne army leader.">
+          <conditions>
+            <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+            <condition childId="8a51-3987-58e1-5c44" childName="Mark of Slaanesh" field="selections" scope="root-entry" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry name="Mark of Nurgle" id="4e40-db3e-6ca6-5e18" collective="false" hidden="false" import="true" type="upgrade">
@@ -1910,7 +1980,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
       <infoLinks>
-        <infoLink name="Daemonic Reslilience" id="cea7-7496-6f6f-478a" hidden="false" targetId="f08b-40f4-0069-5126" type="rule"/>
+        <infoLink name="Daemonic Resilience" id="cea7-7496-6f6f-478a" hidden="false" targetId="f08b-40f4-0069-5126" type="rule"/>
         <infoLink name="Fearless" id="1154-f632-5e75-3db0" hidden="false" targetId="b137-13a1-eb97-c5e5" type="rule"/>
       </infoLinks>
       <modifiers>
@@ -1918,6 +1988,12 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <modifier field="hidden" type="set" value="true">
           <conditions>
             <condition childId="96c6-bd96-8ef2-0815" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="error" type="add" value="Nurgle units may not be included in a force with a Tzeentch army leader.">
+          <conditions>
+            <condition childId="0da2-a933-99df-1a6d" childName="Leader - Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+            <condition childId="4e40-db3e-6ca6-5e18" childName="Mark of Nurgle" field="selections" scope="root-entry" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1977,6 +2053,12 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             <condition childId="0323-dc21-f71b-dc94" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
           </conditions>
         </modifier>
+        <modifier field="error" type="add" value="Tzeentch units may not be included in a force with a Nurgle army leader.">
+          <conditions>
+            <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+            <condition childId="44ca-fa7f-9f9a-5d33" childName="Mark of Tzeentch" field="selections" scope="root-entry" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry name="Chaos Hound" id="5f91-8cdf-9757-3592" collective="false" hidden="false" import="true" type="model">
@@ -2009,6 +2091,58 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             <modifier field="hidden" type="set" value="true">
               <conditions>
                 <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Army Leader" id="2897-46d7-0458-553d" hidden="false" import="true" sortIndex="2" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <constraints>
+            <constraint id="d4a3-d5a8-b4fb-5567" field="selections" message="A Chaos Lieutenant cannot be the Army Leader if a Chaos Lord is present." scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="category" type="add" value="ee97-54e9-623c-c524">
+              <conditions>
+                <condition childId="9b8a-997c-dbf1-f05b" childName="Mark of Chaos Undivided" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="add" value="4e12-8e60-3389-b1e1">
+              <conditions>
+                <condition childId="1d3d-b09e-2e64-36ca" childName="Mark of Khorne" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="add" value="a2ce-8cc6-991e-9da6">
+              <conditions>
+                <condition childId="69f7-7a85-13fa-eeb4" childName="Mark of Nurgle" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="add" value="0da2-a933-99df-1a6d">
+              <conditions>
+                <condition childId="31ac-7b66-9ff3-25bf" childName="Mark of Tzeentch" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="add" value="5ea5-737a-c89a-09e8">
+              <conditions>
+                <condition childId="0a96-19af-e052-1138" childName="Mark of Slaanesh" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="d4a3-d5a8-b4fb-5567" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="50d3-637a-30cf-76da" childName="Chaos Lord" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="2552-e6e9-fcb1-88bd" childName="Ahriman of the Thousand Sons" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="c175-59c7-b956-d3fc" childName="Abaddon the Despoiler" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="9770-3fa1-3a59-03c7" childName="Lucius the Eternal" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="a2c1-36ff-aabc-7812" childName="Typhus" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="0335-c034-3998-9db2" childName="Fabius Bile" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="warning" type="add" value="The Chaos Lieutenant with the highest point card should be the designated Army Leader. Please confirm manually.">
+              <conditions>
+                <condition childId="569e-2525-31c0-69d3" childName="Chaos Lieutenant" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="1"/>
+                <condition childId="e425-3570-787c-6c97" childName="Army Leader" field="selections" scope="root-entry" shared="true" type="equalTo" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2089,7 +2223,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
                 <constraint id="3aa2-338e-9053-b4e1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <entryLinks>
-                <entryLink name="Chaos Land Raider" id="787a-8314-4252-522d" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+                <entryLink name="Chaos Land Raider" id="787a-8314-4252-522d" collective="false" hidden="false" import="true" targetId="fa36-6237-9cf3-0f4d" type="selectionEntry">
                   <constraints>
                     <constraint id="4094-f41a-33b6-a6d9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
@@ -2303,10 +2437,39 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
     <selectionEntry name="Bloodthirster" id="f25d-e125-00a1-50c0" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Independent Character" id="20c8-9ef0-4ff4-0e25" hidden="false" primary="false" targetId="3c96-248b-affd-e504"/>
+        <categoryLink name="Mark of Khorne" id="f4bf-99a5-be81-4943" hidden="false" primary="false" targetId="039c-5796-7006-0975"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="205"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Army Leader" id="9368-0e01-2d72-c3ca" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Khorne" id="c903-7f04-bbb0-f226" hidden="false" primary="false" targetId="4e12-8e60-3389-b1e1"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="090c-2a49-c906-d94a" field="selections" message="Greater Daemons cannot be the Army Leader if a Chaos Lord or Chaos Lieutenant are in the army." scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="090c-2a49-c906-d94a" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="569e-2525-31c0-69d3" childName="Chaos Lieutenant" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="50d3-637a-30cf-76da" childName="Chaos Lord" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="2552-e6e9-fcb1-88bd" childName="Ahriman of the Thousand Sons" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="c175-59c7-b956-d3fc" childName="Abaddon the Despoiler" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="9770-3fa1-3a59-03c7" childName="Lucius the Eternal" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="e279-4747-818e-a3d8" childName="Kharn the Betrayer" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="a2c1-36ff-aabc-7812" childName="Typhus" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="0335-c034-3998-9db2" childName="Fabius Bile" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
       <infoLinks>
         <infoLink name="Daemonic Flight" id="a215-9779-a3c3-ccee" hidden="false" targetId="5826-d1ee-f676-f67d" type="rule"/>
         <infoLink name="Daemonic Visage" id="d255-5b5f-01e1-c3c8" hidden="false" targetId="e8ac-c6ca-da7f-8b78" type="rule"/>
@@ -2332,6 +2495,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Khorne units may not be included in a force with a Slaanesh army leader.">
+          <conditions>
+            <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <rules>
         <rule name="Khornate Frenzy" id="57d3-16e3-b861-0e5c" hidden="false">
@@ -2350,6 +2518,32 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
       </costs>
       <entryLinks>
         <entryLink name="Psychic Abilities &amp; Equipment" id="fd1a-1ff1-8cf5-51a9" collective="false" hidden="false" import="true" targetId="0249-e80c-1238-d54b" type="selectionEntryGroup"/>
+        <entryLink name="Army Leader" id="dc43-2f31-1209-d178" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Nurgle" id="6ff8-f24e-1c5f-31ae" hidden="false" primary="false" targetId="a2ce-8cc6-991e-9da6"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="c18b-dc88-a4b4-014e" field="selections" message="Greater Daemons cannot be the Army Leader if a Chaos Lord or Chaos Lieutenant are in the army." scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="c18b-dc88-a4b4-014e" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="569e-2525-31c0-69d3" childName="Chaos Lieutenant" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="50d3-637a-30cf-76da" childName="Chaos Lord" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="2552-e6e9-fcb1-88bd" childName="Ahriman of the Thousand Sons" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="c175-59c7-b956-d3fc" childName="Abaddon the Despoiler" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="9770-3fa1-3a59-03c7" childName="Lucius the Eternal" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="e279-4747-818e-a3d8" childName="Kharn the Betrayer" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="a2c1-36ff-aabc-7812" childName="Typhus" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="0335-c034-3998-9db2" childName="Fabius Bile" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Great Unclean One" id="2599-60c2-23ed-60fe" hidden="false" targetId="85c6-a98d-1fac-38ae" type="profile"/>
@@ -2377,6 +2571,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Nurgle units may not be included in a force with a Tzeentch army leader.">
+          <conditions>
+            <condition childId="0da2-a933-99df-1a6d" childName="Leader - Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry name="Lord of Change" id="80d5-b9f3-b03a-713e" collective="false" hidden="false" import="true" type="model">
@@ -2388,6 +2587,32 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
       </costs>
       <entryLinks>
         <entryLink name="Psychic Abilities &amp; Equipment" id="c429-236a-6c48-d738" collective="false" hidden="false" import="true" targetId="0249-e80c-1238-d54b" type="selectionEntryGroup"/>
+        <entryLink name="Army Leader" id="52af-bcc5-7758-7034" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Tzeentch" id="030f-5cac-6dc7-c3db" hidden="false" primary="false" targetId="0da2-a933-99df-1a6d"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="1ff2-a07e-0bcc-3288" field="selections" message="Greater Daemons cannot be the Army Leader if a Chaos Lord or Chaos Lieutenant are in the army." scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="1ff2-a07e-0bcc-3288" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="569e-2525-31c0-69d3" childName="Chaos Lieutenant" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="50d3-637a-30cf-76da" childName="Chaos Lord" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="2552-e6e9-fcb1-88bd" childName="Ahriman of the Thousand Sons" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="c175-59c7-b956-d3fc" childName="Abaddon the Despoiler" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="9770-3fa1-3a59-03c7" childName="Lucius the Eternal" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="e279-4747-818e-a3d8" childName="Kharn the Betrayer" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="a2c1-36ff-aabc-7812" childName="Typhus" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="0335-c034-3998-9db2" childName="Fabius Bile" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Lord of Change" id="41d8-2e33-8981-0045" hidden="false" targetId="4dcf-0041-7c35-54b9" type="profile"/>
@@ -2414,6 +2639,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Tzeentch units may not be included in a force with a Nurgle army leader.">
+          <conditions>
+            <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry name="Keeper of Secrets" id="3a55-19dd-8e1a-0888" collective="false" hidden="false" import="true" type="model">
@@ -2427,6 +2657,32 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
       </costs>
       <entryLinks>
         <entryLink name="Psychic Abilities &amp; Equipment" id="8f57-b4db-ea79-09bd" collective="false" hidden="false" import="true" targetId="0249-e80c-1238-d54b" type="selectionEntryGroup"/>
+        <entryLink name="Army Leader" id="c79f-7daa-caa9-e244" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Slaanesh" id="58d4-c369-8e9c-ee9c" hidden="false" primary="false" targetId="5ea5-737a-c89a-09e8"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="ab30-f45c-c9f7-91c1" field="selections" message="Greater Daemons cannot be the Army Leader if a Chaos Lord or Chaos Lieutenant are in the army." scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="ab30-f45c-c9f7-91c1" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="569e-2525-31c0-69d3" childName="Chaos Lieutenant" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="50d3-637a-30cf-76da" childName="Chaos Lord" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="2552-e6e9-fcb1-88bd" childName="Ahriman of the Thousand Sons" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="c175-59c7-b956-d3fc" childName="Abaddon the Despoiler" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="9770-3fa1-3a59-03c7" childName="Lucius the Eternal" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="e279-4747-818e-a3d8" childName="Kharn the Betrayer" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="a2c1-36ff-aabc-7812" childName="Typhus" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="0335-c034-3998-9db2" childName="Fabius Bile" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Keeper of Secrets" id="d634-6477-edc7-de6f" hidden="false" targetId="a1ff-3b89-9a3e-68ee" type="profile"/>
@@ -2452,6 +2708,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier field="error" type="add" value="Slaanesh units may not be included in a force with a Khorne army leader.">
+          <conditions>
+            <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3020,6 +3281,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
                 <repeat childId="model" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
               </repeats>
             </modifier>
+            <modifier field="info" type="add" value="The additional Marks of Chaos are only available in the dedicated marine units. For example, Khorne Berzerkers are a Chaos Space Marine unit with the Mark of Khorne. Cult units are found in the Elite options unless that army is led by a commander with the same Mark of Chaos, which places the unit in its original force organization slot."/>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -3435,6 +3697,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Khorne units may not be included in a force with a Slaanesh army leader.">
+          <conditions>
+            <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <rules>
         <rule name="Frenzy" id="77f6-e914-0857-5dc0" hidden="false">
@@ -3512,9 +3779,14 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Nurgle units may not be included in a force with a Tzeentch army leader.">
+          <conditions>
+            <condition childId="0da2-a933-99df-1a6d" childName="Leader - Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Plauguebearers" id="74c5-edc6-435f-90e4" collective="false" defaultSelectionEntryId="cf0e-0989-396f-aa40" hidden="false" import="true">
+        <selectionEntryGroup name="Plaguebearers" id="74c5-edc6-435f-90e4" collective="false" defaultSelectionEntryId="cf0e-0989-396f-aa40" hidden="false" import="true">
           <constraints>
             <constraint id="03d3-9450-9f85-b8a3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="15"/>
             <constraint id="d871-d7db-dc2d-908c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
@@ -3578,6 +3850,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier field="error" type="add" value="Slaanesh units may not be included in a force with a Khorne army leader.">
+          <conditions>
+            <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -3644,6 +3921,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Tzeentch units may not be included in a force with a Nurgle army leader.">
+          <conditions>
+            <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="Horrors and Flamers" id="23fe-c89a-f19f-dda5" collective="false" defaultSelectionEntryId="827e-f94d-ec9f-92e5" hidden="false" import="true">
@@ -3680,7 +3962,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <categoryLink name="Troops" id="2c44-b761-e247-fb2d" hidden="false" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
       </categoryLinks>
       <constraints>
-        <constraint id="fce0-cb79-b5b8-860b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="0"/>
+        <constraint id="fce0-cb79-b5b8-860b" field="selections" includeChildForces="false" includeChildSelections="false" message="An army may only include one unit of Nurglings for each Independent Character or Unit with the Mark of Nurgle." percentValue="false" scope="force" shared="true" type="max" value="0"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
@@ -3730,6 +4012,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
           <repeats>
             <repeat childId="4e40-db3e-6ca6-5e18" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
           </repeats>
+        </modifier>
+        <modifier field="error" type="add" value="Nurgle units may not be included in a force with a Tzeentch army leader.">
+          <conditions>
+            <condition childId="0da2-a933-99df-1a6d" childName="Leader - Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
         </modifier>
       </modifiers>
       <rules>
@@ -4129,6 +4416,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Khorne units may not be included in a force with a Slaanesh army leader.">
+          <conditions>
+            <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <rules>
         <rule name="Frenzy" id="03f3-3e2c-1565-0a78" hidden="false">
@@ -4205,6 +4497,11 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier field="error" type="add" value="Tzeentch units may not be included in a force with a Nurgle army leader.">
+          <conditions>
+            <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -4643,7 +4940,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
           <description>At the start of the Movement phase, before moving the Dreadnought roll a D6 and consult the chart below:
 1 - Blood Rage: The Dreadnought must move 6+D6&quot; towards the nearest enemy model or unit, but cannot shoot this turn. It must assault this unit if able, and it will double its basic Attacks characteristic this turn. If the Dreadnought is immobilized and not in melee treat this result as Fire Frenzy instead.
 2-5 - Move and shoot normally
-6 - Fire Frenzy: The Dreadnought may not move or assault this turn, but instead shoots all of its weapons TWICE at the nearest enemy model or unit. If no enemy targets are visible or in range it will instead fire at the nearest friendly unit it can target. If the Dreadnought has no functioning ranged weapons, or no possible targets within range, treat this result as Blood Rage instead.</description>
+6 - Fire Frezny: The Dreadnought may not move or assault this turn, but instead shoots all of its weapons TWICE at the nearest enemy model or unit. If no enemy targets are visible or in range it will instead fire at the nearest friendly unit it can target. If the Dreadnought has no functining ranged weapons, or no possible targets within range, treat this result as Blood Rage instead.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
@@ -4910,9 +5207,6 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Chaos Land Raider" id="7b79-098a-f562-00e2" collective="false" hidden="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink name="Heavy Support" id="317a-41f2-3d02-6a95" hidden="false" primary="true" targetId="aacb-8a81-62c0-3db8"/>
-      </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="250"/>
       </costs>
@@ -5285,11 +5579,22 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink name="Terminator" id="c25c-44b4-4a4c-81ca" hidden="false" primary="false" targetId="50e1-b8c9-703d-63a5"/>
       </categoryLinks>
       <constraints>
-        <constraint id="d7f0-aa2c-3a4a-4ff4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="d7f0-aa2c-3a4a-4ff4" field="selections" includeChildForces="false" includeChildSelections="false" message="A Chaos Army can only have one Chaos Lord. Note that Abaddon, Ahriman, Fabius Bile, Lucius and Typhus count as Chaos Lords according to their unit entries." percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="255"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Army Leader" id="3a17-2222-5b82-cb65" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Undivided" id="0b5d-861b-e7b1-bbb6" hidden="false" primary="false" targetId="ee97-54e9-623c-c524"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="fd82-4cb5-bccb-a8d6-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="fd82-4cb5-bccb-a8d6-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <infoLinks>
         <infoLink name="Abaddon the Despoiler" id="4926-b622-3197-6dca" hidden="false" targetId="f7cb-b4d1-640a-ce17" type="profile"/>
         <infoLink name="Daemonic Rune" id="789a-bcd0-834a-f06d" hidden="false" targetId="7a9e-fdb4-a566-6f98" type="rule"/>
@@ -5310,6 +5615,19 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 <condition childId="0323-dc21-f71b-dc94" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="96c6-bd96-8ef2-0815" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="d7f0-aa2c-3a4a-4ff4" type="set" value="0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="71da-1c7a-2eae-5da8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="228f-2438-d2d1-998b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="9fda-9a74-56c3-7c97" childName="Chaos Lord" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="d982-9ee7-19b6-b32a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="83cf-ff36-d1f0-fddc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5374,7 +5692,10 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 <constraint id="9126-2987-fba2-4c9a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <entryLinks>
-                <entryLink name="Chaos Land Raider" id="d86d-772d-4805-9161" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+                <entryLink name="Chaos Land Raider" id="d86d-772d-4805-9161" collective="false" hidden="false" import="true" targetId="fa36-6237-9cf3-0f4d" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink name="Dedicated Transport" id="bb3d-f9b9-c38d-e8ae" hidden="false" primary="true" targetId="a090-a855-c7de-f5c3"/>
+                  </categoryLinks>
                   <constraints>
                     <constraint id="056e-d974-86e6-31fc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
@@ -5470,6 +5791,30 @@ Weapon Destroyed results may choose to remove this weapon.</description>
       </costs>
       <entryLinks>
         <entryLink name="Mark of Khorne" id="b59a-3ee4-0818-ad5d" collective="false" hidden="false" import="true" targetId="958a-4953-9c9c-2605" type="selectionEntry"/>
+        <entryLink name="Army Leader" id="7df7-8f06-1f27-bf97" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Khorne" id="9ab3-c42b-af3e-0bf8" hidden="false" primary="false" targetId="4e12-8e60-3389-b1e1"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="d1a1-a62a-0c07-379e" field="selections" message="Kharne cannot be the Army Leader if a Chaos Lord is in the army." scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="d1a1-a62a-0c07-379e" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="50d3-637a-30cf-76da" childName="Chaos Lord" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="2552-e6e9-fcb1-88bd" childName="Ahriman of the Thousand Sons" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="c175-59c7-b956-d3fc" childName="Abaddon the Despoiler" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="9770-3fa1-3a59-03c7" childName="Lucius the Eternal" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="a2c1-36ff-aabc-7812" childName="Typhus" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                    <condition childId="0335-c034-3998-9db2" childName="Fabius Bile" field="selections" includeChildSelections="true" scope="force" shared="true" type="greaterThan" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Kharn the Betrayer" id="54c4-91c7-ea76-bdd4" hidden="false" targetId="814e-6edb-b2d7-de29" type="profile"/>
@@ -5530,13 +5875,22 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink name="Sorcerer" id="5da6-c965-dee8-5d6d" hidden="false" primary="false" targetId="d832-0917-094f-7627"/>
       </categoryLinks>
       <constraints>
-        <constraint id="1d88-fae4-e4ba-4ad1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="1d88-fae4-e4ba-4ad1" field="selections" includeChildForces="false" includeChildSelections="false" message="A Chaos Army can only have one Chaos Lord. Note that Abaddon, Ahriman, Fabius Bile, Lucius and Typhus count as Chaos Lords according to their unit entries." percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="230"/>
       </costs>
       <entryLinks>
         <entryLink name="Mark of Nurgle" id="2bbd-d3da-b95a-2507" collective="false" hidden="false" import="true" targetId="4e40-db3e-6ca6-5e18" type="selectionEntry"/>
+        <entryLink name="Army Leader" id="e791-bd24-5dfa-fc6e" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Nurgle" id="17a4-ed35-9cfc-9260" hidden="false" primary="false" targetId="a2ce-8cc6-991e-9da6"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="086d-fe25-71f5-0110-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="086d-fe25-71f5-0110-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Typhus" id="dbcc-be5b-2f97-73c4" hidden="false" targetId="73e5-7cd6-c7dc-77c0" type="profile"/>
@@ -5557,6 +5911,19 @@ Weapon Destroyed results may choose to remove this weapon.</description>
           <conditions>
             <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
           </conditions>
+        </modifier>
+        <modifier field="1d88-fae4-e4ba-4ad1" type="set" value="0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="bdac-a8bf-59a7-6578" childName="Abaddon the Despoiler" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="228f-2438-d2d1-998b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="9fda-9a74-56c3-7c97" childName="Chaos Lord" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="d982-9ee7-19b6-b32a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="83cf-ff36-d1f0-fddc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules>
@@ -5586,7 +5953,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 <constraint id="85e6-dce3-d8b8-34ce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <entryLinks>
-                <entryLink name="Chaos Land Raider" id="57d2-897b-5b5a-8313" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+                <entryLink name="Chaos Land Raider" id="57d2-897b-5b5a-8313" collective="false" hidden="false" import="true" targetId="fa36-6237-9cf3-0f4d" type="selectionEntry">
                   <constraints>
                     <constraint id="c26d-b442-b21f-b368" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
@@ -5672,7 +6039,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink name="Sorcerer" id="8512-9c9a-07b3-d312" hidden="false" primary="false" targetId="d832-0917-094f-7627"/>
       </categoryLinks>
       <constraints>
-        <constraint id="9bfa-4397-d9d4-b2cd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="9bfa-4397-d9d4-b2cd" field="selections" includeChildForces="false" includeChildSelections="false" message="A Chaos Army can only have one Chaos Lord. Note that Abaddon, Ahriman, Fabius Bile, Lucius and Typhus count as Chaos Lords according to their unit entries." percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="196"/>
@@ -5682,6 +6049,15 @@ Weapon Destroyed results may choose to remove this weapon.</description>
           <constraints>
             <constraint id="fe48-c90b-8744-6e7e-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
             <constraint id="fe48-c90b-8744-6e7e-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Army Leader" id="3f37-5809-078b-3b35" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Slaanesh" id="21fc-4e48-3a8b-a73b" hidden="false" primary="false" targetId="5ea5-737a-c89a-09e8"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="dccf-7372-2cc7-9b50-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="dccf-7372-2cc7-9b50-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -5703,6 +6079,19 @@ Weapon Destroyed results may choose to remove this weapon.</description>
               <conditions>
                 <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
                 <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="9bfa-4397-d9d4-b2cd" type="set" value="0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="71da-1c7a-2eae-5da8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="228f-2438-d2d1-998b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="9fda-9a74-56c3-7c97" childName="Chaos Lord" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="d982-9ee7-19b6-b32a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="bdac-a8bf-59a7-6578" childName="Abaddon the Despoiler" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5738,7 +6127,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 <constraint id="57b7-aa4b-858e-7786" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <entryLinks>
-                <entryLink name="Chaos Land Raider" id="c39a-2aee-50af-a660" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+                <entryLink name="Chaos Land Raider" id="c39a-2aee-50af-a660" collective="false" hidden="false" import="true" targetId="fa36-6237-9cf3-0f4d" type="selectionEntry">
                   <constraints>
                     <constraint id="0bb2-f393-433e-aca5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
@@ -5847,7 +6236,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink name="Sorcerer" id="f736-abf7-ed1a-8b20" hidden="false" primary="false" targetId="d832-0917-094f-7627"/>
       </categoryLinks>
       <constraints>
-        <constraint id="55d3-9f45-d514-625a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="55d3-9f45-d514-625a" field="selections" includeChildForces="false" includeChildSelections="false" message="A Chaos Army can only have one Chaos Lord. Note that Abaddon, Ahriman, Fabius Bile, Lucius and Typhus count as Chaos Lords according to their unit entries." percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="215"/>
@@ -5857,6 +6246,15 @@ Weapon Destroyed results may choose to remove this weapon.</description>
           <constraints>
             <constraint id="d859-ec11-38e1-b9a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="2fea-f52c-2ce4-e140" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Army Leader" id="ac63-9572-fe58-5ce0" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Tzeentch" id="5903-f076-ed39-089c" hidden="false" primary="false" targetId="0da2-a933-99df-1a6d"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="59f4-c1c4-ad77-03e6-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="59f4-c1c4-ad77-03e6-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -5879,6 +6277,19 @@ Weapon Destroyed results may choose to remove this weapon.</description>
           <conditions>
             <condition childId="c0b7-60b7-488d-1c6a" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
           </conditions>
+        </modifier>
+        <modifier field="55d3-9f45-d514-625a" type="set" value="0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="71da-1c7a-2eae-5da8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="228f-2438-d2d1-998b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="9fda-9a74-56c3-7c97" childName="Chaos Lord" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="bdac-a8bf-59a7-6578" childName="Abaddon the Despoiler" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="83cf-ff36-d1f0-fddc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules>
@@ -5911,7 +6322,10 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 <constraint id="6ccd-238e-08c7-d1fe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <entryLinks>
-                <entryLink name="Chaos Land Raider" id="5f01-62b2-7a3a-e2e6" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+                <entryLink name="Chaos Land Raider" id="5f01-62b2-7a3a-e2e6" collective="false" hidden="false" import="true" targetId="fa36-6237-9cf3-0f4d" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink name="Dedicated Transport" id="cde4-901b-c055-2c4b" hidden="false" primary="true" targetId="a090-a855-c7de-f5c3"/>
+                  </categoryLinks>
                   <constraints>
                     <constraint id="96e4-0843-3e32-1fa9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
@@ -6018,13 +6432,22 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         <categoryLink name="Mark of Chaos Undivided" id="3d0e-75ef-bde6-fe2c" hidden="false" primary="false" targetId="e9f2-4b8e-c0b1-bb50"/>
       </categoryLinks>
       <constraints>
-        <constraint id="b76a-8ac9-1460-c698" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="b76a-8ac9-1460-c698" field="selections" includeChildSelections="true" message="A Chaos Army can only have one Chaos Lord. Note that Abaddon, Ahriman, Fabius Bile, Lucius and Typhus count as Chaos Lords according to their unit entries." scope="force" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="114"/>
       </costs>
       <entryLinks>
         <entryLink name="Mark of Chaos Undivided" id="a902-e2ee-cdaa-bb99" collective="false" hidden="false" import="true" targetId="cd3d-c65d-0f5a-bdde" type="selectionEntry"/>
+        <entryLink name="Army Leader" id="5dff-de77-f7e9-6bdb" hidden="false" import="true" targetId="e425-3570-787c-6c97" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink name="Leader - Undivided" id="8c44-56b6-0648-1412" hidden="false" primary="false" targetId="ee97-54e9-623c-c524"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="8b21-db58-de9a-d608-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="8b21-db58-de9a-d608-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Fabius Bile (1)" id="0257-e9e3-49b3-fcdc" hidden="false" targetId="dd2a-a958-1d1a-7684" type="profile"/>
@@ -6043,6 +6466,19 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                 <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="c0b7-60b7-488d-1c6a" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                 <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="b76a-8ac9-1460-c698" type="set" value="0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="71da-1c7a-2eae-5da8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="bdac-a8bf-59a7-6578" childName="Abaddon the Despoiler" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="9fda-9a74-56c3-7c97" childName="Chaos Lord" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="d982-9ee7-19b6-b32a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="83cf-ff36-d1f0-fddc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6119,7 +6555,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <constraint id="1e88-647b-cf25-c030" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <entryLinks>
-            <entryLink name="Chaos Land Raider" id="1b98-4a7f-4d47-4e62" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+            <entryLink name="Chaos Land Raider" id="1b98-4a7f-4d47-4e62" collective="false" hidden="false" import="true" targetId="fa36-6237-9cf3-0f4d" type="selectionEntry">
               <constraints>
                 <constraint id="240e-2cda-3b11-7107" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
@@ -6339,7 +6775,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Khorne Beserkers" id="df6a-ef9f-483a-2b06" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Khorne Berzerkers" id="df6a-ef9f-483a-2b06" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Mark of Khorne" id="ce6e-3707-c780-1d82" hidden="false" primary="false" targetId="039c-5796-7006-0975"/>
       </categoryLinks>
@@ -7247,7 +7683,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Khorne Beserker Bikers" id="0d50-913a-14bc-960d" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Khorne Berzerker Bikers" id="0d50-913a-14bc-960d" collective="false" hidden="false" import="true" type="unit">
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
@@ -8057,7 +8493,11 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             <entryLink name="Chaos Defiler" id="4c5f-dfe3-0afc-2f94" collective="false" hidden="false" import="true" targetId="893f-8699-a721-0be9" type="selectionEntry"/>
             <entryLink name="Chaos Dreadnought" id="345b-9043-2e3e-3af6" collective="false" hidden="false" import="true" targetId="f787-e645-f731-b130" type="selectionEntry"/>
             <entryLink name="Chaos Havocs" id="c9fd-e6bb-335f-3495" collective="false" hidden="false" import="true" targetId="3fa5-f9d1-67cf-b133" type="selectionEntry"/>
-            <entryLink name="Chaos Land Raider" id="3cb2-d18a-1679-d6b3" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry"/>
+            <entryLink name="Chaos Land Raider" id="3cb2-d18a-1679-d6b3" collective="false" hidden="false" import="true" targetId="7b79-098a-f562-00e2" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink name="Heavy Support" id="aec6-2c5a-4ccd-c54f" hidden="false" primary="true" targetId="aacb-8a81-62c0-3db8"/>
+              </categoryLinks>
+            </entryLink>
             <entryLink name="Chaos Vindicator" id="d7e6-078f-54f0-b292" collective="false" hidden="false" import="true" targetId="928b-d7cd-5256-f224" type="selectionEntry"/>
             <entryLink name="Chaos Predator" id="1aef-ea3f-1dd9-1fb8" collective="false" hidden="false" import="true" targetId="40bd-3a33-716d-f2c6" type="selectionEntry"/>
           </entryLinks>
@@ -10123,6 +10563,11 @@ Destroyer=25</comment>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Khorne units may not be included in a force with a Slaanesh army leader.">
+          <conditions>
+            <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <rules>
         <rule name="Daemonic Possession" id="a4d6-d7fc-3ce1-8ecd" hidden="false">
@@ -10130,7 +10575,7 @@ Destroyer=25</comment>
         </rule>
         <rule name="Destroyer" id="f637-5178-ea0b-680e" hidden="false">
           <description>A tank with Destroyer upgrade causes enemy units forced to move due to a tank shock on a 4+ with normal saves allowed.
-A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each round of close combat, and when rolling for Fire Frenzy will trigger Blood Rage on a 1 or 2.</description>
+A Dreadnought with Destroyer upgrade may re-roll one close combat miss in each round of close combat, and when rolling for Fire Frenzy will trigger Blood Rage on a 1 or 2.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
@@ -10266,6 +10711,11 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="error" type="add" value="Slaanesh units may not be included in a force with a Khorne army leader.">
+          <conditions>
+            <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="Daemonettes" id="75b0-a29c-0044-2703" collective="false" hidden="false" import="true">
@@ -10313,10 +10763,49 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry name="Army Leader" id="e425-3570-787c-6c97" hidden="false" import="true" type="upgrade">
+      <comment>Used to validate ancient enemies rule</comment>
+      <constraints>
+        <constraint id="3bcf-b2a1-d7ad-da04-min" field="selections" includeChildSelections="true" message="The Chaos force must have a single designated leader." scope="force" shared="true" type="min" value="1"/>
+        <constraint id="3bcf-b2a1-d7ad-da04-max" field="selections" includeChildSelections="true" message="The Chaos force must have a single designated leader." scope="force" shared="true" type="max" value="1"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry name="Chaos Land Raider" id="fa36-6237-9cf3-0f4d" collective="false" hidden="false" import="true" type="upgrade">
+      <comment>Dedicated Transport Option - Needed for dedications to work for Chosen correctly.</comment>
+      <categoryLinks>
+        <categoryLink name="Dedicated Transport" id="1739-7ec2-3c5b-46c8" hidden="false" primary="true" targetId="a090-a855-c7de-f5c3"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="250"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Chaos Vehicle Upgrades" id="5539-4ea7-1b27-581b" collective="false" hidden="false" import="true" targetId="f364-8b4b-0063-e9ed" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Chaos Land Raider" id="a468-ca04-56fb-1558" hidden="false" targetId="45e4-6250-0ecf-34fc" type="profile"/>
+        <infoLink name="Lascannon" id="893f-8b3c-7f4a-9056" hidden="false" targetId="a160-d79e-e7a9-2e9c" type="profile">
+          <modifiers>
+            <modifier field="name" type="set" value="2x Twin-Linked Lascannons"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Heavy Bolter" id="aac6-bb7a-6db1-91f8" hidden="false" targetId="b9aa-366b-bd62-4692" type="profile">
+          <modifiers>
+            <modifier field="name" type="set" value="Twin-Linked Heavy Bolter"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <rules>
+        <rule name="Fire Control" id="027d-7fd4-4526-99ab" hidden="false">
+          <description>The vehicle may always fire one additional weapon system to those that would normally be able to be fired giving the speed or status of the vehicle. This shot may even be targetting at a different target than that engaged by the crew. It is conducted with a BS 2.</description>
+        </rule>
+        <rule name="Infernal Device" id="f643-0297-f4c6-cc78" hidden="false">
+          <description>If the crew are stunned then the vehicle may still be moved directly ahead in a straight line up to its maximum move.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Marks of Chaos" id="4171-c75d-6633-1a19" collapsible="true" collective="false" hidden="false" import="true">
-      <comment>How to code god rivalries?</comment>
       <constraints>
         <constraint id="f79f-d423-65b9-b20a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
@@ -10388,6 +10877,10 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                     <condition childId="27ce-133c-8642-08c9" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                     <condition childId="1e04-4929-9719-63a1" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                     <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="1568-261f-27d9-590d" childName="Emperor&apos;s Children" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="2bd3-6edb-d462-4c45" childName="Book of Slaanesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="c0b7-60b7-488d-1c6a" childName="Thousand Sons" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="4bde-bf7f-8300-7011" childName="Death Guard" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10405,25 +10898,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                   </conditionGroups>
                   <conditions>
                     <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="error" type="add" value="The Chaos Lord may only have the Mark of Khorne is the army has the Book of Khorne or is the World Eaters Legion.">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                        <condition childId="4eb5-4eb0-befd-4b10" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition childId="9fda-9a74-56c3-7c97" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="false" type="instanceOf" value="0"/>
-                    <condition childId="3ab9-f908-ab00-7315" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="primary-catalogue" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="1d3d-b09e-2e64-36ca" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10465,6 +10939,10 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                     <condition childId="27ce-133c-8642-08c9" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                     <condition childId="1e04-4929-9719-63a1" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                     <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="bf11-860d-bf55-80d2" childName="World Eaters" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="1568-261f-27d9-590d" childName="Emperor&apos;s Children" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="96c6-bd96-8ef2-0815" childName="Book of Tzeentch" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="c0b7-60b7-488d-1c6a" childName="Thousand Sons" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10482,25 +10960,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                   </conditionGroups>
                   <conditions>
                     <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="error" type="add" value="The Chaos Lord may only have the Mark of Nurgle is the army has the Book of Nurgle or is the Death Guard Legion.">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                        <condition childId="0323-dc21-f71b-dc94" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition childId="9fda-9a74-56c3-7c97" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="false" type="instanceOf" value="0"/>
-                    <condition childId="3ab9-f908-ab00-7315" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="primary-catalogue" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="69f7-7a85-13fa-eeb4" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10541,6 +11000,10 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                     <condition childId="27ce-133c-8642-08c9" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                     <condition childId="1e04-4929-9719-63a1" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                     <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="4bde-bf7f-8300-7011" childName="Death Guard" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="bf11-860d-bf55-80d2" childName="World Eaters" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="4eb5-4eb0-befd-4b10" childName="Book of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="c0b7-60b7-488d-1c6a" childName="Thousand Sons" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10558,25 +11021,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                   </conditionGroups>
                   <conditions>
                     <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="error" type="add" value="The Chaos Lord may only have the Mark of Slaanesh is the army has the Book of Slaanesh or is the Emperor&apos;s Children Legion.">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                        <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition childId="9fda-9a74-56c3-7c97" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="false" type="instanceOf" value="0"/>
-                    <condition childId="3ab9-f908-ab00-7315" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="primary-catalogue" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="8a51-3987-58e1-5c44" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10619,6 +11063,10 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                     <condition childId="c55f-ec20-9309-e550" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                     <condition childId="1e04-4929-9719-63a1" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                     <condition childId="ecb2-eb51-b170-bf0e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="4bde-bf7f-8300-7011" childName="Death Guard" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="bf11-860d-bf55-80d2" childName="World Eaters" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="0323-dc21-f71b-dc94" childName="Book of Nurgle" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                    <condition childId="1568-261f-27d9-590d" childName="Emperor&apos;s Children" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10636,25 +11084,6 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
                   </conditionGroups>
                   <conditions>
                     <condition childId="c0b7-60b7-488d-1c6a" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="error" type="add" value="The Chaos Lord may only have the Mark of Tzeentch is the army has the Book of Tzeentch or is the Thousand Sons Legion.">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="c0b7-60b7-488d-1c6a" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                        <condition childId="96c6-bd96-8ef2-0815" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="0"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition childId="9fda-9a74-56c3-7c97" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="false" type="instanceOf" value="0"/>
-                    <condition childId="3ab9-f908-ab00-7315" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="primary-catalogue" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="44ca-fa7f-9f9a-5d33" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11840,7 +12269,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
           </costs>
           <infoLinks>
-            <infoLink name="Daemonic Reslilience" id="8bd3-2a82-0d25-6205" hidden="false" targetId="f08b-40f4-0069-5126" type="rule"/>
+            <infoLink name="Daemonic Resilience" id="8bd3-2a82-0d25-6205" hidden="false" targetId="f08b-40f4-0069-5126" type="rule"/>
           </infoLinks>
           <modifiers>
             <modifier field="2fa8-8d32-5f6b-3195" type="set" value="0">
@@ -12009,7 +12438,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
           </costs>
           <infoLinks>
-            <infoLink name="Daemonic Reslilience" id="4455-5138-31c5-9f41" hidden="false" targetId="f08b-40f4-0069-5126" type="rule"/>
+            <infoLink name="Daemonic Resilience" id="4455-5138-31c5-9f41" hidden="false" targetId="f08b-40f4-0069-5126" type="rule"/>
           </infoLinks>
           <modifiers>
             <modifier field="4ed5-2f92-9abc-2870" type="set" value="25">
@@ -13268,7 +13697,7 @@ A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each ro
           </modifiers>
           <rules>
             <rule name="Talisman of Tzeentch" id="6774-95a6-4c7b-e903" hidden="false">
-              <description>Opposing psykers suffer a -1 modifier to their Leadership for psyychic tests if the army includes a model with this talisman. The ability does not stack with other Talismans.</description>
+              <description>Opposing psykers suffer a -1 modifier to their Leadership for psychic tests if the army includes a model with this talisman. The ability does not stack with other Talismans. If both players have this gift they cancel each other out and the normal rules apply.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -14080,7 +14509,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
           <selectionEntries>
             <selectionEntry name="Warp Amp" id="b95d-4c4f-501f-461a" collective="false" hidden="false" import="true" type="upgrade">
               <constraints>
-                <constraint id="24ac-2ccf-d40b-cf30" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="24ac-2ccf-d40b-cf30" field="selections" includeChildForces="false" includeChildSelections="false" message="Slaanesh units may not be included in a force with a Khorne army leader." percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
@@ -14101,6 +14530,21 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier field="24ac-2ccf-d40b-cf30" type="set" value="0">
+                  <conditions>
+                    <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a090-a855-c7de-f5c3" childName="Dedicated Transport" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="8a51-3987-58e1-5c44" childName="Mark of Slaanesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="root-entry-self" shared="true" type="equalTo" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
               <rules>
                 <rule name="Warp Amp" id="57ba-df57-0b0f-e268" hidden="false">
@@ -14110,7 +14554,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
             <selectionEntry name="Plague Carrier" id="16b0-0f6e-c6bf-bcf6" collective="false" hidden="false" import="true" type="upgrade">
               <constraints>
-                <constraint id="c914-9c32-0a33-456f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="c914-9c32-0a33-456f" field="selections" includeChildForces="false" includeChildSelections="false" message="Nurgle units may not be included in a force with a Tzeentch army leader." percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
@@ -14131,6 +14575,21 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier field="c914-9c32-0a33-456f" type="set" value="0">
+                  <conditions>
+                    <condition childId="0da2-a933-99df-1a6d" childName="Leader - Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a090-a855-c7de-f5c3" childName="Dedicated Transport" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="4e40-db3e-6ca6-5e18" childName="Mark of Nurgle" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="root-entry-self" shared="true" type="equalTo" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
               <rules>
                 <rule name="Plague Carrier" id="198c-d43d-c116-945e" hidden="false">
@@ -14140,7 +14599,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
             <selectionEntry name="Coruscating Flame" id="bbc9-a2d1-e974-0210" collective="false" hidden="false" import="true" type="upgrade">
               <constraints>
-                <constraint id="acea-fb4c-0959-478d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="acea-fb4c-0959-478d" field="selections" includeChildForces="false" includeChildSelections="false" message="Tzeentch units may not be included in a force with a Nurgle army leader." percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
@@ -14154,9 +14613,25 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                         <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                         <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                         <condition childId="0323-dc21-f71b-dc94" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                        <condition childId="4e40-db3e-6ca6-5e18" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-                        <condition childId="958a-4953-9c9c-2605" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-                        <condition childId="8a51-3987-58e1-5c44" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                        <condition childId="b1cf-c764-2ad0-c229" childName="Mark of Nurgle" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                        <condition childId="039c-5796-7006-0975" childName="Mark of Khorne" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                        <condition childId="9b41-cfd0-0af7-2496" childName="Mark of Slaanesh" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="acea-fb4c-0959-478d" type="set" value="0">
+                  <comment>Tzeentch units may not be included in a force with a Nurgle army leader.</comment>
+                  <conditions>
+                    <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a090-a855-c7de-f5c3" childName="Dedicated Transport" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="44ca-fa7f-9f9a-5d33" childName="Mark of Tzeentch" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="root-entry-self" shared="true" type="equalTo" value="0"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -14170,7 +14645,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
             </selectionEntry>
             <selectionEntry name="Destroyer" id="bc7a-f372-37ea-0921" collective="false" hidden="false" import="true" type="upgrade">
               <constraints>
-                <constraint id="3129-8a1c-425d-ee89" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="3129-8a1c-425d-ee89" field="selections" includeChildForces="false" includeChildSelections="false" message="Khorne units may not be included in a force with a Slaanesh army leader." percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
@@ -14184,9 +14659,25 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                         <condition childId="c0b7-60b7-488d-1c6a" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                         <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
                         <condition childId="2bd3-6edb-d462-4c45" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
-                        <condition childId="4e40-db3e-6ca6-5e18" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-                        <condition childId="44ca-fa7f-9f9a-5d33" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-                        <condition childId="8a51-3987-58e1-5c44" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                        <condition childId="b1cf-c764-2ad0-c229" childName="Mark of Nurgle" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                        <condition childId="98bc-5939-38d6-c754" childName="Mark of Tzeentch" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                        <condition childId="9b41-cfd0-0af7-2496" childName="Mark of Slaanesh" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="3129-8a1c-425d-ee89" type="set" value="0">
+                  <comment>Khorne units may not be included in a force with a Slaanesh army leader.</comment>
+                  <conditions>
+                    <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a090-a855-c7de-f5c3" childName="Dedicated Transport" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="958a-4953-9c9c-2605" childName="Mark of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="root-entry-self" shared="true" type="equalTo" value="0"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -14195,7 +14686,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
               <rules>
                 <rule name="Destroyer" id="2b5e-ed2d-6132-d5b2" hidden="false">
                   <description>A tank with Destroyer upgrade causes enemy units forced to move due to a tank shock on a 4+ with normal saves allowed.
-A Dreadnought with Destroyer upgrade my re-roll one close combat miss in each round of close combat, and when rolling for Fire Frenzy will trigger Blood Rage on a 1 or 2.</description>
+A Dreadnought with Destroyer upgrade may re-roll one close combat miss in each round of close combat, and when rolling for Fire Frenzy will trigger Blood Rage on a 1 or 2.</description>
                 </rule>
               </rules>
             </selectionEntry>
