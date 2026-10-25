@@ -1554,6 +1554,130 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
                 <infoLink name="Splinter Rifle" id="24d6-f73d-a899-3156" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
               </infoLinks>
             </selectionEntry>
+    <selectionEntry name="Venom Squad" id="venom-squad-001" collective="false" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="venom-inf-001" hidden="false" primary="false" targetId="6953-6bba-0bb9-d49d"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Venom" id="venom-squad-venom-001" collective="false" hidden="false" import="true" sortIndex="1" targetId="552b-611b-8737-5317" type="selectionEntry">
+          <constraints>
+            <constraint id="venom-squad-venom-constraint" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
+          </costs>
+          <modifiers>
+            <modifier field="venom-squad-venom-constraint" type="set" value="0">
+              <conditions>
+                <condition childId="venom-squad-warriors-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="greaterThan" value="6"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Warriors" id="venom-squad-warriors-001" collective="false" defaultSelectionEntryId="venom-warrior-001" hidden="false" import="true" sortIndex="1">
+          <constraints>
+            <constraint id="venom-warrior-max-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="6"/>
+            <constraint id="venom-warrior-min-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Warrior" id="venom-warrior-001" collective="false" hidden="false" import="true" sortIndex="1" type="model">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Warrior" id="venom-warrior-profile-001" hidden="false" targetId="cd5e-2c2b-9efa-5231" type="profile"/>
+                <infoLink name="Splinter Rifle" id="venom-splinter-rifle-001" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Sybarite" id="venom-sybarite-001" collapsible="true" collective="false" hidden="false" import="true" sortIndex="2" type="model">
+              <constraints>
+                <constraint id="venom-sybarite-max-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="14"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Dark Eldar Armory" id="venom-armory-001" collective="false" hidden="false" import="true" targetId="cc28-fd8b-3aad-f42f" type="selectionEntryGroup"/>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Sybarite" id="venom-sybarite-profile-001" hidden="false" targetId="d1a1-d128-0860-a03b" type="profile"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="venom-sybarite-weapon-001" collective="false" hidden="false" import="true">
+                  <constraints>
+                    <constraint id="venom-sybarite-weapon-constraint-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry name="Splinter Rifle" id="venom-sybarite-rifle-001" collective="false" hidden="false" import="true" type="upgrade">
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Splinter Rifle" id="venom-sybarite-rifle-link-001" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Shredder" id="venom-sybarite-shredder-001" collective="false" hidden="false" import="true" type="upgrade">
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Shredder" id="venom-sybarite-shredder-link-001" hidden="false" targetId="f097-1dd4-942c-3206" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Blaster" id="venom-sybarite-blaster-001" collective="false" hidden="false" import="true" type="upgrade">
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Blaster" id="venom-sybarite-blaster-link-001" hidden="false" targetId="c161-89b0-1ad0-f8d3" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons" id="venom-squad-weapons-001" collective="false" hidden="false" import="true" sortIndex="2">
+          <constraints>
+            <constraint id="venom-squad-weapons-constraint-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Dark Lance" id="venom-dark-lance-001" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Dark Lance" id="venom-dark-lance-link-001" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
+              </infoLinks>
+              <rules>
+                <rule name="Lance" id="venom-lance-rule-001" hidden="false">
+                  <description>A lance weapons counts Armor values higher than 12 as 12.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry name="Splinter Cannon" id="venom-splinter-cannon-001" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Splinter Cannon" id="venom-splinter-cannon-link-001" hidden="false" targetId="dc54-e209-b701-3881" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <rules>
+        <rule name="Homebrew" id="venom-homebrew-rule-001" hidden="false">
+          <description>This unit is only available in Homebrew games and cannot be used in Official games.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
             <selectionEntry name="Sybarite" id="9ea8-032e-a95e-356e" collapsible="true" collective="false" hidden="false" import="true" sortIndex="2" type="model">
               <constraints>
                 <constraint id="f19a-aebf-2f12-7e18" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
