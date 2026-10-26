@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Dark Eldar (2001)" id="c1aa-7a7a-4831-e6fb" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="11" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Dark Eldar (2001)" id="c1aa-7a7a-4831-e6fb" battleScribeVersion="2.03" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" library="false" revision="15" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Archon Lord" id="a236-2a94-733b-317a" collective="false" hidden="false" import="true" targetId="7a61-a52d-11c2-0a92" type="selectionEntry">
       <categoryLinks>
@@ -67,6 +67,11 @@
     <entryLink name="Raider Squad" id="f5d6-d3d0-4020-cdaf" collective="false" hidden="false" import="true" targetId="db69-fd2e-b675-38ce" type="selectionEntry">
       <categoryLinks>
         <categoryLink name="Troops" id="15cc-445d-85e0-3149" hidden="false" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink name="Venom Squad" id="venom-squad-entry-001" collective="false" hidden="false" import="true" targetId="venom-squad-001" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Troops" id="venom-squad-troops-001" hidden="false" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
       </categoryLinks>
     </entryLink>
     <entryLink name="Ravager" id="e94b-73eb-bdc7-d6f8" collective="false" hidden="false" import="true" targetId="349f-55e3-aa81-cbce" type="selectionEntry">
@@ -579,6 +584,104 @@
         <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
       </characteristics>
     </profile>
+    <profile name="Venom" id="8e3c-4a1f-2b7d-9f05" hidden="false" typeId="0ef1-7861-4312-c7aa" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Front Armor" typeId="6723-22c2-f6f0-6cbf">10</characteristic>
+        <characteristic name="Side Armor" typeId="ef72-8ecb-1637-97bb">10</characteristic>
+        <characteristic name="Rear Armor" typeId="99bc-d564-3760-e4b0">10</characteristic>
+        <characteristic name="BS" typeId="b109-f88e-dcc7-8a24">4</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Venom Blade" id="a7f2-1c9e-3d8b-6f4a" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Melee Weapon">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">-</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">User+1</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee, Poisoned (2+)</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Venom Blade wounds on a 2+ regardless of the Toughness of the target.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Power Weapon" id="b3d4-7e1a-5c2f-8a6b" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Melee Weapon">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">-</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">User+1</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee, Power Weapon</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile name="Electrocorrosive Whip" id="c8e5-9f2b-4d3a-7c1e" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Melee Weapon">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">-</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">3</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee, Electrocorrosive Whip</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Electrocorrosive Whip wounds on a 2+ regardless of the Toughness of the target.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blast Pistol" id="d9f6-a3c4-5e2b-8d7f" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">6&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">4</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol, Blast</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile name="Hydra Gauntlets" id="e1a7-b4d5-6f3c-9e2a" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Melee Weapon">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">-</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Hydra Gauntlets automatically hit in close combat.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Shardnet and Impaler" id="f2b8-c5e6-7a4d-a3b1" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Melee Weapon">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">-</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee, Shardnet, Impaler</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Shardnet and Impaler. On a hit of 6, the target is pinned and cannot move or fire until the Wych&apos;s next turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Razorflails" id="a3c9-d6f7-8b5e-b4c2" hidden="false" typeId="1e16-2bd8-7cad-379b" typeName="Melee Weapon">
+      <characteristics>
+        <characteristic name="WS" typeId="c704-6128-f143-935a">-</characteristic>
+        <characteristic name="S" typeId="df03-6292-d3f5-f778">User+1</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee, Flails</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Razorflails wound on a 3+ regardless of the Toughness of the target.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Twin-linked Splinter Rifle" id="b4da-e7a8-9c6f-c5d3" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">24&quot;</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Rapid Fire 2, Twin-linked</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile name="Flickerfield" id="c5eb-f8b9-ad7g-d6e4" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">-</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">-</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Wargear</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Once per game, the Flickerfield may be activated to give the vehicle a 5+ invulnerable save until the end of the turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Night Vision" id="d6fc-a9ca-be8h-e7f5" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">-</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">-</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Wargear</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">This vehicle has Night Vision, allowing it to fire and move normally in darkness.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Fleet of Foot" id="9c47-d53c-1a35-a0f4" hidden="false">
@@ -797,6 +900,7 @@ f) +1 Attack</description>
         <entryLink name="Raider" id="d3db-acd0-896c-cb43" collective="false" hidden="false" import="true" sortIndex="5" targetId="719b-61b0-b347-5f41" type="selectionEntry">
           <constraints>
             <constraint id="9dc6-0e1f-9fcb-dffd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="raider-exclude-venom" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="excludes" value="venom-001"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
@@ -826,6 +930,15 @@ f) +1 Attack</description>
               </conditionGroups>
             </modifier>
           </modifiers>
+        </entryLink>
+        <entryLink name="Venom" id="venom-001" collective="false" hidden="false" import="true" sortIndex="6" targetId="552b-611b-8737-5317" type="selectionEntry">
+          <constraints>
+            <constraint id="venom-constraint" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="venom-exclude-raider" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="excludes" value="d3db-acd0-896c-cb43"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
+          </costs>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -1440,6 +1553,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
                 <infoLink name="Splinter Rifle" id="24d6-f73d-a899-3156" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
               </infoLinks>
             </selectionEntry>
+            <entryLink name="Venom Squad" id="venom-squad-ref-001" collective="false" hidden="false" import="true" targetId="venom-squad-001" type="selectionEntry"/>
             <selectionEntry name="Sybarite" id="9ea8-032e-a95e-356e" collapsible="true" collective="false" hidden="false" import="true" sortIndex="2" type="model">
               <constraints>
                 <constraint id="f19a-aebf-2f12-7e18" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -1529,6 +1643,130 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               </costs>
               <infoLinks>
                 <infoLink name="Splinter Cannon" id="957d-565b-5159-e28d" hidden="false" targetId="dc54-e209-b701-3881" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Venom Squad" id="venom-squad-001" collective="false" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Troops" id="venom-squad-troops-002" hidden="false" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Venom" id="venom-squad-venom-001" collapsible="true" collective="false" hidden="false" import="true" sortIndex="1" targetId="552b-611b-8737-5317" type="selectionEntry">
+          <constraints>
+            <constraint id="venom-squad-venom-constraint" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
+          </costs>
+          <modifiers>
+            <modifier field="venom-squad-venom-constraint" type="set" value="0">
+              <conditions>
+                <condition childId="venom-squad-warriors-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="greaterThan" value="7"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <rules>
+        <rule name="Homebrew" id="venom-homebrew-rule-001" hidden="false">
+          <description>This unit is only available in Homebrew games and cannot be used in Official games.</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Warriors" id="venom-squad-warriors-001" collective="false" defaultSelectionEntryId="venom-warrior-001" hidden="false" import="true" sortIndex="1">
+          <constraints>
+            <constraint id="venom-warrior-max-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="7"/>
+            <constraint id="venom-warrior-min-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Warrior" id="venom-warrior-001" collective="false" hidden="false" import="true" sortIndex="1" type="model">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="8"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Warrior" id="venom-warrior-profile-001" hidden="false" targetId="cd5e-2c2b-9efa-5231" type="profile"/>
+                <infoLink name="Splinter Rifle" id="venom-splinter-rifle-001" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Sybarite" id="venom-sybarite-001" collapsible="true" collective="false" hidden="false" import="true" sortIndex="2" type="model">
+              <constraints>
+                <constraint id="venom-sybarite-max-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="14"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Dark Eldar Armory" id="venom-armory-001" collective="false" hidden="false" import="true" targetId="cc28-fd8b-3aad-f42f" type="selectionEntryGroup"/>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Sybarite" id="venom-sybarite-profile-001" hidden="false" targetId="d1a1-d128-0860-a03b" type="profile"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="venom-sybarite-weapon-001" collective="false" hidden="false" import="true">
+                  <constraints>
+                    <constraint id="venom-sybarite-weapon-constraint-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry name="Splinter Rifle" id="venom-sybarite-rifle-001" collective="false" hidden="false" import="true" type="upgrade">
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Splinter Rifle" id="venom-sybarite-rifle-link-001" hidden="false" targetId="7551-db77-f751-a050" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Shredder" id="venom-sybarite-shredder-001" collective="false" hidden="false" import="true" type="upgrade">
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Shredder" id="venom-sybarite-shredder-link-001" hidden="false" targetId="f097-1dd4-942c-3206" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry name="Blaster" id="venom-sybarite-blaster-001" collective="false" hidden="false" import="true" type="upgrade">
+                      <costs>
+                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Blaster" id="venom-sybarite-blaster-link-001" hidden="false" targetId="c161-89b0-1ad0-f8d3" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons" id="venom-squad-weapons-001" collective="false" hidden="false" import="true" sortIndex="2">
+          <constraints>
+            <constraint id="venom-squad-weapons-constraint-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Dark Lance" id="venom-dark-lance-001" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Dark Lance" id="venom-dark-lance-link-001" hidden="false" targetId="8fc4-ffbc-ce70-c5bf" type="profile"/>
+              </infoLinks>
+              <rules>
+                <rule name="Lance" id="venom-lance-rule-001" hidden="false">
+                  <description>A lance weapons counts Armor values higher than 12 as 12.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry name="Splinter Cannon" id="venom-splinter-cannon-001" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Splinter Cannon" id="venom-splinter-cannon-link-001" hidden="false" targetId="dc54-e209-b701-3881" type="profile"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
@@ -2182,7 +2420,87 @@ If the test if ailed the psyker is removed from play with no saves of any kind a
       </modifiers>
     </selectionEntry>
     <selectionEntry name="Voidraven Bomber (Homebrew)" id="876a-e65e-de19-bd7e" collective="false" hidden="false" import="true" type="upgrade"/>
-    <selectionEntry name="Venom (Homebrew)" id="552b-611b-8737-5317" collective="false" hidden="false" import="true" type="upgrade"/>
+    <selectionEntry name="Venom" id="552b-611b-8737-5317" collective="false" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Dedicated Transport" id="8c2a-4f1b-9e3d-7a5c" hidden="false" primary="true" targetId="a090-a855-c7de-f5c3"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Venom" id="81a4-5fc9-2544-aa5e" hidden="false" targetId="8e3c-4a1f-2b7d-9f05" type="profile"/>
+        <infoLink name="Splinter Cannon" id="6663-ec8f-9338-c8da" hidden="false" targetId="dc54-e209-b701-3881" type="profile"/>
+        <infoLink name="Flickerfield" id="037c-b8a5-bf15-ed9e" hidden="false" targetId="c5eb-f8b9-ad7g-d6e4" type="profile"/>
+        <infoLink name="Open-Topped" id="66e5-9bb4-18a5-89c8" hidden="false" targetId="4795-fd7c-2846-78ba" type="rule"/>
+        <infoLink name="Fast" id="8558-7e28-67fd-f5d5" hidden="false" targetId="b35d-993f-e267-1ec0" type="rule"/>
+        <infoLink name="Skimmer" id="7c2a-cde2-565c-c65b" hidden="false" targetId="e111-c9c6-72de-1626" type="rule"/>
+        <infoLink name="Night Vision" id="dfed-918f-7ba9-a775" hidden="false" targetId="d6fc-a9ca-be8h-e7f5" type="profile"/>
+      </infoLinks>
+      <rules>
+        <rule name="Transport" id="venom-transport-001" hidden="false">
+          <description>Transport: The Venom can transport between 5 to 7 Dark Eldar models.</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Loadout" id="9a7c-3e5f-8b2d-4c6a" defaultSelectionEntryId="tlsr-default-001" hidden="false" import="true" sortIndex="1">
+          <constraints>
+            <constraint id="load-min-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="load-max-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Twin-linked Splinter Rifle" id="tlsr-default-001" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Twin-linked Splinter Rifle" id="tlsr-link-001" hidden="false" targetId="b4da-e7a8-9c6f-c5d3" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Splinter Cannon" id="sc-001" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Splinter Cannon" id="sc-link-001" hidden="false" targetId="dc54-e209-b701-3881" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Vehicle Upgrades" id="vu-001" collapsible="true" collective="false" hidden="false" import="true" sortIndex="3">
+          <selectionEntries>
+            <selectionEntry name="Flickerfield" id="fl-001" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="fl-constraint-001" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Flickerfield" id="fl-link-001" hidden="false" targetId="c5eb-f8b9-ad7g-d6e4" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Experimental Microwarp Drive" id="1f78-fb86-0349-e4e4" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="9557-f89f-b970-46be" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+              <rules>
+                <rule name="Experimental Microwarp Drive" id="3e82-085c-09d8-795c" hidden="false">
+                  <description>By incorporating the forbidden art of warp-based technology into this transport, the pilot gains a dangerous edge in combat.
+DURING THE MOVEMENT PHASE (before moving the Venom): The controlling player may roll one D6.
+
+- Roll 5 or 6: The Venom gains the rolled movement as extra movement characteristics this phase AND receives a 6+ invulnerable save until the start of the controlling player&apos;s next movement phase.
+- Roll 2-4: The Venom gains only the rolled movement as extra movement characteristics this phase (no invulnerable save).
+- Roll 1: The Venom immediately suffers one penetrating hit. This upgrade cannot be used again for the remainder of the game.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Dark Eldar Armory" id="cc28-fd8b-3aad-f42f" collapsible="true" collective="false" hidden="false" import="true">
