@@ -3175,6 +3175,26 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink name="Venom" id="e231-6b65-b8ce-8b7d" collective="false" hidden="false" import="true" sortIndex="5" targetId="552b-611b-8737-5317" type="selectionEntry">
+          <constraints>
+            <constraint id="9a50-0ac7-2aaf-280d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
+          </costs>
+          <modifiers>
+            <modifier field="9a50-0ac7-2aaf-280d" type="set" value="0">
+              <conditions>
+                <condition childId="e380-6bdd-2f13-2f1d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="greaterThan" value="7"/>
+              </conditions>
+            </modifier>
+            <modifier field="9a50-0ac7-2aaf-280d" type="set" value="0">
+              <conditions>
+                <condition childId="e380-6bdd-2f13-2f1d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Splinter Pistol" id="c802-7743-e50f-c673" hidden="false" targetId="2970-d6c7-ba60-1ed1" type="profile">
@@ -3394,6 +3414,44 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
               </conditionGroups>
             </modifier>
             <modifier field="ad43-3a56-b1b7-608a" type="set" value="0">
+              <conditions>
+                <condition childId="01c3-c218-0977-858d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Venom" id="8c2b-c510-1bdb-35f5" collective="false" hidden="false" import="true" sortIndex="6" targetId="552b-611b-8737-5317" type="selectionEntry">
+          <constraints>
+            <constraint id="ad43-3a56-b1b7-608b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="55"/>
+          </costs>
+          <modifiers>
+            <modifier field="ad43-3a56-b1b7-608b" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="01c3-c218-0977-858d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="greaterThan" value="7"/>
+                        <condition childId="1807-7f0f-8101-7ef9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="01c3-c218-0977-858d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="greaterThan" value="7"/>
+                        <condition childId="5f66-3ec8-dd9d-0c06" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition childId="01c3-c218-0977-858d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="greaterThan" value="8"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="ad43-3a56-b1b7-608b" type="set" value="0">
               <conditions>
                 <condition childId="01c3-c218-0977-858d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
               </conditions>
