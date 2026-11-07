@@ -3384,7 +3384,7 @@ Blind/smoke grenades are used in the Shooting phase instead of the unit firing a
                             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
                           </costs>
                         </selectionEntry>
-                        <selectionEntry name="Melta Bombs" id="b930-9cfc-cache-e2bb" collective="false" hidden="false" import="true" type="upgrade">
+                        <selectionEntry name="Melta Bombs" id="b930-9cfc-cace-e2bb" collective="false" hidden="false" import="true" type="upgrade">
                           <constraints>
                             <constraint id="29b9-0edf-4c42-9ccb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                           </constraints>
