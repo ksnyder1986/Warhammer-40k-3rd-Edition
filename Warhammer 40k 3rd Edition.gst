@@ -1458,7 +1458,7 @@
         <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">+1 A if model is equiped with a second CCW or Pistol</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">+1 A if model is equipped with a second CCW or Pistol</characteristic>
       </characteristics>
     </profile>
     <profile name="Skorcha" id="a162-3683-bca7-8f2c" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1632,7 +1632,7 @@
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If you roll a 1 to hit with a plasma weapon it has overheated and injured the model firing it. Make an armor save for the model, otherwise it will suffer a wound. Plasma weapons on vehicles are not affected by overheating.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Missle Pod" id="0f38-81fa-b5b9-0663" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile name="Missile Pod" id="0f38-81fa-b5b9-0663" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">36&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">7</characteristic>
@@ -1656,7 +1656,7 @@
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Assault 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If targetting a vehicle within 6&quot; roll 2D6 for armor penetration.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">If targeting a vehicle within 6&quot; roll 2D6 for armor penetration.</characteristic>
       </characteristics>
     </profile>
     <profile name="Smart Missile System" id="a92d-c02e-9701-2405" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1665,7 +1665,7 @@
         <characteristic name="S" typeId="24d8-2110-08fa-d844">5</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 4</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Smart Missile can engage any target in range regardless of whether there is a line of sight to it or not. The target can count the benefits of cover they are in or touching. If fighting at night, the range to the target is reduced as normal because the missle&apos;s sensors are less likely to identify and confirm the target.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Smart Missile can engage any target in range regardless of whether there is a line of sight to it or not. The target can count the benefits of cover they are in or touching. If fighting at night, the range to the target is reduced as normal because the missile&apos;s sensors are less likely to identify and confirm the target.</characteristic>
       </characteristics>
     </profile>
     <profile name="Railgun (solid shot)" id="2748-95a6-70de-824a" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1693,7 +1693,7 @@
         <characteristic name="S" typeId="24d8-2110-08fa-d844">-</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Models roll to hit normally when using a markerlight. Each hit can be used to either launch a seeker missle or to mark a target for another vehicle or model. If marking a target then one other vehicle or model in the Tau force which has yet to fire can change its to hit roll against the marked target to 2+ with a single weapon during the same Shooting phase. Re-rolls for twin-linked weapons still apply to the improved to hit roll.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Models roll to hit normally when using a markerlight. Each hit can be used to either launch a seeker missile or to mark a target for another vehicle or model. If marking a target then one other vehicle or model in the Tau force which has yet to fire can change its to hit roll against the marked target to 2+ with a single weapon during the same Shooting phase. Re-rolls for twin-linked weapons still apply to the improved to hit roll.</characteristic>
       </characteristics>
     </profile>
     <profile name="Pulse Rifle" id="a939-0e4e-2430-0ef2" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -1750,7 +1750,7 @@
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
     </profile>
-    <profile name="Seeker Missle" id="7496-dcbe-e677-3ecf" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+    <profile name="Seeker Missile" id="7496-dcbe-e677-3ecf" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Unlimited</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">8</characteristic>
@@ -2154,7 +2154,7 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="S" typeId="24d8-2110-08fa-d844">*</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">4</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Heavy 1 Ord Blast</characteristic>
-        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wound on a 4+. Open-topped vehicles suffer a sinlge glancing hit. All other vehicles cannot be hurt.</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Always wound on a 4+. Open-topped vehicles suffer a single glancing hit. All other vehicles cannot be hurt.</characteristic>
       </characteristics>
     </profile>
     <profile name="Biovore" id="26c4-9cb1-3a4a-0448" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
@@ -4499,7 +4499,7 @@ Weapon Destroyed results may choose to remove this weapon.</description>
                           </costs>
                           <rules>
                             <rule name="Personal Icon" id="0cae-8c6d-e3ed-5530" hidden="false">
-                              <description>The model bears the Icon of the God aligned with thier Marl. This Icon can be used for Daemon Summoning just like unit Icons.</description>
+                              <description>The model bears the Icon of the God aligned with their Marl. This Icon can be used for Daemon Summoning just like unit Icons.</description>
                             </rule>
                           </rules>
                         </selectionEntry>
