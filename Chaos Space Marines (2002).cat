@@ -68,7 +68,7 @@
         <categoryLink name="Configuration" id="fbb4-ac0f-f5da-7850" primary="true" targetId="18d4-c759-8e80-4eb6"/>
       </categoryLinks>
     </entryLink>
-    <entryLink name="Khorne Beserkers" id="5683-f410-4726-2b5c" collective="false" hidden="false" import="true" targetId="df6a-ef9f-483a-2b06" type="selectionEntry">
+    <entryLink name="Khorne Berzerkers" id="5683-f410-4726-2b5c" collective="false" hidden="false" import="true" targetId="df6a-ef9f-483a-2b06" type="selectionEntry">
       <comment>Elite Choice</comment>
       <categoryLinks>
         <categoryLink name="Elites" id="c247-01b1-6fba-1e12" primary="true" targetId="6d25-b346-c314-6911"/>
@@ -187,7 +187,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink name="Khorne Beserker Bikers" id="0791-95a1-8f00-5768" collective="false" hidden="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
+    <entryLink name="Khorne Berzerker Bikers" id="0791-95a1-8f00-5768" collective="false" hidden="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
       <comment>Elite Choice</comment>
       <categoryLinks>
         <categoryLink name="Elites" id="a355-466c-3d60-3a3f" primary="true" targetId="6d25-b346-c314-6911"/>
@@ -343,7 +343,7 @@
     <entryLink name="Khorne Lord of Skulls (Homebrew)" id="eaa3-0ecd-666c-6bc6" collective="false" hidden="false" import="true" targetId="76e8-0006-d8f4-e536" type="selectionEntry"/>
     <entryLink name="Mounted Daemonette Daemon Pack" id="f858-1e3f-e102-7430" collective="false" hidden="false" import="true" targetId="ee9c-7446-f48a-f942" type="selectionEntry"/>
     <entryLink name="Kharn the Betrayer" id="e279-4747-818e-a3d8" collective="false" hidden="false" import="true" targetId="6b75-5c8b-898f-eaa0" type="selectionEntry"/>
-    <entryLink name="Khorne Beserker Bikers" id="a047-2009-6447-1a08" collective="false" hidden="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
+    <entryLink name="Khorne Berzerker Bikers" id="a047-2009-6447-1a08" collective="false" hidden="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
       <comment>Fast Attack Choice</comment>
       <categoryLinks>
         <categoryLink name="Fast Attack" id="8dd9-7405-2cf6-271e" primary="true" targetId="34e2-d53c-28ab-44cf"/>
@@ -362,7 +362,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink name="Khorne Beserkers" id="6ddc-4662-f48a-5774" collective="false" hidden="false" import="true" targetId="df6a-ef9f-483a-2b06" type="selectionEntry">
+    <entryLink name="Khorne Berzerkers" id="6ddc-4662-f48a-5774" collective="false" hidden="false" import="true" targetId="df6a-ef9f-483a-2b06" type="selectionEntry">
       <comment>Troop Choice</comment>
       <categoryLinks>
         <categoryLink name="Troops" id="2de8-5bdf-96cf-9315" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
@@ -2498,6 +2498,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <modifier field="error" type="add" value="Khorne units may not be included in a force with a Slaanesh army leader.">
           <conditions>
             <condition childId="5ea5-737a-c89a-09e8" childName="Leader - Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+            <condition childId="self" childName="self" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2574,6 +2575,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <modifier field="error" type="add" value="Nurgle units may not be included in a force with a Tzeentch army leader.">
           <conditions>
             <condition childId="0da2-a933-99df-1a6d" childName="Leader - Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+            <condition childId="self" childName="self" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2581,6 +2583,8 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
     <selectionEntry name="Lord of Change" id="80d5-b9f3-b03a-713e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Independent Character" id="17be-e90d-c593-a144" hidden="false" primary="false" targetId="3c96-248b-affd-e504"/>
+        <categoryLink name="Sorcerer" id="a841-0142-6108-febb" hidden="false" primary="false" targetId="d832-0917-094f-7627"/>
+        <categoryLink name="Mark of Tzeentch" id="cf54-8e5a-457d-5225" hidden="false" primary="false" targetId="98bc-5939-38d6-c754"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="160"/>
@@ -2642,6 +2646,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <modifier field="error" type="add" value="Tzeentch units may not be included in a force with a Nurgle army leader.">
           <conditions>
             <condition childId="a2ce-8cc6-991e-9da6" childName="Leader - Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+            <condition childId="self" childName="self" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2712,6 +2717,7 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
         <modifier field="error" type="add" value="Slaanesh units may not be included in a force with a Khorne army leader.">
           <conditions>
             <condition childId="4e12-8e60-3389-b1e1" childName="Leader - Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+            <condition childId="self" childName="self" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11804,24 +11810,6 @@ A Dreadnought with Destroyer upgrade may re-roll one close combat miss in each r
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry name="Doombolt" id="0d54-e470-34da-bd4a" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="1d3f-dcb8-3e39-44aa" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Doombolt" id="47cc-005b-1023-d326" hidden="false" targetId="e9e7-df30-ebf6-220e" type="profile"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
-              <conditions>
-                <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
         <selectionEntry name="Familiar" id="f6d7-8c4b-375b-32a7" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>
             <constraint id="bacd-03fc-c975-5d8f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -11847,55 +11835,6 @@ A Dreadnought with Destroyer upgrade may re-roll one close combat miss in each r
               <description>A sorcerer with a Familiar may have two many psychic powers, but only one major power may be used per player turn.</description>
             </rule>
           </rules>
-        </selectionEntry>
-        <selectionEntry name="Gift of Chaos" id="1825-73b1-3540-d45f" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="558c-5a8e-75e9-ae9e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Gift of Chaos" id="62f6-e21b-8b0c-d035" hidden="false" targetId="d8fe-9262-6b98-6c8d" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
-              <conditions>
-                <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Mass Mutation" id="8f0b-6b2c-f145-0882" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="7059-dc96-c960-d946" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Mass Mutation" id="3723-9259-3024-158e" hidden="false" targetId="4275-903e-e63f-fc4e" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="7059-dc96-c960-d946" type="set" value="0">
-              <conditions>
-                <condition childId="50e1-b8c9-703d-63a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-              </conditions>
-            </modifier>
-            <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
-              <conditions>
-                <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Minor Psychic Power" id="bb13-c6a9-2d00-3a55" collective="false" hidden="false" import="true" type="upgrade">
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Minor Psychic Power" id="b068-7f8f-b1d6-6a5f" hidden="false" targetId="69af-f095-551d-130c" type="rule"/>
-          </infoLinks>
         </selectionEntry>
         <selectionEntry name="Warp Focus" id="4b39-3332-0900-15c5" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>
@@ -11947,165 +11886,270 @@ A Dreadnought with Destroyer upgrade may re-roll one close combat miss in each r
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry name="Wind of Chaos" id="d171-3225-47c1-3953" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="d919-c1e8-3416-afdc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Wind of Chaos" id="9d20-c617-a3be-72e6" hidden="false" targetId="407d-3d2d-6d8f-2708" type="profile"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
-              <conditions>
-                <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Bolt of Change" id="41a3-868a-4c88-42fd" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="cd96-7000-5248-93f1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Bolt of Change" id="1daf-f437-d3d6-12a9" hidden="false" targetId="1ea7-2c26-8ebf-d9d3" type="profile"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
-                    <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
-              <conditions>
-                <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Twisting Path" id="c61e-5781-8085-f70a" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="86f7-07f3-3184-5e0e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="The Twisting Path" id="916e-eee6-ef14-1f52" hidden="false" targetId="3761-7c2c-7bc7-e3c8" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
-                    <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
-              <conditions>
-                <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Tzeentch Minor Psychic Power" id="2cea-50b0-55cc-4ac6" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="75be-1a34-31f5-1fa6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="6"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Tzeentch Minor Psyker Powers" id="b384-3c2f-07a7-ea2b" hidden="false" targetId="1eee-b303-b1ea-f78e" type="rule"/>
-            <infoLink name="Pink Fire of Tzeentch" id="bab8-2279-3ca2-5ff5" hidden="false" targetId="6920-015e-17bd-1289" type="rule"/>
-            <infoLink name="Psychic Duel" id="fb15-a3eb-a7c4-5d84" hidden="false" targetId="b1cf-a68e-c8c0-52f9" type="rule"/>
-            <infoLink name="Reckoning of Tzeentch" id="37c2-e7f3-a3ac-0e88" hidden="false" targetId="e5e3-a24e-9514-de50" type="rule"/>
-            <infoLink name="Weaver of Fates" id="6df6-a9ba-97d9-9b54" hidden="false" targetId="d3ec-f808-ba7f-c813" type="rule"/>
-            <infoLink name="Withering Gaze" id="553c-494d-a12e-798d" hidden="false" targetId="3df6-5bbb-68c7-4feb" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
-                    <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Slaanesh Minor Psychic Power" id="eb30-3edd-c0dc-7b3b" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="4439-ea65-25e1-3d95" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="6"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Slaanesh Minor Psyker Powers" id="e694-d9af-33b5-c1fe" hidden="false" targetId="2add-8362-2dad-71ef" type="rule"/>
-            <infoLink name="Fuelled by Pain" id="6ac6-dcf1-0abe-d271" hidden="false" targetId="c292-2f5c-87d8-35ac" type="rule"/>
-            <infoLink name="Siren" id="9b23-2052-9a19-894f" hidden="false" targetId="2fd6-8da5-9179-f4bd" type="rule"/>
-            <infoLink name="Beam of Slaanesh" id="a4a6-5cad-e9f3-b61a" hidden="false" targetId="62d7-2061-30dc-db0a" type="rule"/>
-            <infoLink name="Touch of Slaanesh" id="8a87-09d7-096d-71b3" hidden="false" targetId="4072-d23f-5af0-00a4" type="rule"/>
-            <infoLink name="She Who Thirsts" id="20da-2672-790f-1572" hidden="false" targetId="7c12-406b-90bd-a04c" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="9b41-cfd0-0af7-2496" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
-                    <condition childId="9b41-cfd0-0af7-2496" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Nurgle Minor Psychic Power" id="05d4-a291-60c5-b2cd" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="06bf-a818-1df5-3abe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="6"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Nurgle Minor Psyker Powers" id="735d-854a-b858-f2a2" hidden="false" targetId="8c31-703e-997d-0c69" type="rule"/>
-            <infoLink name="Nurgle&apos;s Dance" id="6424-3fc7-1cb0-3f9f" hidden="false" targetId="5dd7-8ba8-e520-51dc" type="rule"/>
-            <infoLink name="Nausea" id="4e47-1b6c-1107-885d" hidden="false" targetId="af91-4c5c-ce1d-094b" type="rule"/>
-            <infoLink name="Affliction" id="779f-e971-01df-8828" hidden="false" targetId="0b0c-b1f6-6e4d-3ac7" type="rule"/>
-            <infoLink name="Miasma of Pestilence" id="cb4e-9fb8-3b9c-6832" hidden="false" targetId="9e95-e791-6089-82e2" type="rule"/>
-            <infoLink name="Aura of Decay" id="834b-f7f1-eabf-fa28" hidden="false" targetId="464b-d7cf-290d-12b7" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="b1cf-c764-2ad0-c229" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
-                    <condition childId="b1cf-c764-2ad0-c229" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Minor Psychic Powers" id="9c7e-1e5e-acd5-0a55" flatten="true" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Tzeentch Minor Psychic Power" id="f07e-818e-822c-3622" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="4e95-337a-cc8b-0bd2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="6"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Tzeentch Minor Psyker Powers" id="b991-4674-4ad4-d8a4" hidden="false" targetId="1eee-b303-b1ea-f78e" type="rule"/>
+                <infoLink name="Pink Fire of Tzeentch" id="0415-955c-93fe-648a" hidden="false" targetId="6920-015e-17bd-1289" type="rule"/>
+                <infoLink name="Psychic Duel" id="f83a-1638-8a75-2443" hidden="false" targetId="b1cf-a68e-c8c0-52f9" type="rule"/>
+                <infoLink name="Reckoning of Tzeentch" id="c513-1d21-6b5e-349c" hidden="false" targetId="e5e3-a24e-9514-de50" type="rule"/>
+                <infoLink name="Weaver of Fates" id="d7cc-f00a-16b7-4a75" hidden="false" targetId="d3ec-f808-ba7f-c813" type="rule"/>
+                <infoLink name="Withering Gaze" id="3728-0884-1570-6ffc" hidden="false" targetId="3df6-5bbb-68c7-4feb" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
+                        <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Slaanesh Minor Psychic Power" id="dfa1-87d6-95bf-4aa7" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="893c-73ea-d2f1-3e20" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="6"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Slaanesh Minor Psyker Powers" id="6410-fe87-eba6-393d" hidden="false" targetId="2add-8362-2dad-71ef" type="rule"/>
+                <infoLink name="Fuelled by Pain" id="7c0d-6082-fd88-614f" hidden="false" targetId="c292-2f5c-87d8-35ac" type="rule"/>
+                <infoLink name="Siren" id="7ca2-c048-eb38-4183" hidden="false" targetId="2fd6-8da5-9179-f4bd" type="rule"/>
+                <infoLink name="Beam of Slaanesh" id="aad0-e970-b167-2322" hidden="false" targetId="62d7-2061-30dc-db0a" type="rule"/>
+                <infoLink name="Touch of Slaanesh" id="a26c-35ea-dd7b-a06d" hidden="false" targetId="4072-d23f-5af0-00a4" type="rule"/>
+                <infoLink name="She Who Thirsts" id="fb22-c53b-236f-a0c4" hidden="false" targetId="7c12-406b-90bd-a04c" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="9b41-cfd0-0af7-2496" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
+                        <condition childId="9b41-cfd0-0af7-2496" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Nurgle Minor Psychic Power" id="56ef-ff46-6578-01b4" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="975f-4bce-39df-7606" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="6"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Nurgle Minor Psyker Powers" id="60a4-a8dd-86f4-7453" hidden="false" targetId="8c31-703e-997d-0c69" type="rule"/>
+                <infoLink name="Nurgle&apos;s Dance" id="4b47-5f08-967f-76ce" hidden="false" targetId="5dd7-8ba8-e520-51dc" type="rule"/>
+                <infoLink name="Nausea" id="fb98-2a76-98e6-9987" hidden="false" targetId="af91-4c5c-ce1d-094b" type="rule"/>
+                <infoLink name="Affliction" id="c9b5-480e-d3a7-6901" hidden="false" targetId="0b0c-b1f6-6e4d-3ac7" type="rule"/>
+                <infoLink name="Miasma of Pestilence" id="4c44-ebc1-8a9e-f793" hidden="false" targetId="9e95-e791-6089-82e2" type="rule"/>
+                <infoLink name="Aura of Decay" id="e805-3847-5995-1166" hidden="false" targetId="464b-d7cf-290d-12b7" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="b1cf-c764-2ad0-c229" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
+                        <condition childId="b1cf-c764-2ad0-c229" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Minor Psychic Power" id="cf42-16f6-5fdf-2045" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Minor Psychic Power" id="aca5-4e9a-f591-df62" hidden="false" targetId="69af-f095-551d-130c" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Major Psychic Powers" id="d2b1-f583-ac51-79a9" defaultSelectionEntryId="none" flatten="true" hidden="false">
+          <constraints>
+            <constraint id="bdab-7b7b-ce1b-9fe3-min" field="selections" scope="parent" shared="true" type="min" value="-1"/>
+            <constraint id="bdab-7b7b-ce1b-9fe3-max" field="selections" scope="parent" shared="true" type="max" value="-1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="bdab-7b7b-ce1b-9fe3-min" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="735a-22c7-bd9a-4170" childName="Great Unclean One" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="3a55-19dd-8e1a-0888" childName="Keeper of Secrets" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="80d5-b9f3-b03a-713e" childName="Lord of Change" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="bdab-7b7b-ce1b-9fe3-max" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="735a-22c7-bd9a-4170" childName="Great Unclean One" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="3a55-19dd-8e1a-0888" childName="Keeper of Secrets" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="80d5-b9f3-b03a-713e" childName="Lord of Change" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry name="Wind of Chaos" id="12ac-94bc-35f3-ac2c" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="f797-c4d2-5645-de81" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Wind of Chaos" id="ffd6-2438-4aba-417c" hidden="false" targetId="407d-3d2d-6d8f-2708" type="profile"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
+                  <conditions>
+                    <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Twisting Path" id="2b18-b9ba-2009-b614" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="d9df-03d8-4421-6e32" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="The Twisting Path" id="9f7a-b438-53d3-4fcd" hidden="false" targetId="3761-7c2c-7bc7-e3c8" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
+                        <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
+                  <conditions>
+                    <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Mass Mutation" id="7362-1820-5d9f-f4dc" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="0e85-b89e-f081-2b91" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Mass Mutation" id="68c6-a411-d2e1-f5c2" hidden="false" targetId="4275-903e-e63f-fc4e" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="0e85-b89e-f081-2b91" type="set" value="0">
+                  <conditions>
+                    <condition childId="50e1-b8c9-703d-63a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+                <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
+                  <conditions>
+                    <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Gift of Chaos" id="c638-55ce-fa63-3b31" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="f6dc-25c8-6958-c82d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="20"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Gift of Chaos" id="b695-f52a-e806-4734" hidden="false" targetId="d8fe-9262-6b98-6c8d" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
+                  <conditions>
+                    <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Doombolt" id="9d78-7493-1468-28ea" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="950f-b892-7c4b-b5e8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Doombolt" id="2031-27b5-237e-3047" hidden="false" targetId="e9e7-df30-ebf6-220e" type="profile"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
+                  <conditions>
+                    <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Bolt of Change" id="fb72-58ac-31c9-d9f9" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="d03c-8931-4258-6203" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Bolt of Change" id="123d-e17d-06f3-aa8b" hidden="false" targetId="1ea7-2c26-8ebf-d9d3" type="profile"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="0"/>
+                        <condition childId="98bc-5939-38d6-c754" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="ancestor" shared="false" type="notInstanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="4ed5-2f92-9abc-2870" type="set" value="0">
+                  <conditions>
+                    <condition childId="3c36-8696-6a58-5a96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Daemonic Gifts" id="3c21-bdf4-cd4b-4a26" collapsible="true" collective="false" hidden="false" import="true">
       <constraints>
