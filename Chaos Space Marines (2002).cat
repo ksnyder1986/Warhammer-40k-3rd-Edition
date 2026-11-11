@@ -68,7 +68,7 @@
         <categoryLink name="Configuration" id="fbb4-ac0f-f5da-7850" primary="true" targetId="18d4-c759-8e80-4eb6"/>
       </categoryLinks>
     </entryLink>
-    <entryLink name="Khorne Beserkers" id="5683-f410-4726-2b5c" collective="false" hidden="false" import="true" targetId="df6a-ef9f-483a-2b06" type="selectionEntry">
+    <entryLink name="Khorne Berzerkers" id="5683-f410-4726-2b5c" collective="false" hidden="false" import="true" targetId="df6a-ef9f-483a-2b06" type="selectionEntry">
       <comment>Elite Choice</comment>
       <categoryLinks>
         <categoryLink name="Elites" id="c247-01b1-6fba-1e12" primary="true" targetId="6d25-b346-c314-6911"/>
@@ -187,7 +187,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink name="Khorne Beserker Bikers" id="0791-95a1-8f00-5768" collective="false" hidden="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
+    <entryLink name="Khorne Berzerker Bikers" id="0791-95a1-8f00-5768" collective="false" hidden="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
       <comment>Elite Choice</comment>
       <categoryLinks>
         <categoryLink name="Elites" id="a355-466c-3d60-3a3f" primary="true" targetId="6d25-b346-c314-6911"/>
@@ -343,7 +343,7 @@
     <entryLink name="Khorne Lord of Skulls (Homebrew)" id="eaa3-0ecd-666c-6bc6" collective="false" hidden="false" import="true" targetId="76e8-0006-d8f4-e536" type="selectionEntry"/>
     <entryLink name="Mounted Daemonette Daemon Pack" id="f858-1e3f-e102-7430" collective="false" hidden="false" import="true" targetId="ee9c-7446-f48a-f942" type="selectionEntry"/>
     <entryLink name="Kharn the Betrayer" id="e279-4747-818e-a3d8" collective="false" hidden="false" import="true" targetId="6b75-5c8b-898f-eaa0" type="selectionEntry"/>
-    <entryLink name="Khorne Beserker Bikers" id="a047-2009-6447-1a08" collective="false" hidden="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
+    <entryLink name="Khorne Berzerker Bikers" id="a047-2009-6447-1a08" collective="false" hidden="false" import="true" targetId="0d50-913a-14bc-960d" type="selectionEntry">
       <comment>Fast Attack Choice</comment>
       <categoryLinks>
         <categoryLink name="Fast Attack" id="8dd9-7405-2cf6-271e" primary="true" targetId="34e2-d53c-28ab-44cf"/>
@@ -362,7 +362,7 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink name="Khorne Beserkers" id="6ddc-4662-f48a-5774" collective="false" hidden="false" import="true" targetId="df6a-ef9f-483a-2b06" type="selectionEntry">
+    <entryLink name="Khorne Berzerkers" id="6ddc-4662-f48a-5774" collective="false" hidden="false" import="true" targetId="df6a-ef9f-483a-2b06" type="selectionEntry">
       <comment>Troop Choice</comment>
       <categoryLinks>
         <categoryLink name="Troops" id="2de8-5bdf-96cf-9315" primary="true" targetId="0ef5-5056-d52e-3cfd"/>
@@ -3203,9 +3203,21 @@ Additionally, earn 50 Victory Points each time this power succeeds, but only ear
             <condition childId="27ce-133c-8642-08c9" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
           </conditions>
         </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="4bde-bf7f-8300-7011" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="1568-261f-27d9-590d" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="bf11-860d-bf55-80d2" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+                <condition childId="c0b7-60b7-488d-1c6a" childName="Thousand Sons" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Obliberators" id="f51b-def8-50dd-1b06" collective="false" defaultSelectionEntryId="dac5-7165-3fe5-ef72" hidden="false" import="true">
+        <selectionEntryGroup name="Obliterators" id="f51b-def8-50dd-1b06" collective="false" defaultSelectionEntryId="dac5-7165-3fe5-ef72" hidden="false" import="true">
           <constraints>
             <constraint id="0894-7d86-aa9a-60e1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
             <constraint id="5bc1-cbc7-bc65-520a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
